@@ -1,29 +1,83 @@
-import { ArrowRight } from "lucide-react"
+"use client"
+
+import { ArrowRight, Phone } from "lucide-react"
+import Link from "next/link"
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[450px] w-full overflow-hidden sm:h-[500px] lg:min-h-[700px]">
-      {/* Background Image */}
+    <section
+      aria-label="Hero"
+      className="relative min-h-[85vh] w-full overflow-hidden"
+    >
+      {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2022%20%D1%84%D0%B5%D0%B2%D1%80.%202026%20%D0%B3.%2C%2018_43_19-ZDx9qUYt4qIyNNoM1sp2LraidxSx5r.png"
-          alt="Modern huis met professionele gevelisolatie en warme verlichting"
-          className="h-full w-full object-cover object-right-top"
+          src="/images/hero-home.webp"
+          alt="Professionele gevelisolatie door BM Klus BV in Rotterdam"
+          className="h-full w-full object-cover object-center"
+          width={1920}
+          height={1080}
+          fetchPriority="high"
+          draggable={false}
         />
-        {/* Gradient overlay - cinematic */}
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(45,42,38,0.85)_0%,rgba(45,42,38,0.6)_25%,rgba(45,42,38,0.15)_45%,transparent_60%)]" />
-        {/* Top vignette for navbar blend */}
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[rgba(45,42,38,0.4)] to-transparent" />
-        {/* Bottom fade */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
-      </div>
 
-      {/* Decorative vertical line accent */}
-      <div className="absolute left-4 top-28 z-10 hidden h-24 w-px bg-gradient-to-b from-transparent via-primary to-transparent sm:left-6 lg:left-8 lg:block" />
+        {/* Base darkening layer */}
+        <div className="absolute inset-0" style={{ background: "rgba(14,10,6,0.42)" }} />
+
+        {/* Primary content gradient — left-heavy vignette for text legibility */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(108deg, rgba(14,10,6,0.96) 0%, rgba(14,10,6,0.84) 26%, rgba(14,10,6,0.58) 48%, rgba(14,10,6,0.20) 68%, transparent 88%)",
+          }}
+        />
+
+        {/* Top band — deep dark for the transparent navbar so white text reads clearly */}
+        <div
+          className="absolute inset-x-0 top-0"
+          style={{
+            height: 180,
+            background:
+              "linear-gradient(to bottom, rgba(8,5,2,0.90) 0%, rgba(8,5,2,0.62) 40%, transparent 100%)",
+          }}
+        />
+
+        {/* Subtle warm-orange radial glow — brand accent depth */}
+        <div
+          className="absolute rounded-full"
+          style={{
+            bottom: "15%",
+            left: "-8%",
+            width: 440,
+            height: 440,
+            background:
+              "radial-gradient(circle, rgba(232,96,10,0.14) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* Bottom fade into page background */}
+        <div
+          className="absolute inset-x-0 bottom-0"
+          style={{
+            height: 160,
+            background: "linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.55) 50%, transparent 100%)",
+          }}
+        />
+
+        {/* Right-edge vignette */}
+        <div
+          className="absolute inset-y-0 right-0"
+          style={{
+            width: "30%",
+            background: "linear-gradient(to left, rgba(14,10,6,0.28), transparent)",
+          }}
+        />
+      </div>
 
       {/* Main content area */}
       <div className="relative z-10">
-        <div className="mx-auto max-w-7xl px-4 pt-36 pb-6 sm:px-6 sm:pt-40 lg:px-8 lg:pt-52">
+        <div className="mx-auto max-w-7xl px-4 pt-36 pb-12 sm:px-6 sm:pt-40 sm:pb-16 lg:px-8 lg:pt-44 lg:pb-20">
           <div className="max-w-xl">
             {/* Small label */}
             <div className="mb-5 flex items-center gap-3 sm:mb-6">
@@ -37,11 +91,10 @@ export default function HeroSection() {
             <h1 className="text-balance text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.75rem]">
               Uw gevel, perfect
               <br />
-              <span className="relative inline-block text-primary">
+              <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
                 geïsoleerd
-                <span className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-primary/40" />
-              </span>{" "}
-              & vernieuwd
+                  </span>
+              {" "}& vernieuwd
             </h1>
 
             {/* Subtext */}
@@ -51,24 +104,45 @@ export default function HeroSection() {
 
             {/* Buttons */}
             <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
-              <a
-                href="#contact"
-                className="group inline-flex items-center gap-2.5 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-[#d45e18] hover:shadow-xl hover:shadow-primary/30 sm:px-8 sm:py-3.5 sm:text-base"
+              <Link
+                href="/contact/"
+                className="group inline-flex items-center gap-2.5 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-[#d45e18] hover:shadow-xl hover:shadow-primary/30 sm:px-8 sm:py-3.5 sm:text-base"
               >
                 Plan gratis inspectie
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <a
-                href="#diensten"
+              </Link>
+              <Link
+                href="/diensten/"
                 className="inline-flex items-center rounded-lg border-2 border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/20 sm:px-8 sm:py-3.5 sm:text-base"
               >
                 Bekijk onze diensten
-              </a>
+              </Link>
             </div>
 
-
+            {/* Phone */}
+            <a
+              href="tel:+31612079808"
+              className="mt-5 inline-flex items-center gap-2.5 text-sm font-medium text-white/70 transition-colors hover:text-white/80"
+            >
+              <Phone className="h-4 w-4 shrink-0 text-primary" />
+              Of bel direct: +31 6 1207 9808
+            </a>
           </div>
         </div>
+      </div>
+
+      {/* Vertical region label — desktop only */}
+      <div
+        aria-hidden="true"
+        className="absolute bottom-14 right-7 hidden flex-col items-center gap-3 lg:flex"
+      >
+        <span className="h-14 w-px bg-white/18" />
+        <span
+          className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/30"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          Rotterdam · Rijnmond · Drechtsteden
+        </span>
       </div>
     </section>
   )

@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://bm-klus-bv.nl/sitemap.xml

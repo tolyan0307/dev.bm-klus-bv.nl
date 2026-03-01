@@ -10,39 +10,39 @@ const services = [
     title: "Gevelisolatie",
     subtitle: "ETICS systeem",
     description:
-      "Professionele buitengevelisolatie voor optimale energiebesparing. Wij plaatsen gecertificeerde ETICS-systemen die uw energiekosten drastisch verlagen en het wooncomfort verhogen.",
-    image: "/images/service-isolatie.jpg",
-    href: "/gevelisolatie",
+      "Professionele buitengevelisolatie voor optimale energiebesparing. Wij plaatsen ETICS-systemen die uw energiekosten drastisch verlagen en het wooncomfort verhogen.",
+    image: "/images/service-isolatie.webp",
+    href: "/gevelisolatie/",
     features: ["Energielabel verbetering", "Vochtwerend", "Geluidsdemping"],
   },
   {
     id: "02",
-    title: "Gevelcoating",
+    title: "Gevel schilderen",
     subtitle: "Bescherming & uitstraling",
     description:
-      "Duurzame beschermlaag voor een frisse uitstraling en langdurige bescherming tegen weersinvloeden. Keuze uit diverse kleuren en structuren.",
-    image: "/images/service-coating.jpg",
-    href: "/diensten#gevelcoating",
-    features: ["UV-bestendig", "Zelfherstellend", "15 jaar garantie"],
+      "Vakkundig schilderwerk voor een frisse uitstraling en langdurige bescherming tegen weersinvloeden. Keuze uit diverse kleuren.",
+    image: "/images/service-coating.webp",
+    href: "/gevel-schilderen/",
+    features: ["UV-bestendig", "Waterafstotend", "Nette detaillering"],
   },
   {
     id: "03",
-    title: "Gevelrenovatie",
-    subtitle: "Compleet herstel",
+    title: "Buiten stucwerk",
+    subtitle: "Strakke gevelafwerking",
     description:
-      "Complete renovatie van uw gevel, van scheurwerk tot nieuwe afwerking. Wij herstellen, versterken en moderniseren uw gevelsysteem tot in de puntjes.",
-    image: "/images/service-renovatie.jpg",
-    href: "/diensten#renovatie",
+      "Duurzaam buitenstucwerk voor een strakke, moderne gevelafwerking. Onderhoudsarm en bestand tegen alle weersomstandigheden.",
+    image: "/images/service-renovatie.webp",
+    href: "/buiten-stucwerk/",
     features: ["Scheurherstel", "Voegwerk", "Nieuwe afwerking"],
   },
   {
     id: "04",
-    title: "Stucwerk",
+    title: "Sierpleister",
     subtitle: "Vakmanschap op maat",
     description:
-      "Vakkundig stucwerk voor een strakke, moderne gevelafwerking. Van sierpleister tot glad stucwerk - altijd een perfect resultaat.",
-    image: "/images/service-stucwerk.jpg",
-    href: "/diensten#stucwerk",
+      "Vakkundig sierpleister voor een strakke, moderne gevelafwerking. Van sierpleister tot glad stucwerk — altijd een perfect resultaat.",
+    image: "/images/service-stucwerk.webp",
+    href: "/sierpleister/",
     features: ["Sierpleister", "Glad stucwerk", "Spachtelputz"],
   },
 ]
@@ -52,7 +52,7 @@ export default function ServicesSection() {
   const current = services[activeService]
 
   return (
-    <section className="bg-secondary/20 py-16 sm:py-20 lg:py-28">
+    <section className="bg-secondary/20 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 lg:mb-16">
@@ -159,6 +159,8 @@ export default function ServicesSection() {
               <img
                 src={current.image}
                 alt={current.title}
+                width={640}
+                height={480}
                 className="h-full w-full object-cover transition-all duration-500"
               />
             </div>
@@ -178,6 +180,8 @@ export default function ServicesSection() {
                 <img
                   src={service.image}
                   alt={service.title}
+                  width={400}
+                  height={192}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
@@ -210,7 +214,7 @@ export default function ServicesSection() {
         {/* Bottom CTA */}
         <div className="mt-12 text-center lg:mt-16">
           <Link
-            href="/diensten"
+            href="/diensten/"
             className="inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-transparent px-8 py-3.5 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground"
           >
             Alle diensten bekijken

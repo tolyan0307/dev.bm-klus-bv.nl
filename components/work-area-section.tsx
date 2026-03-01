@@ -31,7 +31,7 @@ export default function WorkAreaSection() {
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
 
   return (
-    <section className="bg-secondary/20 py-16 sm:py-20 lg:py-28">
+    <section className="bg-secondary/20 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: Text content */}
@@ -73,7 +73,7 @@ export default function WorkAreaSection() {
             </div>
 
             <Link
-              href="/contact"
+              href="/contact/"
               className="group mt-8 inline-flex items-center gap-2 text-base font-semibold text-primary transition-colors hover:underline"
             >
               Staat uw locatie er niet bij? Neem contact op

@@ -50,11 +50,15 @@ const socials = [
 ]
 
 const navLinks = [
-  { label: "Diensten", href: "/diensten" },
-  { label: "Onze werken", href: "/onze-werken" },
+  { label: "Home", href: "/" },
+  { label: "Diensten", href: "/diensten/" },
+  { label: "Gevelisolatie", href: "/gevelisolatie/" },
+  { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+  { label: "Buiten stucwerk", href: "/buiten-stucwerk" },
+  { label: "Sierpleister", href: "/sierpleister" },
+  { label: "Onze werken", href: "/onze-werken/" },
   { label: "Over ons", href: "/over-ons" },
-  { label: "Contact", href: "/contact" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/contact/" },
 ]
 
 export default function Footer() {
@@ -82,10 +86,10 @@ export default function Footer() {
             {/* Right: CTA button */}
             <div className="shrink-0">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="group inline-flex items-center gap-3 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20 hover:brightness-110"
               >
-                Gratis offerte aanvragen
+                Plan gratis inspectie
                 <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </Link>
             </div>
@@ -104,12 +108,14 @@ export default function Footer() {
             <div>
               <div className="mb-5">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO_BM_NEW-3mU1QKMRP0oqxaPtw8WtgsETwMC29j.png"
+                  src="/images/logo-bm-klus.webp"
                   alt="BM Klus BV"
+                  width={100}
+                  height={24}
                   className="h-6 w-auto brightness-0 invert"
                 />
               </div>
-              <p className="text-sm leading-relaxed text-background/50">
+              <p className="text-sm leading-relaxed text-background/70">
                 Professionele gevelisolatie en renovatie in de regio Rotterdam.
               </p>
             </div>
@@ -121,7 +127,7 @@ export default function Footer() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-sm text-background/50 transition-colors hover:text-primary"
+                    className="text-sm text-background/70 transition-colors hover:text-primary"
                   >
                     {link.label}
                   </Link>
@@ -132,20 +138,20 @@ export default function Footer() {
             {/* Column 3: Contact */}
             <div className="flex flex-col gap-4">
               <a
-                href="tel:+31612345678"
-                className="flex items-center gap-3 text-sm text-background/50 transition-colors hover:text-primary"
+                href="tel:+31612079808"
+                className="flex items-center gap-3 text-sm text-background/70 transition-colors hover:text-primary"
               >
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
-                <span>+31 (0)6 12 34 56 78</span>
+                <span>+31 6 1207 9808</span>
               </a>
               <a
-                href="mailto:info@bmklus.nl"
-                className="flex items-center gap-3 text-sm text-background/50 transition-colors hover:text-primary"
+                href="mailto:info@bm-klus-bv.nl"
+                className="flex items-center gap-3 text-sm text-background/70 transition-colors hover:text-primary"
               >
                 <Mail className="h-4 w-4 shrink-0 text-primary" />
-                <span>info@bmklus.nl</span>
+                <span>info@bm-klus-bv.nl</span>
               </a>
-              <div className="flex items-center gap-3 text-sm text-background/50">
+              <div className="flex items-center gap-3 text-sm text-background/70">
                 <MapPin className="h-4 w-4 shrink-0 text-primary" />
                 <span>Rotterdam, Nederland</span>
               </div>
@@ -161,7 +167,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-background/10 text-background/40 transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-background/10 text-background/60 transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
                   >
                     {social.icon}
                   </a>
@@ -176,24 +182,10 @@ export default function Footer() {
           <div className="h-px w-full bg-background/10" />
         </div>
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
-            <p className="text-xs text-background/30">
+          <div className="flex items-center justify-center">
+            <p className="text-xs text-background/70">
               {new Date().getFullYear()} BM Klus BV
             </p>
-            <div className="flex gap-5">
-              <Link
-                href="/privacybeleid"
-                className="text-xs text-background/30 transition-colors hover:text-primary"
-              >
-                Privacy
-              </Link>
-              <Link
-                href="/algemene-voorwaarden"
-                className="text-xs text-background/30 transition-colors hover:text-primary"
-              >
-                Voorwaarden
-              </Link>
-            </div>
           </div>
         </div>
       </div>

@@ -1,14 +1,7 @@
 import type { Metadata } from "next"
 
-import { SITE, absUrl, normalizePath } from "@/lib/seo/routes"
-
-export type MetaInput = {
-  title: string
-  description: string
-  path: string
-  noindex?: boolean
-  ogImage?: string
-}
+import { getPagePlan, getSiteUrl } from "@/data/sitemap-plan"
+import { SITE } from "@/lib/seo/routes"
 
 function normalizeText(value: string): string {
   return (value ?? "").replace(/\s+/g, " ").trim()
@@ -21,40 +14,74 @@ function truncateWithEllipsis(value: string, maxLen: number): string {
   return `${text.slice(0, maxLen - 1).trimEnd()}…`
 }
 
-export function makeMetadata(input: MetaInput): Metadata {
-  const baseTitle = truncateWithEllipsis(input.title, 60)
-  const withSuffix = `${baseTitle} | ${SITE.siteName}`
+// ── buildPageMetadata ──────────────────────────────────────────────────────────
 
-  const finalTitle =
-    withSuffix.length <= 60 ? withSuffix : truncateWithEllipsis(baseTitle, 60)
+type PageMetaOverrides = Partial<{
+  title: string
+  description: string
+  image: string
+}>
 
-  const finalDescription = truncateWithEllipsis(input.description, 160)
-  const canonical = absUrl(normalizePath(input.path))
+function ensureTrailingSlash(p: string): string {
+  if (!p || p === "/") return "/"
+  return p.endsWith("/") ? p : `${p}/`
+}
 
-  const ogImageUrl = absUrl(input.ogImage ?? SITE.defaultOgImage)
-  const isNoIndex = Boolean(input.noindex)
+/**
+ * High-level metadata builder: pulls title/description from PLANNED_ROUTES
+ * in data/sitemap-plan.ts, applies optional overrides, and returns a
+ * complete Next.js Metadata object.
+ *
+ * Uses getSiteUrl() (NEXT_PUBLIC_SITE_URL) for the base URL so dev builds
+ * produce dev-prefixed canonical/OG URLs automatically.
+ */
+export function buildPageMetadata(
+  path: string,
+  overrides?: PageMetaOverrides,
+): Metadata {
+  const baseUrl = getSiteUrl()
+  const normalizedPath = ensureTrailingSlash(path)
+  const plan = getPagePlan(normalizedPath)
 
-  return {
-    metadataBase: new URL(SITE.canonicalBase),
-    title: finalTitle,
-    description: finalDescription,
+  const title = overrides?.title ?? plan?.title ?? ""
+  const description = overrides?.description ?? plan?.description ?? ""
+  const canonical = `${baseUrl}${normalizedPath}`
+
+  const finalTitle = title ? truncateWithEllipsis(title, 60) : undefined
+  const finalDescription = description
+    ? truncateWithEllipsis(description, 160)
+    : undefined
+
+  const ogImage = overrides?.image
+    ? `${baseUrl}${overrides.image}`
+    : `${baseUrl}${SITE.defaultOgImage}`
+
+  const meta: Metadata = {
+    metadataBase: new URL(baseUrl),
     alternates: { canonical },
-    robots: isNoIndex ? { index: false, follow: false } : { index: true, follow: true },
-    openGraph: {
-      title: finalTitle,
-      description: finalDescription,
+  }
+
+  if (finalTitle) meta.title = finalTitle
+  if (finalDescription) meta.description = finalDescription
+
+  if (finalTitle || finalDescription) {
+    meta.openGraph = {
+      ...(finalTitle && { title: finalTitle }),
+      ...(finalDescription && { description: finalDescription }),
       url: canonical,
       siteName: SITE.siteName,
       locale: SITE.locale,
       type: "website",
-      images: [{ url: ogImageUrl }],
-    },
-    twitter: {
+      images: [{ url: ogImage }],
+    }
+    meta.twitter = {
       card: "summary_large_image",
-      title: finalTitle,
-      description: finalDescription,
-      images: [ogImageUrl],
-    },
+      ...(finalTitle && { title: finalTitle }),
+      ...(finalDescription && { description: finalDescription }),
+      images: [ogImage],
+    }
   }
+
+  return meta
 }
 

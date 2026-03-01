@@ -56,7 +56,7 @@ export default function ReviewsSection() {
   }, [maxScroll])
 
   return (
-    <section className="py-16 sm:py-20 lg:py-28">
+    <section className="py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header - unified style */}
         <div className="mb-12 lg:mb-16">
@@ -122,6 +122,8 @@ export default function ReviewsSection() {
                             <img
                               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
                               alt={review.name}
+                              width={72}
+                              height={72}
                               className="h-full w-full rounded-full object-cover"
                             />
                           ) : (

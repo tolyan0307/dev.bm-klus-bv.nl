@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
+import { AnalyticsProvider } from '@/components/analytics-provider'
 import './globals.css'
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -34,10 +36,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="nl-NL" className={_inter.variable}>
+    <html lang="nl" className={_inter.variable}>
       <body className="font-sans antialiased bg-background text-foreground">
-        {children}
-        <Analytics />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-foreground focus:shadow-lg"
+        >
+          Naar hoofdinhoud
+        </a>
+        <Navbar />
+        <main id="main-content">
+          {children}
+        </main>
+        <Footer />
+        <AnalyticsProvider />
       </body>
     </html>
   )

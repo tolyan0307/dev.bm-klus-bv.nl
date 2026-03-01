@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const projects = [
   {
-    image: "/images/portfolio-hero.jpg",
+    image: "/images/portfolio-hero.webp",
     city: "Rotterdam Centrum",
     service: "Complete geveltransformatie",
     highlight: "ETICS isolatie + moderne afwerking",
@@ -30,7 +30,7 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section className="relative overflow-hidden bg-secondary/10 py-20 sm:py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-secondary/10 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
@@ -59,6 +59,8 @@ export default function PortfolioSection() {
                 <img
                   src={project.image}
                   alt={`Gevelproject in ${project.city}`}
+                  width={480}
+                  height={360}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
@@ -77,7 +79,7 @@ export default function PortfolioSection() {
         {/* CTA buttons below grid */}
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <Link
-            href="/onze-werken"
+            href="/onze-werken/"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
           >
             Alle projecten bekijken

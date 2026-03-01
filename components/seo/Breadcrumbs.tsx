@@ -1,51 +1,47 @@
 import Link from "next/link"
+import { ChevronRight } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-
-export type BreadcrumbItem = {
+export interface BreadcrumbItem {
   label: string
-  href: string
+  href?: string
 }
 
-export type BreadcrumbsProps = {
+interface BreadcrumbsProps {
   items: BreadcrumbItem[]
   className?: string
 }
 
-export default function Breadcrumbs({ items, className }: BreadcrumbsProps) {
-  if (!items?.length) return null
-
+export default function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
   return (
-    <nav aria-label="Breadcrumb" className={cn("text-sm", className)}>
-      <ol className="flex flex-wrap items-center text-muted-foreground">
-        {items.map((item, idx) => {
-          const isLast = idx === items.length - 1
-
-          return (
-            <li key={`${item.href}-${item.label}`} className="flex items-center">
-              {idx > 0 && (
-                <span
-                  aria-hidden="true"
-                  className="px-2 text-muted-foreground/60"
-                >
-                  /
-                </span>
-              )}
-
-              {isLast ? (
-                <span aria-current="page" className="font-medium text-foreground">
-                  {item.label}
-                </span>
-              ) : (
-                <Link href={item.href} className="hover:text-foreground hover:underline">
-                  {item.label}
-                </Link>
-              )}
-            </li>
-          )
-        })}
-      </ol>
+    <nav
+      aria-label="Kruimelpad"
+      className={`flex flex-wrap items-center gap-1 text-xs text-muted-foreground ${className}`}
+    >
+      {items.map((item, index) => {
+        const isLast = index === items.length - 1
+        return (
+          <span key={item.label} className="flex items-center gap-1">
+            {index > 0 && (
+              <ChevronRight className="h-3 w-3 shrink-0 text-border" aria-hidden="true" />
+            )}
+            {isLast || !item.href ? (
+              <span
+                className={isLast ? "font-medium text-foreground/70" : ""}
+                aria-current={isLast ? "page" : undefined}
+              >
+                {item.label}
+              </span>
+            ) : (
+              <Link
+                href={item.href}
+                className="transition-colors hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            )}
+          </span>
+        )
+      })}
     </nav>
   )
 }
-

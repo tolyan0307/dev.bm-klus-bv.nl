@@ -4,14 +4,12 @@ import { useState, useEffect } from "react"
 import { Menu, X, Phone } from "lucide-react"
 import Link from "next/link"
 
-import { NAV } from "@/lib/seo/routes"
-
 const navLinks = [
-  { label: NAV.home.label, href: NAV.home.path },
-  { label: NAV.diensten.label, href: NAV.diensten.path },
-  { label: NAV.onzeWerken.label, href: NAV.onzeWerken.path },
-  { label: NAV.overOns.label, href: NAV.overOns.path },
-  { label: NAV.contact.label, href: NAV.contact.path },
+  { label: "Home", href: "/" },
+  { label: "Diensten", href: "/diensten/" },
+  { label: "Onze werken", href: "/onze-werken/" },
+  { label: "Over ons", href: "/over-ons" },
+  { label: "Contact", href: "/contact/" },
 ]
 
 export default function Navbar() {
@@ -36,17 +34,15 @@ export default function Navbar() {
       <div className={`h-[3px] w-full bg-gradient-to-r from-primary via-primary/80 to-primary transition-opacity duration-500 ${scrolled ? "opacity-100" : "opacity-0"}`} />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          className={`flex items-center justify-between transition-all duration-300 ${
-            scrolled ? "h-16" : "h-20"
-          }`}
-        >
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href={NAV.home.path} className="relative flex items-center">
+          <Link href="/" className="relative flex items-center">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO_BM_NEW-3mU1QKMRP0oqxaPtw8WtgsETwMC29j.png"
+              src="/images/logo-bm-klus.webp"
               alt="BM Klus BV"
-              className={`h-6 w-auto transition-all duration-500 sm:h-7 ${
+              width={120}
+              height={28}
+              className={`h-7 w-auto transition-all duration-500 ${
                 scrolled ? "brightness-100" : "brightness-0 invert"
               }`}
             />
@@ -74,7 +70,7 @@ export default function Navbar() {
           {/* Right side: phone + CTA */}
           <div className="hidden items-center gap-5 md:flex">
             <a
-              href="tel:+31612345678"
+              href="tel:+31612079808"
               className={`flex items-center gap-2 text-sm font-medium transition-colors duration-500 ${
                 scrolled
                   ? "text-foreground/70 hover:text-primary"
@@ -82,11 +78,11 @@ export default function Navbar() {
               }`}
             >
               <Phone className="h-4 w-4" />
-              <span className="hidden lg:inline">+31 (0)6 12 34 56 78</span>
+              <span className="hidden lg:inline">+31 6 1207 9808</span>
             </a>
 
             <Link
-              href={NAV.contact.path}
+              href="/contact/"
               className="group relative inline-flex items-center overflow-hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:shadow-lg"
             >
               {/* Shine effect on hover */}
@@ -140,14 +136,14 @@ export default function Navbar() {
           {/* Mobile phone + CTA */}
           <div className="mt-4 space-y-3 border-t border-border/30 pt-4">
             <a
-              href="tel:+31612345678"
+              href="tel:+31612079808"
               className="flex items-center gap-3 rounded-lg px-4 py-2 text-sm font-medium text-foreground/70"
             >
               <Phone className="h-4 w-4 text-primary" />
-              +31 (0)6 12 34 56 78
+              +31 6 1207 9808
             </a>
             <Link
-              href={NAV.contact.path}
+              href="/contact/"
               className="block rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-sm"
               onClick={() => setMobileOpen(false)}
             >

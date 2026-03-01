@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function CtaSection() {
   return (
-    <section className="relative overflow-hidden bg-foreground py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-foreground py-16 sm:py-20 lg:py-24">
       {/* Top accent line */}
       <div className="absolute inset-x-0 top-0 h-1 bg-primary" />
 
@@ -33,7 +33,7 @@ export default function CtaSection() {
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
             <Link
-              href="/contact"
+              href="/contact/"
               className="group inline-flex items-center gap-3 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:shadow-xl"
             >
               <Phone className="h-5 w-5" />
@@ -41,7 +41,7 @@ export default function CtaSection() {
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/gevelisolatie"
+              href="/gevelisolatie/"
               className="inline-flex items-center gap-2 rounded-lg border-2 border-background/30 bg-transparent px-8 py-4 text-base font-semibold text-background transition-all hover:border-primary hover:text-primary"
             >
               Meer over isolatie

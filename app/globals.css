@@ -3,32 +3,74 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/**
+ * BM Klus BV Design System
+ * 
+ * Brand Colors:
+ * - Primary: #EA6C20 (Warm Orange) - CTA buttons, accents, active states
+ * - Background: #FFF9F2 (Warm Cream) - Main background, clean and warm
+ * - Foreground: #2D2A26 (Dark Brown) - Text, high contrast on cream
+ * - Secondary: #FFF1E6 (Light Peach) - Subtle backgrounds, hover states
+ * - Muted: #F5EDE4 (Cream Beige) - Disabled states, less important content
+ * 
+ * Typography:
+ * - Font: Inter (clean, modern sans-serif)
+ * - Headings: Bold (font-bold), tight tracking, large scale (3xl-5xl)
+ * - Body: Base/lg, relaxed leading (leading-relaxed), muted-foreground
+ * - Accents: Uppercase labels with wide tracking (tracking-wider)
+ * 
+ * Layout Patterns:
+ * - Section spacing: py-16 sm:py-20 lg:py-24
+ * - Container: mx-auto max-w-7xl px-4 sm:px-6 lg:px-8
+ * - Cards: rounded-xl border border-border bg-card shadow-sm
+ * - Hover: hover:shadow-md hover:border-primary/30 transitions
+ */
+
 :root {
+  /* Main Colors */
   --background: #FFF9F2;
   --foreground: #2D2A26;
   --card: #FFF9F2;
   --card-foreground: #2D2A26;
   --popover: #FFF9F2;
   --popover-foreground: #2D2A26;
+  
+  /* Brand Primary - Warm Orange */
   --primary: #EA6C20;
   --primary-foreground: #ffffff;
+  
+  /* Secondary - Light Peach */
   --secondary: #FFF1E6;
   --secondary-foreground: #2D2A26;
+  
+  /* Muted - Cream Beige */
   --muted: #F5EDE4;
   --muted-foreground: #6B655E;
+  
+  /* Accent (same as primary) */
   --accent: #EA6C20;
   --accent-foreground: #ffffff;
+  
+  /* System Colors */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
+  
+  /* Borders & Inputs */
   --border: #E8DDD0;
   --input: #E8DDD0;
   --ring: #EA6C20;
+  
+  /* Charts */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
+  
+  /* Border Radius */
   --radius: 0.625rem;
+  
+  /* Sidebar */
   --sidebar: #FFF9F2;
   --sidebar-foreground: #2D2A26;
   --sidebar-primary: #EA6C20;
@@ -122,4 +164,101 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/**
+ * Reusable Component Patterns
+ * Use these classes for consistency across all pages
+ */
+@layer components {
+  /* Section Headers - Standard pattern for all sections */
+  .section-header {
+    @apply mb-3 flex items-center gap-3;
+  }
+  
+  .section-header-line {
+    @apply h-px w-12 bg-primary;
+  }
+  
+  .section-header-label {
+    @apply text-sm font-semibold uppercase tracking-wider text-primary;
+  }
+  
+  /* Section Title — H1 */
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl;
+  }
+
+  /* Section Title H2 — primary section headings inside a page */
+  .section-title-h2 {
+    @apply text-2xl font-bold tracking-tight text-foreground sm:text-3xl;
+  }
+
+  /* Section Title H3 — subsection / card headings */
+  .section-title-h3 {
+    @apply text-lg font-semibold tracking-tight text-foreground;
+  }
+  
+  /* Section Description */
+  .section-description {
+    @apply mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg;
+  }
+  
+  /* Premium Card */
+  .card-premium {
+    @apply rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:border-primary/30 hover:shadow-md;
+  }
+  
+  /* Glass Effect */
+  .glass-card {
+    @apply rounded-xl border border-white/10 bg-white/10 backdrop-blur-md;
+  }
+  
+  /* CTA Button Primary */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md;
+  }
+  
+  /* CTA Button Secondary */
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-lg border-2 border-border bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-all hover:border-primary hover:bg-primary/5;
+  }
+  
+  /* Interactive Icon Container */
+  .icon-container {
+    @apply flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/60 transition-colors;
+  }
+  
+  /* Section Spacing */
+  .section-spacing {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  
+  /* Container */
+  .container-default {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/**
+ * Premium animations for enhanced user experience
+ */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out;
+}
+
+/**
+ * Radial gradient utility for premium hero effects
+ */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
 }

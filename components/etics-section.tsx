@@ -10,25 +10,25 @@ const benefits = [
 const finishes = [
   {
     name: "Stucwerk",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Mrsp8hawE0zd3RBHDuLXnvBqSlftm0.png",
+    image: "/images/etics-layer-wall-ext.webp",
   },
   {
     name: "Steenstrips",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-S4qk3QR30JQJWQObgCgE4YSiGwPd8a.png",
+    image: "/images/etics-layer-insulation-ext.webp",
   },
   {
     name: "Schilderwerk",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6sned6bkKbSb521gnLlrnbnCa58Ns7.png",
+    image: "/images/etics-layer-mesh-ext.webp",
   },
   {
     name: "Sierpleister",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-S2y3sYHQlIT0b1HFZMgqRfIWNUa1i1.png",
+    image: "/images/etics-layer-finish-ext.webp",
   },
 ]
 
 export default function EticsSection() {
   return (
-    <section className="bg-secondary/10 py-20 sm:py-24 lg:py-32">
+    <section className="bg-secondary/10 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top: Two-column layout -- text left, image right */}
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -64,7 +64,7 @@ export default function EticsSection() {
             </ul>
 
             <Link
-              href="/gevelisolatie"
+              href="/gevelisolatie/"
               className="group mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
             >
               Meer over gevelisolatie
@@ -75,8 +75,10 @@ export default function EticsSection() {
           {/* Right: Main image */}
           <div className="group relative overflow-hidden rounded-2xl">
             <img
-              src="/images/etics-detail.jpg"
+              src="/images/etics-detail.webp"
               alt="ETICS gevelisolatie systeem detail"
+              width={640}
+              height={480}
               className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-foreground/5" />
@@ -99,6 +101,8 @@ export default function EticsSection() {
                   <img
                     src={finish.image}
                     alt={finish.name}
+                    width={300}
+                    height={400}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
