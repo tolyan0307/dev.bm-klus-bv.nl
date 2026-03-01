@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { AnalyticsProvider } from '@/components/analytics-provider'
+import { GtmProvider } from '@/components/gtm-provider'
 import './globals.css'
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -50,6 +51,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <AnalyticsProvider />
+        <GtmProvider />
       </body>
     </html>
   )

@@ -1,6 +1,5 @@
-// FUTURE EXTRACTION TARGET: reusable pillar footer component
 import Link from "next/link"
-import { ArrowRight, Layers, Paintbrush2, Palette, Images, Phone, LayoutGrid } from "lucide-react"
+import { ArrowRight, Layers, Paintbrush2, Palette, Images, LayoutGrid, MapPin } from "lucide-react"
 
 const links = [
   {
@@ -33,13 +32,13 @@ const links = [
     href: "/onze-werken/",
     icon: Images,
   },
-  {
-    label: "Contact opnemen",
-    description: "Vraag een gratis inspectie of offerte aan",
-    href: "/contact/",
-    icon: Phone,
-    highlight: true,
-  },
+]
+
+const locationLinks = [
+  { label: "Rotterdam", href: "/gevelisolatie/rotterdam/" },
+  { label: "Den Haag", href: "/gevelisolatie/den-haag/" },
+  { label: "Delft", href: "/gevelisolatie/delft/" },
+  { label: "Dordrecht", href: "/gevelisolatie/dordrecht/" },
 ]
 
 export default function MeerInformatieSection() {
@@ -62,33 +61,44 @@ export default function MeerInformatieSection() {
             <Link
               key={link.href}
               href={link.href}
-              className={`group flex items-start gap-4 rounded-xl border p-5 transition-all hover:-translate-y-0.5 hover:shadow-md ${
-                link.highlight
-                  ? "border-primary bg-primary text-primary-foreground hover:bg-primary/90"
-                  : "border-border bg-card hover:border-primary/40"
-              }`}
+              className="group flex items-start gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
             >
-              <div className={`mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-colors ${
-                link.highlight
-                  ? "bg-white/20"
-                  : "bg-primary/10 group-hover:bg-primary/15"
-              }`}>
-                <Icon className={`h-4 w-4 ${link.highlight ? "text-white" : "text-primary"}`} />
+              <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/15">
+                <Icon className="h-4 w-4 text-primary" />
               </div>
               <div className="flex-1">
-                <p className={`text-sm font-bold ${link.highlight ? "text-white" : "text-foreground"}`}>
+                <p className="text-sm font-bold text-foreground">
                   {link.label}
                 </p>
-                <p className={`mt-0.5 text-xs leading-snug ${link.highlight ? "text-white/75" : "text-muted-foreground"}`}>
+                <p className="mt-0.5 text-xs leading-snug text-muted-foreground">
                   {link.description}
                 </p>
               </div>
-              <ArrowRight className={`mt-0.5 h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5 ${
-                link.highlight ? "text-white/70" : "text-muted-foreground/40 group-hover:text-primary"
-              }`} />
+              <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
             </Link>
           )
         })}
+      </div>
+
+      {/* Location links */}
+      <div className="mt-8">
+        <div className="mb-4 flex items-center gap-2">
+          <MapPin className="h-4 w-4 text-primary" />
+          <span className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+            Gevelisolatie per regio
+          </span>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {locationLinks.map((loc) => (
+            <Link
+              key={loc.href}
+              href={loc.href}
+              className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
+            >
+              {loc.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   )

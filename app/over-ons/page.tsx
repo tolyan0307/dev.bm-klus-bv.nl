@@ -372,7 +372,6 @@ export default function OverOnsPage() {
                       Onze{" "}
                       <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
                         aanpak
-                        <span className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-primary/50" />
                       </span>
                     </h2>
                   </div>

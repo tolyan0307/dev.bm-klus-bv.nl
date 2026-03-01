@@ -6,13 +6,13 @@ import { rcWaardeDikteContent } from "@/lib/content/gevelisolatie"
 import { Check, ArrowRight } from "lucide-react"
 import { useState } from "react"
 
-// RC → dikte per materiaal (lambda-based calculation, NL praktijkwaarden)
-// Bronnen: KOMO-keur, Bouwbesluit 2024, fabrikant-gemiddelden voor WDVS-systemen
-// dikte (mm) = RC × λ × 1000  →  afgerond op 5 mm
+// Rd → dikte per materiaal (lambda-based calculation, NL praktijkwaarden)
+// Bronnen: fabrikant-specificaties, RVO/ISDE voorwaarden, Bouwbesluit (Bbl)
+// dikte (mm) = Rd × λ × 1000  →  afgerond op 5 mm
 const lambdaValues: Record<string, number> = {
-  EPS:            0.038, // EPS 70/80, meest gebruikte type NL (λD per KOMO)
-  PIR:            0.026, // PIR WDVS praktijkwaarde; λD lab ≈ 0.022–0.024 maar +10% praktijkopslag
-  "Minerale wol": 0.035, // Steenwol 90–100 kg/m³ voor gevelisolatie (Rockwool/Isover NL)
+  EPS:            0.038, // EPS 70/80, meest gangbare type NL; λD ≈ 0.031–0.040 (bron: isolatieonline.nl)
+  PIR:            0.024, // PIR WDVS-platen; λD ≈ 0.022–0.024 (bron: slimster.nl, RVO)
+  "Minerale wol": 0.035, // Steenwol 90–100 kg/m³; λD ≈ 0.033–0.040 (bron: Rockwool NL 2025)
 }
 
 // Totale WDVS-opbouw opslag: hechtlaag + wapeningslaag + primer + afwerking ≈ 25–35 mm
@@ -29,10 +29,10 @@ function calcDikte(rc: number, materiaal: string): number {
   return Math.round(mm / 5) * 5 // mm
 }
 
-// Bouwbesluit 2024 NL ijkpunten:
-// Renovatie minimum: RC 1.3 m²K/W
-// Nieuwbouw minimum: RC 4.7 m²K/W
-// Subsidie (ISDE/SEEH) drempelwaarde: RC ≥ 3.5 m²K/W
+// Bouwbesluit (Bbl) en ISDE ijkpunten:
+// Renovatie minimum gevel: Rc 1.4 m²K/W (Bbl art. 5.20)
+// Nieuwbouw minimum gevel: Rc 4.7 m²K/W (Bbl)
+// ISDE subsidie drempel gevelisolatie: Rd ≥ 3.5 m²K/W (rvo.nl)
 const RC_MIN = 1.5
 const RC_MAX = 6.0
 const RC_STEP = 0.5
@@ -43,13 +43,13 @@ const RC_OPTIONS = Array.from(
 
 const materialen = ["EPS", "PIR", "Minerale wol"]
 
-// Bouwbesluit-gebaseerde labels
+// Labels op basis van Bbl en ISDE-drempel
 function rcLabel(rc: number): { label: string; cls: string } {
-  if (rc < 2.5)  return { label: "Renovatie min.", cls: "bg-muted text-muted-foreground" }
-  if (rc < 3.5)  return { label: "Basis",          cls: "bg-muted text-muted-foreground" }
-  if (rc < 4.7)  return { label: "Subsidie ✓",     cls: "bg-primary/10 text-primary" }
-  if (rc < 5.5)  return { label: "Nieuwbouw ✓",    cls: "bg-primary/20 text-primary" }
-  return               { label: "Premium",          cls: "bg-primary text-primary-foreground" }
+  if (rc < 2.0)  return { label: "Renovatie",      cls: "bg-muted text-muted-foreground" }
+  if (rc < 3.5)  return { label: "Basis",           cls: "bg-muted text-muted-foreground" }
+  if (rc < 4.7)  return { label: "ISDE subsidie",   cls: "bg-primary/10 text-primary" }
+  if (rc < 5.5)  return { label: "Nieuwbouwnorm",   cls: "bg-primary/20 text-primary" }
+  return               { label: "Premium",           cls: "bg-primary text-primary-foreground" }
 }
 
 export default function RcWaardeDikteSection() {
@@ -86,7 +86,7 @@ export default function RcWaardeDikteSection() {
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                Gewenste RC-waarde
+                Gewenste isolatiewaarde (Rd)
               </p>
               <div className="mt-1 flex items-baseline gap-2">
                 <span className="text-5xl font-black tabular-nums text-foreground">
@@ -212,19 +212,13 @@ export default function RcWaardeDikteSection() {
         </div>
       </div>
 
-      {/* ── Cluster link ── */}
-      <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-primary/20 bg-primary/5 px-6 py-5">
-        <p className="text-sm leading-relaxed text-foreground/80">
-          Twijfelt u over de juiste dikte of RC-waarde voor uw situatie? Bekijk de uitgebreide uitleg met praktijkwaarden per materiaal.
-        </p>
-        <Link
-          href="/gevelisolatie/rc-waarde-dikte/"
-          className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-[#d46218]"
-        >
-          Welke dikte heb ik nodig?
-          <ArrowRight className="h-4 w-4" />
+      {/* ── Related link ── */}
+      <p className="mt-6 text-sm text-muted-foreground">
+        Twijfelt u over de juiste dikte?{" "}
+        <Link href="/gevelisolatie/rc-waarde-dikte/" className="font-semibold text-primary underline-offset-2 hover:underline">
+          Uitgebreide uitleg met praktijkwaarden →
         </Link>
-      </div>
+      </p>
 
     </section>
   )

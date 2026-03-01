@@ -22,10 +22,10 @@ export const gevelisolatieIntro = {
   h1: "Buitengevelisolatie (ETICS) voor woningen & bedrijfspanden",
   paragraphs: [
     "Buitengevelisolatie (ETICS) — ook wel gevel isoleren buitenzijde — is een beproefde manier om uw buitenmuur te isoleren en tegelijk strak af te werken. Zo verbetert u comfort en verlaagt u warmteverlies via de gevel.",
-    "U kiest de afwerking die bij uw woning past: stuc, sierpleister (spachtelputz), crepi of steenstrips. Na een gratis opname ter plaatse ontvangt u een duidelijke offerte met prijs per m², inclusief RC-waarde, dikte en detaillering.",
+    "U kiest de afwerking die bij uw woning past: stuc, sierpleister (spachtelputz), crepi of steenstrips. Na een gratis opname ter plaatse stellen wij een offerte op per m², inclusief RC-waarde, dikte en afwerking.",
   ],
   trustBullets: [
-    "Gratis opname ter plaatse (24–48 uur reactie)",
+    "Gratis opname ter plaatse",
     "Gecertificeerde ETICS-systemen en materialen",
     "Advies over subsidie & vergunning (waar nodig)",
   ],
@@ -132,7 +132,7 @@ export const kostenContent = {
   h2: "Kosten van buitengevelisolatie (prijs per m²)",
   paragraphs: [
     "De gevelisolatie kosten worden bepaald door de RC-waarde, de isolatiedikte en de afwerking. De prijs per m² verschilt per situatie; onderstaande richtprijzen geven een eerlijk marktrealistisch beeld.",
-    "Details zoals dagkanten, kozijnaansluitingen, plintprofielen en de bereikbaarheid van de gevel (steigerhoogte) beïnvloeden de eindprijs eveneens. Daarom geven wij altijd een prijs na een opname ter plaatse, zodat u precies weet waar u aan toe bent.",
+    "Details zoals dagkanten, kozijnaansluitingen, plintprofielen en de bereikbaarheid van de gevel (steigerhoogte) beïnvloeden de eindprijs eveneens. Daarom geven wij een prijs na een opname ter plaatse, zodat u een goed beeld heeft van de investering.",
   ],
   richtprijzen: {
     label: "Richtprijzen (indicatie)",
@@ -180,7 +180,7 @@ export const kostenContent = {
     ],
   },
   callout:
-    "Exacte prijs na gratis opname ter plaatse: u ontvangt een heldere offerte per m² met RC-waarde, dikte en afwerking.",
+    "Exacte prijs na gratis opname ter plaatse — wij stellen een heldere offerte op per m² met RC-waarde, dikte en afwerking.",
 }
 
 // ── 4. Werkwijze ─────────────────────────────────────────────────────────────
@@ -192,17 +192,17 @@ export const werkwijzeContent = {
     {
       titel: "1. Opname ter plaatse",
       tekst:
-        "Wij komen gratis bij u langs om de gevel te beoordelen, op te meten en uw wensen te bespreken.",
+        "Wij komen bij u langs om de gevel te beoordelen, op te meten en uw wensen te bespreken. De opname is gratis en vrijblijvend.",
     },
     {
-      titel: "2. Berekening & advies",
+      titel: "2. Berekening & offerte",
       tekst:
-        "Op basis van de opname berekenen wij de benodigde RC-waarde, adviseren wij het juiste materiaal en stellen wij een offerte op met een vaste prijs per m².",
+        "Op basis van de opname berekenen wij de benodigde RC-waarde, adviseren wij het meest geschikte materiaal en stellen wij een offerte op per m².",
     },
     {
       titel: "3. Planning",
       tekst:
-        "Na akkoord plannen wij de werkzaamheden in overleg met u in en bevestigen wij de startdatum.",
+        "Na akkoord stemmen wij de planning af in overleg met u.",
     },
     {
       titel: "4. Voorbereiding",
@@ -217,15 +217,15 @@ export const werkwijzeContent = {
     {
       titel: "6. Afwerking & oplevering",
       tekst:
-        "De gekozen afwerklaag wordt aangebracht, details worden netjes afgewerkt en wij lopen samen het eindresultaat door.",
+        "De gekozen afwerklaag wordt aangebracht en details worden netjes afgewerkt.",
     },
   ],
   verwachting: {
     h3: "Wat u van ons mag verwachten",
     bullets: [
-      "Duidelijke planning met afgesproken startdatum en een indicatieve einddatum",
+      "Duidelijke planning in overleg",
       "Een nette en opgeruimde werkplek",
-      "Eén vast aanspreekpunt gedurende het hele project",
+      "Bereikbaar via WhatsApp en e-mail",
       "Heldere offerte met duidelijke scope",
     ],
   },
@@ -503,7 +503,7 @@ export const faqContent = {
     {
       vraag: "Wat kost buitengevelisolatie per m²?",
       antwoord:
-        "ETICS + pleisterafwerking (stuc/sierpleister/crepi) kost indicatief €110–€200/m²; ETICS + steenstrips €200–€280/m². Beide prijzen zijn inclusief arbeid en materiaal, exclusief steiger, herstelwerk en complexe detaillering. Na gratis opname ontvangt u een offerte met RC-waarde, dikte en afwerking.",
+        "ETICS + pleisterafwerking (stuc/sierpleister/crepi) kost indicatief €110–€200/m²; ETICS + steenstrips €200–€280/m². Beide prijzen zijn inclusief arbeid en materiaal, exclusief steiger, herstelwerk en complexe detaillering. Na een gratis opname stellen wij een offerte op met RC-waarde, dikte en afwerking.",
     },
     {
       vraag: "Welke RC-waarde en dikte heb ik nodig?",
@@ -523,7 +523,7 @@ export const faqContent = {
     {
       vraag: "Is buitengevelisolatie geschikt voor elk type gevel?",
       antwoord:
-        "In de meeste gevallen wel: baksteen, beton en cellenbeton zijn uitstekend geschikt. Ook bij een enkelsteens muur (muur isoleren zonder spouw) is buitengevelisolatie vaak een geschikte oplossing, maar dit beoordelen we altijd tijdens de opname. Bij sterk beschadigde gevels, houtskeletbouw of monumentale panden is een maatwerkbeoordeling nodig.",
+        "In de meeste gevallen wel: baksteen, beton en cellenbeton zijn uitstekend geschikt. Ook bij een enkelsteens muur (muur isoleren zonder spouw) is buitengevelisolatie vaak een geschikte oplossing, maar dit beoordelen we tijdens de opname. Bij sterk beschadigde gevels, houtskeletbouw of monumentale panden is een maatwerkbeoordeling nodig.",
     },
     {
       vraag: "Wat als er scheuren of voegwerkproblemen zijn?",
@@ -548,12 +548,12 @@ export const faqContent = {
     {
       vraag: "Hoe lang duurt het traject gemiddeld?",
       antwoord:
-        "Van opname tot oplevering duurt een gemiddeld project enkele weken, afhankelijk van de omvang, het seizoen en de gekozen afwerking. Wij communiceren vooraf een duidelijke planning.",
+        "Van opname tot oplevering duurt een gemiddeld project enkele weken, afhankelijk van de omvang, het seizoen en de gekozen afwerking. De planning stemmen wij vooraf met u af.",
     },
     {
       vraag: "Wat gebeurt er met dagkanten, kozijnen en dorpels?",
       antwoord:
-        "Dagkanten worden mee-geïsoleerd met dunne isolatiestroken en netjes afgewerkt met profielen. Kozijnen en dorpels worden zorgvuldig aangesloten om koudebruggen te voorkomen en een strak eindresultaat te garanderen.",
+        "Dagkanten worden mee-geïsoleerd met dunne isolatiestroken en netjes afgewerkt met profielen. Kozijnen en dorpels worden zorgvuldig aangesloten om koudebruggen te voorkomen.",
     },
     {
       vraag: "Hoe onderhoud ik de afwerking (stuc/sierpleister/crepi/steenstrips)?",

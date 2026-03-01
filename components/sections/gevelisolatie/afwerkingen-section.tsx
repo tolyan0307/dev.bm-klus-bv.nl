@@ -85,10 +85,14 @@ export default function AfwerkingenSection() {
       </div>
 
       {/* Desktop: pill tabs */}
-      <div className="mt-10 hidden gap-2 sm:flex">
+      <div className="mt-10 hidden gap-2 sm:flex" role="tablist" aria-label="Afwerkingen">
         {data.opties.map((optie, i) => (
           <button
             key={optie.h3}
+            role="tab"
+            aria-selected={active === i}
+            aria-controls={`afwerking-panel-${i}`}
+            id={`afwerking-tab-${i}`}
             onClick={() => setActive(i)}
             className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
               active === i
@@ -105,7 +109,12 @@ export default function AfwerkingenSection() {
       </div>
 
       {/* Active card with photo */}
-      <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-card">
+      <div
+        className="mt-4 overflow-hidden rounded-2xl border border-border bg-card"
+        role="tabpanel"
+        id={`afwerking-panel-${active}`}
+        aria-labelledby={`afwerking-tab-${active}`}
+      >
         <div className="grid grid-rows-[220px_1fr] lg:grid-rows-none lg:grid-cols-[420px_1fr]">
 
           {/* Photo */}
@@ -222,36 +231,21 @@ export default function AfwerkingenSection() {
         </p>
       </div>
 
-      {/* ── Cluster + related service links ── */}
-      <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-card px-6 py-5">
-        <div>
-          <p className="text-sm font-bold text-foreground">Verdiep u in afwerkingen</p>
-          <p className="mt-0.5 text-xs text-muted-foreground">Alle opties, prijsindicaties en details op een rij.</p>
-        </div>
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/gevelisolatie/afwerkingen/"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-[#d46218]"
-          >
-            Alle afwerkingen en verschillen
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/buiten-stucwerk/"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
-          >
-            Buiten stucwerk
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
-          <Link
-            href="/sierpleister/"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
-          >
-            Sierpleister
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
-        </div>
-      </div>
+      {/* ── Related links ── */}
+      <p className="mt-6 text-sm text-muted-foreground">
+        Meer weten?{" "}
+        <Link href="/gevelisolatie/afwerkingen/" className="font-semibold text-primary underline-offset-2 hover:underline">
+          Alle afwerkingen vergelijken →
+        </Link>
+        {" · "}
+        <Link href="/buiten-stucwerk/" className="font-semibold text-primary underline-offset-2 hover:underline">
+          Buiten stucwerk
+        </Link>
+        {" · "}
+        <Link href="/sierpleister/" className="font-semibold text-primary underline-offset-2 hover:underline">
+          Sierpleister
+        </Link>
+      </p>
 
     </section>
   )

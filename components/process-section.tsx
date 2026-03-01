@@ -118,54 +118,30 @@ export default function ProcessSection() {
           {/* Expanded content for active step */}
           <div className="mx-auto max-w-3xl">
             <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
-              <div className="flex items-center gap-8 p-10">
-                {/* Large number */}
-                <span className="text-8xl font-bold leading-none text-primary/10">
-                  {steps[activeStep].number}
-                </span>
-
-                <div className="flex-1">
-                  <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                    Stap {steps[activeStep].number}
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">
-                    {steps[activeStep].title}
-                  </h3>
-                  <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                    {steps[activeStep].description}
-                  </p>
-                </div>
-
-                {/* Icon */}
-                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-primary/10">
+              <div className="flex items-center gap-6 p-8">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10">
                   {(() => {
                     const Icon = steps[activeStep].icon
                     return (
                       <Icon
-                        className="h-10 w-10 text-primary"
+                        className="h-7 w-7 text-primary"
                         strokeWidth={1.5}
                       />
                     )
                   })()}
                 </div>
-              </div>
 
-              {/* Step indicators */}
-              <div className="flex border-t border-border">
-                {steps.map((step, index) => (
-                  <button
-                    key={step.number}
-                    onClick={() => setActiveStep(index)}
-                    className={`flex flex-1 items-center justify-center gap-2 py-4 text-sm font-medium transition-all ${
-                      index === activeStep
-                        ? "bg-primary/5 text-primary"
-                        : "text-muted-foreground hover:bg-secondary/30 hover:text-foreground"
-                    }`}
-                  >
-                    <span className="font-bold">{step.number}</span>
-                    <span className="hidden xl:inline">{step.title}</span>
-                  </button>
-                ))}
+                <div className="flex-1">
+                  <div className="mb-0.5 text-xs font-semibold uppercase tracking-wider text-primary">
+                    Stap {steps[activeStep].number}
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">
+                    {steps[activeStep].title}
+                  </h3>
+                  <p className="mt-1.5 text-base leading-relaxed text-muted-foreground">
+                    {steps[activeStep].description}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

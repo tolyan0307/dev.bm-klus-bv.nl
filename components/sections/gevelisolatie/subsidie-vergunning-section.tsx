@@ -128,27 +128,18 @@ export default function SubsidieVergunningSection() {
         </div>
       </div>
 
-      {/* ── CTA strip ── */}
+      {/* ── Info strip ── */}
       <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-primary/20 bg-primary/5 px-6 py-5">
         <p className="text-sm leading-relaxed text-foreground/80">
           Wilt u weten wat er in uw situatie speelt? Wij checken gratis of een vergunning nodig is en welke subsidie van toepassing is.
         </p>
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/contact/"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Plan gratis inspectie
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/gevelisolatie/subsidie-vergunning/"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-primary/30 bg-background px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
-          >
-            Subsidie & vergunning checklist
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
+        <Link
+          href="/gevelisolatie/subsidie-vergunning/"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full border border-primary/30 bg-background px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
+        >
+          Uitgebreide checklist bekijken
+          <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
 
     </section>

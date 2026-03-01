@@ -85,10 +85,14 @@ export default function MaterialenSection() {
       </div>
 
       {/* Desktop: pill tabs */}
-      <div className="mt-10 hidden gap-2 sm:flex">
+      <div className="mt-10 hidden gap-2 sm:flex" role="tablist" aria-label="Isolatiematerialen">
         {data.vergelijkingstabel.rijen.map((rij, i) => (
           <button
             key={rij.materiaal}
+            role="tab"
+            aria-selected={active === i}
+            aria-controls={`materiaal-panel-${i}`}
+            id={`materiaal-tab-${i}`}
             onClick={() => setActive(i)}
             className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
               active === i
@@ -105,7 +109,12 @@ export default function MaterialenSection() {
       </div>
 
       {/* ── Active card with photo ── */}
-      <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-card">
+      <div
+        className="mt-4 overflow-hidden rounded-2xl border border-border bg-card"
+        role="tabpanel"
+        id={`materiaal-panel-${active}`}
+        aria-labelledby={`materiaal-tab-${active}`}
+      >
         <div className="grid grid-rows-[220px_1fr] lg:grid-rows-none lg:grid-cols-[420px_1fr]">
 
           {/* Photo */}
@@ -223,26 +232,17 @@ export default function MaterialenSection() {
         </div>
       </div>
 
-      {/* ── Cluster links ── */}
-      <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-card px-6 py-5">
-        <div>
-          <p className="text-sm font-bold text-foreground">Materiaalvergelijking & isolatiedikte</p>
-          <p className="mt-0.5 text-xs text-muted-foreground">
-            Uitgebreide vergelijking van EPS, PIR en minerale wol — en welke{" "}
-            <Link href="/gevelisolatie/rc-waarde-dikte/" className="font-semibold text-primary underline-offset-2 hover:underline">
-              dikte bij uw gewenste Rc-waarde
-            </Link>{" "}
-            past.
-          </p>
-        </div>
-        <Link
-          href="/gevelisolatie/materialen/"
-          className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-[#d46218]"
-        >
-          Materialen vergelijken (EPS/PIR/wol)
-          <ArrowRight className="h-4 w-4" />
+      {/* ── Related links ── */}
+      <p className="mt-6 text-sm text-muted-foreground">
+        Meer weten?{" "}
+        <Link href="/gevelisolatie/materialen/" className="font-semibold text-primary underline-offset-2 hover:underline">
+          Uitgebreide materialenvergelijking →
         </Link>
-      </div>
+        {" · "}
+        <Link href="/gevelisolatie/rc-waarde-dikte/" className="font-semibold text-primary underline-offset-2 hover:underline">
+          Welke dikte bij uw Rc-waarde?
+        </Link>
+      </p>
 
     </section>
   )

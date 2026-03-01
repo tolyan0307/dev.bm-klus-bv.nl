@@ -99,7 +99,7 @@ export const kosten = {
     ],
   },
   callout:
-    "Exacte prijs volgt na opname; u ontvangt een offerte met duidelijke scope.",
+    "Exacte prijs volgt na opname; wij stellen een offerte op met duidelijke scope.",
   ctaLink: { label: "Vraag een offerte aan", href: "/contact/" },
 };
 
@@ -164,7 +164,7 @@ export const voorbereiding = {
     },
     {
       title: "Herstel van scheuren en voegwerk",
-      body: "Scheuren in de ondergrond en beschadigd voegwerk worden hersteld vóórdat er een verflaag wordt aangebracht. Losse verf en afgebladderd materiaal worden verwijderd. Alleen een hechte, stabiele ondergrond garandeert een duurzaam eindresultaat.",
+      body: "Scheuren in de ondergrond en beschadigd voegwerk worden hersteld vóórdat er een verflaag wordt aangebracht. Losse verf en afgebladderd materiaal worden verwijderd. Alleen een hechte, stabiele ondergrond vormt de basis voor een duurzaam eindresultaat.",
       bullets: [
         "Haarscheuren en open naden opvullen met geschikt herstelmateriaal",
         "Losse en afgebladderde verflagen volledig verwijderen",
@@ -254,7 +254,7 @@ export const faq = {
     {
       question: "Wat kost gevel schilderen per m²?",
       answer:
-        "Als richtprijs (indicatie) ligt gevel schilderen rond €25–€40/m² voor basische situaties met lichte reiniging en stabiele ondergrond. Voor standaard voorbereiding (reiniging + primer/voorstrijk) doorgaans €30–€50/m². Intensievere herstelwerkzaamheden (afbladdering, scheuren, steiger/hoogwerker) worden op aanvraag berekend. Factoren die de prijs beïnvloeden: bereikbaarheid, reiniging, herstelwerk aan voegwerk en scheuren, verfsoort, aantal lagen en afplakwerk. Steiger/hoogwerker, intensieve reiniging en herstelwerk zijn niet altijd in het basisanterval begrepen en kunnen de prijs verhogen. Na opname ter plaatse ontvangt u een offerte met duidelijke scope.",
+        "Als richtprijs (indicatie) ligt gevel schilderen rond €25–€40/m² voor basische situaties met lichte reiniging en stabiele ondergrond. Voor standaard voorbereiding (reiniging + primer/voorstrijk) doorgaans €30–€50/m². Intensievere herstelwerkzaamheden (afbladdering, scheuren, steiger/hoogwerker) worden op aanvraag berekend. Factoren die de prijs beïnvloeden: bereikbaarheid, reiniging, herstelwerk aan voegwerk en scheuren, verfsoort, aantal lagen en afplakwerk. Steiger/hoogwerker, intensieve reiniging en herstelwerk zijn niet altijd in het basisinterval begrepen en kunnen de prijs verhogen. Na opname ter plaatse stellen wij een offerte op met duidelijke scope.",
     },
     {
       question: "Welke verf is geschikt voor mijn gevel?",

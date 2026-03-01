@@ -165,7 +165,7 @@ export const kosten = {
     ],
   },
   callout:
-    "U ontvangt een offerte met duidelijke scope (wel/niet inbegrepen).",
+    "Wij stellen een offerte op met duidelijke scope (wel/niet inbegrepen).",
 };
 
 export const ctaStrip = {

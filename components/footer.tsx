@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react"
+import { Mail, Phone, MapPin, ArrowUpRight, MessageCircle } from "lucide-react"
 
 const socials = [
   {
@@ -49,29 +49,31 @@ const socials = [
   },
 ]
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Diensten", href: "/diensten/" },
+const serviceLinks = [
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
   { label: "Gevel schilderen", href: "/gevel-schilderen/" },
-  { label: "Buiten stucwerk", href: "/buiten-stucwerk" },
-  { label: "Sierpleister", href: "/sierpleister" },
+  { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
+  { label: "Sierpleister", href: "/sierpleister/" },
+  { label: "Muren stucen", href: "/muren-stucen/" },
+]
+
+const companyLinks = [
+  { label: "Over ons", href: "/over-ons/" },
   { label: "Onze werken", href: "/onze-werken/" },
-  { label: "Over ons", href: "/over-ons" },
+  { label: "Diensten", href: "/diensten/" },
   { label: "Contact", href: "/contact/" },
+  { label: "Privacybeleid", href: "/privacybeleid/" },
 ]
 
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-foreground">
-      {/* Top accent line */}
       <div className="h-px w-full bg-primary" />
 
       <div className="relative">
-        {/* Upper section: Big CTA */}
+        {/* CTA block */}
         <div className="mx-auto max-w-7xl px-4 pt-20 pb-16 sm:px-6 lg:px-8 lg:pt-24 lg:pb-20">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
-            {/* Left: large statement */}
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
             <div className="max-w-2xl">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 Klaar om te beginnen?
@@ -83,15 +85,25 @@ export default function Footer() {
               </h2>
             </div>
 
-            {/* Right: CTA button */}
-            <div className="shrink-0">
-              <Link
-                href="/contact/"
-                className="group inline-flex items-center gap-3 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20 hover:brightness-110"
+            <div className="flex shrink-0 gap-3">
+              <a
+                href="https://wa.me/31612079808"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center gap-3 rounded-lg border-2 border-background/15 bg-background/[0.06] px-6 py-4 text-base font-semibold text-background/80 backdrop-blur-sm transition-all hover:border-background/25 hover:bg-background/[0.12] sm:w-auto"
               >
-                Plan gratis inspectie
+                <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#25D366]/50 bg-[#25D366]/15 transition-transform group-hover:scale-110">
+                  <MessageCircle className="h-4 w-4 text-[#25D366]" strokeWidth={1.5} />
+                </span>
+                WhatsApp
+              </a>
+              <a
+                href="#offerte"
+                className="group inline-flex items-center justify-center gap-3 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20 hover:brightness-110 sm:w-auto"
+              >
+                Offerte aanvragen
                 <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -101,11 +113,11 @@ export default function Footer() {
           <div className="h-px w-full bg-background/10" />
         </div>
 
-        {/* Lower section: Info grid */}
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-14">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-            {/* Column 1: Logo + description */}
-            <div>
+        {/* Info grid */}
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+          <div className="grid gap-10 sm:grid-cols-2 lg:flex lg:justify-between">
+            {/* Brand */}
+            <div className="lg:max-w-[280px]">
               <div className="mb-5">
                 <img
                   src="/images/logo-bm-klus.webp"
@@ -117,13 +129,21 @@ export default function Footer() {
               </div>
               <p className="text-sm leading-relaxed text-background/70">
                 Professionele gevelisolatie en renovatie in de regio Rotterdam.
+                Vakmanschap, kwaliteit en persoonlijke service.
               </p>
+              <div className="mt-5 flex flex-col gap-1.5 text-xs text-background/50">
+                <span>KVK: 90826167</span>
+                <span>VCA* gecertificeerd</span>
+              </div>
             </div>
 
-            {/* Column 2: Navigation */}
+            {/* Diensten */}
             <div>
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-background/60">
+                Diensten
+              </h3>
               <nav className="flex flex-col gap-3">
-                {navLinks.map((link) => (
+                {serviceLinks.map((link) => (
                   <Link
                     key={link.label}
                     href={link.href}
@@ -135,31 +155,60 @@ export default function Footer() {
               </nav>
             </div>
 
-            {/* Column 3: Contact */}
-            <div className="flex flex-col gap-4">
-              <a
-                href="tel:+31612079808"
-                className="flex items-center gap-3 text-sm text-background/70 transition-colors hover:text-primary"
-              >
-                <Phone className="h-4 w-4 shrink-0 text-primary" />
-                <span>+31 6 1207 9808</span>
-              </a>
-              <a
-                href="mailto:info@bm-klus-bv.nl"
-                className="flex items-center gap-3 text-sm text-background/70 transition-colors hover:text-primary"
-              >
-                <Mail className="h-4 w-4 shrink-0 text-primary" />
-                <span>info@bm-klus-bv.nl</span>
-              </a>
-              <div className="flex items-center gap-3 text-sm text-background/70">
-                <MapPin className="h-4 w-4 shrink-0 text-primary" />
-                <span>Rotterdam, Nederland</span>
-              </div>
+            {/* Bedrijf */}
+            <div>
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-background/60">
+                Bedrijf
+              </h3>
+              <nav className="flex flex-col gap-3">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm text-background/70 transition-colors hover:text-primary"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
             </div>
 
-            {/* Column 4: Socials */}
+            {/* Contact + Socials */}
             <div>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-background/60">
+                Contact
+              </h3>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://wa.me/31612079808"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-sm text-background/70 transition-colors hover:text-[#25D366]"
+                >
+                  <MessageCircle className="h-4 w-4 shrink-0 text-[#25D366]" strokeWidth={1.5} />
+                  <span>WhatsApp (snelste reactie)</span>
+                </a>
+                <a
+                  href="mailto:info@bm-klus-bv.nl"
+                  className="flex items-center gap-3 text-sm text-background/70 transition-colors hover:text-primary"
+                >
+                  <Mail className="h-4 w-4 shrink-0 text-primary" />
+                  <span>info@bm-klus-bv.nl</span>
+                </a>
+                <a
+                  href="tel:+31612079808"
+                  className="flex items-center gap-3 text-sm text-background/70 transition-colors hover:text-primary"
+                >
+                  <Phone className="h-4 w-4 shrink-0 text-primary/60" />
+                  <span>+31 6 1207 9808</span>
+                </a>
+                <div className="flex items-center gap-3 text-sm text-background/70">
+                  <MapPin className="h-4 w-4 shrink-0 text-primary" />
+                  <span>Rotterdam, Nederland</span>
+                </div>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-2">
                 {socials.map((social) => (
                   <a
                     key={social.label}
@@ -167,7 +216,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-background/10 text-background/60 transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-background/10 text-background/50 transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
                   >
                     {social.icon}
                   </a>
@@ -182,10 +231,16 @@ export default function Footer() {
           <div className="h-px w-full bg-background/10" />
         </div>
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center">
-            <p className="text-xs text-background/70">
-              {new Date().getFullYear()} BM Klus BV
+          <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
+            <p className="text-xs text-background/50">
+              &copy; {new Date().getFullYear()} BM Klus BV &mdash; Alle rechten voorbehouden
             </p>
+            <Link
+              href="/privacybeleid/"
+              className="text-xs text-background/50 transition-colors hover:text-primary"
+            >
+              Privacybeleid
+            </Link>
           </div>
         </div>
       </div>

@@ -163,6 +163,40 @@ export const PLANNED_ROUTES = [
     priority: 0.6,
   },
 
+  // ── Gevelisolatie location pages ─────────────────────────────────────────
+  {
+    path: "/gevelisolatie/rotterdam/",
+    title: "Gevelisolatie Rotterdam – ETICS prijs per m² | BM Klus BV",
+    description:
+      "Buitengevelisolatie (ETICS) in Rotterdam. Stuc, sierpleister, crepi of steenstrips. Gratis opname en offerte per m². VCA-gecertificeerd.",
+    changefreq: "monthly",
+    priority: 0.7,
+  },
+  {
+    path: "/gevelisolatie/den-haag/",
+    title: "Gevelisolatie Den Haag – ETICS prijs per m² | BM Klus BV",
+    description:
+      "Buitengevelisolatie (ETICS) in Den Haag en omgeving. Stuc, sierpleister of steenstrips. Gratis opname, offerte per m². Specialist uit Rotterdam.",
+    changefreq: "monthly",
+    priority: 0.7,
+  },
+  {
+    path: "/gevelisolatie/delft/",
+    title: "Gevelisolatie Delft – ETICS prijs per m² | BM Klus BV",
+    description:
+      "Buitengevelisolatie (ETICS) in Delft. Sierpleister, stucwerk of steenstrips. Gratis opname en offerte per m². Specialist regio Rotterdam.",
+    changefreq: "monthly",
+    priority: 0.7,
+  },
+  {
+    path: "/gevelisolatie/dordrecht/",
+    title: "Gevelisolatie Dordrecht – ETICS prijs per m² | BM Klus BV",
+    description:
+      "Buitengevelisolatie (ETICS) in Dordrecht en omgeving. Stuc, sierpleister of steenstrips. Gratis opname, offerte per m². Specialist regio Rotterdam.",
+    changefreq: "monthly",
+    priority: 0.7,
+  },
+
   // ── Optional / future pages ───────────────────────────────────────────────
   {
     path: "/onze-werken/gevelisolatie/",

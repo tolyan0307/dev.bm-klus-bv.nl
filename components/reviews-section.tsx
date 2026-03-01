@@ -17,10 +17,9 @@ const reviews = [
     name: "Geert de Leeuw",
     date: "12 Februari 2025",
     initial: "G",
-    color: "bg-muted-foreground",
+    color: "bg-emerald-600",
     rating: 5,
     text: "Heel tevreden over de samenwerking en resultaat! Wij hadden last van flinke vochtdoorslag door de...",
-    hasPhoto: true,
     verified: true,
   },
   {
@@ -58,19 +57,20 @@ export default function ReviewsSection() {
   return (
     <section className="py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header - unified style */}
-        <div className="mb-12 lg:mb-16">
-          <div className="mb-3 flex items-center gap-3">
-            <div className="h-px w-10 bg-primary" />
+        {/* Header — centered for visual variety */}
+        <div className="mb-12 text-center lg:mb-16">
+          <div className="mx-auto mb-3 flex items-center justify-center gap-3">
+            <div className="h-px w-12 bg-primary" />
             <span className="text-sm font-semibold uppercase tracking-widest text-primary">
               Reviews
             </span>
+            <div className="h-px w-12 bg-primary" />
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Klanten over{" "}
             <span className="text-primary">BM Klus BV</span>
           </h2>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             Lees wat onze tevreden klanten over ons vertellen.
           </p>
         </div>
@@ -118,17 +118,7 @@ export default function ReviewsSection() {
                         <div
                           className={`flex h-[72px] w-[72px] items-center justify-center rounded-full text-2xl font-bold text-primary-foreground shadow-lg ${review.color}`}
                         >
-                          {review.hasPhoto ? (
-                            <img
-                              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
-                              alt={review.name}
-                              width={72}
-                              height={72}
-                              className="h-full w-full rounded-full object-cover"
-                            />
-                          ) : (
-                            review.initial
-                          )}
+                          {review.initial}
                         </div>
                         {/* Google badge */}
                         <div className="absolute -bottom-0.5 -right-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-card shadow-sm">

@@ -138,7 +138,7 @@ export const kosten = {
     ],
   },
   callout:
-    "U ontvangt na opname een duidelijke offerte met scope en prijs per m².",
+    "Na opname stellen wij een duidelijke offerte op met scope en prijs per m².",
 };
 
 export const werkwijze = {

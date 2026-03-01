@@ -52,7 +52,7 @@ export default function ServicesSection() {
   const current = services[activeService]
 
   return (
-    <section className="bg-secondary/20 py-16 sm:py-20 lg:py-24">
+    <section className="bg-secondary/10 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 lg:mb-16">
@@ -154,15 +154,20 @@ export default function ServicesSection() {
               </div>
             </div>
 
-            {/* Right: Image only - clean visual */}
-            <div className="relative overflow-hidden rounded-2xl border border-border shadow-lg">
-              <img
-                src={current.image}
-                alt={current.title}
-                width={640}
-                height={480}
-                className="h-full w-full object-cover transition-all duration-500"
-              />
+            {/* Right: Image with crossfade */}
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-lg">
+              {services.map((service, index) => (
+                <img
+                  key={service.id}
+                  src={service.image}
+                  alt={service.title}
+                  width={640}
+                  height={480}
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                    activeService === index ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>

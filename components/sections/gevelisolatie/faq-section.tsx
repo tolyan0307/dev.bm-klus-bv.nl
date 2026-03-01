@@ -1,13 +1,10 @@
-// FUTURE EXTRACTION TARGET: pillar-only (optional)
 "use client"
 
 import { faqContent } from "@/lib/content/gevelisolatie"
 import { ChevronDown } from "lucide-react"
 import Link from "next/link"
-import Script from "next/script"
 import { useState } from "react"
 
-// Categorise the 12 FAQ items
 const categories = [
   { label: "Alles",       indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] },
   { label: "Kosten",      indices: [0] },
@@ -25,23 +22,7 @@ export default function FaqSection() {
   const visibleIndices = categories[activeCategory].indices
   const visibleItems = visibleIndices.map((i) => ({ ...data.items[i], originalIndex: i }))
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: data.items.map((item) => ({
-      "@type": "Question",
-      name: item.vraag,
-      acceptedAnswer: { "@type": "Answer", text: item.antwoord },
-    })),
-  }
-
   return (
-    <>
-      <Script
-        id="faq-gevelisolatie-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <section id={data.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
 
@@ -140,6 +121,5 @@ export default function FaqSection() {
           </div>
         </div>
       </section>
-    </>
   )
 }

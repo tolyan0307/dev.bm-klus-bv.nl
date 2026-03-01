@@ -1,5 +1,5 @@
 :HL["/_next/static/chunks/4e1c0da8ee9de505.css","style"]
-:HL["/_next/static/chunks/35273a4f2fa9a795.css","style"]
+:HL["/_next/static/chunks/2bb9410c395c84b3.css","style"]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/images/logo-bm-klus.webp","image"]
 :HL["/images/etics-detail.webp","image"]
@@ -8,7 +8,7 @@
 :HL["/images/etics-layer-mesh-ext.webp","image"]
 :HL["/images/etics-layer-finish-ext.webp","image"]
 :HL["/images/portfolio-hero.webp","image"]
-:HL["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop","image"]
-:HL["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop","image"]
-:HL["https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop","image"]
-0:{"buildId":"yLMCrZVj1CY93TaYu__74","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+:HL["/images/projects/halsteren-buitenstucwerk-na-02.webp","image"]
+:HL["/images/projects/halsteren-buitenstucwerk-na-05.webp","image"]
+:HL["/images/projects/halsteren-buitenstucwerk-na-08.webp","image"]
+0:{"buildId":"lpmSLbPAvkB5D-XSt02VM","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

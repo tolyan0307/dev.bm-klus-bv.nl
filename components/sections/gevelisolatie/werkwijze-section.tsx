@@ -12,12 +12,12 @@ const stapFaqs: { q: string; a: string }[][] = [
     { q: "Moet ik iets voorbereiden?", a: "Nee, wij regelen alles. Zorg alleen dat de gevel toegankelijk is." },
   ],
   [
-    { q: "Hoe snel ontvang ik de offerte?", a: "Binnen 2 werkdagen na de opname ontvangt u een gedetailleerde offerte met vaste prijs per m²." },
+    { q: "Hoe snel ontvang ik de offerte?", a: "Na de opname stellen wij zo snel mogelijk een gedetailleerde offerte op met prijs per m²." },
     { q: "Wat staat er in de offerte?", a: "De RC-waarde, materiaalkeuze, prijs per m², totaalprijs en planning." },
   ],
   [
-    { q: "Hoe ver van tevoren wordt gepland?", a: "Doorgaans 1–3 weken na akkoord, afhankelijk van het seizoen en onze bezetting." },
-    { q: "Kan ik de startdatum zelf kiezen?", a: "We stemmen de datum altijd af op uw voorkeur en plannen dat schriftelijk in." },
+    { q: "Hoe ver van tevoren wordt gepland?", a: "Doorgaans enkele weken na akkoord, afhankelijk van het seizoen en onze bezetting." },
+    { q: "Kan ik de startdatum zelf kiezen?", a: "We stemmen de datum af op uw voorkeur." },
   ],
   [
     { q: "Hoe lang staat de steiger?", a: "Gemiddeld de volledige uitvoeringsperiode, vaak 1–2 weken afhankelijk van de geveloppervlakte." },
@@ -28,8 +28,8 @@ const stapFaqs: { q: string; a: string }[][] = [
     { q: "Hoe lang duurt deze fase?", a: "Afhankelijk van de oppervlakte: 1–3 werkdagen voor een gemiddelde rijwoning." },
   ],
   [
-    { q: "Moet ik aanwezig zijn bij oplevering?", a: "We raden het aan. U loopt samen met de uitvoerder het eindresultaat door en tekent af." },
-    { q: "Wat als ik niet tevreden ben?", a: "Wij lossen eventuele punten direct op. Uw tevredenheid is onze garantie." },
+    { q: "Moet ik aanwezig zijn bij oplevering?", a: "We raden het aan. U kunt samen met de uitvoerder het eindresultaat doorlopen." },
+    { q: "Wat als ik niet tevreden ben?", a: "Wij doen ons best om eventuele punten op te lossen." },
   ],
 ]
 
@@ -228,27 +228,6 @@ export default function WerkwijzeSection() {
               <span className="text-sm leading-snug text-foreground/70">{b}</span>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* ── End-of-section CTA ── */}
-      <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-card px-6 py-5">
-        <p className="text-sm font-bold text-foreground">Klaar om te starten?</p>
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/contact/"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-[#d46218]"
-          >
-            Plan gratis inspectie
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/onze-werken/"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-background px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
-          >
-            Bekijk onze projecten
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
         </div>
       </div>
 

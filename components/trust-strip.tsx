@@ -1,10 +1,10 @@
 import { Star, Award, CheckCircle2, Calculator } from "lucide-react"
 
 const trustItems = [
-  { icon: Star, text: "4.8★ Google reviews" },
+  { icon: Star, text: "4.8★ Google reviews (23+)" },
   { icon: Award, text: "KVK geregistreerd" },
   { icon: CheckCircle2, text: "VCA gecertificeerd" },
-  { icon: Calculator, text: "Offerte per m²" },
+  { icon: Calculator, text: "Prijs per m²" },
 ]
 
 export default function TrustStrip() {

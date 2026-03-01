@@ -18,7 +18,7 @@ export const hero = {
   h1: "Gevel sierpleister: spachtelputz of crepi voor een sterke buitenafwerking",
   lead: [
     "Gevel sierpleister is een decoratieve buitenpleister met zichtbare korrelstructuur \u2014 ook bekend als spachtelputz buiten of crepi. De korrelgrootte (1,5\u20133\u00a0mm) bepaalt de uitstraling en het maskerend vermogen.",
-    "BM Klus BV werkt met correcte voorbereiding en verzorgt de complete detaillering: plint, hoeken en dagkanten. Na een korte opname ontvangt u een heldere richtprijs en duidelijke scope.",
+    "BM Klus BV werkt met correcte voorbereiding en verzorgt de complete detaillering: plint, hoeken en dagkanten. Na een korte opname stellen wij een heldere richtprijs en duidelijke scope op.",
   ],
   trustBullets: [
     "Keuze in korrel & structuur (1,5\u20133 mm)",
@@ -386,7 +386,7 @@ export const faq = {
     {
       question: "Wat kost gevel sierpleister per m\u00b2?",
       answer:
-        "Als richtprijs (indicatie): spachtelputz buiten circa \u20ac50\u2013\u20ac95 per m\u00b2; crepi circa \u20ac55\u2013\u20ac105 per m\u00b2 (inclusief arbeid en standaardmaterialen, exclusief steiger/hoogwerker en complex herstelwerk). Na een opname ter plaatse ontvangt u een heldere offerte met exacte prijs.",
+        "Als richtprijs (indicatie): spachtelputz buiten circa \u20ac50\u2013\u20ac95 per m\u00b2; crepi circa \u20ac55\u2013\u20ac105 per m\u00b2 (inclusief arbeid en standaardmaterialen, exclusief steiger/hoogwerker en complex herstelwerk). Na een opname ter plaatse stellen wij een heldere offerte op met exacte prijs.",
     },
     {
       question: "Spachtelputz of crepi: wat is beter?",

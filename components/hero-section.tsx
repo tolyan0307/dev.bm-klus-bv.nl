@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       aria-label="Hero"
-      className="relative min-h-[85vh] w-full overflow-hidden"
+      className="relative min-h-[75vh] w-full overflow-hidden"
     >
       {/* Background image */}
       <div className="absolute inset-0">
@@ -22,24 +22,34 @@ export default function HeroSection() {
         />
 
         {/* Base darkening layer */}
-        <div className="absolute inset-0" style={{ background: "rgba(14,10,6,0.42)" }} />
+        <div className="absolute inset-0 bg-[rgba(14,10,6,0.38)]" />
 
-        {/* Primary content gradient — left-heavy vignette for text legibility */}
+        {/* Cinematic left vignette — wide, soft gradient for text legibility */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(108deg, rgba(14,10,6,0.96) 0%, rgba(14,10,6,0.84) 26%, rgba(14,10,6,0.58) 48%, rgba(14,10,6,0.20) 68%, transparent 88%)",
+              "linear-gradient(105deg, rgba(14,10,6,0.88) 0%, rgba(14,10,6,0.72) 22%, rgba(14,10,6,0.44) 42%, rgba(14,10,6,0.12) 62%, transparent 80%)",
           }}
         />
 
-        {/* Top band — deep dark for the transparent navbar so white text reads clearly */}
+        {/* Top band — navbar readability */}
         <div
           className="absolute inset-x-0 top-0"
           style={{
-            height: 180,
+            height: 160,
             background:
-              "linear-gradient(to bottom, rgba(8,5,2,0.90) 0%, rgba(8,5,2,0.62) 40%, transparent 100%)",
+              "linear-gradient(to bottom, rgba(8,5,2,0.82) 0%, rgba(8,5,2,0.50) 45%, transparent 100%)",
+          }}
+        />
+
+        {/* Bottom — clean dark edge, no white bleed */}
+        <div
+          className="absolute inset-x-0 bottom-0"
+          style={{
+            height: 120,
+            background:
+              "linear-gradient(to bottom, transparent 0%, rgba(14,10,6,0.30) 100%)",
           }}
         />
 
@@ -47,37 +57,29 @@ export default function HeroSection() {
         <div
           className="absolute rounded-full"
           style={{
-            bottom: "15%",
-            left: "-8%",
-            width: 440,
-            height: 440,
+            bottom: "18%",
+            left: "-6%",
+            width: 500,
+            height: 500,
             background:
-              "radial-gradient(circle, rgba(232,96,10,0.14) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(232,96,10,0.10) 0%, transparent 70%)",
           }}
         />
 
-        {/* Bottom fade into page background */}
+        {/* Film-grain noise overlay for premium texture */}
         <div
-          className="absolute inset-x-0 bottom-0"
+          className="absolute inset-0 opacity-[0.035]"
           style={{
-            height: 160,
-            background: "linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.55) 50%, transparent 100%)",
-          }}
-        />
-
-        {/* Right-edge vignette */}
-        <div
-          className="absolute inset-y-0 right-0"
-          style={{
-            width: "30%",
-            background: "linear-gradient(to left, rgba(14,10,6,0.28), transparent)",
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+            backgroundRepeat: "repeat",
+            backgroundSize: "128px 128px",
           }}
         />
       </div>
 
-      {/* Main content area */}
-      <div className="relative z-10">
-        <div className="mx-auto max-w-7xl px-4 pt-36 pb-12 sm:px-6 sm:pt-40 sm:pb-16 lg:px-8 lg:pt-44 lg:pb-20">
+      {/* Main content area — vertically centered */}
+      <div className="relative z-10 flex min-h-[75vh] flex-col justify-center">
+        <div className="mx-auto w-full max-w-7xl px-4 pt-24 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20">
           <div className="max-w-xl">
             {/* Small label */}
             <div className="mb-5 flex items-center gap-3 sm:mb-6">
@@ -108,7 +110,7 @@ export default function HeroSection() {
                 href="/contact/"
                 className="group inline-flex items-center gap-2.5 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-[#d45e18] hover:shadow-xl hover:shadow-primary/30 sm:px-8 sm:py-3.5 sm:text-base"
               >
-                Plan gratis inspectie
+                Offerte aanvragen
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link

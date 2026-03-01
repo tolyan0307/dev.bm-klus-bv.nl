@@ -71,10 +71,14 @@ export default function DetailsKoudebruggenSection() {
       </div>
 
       {/* Desktop: pill tabs */}
-      <div className="mt-10 hidden flex-wrap gap-2 sm:flex">
+      <div className="mt-10 hidden flex-wrap gap-2 sm:flex" role="tablist" aria-label="ETICS-details">
         {data.subsections.map((sub, i) => (
           <button
             key={sub.h3}
+            role="tab"
+            aria-selected={active === i}
+            aria-controls={`detail-panel-${i}`}
+            id={`detail-tab-${i}`}
             onClick={() => setActive(i)}
             className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
               active === i
@@ -91,7 +95,12 @@ export default function DetailsKoudebruggenSection() {
       </div>
 
       {/* ── Active card with photo ── */}
-      <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-card">
+      <div
+        className="mt-4 overflow-hidden rounded-2xl border border-border bg-card"
+        role="tabpanel"
+        id={`detail-panel-${active}`}
+        aria-labelledby={`detail-tab-${active}`}
+      >
         <div className="grid grid-rows-[220px_1fr] lg:grid-rows-none lg:grid-cols-[420px_1fr]">
 
           {/* Photo */}

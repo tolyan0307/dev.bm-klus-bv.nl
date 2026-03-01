@@ -2,9 +2,9 @@ import Link from "next/link"
 import { Phone, ArrowRight, CheckCircle2 } from "lucide-react"
 
 const checks = [
-  "Gratis en vrijblijvend",
-  "Offerte binnen 2 werkdagen",
-  "Geen verborgen kosten",
+  "Vaste prijs per m² — geen verrassingen achteraf",
+  "RC-waarde, dikte en afwerking in de offerte",
+  "Wij checken subsidie & vergunning voor u",
 ]
 
 export default function MidPageCTA() {
@@ -34,13 +34,13 @@ export default function MidPageCTA() {
               Vrijblijvend advies · Rotterdam
             </p>
             <h2 className="mt-3 text-balance text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl">
-              Klaar voor een warme,{" "}
+              Benieuwd wat het kost{" "}
               <span className="text-[#E8600A] decoration-[#E8600A]/40 underline decoration-[3px] underline-offset-4">
-                goed geïsoleerde gevel?
-                  </span>
+                voor uw woning?
+              </span>
             </h2>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/75 sm:text-base">
-              Wij beoordelen uw gevel ter plekke, adviseren de juiste RC-waarde en leveren binnen 2 werkdagen een vaste offerte zonder verrassingen.
+              Wij komen gratis langs, beoordelen de gevel en leveren binnen 2 werkdagen een heldere offerte met vaste prijs per m².
             </p>
 
             {/* Trust signals */}
@@ -57,9 +57,9 @@ export default function MidPageCTA() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:hidden">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-[#E8600A] px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a] rounded-sm"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#E8600A] px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a]"
               >
-                Plan gratis inspectie
+                Vraag uw offerte aan
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
@@ -76,9 +76,9 @@ export default function MidPageCTA() {
           <div className="hidden flex-col gap-3 lg:flex lg:min-w-[220px]">
             <Link
               href="/contact/"
-              className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#E8600A] px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a]"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#E8600A] px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a]"
             >
-              Plan gratis inspectie
+              Vraag uw offerte aan
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a

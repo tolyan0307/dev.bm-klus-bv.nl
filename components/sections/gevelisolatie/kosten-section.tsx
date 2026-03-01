@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { kostenContent } from "@/lib/content/gevelisolatie"
 import { Check, ArrowRight } from "lucide-react"
+import KostenCalculator from "@/components/sections/gevelisolatie/kosten-calculator"
 
 export default function KostenSection() {
   const data = kostenContent
@@ -41,7 +42,7 @@ export default function KostenSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent lg:bg-gradient-to-r" />
             <div className="absolute bottom-4 left-4 lg:hidden">
               <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
-                Gratis inspectie
+                Kosten & prijs
               </span>
             </div>
           </div>
@@ -133,31 +134,24 @@ export default function KostenSection() {
             </ul>
           </div>
 
-          {/* Callout */}
-          <div className="rounded-xl bg-primary p-6">
-            <p className="text-sm font-semibold leading-relaxed text-primary-foreground sm:text-base">
+          {/* Callout — informational, no hard CTA */}
+          <div className="rounded-xl border border-primary/20 bg-primary/5 p-6">
+            <p className="text-sm font-semibold leading-relaxed text-foreground sm:text-base">
               {data.callout}
             </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <Link
-                href="/contact/"
-                className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-white/20"
-              >
-                Plan gratis inspectie
-                <ArrowRight className="h-4 w-4" />
+            <p className="mt-2 text-xs text-muted-foreground">
+              Gebruik de calculator hieronder voor een indicatie, of{" "}
+              <Link href="/gevelisolatie/kosten/" className="font-semibold text-primary underline-offset-2 hover:underline">
+                bekijk alle kostenfactoren →
               </Link>
-              <Link
-                href="/gevelisolatie/kosten/"
-                className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-transparent px-5 py-2.5 text-sm font-semibold text-white/80 transition-colors hover:bg-white/10"
-              >
-                Kosten & prijs per m²
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+            </p>
           </div>
 
         </div>
       </div>
+
+      {/* ── Interactive price calculator ── */}
+      <KostenCalculator />
     </section>
   )
 }

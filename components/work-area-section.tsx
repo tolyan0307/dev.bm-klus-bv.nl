@@ -31,7 +31,7 @@ export default function WorkAreaSection() {
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
 
   return (
-    <section className="bg-secondary/20 py-16 sm:py-20 lg:py-24">
+    <section className="bg-secondary/10 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: Text content */}

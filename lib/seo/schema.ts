@@ -5,7 +5,9 @@ import { SITE } from "@/lib/seo/routes"
 export function jsonLdScript(data: object) {
   return createElement("script", {
     type: "application/ld+json",
-    dangerouslySetInnerHTML: { __html: JSON.stringify(data) },
+    dangerouslySetInnerHTML: {
+      __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+    },
   })
 }
 
@@ -13,15 +15,94 @@ export function localBusinessSchema(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
+    "@id": `${SITE.canonicalBase}/#business`,
     name: SITE.siteName,
     url: SITE.canonicalBase,
+    telephone: "+31612079808",
+    email: "info@bm-klus-bv.nl",
     inLanguage: SITE.lang,
+    image: `${SITE.canonicalBase}/images/logo-bm-klus.webp`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Rotterdam",
+      addressRegion: "Zuid-Holland",
+      addressCountry: "NL",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 51.9225,
+      longitude: 4.4792,
+    },
     areaServed: [
-      { "@type": "Country", name: "Netherlands" },
-      { "@type": "Place", name: SITE.regionText },
+      { "@type": "City", name: "Rotterdam" },
+      { "@type": "City", name: "Den Haag" },
+      { "@type": "City", name: "Delft" },
+      { "@type": "City", name: "Leiden" },
+      { "@type": "City", name: "Dordrecht" },
+      { "@type": "City", name: "Schiedam" },
+      { "@type": "City", name: "Vlaardingen" },
+      { "@type": "City", name: "Gouda" },
     ],
-    sameAs: [], // TODO: add social profile URLs
-    // TODO: Add telephone, email, address, and openingHours once confirmed.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "23",
+      bestRating: "5",
+    },
+    sameAs: [],
+  }
+}
+
+export function serviceSchema(opts: {
+  name: string
+  description: string
+  url: string
+  lowPrice: string
+  highPrice: string
+  unitText?: string
+}): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    provider: { "@id": `${SITE.canonicalBase}/#business` },
+    areaServed: [
+      { "@type": "City", name: "Rotterdam" },
+      { "@type": "City", name: "Den Haag" },
+      { "@type": "City", name: "Delft" },
+      { "@type": "City", name: "Dordrecht" },
+    ],
+    offers: {
+      "@type": "AggregateOffer",
+      lowPrice: opts.lowPrice,
+      highPrice: opts.highPrice,
+      priceCurrency: "EUR",
+      unitText: opts.unitText ?? "per m²",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Gevelisolatie diensten",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "ETICS + pleisterafwerking",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gevelisolatie met stucwerk" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gevelisolatie met sierpleister" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gevelisolatie met crepi" } },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "ETICS + steenstrips",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gevelisolatie met steenstrips" } },
+          ],
+        },
+      ],
+    },
   }
 }
 

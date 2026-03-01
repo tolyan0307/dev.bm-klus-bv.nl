@@ -11,24 +11,28 @@ const finishes = [
   {
     name: "Stucwerk",
     image: "/images/etics-layer-wall-ext.webp",
+    href: "/buiten-stucwerk/",
   },
   {
     name: "Steenstrips",
     image: "/images/etics-layer-insulation-ext.webp",
+    href: "/gevelisolatie/afwerkingen/",
   },
   {
     name: "Schilderwerk",
     image: "/images/etics-layer-mesh-ext.webp",
+    href: "/gevel-schilderen/",
   },
   {
     name: "Sierpleister",
     image: "/images/etics-layer-finish-ext.webp",
+    href: "/sierpleister/",
   },
 ]
 
 export default function EticsSection() {
   return (
-    <section className="bg-secondary/10 py-16 sm:py-20 lg:py-24">
+    <section className="py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top: Two-column layout -- text left, image right */}
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -93,8 +97,9 @@ export default function EticsSection() {
 
           <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
             {finishes.map((finish) => (
-              <div
+              <Link
                 key={finish.name}
+                href={finish.href}
                 className="group relative overflow-hidden rounded-xl"
               >
                 <div className="aspect-[3/4] overflow-hidden rounded-xl">
@@ -106,14 +111,13 @@ export default function EticsSection() {
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                {/* Name overlay at bottom */}
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent px-4 pb-4 pt-12">
                   <p className="text-base font-semibold text-background sm:text-lg">
                     {finish.name}
                   </p>
                 </div>
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-foreground/5" />
-              </div>
+              </Link>
             ))}
           </div>
         </div>
