@@ -252,10 +252,13 @@ export default function ServicesRail() {
             Welke dienst past{" "}
             <span className="text-primary">bij u?</span>
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Selecteer een dienst of gebruik de keuzehulp hieronder.{" "}
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+            Van buitengevelisolatie (ETICS) en gevel schilderen tot buiten
+            stucwerk, sierpleister en binnenstucwerk — selecteer een dienst of
+            gebruik de keuzehulp.{" "}
             <span className="text-foreground/80">
-              Regio Rotterdam en omgeving (±80–100 km), Zuid-Holland en omliggende regio's.
+              Regio Rotterdam en omgeving (±80–100 km), Zuid-Holland en
+              omliggende regio&apos;s.
             </span>
           </p>
         </div>
@@ -263,163 +266,109 @@ export default function ServicesRail() {
         {/* ── Desktop: Rail + Preview ──────────────────────────────────────── */}
         <div className="hidden lg:grid lg:grid-cols-[1fr_420px] lg:items-stretch lg:gap-8 xl:grid-cols-[1fr_460px]">
 
-          {/* LEFT — Timeline rail */}
-          <div className="lg:self-start">
-            <ol className="relative flex flex-col" aria-label="Diensten lijst">
-              {/* Track line */}
-              <div
-                className="pointer-events-none absolute bottom-0 left-[19px] top-0 w-px bg-border"
-                aria-hidden
-              />
-              {/* Fill line */}
-              <div
-                className="pointer-events-none absolute left-[19px] top-0 w-px bg-primary transition-all duration-300 ease-out"
-                style={{ height: `${(activeIndex / (SERVICES.length - 1)) * 100}%` }}
-                aria-hidden
-              />
+          {/* LEFT — Service list */}
+          <div className="flex flex-col gap-1.5 lg:self-start">
+            {SERVICES.map((service, index) => {
+              const isActive = index === activeIndex
+              const highlighted = isHighlighted(service)
+              const deemphasized = isDeemphasized(service)
 
-              {SERVICES.map((service, index) => {
-                const isActive = index === activeIndex
-                const highlighted = isHighlighted(service)
-                const deemphasized = isDeemphasized(service)
+              return (
+                <div
+                  key={service.id}
+                  role="button"
+                  tabIndex={0}
+                  onClick={(e) => {
+                    if ((e.target as HTMLElement).closest("a")) return
+                    handleSelectService(index)
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault()
+                      handleSelectService(index)
+                    }
+                  }}
+                  className={`group relative flex cursor-pointer items-center gap-4 rounded-xl px-5 py-4 text-left transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
+                    isActive
+                      ? "border border-border bg-card shadow-md"
+                      : highlighted
+                        ? "border border-primary/20 bg-primary/5 hover:border-primary/35"
+                        : "border border-transparent hover:bg-card/60"
+                  } ${deemphasized ? "opacity-60" : "opacity-100"}`}
+                >
+                  {/* Active indicator line */}
+                  {isActive && (
+                    <div className="absolute bottom-3 left-0 top-3 w-[3px] rounded-full bg-primary" />
+                  )}
 
-                return (
-                  <li
-                    key={service.id}
-                    className={`relative pl-11 transition-opacity duration-200 ${
-                      // Only slightly dim (not ghost) when filter is active and not matching
-                      deemphasized ? "opacity-60" : "opacity-100"
+                  {/* Number */}
+                  <span
+                    className={`text-xl font-bold transition-colors ${
+                      isActive
+                        ? "text-primary"
+                        : highlighted
+                          ? "text-primary/50"
+                          : "text-border group-hover:text-primary/40"
                     }`}
                   >
-                    {/* Dot — active: filled orange; highlighted by filter: orange ring;
-                        rest: grey border, no fill */}
-                    <div
-                      className={`absolute left-[14px] top-[18px] h-[11px] w-[11px] rounded-full border-2 transition-all duration-200 ${
-                        isActive
-                          ? "scale-[1.25] border-primary bg-primary shadow-[0_0_0_3px_rgba(232,96,10,0.15)]"
-                          : highlighted
-                          ? "border-primary bg-primary/20"
-                          : index < activeIndex
-                          ? "border-primary/40 bg-primary/10"
-                          : "border-border bg-background"
-                      }`}
-                      aria-hidden
-                    />
+                    {service.id}
+                  </span>
 
-                    {/* Row */}
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      aria-current={isActive ? "true" : undefined}
-                      onClick={(e) => {
-                        // If click originated from an anchor tag, let the link navigate — don't just select
-                        if ((e.target as HTMLElement).closest("a")) return
-                        handleSelectService(index)
-                      }}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") {
-                          e.preventDefault()
-                          handleSelectService(index)
-                        }
-                      }}
-                      className={`group mb-1 flex cursor-pointer items-start gap-3 rounded-lg px-4 py-3 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
+                  {/* Text + link */}
+                  <div className="min-w-0 flex-1">
+                    <h3
+                      className={`text-base font-bold transition-colors ${
                         isActive
-                          ? "border border-primary/25 bg-card shadow-sm"
+                          ? "text-foreground"
                           : highlighted
-                          ? "border border-primary/15 bg-primary/[0.03] hover:border-primary/30"
-                          : "border border-transparent hover:border-border hover:bg-card/50"
+                            ? "text-foreground"
+                            : "text-muted-foreground group-hover:text-foreground"
                       }`}
                     >
-                      {/* Number */}
-                      <span
-                        className={`mt-0.5 shrink-0 text-sm font-bold tabular-nums leading-none transition-colors ${
-                          isActive
-                            ? "text-primary"
-                            : highlighted
-                            ? "text-primary/60"
-                            : "text-muted-foreground/70 group-hover:text-muted-foreground"
-                        }`}
-                      >
-                        {service.id}
-                      </span>
+                      {service.title}
+                    </h3>
+                    <p
+                      className={`mt-0.5 text-xs transition-colors ${
+                        isActive
+                          ? "text-primary"
+                          : highlighted
+                            ? "text-muted-foreground"
+                            : "text-muted-foreground/60"
+                      }`}
+                    >
+                      {service.subtitle}
+                    </p>
+                    <Link
+                      href={service.href}
+                      onClick={(e) => e.stopPropagation()}
+                      className={`mt-1.5 inline-flex items-center gap-1 text-xs font-medium underline-offset-2 transition-colors hover:underline ${
+                        isActive
+                          ? "text-primary"
+                          : "text-muted-foreground/70 group-hover:text-primary/70"
+                      }`}
+                    >
+                      {service.contactOnly ? "Contact opnemen" : "Meer info"}{" "}
+                      <ArrowRight size={11} />
+                    </Link>
+                  </div>
 
-                      {/* Text */}
-                      <div className="min-w-0 flex-1">
-                        <Link
-                          href={service.href}
-                          aria-current={isActive ? "page" : undefined}
-                          className={`block text-sm font-semibold leading-snug underline-offset-2 transition-colors hover:text-primary hover:underline focus:outline-none ${
-                            isActive
-                              ? "text-foreground"
-                              : highlighted
-                              ? "text-foreground"
-                              : "text-foreground/85 group-hover:text-foreground"
-                          }`}
-                        >
-                          {service.title}
-                        </Link>
-                        <p
-                          className={`mt-0.5 text-xs leading-relaxed transition-colors ${
-                            isActive
-                              ? "text-primary/80"
-                              : highlighted
-                              ? "text-muted-foreground"
-                              : "text-muted-foreground/60"
-                          }`}
-                        >
-                          {service.subtitle}
-                        </p>
-                        {/* CTA below title */}
-                        {service.contactOnly ? (
-                          <Link
-                            href="/contact/"
-                            onClick={(e) => e.stopPropagation()}
-                            className={`mt-1 inline-flex items-center gap-1 text-xs font-medium underline-offset-2 transition-colors hover:underline ${
-                              isActive
-                                ? "text-primary"
-                                : "text-muted-foreground/70 group-hover:text-primary/70"
-                            }`}
-                          >
-                            Contact opnemen <ArrowRight size={11} />
-                          </Link>
-                        ) : (
-                          <button
-                            type="button"
-                            tabIndex={-1}
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              handleSelectService(index)
-                            }}
-                            className={`mt-1 inline-flex items-center gap-1 text-xs font-medium underline-offset-2 transition-colors hover:underline cursor-default ${
-                              isActive
-                                ? "text-primary"
-                                : "text-muted-foreground/70 group-hover:text-primary/70"
-                            }`}
-                          >
-                            Meer info <ArrowRight size={11} />
-                          </button>
-                        )}
-                      </div>
-
-                      {/* Badge */}
-                      {service.badge && (
-                        <span
-                          className={`shrink-0 self-start rounded-full px-2 py-0.5 text-[11px] font-bold transition-all ${
-                            isActive
-                              ? "bg-primary/10 text-primary"
-                              : highlighted
-                              ? "bg-primary/10 text-primary/70"
-                              : "bg-border/30 text-muted-foreground/60"
-                          }`}
-                        >
-                          {service.badge}
-                        </span>
-                      )}
-                    </div>
-                  </li>
-                )
-              })}
-            </ol>
+                  {/* Badge */}
+                  {service.badge && (
+                    <span
+                      className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-bold transition-all ${
+                        isActive
+                          ? "bg-primary/10 text-primary"
+                          : highlighted
+                            ? "bg-primary/10 text-primary/70"
+                            : "bg-border/30 text-muted-foreground/60"
+                      }`}
+                    >
+                      {service.badge}
+                    </span>
+                  )}
+                </div>
+              )
+            })}
           </div>
 
           {/* RIGHT — Preview card */}
@@ -430,7 +379,7 @@ export default function ServicesRail() {
               style={{ animation: "rail-fade 0.2s ease" }}
             >
               {/* Image */}
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-secondary shrink-0">
+              <div className="relative aspect-video w-full overflow-hidden bg-secondary shrink-0">
                 <Image
                   src={active.imageSrc}
                   alt={active.title}
@@ -439,7 +388,7 @@ export default function ServicesRail() {
                   sizes="(max-width: 1280px) 420px, 460px"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-foreground/40 via-transparent to-transparent" />
                 {active.badge && (
                   <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow">
                     {active.badge}
@@ -519,7 +468,7 @@ export default function ServicesRail() {
                   }`}
                 >
                   {/* Photo */}
-                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-secondary">
+                  <div className="relative aspect-video w-full overflow-hidden bg-secondary">
                     <Image
                       src={service.imageSrc}
                       alt={service.title}
@@ -528,7 +477,7 @@ export default function ServicesRail() {
                       sizes="(max-width: 640px) 100vw, 50vw"
                       unoptimized
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-foreground/10 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-foreground/50 via-foreground/10 to-transparent" />
                     {service.badge && (
                       <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-primary px-2.5 py-0.5 text-[11px] font-bold text-primary-foreground shadow">
                         {service.badge}
@@ -613,7 +562,7 @@ export default function ServicesRail() {
                 {keuzehulpServices.map((s) => (
                   <div
                     key={s.id}
-                    className="flex items-start gap-3 rounded-lg border border-primary/15 bg-primary/[0.04] px-4 py-3"
+                    className="flex items-start gap-3 rounded-lg border border-primary/15 bg-primary/4 px-4 py-3"
                   >
                     <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                     <div className="min-w-0 flex-1">
@@ -698,7 +647,7 @@ export default function ServicesRail() {
               {keuzehulpServices.map((s) => (
                 <div
                   key={s.id}
-                  className="flex items-start gap-3 rounded-lg border border-primary/15 bg-primary/[0.04] px-4 py-3.5"
+                  className="flex items-start gap-3 rounded-lg border border-primary/15 bg-primary/4 px-4 py-3.5"
                 >
                   <div className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                   <div>
@@ -724,28 +673,6 @@ export default function ServicesRail() {
               Klik op een resultaat om passende diensten te zien.
             </p>
           )}
-        </div>
-
-        {/* ── Bottom CTA strip ─────────────────────────────────────────────── */}
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-card px-6 py-5">
-          <p className="text-base font-bold text-foreground">
-            Klaar om te starten?
-          </p>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-[#d46218]"
-            >
-              Gratis offerte
-              <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
-            <Link
-              href="/onze-werken/"
-              className="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
-              Bekijk projecten <ArrowRight size={13} />
-            </Link>
-          </div>
         </div>
 
         {/* Hidden SEO nav — all 6 anchors always in DOM */}

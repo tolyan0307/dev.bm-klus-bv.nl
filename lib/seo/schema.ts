@@ -22,8 +22,16 @@ export function localBusinessSchema(): Record<string, unknown> {
     email: "info@bm-klus-bv.nl",
     inLanguage: SITE.lang,
     image: `${SITE.canonicalBase}/images/logo-bm-klus.webp`,
+    logo: `${SITE.canonicalBase}/images/logo-bm-klus.webp`,
+    description:
+      "Specialist in buitengevelisolatie (ETICS), stucwerk, sierpleister en gevel schilderen in regio Rotterdam en Zuid-Holland.",
+    priceRange: "€€",
+    currenciesAccepted: "EUR",
+    paymentAccepted: "Cash, Bank Transfer",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Bonaventurastraat 58B",
+      postalCode: "3081 HE",
       addressLocality: "Rotterdam",
       addressRegion: "Zuid-Holland",
       addressCountry: "NL",
@@ -33,6 +41,9 @@ export function localBusinessSchema(): Record<string, unknown> {
       latitude: 51.9225,
       longitude: 4.4792,
     },
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "09:00", closes: "18:00" },
+    ],
     areaServed: [
       { "@type": "City", name: "Rotterdam" },
       { "@type": "City", name: "Den Haag" },
@@ -49,7 +60,13 @@ export function localBusinessSchema(): Record<string, unknown> {
       reviewCount: "23",
       bestRating: "5",
     },
-    sameAs: [],
+    sameAs: [
+      "https://www.instagram.com/bm_klus_bv",
+      "https://www.facebook.com/profile.php?id=61556805434705",
+      "https://www.linkedin.com/in/boris-mitov-a436902b9",
+      "https://nl.pinterest.com/bmklusbv/",
+      "https://www.youtube.com/@bm-klus-bv",
+    ],
   }
 }
 

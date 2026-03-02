@@ -1,4 +1,4 @@
 :HL["/_next/static/chunks/4e1c0da8ee9de505.css","style"]
-:HL["/_next/static/chunks/2bb9410c395c84b3.css","style"]
+:HL["/_next/static/chunks/9ef54a7d6604d4cf.css","style"]
 :HL["/images/logo-bm-klus.webp","image"]
-0:{"buildId":"lpmSLbPAvkB5D-XSt02VM","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"jDne_qePsQ1UXx_BAnxWb","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -1,17 +1,72 @@
 import Link from "next/link"
-import { MapPin, ChevronRight, ArrowRight } from "lucide-react"
+import dynamic from "next/dynamic"
+import {
+  MapPin,
+  ChevronRight,
+  ArrowRight,
+  CheckCircle2,
+  Star,
+  Phone,
+} from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo/meta"
-import OnzeWerkenFaq from "./faq"
+import { SITE } from "@/lib/seo/routes"
+import {
+  jsonLdScript,
+  localBusinessSchema,
+  breadcrumbSchema,
+} from "@/lib/seo/schema"
+import TrustStrip from "@/components/trust-strip"
 import { ProjectsSection } from "@/components/projects/ProjectsSection"
 import { projects } from "@/lib/content/projects"
 
+const StickyCTABar = dynamic(
+  () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
+)
+const QuoteModal = dynamic(() => import("@/components/quote-modal"))
+
 export const metadata = buildPageMetadata("/onze-werken/")
+
+const base = SITE.canonicalBase
 
 const expectations = [
   "Plaats en type woning",
   "Werkzaamheden en gekozen afwerking",
   "Belangrijke details (plint, dagkanten, profielen)",
   "Resultaat (voor/na)",
+]
+
+const heroChecks = [
+  "Buitengevelisolatie, stucwerk, sierpleister, schilderwerk",
+  "Per project: plaats, aanpak en afwerking",
+  "Regio Rotterdam en omgeving (±100 km)",
+]
+
+const faqItems = [
+  {
+    question: "Welke werkzaamheden voert BM Klus BV uit?",
+    answer:
+      "We voeren buitengevelisolatie (ETICS), gevelafwerking (sierpleister, stucwerk, crepi, steenstrips) en gevelrenovatie uit. De meeste projecten combineren meerdere diensten tegelijkertijd.",
+  },
+  {
+    question: "In welk gebied werkt u?",
+    answer:
+      "Ons werkgebied is regio Rotterdam en omgeving — ruwweg een straal van 80–100 km. Denk aan Zuid-Holland, delen van Utrecht en Noord-Brabant. Twijfelt u? Neem gerust contact op.",
+  },
+  {
+    question: "Kan ik een project indienen voor publicatie?",
+    answer:
+      "We publiceren projecten waarbij wij de werkzaamheden zelf hebben uitgevoerd. Bent u een van onze opdrachtgevers en wilt u uw project hier zien staan? Neem contact op.",
+  },
+  {
+    question: "Worden de projecten gefilterd op type werk?",
+    answer:
+      "Voorlopig tonen we projecten per object zonder harde categoriefilter, omdat de meeste opdrachten een combinatie van diensten omvatten. Filteropties voegen we toe zodra er voldoende projecten staan.",
+  },
+  {
+    question: "Hoe vraag ik een offerte aan?",
+    answer:
+      "U kunt via de contactpagina een gratis inspectie of offerte aanvragen. We nemen binnen één werkdag contact met u op.",
+  },
 ]
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -34,76 +89,132 @@ function OrangeWord({ children }: { children: React.ReactNode }) {
 }
 
 export default function OnzeWerkenPage() {
+  const breadcrumbsData = breadcrumbSchema([
+    { name: "Home", item: `${base}/` },
+    { name: "Onze werken", item: `${base}/onze-werken/` },
+  ])
+
+  const business = localBusinessSchema()
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  }
+
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Onze werken",
+    description:
+      "Bekijk recente projecten met buitengevelisolatie (ETICS) en gevelafwerking. Per project: plaats, aanpak en afwerking.",
+    url: `${base}/onze-werken/`,
+    provider: { "@id": `${base}/#business` },
+  }
+
   return (
     <>
-      {/* Hero */}
-      <section
-        className="relative flex flex-col overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(175deg, #1A1A1A 0%, #2E2016 35%, #7A4520 60%, #C47A3A 78%, #F5EFE6 100%)",
-        }}
-      >
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-          }}
-        />
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-36 sm:px-6 sm:pt-40 sm:pb-20 lg:pb-24 lg:pt-44 lg:px-8">
-          <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center gap-2 text-sm text-white/70">
-              <li>
-                <Link href="/" className="transition-colors hover:text-white">Home</Link>
-              </li>
-              <li><ChevronRight className="h-3.5 w-3.5 text-white/50" aria-hidden="true" /></li>
-              <li className="font-medium text-white/80" aria-current="page">Onze werken</li>
+      {jsonLdScript(breadcrumbsData)}
+      {jsonLdScript(business)}
+      {jsonLdScript(faqSchema)}
+      {jsonLdScript(collectionSchema)}
+
+      {/* ══ HERO ══ */}
+      <section className="relative overflow-hidden bg-[#1A1A1A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
+            <ol className="flex flex-wrap items-center gap-1.5 text-sm">
+              {[
+                { label: "Home", href: "/" },
+                { label: "Onze werken", href: "/onze-werken/" },
+              ].map((item, i, arr) => (
+                <li key={item.href} className="flex items-center gap-1.5">
+                  {i > 0 && <ChevronRight className="h-3.5 w-3.5 text-white/40" />}
+                  {i === arr.length - 1 ? (
+                    <span className="font-medium text-white/90">{item.label}</span>
+                  ) : (
+                    <Link href={item.href} className="text-white/60 transition-colors hover:text-white">
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
             </ol>
           </nav>
 
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-primary">
-            Gevelisolatie &amp; Renovatie · Rotterdam
-          </p>
+          <div className="pb-14 pt-8 sm:pb-16 lg:pb-20 lg:pt-10">
+            <div className="flex flex-col gap-5 max-w-3xl">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-12 bg-primary" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                  Projecten &amp; portfolio
+                </span>
+              </div>
 
-          <h1 className="max-w-2xl text-balance text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.75rem]">
-            Onze{" "}
-            <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
-              werken
-              </span>
-          </h1>
+              <h1 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Onze <span className="text-primary">werken</span>
+              </h1>
 
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-white/75 sm:text-lg">
-            Bekijk recente projecten met buitengevelisolatie (ETICS) en gevelafwerking.
-          </p>
-          <p className="mt-2 max-w-lg text-sm leading-relaxed text-white/55">
-            Veel projecten combineren meerdere werkzaamheden. Per project ziet u plaats, aanpak en afwerking.
-          </p>
+              <p className="max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
+                Bekijk recente projecten met buitengevelisolatie (ETICS) en
+                gevelafwerking. Per project ziet u plaats, aanpak en afwerking.
+              </p>
 
-          <div className="mt-6 flex flex-col gap-3 pt-2 sm:flex-row">
-            <Link
-              href="/contact/"
-              className="inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a]"
-            >
-              Plan gratis inspectie
-              <ChevronRight size={16} />
-            </Link>
-            <Link
-              href="/diensten/"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/25 bg-white/10 px-7 py-4 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/20"
-            >
-              Bekijk onze diensten
-            </Link>
-          </div>
+              <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
+                {heroChecks.map((text) => (
+                  <li key={text} className="flex items-center gap-2 text-sm text-white/70">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
 
-          <div className="mt-4 flex items-start gap-2">
-            <MapPin size={14} className="mt-0.5 shrink-0 text-primary" />
-            <span className="text-sm text-white/70">
-              Regio Rotterdam en omgeving (±80–100 km), Zuid-Holland en omliggende regio&apos;s.
-            </span>
+              <div className="flex items-center gap-2 text-sm text-white/50">
+                <MapPin className="h-3.5 w-3.5 text-primary/70" />
+                <span>Rotterdam &amp; omgeving · Zuid-Holland</span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <Link href="/contact/" className="btn-primary">
+                  Plan gratis inspectie
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/diensten/"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10"
+                >
+                  Bekijk onze diensten
+                </Link>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                  <span className="ml-1 text-xs font-semibold text-white/70">
+                    4.8 / 5
+                  </span>
+                </div>
+                <span className="hidden h-3.5 w-px bg-white/20 sm:block" />
+                <a href="tel:+31612079808" className="flex items-center gap-1.5 text-xs text-white/50 transition-colors hover:text-white">
+                  <Phone className="h-3 w-3" />
+                  +31 6 12 07 98 08
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      <TrustStrip />
 
       <main className="bg-background">
         <div className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8">
@@ -180,7 +291,7 @@ export default function OnzeWerkenPage() {
             </section>
 
             {/* Populaire diensten */}
-            <section className="scroll-mt-24 border-b border-border py-16 sm:py-20 lg:py-24">
+            <section className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
               <SectionLabel>Populaire diensten</SectionLabel>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                 Onze <OrangeWord>diensten</OrangeWord>
@@ -215,12 +326,57 @@ export default function OnzeWerkenPage() {
             </section>
 
             {/* FAQ */}
-            <section id="faq" className="scroll-mt-24 border-b border-border py-16 sm:py-20 lg:py-24">
-              <OnzeWerkenFaq />
+            <section id="faq" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+              <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+                <div className="lg:col-span-5">
+                  <div className="lg:sticky lg:top-32">
+                    <SectionLabel>FAQ</SectionLabel>
+                    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                      Veelgestelde<br />
+                      <span className="text-primary">vragen</span>
+                    </h2>
+                    <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground sm:text-lg">
+                      Heeft u een vraag over onze projecten of aanpak? Hier vindt u de meest gestelde vragen.
+                    </p>
+                    <p className="mt-8 text-base text-muted-foreground">
+                      Staat uw vraag er niet tussen?{" "}
+                      <Link href="/contact/" className="font-semibold text-primary hover:underline">
+                        Neem contact op
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+                <div className="lg:col-span-7 space-y-3">
+                  {faqItems.map((faq, i) => (
+                    <details
+                      key={i}
+                      className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all open:border-primary/40 open:shadow-md"
+                      {...(i === 0 ? { open: true } : {})}
+                    >
+                      <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
+                        <div className="flex items-start gap-4">
+                          <span className="mt-0.5 text-lg font-bold text-border group-open:text-primary transition-colors">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <span className="text-base font-semibold text-foreground sm:text-lg">
+                            {faq.question}
+                          </span>
+                        </div>
+                        <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 rotate-90 group-open:rotate-270" />
+                      </summary>
+                      <div className="border-t border-border/50 px-6 pb-6 pt-4">
+                        <p className="pl-12 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
             </section>
 
             {/* Werkgebied */}
-            <section id="werkgebied" className="scroll-mt-24 border-b border-border py-16 sm:py-20 lg:py-24">
+            <section id="werkgebied" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
               <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-14">
                 <div className="lg:w-72 lg:shrink-0">
                   <SectionLabel>Werkgebied</SectionLabel>
@@ -276,6 +432,8 @@ export default function OnzeWerkenPage() {
         </div>
       </main>
 
+      <StickyCTABar />
+      <QuoteModal dienst="geveloplossingen" />
     </>
   )
 }

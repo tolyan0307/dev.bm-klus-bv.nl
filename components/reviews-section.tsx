@@ -8,7 +8,7 @@ const reviews = [
     name: "Marcel V",
     date: "11 Maart 2025",
     initial: "M",
-    color: "bg-muted-foreground",
+    color: "bg-primary",
     rating: 5,
     text: "Door BM klus BV een gevel laten isoleren en afwerken. Komen op afgesproken tijden en dagen en werken zeer netjes en...",
     verified: true,
@@ -17,7 +17,7 @@ const reviews = [
     name: "Geert de Leeuw",
     date: "12 Februari 2025",
     initial: "G",
-    color: "bg-emerald-600",
+    color: "bg-primary/80",
     rating: 5,
     text: "Heel tevreden over de samenwerking en resultaat! Wij hadden last van flinke vochtdoorslag door de...",
     verified: true,
@@ -35,7 +35,7 @@ const reviews = [
     name: "Natasja Mikos",
     date: "1 September 2024",
     initial: "N",
-    color: "bg-muted-foreground",
+    color: "bg-primary/70",
     rating: 5,
     text: "Spijkenisse 01-09-2024 Boris en zijn mannen hebben mooi en vakkundig werk afgeleverd. Onze buiten gevel is gerepareerd,...",
     verified: true,
@@ -75,13 +75,24 @@ export default function ReviewsSection() {
           </p>
         </div>
 
+        {/* Aggregate rating */}
+        <div className="mb-10 flex items-center justify-center gap-3">
+          <div className="flex items-center gap-1">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} className="h-5 w-5 fill-[#FBBC05] text-[#FBBC05]" />
+            ))}
+          </div>
+          <span className="text-lg font-bold text-foreground">4.8</span>
+          <span className="text-sm text-muted-foreground">op basis van 23+ Google reviews</span>
+        </div>
+
         {/* Carousel container */}
         <div className="relative">
           {/* Left arrow */}
           <button
             onClick={scrollPrev}
             disabled={scrollOffset === 0}
-            className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-2.5 shadow-md transition-all hover:bg-secondary hover:shadow-lg disabled:opacity-30 sm:-left-5 lg:flex"
+            className="absolute -left-5 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 shadow-lg transition-all hover:bg-secondary hover:shadow-xl disabled:opacity-30 sm:-left-6 lg:flex"
             aria-label="Vorige reviews"
           >
             <ChevronLeft className="h-5 w-5 text-foreground" />
@@ -91,7 +102,7 @@ export default function ReviewsSection() {
           <button
             onClick={scrollNext}
             disabled={scrollOffset >= maxScroll}
-            className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-2.5 shadow-md transition-all hover:bg-secondary hover:shadow-lg disabled:opacity-30 sm:-right-5 lg:flex"
+            className="absolute -right-5 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 shadow-lg transition-all hover:bg-secondary hover:shadow-xl disabled:opacity-30 sm:-right-6 lg:flex"
             aria-label="Volgende reviews"
           >
             <ChevronRight className="h-5 w-5 text-foreground" />
@@ -133,7 +144,7 @@ export default function ReviewsSection() {
                     </div>
 
                     {/* Card body */}
-                    <div className="rounded-xl border border-border bg-card px-6 pb-6 pt-12 text-center shadow-sm transition-shadow hover:shadow-md">
+                    <div className="rounded-xl border border-border bg-card px-6 pb-6 pt-12 text-center shadow-md transition-shadow hover:shadow-lg">
                       <h3 className="text-base font-bold text-foreground">
                         {review.name}
                       </h3>
@@ -167,11 +178,14 @@ export default function ReviewsSection() {
                         )}
                       </div>
 
-                      <p className="mt-4 text-sm leading-relaxed text-foreground/80">
-                        {review.text}
-                      </p>
+                      <div className="relative mt-4">
+                        <p className="text-sm leading-relaxed text-foreground/80">
+                          {review.text}
+                        </p>
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-linear-to-t from-card to-transparent" />
+                      </div>
 
-                      <button className="mt-3 text-sm font-medium text-primary transition-colors hover:underline">
+                      <button className="mt-2 text-sm font-medium text-primary transition-colors hover:underline">
                         Lees verder
                       </button>
                     </div>

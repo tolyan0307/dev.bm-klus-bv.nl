@@ -1,6 +1,5 @@
-"use client"
-
-import { ArrowRight, Phone } from "lucide-react"
+import Image from "next/image"
+import { ArrowRight, Phone, Star, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
 
 export default function HeroSection() {
@@ -11,14 +10,13 @@ export default function HeroSection() {
     >
       {/* Background image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/images/hero-home.webp"
           alt="Professionele gevelisolatie door BM Klus BV in Rotterdam"
-          className="h-full w-full object-cover object-center"
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          draggable={false}
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
         />
 
         {/* Base darkening layer */}
@@ -115,20 +113,43 @@ export default function HeroSection() {
               </Link>
               <Link
                 href="/diensten/"
-                className="inline-flex items-center rounded-lg border-2 border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/20 sm:px-8 sm:py-3.5 sm:text-base"
+                className="inline-flex items-center rounded-lg border-2 border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/25 sm:px-8 sm:py-3.5 sm:text-base"
               >
                 Bekijk onze diensten
               </Link>
             </div>
 
-            {/* Phone */}
-            <a
-              href="tel:+31612079808"
-              className="mt-5 inline-flex items-center gap-2.5 text-sm font-medium text-white/70 transition-colors hover:text-white/80"
-            >
-              <Phone className="h-4 w-4 shrink-0 text-primary" />
-              Of bel direct: +31 6 1207 9808
-            </a>
+            {/* Trust signals */}
+            <ul className="mt-6 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-5 sm:gap-y-2">
+              {[
+                "Gratis inspectie & offerte",
+                "ETICS gecertificeerd systeem",
+                "Regio Rotterdam (±100 km)",
+              ].map((text) => (
+                <li key={text} className="flex items-center gap-2 text-sm text-white/85">
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Stars + phone */}
+            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+              <div className="flex items-center gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                ))}
+                <span className="ml-1.5 text-sm font-bold text-white/85">4.8 / 5</span>
+              </div>
+              <span className="hidden h-4 w-px bg-white/25 sm:block" />
+              <a
+                href="tel:+31612079808"
+                className="flex items-center gap-1.5 text-sm text-white/65 transition-colors hover:text-white"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                +31 6 12 07 98 08
+              </a>
+            </div>
           </div>
         </div>
       </div>

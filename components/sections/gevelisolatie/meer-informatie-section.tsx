@@ -39,6 +39,23 @@ const locationLinks = [
   { label: "Den Haag", href: "/gevelisolatie/den-haag/" },
   { label: "Delft", href: "/gevelisolatie/delft/" },
   { label: "Dordrecht", href: "/gevelisolatie/dordrecht/" },
+  { label: "Schiedam", href: "/gevelisolatie/schiedam/" },
+  { label: "Vlaardingen", href: "/gevelisolatie/vlaardingen/" },
+  { label: "Leiden", href: "/gevelisolatie/leiden/" },
+  { label: "Gouda", href: "/gevelisolatie/gouda/" },
+  { label: "Zoetermeer", href: "/gevelisolatie/zoetermeer/" },
+  { label: "Capelle a/d IJssel", href: "/gevelisolatie/capelle-aan-den-ijssel/" },
+  { label: "Spijkenisse", href: "/gevelisolatie/spijkenisse/" },
+  { label: "Barendrecht", href: "/gevelisolatie/barendrecht/" },
+  { label: "Ridderkerk", href: "/gevelisolatie/ridderkerk/" },
+  { label: "Alphen a/d Rijn", href: "/gevelisolatie/alphen-aan-den-rijn/" },
+  { label: "Maassluis", href: "/gevelisolatie/maassluis/" },
+  { label: "Hellevoetsluis", href: "/gevelisolatie/hellevoetsluis/" },
+  { label: "Breda", href: "/gevelisolatie/breda/" },
+  { label: "Bergen op Zoom", href: "/gevelisolatie/bergen-op-zoom/" },
+  { label: "Roosendaal", href: "/gevelisolatie/roosendaal/" },
+  { label: "Leidschendam-Voorburg", href: "/gevelisolatie/leidschendam-voorburg/" },
+  { label: "Hendrik-Ido-Ambacht", href: "/gevelisolatie/hendrik-ido-ambacht/" },
 ]
 
 export default function MeerInformatieSection() {

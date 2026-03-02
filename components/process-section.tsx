@@ -46,8 +46,14 @@ export default function ProcessSection() {
           alt=""
           width={1920}
           height={1080}
-          className="h-full w-full object-cover opacity-[0.03]"
+          className="h-full w-full object-cover opacity-[0.06]"
         />
+        <div className="absolute inset-0 bg-linear-to-b from-background/40 via-transparent to-background/40" />
+        <div
+          className="absolute inset-y-0 w-1/3 bg-linear-to-r from-transparent via-primary/6 to-transparent"
+          style={{ animation: "process-sweep 12s ease-in-out infinite" }}
+        />
+        <style>{`@keyframes process-sweep{0%,100%{transform:translateX(-100%)}50%{transform:translateX(400%)}}`}</style>
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -74,12 +80,28 @@ export default function ProcessSection() {
           {/* Progress bar */}
           <div className="relative mx-auto mb-16 max-w-5xl">
             {/* Background track */}
-            <div className="absolute inset-x-0 top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-border" />
-            {/* Active fill */}
+            <div className="absolute inset-x-0 top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-border/80" />
+            {/* Active fill with shimmer */}
             <div
-              className="absolute top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-primary transition-all duration-500"
+              className="absolute top-1/2 h-[3px] -translate-y-1/2 overflow-hidden rounded-full bg-primary transition-all duration-500"
               style={{ width: `${(activeStep / (steps.length - 1)) * 100}%` }}
-            />
+            >
+              <div
+                className="absolute inset-y-0 w-1/2 bg-linear-to-r from-transparent via-white/40 to-transparent"
+                style={{ animation: "track-shimmer 2.5s ease-in-out infinite" }}
+              />
+            </div>
+            {/* Pulse at active edge */}
+            {activeStep > 0 && (
+              <div
+                className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500"
+                style={{ left: `${(activeStep / (steps.length - 1)) * 100}%` }}
+              >
+                <span className="absolute -inset-1.5 animate-ping rounded-full bg-primary/30" />
+                <span className="relative block h-2.5 w-2.5 rounded-full bg-primary shadow-lg shadow-primary/50" />
+              </div>
+            )}
+            <style>{`@keyframes track-shimmer{0%,100%{transform:translateX(-200%)}50%{transform:translateX(300%)}}`}</style>
 
             {/* Step nodes on the track */}
             <div className="relative flex items-center justify-between">
@@ -93,8 +115,8 @@ export default function ProcessSection() {
                   <div
                     className={`relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 transition-all duration-300 ${
                       index <= activeStep
-                        ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/20"
-                        : "border-border bg-card text-muted-foreground hover:border-primary/50"
+                        ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/25"
+                        : "border-border/70 bg-card text-muted-foreground shadow-sm hover:border-primary/50 hover:shadow-md"
                     }`}
                   >
                     <step.icon className="h-6 w-6" strokeWidth={2} />
@@ -117,7 +139,7 @@ export default function ProcessSection() {
 
           {/* Expanded content for active step */}
           <div className="mx-auto max-w-3xl">
-            <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
+            <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl">
               <div className="flex items-center gap-6 p-8">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10">
                   {(() => {
@@ -165,7 +187,7 @@ export default function ProcessSection() {
                   className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-all ${
                     activeStep === index
                       ? "bg-primary text-primary-foreground shadow-md"
-                      : "bg-secondary/60 text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
+                      : "bg-secondary text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
                   }`}
                 >
                   <span className="text-lg font-bold">{step.number}</span>

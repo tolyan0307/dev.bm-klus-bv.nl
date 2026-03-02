@@ -90,7 +90,7 @@ export default function Footer() {
                 href="https://wa.me/31612079808"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 rounded-lg border-2 border-background/15 bg-background/[0.06] px-6 py-4 text-base font-semibold text-background/80 backdrop-blur-sm transition-all hover:border-background/25 hover:bg-background/[0.12] sm:w-auto"
+                className="group inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#25D366]/30 bg-[#25D366]/10 px-6 py-4 text-base font-semibold text-background/90 backdrop-blur-sm transition-all hover:border-[#25D366]/50 hover:bg-[#25D366]/20 sm:w-auto"
               >
                 <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#25D366]/50 bg-[#25D366]/15 transition-transform group-hover:scale-110">
                   <MessageCircle className="h-4 w-4 text-[#25D366]" strokeWidth={1.5} />
@@ -208,7 +208,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2.5">
                 {socials.map((social) => (
                   <a
                     key={social.label}
@@ -216,7 +216,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-background/10 text-background/50 transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-background/15 text-background/60 transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
                   >
                     {social.icon}
                   </a>

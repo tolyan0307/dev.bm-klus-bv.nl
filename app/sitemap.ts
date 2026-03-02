@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 
 import { PLANNED_ROUTES, getSiteUrl } from "@/data/sitemap-plan"
 import { projects } from "@/lib/content/projects"
+import { locations } from "@/lib/content/gevelisolatie-locations"
 
 export const dynamic = "force-static"
 
@@ -32,5 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     }))
 
-  return [...planned, ...projectPages]
+  const locationPages = locations.map((loc) => ({
+    url: `${baseUrl}/gevelisolatie/${loc.slug}/`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }))
+
+  return [...planned, ...projectPages, ...locationPages]
 }

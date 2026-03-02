@@ -3,7 +3,6 @@
 import { ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import Script from "next/script"
 
 const faqs = [
   {
@@ -38,30 +37,11 @@ const faqs = [
   },
 ]
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-}
-
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <section className="py-16 sm:py-20 lg:py-24">
+    <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             {/* Left: Header */}
@@ -98,8 +78,8 @@ export default function FaqSection() {
                     key={index}
                     className={`overflow-hidden rounded-xl border transition-all ${
                       openIndex === index
-                        ? "border-primary/40 bg-card shadow-md"
-                        : "border-border bg-card shadow-sm"
+                        ? "border-primary/40 bg-card shadow-lg"
+                        : "border-border/80 bg-card shadow-sm hover:shadow-md"
                     }`}
                   >
                     <button
@@ -109,7 +89,7 @@ export default function FaqSection() {
                       <div className="flex items-start gap-4">
                         <span
                           className={`mt-0.5 text-lg font-bold transition-colors ${
-                            openIndex === index ? "text-primary" : "text-border"
+                            openIndex === index ? "text-primary" : "text-muted-foreground/50"
                           }`}
                         >
                           {String(index + 1).padStart(2, "0")}
@@ -119,8 +99,8 @@ export default function FaqSection() {
                         </span>
                       </div>
                       <ChevronDown
-                        className={`mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 ${
-                          openIndex === index ? "rotate-180" : ""
+                        className={`mt-1 h-5 w-5 shrink-0 transition-all duration-300 ${
+                          openIndex === index ? "rotate-180 text-primary" : "text-muted-foreground/70"
                         }`}
                       />
                     </button>
@@ -158,6 +138,5 @@ export default function FaqSection() {
           </div>
         </div>
       </section>
-    </>
   )
 }

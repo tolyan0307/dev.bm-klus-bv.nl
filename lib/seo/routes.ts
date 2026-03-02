@@ -5,7 +5,7 @@ export const SITE = {
   lang: "nl-NL",
   regionText:
     "Regio Rotterdam en omgeving (±80–100 km), Zuid-Holland en omliggende regio’s",
-  defaultOgImage: "/images/og-home.jpg", // TODO: add real OG image to /public/images/og-home.jpg
+  defaultOgImage: "/images/hero-home.webp",
 } as const
 
 export type NavRoute = {

@@ -3,24 +3,28 @@ import Link from "next/link"
 
 const projects = [
   {
+    id: "rotterdam-etics",
     image: "/images/portfolio-hero.webp",
     city: "Rotterdam Centrum",
     service: "Complete geveltransformatie",
     highlight: "ETICS isolatie + moderne afwerking",
   },
   {
+    id: "halsteren-stucwerk",
     image: "/images/projects/halsteren-buitenstucwerk-na-02.webp",
     city: "Halsteren",
     service: "Buitenstucwerk & sierpleister",
     highlight: "Volledige gevelrenovatie",
   },
   {
+    id: "halsteren-schilderwerk",
     image: "/images/projects/halsteren-buitenstucwerk-na-05.webp",
     city: "Halsteren",
     service: "Stucwerk + schilderwerk",
     highlight: "Strakke moderne afwerking",
   },
   {
+    id: "halsteren-sierpleister",
     image: "/images/projects/halsteren-buitenstucwerk-na-08.webp",
     city: "Halsteren",
     service: "Sierpleister afwerking",
@@ -51,13 +55,13 @@ export default function PortfolioSection() {
 
         {/* Project grid - all same size */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <Link
-              key={index}
+              key={project.id}
               href="/onze-werken/"
-              className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all hover:shadow-lg"
+              className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-md transition-all hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-4/3 overflow-hidden">
                 <img
                   src={project.image}
                   alt={`Gevelproject in ${project.city}`}
@@ -72,7 +76,7 @@ export default function PortfolioSection() {
                   <span>{project.city}</span>
                 </div>
                 <h3 className="text-sm font-bold text-foreground">{project.service}</h3>
-                <p className="mt-0.5 text-xs font-medium text-primary">{project.highlight}</p>
+                <p className="mt-0.5 text-sm font-medium text-primary">{project.highlight}</p>
               </div>
             </Link>
           ))}

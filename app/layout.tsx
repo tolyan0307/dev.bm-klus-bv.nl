@@ -9,9 +9,13 @@ import './globals.css'
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: 'BM Klus BV - Gevelisolatie & Renovatie',
-  description: 'Uw gevel, perfect geïsoleerd & vernieuwd. Bespaar op energie en vergroot uw wooncomfort.',
-  generator: 'v0.app',
+  title: {
+    default: "BM Klus BV — Gevelspecialist regio Rotterdam",
+    template: "%s | BM Klus BV",
+  },
+  description:
+    "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis inspectie en offerte.",
+  robots: { index: true, follow: true },
   icons: {
     icon: [
       {
@@ -41,7 +45,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-background text-foreground">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-foreground focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-foreground focus:shadow-lg"
         >
           Naar hoofdinhoud
         </a>

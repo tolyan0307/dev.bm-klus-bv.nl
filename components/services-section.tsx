@@ -62,15 +62,26 @@ export default function ServicesSection() {
               Onze Diensten
             </span>
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Van isolatie tot
-            <br />
-            <span className="text-primary">renovatie</span>
-          </h2>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Wij zorgen voor een gevel die er mooi uitziet en efficiënt
-            presteert.
-          </p>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                Van isolatie tot
+                <br />
+                <span className="text-primary">renovatie</span>
+              </h2>
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+                Wij zorgen voor een gevel die er mooi uitziet en efficiënt
+                presteert.
+              </p>
+            </div>
+            <Link
+              href="/diensten/"
+              className="group hidden shrink-0 items-center gap-1.5 text-sm font-semibold text-primary hover:underline sm:inline-flex"
+            >
+              Alle diensten bekijken
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>
         </div>
 
         {/* Desktop: Interactive showcase layout */}
@@ -94,7 +105,7 @@ export default function ServicesSection() {
                       className={`text-xl font-bold transition-colors ${
                         activeService === index
                           ? "text-primary"
-                          : "text-border group-hover:text-primary/40"
+                          : "text-muted-foreground/40 group-hover:text-primary/40"
                       }`}
                     >
                       {service.id}
@@ -114,7 +125,7 @@ export default function ServicesSection() {
                         className={`mt-0.5 text-xs transition-colors ${
                           activeService === index
                             ? "text-primary"
-                            : "text-muted-foreground/60"
+                            : "text-muted-foreground/80"
                         }`}
                       >
                         {service.subtitle}
@@ -130,7 +141,7 @@ export default function ServicesSection() {
               </div>
 
               {/* Active service description + CTA */}
-              <div className="mt-6 rounded-xl border border-border bg-card p-6 shadow-sm">
+              <div className="mt-6 rounded-xl border border-border bg-card p-6 shadow-md">
                 <p className="text-base leading-relaxed text-muted-foreground">
                   {current.description}
                 </p>
@@ -138,7 +149,7 @@ export default function ServicesSection() {
                   {current.features.map((feature) => (
                     <span
                       key={feature}
-                      className="rounded-md bg-secondary px-3 py-1.5 text-xs font-semibold text-foreground"
+                      className="rounded-md bg-secondary/80 px-3 py-1.5 text-xs font-semibold text-foreground ring-1 ring-border/50"
                     >
                       {feature}
                     </span>
@@ -155,7 +166,7 @@ export default function ServicesSection() {
             </div>
 
             {/* Right: Image with crossfade */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-lg">
+            <div className="relative overflow-hidden rounded-2xl border border-border shadow-xl">
               {services.map((service, index) => (
                 <img
                   key={service.id}
@@ -189,7 +200,7 @@ export default function ServicesSection() {
                   height={192}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-foreground/60 to-transparent" />
                 {/* Number overlay */}
                 <span className="absolute bottom-3 right-4 text-4xl font-bold text-background/30">
                   {service.id}
@@ -216,14 +227,14 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-12 text-center lg:mt-16">
+        {/* Mobile-only bottom CTA */}
+        <div className="mt-10 text-center sm:hidden">
           <Link
             href="/diensten/"
-            className="inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-transparent px-8 py-3.5 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
           >
             Alle diensten bekijken
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
       </div>

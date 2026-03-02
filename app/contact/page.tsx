@@ -2,6 +2,13 @@
 
 import Link from "next/link";
 import Script from "next/script";
+import dynamic from "next/dynamic";
+
+const QuoteModal = dynamic(() => import("@/components/quote-modal"));
+const TrustStrip = dynamic(() => import("@/components/trust-strip"));
+const StickyCTABar = dynamic(
+  () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
+);
 import { useState, useRef, useCallback, useEffect, type FormEvent, type ChangeEvent } from "react";
 import {
   Phone,
@@ -20,6 +27,7 @@ import {
   MessageSquare,
   AtSign,
   Hammer,
+  Star,
 } from "lucide-react";
 
 // ─── Turnstile global type ────────────────────────────────────────────────────
@@ -69,26 +77,6 @@ interface FormState {
 }
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
-
-function Breadcrumbs({ dark = false }: { dark?: boolean }) {
-  return (
-    <nav aria-label="Breadcrumb">
-      <ol className={`flex items-center gap-1.5 text-sm ${dark ? "text-white/70" : "text-muted-foreground"}`}>
-        <li>
-          <Link href="/" className={`transition-colors ${dark ? "hover:text-white" : "hover:text-primary"}`}>
-            Home
-          </Link>
-        </li>
-        <li aria-hidden="true">
-          <ChevronRight className="w-3.5 h-3.5" />
-        </li>
-        <li>
-          <span className={dark ? "text-white font-medium" : "text-foreground font-medium"}>Contact</span>
-        </li>
-      </ol>
-    </nav>
-  );
-}
 
 function FormField({
   label,
@@ -302,55 +290,107 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background font-sans">
 
-      {/* ── Page Hero ──────────────────────────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden min-h-[420px] sm:min-h-[480px] flex items-end"
-        style={{
-          background:
-            "linear-gradient(175deg, #0D0D0D 0%, #1A1009 30%, #3D1F08 55%, #7A4520 75%, #C47A3A 92%, #F5EFE6 100%)",
-        }}
-      >
-        {/* Dark vignette */}
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,transparent_40%,rgba(0,0,0,0.55)_100%)]" />
+      {/* ══ HERO ══ */}
+      <section className="relative overflow-hidden bg-[#1A1A1A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
 
-        {/* Texture overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-          }}
-        />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
+            <ol className="flex flex-wrap items-center gap-1.5 text-sm">
+              {[
+                { label: "Home", href: "/" },
+                { label: "Contact", href: "/contact/" },
+              ].map((item, i, arr) => (
+                <li key={item.href} className="flex items-center gap-1.5">
+                  {i > 0 && <ChevronRight className="h-3.5 w-3.5 text-white/40" />}
+                  {i === arr.length - 1 ? (
+                    <span className="font-medium text-white/90">{item.label}</span>
+                  ) : (
+                    <Link href={item.href} className="text-white/60 transition-colors hover:text-white">
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
 
-        <div className="relative z-10 w-full container-default pt-36 pb-16 sm:pt-40 sm:pb-20 lg:pt-44 lg:pb-24">
-          <Breadcrumbs dark />
-          <div className="section-header mt-4">
-            <span className="h-px w-8 bg-primary" />
-            <span className="section-header-label">Gratis offerte</span>
+          <div className="pb-14 pt-8 sm:pb-16 lg:pb-20 lg:pt-10">
+            <div className="flex flex-col gap-5 max-w-3xl">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-12 bg-primary" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                  Contact &amp; offerte
+                </span>
+              </div>
+
+              <h1 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Neem contact op &amp;{" "}
+                <span className="text-primary">vraag een offerte aan</span>
+              </h1>
+
+              <p className="max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
+                Heeft u een vraag of wilt u een vrijblijvende offerte? Vul het
+                formulier in of neem direct contact op — wij reageren snel
+                tijdens onze openingstijden.
+              </p>
+
+              <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
+                {[
+                  "Snel antwoord tijdens openingstijden",
+                  "Duidelijke offerte met scope en planning",
+                  "Regio Rotterdam en omgeving (±100 km)",
+                ].map((text) => (
+                  <li key={text} className="flex items-center gap-2 text-sm text-white/70">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex items-center gap-2 text-sm text-white/50">
+                <MapPin className="h-3.5 w-3.5 text-primary/70" />
+                <span>Rotterdam &amp; omgeving · Zuid-Holland</span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a href="#formulier" className="btn-primary">
+                  Offerte aanvragen
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://wa.me/31612079808?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10"
+                >
+                  <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                  WhatsApp
+                </a>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                  <span className="ml-1 text-xs font-semibold text-white/70">
+                    4.8 / 5
+                  </span>
+                </div>
+                <span className="hidden h-3.5 w-px bg-white/20 sm:block" />
+                <a href="tel:+31612079808" className="flex items-center gap-1.5 text-xs text-white/50 transition-colors hover:text-white">
+                  <Phone className="h-3 w-3" />
+                  +31 6 12 07 98 08
+                </a>
+              </div>
+            </div>
           </div>
-          <h1 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Neem contact op &amp;{" "}
-            <span className="text-primary">vraag een offerte aan</span>
-          </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
-            Heeft u een vraag of wilt u een vrijblijvende offerte? Vul het
-            formulier in of neem direct contact op — wij reageren snel tijdens
-            onze openingstijden.
-          </p>
-          <ul className="mt-6 flex flex-wrap gap-4 sm:gap-6">
-            {[
-              "Snel antwoord tijdens openingstijden",
-              "Duidelijke offerte met scope en planning",
-              "Regio Rotterdam en omgeving (±100 km)",
-            ].map((text) => (
-              <li key={text} className="flex items-center gap-2 text-sm text-white/70">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
+
+      <TrustStrip />
 
       {/* ── Main Content ───────────────────────────────────────────────────── */}
       <section id="formulier" className="section-spacing">
@@ -762,16 +802,10 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-8 flex items-center justify-between flex-wrap gap-4">
-            <p className="text-sm text-muted-foreground">
-              Heeft u niet alles bij de hand?{" "}
-              <strong className="text-foreground">Geen probleem</strong> — vul in wat u kunt, wij nemen contact op voor de rest.
-            </p>
-            <a href="#formulier" className="btn-primary shrink-0">
-              Offerte aanvragen
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
+          <p className="mt-8 text-sm text-muted-foreground">
+            Heeft u niet alles bij de hand?{" "}
+            <strong className="text-foreground">Geen probleem</strong> — vul in wat u kunt, wij nemen contact op voor de rest.
+          </p>
         </div>
       </section>
 
@@ -803,6 +837,8 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <StickyCTABar />
+      <QuoteModal dienst="geveloplossingen" />
     </div>
   );
 }

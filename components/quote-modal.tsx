@@ -108,23 +108,31 @@ export default function QuoteModal({
     return () => window.removeEventListener("keydown", handler)
   }, [open])
 
-  // Also listen for #offerte hash navigation
   useEffect(() => {
-    const handler = (e: HashChangeEvent) => {
+    const onHash = () => {
       if (window.location.hash === "#offerte") {
-        e.preventDefault()
         setOpen(true)
         history.replaceState(null, "", window.location.pathname)
       }
     }
-    window.addEventListener("hashchange", handler)
 
-    if (window.location.hash === "#offerte") {
-      setOpen(true)
-      history.replaceState(null, "", window.location.pathname)
+    const onClick = (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement).closest('a[href="#offerte"]')
+      if (anchor) {
+        e.preventDefault()
+        setOpen(true)
+      }
     }
 
-    return () => window.removeEventListener("hashchange", handler)
+    window.addEventListener("hashchange", onHash)
+    document.addEventListener("click", onClick, true)
+
+    onHash()
+
+    return () => {
+      window.removeEventListener("hashchange", onHash)
+      document.removeEventListener("click", onClick, true)
+    }
   }, [])
 
   const initTurnstile = useCallback(() => {
