@@ -23,7 +23,6 @@ export const PLANNED_ROUTES = [
   // ── Core pages ────────────────────────────────────────────────────────────
   {
     path: "/",
-    title: "BM Klus BV — Gevelspecialist regio Rotterdam",
     description:
       "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis inspectie en offerte binnen 24–48 uur.",
     changefreq: "monthly",
@@ -31,7 +30,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/diensten/",
-    title: "Diensten | BM Klus BV",
+    title: "Diensten",
     description:
       "Overzicht van onze geveloplossingen: buitengevelisolatie, stucwerk, sierpleister, gevel schilderen en meer in regio Rotterdam.",
     changefreq: "monthly",
@@ -39,7 +38,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/onze-werken/",
-    title: "Onze werken | BM Klus BV",
+    title: "Onze werken",
     description:
       "Bekijk recente projecten met buitengevelisolatie (ETICS) en gevelafwerking. Per project: plaats, aanpak en afwerking. Regio Rotterdam en omgeving.",
     changefreq: "monthly",
@@ -47,7 +46,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/over-ons/",
-    title: "Over ons | BM Klus BV",
+    title: "Over ons",
     description:
       "BM Klus BV: specialist in buitengevelisolatie (ETICS) en gevelafwerking (stuc, sierpleister, schilderwerk) in regio Rotterdam en omgeving.",
     changefreq: "yearly",
@@ -55,7 +54,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/contact/",
-    title: "Contact & offerte aanvragen | BM Klus BV",
+    title: "Contact & offerte aanvragen",
     description:
       "Neem contact op met BM Klus BV voor een offerte of advies. Telefoon/WhatsApp, e-mail, adres in Rotterdam en openingstijden.",
     changefreq: "yearly",
@@ -63,7 +62,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/privacybeleid/",
-    title: "Privacybeleid & Cookiebeleid | BM Klus BV",
+    title: "Privacybeleid & Cookiebeleid",
     description:
       "Lees hoe BM Klus BV omgaat met persoonsgegevens en cookies. Informatie over Google Analytics/Ads, cookievoorkeuren, bewaartermijnen en uw rechten.",
     changefreq: "yearly",
@@ -73,7 +72,7 @@ export const PLANNED_ROUTES = [
   // ── Money pages (services) ────────────────────────────────────────────────
   {
     path: "/gevelisolatie/",
-    title: "Gevelisolatie buitenkant (ETICS) – prijs per m² | BM Klus BV",
+    title: "Gevelisolatie buitenkant (ETICS) – prijs per m²",
     description:
       "Gevelisolatie aan de buitenkant (ETICS) met afwerking: stuc, sierpleister/crepi of steenstrips. Heldere prijs per m² na gratis opname.",
     changefreq: "monthly",
@@ -81,7 +80,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/gevel-schilderen/",
-    title: "Gevel schilderen: kosten per m² & offerte | BM Klus BV",
+    title: "Gevel schilderen: kosten per m² & offerte",
     description:
       "Gevel schilderen (buitenmuur verven) in regio Rotterdam. Dampopen systemen (silicaat/KEIM of siloxaan), voorbereiding, kosten per m², onderhoud & FAQ.",
     changefreq: "monthly",
@@ -89,7 +88,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/buiten-stucwerk/",
-    title: "Buitenmuur stucen (gevel stucen) – prijs per m² | BM Klus BV",
+    title: "Buitenmuur stucen (gevel stucen) – prijs per m²",
     description:
       "Buitenmuur stucen / gevel stucen in regio Rotterdam. Cementpleister, betonstuc, spachtelputz, crepi. Kosten per m² na gratis opname.",
     changefreq: "monthly",
@@ -97,7 +96,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/sierpleister/",
-    title: "Gevel sierpleister (spachtelputz/crepi) – prijs | BM Klus BV",
+    title: "Gevel sierpleister (spachtelputz/crepi) – prijs",
     description:
       "Gevel sierpleister: spachtelputz of crepi met korrel 1,5–3 mm. Richtprijzen per m², werkwijze, details (plint/dagkanten) en onderhoud. Regio Rotterdam.",
     changefreq: "monthly",
@@ -105,7 +104,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/muren-stucen/",
-    title: "Muren stucen (binnen) – sausklaar stucwerk | BM Klus BV",
+    title: "Muren stucen (binnen) – sausklaar stucwerk",
     description:
       "Binnenmuren stucen: behangklaar of sausklaar. Richtprijzen per m², werkwijze, voorbereiding en droogtijd. Regio Rotterdam (±80–100 km).",
     changefreq: "monthly",
@@ -113,7 +112,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/schoonmaak-na-verbouwing/",
-    title: "Schoonmaak na verbouwing | BM Klus BV",
+    title: "Schoonmaak na verbouwing",
     description:
       "Professionele schoonmaak na verbouwing of renovatie in regio Rotterdam.",
     changefreq: "monthly",
@@ -124,7 +123,7 @@ export const PLANNED_ROUTES = [
   // ── Gevelisolatie cluster ─────────────────────────────────────────────────
   {
     path: "/gevelisolatie/kosten/",
-    title: "Kosten gevelisolatie buiten – prijs per m² | BM Klus BV",
+    title: "Kosten gevelisolatie buiten – prijs per m²",
     description:
       "Wat kost buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips) en voorbeeldranges. Gratis opname in Regio Rotterdam (±80–100 km).",
     changefreq: "yearly",
@@ -132,7 +131,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/gevelisolatie/materialen/",
-    title: "Gevelisolatie platen – EPS, PIR & minerale wol | BM Klus BV",
+    title: "Gevelisolatie platen – EPS, PIR & minerale wol",
     description:
       "Vergelijk gevelisolatie platen (EPS, PIR, minerale wol): diktes, brandklasse, dampopenheid en afwerking op ETICS. Advies op locatie.",
     changefreq: "yearly",
@@ -140,7 +139,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/gevelisolatie/afwerkingen/",
-    title: "Afwerking gevelisolatie – stuc, crepi, strips | BM Klus BV",
+    title: "Afwerking gevelisolatie – stuc, crepi, strips",
     description:
       "Welke afwerking past bij buitengevelisolatie? Stucwerk, sierpleister/crepi, steenstrips of schilderwerk. Keuzes, voor- en nadelen.",
     changefreq: "yearly",
@@ -148,7 +147,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/gevelisolatie/rc-waarde-dikte/",
-    title: "Rc-waarde & dikte gevelisolatie (buiten) | BM Klus BV",
+    title: "Rc-waarde & dikte gevelisolatie (buiten)",
     description:
       "Welke Rc/Rd-waarde en dikte past bij jouw gevel? Uitleg EPS/PIR/wol, typische ranges en aandacht voor details. Gratis opname.",
     changefreq: "yearly",
@@ -156,7 +155,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/gevelisolatie/subsidie-vergunning/",
-    title: "Subsidie & vergunning gevelisolatie | BM Klus BV",
+    title: "Subsidie & vergunning gevelisolatie",
     description:
       "ISDE-subsidie en vergunningen bij buitengevelisolatie: voorwaarden op hoofdlijnen, stappenplan en praktische checklist.",
     changefreq: "yearly",

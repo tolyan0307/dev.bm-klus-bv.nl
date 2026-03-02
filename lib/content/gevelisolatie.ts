@@ -7,7 +7,7 @@
 /* ───── META ───── */
 export const gevelisolatieMeta = {
   slug: "gevelisolatie",
-  title: "Gevelisolatie buitenkant (ETICS) – prijs per m² | BM Klus BV",
+  title: "Gevelisolatie buitenkant (ETICS) – prijs per m²",
   description:
     "Gevelisolatie aan de buitenkant (ETICS) met afwerking: stuc, sierpleister/crepi of steenstrips. Heldere prijs per m² na gratis opname.",
 }

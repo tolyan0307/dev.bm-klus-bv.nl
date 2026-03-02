@@ -65,7 +65,11 @@ export default function FaqSection() {
                   Staat uw vraag er niet tussen?{" "}
                   <Link href="/contact/" className="font-semibold text-primary hover:underline">
                     Neem contact op
-                  </Link>
+                  </Link>{" "}
+                  of lees meer{" "}
+                  <Link href="/over-ons/" className="font-semibold text-primary hover:underline">
+                    over ons team
+                  </Link>.
                 </p>
               </div>
             </div>

@@ -820,8 +820,11 @@ export default function ContactPage() {
             <div className="flex flex-wrap gap-3">
               {[
                 { label: "Bekijk onze diensten", href: "/diensten/" },
+                { label: "Gevelisolatie", href: "/gevelisolatie/" },
+                { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
+                { label: "Gevel schilderen", href: "/gevel-schilderen/" },
                 { label: "Onze werken", href: "/onze-werken/" },
-                { label: "Over ons", href: "/over-ons" },
+                { label: "Over ons", href: "/over-ons/" },
               ].map(({ label, href }) => (
                 <Link
                   key={href}

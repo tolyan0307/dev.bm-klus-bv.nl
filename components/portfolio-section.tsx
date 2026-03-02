@@ -8,6 +8,7 @@ const projects = [
     city: "Rotterdam Centrum",
     service: "Complete geveltransformatie",
     highlight: "ETICS isolatie + moderne afwerking",
+    href: "/onze-werken/",
   },
   {
     id: "halsteren-stucwerk",
@@ -15,6 +16,7 @@ const projects = [
     city: "Halsteren",
     service: "Buitenstucwerk & sierpleister",
     highlight: "Volledige gevelrenovatie",
+    href: "/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
   },
   {
     id: "halsteren-schilderwerk",
@@ -22,6 +24,7 @@ const projects = [
     city: "Halsteren",
     service: "Stucwerk + schilderwerk",
     highlight: "Strakke moderne afwerking",
+    href: "/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
   },
   {
     id: "halsteren-sierpleister",
@@ -29,6 +32,7 @@ const projects = [
     city: "Halsteren",
     service: "Sierpleister afwerking",
     highlight: "Duurzaam & onderhoudsarm",
+    href: "/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
   },
 ]
 
@@ -58,7 +62,7 @@ export default function PortfolioSection() {
           {projects.map((project) => (
             <Link
               key={project.id}
-              href="/onze-werken/"
+              href={project.href}
               className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-md transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="aspect-4/3 overflow-hidden">

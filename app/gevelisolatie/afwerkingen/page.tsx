@@ -1,7 +1,7 @@
 import Link from "next/link"
+import dynamic from "next/dynamic"
 import {
   ArrowRight,
-  Check,
   Phone,
   CheckCircle2,
   AlertCircle,
@@ -10,28 +10,45 @@ import {
   SquareStack,
   Droplets,
   Clock,
+  ChevronRight,
+  Star,
+  MapPin,
+  MessageCircle,
 } from "lucide-react"
 
 import { buildPageMetadata } from "@/lib/seo/meta"
-import Breadcrumbs from "@/components/seo/Breadcrumbs"
+import { SITE } from "@/lib/seo/routes"
+import {
+  jsonLdScript,
+  localBusinessSchema,
+  serviceSchema,
+  breadcrumbSchema,
+} from "@/lib/seo/schema"
+import TrustStrip from "@/components/trust-strip"
 import TableOfContents from "@/components/page/TableOfContents"
 import Section from "@/components/page/Section"
 import Callout from "@/components/page/Callout"
-import FAQAccordion from "@/components/page/FAQAccordion"
 import RelatedLinks from "@/components/page/RelatedLinks"
-import type { FaqItem } from "@/components/page/FAQAccordion"
 import type { RelatedLinkItem } from "@/components/page/RelatedLinks"
+
+const StickyCTABar = dynamic(
+  () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
+)
+const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 
 /* ── Metadata ── */
 export const metadata = buildPageMetadata("/gevelisolatie/afwerkingen/")
+const base = SITE.canonicalBase
 
 /* ── Static data ── */
 
-const breadcrumbs = [
+const WA_URL =
+  "https://wa.me/31612079808?text=Hallo%2C%20ik%20wil%20graag%20advies%20over%20gevelafwerkingen."
+
+const heroBreadcrumbs = [
   { label: "Home", href: "/" },
-  { label: "Diensten", href: "/diensten/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
-  { label: "Afwerkingen" },
+  { label: "Afwerkingen", href: "/gevelisolatie/afwerkingen/" },
 ]
 
 const toc = [
@@ -155,6 +172,11 @@ const onderhoudItems = [
   },
 ]
 
+interface FaqItem {
+  vraag: string
+  antwoord: string
+}
+
 const faqItems: FaqItem[] = [
   {
     vraag: "Wat is het verschil tussen crepi en sierpleister?",
@@ -233,101 +255,132 @@ const relatedLinks: RelatedLinkItem[] = [
 
 /* ── Page Component ── */
 export default function AfwerkingenPage() {
+  const breadcrumbsSchema = breadcrumbSchema(
+    heroBreadcrumbs.map((b) => ({
+      name: b.label,
+      item: `${base}${b.href}`,
+    })),
+  )
+  const business = localBusinessSchema()
+  const service = serviceSchema({
+    name: "Gevelafwerkingen — stuc, sierpleister, crepi & steenstrips",
+    description:
+      "Afwerking na buitengevelisolatie: glad stucwerk, sierpleister, crepi of steenstrips. Vergelijk eigenschappen, onderhoud en prijs.",
+    url: `${base}/gevelisolatie/afwerkingen/`,
+    lowPrice: "110",
+    highPrice: "280",
+  })
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.vraag,
+      acceptedAnswer: { "@type": "Answer", text: item.antwoord },
+    })),
+  }
+
   return (
     <>
-      {/* JSON-LD FAQ schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqItems.map((item) => ({
-              "@type": "Question",
-              name: item.vraag,
-              acceptedAnswer: { "@type": "Answer", text: item.antwoord },
-            })),
-          }),
-        }}
-      />
+      {jsonLdScript(breadcrumbsSchema)}
+      {jsonLdScript(business)}
+      {jsonLdScript(service)}
+      {jsonLdScript(faqSchema)}
 
-      {/* ── Hero ── */}
-      <section
-        className="relative flex flex-col overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(175deg, #1A1A1A 0%, #2E2016 35%, #7A4520 60%, #C47A3A 78%, #F5EFE6 100%)",
-        }}
-      >
-        <div
-          className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-          }}
-        />
-        <div className="relative z-10 flex-1 flex items-end">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-40 lg:pt-44">
-            <div className="flex">
-              <div className="flex flex-col gap-5 pb-16 sm:pb-20 lg:pb-24 max-w-2xl">
-                <p className="text-[#E8600A] text-xs font-bold tracking-[0.25em] uppercase">
-                  Gevelisolatie (ETICS) · Afwerkingen · Regio Rotterdam
-                </p>
-                <h1 className="text-balance text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.75rem]">
-                  Afwerking na gevelisolatie:{" "}
-                  <span className="text-[#E8600A] decoration-[#E8600A]/40 underline decoration-[3px] underline-offset-4">
-                    stuc, crepi of steenstrips?
-                  </span>
-                </h1>
-                <p className="mt-3 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                  Na het aanbrengen van buitengevelisolatie bepaalt de afwerking het definitieve uiterlijk. Glad stucwerk, structuurrijke sierpleister, crepi of authentieke steenstrips — elke optie heeft eigen eigenschappen, onderhoudsvereisten en prijs.
-                </p>
-                {/* Trust bullets */}
-                <ul className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-5">
-                  {["Gratis opname & advies", "Alle afwerkingen leverbaar", "Regio Rotterdam (±80–100 km)"].map((bullet) => (
-                    <li key={bullet} className="flex items-center gap-2">
-                      <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E8600A]/20">
-                        <Check className="h-3 w-3 text-[#E8600A]" strokeWidth={3} />
-                      </div>
-                      <span className="text-sm font-medium text-white/80">{bullet}</span>
-                    </li>
+      {/* ══ HERO ══ */}
+      <section className="relative overflow-hidden bg-[#1A1A1A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
+            <ol className="flex flex-wrap items-center gap-1.5 text-sm">
+              {heroBreadcrumbs.map((item, i, arr) => (
+                <li key={item.href} className="flex items-center gap-1.5">
+                  {i > 0 && <ChevronRight className="h-3.5 w-3.5 text-white/40" />}
+                  {i === arr.length - 1 ? (
+                    <span className="font-medium text-white/90">{item.label}</span>
+                  ) : (
+                    <Link href={item.href} className="text-white/60 transition-colors hover:text-white">
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
+
+          <div className="pb-14 pt-8 sm:pb-16 lg:pb-20 lg:pt-10">
+            <div className="flex max-w-2xl flex-col gap-5">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-12 bg-primary" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                  Afwerkingen · Regio Rotterdam
+                </span>
+              </div>
+
+              <h1 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Afwerking na gevelisolatie:{" "}
+                <span className="text-primary">stuc, crepi of steenstrips?</span>
+              </h1>
+
+              <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
+                Glad stucwerk, sierpleister, crepi of steenstrips — elke afwerking heeft eigen
+                eigenschappen, onderhoud en prijs. Wij adviseren op locatie.
+              </p>
+
+              <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
+                {["Gratis opname & advies", "Alle afwerkingen leverbaar", "Gecertificeerde ETICS-systemen"].map((text) => (
+                  <li key={text} className="flex items-center gap-2 text-sm text-white/70">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex items-center gap-2 text-sm text-white/50">
+                <MapPin className="h-3.5 w-3.5 text-primary/70" />
+                <span>Rotterdam &amp; omgeving · Zuid-Holland</span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a href="#offerte" className="btn-primary">
+                  Offerte aanvragen
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href={WA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10"
+                >
+                  <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                  WhatsApp
+                </a>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                   ))}
-                </ul>
-                <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                  <Link
-                    href="/contact/"
-                    className="inline-flex items-center justify-center gap-2 bg-[#E8600A] text-white font-semibold px-7 py-4 text-sm tracking-wide hover:bg-[#d0540a] transition-colors rounded-sm"
-                  >
-                    Offerte aanvragen
-                    <ArrowRight size={16} />
-                  </Link>
-                  <Link
-                    href="/gevelisolatie/"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/25 bg-white/10 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/20 tracking-wide"
-                  >
-                    Terug naar Gevelisolatie
-                  </Link>
+                  <span className="ml-1 text-xs font-semibold text-white/70">4.8 / 5</span>
                 </div>
-                <div className="flex items-center gap-2 pt-1">
-                  <Phone size={14} className="text-[#E8600A]" />
-                  <a
-                    href="tel:+31612079808"
-                    className="text-sm text-white/70 hover:text-white transition-colors"
-                  >
-                    +31 6 1207 9808
-                  </a>
-                </div>
+                <span className="hidden h-3.5 w-px bg-white/20 sm:block" />
+                <a href="tel:+31612079808" className="flex items-center gap-1.5 text-xs text-white/50 transition-colors hover:text-white">
+                  <Phone className="h-3 w-3" />
+                  +31 6 12 07 98 08
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <main className="bg-background">
-        <div className="mx-auto max-w-7xl px-4 pb-20 pt-14 sm:px-6 lg:px-8">
+      <TrustStrip />
 
-          {/* ── Breadcrumbs ── */}
-          <Breadcrumbs items={breadcrumbs} className="mb-6" />
+      <div className="bg-background">
+        <div className="mx-auto max-w-7xl px-4 pb-20 pt-14 sm:px-6 lg:px-8">
 
           {/* ── Table of Contents ── */}
           <TableOfContents items={toc} className="mb-2" />
@@ -349,7 +402,7 @@ export default function AfwerkingenPage() {
                 {finishOptions.map((opt) => (
                   <div
                     key={opt.name}
-                    className="rounded-xl border border-border bg-card p-5 flex flex-col gap-4 hover:border-primary/40 hover:shadow-md transition-all"
+                    className="rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm flex flex-col gap-4 hover:border-primary/40 hover:shadow-md transition-all"
                   >
                     <div className="flex items-center gap-3">
                       <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-primary/10 text-primary shrink-0">
@@ -491,7 +544,7 @@ export default function AfwerkingenPage() {
             >
               <div className="grid gap-4 sm:grid-cols-2">
                 {onderhoudItems.map((item) => (
-                  <div key={item.title} className="flex gap-4 rounded-xl border border-border bg-card p-5">
+                  <div key={item.title} className="flex gap-4 rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm">
                     <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-primary/10 text-primary shrink-0">
                       {item.icon}
                     </span>
@@ -543,16 +596,58 @@ export default function AfwerkingenPage() {
               </Callout>
             </Section>
 
-            {/* 6. FAQ — two-column layout matching home page */}
+            {/* 6. FAQ */}
             <section id="faq" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
-              <FAQAccordion
-                items={faqItems}
-                layout="two-col"
-                eyebrow="FAQ"
-                heading="Veelgestelde vragen"
-                lead="Heeft u vragen over afwerkingen bij gevelisolatie? Hier vindt u de antwoorden op de meest gestelde vragen."
-                contactHref="/contact/"
-              />
+              <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+                <div className="lg:col-span-5">
+                  <div className="lg:sticky lg:top-32">
+                    <div className="mb-3 flex items-center gap-3">
+                      <div className="h-px w-10 bg-primary" />
+                      <span className="text-sm font-semibold uppercase tracking-widest text-primary">FAQ</span>
+                    </div>
+                    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                      Veelgestelde<br />
+                      <span className="text-primary">vragen</span>
+                    </h2>
+                    <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground sm:text-base">
+                      Heeft u vragen over afwerkingen bij gevelisolatie? Hier vindt u de antwoorden op de meest gestelde vragen.
+                    </p>
+                    <p className="mt-8 text-sm text-muted-foreground">
+                      Staat uw vraag er niet tussen?{" "}
+                      <Link href="/contact/" className="font-semibold text-primary hover:underline">
+                        Neem contact op
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7 space-y-3">
+                  {faqItems.map((item, idx) => (
+                    <details
+                      key={idx}
+                      className="group overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm transition-all open:border-primary/40 open:shadow-md"
+                      {...(idx === 0 ? { open: true } : {})}
+                    >
+                      <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
+                        <div className="flex items-start gap-4">
+                          <span className="mt-0.5 text-lg font-bold tabular-nums text-border transition-colors group-open:text-primary">
+                            {String(idx + 1).padStart(2, "0")}
+                          </span>
+                          <span className="text-base font-semibold text-foreground sm:text-lg">
+                            {item.vraag}
+                          </span>
+                        </div>
+                        <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" />
+                      </summary>
+                      <div className="border-t border-border/50 px-6 pb-6 pt-4">
+                        <p className="pl-12 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                          {item.antwoord}
+                        </p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
             </section>
 
           </div>{/* end sections */}
@@ -562,10 +657,33 @@ export default function AfwerkingenPage() {
             <RelatedLinks items={relatedLinks} />
           </div>
 
+          {/* ── Internal links ── */}
+          <nav aria-label="Overige pagina's" className="mt-8">
+            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <span className="font-semibold text-foreground">Overige pagina&apos;s:</span>
+              {[
+                { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
+                { label: "Sierpleister", href: "/sierpleister/" },
+                { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+                { label: "Muren stucen", href: "/muren-stucen/" },
+                { label: "Onze werken", href: "/onze-werken/" },
+                { label: "Diensten", href: "/diensten/" },
+                { label: "Contact", href: "/contact/" },
+              ].map((link, i) => (
+                <span key={link.href} className="flex items-center gap-2">
+                  {i > 0 && <span aria-hidden="true" className="text-border">•</span>}
+                  <Link href={link.href} className="hover:text-primary hover:underline underline-offset-4 transition-colors">{link.label}</Link>
+                </span>
+              ))}
+            </div>
+          </nav>
+
         </div>{/* end container */}
 
+      </div>
 
-      </main>
+      <StickyCTABar />
+      <QuoteModal dienst="gevelisolatie" />
     </>
   )
 }

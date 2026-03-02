@@ -762,6 +762,27 @@ export default function OverOnsPage() {
               </div>
             </div>
           </section>
+          {/* ── Internal links ── */}
+          <nav aria-label="Gerelateerde pagina's" className="mt-4">
+            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <span className="font-semibold text-foreground">Gerelateerde pagina&apos;s:</span>
+              {[
+                { label: "Gevelisolatie", href: "/gevelisolatie/" },
+                { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
+                { label: "Sierpleister", href: "/sierpleister/" },
+                { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+                { label: "Muren stucen", href: "/muren-stucen/" },
+                { label: "Onze werken", href: "/onze-werken/" },
+                { label: "Diensten", href: "/diensten/" },
+                { label: "Contact", href: "/contact/" },
+              ].map((link, i) => (
+                <span key={link.href} className="flex items-center gap-2">
+                  {i > 0 && <span aria-hidden="true" className="text-border">•</span>}
+                  <Link href={link.href} className="hover:text-primary hover:underline underline-offset-4 transition-colors">{link.label}</Link>
+                </span>
+              ))}
+            </div>
+          </nav>
         </div>
       </article>
 

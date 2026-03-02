@@ -1,16 +1,12 @@
-"use client"
-
-import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import Script from "next/script"
-import { useState } from "react"
+import dynamic from "next/dynamic"
 import {
   FileCheck,
   Euro,
   Check,
   ArrowRight,
-  ChevronDown,
+  ChevronRight,
   Phone,
   ClipboardList,
   ShieldAlert,
@@ -18,25 +14,41 @@ import {
   Calendar,
   FileText,
   Home,
+  CheckCircle2,
+  Star,
+  MessageCircle,
 } from "lucide-react"
 
-import StickyCTABar from "@/components/sections/gevelisolatie/sticky-cta-bar"
-import MidPageCTA from "@/components/sections/gevelisolatie/mid-page-cta"
+import { buildPageMetadata } from "@/lib/seo/meta"
+import { SITE } from "@/lib/seo/routes"
+import {
+  jsonLdScript,
+  localBusinessSchema,
+  serviceSchema,
+  breadcrumbSchema,
+} from "@/lib/seo/schema"
+import TrustStrip from "@/components/trust-strip"
+
+const StickyCTABar = dynamic(
+  () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
+)
+const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 
 /* ─────────────────────────────────────────────────────────────────────────────
    DATA — all copy lives here so the file stays readable
 ───────────────────────────────────────────────────────────────────────────── */
 
-const PAGE_TITLE = "Subsidie & vergunning gevelisolatie buiten | BM Klus BV"
-const PAGE_DESCRIPTION =
-  "ISDE-subsidie en vergunningen bij buitengevelisolatie: voorwaarden op hoofdlijnen, stappenplan en praktische checklist. Check altijd gemeente/RVO."
-const CANONICAL = "https://bm-klus-bv.nl/gevelisolatie/subsidie-vergunning/"
+/* ── Metadata ── */
+export const metadata = buildPageMetadata("/gevelisolatie/subsidie-vergunning/")
+const base = SITE.canonicalBase
 
-const breadcrumbs = [
+const WA_URL =
+  "https://wa.me/31612079808?text=Hallo%2C%20ik%20wil%20graag%20advies%20over%20subsidie%20en%20vergunning%20gevelisolatie."
+
+const heroBreadcrumbs = [
   { label: "Home", href: "/" },
-  { label: "Diensten", href: "/diensten/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
-  { label: "Subsidie & vergunning", href: "/gevelisolatie/subsidie-vergunning" },
+  { label: "Subsidie & vergunning", href: "/gevelisolatie/subsidie-vergunning/" },
 ]
 
 const tocItems = [
@@ -185,102 +197,41 @@ const relatedLinks = [
   },
   {
     label: "Materialen",
-    href: "/gevelisolatie/materialen",
+    href: "/gevelisolatie/materialen/",
     description: "EPS, PIR of minerale wol — wat kiest u?",
   },
   {
     label: "Afwerkingen",
-    href: "/gevelisolatie/afwerkingen",
+    href: "/gevelisolatie/afwerkingen/",
     description: "Stuc, sierpleister, crepi of steenstrips",
   },
   {
     label: "RC-waarde & dikte",
-    href: "/gevelisolatie/rc-waarde-dikte",
+    href: "/gevelisolatie/rc-waarde-dikte/",
     description: "Welke isolatiewaarde heeft u nodig?",
   },
 ]
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   FAQ ACCORDION (client component)
-───────────────────────────────────────────────────────────────────────────── */
-
-function FaqAccordion() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
-
-  return (
-    <div className="space-y-3">
-      {faqItems.map((item, idx) => {
-        const isOpen = openIndex === idx
-        return (
-          <div
-            key={idx}
-            className={`overflow-hidden rounded-xl border transition-all ${
-              isOpen
-                ? "border-primary/40 bg-card shadow-md"
-                : "border-border bg-card shadow-sm"
-            }`}
-          >
-            <button
-              onClick={() => setOpenIndex(isOpen ? null : idx)}
-              className="flex w-full items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20"
-              aria-expanded={isOpen}
-            >
-              <div className="flex items-start gap-4">
-                <span
-                  className={`mt-0.5 text-lg font-bold tabular-nums transition-colors ${
-                    isOpen ? "text-primary" : "text-border"
-                  }`}
-                >
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
-                <span className="text-base font-semibold text-foreground sm:text-lg">
-                  {item.vraag}
-                </span>
-              </div>
-              <ChevronDown
-                className={`mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 ${
-                  isOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            <div
-              className={`grid transition-all duration-300 ${
-                isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-              }`}
-            >
-              <div className="overflow-hidden">
-                <div className="border-t border-border/50 px-6 pb-6 pt-4">
-                  <div className="pl-12">
-                    <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                      {item.antwoord}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )
-      })}
-    </div>
-  )
-}
 
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE
 ───────────────────────────────────────────────────────────────────────────── */
 
 export default function SubsidieVergunningPage() {
-  /* JSON-LD: BreadcrumbList + FAQPage */
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: breadcrumbs.map((bc, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: bc.label,
-      item: `https://bm-klus-bv.nl${bc.href}`,
+  const breadcrumbsSchema = breadcrumbSchema(
+    heroBreadcrumbs.map((b) => ({
+      name: b.label,
+      item: `${base}${b.href}`,
     })),
-  }
+  )
+  const business = localBusinessSchema()
+  const service = serviceSchema({
+    name: "Subsidie & vergunning gevelisolatie",
+    description:
+      "ISDE-subsidie en vergunningen bij buitengevelisolatie: voorwaarden, stappenplan en checklist.",
+    url: `${base}/gevelisolatie/subsidie-vergunning/`,
+    lowPrice: "110",
+    highPrice: "280",
+  })
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -293,114 +244,112 @@ export default function SubsidieVergunningPage() {
 
   return (
     <>
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Script
-        id="faq-subsidie-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {jsonLdScript(breadcrumbsSchema)}
+      {jsonLdScript(business)}
+      {jsonLdScript(service)}
+      {jsonLdScript(faqSchema)}
 
+      {/* ══ HERO ══ */}
+      <section className="relative overflow-hidden bg-[#1A1A1A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
 
-      {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <header className="relative overflow-hidden bg-[#1A1A1A]">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/subsidie-vergunning.webp"
-            alt="Documentatie voor subsidie en vergunning gevelisolatie"
-            fill
-            className="object-cover opacity-25"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A1A]/60 via-transparent to-[#1A1A1A]/80" />
-        </div>
-
-        {/* Orange glow accent */}
-        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary opacity-[0.08] blur-3xl" />
-
-        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-36 sm:px-6 sm:pb-20 sm:pt-40 lg:px-8 lg:pb-24 lg:pt-44">
-
-          {/* Breadcrumbs */}
-          <nav aria-label="Kruimelpad" className="mb-8">
-            <ol className="flex flex-wrap items-center gap-1.5 text-[11px] font-medium text-white/70">
-              {breadcrumbs.map((bc, i) => (
-                <li key={bc.href} className="flex items-center gap-1.5">
-                  {i > 0 && <span aria-hidden="true">/</span>}
-                  {i < breadcrumbs.length - 1 ? (
-                    <Link
-                      href={bc.href}
-                      className="transition-colors hover:text-white"
-                    >
-                      {bc.label}
-                    </Link>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
+            <ol className="flex flex-wrap items-center gap-1.5 text-sm">
+              {heroBreadcrumbs.map((item, i, arr) => (
+                <li key={item.href} className="flex items-center gap-1.5">
+                  {i > 0 && <ChevronRight className="h-3.5 w-3.5 text-white/40" />}
+                  {i === arr.length - 1 ? (
+                    <span className="font-medium text-white/90">{item.label}</span>
                   ) : (
-                    <span className="text-white/80">{bc.label}</span>
+                    <Link href={item.href} className="text-white/60 transition-colors hover:text-white">
+                      {item.label}
+                    </Link>
                   )}
                 </li>
               ))}
             </ol>
           </nav>
 
-          {/* Label */}
-          <div className="mb-4 flex items-center gap-3">
-            <div className="h-px w-10 bg-primary" />
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-primary">
-              Subsidie & vergunning
-            </span>
-          </div>
+          <div className="pb-14 pt-8 sm:pb-16 lg:pb-20 lg:pt-10">
+            <div className="flex max-w-2xl flex-col gap-5">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-12 bg-primary" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                  Subsidie & vergunning
+                </span>
+              </div>
 
-          {/* H1 */}
-          <h1 className="max-w-3xl text-balance text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Subsidie en vergunning voor{" "}
-            <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
-              buitengevelisolatie
-            </span>
-          </h1>
+              <h1 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Subsidie en vergunning voor{" "}
+                <span className="text-primary">buitengevelisolatie</span>
+              </h1>
 
-          {/* Lead */}
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
-            Buitengevelisolatie kan in aanmerking komen voor de ISDE-subsidie. Tegelijkertijd is er
-            soms een omgevingsvergunning nodig. In regio Rotterdam en omgeving checken wij dit
-            vooraf voor u — gratis en vrijblijvend.
-          </p>
+              <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
+                Buitengevelisolatie kan in aanmerking komen voor ISDE-subsidie. Soms is een
+                omgevingsvergunning nodig. Wij checken dit vooraf — gratis en vrijblijvend.
+              </p>
 
-          {/* Disclaimer banner */}
-          <div className="mt-6 inline-flex items-start gap-2.5 rounded-lg border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm">
-            <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
-            <p className="text-xs leading-relaxed text-white/60">
-              De informatie op deze pagina is op hoofdlijnen en zonder juridische of financiële
-              garanties. Raadpleeg altijd uw gemeente en{" "}
-              <span className="text-white/80 font-medium">rvo.nl</span> voor actuele
-              voorwaarden en bedragen.
-            </p>
-          </div>
+              <div className="inline-flex items-start gap-2.5 rounded-lg border border-white/10 bg-white/5 px-4 py-3">
+                <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
+                <p className="text-xs leading-relaxed text-white/60">
+                  Informatie op hoofdlijnen — raadpleeg altijd uw gemeente en{" "}
+                  <span className="font-medium text-white/80">rvo.nl</span> voor actuele voorwaarden.
+                </p>
+              </div>
 
-          {/* CTAs */}
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-2 rounded-sm bg-primary px-6 py-3.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
-            >
-              Offerte aanvragen
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <a
-              href="tel:+31612079808"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/15"
-            >
-              <Phone className="h-4 w-4" />
-              Bel direct
-            </a>
+              <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
+                {["Gratis vergunningscheck", "Subsidie-advies inbegrepen", "Documentatie geregeld"].map((text) => (
+                  <li key={text} className="flex items-center gap-2 text-sm text-white/70">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex items-center gap-2 text-sm text-white/50">
+                <MapPin className="h-3.5 w-3.5 text-primary/70" />
+                <span>Rotterdam &amp; omgeving · Zuid-Holland</span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a href="#offerte" className="btn-primary">
+                  Offerte aanvragen
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href={WA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10"
+                >
+                  <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                  WhatsApp
+                </a>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                  <span className="ml-1 text-xs font-semibold text-white/70">4.8 / 5</span>
+                </div>
+                <span className="hidden h-3.5 w-px bg-white/20 sm:block" />
+                <a href="tel:+31612079808" className="flex items-center gap-1.5 text-xs text-white/50 transition-colors hover:text-white">
+                  <Phone className="h-3 w-3" />
+                  +31 6 12 07 98 08
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <main className="bg-background pb-16 sm:pb-20 lg:pb-24">
+      <TrustStrip />
+
+      <div className="bg-background pb-16 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
 
           {/* ── Table of Contents ─────────────────────────────────────────── */}
@@ -416,7 +365,7 @@ export default function SubsidieVergunningPage() {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className="group flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 transition-all hover:border-primary hover:bg-primary/5"
+                  className="group flex items-center gap-2 rounded-full border border-border/60 bg-card/80 px-3.5 shadow-sm py-1.5 transition-all hover:border-primary/40 hover:shadow-md"
                 >
                   <span className="text-[9px] font-bold tabular-nums text-primary/40 transition-colors group-hover:text-primary">
                     {String(i + 1).padStart(2, "0")}
@@ -454,7 +403,7 @@ export default function SubsidieVergunningPage() {
 
             <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_380px]">
               {/* Text block */}
-              <div className="space-y-5 rounded-xl border border-border bg-card p-6 lg:p-8">
+              <div className="space-y-5 rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm lg:p-8">
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   Buitengevelisolatie (ETICS) verandert het uiterlijk van uw gevel: de dikte neemt
                   toe en de afwerking wijzigt. In sommige situaties is hiervoor een{" "}
@@ -533,7 +482,7 @@ export default function SubsidieVergunningPage() {
                   height={460}
                   className="h-64 w-full object-cover lg:h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5">
                   <p className="text-xs font-bold uppercase tracking-widest text-white/60">
                     Wist u dat
@@ -581,7 +530,7 @@ export default function SubsidieVergunningPage() {
             {/* Two info cards */}
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
               {/* ISDE card */}
-              <div className="flex flex-col gap-5 rounded-xl border border-border bg-card p-6">
+              <div className="flex flex-col gap-5 rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
                     <Euro className="h-5 w-5 text-primary" />
@@ -624,7 +573,7 @@ export default function SubsidieVergunningPage() {
               </div>
 
               {/* Vergunning card */}
-              <div className="flex flex-col gap-5 rounded-xl border border-border bg-card p-6">
+              <div className="flex flex-col gap-5 rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
                     <FileCheck className="h-5 w-5 text-primary" />
@@ -678,11 +627,6 @@ export default function SubsidieVergunningPage() {
           </section>
         </div>
 
-        {/* ── Mid-page CTA ───────────────────────────────────────────────── */}
-        <div className="mt-20">
-          <MidPageCTA />
-        </div>
-
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* ── Section 3: Stappenplan ───────────────────────────────────── */}
@@ -717,7 +661,7 @@ export default function SubsidieVergunningPage() {
               {stappen.map((stap) => (
                 <div
                   key={stap.num}
-                  className="relative flex flex-col gap-4 rounded-xl border border-border bg-card p-6"
+                  className="relative flex flex-col gap-4 rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm"
                 >
                   {/* Step number */}
                   <span className="text-4xl font-black leading-none tabular-nums text-primary/10">
@@ -768,7 +712,7 @@ export default function SubsidieVergunningPage() {
                 return (
                   <div
                     key={item.label}
-                    className="flex flex-col gap-3 rounded-xl border border-border bg-card p-5"
+                    className="flex flex-col gap-3 rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm"
                   >
                     <div className="flex items-center gap-3">
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
@@ -844,9 +788,32 @@ export default function SubsidieVergunningPage() {
                 </div>
               </div>
 
-              {/* Right: accordion */}
-              <div className="lg:col-span-7">
-                <FaqAccordion />
+              {/* Right: FAQ items */}
+              <div className="lg:col-span-7 space-y-3">
+                {faqItems.map((item, idx) => (
+                  <details
+                    key={idx}
+                    className="group overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm transition-all open:border-primary/40 open:shadow-md"
+                    {...(idx === 0 ? { open: true } : {})}
+                  >
+                    <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
+                      <div className="flex items-start gap-4">
+                        <span className="mt-0.5 text-lg font-bold tabular-nums text-border transition-colors group-open:text-primary">
+                          {String(idx + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-base font-semibold text-foreground sm:text-lg">
+                          {item.vraag}
+                        </span>
+                      </div>
+                      <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" />
+                    </summary>
+                    <div className="border-t border-border/50 px-6 pb-6 pt-4">
+                      <p className="pl-12 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                        {item.antwoord}
+                      </p>
+                    </div>
+                  </details>
+                ))}
               </div>
             </div>
           </section>
@@ -864,7 +831,7 @@ export default function SubsidieVergunningPage() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group flex items-start gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+                  className="group flex items-start gap-4 rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/25 hover:shadow-md"
                 >
                   <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/15">
                     <ArrowRight className="h-4 w-4 text-primary" />
@@ -878,29 +845,35 @@ export default function SubsidieVergunningPage() {
                 </Link>
               ))}
 
-              {/* Contact highlight */}
-              <Link
-                href="/contact/"
-                className="group flex items-start gap-4 rounded-xl border border-primary bg-primary p-5 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-md"
-              >
-                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/20">
-                  <Phone className="h-4 w-4 text-white" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-sm font-bold text-white">Contact opnemen</p>
-                  <p className="mt-0.5 text-xs leading-snug text-white/75">
-                    Vraag een gratis inspectie of offerte aan
-                  </p>
-                </div>
-                <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-white/70 transition-transform group-hover:translate-x-0.5" />
-              </Link>
+            </div>
+          </nav>
+
+          {/* ── Internal links ── */}
+          <nav aria-label="Overige pagina's" className="mt-8">
+            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <span className="font-semibold text-foreground">Overige pagina&apos;s:</span>
+              {[
+                { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
+                { label: "Sierpleister", href: "/sierpleister/" },
+                { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+                { label: "Muren stucen", href: "/muren-stucen/" },
+                { label: "Onze werken", href: "/onze-werken/" },
+                { label: "Diensten", href: "/diensten/" },
+                { label: "Contact", href: "/contact/" },
+              ].map((link, i) => (
+                <span key={link.href} className="flex items-center gap-2">
+                  {i > 0 && <span aria-hidden="true" className="text-border">•</span>}
+                  <Link href={link.href} className="hover:text-primary hover:underline underline-offset-4 transition-colors">{link.label}</Link>
+                </span>
+              ))}
             </div>
           </nav>
 
         </div>
-      </main>
+      </div>
 
       <StickyCTABar />
+      <QuoteModal dienst="gevelisolatie" />
     </>
   )
 }

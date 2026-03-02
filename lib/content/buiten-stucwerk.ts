@@ -341,9 +341,9 @@ export const faq = {
 
 export const internalLinks = [
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
-  { label: "Gevel schilderen", href: "/gevel-schilderen/" },
   { label: "Sierpleister", href: "/sierpleister/" },
-  { label: "Afwerking keuzehulp", href: "/buiten-stucwerk/#keuzehulp" },
+  { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+  { label: "Muren stucen", href: "/muren-stucen/" },
   { label: "Diensten", href: "/diensten/" },
   { label: "Contact", href: "/contact/" },
 ];

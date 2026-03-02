@@ -56,9 +56,7 @@ const WA_URL =
   "https://wa.me/31612079808?text=Hallo%2C%20ik%20heb%20interesse%20in%20buiten%20stucwerk.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
 
 /* ── Metadata ── */
-export const metadata = buildPageMetadata("/buiten-stucwerk/", {
-  image: "/images/og-buiten-stucwerk.jpg",
-})
+export const metadata = buildPageMetadata("/buiten-stucwerk/")
 
 /* ── Structured Data ── */
 function PageJsonLd() {
@@ -130,8 +128,8 @@ export default function BuitenStucwerkPage() {
             sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 via-transparent to-[#1A1A1A]/30" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/40" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#1A1A1A]/60 via-transparent to-[#1A1A1A]/30" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -214,7 +212,7 @@ export default function BuitenStucwerkPage() {
                   href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-3 rounded-lg border border-white/20 bg-white/[0.08] px-7 py-4 text-sm font-semibold tracking-wide text-white backdrop-blur-md transition-all hover:border-white/35 hover:bg-white/[0.14]"
+                  className="group inline-flex items-center justify-center gap-3 rounded-lg border border-white/20 bg-white/8 px-7 py-4 text-sm font-semibold tracking-wide text-white backdrop-blur-md transition-all hover:border-white/35 hover:bg-white/[0.14]"
                 >
                   <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#25D366]/50 bg-[#25D366]/15 transition-transform group-hover:scale-110">
                     <MessageCircle size={14} className="text-[#25D366]" strokeWidth={1.5} />
@@ -296,7 +294,7 @@ export default function BuitenStucwerkPage() {
               </div>
               <div className="relative h-52 w-full lg:h-auto">
                 <Image src="/images/wat-is-buitenmuur-stucen.webp" alt="Stukadoor brengt cementpleister aan op de buitenmuur" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
-                <div className="absolute inset-0 bg-gradient-to-r from-card/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-r from-card/20 to-transparent" />
               </div>
             </div>
           </div>
@@ -317,7 +315,7 @@ export default function BuitenStucwerkPage() {
                 { icon: Wrench, ...voordelen.items[3] },
                 { icon: Palette, ...voordelen.items[4] },
               ].map(({ icon: Icon, title, body }) => (
-                <div key={title} className="group relative flex gap-4 rounded-xl border border-border bg-card px-5 py-5 transition-colors hover:border-primary/40 hover:bg-primary/[0.03]">
+                <div key={title} className="group relative flex gap-4 rounded-xl border border-border bg-card px-5 py-5 transition-colors hover:border-primary/40 hover:bg-primary/3">
                   <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-primary/20 group-hover:bg-primary/50 transition-colors" />
                   <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-primary/10">
                     <Icon className="h-4 w-4 text-primary" />

@@ -62,9 +62,7 @@ const WA_URL =
   "https://wa.me/31612079808?text=Hallo%2C%20ik%20heb%20interesse%20in%20gevel%20schilderen.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
 
 /* ── Metadata ── */
-export const metadata = buildPageMetadata("/gevel-schilderen/", {
-  image: "/images/og-gevel-schilderen.jpg",
-})
+export const metadata = buildPageMetadata("/gevel-schilderen/")
 
 /* ── Structured Data ── */
 function PageJsonLd() {

@@ -293,8 +293,10 @@ export const faq = {
 };
 
 export const internalLinks = [
+  { label: "Gevelisolatie", href: "/gevelisolatie/" },
   { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
   { label: "Sierpleister", href: "/sierpleister/" },
+  { label: "Gevel schilderen", href: "/gevel-schilderen/" },
   { label: "Diensten", href: "/diensten/" },
   { label: "Contact", href: "/contact/" },
 ];

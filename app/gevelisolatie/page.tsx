@@ -34,9 +34,7 @@ const StickyCTABar = dynamic(() => import("@/components/sections/gevelisolatie/s
 const StickyToc = dynamic(() => import("@/components/sections/gevelisolatie/sticky-toc"))
 
 /* ── Meta ── */
-export const metadata = buildPageMetadata("/gevelisolatie/", {
-  image: "/images/og-gevelisolatie.jpg",
-})
+export const metadata = buildPageMetadata("/gevelisolatie/")
 
 /* ── Structured Data ── */
 function PageJsonLd() {

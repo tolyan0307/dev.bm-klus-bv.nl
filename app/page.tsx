@@ -121,7 +121,7 @@ export default function Home() {
       {jsonLdScript(localBusinessSchema())}
       {jsonLdScript(organizationSchema)}
       {jsonLdScript(faqSchema)}
-      <main className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background">
         <HeroSection />
         <TrustStrip />
         <EticsSection />
@@ -133,7 +133,7 @@ export default function Home() {
         <FaqSection />
         <StickyCTABar />
         <QuoteModal dienst="geveloplossingen" />
-      </main>
+      </div>
     </>
   )
 }

@@ -1,4 +1,5 @@
-import { Shield, Users, Clock, Award } from "lucide-react"
+import Link from "next/link"
+import { Shield, Users, Clock, Award, ArrowRight } from "lucide-react"
 
 const usps = [
   {
@@ -75,6 +76,16 @@ export default function WaaromBmKlusSection({
               </div>
             )
           })}
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="/over-ons/"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 transition-colors hover:underline"
+          >
+            Meer over ons team
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

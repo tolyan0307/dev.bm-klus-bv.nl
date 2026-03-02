@@ -50,7 +50,7 @@ export default function TableOfContents({ items, className = "" }: TableOfConten
           <a
             key={item.id}
             href={`#${item.id}`}
-            className="group flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 transition-all hover:border-primary hover:bg-primary/5"
+            className="group flex items-center gap-2 rounded-full border border-border/60 bg-card/80 px-3.5 py-1.5 shadow-sm transition-all hover:border-primary/40 hover:shadow-md"
           >
             <span className="text-[9px] font-bold tabular-nums text-primary/40 transition-colors group-hover:text-primary">
               {String(i + 1).padStart(2, "0")}

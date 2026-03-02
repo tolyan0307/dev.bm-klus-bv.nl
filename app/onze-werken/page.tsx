@@ -216,7 +216,7 @@ export default function OnzeWerkenPage() {
 
       <TrustStrip />
 
-      <main className="bg-background">
+      <div className="bg-background">
         <div className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8">
 
           {/* Table of contents */}
@@ -421,16 +421,27 @@ export default function OnzeWerkenPage() {
         {/* Bottom micro-links */}
         <div className="border-t border-border py-6">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-xs text-muted-foreground">
-              <Link href="/diensten/" className="font-medium text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline">Diensten</Link>
-              <span className="mx-2 text-border">•</span>
-              <Link href="/gevelisolatie/" className="font-medium text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline">Gevelisolatie</Link>
-              <span className="mx-2 text-border">•</span>
-              <Link href="/contact/" className="font-medium text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline">Contact</Link>
-            </p>
+            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <span className="font-semibold text-foreground">Gerelateerde pagina&apos;s:</span>
+              {[
+                { label: "Diensten", href: "/diensten/" },
+                { label: "Gevelisolatie", href: "/gevelisolatie/" },
+                { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
+                { label: "Sierpleister", href: "/sierpleister/" },
+                { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+                { label: "Muren stucen", href: "/muren-stucen/" },
+                { label: "Over ons", href: "/over-ons/" },
+                { label: "Contact", href: "/contact/" },
+              ].map((link, i) => (
+                <span key={link.href} className="flex items-center gap-2">
+                  {i > 0 && <span aria-hidden="true" className="text-border">•</span>}
+                  <Link href={link.href} className="hover:text-primary hover:underline underline-offset-4 transition-colors">{link.label}</Link>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
-      </main>
+      </div>
 
       <StickyCTABar />
       <QuoteModal dienst="geveloplossingen" />

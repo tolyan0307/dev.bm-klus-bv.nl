@@ -45,6 +45,16 @@ const services = [
     href: "/sierpleister/",
     features: ["Sierpleister", "Glad stucwerk", "Spachtelputz"],
   },
+  {
+    id: "05",
+    title: "Muren stucen",
+    subtitle: "Binnen strak & sausklaar",
+    description:
+      "Professioneel stucwerk voor binnenwanden. Behangklaar of sausklaar opgeleverd — ideaal bij renovatie, verbouwing of nieuwbouw.",
+    image: "/images/dienst-muren.webp",
+    href: "/muren-stucen/",
+    features: ["Sausklaar", "Strakke wanden", "Renovatie"],
+  },
 ]
 
 export default function ServicesSection() {
@@ -86,8 +96,8 @@ export default function ServicesSection() {
 
         {/* Desktop: Interactive showcase layout */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-2 gap-10">
-            {/* Left: Navigation tabs + active description + CTA */}
+          <div className="grid grid-cols-2 gap-10 items-stretch">
+            {/* Left: Navigation tabs + active description */}
             <div className="flex flex-col">
               <div className="flex flex-col gap-1.5">
                 {services.map((service, index) => (
@@ -130,6 +140,17 @@ export default function ServicesSection() {
                       >
                         {service.subtitle}
                       </p>
+                      <Link
+                        href={service.href}
+                        onClick={(e) => e.stopPropagation()}
+                        className={`mt-1.5 inline-flex items-center gap-1 text-xs font-medium underline-offset-2 transition-colors hover:underline ${
+                          activeService === index
+                            ? "text-primary"
+                            : "text-muted-foreground/70 group-hover:text-primary/70"
+                        }`}
+                      >
+                        Meer info <ArrowRight size={11} />
+                      </Link>
                     </div>
 
                     {/* Active indicator line */}
@@ -140,7 +161,7 @@ export default function ServicesSection() {
                 ))}
               </div>
 
-              {/* Active service description + CTA */}
+              {/* Active service description */}
               <div className="mt-6 rounded-xl border border-border bg-card p-6 shadow-md">
                 <p className="text-base leading-relaxed text-muted-foreground">
                   {current.description}
@@ -155,17 +176,10 @@ export default function ServicesSection() {
                     </span>
                   ))}
                 </div>
-                <Link
-                  href={current.href}
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-md"
-                >
-                  Meer informatie
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
               </div>
             </div>
 
-            {/* Right: Image with crossfade */}
+            {/* Right: Image with crossfade — stretches full height of left column */}
             <div className="relative overflow-hidden rounded-2xl border border-border shadow-xl">
               {services.map((service, index) => (
                 <img

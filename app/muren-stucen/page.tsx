@@ -57,9 +57,7 @@ const WA_URL =
   "https://wa.me/31612079808?text=Hallo%2C%20ik%20heb%20interesse%20in%20muren%20stucen.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
 
 /* ── Metadata ── */
-export const metadata = buildPageMetadata("/muren-stucen/", {
-  image: "/images/og-muren-stucen.jpg",
-})
+export const metadata = buildPageMetadata("/muren-stucen/")
 
 /* ── Structured Data ── */
 function PageJsonLd() {

@@ -24,8 +24,8 @@ export default function PriceCards({ cards, noteLines = [] }: PriceCardsProps) {
             key={card.title}
             className={`flex flex-col justify-between gap-4 rounded-xl border p-6 transition-all ${
               card.highlighted
-                ? "border-primary/50 bg-primary/5 shadow-md"
-                : "border-border bg-card shadow-sm"
+                ? "border-primary/30 bg-primary/5 shadow-md"
+                : "border-border/60 bg-card/80 shadow-sm"
             }`}
           >
             <p className="text-sm leading-snug text-foreground/80">{card.title}</p>

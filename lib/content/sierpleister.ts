@@ -437,9 +437,10 @@ export const faq = {
 };
 
 export const internalLinks = [
-  { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
+  { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
   { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+  { label: "Muren stucen", href: "/muren-stucen/" },
   { label: "Diensten", href: "/diensten/" },
   { label: "Contact", href: "/contact/" },
 ];

@@ -305,9 +305,10 @@ export const faq = {
 };
 
 export const internalLinks = [
-  { label: "Diensten", href: "/diensten/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
-  { label: "Buitenstucwerk", href: "/buiten-stucwerk/" },
+  { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
   { label: "Sierpleister", href: "/sierpleister/" },
+  { label: "Muren stucen", href: "/muren-stucen/" },
+  { label: "Diensten", href: "/diensten/" },
   { label: "Contact", href: "/contact/" },
 ];

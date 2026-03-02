@@ -16,6 +16,15 @@ Standard scripts are in `package.json`:
 | Build | `pnpm build` (static export to `out/`) |
 | Type check | `npx tsc --noEmit` |
 
+### Protected folders — do not delete
+
+| Path | Contents |
+|------|----------|
+| `docs/` | ADD-PROJECT.md, project instructions |
+| `scripts/` | convert-to-webp.mjs, take-screenshots.mjs — local dev tools |
+
+These folders are not deployed (only `out/` goes to production) but must remain in the repo.
+
 ### Known caveats
 
 - **ESLint is not installed.** The `pnpm lint` script (`eslint .`) will fail because `eslint` is not in `devDependencies`. Use `npx tsc --noEmit` for type checking instead.

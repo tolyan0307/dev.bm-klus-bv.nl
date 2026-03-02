@@ -32,7 +32,7 @@ export default function RelatedLinks({
           <Link
             key={item.href}
             href={item.href}
-            className="group flex items-start justify-between gap-3 rounded-xl border border-border bg-card p-5 transition-all hover:border-primary/40 hover:bg-primary/5 hover:shadow-sm"
+            className="group flex items-start justify-between gap-3 rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm transition-all hover:border-primary/25 hover:shadow-md"
           >
             <div className="flex-1">
               <p className="text-sm font-semibold text-foreground transition-colors group-hover:text-primary">
@@ -43,7 +43,7 @@ export default function RelatedLinks({
               </p>
             </div>
             <ArrowRight
-              className="mt-0.5 h-4 w-4 shrink-0 text-border transition-all group-hover:translate-x-0.5 group-hover:text-primary"
+              className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:text-primary"
               aria-hidden="true"
             />
           </Link>

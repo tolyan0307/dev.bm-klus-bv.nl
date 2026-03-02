@@ -2,14 +2,14 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import Script from "next/script"
+import dynamic from "next/dynamic"
 import { useState } from "react"
 import {
   Check,
   AlertTriangle,
   Flame,
   Droplets,
-  ChevronDown,
+  ChevronRight,
   ArrowRight,
   Phone,
   Info,
@@ -19,10 +19,17 @@ import {
   ShieldCheck,
   Wind,
   Hammer,
+  CheckCircle2,
+  Star,
+  MapPin,
+  MessageCircle,
 } from "lucide-react"
 
-import StickyCTABar from "@/components/sections/gevelisolatie/sticky-cta-bar"
-import SharedBreadcrumbs from "@/components/seo/Breadcrumbs"
+const TrustStrip = dynamic(() => import("@/components/trust-strip"))
+const StickyCTABar = dynamic(
+  () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
+)
+const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -209,108 +216,117 @@ function SectionHeader({
 // Main page
 // ─────────────────────────────────────────────────────────────────────────────
 
+const WA_URL =
+  "https://wa.me/31612079808?text=Hallo%2C%20ik%20wil%20graag%20advies%20over%20gevelisolatie%20materialen."
+
 export default function MaterialenPage() {
   const [activeTab, setActiveTab] = useState(0)
-  const [openFaq, setOpenFaq] = useState<number | null>(0)
 
   const current = materialen[activeTab]
   const brand = brandBadge[current.brandKey]
   const damp = dampBadge[current.dampopen]
   const score = lambdaScore[current.materiaal] ?? 2
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.vraag,
-      acceptedAnswer: { "@type": "Answer", text: item.antwoord },
-    })),
-  }
-
   return (
     <>
-      <Script
-        id="faq-materialen-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* ══ HERO ══ */}
+      <section className="relative overflow-hidden bg-[#1A1A1A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
 
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
+            <ol className="flex flex-wrap items-center gap-1.5 text-sm">
+              {[
+                { label: "Home", href: "/" },
+                { label: "Gevelisolatie", href: "/gevelisolatie/" },
+                { label: "Materialen", href: "/gevelisolatie/materialen/" },
+              ].map((item, i, arr) => (
+                <li key={item.href} className="flex items-center gap-1.5">
+                  {i > 0 && <ChevronRight className="h-3.5 w-3.5 text-white/40" />}
+                  {i === arr.length - 1 ? (
+                    <span className="font-medium text-white/90">{item.label}</span>
+                  ) : (
+                    <Link href={item.href} className="text-white/60 transition-colors hover:text-white">
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
 
-      {/* ── Hero ── */}
-      <section
-        className="relative flex flex-col overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(175deg, #1A1A1A 0%, #2E2016 35%, #7A4520 60%, #C47A3A 78%, #F5EFE6 100%)",
-        }}
-      >
-        <div
-          className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-          }}
-        />
-        <div className="relative z-10 flex-1 flex items-end">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-40 lg:pt-44">
-            <div className="flex">
-              <div className="flex flex-col gap-5 pb-16 sm:pb-20 lg:pb-24 max-w-2xl">
-                <p className="text-[#E8600A] text-xs font-bold tracking-[0.25em] uppercase">
-                  Gevelisolatie · Materialen · Regio Rotterdam
-                </p>
-                <h1 className="text-balance text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.75rem]">
-                  Materialen voor buitengevelisolatie:{" "}
-                  <span className="text-[#E8600A] decoration-[#E8600A]/40 underline decoration-[3px] underline-offset-4">
-                    EPS, PIR of minerale wol
-                          </span>
-                </h1>
-                <p className="mt-3 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                  Vergelijk isolatieplaten voor ETICS op diktes, brandklasse, dampopenheid en afwerking. Persoonlijk advies op locatie in de regio Rotterdam en Zuid-Holland.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                  <Link
-                    href="/contact/"
-                    className="inline-flex items-center justify-center gap-2 bg-[#E8600A] text-white font-semibold px-7 py-4 text-sm tracking-wide hover:bg-[#d0540a] transition-colors rounded-sm"
-                  >
-                    Plan gratis inspectie
-                    <ArrowRight size={16} />
-                  </Link>
-                  <Link
-                    href="/gevelisolatie/"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/25 bg-white/10 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/20 tracking-wide"
-                  >
-                    Terug naar Gevelisolatie
-                  </Link>
+          <div className="pb-14 pt-8 sm:pb-16 lg:pb-20 lg:pt-10">
+            <div className="flex max-w-2xl flex-col gap-5">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-12 bg-primary" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                  Materialen · Regio Rotterdam
+                </span>
+              </div>
+
+              <h1 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Materialen voor buitengevelisolatie:{" "}
+                <span className="text-primary">EPS, PIR of minerale wol</span>
+              </h1>
+
+              <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
+                Vergelijk isolatieplaten voor ETICS op diktes, brandklasse,
+                dampopenheid en afwerking. Persoonlijk advies op locatie.
+              </p>
+
+              <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
+                {["Gratis opname ter plaatse", "Advies op maat per gevel", "Gecertificeerde ETICS-systemen"].map((text) => (
+                  <li key={text} className="flex items-center gap-2 text-sm text-white/70">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex items-center gap-2 text-sm text-white/50">
+                <MapPin className="h-3.5 w-3.5 text-primary/70" />
+                <span>Rotterdam &amp; omgeving · Zuid-Holland</span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a href="#offerte" className="btn-primary">
+                  Offerte aanvragen
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href={WA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10"
+                >
+                  <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                  WhatsApp
+                </a>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                  <span className="ml-1 text-xs font-semibold text-white/70">4.8 / 5</span>
                 </div>
-                <div className="flex items-center gap-2 pt-1">
-                  <Phone size={14} className="text-[#E8600A]" />
-                  <a
-                    href="tel:+31612079808"
-                    className="text-sm text-white/70 hover:text-white transition-colors"
-                  >
-                    +31 6 1207 9808
-                  </a>
-                </div>
+                <span className="hidden h-3.5 w-px bg-white/20 sm:block" />
+                <a href="tel:+31612079808" className="flex items-center gap-1.5 text-xs text-white/50 transition-colors hover:text-white">
+                  <Phone className="h-3 w-3" />
+                  +31 6 12 07 98 08
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <main className="bg-background pb-16 sm:pb-20 lg:pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
+      <TrustStrip />
 
-          {/* Breadcrumbs */}
-          <SharedBreadcrumbs
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Diensten", href: "/diensten/" },
-              { label: "Gevelisolatie", href: "/gevelisolatie/" },
-              { label: "Materialen" },
-            ]}
-            className="mb-6"
-          />
+      <div className="bg-background pb-16 sm:pb-20 lg:pb-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
 
           {/* TOC */}
           <nav aria-label="Inhoudsopgave" className="relative mb-16">
@@ -323,7 +339,7 @@ export default function MaterialenPage() {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className="group flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 transition-all hover:border-primary hover:bg-primary/5"
+                  className="group flex items-center gap-2 rounded-full border border-border/60 bg-card/80 px-3.5 py-1.5 transition-all hover:border-primary hover:bg-primary/5"
                 >
                   <span className="text-[9px] font-bold tabular-nums text-primary/40 transition-colors group-hover:text-primary">
                     {String(i + 1).padStart(2, "0")}
@@ -382,7 +398,7 @@ export default function MaterialenPage() {
                 ].map(({ icon: Icon, vraag, antwoord }) => (
                   <div
                     key={vraag}
-                    className="rounded-xl border border-border bg-card p-5 flex flex-col gap-3"
+                    className="rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm flex flex-col gap-3"
                   >
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
                       <Icon className="h-4 w-4 text-primary" />
@@ -460,7 +476,7 @@ export default function MaterialenPage() {
               </div>
 
               {/* Active card */}
-              <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-card">
+              <div className="mt-4 overflow-hidden rounded-2xl border border-border/60 bg-card/80">
                 <div className="grid grid-rows-[220px_1fr] lg:grid-rows-none lg:grid-cols-[420px_1fr]">
                   {/* Photo */}
                   <div className="relative overflow-hidden">
@@ -471,7 +487,7 @@ export default function MaterialenPage() {
                       className="object-cover transition-all duration-500"
                       sizes="(max-width: 1024px) 100vw, 420px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:bg-gradient-to-r" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent lg:bg-linear-to-r" />
                     <div className="absolute bottom-4 left-4 flex items-center gap-2 lg:hidden">
                       <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
                         {current.materiaal}
@@ -637,7 +653,7 @@ export default function MaterialenPage() {
                       "Steenstrips zijn zwaarder dan stuc of sierpleister. Niet alle materiaalcombinaties zijn gecertificeerd voor steenstrips-ETICS. EPS (hoge dichtheid) en minerale wol worden het meest toegepast; PIR is minder gebruikelijk als drager voor steenstrips.",
                   },
                 ].map(({ title, icon: Icon, tekst }) => (
-                  <div key={title} className="rounded-xl border border-border bg-card p-6 flex flex-col gap-4">
+                  <div key={title} className="rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm flex flex-col gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
@@ -793,7 +809,7 @@ export default function MaterialenPage() {
                     highlight: false,
                   },
                 ].map((item) => (
-                  <div key={item.mat} className="rounded-xl border border-border bg-card p-6">
+                  <div key={item.mat} className="rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm">
                     <p className="mb-4 text-base font-bold text-foreground">{item.mat}</p>
                     <div className="space-y-3">
                       {[
@@ -860,50 +876,32 @@ export default function MaterialenPage() {
                   </div>
                 </div>
 
-                {/* Right: accordion */}
-                <div className="lg:col-span-7">
-                  <div className="space-y-3">
-                    {faqItems.map((item, idx) => {
-                      const isOpen = openFaq === idx
-                      return (
-                        <div
-                          key={idx}
-                          className={`overflow-hidden rounded-xl border transition-all ${
-                            isOpen ? "border-primary/40 bg-card shadow-md" : "border-border bg-card shadow-sm"
-                          }`}
-                        >
-                          <button
-                            onClick={() => setOpenFaq(isOpen ? null : idx)}
-                            className="flex w-full items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20"
-                            aria-expanded={isOpen}
-                          >
-                            <div className="flex items-start gap-4">
-                              <span className={`mt-0.5 text-lg font-bold tabular-nums transition-colors ${isOpen ? "text-primary" : "text-border"}`}>
-                                {String(idx + 1).padStart(2, "0")}
-                              </span>
-                              <span className="text-base font-semibold text-foreground sm:text-lg">
-                                {item.vraag}
-                              </span>
-                            </div>
-                            <ChevronDown
-                              className={`mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                            />
-                          </button>
-                          <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
-                            <div className="overflow-hidden">
-                              <div className="border-t border-border/50 px-6 pb-6 pt-4">
-                                <div className="pl-12">
-                                  <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                    {item.antwoord}
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                {/* Right: FAQ items */}
+                <div className="lg:col-span-7 space-y-3">
+                  {faqItems.map((item, idx) => (
+                    <details
+                      key={idx}
+                      className="group overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm transition-all open:border-primary/40 open:shadow-md"
+                      {...(idx === 0 ? { open: true } : {})}
+                    >
+                      <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
+                        <div className="flex items-start gap-4">
+                          <span className="mt-0.5 text-lg font-bold tabular-nums text-border transition-colors group-open:text-primary">
+                            {String(idx + 1).padStart(2, "0")}
+                          </span>
+                          <span className="text-base font-semibold text-foreground sm:text-lg">
+                            {item.vraag}
+                          </span>
                         </div>
-                      )
-                    })}
-                  </div>
+                        <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" />
+                      </summary>
+                      <div className="border-t border-border/50 px-6 pb-6 pt-4">
+                        <p className="pl-12 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                          {item.antwoord}
+                        </p>
+                      </div>
+                    </details>
+                  ))}
                 </div>
               </div>
             </section>
@@ -922,71 +920,70 @@ export default function MaterialenPage() {
                     label: "Gevelisolatie — overzicht",
                     description: "Alles over ETICS, werkwijze, voordelen en meer",
                     href: "/gevelisolatie/",
-                    highlight: false,
                   },
                   {
                     label: "Kosten gevelisolatie",
                     description: "Richtprijzen per m², kostenfactoren en prijsopbouw",
                     href: "/gevelisolatie/kosten/",
-                    highlight: false,
                   },
                   {
                     label: "Afwerkingen",
                     description: "Stuc, sierpleister, crepi of steenstrips — keuze en vergelijking",
-                    href: "/gevelisolatie/afwerkingen",
-                    highlight: false,
+                    href: "/gevelisolatie/afwerkingen/",
                   },
                   {
                     label: "RC-waarde & dikte",
                     description: "Benodigde RC-waarde berekenen en isolatiedikte kiezen",
-                    href: "/gevelisolatie/rc-waarde-dikte",
-                    highlight: false,
+                    href: "/gevelisolatie/rc-waarde-dikte/",
                   },
                   {
                     label: "Subsidie & vergunning",
                     description: "Vergunningplicht en subsidiemogelijkheden voor isolatie",
-                    href: "/gevelisolatie/subsidie-vergunning",
-                    highlight: false,
-                  },
-                  {
-                    label: "Plan gratis inspectie",
-                    description: "Vraag een gratis opname en offerte aan op locatie",
-                    href: "/contact/",
-                    highlight: true,
+                    href: "/gevelisolatie/subsidie-vergunning/",
                   },
                 ].map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`group flex items-start gap-4 rounded-xl border p-5 transition-all hover:-translate-y-0.5 hover:shadow-md ${
-                      link.highlight
-                        ? "border-primary bg-primary text-primary-foreground hover:bg-primary/90"
-                        : "border-border bg-card hover:border-primary/40"
-                    }`}
+                    className="group flex items-start gap-4 rounded-xl border border-border/60 bg-card/80 p-5 transition-all hover:-translate-y-0.5 hover:border-primary/25 hover:shadow-md"
                   >
                     <div className="flex-1">
-                      <p className={`text-sm font-bold ${link.highlight ? "text-white" : "text-foreground"}`}>
-                        {link.label}
-                      </p>
-                      <p className={`mt-0.5 text-xs leading-snug ${link.highlight ? "text-white/75" : "text-muted-foreground"}`}>
-                        {link.description}
-                      </p>
+                      <p className="text-sm font-bold text-foreground">{link.label}</p>
+                      <p className="mt-0.5 text-xs leading-snug text-muted-foreground">{link.description}</p>
                     </div>
-                    <ArrowRight
-                      className={`mt-0.5 h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5 ${
-                        link.highlight ? "text-white/70" : "text-muted-foreground/40 group-hover:text-primary"
-                      }`}
-                    />
+                    <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
                   </Link>
+                ))}
+              </div>
+            </nav>
+
+            {/* ── Internal links ── */}
+            <nav aria-label="Overige pagina's" className="mt-8">
+              <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                <span className="font-semibold text-foreground">Overige pagina&apos;s:</span>
+                {[
+                  { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
+                  { label: "Sierpleister", href: "/sierpleister/" },
+                  { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+                  { label: "Muren stucen", href: "/muren-stucen/" },
+                  { label: "Onze werken", href: "/onze-werken/" },
+                  { label: "Diensten", href: "/diensten/" },
+                  { label: "Contact", href: "/contact/" },
+                ].map((link, i) => (
+                  <span key={link.href} className="flex items-center gap-2">
+                    {i > 0 && <span aria-hidden="true" className="text-border">•</span>}
+                    <Link href={link.href} className="hover:text-primary hover:underline underline-offset-4 transition-colors">{link.label}</Link>
+                  </span>
                 ))}
               </div>
             </nav>
 
           </div>
         </div>
-      </main>
+      </div>
 
       <StickyCTABar />
+      <QuoteModal dienst="gevelisolatie" />
     </>
   )
 }

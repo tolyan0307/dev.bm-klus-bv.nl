@@ -49,7 +49,7 @@ export default function PrivacybeleidPage() {
         </div>
       </section>
 
-      <main className="bg-background pb-20">
+      <div className="bg-background pb-20">
         <div className="container-default pt-14">
 
           {/* No divider here — hero already has visual separation */}
@@ -371,8 +371,26 @@ export default function PrivacybeleidPage() {
             </p>
           </div>
 
+          {/* Mini navigation */}
+          <nav aria-label="Navigatie" className="mt-8">
+            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <span className="font-semibold text-foreground">Navigatie:</span>
+              {[
+                { label: "Home", href: "/" },
+                { label: "Diensten", href: "/diensten/" },
+                { label: "Over ons", href: "/over-ons/" },
+                { label: "Contact", href: "/contact/" },
+              ].map((link, i) => (
+                <span key={link.href} className="flex items-center gap-2">
+                  {i > 0 && <span aria-hidden="true" className="text-border">•</span>}
+                  <Link href={link.href} className="hover:text-primary hover:underline underline-offset-4 transition-colors">{link.label}</Link>
+                </span>
+              ))}
+            </div>
+          </nav>
+
         </div>
-      </main>
+      </div>
     </>
   )
 }

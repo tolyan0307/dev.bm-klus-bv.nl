@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Layers, Paintbrush2, Palette, Images, LayoutGrid, MapPin } from "lucide-react"
+import { ArrowRight, Layers, Paintbrush2, Palette, Images, LayoutGrid, MapPin, Brush } from "lucide-react"
 
 const links = [
   {
@@ -25,6 +25,12 @@ const links = [
     description: "Verflaag als bescherming en opfrisbeurt voor de gevel",
     href: "/gevel-schilderen/",
     icon: Paintbrush2,
+  },
+  {
+    label: "Muren stucen",
+    description: "Binnenwerk en buitenmuren professioneel gestuct",
+    href: "/muren-stucen/",
+    icon: Brush,
   },
   {
     label: "Onze projecten",

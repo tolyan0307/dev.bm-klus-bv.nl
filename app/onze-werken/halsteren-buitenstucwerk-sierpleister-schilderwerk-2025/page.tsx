@@ -9,7 +9,7 @@ import { beforeImages, afterImages } from "@/lib/content/projects/halsteren-buit
 export const metadata = buildPageMetadata(
   "/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
   {
-    title: "Halsteren buitenstucwerk & sierpleister – 2025 | BM Klus BV",
+    title: "Halsteren buitenstucwerk & sierpleister – 2025",
     description:
       "Halsteren (2025): herstel buitenstucwerk, sierpleister 1,5 mm, zinken afdekking en schilderwerk. Bekijk voor/na en details.",
   },
@@ -125,16 +125,18 @@ const resultaten = [
 ]
 
 const relatedLinks = [
-  { label: "Buiten stucwerk", href: "/buiten-stucwerk" },
-  { label: "Sierpleister", href: "/sierpleister" },
+  { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
+  { label: "Sierpleister", href: "/sierpleister/" },
   { label: "Gevel schilderen", href: "/gevel-schilderen/" },
+  { label: "Muren stucen", href: "/muren-stucen/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
+  { label: "Diensten", href: "/diensten/" },
 ]
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function HalsterenProjectPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
 
       {/* ── A · HERO ─────────────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden min-h-[80vh] lg:min-h-[65vh]">
@@ -514,7 +516,7 @@ export default function HalsterenProjectPage() {
             {relatedLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href + "/"}
+                href={link.href}
                 className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-5 py-4 transition-all hover:border-primary/40 hover:shadow-sm"
               >
                 <span className="text-sm font-semibold text-foreground transition-colors group-hover:text-primary">
@@ -527,6 +529,6 @@ export default function HalsterenProjectPage() {
         </div>
       </aside>
 
-    </main>
+    </div>
   )
 }
