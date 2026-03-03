@@ -1,0 +1,87 @@
+# Brief: /gevelisolatie/rc-waarde-dikte/ — cluster page (Rc-waarde, Rd, lambda, isolatiedikte)
+# Minimal brief for QA-only pass (no rewrite)
+# Created: 2026-03-03
+
+page:
+  slug: "gevelisolatie/rc-waarde-dikte"
+  url: "/gevelisolatie/rc-waarde-dikte/"
+  pageType: "cluster"
+  taskType: "qa-only"
+  currentFile: "app/gevelisolatie/rc-waarde-dikte/page.tsx"
+  layoutFile: "app/gevelisolatie/rc-waarde-dikte/layout.tsx"
+  contentFile: "inline (no separate lib/content file)"
+  note: >
+    "use client" page with interactive Rc slider/calculator — metadata and JSON-LD
+    live in layout.tsx (server component). FAQ data is duplicated between layout.tsx
+    (truncated) and page.tsx (full), same structural issue as /materialen/.
+
+seo:
+  primaryKeyword: "rc-waarde gevelisolatie"
+  secondaryKeywords:
+    - "isolatiedikte gevelisolatie"
+    - "Rc waarde buiten isolatie"
+    - "gevelisolatie dikte berekenen"
+    - "lambda waarde isolatie"
+    - "Rd waarde isolatie"
+  searchIntent: "informational"
+  pageGoal: "Bezoeker begrijpt Rc/Rd/lambda begrippen, ziet indicatieve diktes en vraagt advies/offerte aan bij BM klus BV"
+
+cannibalization:
+  siblingPages:
+    - "/gevelisolatie/"
+    - "/gevelisolatie/kosten/"
+    - "/gevelisolatie/materialen/"
+    - "/gevelisolatie/afwerkingen/"
+    - "/gevelisolatie/subsidie-vergunning/"
+  doNotCoverDeeply:
+    - "ETICS pillar overview (→ /gevelisolatie/)"
+    - "prijsdetails per m² (→ /gevelisolatie/kosten/)"
+    - "materiaalkeuze EPS/PIR/wol (→ /gevelisolatie/materialen/)"
+    - "afwerkingsvergelijking (→ /gevelisolatie/afwerkingen/)"
+    - "subsidiedetails (→ /gevelisolatie/subsidie-vergunning/)"
+  differentiator: "Uitsluitend Rc/Rd/lambda begrippen, dikteberekening (interactieve tool), typische ranges, detailpunten, opname-checklist"
+
+content:
+  pageRoleSummary: "Cluster page die alle Rc/dikte-vragen beantwoordt met uitleg, indicatieve calculator en FAQ"
+  userQuestionsToAnswer:
+    - "Wat is het verschil tussen Rc en Rd?"
+    - "Hoeveel isolatie heb ik nodig voor Rc 3,5 of Rc 5?"
+    - "Wat is het verschil in dikte tussen EPS en PIR?"
+    - "Waarom zijn details (dagkanten, plint) belangrijk?"
+    - "Geldt er een minimale Rc voor subsidie?"
+    - "Kan ik de Rc achteraf nog verhogen?"
+  requiredSections:
+    - "Hero + H1 + trust bullets + CTA"
+    - "Rc, Rd en lambda (begrippen)"
+    - "Typische ranges (diktes en Rc)"
+    - "Dikte per materiaal (interactieve calculator)"
+    - "Waarom details belangrijk zijn"
+    - "Wat we checken bij de opname"
+    - "FAQ"
+    - "Related links + internal links"
+  ctaType: "offerte"
+
+links:
+  requiredOutgoing:
+    - url: "/gevelisolatie/"
+      anchorIntent: "terug naar pillar (overzicht)"
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+    - url: "/gevelisolatie/materialen/"
+      anchorIntent: "materialen vergelijken"
+    - url: "/gevelisolatie/subsidie-vergunning/"
+      anchorIntent: "subsidie en Rc drempelwaarden"
+
+serp:
+  topResultFormats:
+    - "explanation of Rc/Rd/lambda"
+    - "thickness calculation table"
+    - "interactive calculator"
+    - "FAQ"
+  featuredSnippetType: "table"
+  peopleAlsoAsk:
+    - "Welke Rc-waarde is vereist voor subsidie?"
+    - "Hoeveel cm isolatie is Rc 3,5?"
+    - "Wat is het verschil tussen Rc en Rd?"
+    - "Hoe dik moet buitengevelisolatie zijn?"
+  contentGaps: []

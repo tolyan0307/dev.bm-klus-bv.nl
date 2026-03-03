@@ -1,4 +1,4 @@
-# BM Klus BV — Project Status
+# BM klus BV — Project Status
 
 > Last updated: 2026-03-02  
 > Reference chats: c16e5855, 01ed4250

@@ -19,14 +19,14 @@ export const gevelisolatieIntro = {
     { label: "Diensten", href: "/diensten/" },
     { label: "Gevelisolatie", href: "/gevelisolatie/" },
   ],
-  h1: "Buitengevelisolatie (ETICS) voor woningen & bedrijfspanden",
+  h1: "Gevelisolatie (ETICS): advies, mogelijkheden en prijsindicatie",
   paragraphs: [
-    "Buitengevelisolatie (ETICS) — ook wel gevel isoleren buitenzijde — is een beproefde manier om uw buitenmuur te isoleren en tegelijk strak af te werken. Zo verbetert u comfort en verlaagt u warmteverlies via de gevel.",
-    "U kiest de afwerking die bij uw woning past: stuc, sierpleister (spachtelputz), crepi of steenstrips. Na een gratis opname ter plaatse stellen wij een offerte op per m², inclusief RC-waarde, dikte en afwerking.",
+    "Buitengevelisolatie (ETICS) is een beproefde methode om de buitenmuur te isoleren en tegelijk strak af te werken. U verbetert het comfort, beperkt warmteverlies via de gevel en geeft het pand meteen een nieuwe uitstraling.",
+    "Welke afwerking past bij uw woning — stuc, sierpleister, crepi of steenstrips — hangt af van bouwstijl, budget en onderhoudswensen. Wij beoordelen dit op locatie en stellen een concrete prijsindicatie op. Kijk bij onze richtprijzen of bekijk onze uitgevoerde projecten voor een eerlijk beeld.",
   ],
   trustBullets: [
-    "Gratis opname ter plaatse",
-    "Gecertificeerde ETICS-systemen en materialen",
+    "VCA*-gecertificeerd en gecertificeerde ETICS-systemen",
+    "Opname op locatie voor een concrete prijsindicatie",
     "Advies over subsidie & vergunning (waar nodig)",
   ],
   werkgebied:
@@ -110,9 +110,9 @@ export const voordelenContent = {
   h2: "5 voordelen van buitengevelisolatie",
   benefits: [
     {
-      title: "Lagere energiekosten",
+      title: "Lager warmteverlies via de gevel",
       description:
-        "Een goed geïsoleerde buitengevel beperkt warmteverlies via de gevel. In veel gevallen kan dit leiden tot lagere stookkosten, afhankelijk van uw woning en installatie.",
+        "Een goed geïsoleerde buitengevel beperkt warmteverlies via de gevel structureel. Hoeveel dat oplevert aan energiebesparing verschilt per woning, verwarmingssysteem en RC-waarde — wij geven u een eerlijke inschatting op basis van uw situatie.",
     },
     {
       title: "Meer comfort",
@@ -132,7 +132,7 @@ export const voordelenContent = {
     {
       title: "Waardebehoud van uw woning",
       description:
-        "Een geïsoleerde en net afgewerkte gevel kan bijdragen aan het behoud of de verbetering van de woningwaarde. Het exacte effect verschilt per situatie.",
+        "Een geïsoleerde en net afgewerkte gevel draagt bij aan een verzorgde uitstraling en het onderhoudsniveau van de woning. Dit is voor veel eigenaren ook een overweging naast het energiecomfort.",
     },
   ],
   note: "Resultaten zijn afhankelijk van het woningtype, de behaalde RC-waarde en de gekozen afwerking.",
@@ -145,7 +145,7 @@ export const kostenContent = {
   h2: "Kosten van buitengevelisolatie (prijs per m²)",
   paragraphs: [
     "De gevelisolatie kosten worden bepaald door de RC-waarde, de isolatiedikte en de afwerking. De prijs per m² verschilt per situatie; onderstaande richtprijzen geven een eerlijk marktrealistisch beeld.",
-    "Details zoals dagkanten, kozijnaansluitingen, plintprofielen en de bereikbaarheid van de gevel (steigerhoogte) beïnvloeden de eindprijs eveneens. Daarom geven wij een prijs na een opname ter plaatse, zodat u een goed beeld heeft van de investering.",
+    "Details zoals dagkanten, kozijnaansluitingen, plintprofielen en de bereikbaarheid van de gevel (steigerhoogte) beïnvloeden de eindprijs eveneens. Daarom geven wij een prijs na een opname op locatie, zodat u een goed beeld heeft van de investering.",
   ],
   richtprijzen: {
     label: "Richtprijzen (indicatie)",
@@ -193,7 +193,7 @@ export const kostenContent = {
     ],
   },
   callout:
-    "Exacte prijs na gratis opname ter plaatse — wij stellen een heldere offerte op per m² met RC-waarde, dikte en afwerking.",
+    "Prijs is situatie-afhankelijk. Bekijk onze uitgebreide kostenpagina of vraag direct een prijsindicatie op via een opname op locatie.",
 }
 
 // ── 4. Werkwijze ─────────────────────────────────────────────────────────────
@@ -203,7 +203,7 @@ export const werkwijzeContent = {
   h2: "Werkwijze: van opname tot oplevering",
   stappen: [
     {
-      titel: "1. Opname ter plaatse",
+      titel: "1. Opname op locatie",
       tekst:
         "Wij komen bij u langs om de gevel te beoordelen, op te meten en uw wensen te bespreken. De opname is gratis en vrijblijvend.",
     },
@@ -215,7 +215,7 @@ export const werkwijzeContent = {
     {
       titel: "3. Planning",
       tekst:
-        "Na akkoord stemmen wij de planning af in overleg met u.",
+        "Na akkoord stemmen wij de planning in overleg met u af. De doorlooptijd van een gemiddeld project varieert; dit bespreken wij concreet bij de offerte zodat u weet waar u aan toe bent.",
     },
     {
       titel: "4. Voorbereiding",
@@ -241,6 +241,7 @@ export const werkwijzeContent = {
       "Bereikbaar via WhatsApp en e-mail",
       "Heldere offerte met duidelijke scope",
     ],
+    projectsLink: { href: "/onze-werken/", label: "Bekijk uitgevoerde projecten" },
   },
 }
 
@@ -498,7 +499,7 @@ export const subsidieVergunningContent = {
   h2: "Subsidie en vergunning: waar moet u op letten?",
   paragraphs: [
     "Bij buitengevelisolatie kan een omgevingsvergunning nodig zijn, met name wanneer het uiterlijk van de gevel verandert. Dit verschilt per gemeente en per situatie. Wij checken dit vooraf en adviseren u over de te volgen route.",
-    "Daarnaast bestaan er regelingen en subsidies die van toepassing kunnen zijn op gevelisolatie. Wij helpen u om de mogelijkheden in kaart te brengen en ondersteunen bij de benodigde documentatie.",
+    "Voor woningisolatie bestaan er subsidieregelingen, waaronder de ISDE (Investeringssubsidie Duurzame Energie en Energiebesparing). Of u hiervoor in aanmerking komt, hangt af van uw situatie en de geldende voorwaarden. Op onze subsidiepagina leest u meer over de voorwaarden op hoofdlijnen en de praktische stappen.",
   ],
   checklist: [
     "Wat verandert er aan het gevelbeeld?",
@@ -556,7 +557,7 @@ export const faqContent = {
     {
       vraag: "Kan ik subsidie krijgen?",
       antwoord:
-        "Er bestaan diverse regelingen voor woningisolatie. Of u in aanmerking komt, hangt af van het type woning, de behaalde RC-waarde en de geldende subsidieregelingen. Wij helpen u bij het uitzoeken van de mogelijkheden.",
+        "Er bestaan subsidieregelingen voor woningisolatie, waaronder de ISDE (Investeringssubsidie Duurzame Energie en Energiebesparing). Of u in aanmerking komt, hangt af van het type woning, de behaalde RC-waarde en de geldende voorwaarden. Wij helpen u bij het uitzoeken van de mogelijkheden.",
     },
     {
       vraag: "Hoe lang duurt het traject gemiddeld?",

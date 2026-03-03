@@ -20,9 +20,9 @@ export const hero = {
     "Na inspectie van de ondergrond kiezen wij het meest geschikte dampopen systeem: silicaatverf (keimen/KEIM) of siloxaan/acryl.",
   ],
   trustBullets: [
-    "Grondige voorbereiding en nette afwerking",
-    "Systeemkeuze passend bij uw ondergrond",
-    "Heldere offerte na opname",
+    "VCA*-gecertificeerd — professioneel buitenschilderwerk",
+    "Systeemkeuze (silicaat/siloxaan) passend bij uw ondergrond",
+    "Heldere offerte na opname op locatie",
   ],
   geoSentence:
     "Regio Rotterdam en omgeving (±80–100 km), Zuid-Holland en omliggende regio's.",
@@ -38,7 +38,7 @@ export const hero = {
   ],
   ctaLinks: [
     { label: "Offerte aanvragen", href: "/contact/" },
-    { label: "Alle diensten", href: "/diensten/" },
+    { label: "Voorbeelden bekijken", href: "/onze-werken/" },
   ],
 };
 
@@ -75,7 +75,7 @@ export const kosten = {
   h2: "Kosten gevel schilderen (prijs per m²)",
   paragraphs: [
     "De prijs voor gevel schilderen (buitenmuur verven) varieert afhankelijk van de ondergrond, voorbereiding en verfsysteem. Hier vindt u realistische richtprijzen.",
-    "Exacte prijs na opname ter plaatse.",
+    "Exacte prijs na opname op locatie.",
   ],
   table: {
     headers: ["Situatie", "Indicatieve prijs"],
@@ -147,7 +147,7 @@ export const verfsoorten = {
     },
   ],
   caution:
-    "Belangrijk: de keuze van het verfsysteem hangt altijd af van de bestaande verflaag en de compatibiliteit met de ondergrond — mengen van systemen (bijv. silicaat op acryl) kan leiden tot hechting- en dampproblemen.",
+    "Belangrijk: de keuze van het verfsysteem hangt altijd af van de bestaande verflaag en de compatibiliteit met de ondergrond — mengen van systemen (bijv. silicaat op acryl) kan leiden tot hechtings- en dampproblemen.",
 };
 
 export const voorbereiding = {
@@ -254,7 +254,7 @@ export const faq = {
     {
       question: "Wat kost gevel schilderen per m²?",
       answer:
-        "Als richtprijs (indicatie) ligt gevel schilderen rond €25–€40/m² voor basische situaties met lichte reiniging en stabiele ondergrond. Voor standaard voorbereiding (reiniging + primer/voorstrijk) doorgaans €30–€50/m². Intensievere herstelwerkzaamheden (afbladdering, scheuren, steiger/hoogwerker) worden op aanvraag berekend. Factoren die de prijs beïnvloeden: bereikbaarheid, reiniging, herstelwerk aan voegwerk en scheuren, verfsoort, aantal lagen en afplakwerk. Steiger/hoogwerker, intensieve reiniging en herstelwerk zijn niet altijd in het basisinterval begrepen en kunnen de prijs verhogen. Na opname ter plaatse stellen wij een offerte op met duidelijke scope.",
+        "Als richtprijs (indicatie) ligt gevel schilderen rond €25–€40/m² voor basische situaties met lichte reiniging en stabiele ondergrond. Voor standaard voorbereiding (reiniging + primer/voorstrijk) doorgaans €30–€50/m². Intensievere herstelwerkzaamheden (afbladdering, scheuren, steiger/hoogwerker) worden op aanvraag berekend. Factoren die de prijs beïnvloeden: bereikbaarheid, reiniging, herstelwerk aan voegwerk en scheuren, verfsoort, aantal lagen en afplakwerk. Steiger/hoogwerker, intensieve reiniging en herstelwerk zijn niet altijd in het basisinterval begrepen en kunnen de prijs verhogen. Na opname op locatie stellen wij een offerte op met duidelijke scope.",
     },
     {
       question: "Welke verf is geschikt voor mijn gevel?",

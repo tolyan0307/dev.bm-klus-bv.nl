@@ -19,7 +19,6 @@ import {
   MessageCircle,
 } from "lucide-react"
 
-import { buildPageMetadata } from "@/lib/seo/meta"
 import { SITE } from "@/lib/seo/routes"
 import {
   jsonLdScript,
@@ -39,7 +38,6 @@ const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 ───────────────────────────────────────────────────────────────────────────── */
 
 /* ── Metadata ── */
-export const metadata = buildPageMetadata("/gevelisolatie/subsidie-vergunning/")
 const base = SITE.canonicalBase
 
 const WA_URL =
@@ -63,7 +61,7 @@ const tocItems = [
 const stappen = [
   {
     num: "01",
-    titel: "Gratis opname",
+    titel: "Gratis opname op locatie",
     tekst:
       "Wij komen ter plaatse om de gevel op te nemen en te beoordelen of een vergunning nodig is. Tegelijkertijd inventariseren we welke subsidiemogelijkheden van toepassing kunnen zijn.",
   },
@@ -129,7 +127,7 @@ const checklistItems = [
     icon: Calendar,
     label: "Planning en volgorde",
     tekst:
-      "Dien bij ISDE de subsidieaanvraag in vóór de startdatum van de werkzaamheden, of check de actuele aanvraagprocedure bij RVO. Wacht met uitvoering tot u zekerheid heeft over de aanvraag.",
+      "Bij ISDE dient u de aanvraag in ná de uitvoering, binnen de gestelde termijn bij RVO. Check altijd de actuele aanvraagprocedure bij RVO, want deze kan wijzigen.",
   },
   {
     icon: FileText,
@@ -169,7 +167,7 @@ const faqItems = [
   {
     vraag: "Hoe lang duurt een vergunningsprocedure?",
     antwoord:
-      "Een standaard omgevingsvergunning (reguliere procedure) kent wettelijk een beslistermijn van 8 weken, met eventueel 6 weken verlenging. Wij adviseren om dit ruim voor de gewenste startdatum aan te vragen.",
+      "Een standaard omgevingsvergunning (reguliere procedure) kent doorgaans een beslistermijn van 8 weken, met mogelijkheid tot verlenging. Check altijd de actuele procedure bij uw gemeente. Wij adviseren om dit ruim voor de gewenste startdatum aan te vragen.",
   },
   {
     vraag: "Helpen jullie ook bij de subsidieaanvraag zelf?",
@@ -177,7 +175,7 @@ const faqItems = [
       "Wij ondersteunen u bij het verzamelen van de benodigde documenten en informatie. De formele indiening bij RVO doet u zelf of via een energieadviesbureau. Wij leveren altijd de technische specificaties die u nodig heeft.",
   },
   {
-    vraag: "Geeft BM Klus BV garantie dat ik subsidie ontvang?",
+    vraag: "Geeft BM klus BV garantie dat ik subsidie ontvang?",
     antwoord:
       "Nee — het toekennen van subsidie is de verantwoordelijkheid van RVO en de betrokken overheden. Wij geven geen juridische of financiële garanties. Wij helpen u zo goed mogelijk om aan de technische en documentaire voorwaarden te voldoen.",
   },
@@ -210,6 +208,11 @@ const relatedLinks = [
     href: "/gevelisolatie/rc-waarde-dikte/",
     description: "Welke isolatiewaarde heeft u nodig?",
   },
+  {
+    label: "Onze werken",
+    href: "/onze-werken/",
+    description: "Uitgevoerde gevelisolatie- en afwerkingsprojecten in de regio.",
+  },
 ]
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -229,8 +232,6 @@ export default function SubsidieVergunningPage() {
     description:
       "ISDE-subsidie en vergunningen bij buitengevelisolatie: voorwaarden, stappenplan en checklist.",
     url: `${base}/gevelisolatie/subsidie-vergunning/`,
-    lowPrice: "110",
-    highPrice: "280",
   })
   const faqSchema = {
     "@context": "https://schema.org",
@@ -300,7 +301,7 @@ export default function SubsidieVergunningPage() {
               </div>
 
               <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
-                {["Gratis vergunningscheck", "Subsidie-advies inbegrepen", "Documentatie geregeld"].map((text) => (
+                {["Gratis vergunningscheck", "Advies over subsidie", "Hulp bij documentatie"].map((text) => (
                   <li key={text} className="flex items-center gap-2 text-sm text-white/70">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
                     <span>{text}</span>
@@ -587,7 +588,7 @@ export default function SubsidieVergunningPage() {
                 </div>
 
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  BM Klus BV ondersteunt u bij elke stap waar wij een bijdrage kunnen leveren.
+                  BM klus BV ondersteunt u bij elke stap waar wij een bijdrage kunnen leveren.
                   Zo hoeft u niet zelf alles uit te zoeken.
                 </p>
 
@@ -619,7 +620,7 @@ export default function SubsidieVergunningPage() {
             <div className="mt-5 rounded-lg border border-amber-200 bg-amber-50 px-5 py-4">
               <p className="text-xs leading-relaxed text-amber-800">
                 <strong>Disclaimer:</strong> Subsidiebedragen en exacte voorwaarden wijzigen
-                regelmatig. BM Klus BV geeft geen subsidie- of juridische garanties. Controleer
+                regelmatig. BM klus BV geeft geen subsidie- of juridische garanties. Controleer
                 altijd de actuele regelgeving via{" "}
                 <strong>rvo.nl</strong> en uw gemeente.
               </p>
@@ -739,7 +740,7 @@ export default function SubsidieVergunningPage() {
                 href="/contact/"
                 className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Plan gratis inspectie
+                Plan gratis opname
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

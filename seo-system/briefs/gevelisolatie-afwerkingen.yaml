@@ -1,0 +1,101 @@
+# Brief: /gevelisolatie/afwerkingen/ — cluster page (afwerkingsopties na ETICS)
+# Minimal brief for QA-only pass (no rewrite)
+# Created: 2026-03-03
+
+page:
+  slug: "gevelisolatie/afwerkingen"
+  url: "/gevelisolatie/afwerkingen/"
+  pageType: "cluster"
+  taskType: "qa-only"
+  currentFile: "app/gevelisolatie/afwerkingen/page.tsx"
+  layoutFile: "none (no separate layout.tsx — metadata + JSON-LD live in page.tsx itself)"
+  contentFile: "inline (no separate lib/content file)"
+  note: >
+    Server component (no "use client"). Metadata and JSON-LD are defined directly
+    in page.tsx (no layout.tsx). FAQPage JSON-LD is built inline from faqItems.
+    No separate layout.tsx needed for this page.
+
+seo:
+  primaryKeyword: "afwerking gevelisolatie"
+  secondaryKeywords:
+    - "sierpleister gevelisolatie"
+    - "steenstrips gevelisolatie"
+    - "crepi gevelisolatie"
+    - "stucwerk na gevelisolatie"
+    - "ETICS afwerkingen vergelijken"
+  searchIntent: "informational / commercial-investigation"
+  pageGoal: >
+    Bezoeker begrijpt de vier afwerkingsopties (stuc, sierpleister, crepi, steenstrips),
+    vergelijkt ze op uitstraling/onderhoud/prijs en vraagt vervolgens een offerte aan bij BM klus BV.
+
+cannibalization:
+  siblingPages:
+    - "/gevelisolatie/"
+    - "/gevelisolatie/kosten/"
+    - "/gevelisolatie/materialen/"
+    - "/gevelisolatie/rc-waarde-dikte/"
+    - "/gevelisolatie/subsidie-vergunning/"
+    - "/buiten-stucwerk/"
+    - "/sierpleister/"
+  doNotCoverDeeply:
+    - "ETICS pillar overview (→ /gevelisolatie/)"
+    - "prijsdetails per m² (→ /gevelisolatie/kosten/)"
+    - "isolatiemateriaalkeuze EPS/PIR/wol (→ /gevelisolatie/materialen/)"
+    - "exterior stucco without insulation (→ /buiten-stucwerk/)"
+    - "decoratieve sierpleister als zelfstandige dienst (→ /sierpleister/)"
+  differentiator: >
+    Uitsluitend afwerkingsopties als onderdeel van het ETICS-systeem:
+    vergelijking stuc/sierpleister/crepi/steenstrips, onderhoud, levensduur,
+    prijsinvloed van de afwerkingskeuze.
+  highRiskOverlap:
+    - "/buiten-stucwerk/ — exterior stucco as standalone service"
+    - "/sierpleister/ — decorative plaster as standalone service"
+
+content:
+  pageRoleSummary: >
+    Cluster page die alle afwerkingsvragen bij ETICS beantwoordt:
+    vergelijkingstabel, voor/nadelen, onderhoudsgids, FAQ, prijsinvloed.
+  userQuestionsToAnswer:
+    - "Wat zijn de vier afwerkingsopties na gevelisolatie?"
+    - "Wat is het verschil tussen crepi en sierpleister?"
+    - "Kan ik steenstrips op mijn gevelisolatie plaatsen?"
+    - "Hoeveel onderhoud vraagt elk type afwerking?"
+    - "Welke afwerking past bij een moderne / klassieke woning?"
+    - "Wat kost de afwerking extra bovenop de isolatie?"
+  requiredSections:
+    - "Hero + H1 + trust bullets + CTA"
+    - "Overzicht vier afwerkingen (kaarten + vergelijkingstabel)"
+    - "Stucwerk vs sierpleister/crepi (verschil, toepassingen)"
+    - "Steenstrips (extra vereisten, gewicht, verankering)"
+    - "Onderhoud & levensduur per afwerkingstype"
+    - "Prijsinvloed afwerkingskeuze (zonder fabricated m²-prijzen)"
+    - "FAQ"
+    - "Related links + internal links"
+  ctaType: "offerte"
+
+links:
+  requiredOutgoing:
+    - url: "/gevelisolatie/"
+      anchorIntent: "terug naar pillar (ETICS overzicht)"
+    - url: "/gevelisolatie/kosten/"
+      anchorIntent: "kostenoverzicht incl. afwerking"
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+    - url: "/sierpleister/"
+      anchorIntent: "sierpleister als zelfstandige dienst"
+    - url: "/buiten-stucwerk/"
+      anchorIntent: "buiten stucwerk zonder isolatie"
+
+serp:
+  topResultFormats:
+    - "comparison of finish options (table)"
+    - "pros/cons per finish type"
+    - "maintenance guide"
+    - "FAQ"
+  featuredSnippetType: "table"
+  peopleAlsoAsk:
+    - "Welke afwerking is het meest duurzaam voor gevelisolatie?"
+    - "Wat is het verschil tussen crepi en sierpleister?"
+    - "Hoe lang gaat stucwerk op gevelisolatie mee?"
+    - "Kunnen steenstrips op ETICS worden toegepast?"
+  contentGaps: []

@@ -73,7 +73,7 @@ function PageJsonLd() {
 
   const service = serviceSchema({
     name: "Buiten stucwerk (gevel stucen)",
-    description: "Buitenmuur stucen in regio Rotterdam. Cementpleister, betonstuc, spachtelputz, crepi. Prijs per m² na gratis opname.",
+    description: "Buitenmuur stucen in regio Rotterdam. Cementpleister, betonstuc, spachtelputz, crepi. Prijs per m² na opname op locatie.",
     url: `${base}/buiten-stucwerk/`,
     lowPrice: "35",
     highPrice: "110",
@@ -200,7 +200,7 @@ export default function BuitenStucwerkPage() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col gap-3 pt-1 sm:flex-row">
+              <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
                 <a
                   href="#offerte"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EA6C20] px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a]"
@@ -219,6 +219,13 @@ export default function BuitenStucwerkPage() {
                   </span>
                   WhatsApp
                 </a>
+                <Link
+                  href="/onze-werken/"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/60 transition-colors hover:text-white/90"
+                >
+                  Voorbeelden bekijken
+                  <ArrowRight size={13} />
+                </Link>
               </div>
 
               {/* Trust proof */}
@@ -314,7 +321,7 @@ export default function BuitenStucwerkPage() {
                 { icon: Paintbrush2, ...voordelen.items[2] },
                 { icon: Wrench, ...voordelen.items[3] },
                 { icon: Palette, ...voordelen.items[4] },
-              ].map(({ icon: Icon, title, body }) => (
+              ].map(({ icon: Icon, title, body, link }) => (
                 <div key={title} className="group relative flex gap-4 rounded-xl border border-border bg-card px-5 py-5 transition-colors hover:border-primary/40 hover:bg-primary/3">
                   <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-primary/20 group-hover:bg-primary/50 transition-colors" />
                   <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-primary/10">
@@ -323,6 +330,11 @@ export default function BuitenStucwerkPage() {
                   <div className="flex flex-col gap-1">
                     <p className="text-sm font-semibold leading-snug text-foreground">{title}</p>
                     <p className="text-xs leading-relaxed text-muted-foreground">{body}</p>
+                    {link && (
+                      <Link href={link.href} className="mt-0.5 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline underline-offset-2">
+                        {link.label} <ArrowRight size={11} />
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}
@@ -337,7 +349,7 @@ export default function BuitenStucwerkPage() {
         </section>
 
         {/* ── WAAROM BM KLUS ── */}
-        <WaaromBmKlusSection subtitle="BM Klus BV verzorgt professioneel buiten stucwerk, sierpleister en gevelafwerking voor woningen in de regio Rotterdam en omgeving." />
+        <WaaromBmKlusSection subtitle="Strakke detaillering, de juiste systemen per ondergrond en eerlijke prijzen — voor buitenmuur stucen in regio Rotterdam en omgeving." />
 
         {/* ── KOSTEN ── */}
         <section id={kosten.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">

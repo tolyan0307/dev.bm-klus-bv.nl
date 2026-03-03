@@ -12,7 +12,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-home.webp"
-          alt="Professionele gevelisolatie door BM Klus BV in Rotterdam"
+          alt="Professionele gevelisolatie door BM klus BV in Rotterdam"
           fill
           className="object-cover object-center"
           priority

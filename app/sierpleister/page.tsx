@@ -83,7 +83,7 @@ function PageJsonLd() {
   const service = serviceSchema({
     name: "Gevel sierpleister (spachtelputz / crepi)",
     description:
-      "Gevel sierpleister aanbrengen in regio Rotterdam. Spachtelputz, crepi, korrel 1,5–3 mm. Prijs per m² na gratis opname.",
+      "Gevel sierpleister aanbrengen in regio Rotterdam. Spachtelputz, crepi, korrel 1,5–3 mm. Prijs per m² na opname op locatie.",
     url: `${base}/sierpleister/`,
     lowPrice: "50",
     highPrice: "105",
@@ -252,7 +252,7 @@ export default function SierpleisterPage() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col gap-3 pt-1 sm:flex-row">
+              <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
                 <a
                   href="#offerte"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EA6C20] px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a]"
@@ -275,6 +275,13 @@ export default function SierpleisterPage() {
                   </span>
                   WhatsApp
                 </a>
+                <Link
+                  href="/onze-werken/"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/60 transition-colors hover:text-white/90"
+                >
+                  Voorbeelden bekijken
+                  <ArrowRight size={13} />
+                </Link>
               </div>
 
               {/* Trust proof */}
@@ -533,30 +540,18 @@ export default function SierpleisterPage() {
                   <p className="text-xs leading-relaxed text-muted-foreground">
                     {voordelen.items[2].body}
                   </p>
-                  <div className="mt-5 space-y-2.5">
+                  <ul className="mt-5 space-y-2.5">
                     {[
-                      { label: "Regenwering", pct: 92 },
-                      { label: "Vorstbestendig", pct: 85 },
-                      { label: "Winddruk", pct: 88 },
-                    ].map(({ label, pct }) => (
-                      <div key={label}>
-                        <div className="mb-1 flex items-center justify-between">
-                          <span className="text-[11px] text-muted-foreground">
-                            {label}
-                          </span>
-                          <span className="text-[11px] font-semibold text-foreground">
-                            {pct}%
-                          </span>
-                        </div>
-                        <div className="h-1.5 w-full overflow-hidden rounded-full bg-border">
-                          <div
-                            className="h-full rounded-full bg-primary"
-                            style={{ width: `${pct}%` }}
-                          />
-                        </div>
-                      </div>
+                      "Bestand tegen slagregen en vorst bij correcte opbouw",
+                      "Dampopen systeem — geen vochtopsluiting",
+                      "Geschikt voor gevels op noord- en zuidzijde",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" strokeWidth={3} />
+                        <span className="text-[11px] leading-snug text-muted-foreground">{item}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
 
@@ -720,7 +715,7 @@ export default function SierpleisterPage() {
         </section>
 
         {/* ── WAAROM BM KLUS ── */}
-        <WaaromBmKlusSection subtitle="BM Klus BV verzorgt sierpleister en decoratieve gevelafwerkingen voor woningen en appartementen in de regio Rotterdam en omgeving." />
+        <WaaromBmKlusSection subtitle="Correcte voorbereiding, strakke detaillering en de juiste korrelkeuze — voor sierpleister-gevelafwerking in regio Rotterdam en omgeving." />
 
         {/* ── WERKWIJZE ── */}
         <section
@@ -850,7 +845,7 @@ export default function SierpleisterPage() {
                     {[
                       "Reiniging: lage druk (geen agressieve hogedruk)",
                       "Jaarlijkse visuele inspectie",
-                      "Impregneren meestal elke 6–10 jaar (afhankelijk van product en ligging)",
+                      "Periodiek impregneren (op basis van product en ligging)",
                     ].map((tip) => (
                       <li key={tip} className="flex items-start gap-2">
                         <Check

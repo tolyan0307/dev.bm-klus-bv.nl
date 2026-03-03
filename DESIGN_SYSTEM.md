@@ -1,4 +1,4 @@
-# BM Klus BV — Design System
+# BM klus BV — Design System
 
 > Referentiedocument voor alle pagina's en branches.  
 > Volg deze patronen zodat elke pagina consistent is met de rest van de site.

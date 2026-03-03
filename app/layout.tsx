@@ -10,8 +10,8 @@ const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    default: "BM Klus BV — Gevelspecialist regio Rotterdam",
-    template: "%s | BM Klus BV",
+    default: "BM klus BV — Gevelspecialist regio Rotterdam",
+    template: "%s | BM klus BV",
   },
   description:
     "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis inspectie en offerte.",

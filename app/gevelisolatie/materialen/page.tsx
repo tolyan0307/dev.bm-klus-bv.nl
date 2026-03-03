@@ -51,7 +51,7 @@ interface MateriaalRij {
 
 interface FaqItem {
   vraag: string
-  antwoord: string
+  antwoord: React.ReactNode
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -71,7 +71,7 @@ const materialen: MateriaalRij[] = [
     aandachtspunt: "Beperkte dampopenheid; controleer vochthuishouding bij vochtige gevels",
     imageSrc: "/images/materiaal-eps.webp",
     beschrijving:
-      "EPS (geëxpandeerd polystyreen) is het meest toegepaste isolatiemateriaal voor ETICS in Nederland. De gesloten cellenstructuur zorgt voor goede isolatiewaarden, een lage wateropname en een stevige hechting voor de wapeningslaag. EPS is licht van gewicht, wat de verwerking vergemakkelijkt en de belasting op de bevestiging beperkt.",
+      "EPS (geëxpandeerd polystyreen) is een van de meest toegepaste isolatiematerialen voor ETICS. De gesloten cellenstructuur zorgt voor goede isolatiewaarden, een lage wateropname en een stevige hechting voor de wapeningslaag. EPS is licht van gewicht, wat de verwerking vergemakkelijkt en de belasting op de bevestiging beperkt.",
   },
   {
     materiaal: "PIR",
@@ -153,8 +153,14 @@ const faqItems: FaqItem[] = [
   },
   {
     vraag: "Welke dikte heb ik nodig voor RC 3,5 of RC 5?",
-    antwoord:
-      "De benodigde dikte verschilt per materiaal. Als indicatie: voor RC 3,5 m²K/W heeft u met EPS (λ≈0,036) circa 12–13 cm nodig, met PIR (λ≈0,025) circa 9 cm en met minerale wol (λ≈0,038) circa 13–14 cm. Voor RC 5 komen die diktes op circa 18, 12 en 19 cm respectievelijk. Exacte waarden volgen na berekening op basis van uw specifieke productkeuze.",
+    antwoord: (
+      <>
+        De benodigde dikte verschilt per materiaal. Als indicatie: voor RC 3,5 m²K/W heeft u met EPS (λ≈0,036) circa 12–13 cm nodig, met PIR (λ≈0,025) circa 9 cm en met minerale wol (λ≈0,038) circa 13–14 cm. Voor RC 5 komen die diktes op circa 18, 12 en 19 cm respectievelijk. Exacte waarden volgen na berekening op basis van uw specifieke productkeuze.{" "}
+        <Link href="/gevelisolatie/rc-waarde-dikte/" className="font-semibold text-primary hover:underline">
+          Meer over RC-waarde en dikte →
+        </Link>
+      </>
+    ),
   },
   {
     vraag: "Zijn steenstrips geschikt op alle drie de materialen?",
@@ -164,7 +170,7 @@ const faqItems: FaqItem[] = [
   {
     vraag: "Hoe lang gaan EPS, PIR en minerale wol mee?",
     antwoord:
-      "Bij correct aangebrachte ETICS met een goed onderhouden afwerklaag is de technische levensduur van alle drie de materialen minimaal 25–40 jaar. Minerale wol rot niet en is onbrandbaar; EPS en PIR kunnen bij directe UV-blootstelling verouderen, maar zijn in een ETICS-opbouw volledig afgeschermd. De afwerklaag (stuc, sierpleister) bepaalt grotendeels het visuele onderhoud.",
+      "Bij correct aangebrachte ETICS met een goed onderhouden afwerklaag is de technische levensduur van alle drie de materialen bij goed onderhoud meerdere tientallen jaren. De exacte levensduur is afhankelijk van de systeemkeuze, toepassing en onderhoud van de afwerklaag.",
   },
   {
     vraag: "Wat is de invloed van het materiaal op de totale prijs?",
@@ -276,7 +282,7 @@ export default function MaterialenPage() {
               </p>
 
               <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
-                {["Gratis opname ter plaatse", "Advies op maat per gevel", "Gecertificeerde ETICS-systemen"].map((text) => (
+                {["Gratis opname op locatie", "Advies op maat per gevel", "Gecertificeerde ETICS-systemen"].map((text) => (
                   <li key={text} className="flex items-center gap-2 text-sm text-white/70">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
                     <span>{text}</span>
@@ -360,7 +366,7 @@ export default function MaterialenPage() {
                 overline="Keuzehulp"
                 title="Snelle keuzehulp:"
                 titleAccent="welk materiaal past bij u?"
-                subtitle="Beantwoord drie vragen en u weet al in welke richting u moet zoeken. Wij bevestigen de keuze altijd tijdens de opname ter plaatse."
+                subtitle="Beantwoord drie vragen en u weet al in welke richting u moet zoeken. Wij bevestigen de keuze altijd tijdens de opname op locatie."
               />
 
               <div className="grid gap-4 sm:grid-cols-3">
@@ -414,7 +420,7 @@ export default function MaterialenPage() {
 
               <p className="mt-4 text-[11px] text-muted-foreground/60 flex items-center gap-1.5">
                 <Info className="h-3.5 w-3.5 shrink-0" />
-                Twijfelt u nog? Wij beoordelen de optimale keuze altijd tijdens de gratis opname ter plaatse.
+                Twijfelt u nog? Wij beoordelen de optimale keuze altijd tijdens de gratis opname op locatie.
               </p>
             </section>
 
@@ -833,7 +839,7 @@ export default function MaterialenPage() {
               <div className="mt-5 flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-5">
                 <Info className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div>
-                  <p className="text-sm font-semibold text-foreground">Exacte prijs na gratis opname ter plaatse</p>
+                  <p className="text-sm font-semibold text-foreground">Exacte prijs na gratis opname op locatie</p>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                     Bovenstaande is een kwalitatieve indicatie. De totaalprijs wordt bepaald door het te isoleren oppervlak, de detaillering (dagkanten, plint, hoeken), de afwerking en de toegankelijkheid van de gevel. Na de opname ontvangt u een heldere offerte per m² inclusief RC-waarde, dikte en materiaalkeuze.
                   </p>

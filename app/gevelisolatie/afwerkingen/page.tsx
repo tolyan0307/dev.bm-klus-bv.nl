@@ -95,7 +95,7 @@ const finishOptions: FinishOption[] = [
     uitstraling: "Fijne structuur, levendig",
     onderhoud: "Laag – biocide variant mogelijk",
     budget: "€€",
-    opmerking: "Meest toegepast op ETICS in Nederland",
+    opmerking: "Een van de meest toegepaste afwerkingen op ETICS in Nederland",
     pros: [
       "Structuur camoufleert kleine oneffenheden",
       "Beschikbaar met ingebouwde biocide",
@@ -127,12 +127,12 @@ const finishOptions: FinishOption[] = [
     icon: <SquareStack className="h-5 w-5" />,
     name: "Steenstrips (baksteenlook)",
     uitstraling: "Authentiek metselwerk",
-    onderhoud: "Laag – voegen nalopen om 15 j.",
+    onderhoud: "Laag – voegen nalopen na 15–20 j.",
     budget: "€€€",
     opmerking: "Extra verankering nodig in ETICS-systeem",
     pros: [
       "Authentieke baksteenuitstraling",
-      "Zeer duurzaam (>30 jaar)",
+      "Zeer duurzaam (doorgaans meerdere tientallen jaren)",
       "Nauwelijks schilderwerk nodig",
     ],
     cons: [
@@ -144,7 +144,7 @@ const finishOptions: FinishOption[] = [
 
 const comparisonRows = [
   { finish: "Glad stucwerk",             uitstraling: "★★★★☆", onderhoud: "Gemiddeld", budget: "€ – €€",  opmerking: "Schilderwerk vereist" },
-  { finish: "Sierpleister / spachtelputz", uitstraling: "★★★★☆", onderhoud: "Laag",     budget: "€€",     opmerking: "Populairste keuze ETICS" },
+  { finish: "Sierpleister / spachtelputz", uitstraling: "★★★★☆", onderhoud: "Laag",     budget: "€€",     opmerking: "Een van de populairste keuzes ETICS" },
   { finish: "Crepi / gevelpleister",      uitstraling: "★★★☆☆", onderhoud: "Laag",     budget: "€",      opmerking: "Kostenefficiënt" },
   { finish: "Steenstrips (baksteenlook)", uitstraling: "★★★★★", onderhoud: "Zeer laag", budget: "€€€",    opmerking: "Extra verankering nodig" },
 ]
@@ -153,7 +153,7 @@ const onderhoudItems = [
   {
     icon: <Clock className="h-5 w-5" />,
     title: "Levensduur pleister",
-    body: "Kwalitatieve sierpleister of crepi gaat 20–30 jaar mee zonder grote ingrepen. Kleur kan iets vervagen, maar structuur en waterdichtheid blijven intact.",
+    body: "Kwalitatieve sierpleister of crepi gaat doorgaans 20–30 jaar mee zonder grote ingrepen, afhankelijk van kwaliteitsklasse, klimaatbelasting en onderhoud. Kleur kan iets vervagen, maar structuur en waterdichtheid blijven intact.",
   },
   {
     icon: <Droplets className="h-5 w-5" />,
@@ -163,7 +163,7 @@ const onderhoudItems = [
   {
     icon: <CheckCircle2 className="h-5 w-5" />,
     title: "Levensduur steenstrips",
-    body: "Steenstrips zijn keramisch en gaan meer dan 30 jaar mee. Voegen nalopen na 15–20 jaar houdt vochtinfiltratie buiten.",
+    body: "Steenstrips zijn keramisch en gaan doorgaans meerdere tientallen jaren mee. Voegen nalopen na 15–20 jaar houdt vochtinfiltratie buiten.",
   },
   {
     icon: <Paintbrush className="h-5 w-5" />,
@@ -267,8 +267,6 @@ export default function AfwerkingenPage() {
     description:
       "Afwerking na buitengevelisolatie: glad stucwerk, sierpleister, crepi of steenstrips. Vergelijk eigenschappen, onderhoud en prijs.",
     url: `${base}/gevelisolatie/afwerkingen/`,
-    lowPrice: "110",
-    highPrice: "280",
   })
   const faqSchema = {
     "@context": "https://schema.org",
@@ -330,7 +328,7 @@ export default function AfwerkingenPage() {
               </p>
 
               <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
-                {["Gratis opname & advies", "Alle afwerkingen leverbaar", "Gecertificeerde ETICS-systemen"].map((text) => (
+                {["Gratis opname op locatie & advies", "Alle afwerkingen leverbaar", "Gecertificeerde ETICS-systemen"].map((text) => (
                   <li key={text} className="flex items-center gap-2 text-sm text-white/70">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
                     <span>{text}</span>
@@ -500,7 +498,7 @@ export default function AfwerkingenPage() {
                 </p>
                 <p>
                   <strong className="text-foreground">Sierpleister (spachtelputz)</strong> is in
-                  Nederland de meest gebruikte afwerking op ETICS. Handmatig aangebracht met een
+                  Nederland een van de meest gebruikte afwerkingen op ETICS. Handmatig aangebracht met een
                   roestvrij stalen spatel, legt dit product een subtiele korrelstructuur vast die
                   kleine oneffenheden maskeert. Beschikbaar in tientallen kleuren en met
                   optionele biocide-toevoeging die algengroei langdurig remt.

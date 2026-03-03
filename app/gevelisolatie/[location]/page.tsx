@@ -429,8 +429,8 @@ export default async function GevelisolatieLocationPage({
           </section>
         </div>
 
-        {/* ── Waarom BM Klus (own container) ── */}
-        <WaaromBmKlusSection subtitle="BM Klus BV is gespecialiseerd in buitengevelisolatie (ETICS) en gevelafwerking in de regio Rotterdam en omgeving." />
+        {/* ── Waarom BM klus (own container) ── */}
+        <WaaromBmKlusSection subtitle="BM klus BV is gespecialiseerd in buitengevelisolatie (ETICS) en gevelafwerking in de regio Rotterdam en omgeving." />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Kosten calculator ── */}

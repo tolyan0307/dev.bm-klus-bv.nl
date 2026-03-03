@@ -1,5 +1,5 @@
 export const SITE = {
-  siteName: "BM Klus BV",
+  siteName: "BM klus BV",
   canonicalBase: "https://bm-klus-bv.nl",
   locale: "nl_NL",
   lang: "nl-NL",

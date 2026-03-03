@@ -1,0 +1,82 @@
+# Brief: /gevelisolatie/kosten/ — cluster page (ETICS pricing deep-dive)
+# Minimal brief for QA-only pass (no rewrite)
+
+page:
+  slug: "gevelisolatie/kosten"
+  url: "/gevelisolatie/kosten/"
+  pageType: "cluster"
+  taskType: "qa-only"
+  currentFile: "app/gevelisolatie/kosten/page.tsx"
+  contentFile: "inline (no separate lib/content file)"
+
+seo:
+  primaryKeyword: "kosten gevelisolatie"
+  secondaryKeywords:
+    - "gevelisolatie prijs per m2"
+    - "buitengevelisolatie kosten"
+    - "ETICS prijs"
+    - "gevelisolatie richtprijs"
+    - "gevelisolatie kosten berekenen"
+  searchIntent: "informational"
+  pageGoal: "Bezoeker krijgt eerlijk en gedetailleerd richtprijzenoverzicht voor ETICS en kiest voor offerteverzoek bij BM klus BV"
+
+cannibalization:
+  siblingPages:
+    - "/gevelisolatie/"
+    - "/gevelisolatie/afwerkingen/"
+    - "/gevelisolatie/materialen/"
+    - "/gevelisolatie/rc-waarde-dikte/"
+    - "/gevelisolatie/subsidie-vergunning/"
+  doNotCoverDeeply:
+    - "ETICS pillar overview (→ /gevelisolatie/)"
+    - "afwerkingsvergelijking detail (→ /gevelisolatie/afwerkingen/)"
+    - "materiaalspecs (→ /gevelisolatie/materialen/)"
+    - "rc-waarde berekening (→ /gevelisolatie/rc-waarde-dikte/)"
+    - "subsidiedetails (→ /gevelisolatie/subsidie-vergunning/)"
+  differentiator: "Uitsluitend prijsinformatie: richtprijzen per m², kostenfactoren, voorbeeldscenario's, bespaartips"
+
+content:
+  pageRoleSummary: "Cluster page die alle prijsgerelateerde vragen over ETICS beantwoordt met richtprijzen, factoren en scenario's"
+  userQuestionsToAnswer:
+    - "Wat kost gevelisolatie per m²?"
+    - "Waarom zijn steenstrips duurder?"
+    - "Is steiger inbegrepen?"
+    - "Wordt herstelwerk meegenomen?"
+    - "Hoe snel ontvang ik een offerte?"
+    - "Is er subsidie beschikbaar?"
+  requiredSections:
+    - "Hero + H1 + trust bullets + CTA"
+    - "Richtprijzen per m² (tabel/cards)"
+    - "Kostenfactoren"
+    - "Wat zit er in de prijs"
+    - "Voorbeeldscenario's"
+    - "Bespaartips"
+    - "FAQ"
+    - "Related links + internal links"
+  ctaType: "offerte"
+
+links:
+  requiredOutgoing:
+    - url: "/gevelisolatie/"
+      anchorIntent: "terug naar pillar (overzicht)"
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+  suggestedContextual:
+    - url: "/gevelisolatie/afwerkingen/"
+      anchorIntent: "afwerkingen vergelijken"
+    - url: "/gevelisolatie/subsidie-vergunning/"
+      anchorIntent: "subsidie informatie"
+
+serp:
+  topResultFormats:
+    - "price table per m²"
+    - "scenario/example pricing"
+    - "cost factors list"
+    - "FAQ"
+  featuredSnippetType: "table"
+  peopleAlsoAsk:
+    - "Wat kost buitengevelisolatie per m²?"
+    - "Is steiger inbegrepen in de prijs?"
+    - "Hoeveel kost gevelisolatie voor een rijwoning?"
+    - "Zijn er subsidies voor gevelisolatie?"
+  contentGaps: []

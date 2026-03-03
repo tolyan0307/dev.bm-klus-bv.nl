@@ -74,11 +74,11 @@ export function serviceSchema(opts: {
   name: string
   description: string
   url: string
-  lowPrice: string
-  highPrice: string
+  lowPrice?: string
+  highPrice?: string
   unitText?: string
 }): Record<string, unknown> {
-  return {
+  const base: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: opts.name,
@@ -91,13 +91,6 @@ export function serviceSchema(opts: {
       { "@type": "City", name: "Delft" },
       { "@type": "City", name: "Dordrecht" },
     ],
-    offers: {
-      "@type": "AggregateOffer",
-      lowPrice: opts.lowPrice,
-      highPrice: opts.highPrice,
-      priceCurrency: "EUR",
-      unitText: opts.unitText ?? "per m²",
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Gevelisolatie diensten",
@@ -121,6 +114,18 @@ export function serviceSchema(opts: {
       ],
     },
   }
+
+  if (opts.lowPrice !== undefined && opts.highPrice !== undefined) {
+    base.offers = {
+      "@type": "AggregateOffer",
+      lowPrice: opts.lowPrice,
+      highPrice: opts.highPrice,
+      priceCurrency: "EUR",
+      unitText: opts.unitText ?? "per m²",
+    }
+  }
+
+  return base
 }
 
 export function websiteSchema(): Record<string, unknown> {

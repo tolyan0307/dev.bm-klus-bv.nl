@@ -48,7 +48,7 @@ export const PLANNED_ROUTES = [
     path: "/over-ons/",
     title: "Over ons",
     description:
-      "BM Klus BV: specialist in buitengevelisolatie (ETICS) en gevelafwerking (stuc, sierpleister, schilderwerk) in regio Rotterdam en omgeving.",
+      "BM klus BV: specialist in buitengevelisolatie (ETICS) en gevelafwerking (stuc, sierpleister, schilderwerk) in regio Rotterdam en omgeving.",
     changefreq: "yearly",
     priority: 0.4,
   },
@@ -56,7 +56,7 @@ export const PLANNED_ROUTES = [
     path: "/contact/",
     title: "Contact & offerte aanvragen",
     description:
-      "Neem contact op met BM Klus BV voor een offerte of advies. Telefoon/WhatsApp, e-mail, adres in Rotterdam en openingstijden.",
+      "Neem contact op met BM klus BV voor een offerte of advies. Telefoon/WhatsApp, e-mail, adres in Rotterdam en openingstijden.",
     changefreq: "yearly",
     priority: 0.5,
   },
@@ -64,7 +64,7 @@ export const PLANNED_ROUTES = [
     path: "/privacybeleid/",
     title: "Privacybeleid & Cookiebeleid",
     description:
-      "Lees hoe BM Klus BV omgaat met persoonsgegevens en cookies. Informatie over Google Analytics/Ads, cookievoorkeuren, bewaartermijnen en uw rechten.",
+      "Lees hoe BM klus BV omgaat met persoonsgegevens en cookies. Informatie over Google Analytics/Ads, cookievoorkeuren, bewaartermijnen en uw rechten.",
     changefreq: "yearly",
     priority: 0.2,
   },
@@ -74,7 +74,7 @@ export const PLANNED_ROUTES = [
     path: "/gevelisolatie/",
     title: "Gevelisolatie buitenkant (ETICS) – prijs per m²",
     description:
-      "Gevelisolatie aan de buitenkant (ETICS) met afwerking: stuc, sierpleister/crepi of steenstrips. Heldere prijs per m² na gratis opname.",
+      "Gevelisolatie aan de buitenkant (ETICS) met afwerking: stuc, sierpleister/crepi of steenstrips. Heldere prijs per m² na gratis opname op locatie.",
     changefreq: "monthly",
     priority: 0.9,
   },
@@ -125,7 +125,7 @@ export const PLANNED_ROUTES = [
     path: "/gevelisolatie/kosten/",
     title: "Kosten gevelisolatie buiten – prijs per m²",
     description:
-      "Wat kost buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips) en voorbeeldranges. Gratis opname in Regio Rotterdam (±80–100 km).",
+      "Wat kost buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips) en voorbeeldranges. Opname op locatie in regio Rotterdam (±80–100 km).",
     changefreq: "yearly",
     priority: 0.6,
   },
@@ -149,7 +149,7 @@ export const PLANNED_ROUTES = [
     path: "/gevelisolatie/rc-waarde-dikte/",
     title: "Rc-waarde & dikte gevelisolatie (buiten)",
     description:
-      "Welke Rc/Rd-waarde en dikte past bij jouw gevel? Uitleg EPS/PIR/wol, typische ranges en aandacht voor details. Gratis opname.",
+      "Welke Rc/Rd-waarde en dikte past bij jouw gevel? Uitleg EPS/PIR/wol, typische ranges en aandacht voor details. Gratis opname op locatie.",
     changefreq: "yearly",
     priority: 0.6,
   },

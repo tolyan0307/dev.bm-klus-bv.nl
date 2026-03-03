@@ -121,7 +121,7 @@ export default function Footer() {
               <div className="mb-5">
                 <img
                   src="/images/logo-bm-klus.webp"
-                  alt="BM Klus BV"
+                  alt="BM klus BV"
                   width={100}
                   height={24}
                   className="h-6 w-auto brightness-0 invert"
@@ -233,7 +233,7 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
             <p className="text-xs text-background/50">
-              &copy; {new Date().getFullYear()} BM Klus BV &mdash; Alle rechten voorbehouden
+              &copy; {new Date().getFullYear()} BM klus BV &mdash; Alle rechten voorbehouden
             </p>
             <Link
               href="/privacybeleid/"

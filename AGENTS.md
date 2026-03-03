@@ -4,7 +4,7 @@
 
 ### Project overview
 
-Static marketing website for **BM Klus BV** (Dutch construction company). Built with Next.js 16 (App Router, `output: 'export'`), React 19, Tailwind CSS 4, and shadcn/ui. No backend, no database, no environment variables required.
+Static marketing website for **BM klus BV** (Dutch construction company). Built with Next.js 16 (App Router, `output: 'export'`), React 19, Tailwind CSS 4, and shadcn/ui. No backend, no database, no environment variables required.
 
 ### Development commands
 

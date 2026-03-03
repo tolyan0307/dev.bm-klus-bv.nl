@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Welke werkzaamheden voert BM Klus BV uit?",
+    question: "Welke werkzaamheden voert BM klus BV uit?",
     answer:
       "We voeren buitengevelisolatie (ETICS), gevelafwerking (sierpleister, stucwerk, crepi, steenstrips) en gevelrenovatie uit. De meeste projecten combineren meerdere diensten tegelijkertijd.",
     link: false,

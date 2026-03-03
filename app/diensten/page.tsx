@@ -74,7 +74,7 @@ export default function DienstenPage() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Diensten BM Klus BV",
+    name: "Diensten BM klus BV",
     description:
       "Overzicht van geveloplossingen: isolatie, stucwerk, sierpleister, schilderwerk en binnenstucwerk.",
     numberOfItems: 6,
@@ -173,7 +173,7 @@ export default function DienstenPage() {
               </h1>
 
               <p className="max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
-                BM Klus BV verzorgt professionele geveloplossingen in regio
+                BM klus BV verzorgt professionele geveloplossingen in regio
                 Rotterdam en omgeving (±80–100 km), Zuid-Holland en omliggende
                 regio&apos;s.
               </p>
@@ -276,8 +276,8 @@ export default function DienstenPage() {
         {/* ── Process Section ── */}
         <ProcessSection />
 
-        {/* ── Waarom BM Klus ── */}
-        <WaaromBmKlusSection subtitle="BM Klus BV verzorgt gevelisolatie, stucwerk, sierpleister en schilderwerk voor woningen en bedrijfspanden in de regio Rotterdam en omgeving." />
+        {/* ── Waarom BM klus ── */}
+        <WaaromBmKlusSection subtitle="BM klus BV verzorgt gevelisolatie, stucwerk, sierpleister en schilderwerk voor woningen en bedrijfspanden in de regio Rotterdam en omgeving." />
 
         {/* ── Reviews ── */}
         <ReviewsSection />

@@ -58,7 +58,7 @@ function calcDikte(rc: number, mat: string) {
 function rcLabel(rc: number): { label: string; cls: string } {
   if (rc < 2.5) return { label: "Renovatie min.", cls: "bg-muted text-muted-foreground" }
   if (rc < 3.5) return { label: "Basis",          cls: "bg-muted text-muted-foreground" }
-  if (rc < 4.7) return { label: "Subsidie ✓",     cls: "bg-primary/10 text-primary" }
+  if (rc < 4.7) return { label: "Subsidie (check)", cls: "bg-primary/10 text-primary" }
   if (rc < 5.5) return { label: "Nieuwbouw ✓",    cls: "bg-primary/20 text-primary" }
   return              { label: "Premium",          cls: "bg-primary text-primary-foreground" }
 }
@@ -68,7 +68,7 @@ const faqItems = [
   {
     vraag: "Is een Rc-waarde van 3,5 m²K/W voldoende voor mijn woning?",
     antwoord:
-      "Rc 3,5 is de gangbare drempelwaarde voor energiesubsidies (ISDE/SEEH) en levert al een merkbare besparing op stookkosten. Voor oudere woningen met een slechte beginsituatie is Rc 3,5 een uitstekend startpunt. Wilt u het maximale resultaat of voldoen aan nieuwbouwprestaties, dan adviseren wij Rc 4,5 of hoger. Wij bepalen de optimale waarde tijdens de gratis opname.",
+      "Rc 3,5 is de gangbare drempelwaarde voor energiesubsidies (ISDE/SEEH) en levert doorgaans al een merkbare besparing op stookkosten, afhankelijk van uw woning en verwarmingssysteem. Voor oudere woningen met een slechte beginsituatie is Rc 3,5 een uitstekend startpunt. Wilt u het maximale resultaat of voldoen aan nieuwbouwprestaties, dan adviseren wij Rc 4,5 of hoger. Wij bepalen de optimale waarde tijdens de gratis opname op locatie.",
   },
   {
     vraag: "Kan de isolatielaag te dik worden?",
@@ -114,6 +114,7 @@ const relatedLinks = [
   { label: "Materialen",             href: "/gevelisolatie/materialen/",      description: "EPS, PIR en minerale wol vergeleken" },
   { label: "Afwerkingen",            href: "/gevelisolatie/afwerkingen/",     description: "Sierpleister, crepi, steenstrips en meer" },
   { label: "Subsidie & vergunning",  href: "/gevelisolatie/subsidie-vergunning/", description: "ISDE, SEEH en wat u moet regelen" },
+  { label: "Onze werken",            href: "/onze-werken/",                   description: "Uitgevoerde gevelisolatie- en afwerkingsprojecten in de regio." },
 ]
 
 const WA_URL =
@@ -226,7 +227,7 @@ export default function RcWaardeDiktePage() {
               </p>
 
               <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
-                {["Gratis opname ter plaatse", "Rc-berekening per woning", "Subsidieadvies inbegrepen"].map((text) => (
+                {["Gratis opname op locatie", "Rc-berekening per woning", "Subsidieadvies inbegrepen"].map((text) => (
                   <li key={text} className="flex items-center gap-2 text-sm text-white/70">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
                     <span>{text}</span>
@@ -406,7 +407,7 @@ export default function RcWaardeDiktePage() {
               {/* Rc milestones */}
               <div className="mt-6 space-y-3">
                 {[
-                  { rc: "Rc 1,3",   kleur: "bg-muted",       label: "Wettelijk renovatie minimum (Bouwbesluit)" },
+                  { rc: "Rc 1,3",   kleur: "bg-muted",       label: "Indicatief renovatie minimum (check actuele bouwregelgeving)" },
                   { rc: "Rc 2,5",   kleur: "bg-muted",       label: "Basis verbetering — merkbare besparing, geen subsidie" },
                   { rc: "Rc 3,5+",  kleur: "bg-primary/10",  label: "Subsidiedrempel ISDE/SEEH (check actuele voorwaarden)" },
                   { rc: "Rc 4,7+",  kleur: "bg-primary/20",  label: "Nieuwbouwnorm — hoog comfortniveau" },
@@ -586,7 +587,7 @@ export default function RcWaardeDiktePage() {
               <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-5">
                 <p className="text-sm leading-relaxed text-foreground/80">
                   <span className="font-semibold text-primary">Let op:</span>{" "}
-                  Een WDVS-systeem is zo goed als zijn zwakste detail. Wij werken met gecertificeerde ETICS-systemen waarbij alle aansluitingen in het systeemdossier zijn vastgelegd. Zo behoudt u de garantie op het gehele systeem.
+                  Een WDVS-systeem is zo goed als zijn zwakste detail. Wij werken met gecertificeerde ETICS-systemen waarbij alle aansluitingen in het systeemdossier zijn vastgelegd. Zo blijft de systeemcertificering van het gehele ETICS-pakket intact.
                 </p>
               </div>
             </section>
@@ -594,7 +595,7 @@ export default function RcWaardeDiktePage() {
             {/* ══ 5. Opname checklist ══ */}
             <section id="opname-checklist" className="scroll-mt-24">
               <SectionHeader
-                eyebrow="Gratis opname"
+                eyebrow="Gratis opname op locatie"
                 heading="Wat we checken bij"
                 accent="de opname"
                 lead="Bij de gratis opname beoordelen wij uw woning op alle factoren die de juiste Rc-keuze en detaillering bepalen. Dat voorkomt verrassingen achteraf."

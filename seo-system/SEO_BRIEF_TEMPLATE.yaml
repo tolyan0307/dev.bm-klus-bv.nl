@@ -1,0 +1,61 @@
+# SEO_BRIEF_TEMPLATE.yaml
+# Copy per page → fill real values → save to seo-system/briefs/
+# Example: seo-system/briefs/gevelisolatie.yaml
+#
+# This template only contains fields that DIFFERENTIATE pages.
+# Common rules (language, tone, claims restrictions, metadata limits)
+# live in GLOBAL_SEO_CONTENT_RULES.md — do not duplicate here.
+
+# ── Page identity ───────────────────────────────────────────────────────────────
+
+page:
+  slug: ""                         # e.g. "gevel-schilderen"
+  url: ""                          # e.g. "/gevel-schilderen/"
+  pageType: ""                     # money | cluster | location | project | hub
+  taskType: ""                     # improve | rewrite | create | qa-only
+  currentFile: ""                  # e.g. app/gevel-schilderen/page.tsx
+  contentFile: ""                  # e.g. lib/content/gevel-schilderen.ts (if exists)
+
+# ── SEO target ──────────────────────────────────────────────────────────────────
+
+seo:
+  primaryKeyword: ""               # one main keyword this page must rank for
+  secondaryKeywords: []            # 3-8 supporting terms
+  searchIntent: ""                 # commercial | informational | mixed
+  pageGoal: ""                     # one sentence: what success looks like
+
+# ── Anti-cannibalization ────────────────────────────────────────────────────────
+# Reference: see §4 in GLOBAL_SEO_CONTENT_RULES.md for the full overlap map.
+
+cannibalization:
+  siblingPages: []                 # URLs of pages with overlapping topics
+  doNotCoverDeeply: []             # topics reserved for other pages
+  differentiator: ""               # one line: what makes THIS page unique vs siblings
+
+# ── Content guidance ────────────────────────────────────────────────────────────
+
+content:
+  pageRoleSummary: ""              # one sentence: what this page must achieve
+  userQuestionsToAnswer: []        # concrete questions the page must answer
+  requiredSections: []             # ordered list of required H2 sections
+  faqIntents: []                   # FAQ questions/intents (answers generated later)
+  ctaType: "offerte"               # offerte | contact | whatsapp | mixed
+
+# ── Links ───────────────────────────────────────────────────────────────────────
+# Existing internal linking architecture is preserved (see GLOBAL rules §9).
+# Only list content-level link placements needed FOR THIS PAGE.
+
+links:
+  requiredOutgoing:
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+  suggestedContextual: []          # additional links with context: [{url, when, anchorIntent}]
+
+# ── SERP context (fill before starting work) ────────────────────────────────────
+# Check Google NL for the primary keyword. Note what top results show.
+
+serp:
+  topResultFormats: []             # e.g. ["how-to guide", "price comparison table", "FAQ"]
+  featuredSnippetType: ""          # paragraph | list | table | none
+  peopleAlsoAsk: []                # 3-5 PAA questions from SERP
+  contentGaps: []                  # what competitors cover that we don't

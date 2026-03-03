@@ -33,7 +33,7 @@ interface WaaromBmKlusSectionProps {
 }
 
 export default function WaaromBmKlusSection({
-  subtitle = "BM Klus BV voert stucwerk, schilderwerk en gevelisolatie uit in de regio Rotterdam en omgeving.",
+  subtitle = "BM klus BV voert stucwerk, schilderwerk en gevelisolatie uit in de regio Rotterdam en omgeving.",
 }: WaaromBmKlusSectionProps) {
   return (
     <section className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
@@ -42,7 +42,7 @@ export default function WaaromBmKlusSection({
         <div className="mb-4 flex items-center gap-3">
           <div className="h-px w-10 bg-primary" />
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Waarom BM Klus?
+            Waarom BM klus?
           </span>
         </div>
         <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">

@@ -171,7 +171,16 @@ export default function WerkwijzeStepper() {
             </li>
           ))}
         </ul>
-        <div className="mt-5 border-t border-border pt-4">
+        <div className="mt-5 border-t border-border pt-4 flex flex-col gap-3">
+          {werkwijze.verwachten.projectsLink && (
+            <Link
+              href={werkwijze.verwachten.projectsLink}
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline underline-offset-2"
+            >
+              Bekijk afgeronde projecten
+              <ArrowRight size={12} />
+            </Link>
+          )}
           <Link
             href="/contact/"
             className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:brightness-110"

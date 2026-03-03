@@ -1,0 +1,102 @@
+# Brief: /gevel-schilderen/ — money page (gevel schilderen / buitenmuur verven)
+
+page:
+  slug: "gevel-schilderen"
+  url: "/gevel-schilderen/"
+  pageType: "money"
+  taskType: "improve"
+  currentFile: "app/gevel-schilderen/page.tsx"
+  contentFile: "lib/content/gevel-schilderen.ts"
+
+seo:
+  primaryKeyword: "gevel schilderen"
+  secondaryKeywords:
+    - "buitenmuur verven"
+    - "gevel schilderen kosten"
+    - "gevel schilderen prijs per m2"
+    - "silicaatverf gevel"
+    - "keimen gevel"
+    - "gevel schilderen Rotterdam"
+    - "buitenschilderwerk"
+  searchIntent: "commercial"
+  pageGoal: "Bezoeker begrijpt welk verfsysteem bij zijn ondergrond past, ziet BM klus als vakspecialist in gevel schilderen, en vraagt een offerte aan"
+
+cannibalization:
+  siblingPages:
+    - "/buiten-stucwerk/"
+    - "/sierpleister/"
+  doNotCoverDeeply:
+    - "stucwerk op gevel → /buiten-stucwerk/"
+    - "sierpleister/crepi als afwerking → /sierpleister/"
+    - "ETICS isolatiesysteem → /gevelisolatie/"
+    - "afwerkingen na ETICS → /gevelisolatie/afwerkingen/"
+  differentiator: "Verfsystemen (silicaat/siloxaan/acryl) voor bestaande gevels — focus op verfkeuze per ondergrond, voorbereiding, levensduur en onderhoud"
+
+content:
+  pageRoleSummary: "Money page voor gevel schilderen als zelfstandige dienst; commercieel voor woningeigenaren die hun gevel willen verven of laten verven"
+  userQuestionsToAnswer:
+    - "Wat kost gevel schilderen per m²?"
+    - "Welke verf is geschikt voor mijn gevel (baksteen/pleister/beton)?"
+    - "Moet de gevel eerst gereinigd worden?"
+    - "Is primer altijd nodig?"
+    - "Kan ik een afgebladderde buitenmuur verven?"
+    - "Keimen of schilderen — wanneer wat?"
+    - "Heb ik een vergunning nodig?"
+    - "Welke kleuren zijn populair en wat zijn de aandachtspunten?"
+    - "Hoe lang gaat gevelverf mee?"
+  requiredSections:
+    - "Hero + H1 + trust bullets + CTA"
+    - "Wat levert gevel schilderen op? (voordelen)"
+    - "Kosten per m² (3 situaties + prijsfactoren)"
+    - "Offerte aanvragen (checklist)"
+    - "Verfsoorten: silicaat vs. siloxaan + begrippen"
+    - "Voorbereiding (reinigen, herstel, primer, afplakken)"
+    - "Techniek per ondergrond (baksteen, pleister, beton) + weercondities"
+    - "Onderhoud & levensduur (met levensduur per systeem)"
+    - "Waarom BM Klus"
+    - "Werkgebied (Rotterdam + omgeving)"
+    - "Reviews"
+    - "FAQ"
+    - "Gerelateerde pagina's (internal links)"
+  faqIntents:
+    - "Wat kost gevel schilderen per m²?"
+    - "Welke verf is geschikt voor mijn gevel?"
+    - "Moet de gevel eerst gereinigd worden?"
+    - "Is primer/voorstrijk altijd nodig?"
+    - "Kan ik een afgebladderde buitenmuur verven?"
+    - "Kan ik baksteen / pleister / beton schilderen?"
+    - "Keimen of schilderen — wat kiest u wanneer?"
+    - "Heb ik een vergunning nodig?"
+    - "Welke kleuren zijn populair (bijv. groen)?"
+    - "Kan het ook met verfspuit/airless?"
+  ctaType: "mixed"
+
+links:
+  requiredOutgoing:
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+  suggestedContextual:
+    - url: "/buiten-stucwerk/"
+      when: "gevel stucen als voorbereiding voor schilderen"
+      anchorIntent: "gevel stucen voor schilderwerk"
+    - url: "/sierpleister/"
+      when: "sierpleister als alternatieve eindafwerking"
+      anchorIntent: "sierpleister als eindlaag"
+    - url: "/onze-werken/"
+      when: "hero CTA (Voorbeelden bekijken)"
+      anchorIntent: "bekijk afgeronde projecten"
+
+serp:
+  topResultFormats:
+    - "prijstabel per situatie (basis/standaard/intensief)"
+    - "vergelijking verfsoorten (silicaat vs. siloxaan)"
+    - "stap-voor-stap voorbereiding"
+    - "FAQ"
+  featuredSnippetType: "table"
+  peopleAlsoAsk:
+    - "Wat kost gevel schilderen per m²?"
+    - "Welke verf gebruik je voor een buitenmuur?"
+    - "Hoe lang gaat gevelverf mee?"
+    - "Moet je een gevel reinigen voor het schilderen?"
+    - "Heb je een vergunning nodig om een gevel te schilderen?"
+  contentGaps: []

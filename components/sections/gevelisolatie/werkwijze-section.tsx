@@ -220,7 +220,7 @@ export default function WerkwijzeSection() {
           {data.verwachting.h3}
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {data.verwachting.bullets.map((b) => (
+          {data.verwachting.bullets.slice(0, 4).map((b) => (
             <div key={b} className="flex items-start gap-2.5">
               <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary/10">
                 <Check className="h-2.5 w-2.5 text-primary" strokeWidth={3} />
@@ -229,6 +229,17 @@ export default function WerkwijzeSection() {
             </div>
           ))}
         </div>
+        {data.verwachting.projectsLink && (
+          <div className="mt-5 border-t border-border pt-4">
+            <Link
+              href={data.verwachting.projectsLink.href}
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+            >
+              {data.verwachting.projectsLink.label}
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        )}
       </div>
 
     </section>

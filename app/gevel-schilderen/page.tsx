@@ -80,7 +80,7 @@ function PageJsonLd() {
   const service = serviceSchema({
     name: "Gevel schilderen (buitenmuur verven)",
     description:
-      "Gevel schilderen in regio Rotterdam. Silicaatverf (KEIM), siloxaan, acryl. Dampopen systemen, voorbereiding, prijs per m² na gratis opname.",
+      "Gevel schilderen in regio Rotterdam. Silicaatverf (KEIM), siloxaan, acryl. Dampopen systemen, voorbereiding, prijs per m² na opname op locatie.",
     url: `${base}/gevel-schilderen/`,
     lowPrice: "25",
     highPrice: "50",
@@ -241,7 +241,7 @@ export default function GevelSchilderenPage() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col gap-3 pt-1 sm:flex-row">
+              <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
                 <a
                   href="#offerte"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EA6C20] px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a]"
@@ -264,6 +264,13 @@ export default function GevelSchilderenPage() {
                   </span>
                   WhatsApp
                 </a>
+                <Link
+                  href="/onze-werken/"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/60 transition-colors hover:text-white/90"
+                >
+                  Voorbeelden bekijken
+                  <ArrowRight size={13} />
+                </Link>
               </div>
 
               {/* Trust proof */}
@@ -1128,7 +1135,7 @@ export default function GevelSchilderenPage() {
         </section>
 
         {/* ── WAAROM BM KLUS ── */}
-        <WaaromBmKlusSection subtitle="BM Klus BV verzorgt professioneel gevel schilderen en buitenschilderwerk voor woningen in de regio Rotterdam en omgeving." />
+        <WaaromBmKlusSection subtitle="Correcte voorbereiding, de juiste verfkeuze per ondergrond en nette uitvoering — voor duurzaam gevel schilderen in regio Rotterdam en omgeving." />
 
         {/* ── WERKGEBIED ── */}
         <section

@@ -85,7 +85,7 @@ const kostenfactoren = [
 ]
 
 const prijsopbouwItems = [
-  "Gratis opname en inmeting ter plaatse",
+  "Opname en inmeting op locatie",
   "Werkvoorbereiding en materiaalbegroting",
   "Isolatieplaten inclusief bevestiging (lijm en/of pluggen)",
   "Wapeningslaag (mortel + glasvezelweefsel)",
@@ -141,7 +141,7 @@ const faqItems = [
   {
     vraag: "Wat kost gevelisolatie aan de buitenkant per m²?",
     antwoord:
-      "De richtprijzen liggen tussen €110 en €200 per m² voor ETICS met een pleisterafwerking (stuc, sierpleister of crepi), en tussen €200 en €280 per m² voor ETICS met steenstrips. Dit zijn indicaties inclusief arbeid en materiaal, exclusief steiger, eventueel herstelwerk en complexe detaillering. Na een gratis opname ter plaatse ontvangt u een exacte prijs.",
+      "De richtprijzen liggen tussen €110 en €200 per m² voor ETICS met een pleisterafwerking (stuc, sierpleister of crepi), en tussen €200 en €280 per m² voor ETICS met steenstrips. Dit zijn indicaties inclusief arbeid en materiaal, exclusief steiger, eventueel herstelwerk en complexe detaillering. Na een opname op locatie ontvangt u een exacte prijs.",
   },
   {
     vraag: "Waarom zijn steenstrips duurder dan stuc of sierpleister?",
@@ -156,7 +156,7 @@ const faqItems = [
   {
     vraag: "Wordt herstelwerk aan het metselwerk meegenomen in de prijs?",
     antwoord:
-      "Licht herstelwerk (kleine scheuren, losse voegen) nemen wij doorgaans mee in de voorbereiding. Uitgebreider herstelwerk of erg beschadigde gevels wordt apart in de offerte opgenomen. Tijdens de gratis opname beoordelen wij de staat van uw ondergrond.",
+      "Licht herstelwerk (kleine scheuren, losse voegen) nemen wij doorgaans mee in de voorbereiding. Uitgebreider herstelwerk of erg beschadigde gevels wordt apart in de offerte opgenomen. Tijdens de opname op locatie beoordelen wij de staat van uw ondergrond.",
   },
   {
     vraag: "Is het voordeliger om alleen de voorgevel te isoleren?",
@@ -166,7 +166,7 @@ const faqItems = [
   {
     vraag: "Hoe snel ontvang ik een offerte na de opname?",
     antwoord:
-      "Na de gratis opname ter plaatse streven wij ernaar om binnen 24 tot 48 uur een duidelijke offerte te bezorgen, met prijs per m², RC-waarde, materiaalkeuze en alle inbegrepen werkzaamheden.",
+      "Na de opname op locatie ontvangt u zo snel mogelijk een duidelijke offerte, met prijs per m², RC-waarde, materiaalkeuze en alle inbegrepen werkzaamheden.",
   },
   {
     vraag: "Is er subsidie beschikbaar voor buitengevelisolatie?",
@@ -184,7 +184,7 @@ const faqItems = [
       "De uitvoeringstijd hangt af van het oppervlak, de afwerking en de weersomstandigheden. Voor een gemiddelde rijwoning (voorgevel) rekent u doorgaans op enkele werkdagen. Een grotere opdracht (meerdere gevels, steenstrips) duurt langer. Na de opname geven wij een indicatieve doorlooptijd.",
   },
   {
-    vraag: "In welk gebied werkt BM Klus BV?",
+    vraag: "In welk gebied werkt BM klus BV?",
     antwoord:
       "Wij zijn actief in de regio Rotterdam en omgeving (±80–100 km), Zuid-Holland en omliggende regio's. Twijfelt u of uw locatie binnen ons werkgebied valt? Neem gerust contact op.",
   },
@@ -216,6 +216,11 @@ const relatedLinks: RelatedLinkItem[] = [
     description: "Overzicht van subsidie, fiscale voordelen en vergunningsvereisten.",
     href: "/gevelisolatie/subsidie-vergunning/",
   },
+  {
+    label: "Onze werken",
+    description: "Bekijk uitgevoerde gevelisolatie- en afwerkingsprojecten in de regio.",
+    href: "/onze-werken/",
+  },
 ]
 
 /* ── Page Component ── */
@@ -232,7 +237,7 @@ export default function KostenGevelisolatiePage() {
   const service = serviceSchema({
     name: "Buitengevelisolatie (ETICS) – kosten",
     description:
-      "Wat kost buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips) en voorbeeldranges. Gratis opname in regio Rotterdam.",
+      "Wat kost buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips) en voorbeeldranges. Opname op locatie in regio Rotterdam.",
     url: `${base}/gevelisolatie/kosten/`,
     lowPrice: "110",
     highPrice: "280",
@@ -294,7 +299,7 @@ export default function KostenGevelisolatiePage() {
 
               <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
                 Eerlijke richtprijzen per m², de belangrijkste kostenfactoren en
-                handige voorbeeldscenario&apos;s. Na een gratis opname ontvangt u een
+                handige voorbeeldscenario&apos;s. Na een opname op locatie ontvangt u een
                 heldere offerte met prijs per m² en RC-waarde.
               </p>
 
@@ -308,7 +313,7 @@ export default function KostenGevelisolatiePage() {
               </div>
 
               <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
-                {["Gratis opname ter plaatse", "Heldere offerte per m²", "Netjes detailwerk (dagkanten/plint)"].map((text) => (
+                {["Opname op locatie", "Heldere offerte per m²", "Netjes detailwerk (dagkanten/plint)"].map((text) => (
                   <li key={text} className="flex items-center gap-2 text-sm text-white/70">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
                     <span>{text}</span>
@@ -381,7 +386,7 @@ export default function KostenGevelisolatiePage() {
               <PriceCards cards={priceCards} noteLines={priceNoteLines} />
               <Callout variant="orange" className="mt-6">
                 <p>
-                  <strong>Exacte prijs na gratis opname:</strong> na een bezoek ter plaatse ontvangt u een heldere offerte met de specifieke RC-waarde, isolatiedikte en gekozen afwerking — zodat u precies weet wat de investering inhoudt.
+                  <strong>Exacte prijs na opname op locatie:</strong> na een bezoek ter plaatse ontvangt u een heldere offerte met de specifieke RC-waarde, isolatiedikte en gekozen afwerking — zodat u precies weet wat de investering inhoudt.
                 </p>
               </Callout>
             </Section>
@@ -472,7 +477,7 @@ export default function KostenGevelisolatiePage() {
               </div>
               <Callout variant="warning" className="mt-6" title="Let op: indicaties, geen vaste prijzen">
                 <p>
-                  Bovenstaande bedragen zijn brede bandbreedtes ter oriëntatie. De exacte prijs is altijd maatwerk en volgt na de gratis opname ter plaatse.
+                  Bovenstaande bedragen zijn brede bandbreedtes ter oriëntatie. De exacte prijs is altijd maatwerk en volgt na de opname op locatie.
                 </p>
               </Callout>
             </Section>

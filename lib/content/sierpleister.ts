@@ -18,12 +18,12 @@ export const hero = {
   h1: "Gevel sierpleister: spachtelputz of crepi voor een sterke buitenafwerking",
   lead: [
     "Gevel sierpleister is een decoratieve buitenpleister met zichtbare korrelstructuur \u2014 ook bekend als spachtelputz buiten of crepi. De korrelgrootte (1,5\u20133\u00a0mm) bepaalt de uitstraling en het maskerend vermogen.",
-    "BM Klus BV werkt met correcte voorbereiding en verzorgt de complete detaillering: plint, hoeken en dagkanten. Na een korte opname stellen wij een heldere richtprijs en duidelijke scope op.",
+    "BM klus BV werkt met correcte voorbereiding en verzorgt de complete detaillering: plint, hoeken en dagkanten. Na een korte opname stellen wij een heldere richtprijs en duidelijke scope op.",
   ],
   trustBullets: [
+    "VCA*-gecertificeerd — professionele gevelafwerking",
     "Keuze in korrel & structuur (1,5\u20133 mm)",
-    "Weerbestendige afwerking met nette detaillering",
-    "Richtprijs per m\u00b2 + duidelijke scope",
+    "Richtprijs per m\u00b2 na opname op locatie",
   ],
   geoSentence:
     "Regio Rotterdam en omgeving (\u00b180\u2013100\u00a0km), Zuid-Holland en omliggende regio\u2019s.",
@@ -151,7 +151,7 @@ export const kosten = {
   tagline: "Kosten",
   h2: "Kosten gevel sierpleister (prijs per m\u00b2)",
   intro:
-    "De kosten voor gevelsierpleister hangen af van het type systeem, de staat van de ondergrond en de complexiteit van de gevel. Onderstaande richtprijzen per m\u00b2 zijn indicatief; de exacte prijs volgt na een opname ter plaatse.",
+    "De kosten voor gevelsierpleister hangen af van het type systeem, de staat van de ondergrond en de complexiteit van de gevel. Onderstaande richtprijzen per m\u00b2 zijn indicatief; de exacte prijs volgt na een opname op locatie.",
   eticsNote:
     "Afwerking op ETICS kan afwijken door de systeemopbouw; dit specificeren we in de offerte.",
   priceCards: [
@@ -236,12 +236,13 @@ export const werkwijze = {
   verwachten: {
     label: "Wat kunt u verwachten",
     bullets: [
-      "Kosteloos bezoek voor opname en advies",
+      "Opname op locatie voor advies en richtprijs",
       "Gedetailleerde offerte binnen 2 werkdagen",
       "Vakkundig team met gevelervaring",
       "Nette werkplek: afplakken en opruimen inbegrepen",
       "Eindcontrole samen met opdrachtgever",
     ],
+    projectsLink: "/onze-werken/",
   },
 };
 
@@ -362,7 +363,7 @@ export const etics = {
   intro:
     "Bij een ETICS-systeem (buitengevelisolatie) is de sierpleister als eindlaag altijd systeemgebonden. De opbouw bestaat uit een lijm- en wapeningslaag met glasvezeldoek en een goedgekeurde sierpleister als afwerklaag.",
   note:
-    "De keuze van sierpleister is gebonden aan het isolatiesysteem van de fabrikant. BM Klus BV verwerkt sierpleister zowel als losse renovatieafwerking als als onderdeel van een volledig ETICS-systeem.",
+    "De keuze van sierpleister is gebonden aan het isolatiesysteem van de fabrikant. BM klus BV verwerkt sierpleister zowel als losse renovatieafwerking als als onderdeel van een volledig ETICS-systeem.",
   opbouw: [
     { n: "01", title: "Isolatieplaten bevestigen", body: "EPS- of minerale wol­platen lijmend en/of mechanisch op de gevel." },
     { n: "02", title: "Lijm- en wapeningslaag", body: "Basismortel met ingewerkt glasvezeldoek voor scheur­preventie." },
@@ -386,7 +387,7 @@ export const faq = {
     {
       question: "Wat kost gevel sierpleister per m\u00b2?",
       answer:
-        "Als richtprijs (indicatie): spachtelputz buiten circa \u20ac50\u2013\u20ac95 per m\u00b2; crepi circa \u20ac55\u2013\u20ac105 per m\u00b2 (inclusief arbeid en standaardmaterialen, exclusief steiger/hoogwerker en complex herstelwerk). Na een opname ter plaatse stellen wij een heldere offerte op met exacte prijs.",
+        "Als richtprijs (indicatie): spachtelputz buiten circa \u20ac50\u2013\u20ac95 per m\u00b2; crepi circa \u20ac55\u2013\u20ac105 per m\u00b2 (inclusief arbeid en standaardmaterialen, exclusief steiger/hoogwerker en complex herstelwerk). Na een opname op locatie stellen wij een heldere offerte op met exacte prijs.",
     },
     {
       question: "Spachtelputz of crepi: wat is beter?",
@@ -431,7 +432,7 @@ export const faq = {
     {
       question: "Is sierpleister ook mogelijk op ETICS?",
       answer:
-        "Ja, sierpleister is de standaard eindlaag bij een ETICS-systeem (buitengevelisolatie). De keuze is dan systeemgebonden: de sierpleister moet passen bij de fabrikant van het isolatiesysteem. BM Klus BV verwerkt sierpleister als onderdeel van een volledig ETICS-systeem.",
+        "Ja, sierpleister is de standaard eindlaag bij een ETICS-systeem (buitengevelisolatie). De keuze is dan systeemgebonden: de sierpleister moet passen bij de fabrikant van het isolatiesysteem. BM klus BV verwerkt sierpleister als onderdeel van een volledig ETICS-systeem.",
     },
   ],
 };

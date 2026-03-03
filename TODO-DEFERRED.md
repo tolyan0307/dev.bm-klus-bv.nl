@@ -1,4 +1,4 @@
-# Отложенные задачи — BM Klus BV
+# Отложенные задачи — BM klus BV
 
 ## Фото (ожидают файлы от клиента)
 - [ ] `/public/images/gevelisolatie-hero.webp` — фон hero (pillar + location pages)
@@ -44,7 +44,7 @@
 - [ ] Breadcrumbs визуальные + BreadcrumbList JSON-LD
 - [ ] TrustStrip после hero
 - [ ] Service JSON-LD + LocalBusiness + FAQPage JSON-LD
-- [ ] Блок "Waarom BM Klus?" (переиспользуется)
+- [ ] Блок "Waarom BM klus?" (переиспользуется)
 - [ ] ReviewsSection
 - [ ] QuoteModal (#offerte)
 - [ ] Sticky CTA bar (mobile + desktop light glass)

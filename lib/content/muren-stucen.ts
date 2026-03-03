@@ -20,15 +20,15 @@ export const hero = {
     "BM klus BV voert stucwerk binnen uit met aandacht voor hoeken, naden en een goede voorbereiding van de ondergrond.",
   ],
   trustBullets: [
-    "Behangklaar of sausklaar (uw keuze)",
-    "Strakke hoeken & naden (waar nodig gaasband)",
-    "Richtprijs per m\u00b2 + duidelijke scope",
+    "VCA*-gecertificeerd — vakkundig binnenstucwerk",
+    "Behangklaar of sausklaar naar uw wens",
+    "Richtprijs per m\u00b2 na opname op locatie",
   ],
   geoSentence:
     "Regio Rotterdam en omgeving (\u00b180\u2013100 km), Zuid-Holland en omliggende regio\u2019s.",
   ctaLinks: [
     { label: "Offerte aanvragen", href: "/contact/" },
-    { label: "Bekijk diensten", href: "/diensten/" },
+    { label: "Voorbeelden bekijken", href: "/onze-werken/" },
   ],
 };
 
@@ -130,7 +130,7 @@ export const kosten = {
   id: "kosten-prijs-per-m2",
   h2: "Kosten muren stucen (prijs per m\u00b2)",
   intro:
-    "De kosten voor muren stucen hangen af van het afwerkingsniveau, de staat van de ondergrond en de ruimte. De richtprijs per m\u00b2 hieronder is een indicatie; de exacte prijs wordt na opname ter plaatse vastgesteld.",
+    "De kosten voor muren stucen hangen af van het afwerkingsniveau, de staat van de ondergrond en de ruimte. De richtprijs per m\u00b2 hieronder is een indicatie; de exacte prijs wordt na opname op locatie vastgesteld.",
   prices: [
     { label: "Spackspuitwerk",          value: "\u20ac8\u2013\u20ac15/m\u00b2" },
     { label: "Behangklaar stucwerk",    value: "\u20ac10\u2013\u20ac22/m\u00b2" },
@@ -174,7 +174,7 @@ export const ctaStrip = {
   text: "Vraag een gratis opname aan. Wij beoordelen uw wanden ter plaatse en sturen een heldere offerte \u2014 zonder verplichtingen.",
   bullets: [
     "Snelle reactie tijdens openingstijden",
-    "Opname ter plaatse",
+    "Opname op locatie",
     "Heldere offerte met scope",
   ],
   cta: { label: "Offerte aanvragen", href: "/contact/" },
@@ -184,11 +184,11 @@ export const werkwijze = {
   id: "werkwijze",
   h2: "Werkwijze: van voorbereiding tot oplevering",
   steps: [
-    "Opname ter plaatse en bespreking afwerkingsniveau",
+    "Opname op locatie en bespreking afwerkingsniveau",
     "Afplakken van vloer, kozijnen en aangrenzende vlakken",
     "Voorbereiding ondergrond: reinigen, herstellen en primer aanbrengen",
     "Gaasband aanbrengen op hoeken, naden en scheuren",
-    "Afwerklaag stucken: behangklaar of sausklaar egaal afwerken",
+    "Afwerklaag stucen: behangklaar of sausklaar egaal afwerken",
     "Controle, oplevering en verwijdering beschermmateriaal",
   ],
   verwachten: {
@@ -200,6 +200,7 @@ export const werkwijze = {
       "Vakkundige monteurs met jarenlange ervaring",
       "Nette oplevering — u hoeft niets op te ruimen",
     ],
+    projectsLink: "/onze-werken/",
   },
 };
 
@@ -247,20 +248,20 @@ export const faq = {
     {
       question: "Wat is het verschil tussen behangklaar en sausklaar?",
       answer:
-        "Behangklaar stucwerk heeft een egale ondergrond waarbij een lichte textuur is toegestaan \u2014 geschikt als basis voor behang. Sausklaar stucwerk is volledig glad afgewerkt zonder zichtbare structuur, noodzakelijk voor schilderen met matte of zijdeglansverf. Sausklaar stelt hogere eisen aan de vlakheid en is daarmee arbeidsintensivever.",
+        "Behangklaar stucwerk heeft een egale ondergrond waarbij een lichte textuur is toegestaan \u2014 geschikt als basis voor behang. Sausklaar stucwerk is volledig glad afgewerkt zonder zichtbare structuur, noodzakelijk voor schilderen met matte of zijdeglansverf. Sausklaar stelt hogere eisen aan de vlakheid en is daarmee arbeidsintensiever.",
     },
     {
       question: "Wat is spackspuitwerk?",
       answer:
-        "Spackspuitwerk is een gespoten egalisatielaag die over bestaand stucwerk of een ruwe ondergrond wordt aangebracht. Het is een effici\u00ebnte methode voor grote vlakken en geeft een nette, egale ondergrond voor verf. Het is geschikt voor renovaties waarbij de wanden niet volledig opnieuw gestuckt hoeven te worden.",
+        "Spackspuitwerk is een gespoten egalisatielaag die over bestaand stucwerk of een ruwe ondergrond wordt aangebracht. Het is een effici\u00ebnte methode voor grote vlakken en geeft een nette, egale ondergrond voor verf. Het is geschikt voor renovaties waarbij de wanden niet volledig opnieuw gestuct hoeven te worden.",
     },
     {
       question: "Wat is raapwerk?",
       answer:
-        "Raapwerk is een grove egalisatielaag die als onderlaag dient op ruwe of ongelijke wanden. Het is een voorbereiding op de eindafwerking (behangklaar of sausklaar) en wordt toegepast wanneer de ondergrond te onregelmatig is om direct glad te stucken.",
+        "Raapwerk is een grove egalisatielaag die als onderlaag dient op ruwe of ongelijke wanden. Het is een voorbereiding op de eindafwerking (behangklaar of sausklaar) en wordt toegepast wanneer de ondergrond te onregelmatig is om direct glad te stucen.",
     },
     {
-      question: "Kunnen scheuren worden hersteld voor het stucken?",
+      question: "Kunnen scheuren worden hersteld voor het stucen?",
       answer:
         "Ja. Scheuren in de wand worden voor aanvang behandeld: uitgefreest, gevuld en waar nodig voorzien van gaasband om scheurvorming in het nieuwe stucwerk te voorkomen. De toestand van de ondergrond wordt bij de opname beoordeeld.",
     },
@@ -270,17 +271,17 @@ export const faq = {
         "Een primer of voorstrijk is sterk aanbevolen op zuigende ondergronden (nieuwbouw, gipsblokken) en op ondergronden met wisselende zuigkracht. De primer egaliseert de zuigkracht en verbetert de hechting van het stucwerk, wat de kwaliteit en levensduur van het eindresultaat bevordert.",
     },
     {
-      question: "Hoe bereid ik de ruimte voor op het stucken?",
+      question: "Hoe bereid ik de ruimte voor op het stucen?",
       answer:
         "Zorg dat de ruimte leeg en toegankelijk is. Vloer, kozijnen en aangrenzende vlakken worden door ons afgedekt en afgetaped. Meubels en gordijnen dienen van tevoren verwijderd te worden. Bespreek de precieze voorbereiding bij de opname.",
     },
     {
-      question: "Hoe lang duurt het stucken van een kamer?",
+      question: "Hoe lang duurt het stucen van een kamer?",
       answer:
-        "De doorlooptijd is afhankelijk van het oppervlak, het afwerkingsniveau en de droogtijd tussen lagen. Een gemiddelde kamer is doorgaans in \u00e9\u00e9n tot twee werkdagen gestuckt. De exacte planning wordt bij de opname besproken.",
+        "De doorlooptijd is afhankelijk van het oppervlak, het afwerkingsniveau en de droogtijd tussen lagen. Een gemiddelde kamer is doorgaans in \u00e9\u00e9n tot twee werkdagen gestuct. De exacte planning wordt bij de opname besproken.",
     },
     {
-      question: "Wanneer kan ik schilderen of behangen na het stucken?",
+      question: "Wanneer kan ik schilderen of behangen na het stucen?",
       answer:
         "Gipspleister is doorgaans na circa 1\u20132 weken voldoende droog voor een eerste verflaag, afhankelijk van dikte, temperatuur en ventilatie. Behangen kan pas als de wand volledig droog is en de juiste primer is aangebracht. Na oplevering adviseren wij over de aanbevolen wachttijd.",
     },

@@ -75,7 +75,7 @@ function PageJsonLd() {
   const service = serviceSchema({
     name: "Muren stucen (binnenstucwerk)",
     description:
-      "Binnenmuren stucen in regio Rotterdam. Behangklaar, sausklaar, spackspuitwerk en raapwerk. Prijs per m² na opname.",
+      "Binnenmuren stucen in regio Rotterdam. Behangklaar, sausklaar, spackspuitwerk en raapwerk. Prijs per m² na opname op locatie.",
     url: `${base}/muren-stucen/`,
     lowPrice: "8",
     highPrice: "30",
@@ -124,7 +124,7 @@ export default function MurenStucenPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/muren-stucen-hero.webp"
-            alt="Vakman brengt stucwerk aan op binnenmuur — BM Klus BV Rotterdam"
+            alt="Vakman brengt stucwerk aan op binnenmuur — BM klus BV Rotterdam"
             fill
             className="object-cover"
             sizes="100vw"
@@ -221,7 +221,7 @@ export default function MurenStucenPage() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col gap-3 pt-1 sm:flex-row">
+              <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
                 <a
                   href="#offerte"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EA6C20] px-7 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#d0540a]"
@@ -244,6 +244,13 @@ export default function MurenStucenPage() {
                   </span>
                   WhatsApp
                 </a>
+                <Link
+                  href="/onze-werken/"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-7 py-4 text-sm font-semibold tracking-wide text-white/80 transition-all hover:border-white/40 hover:text-white"
+                >
+                  Voorbeelden bekijken
+                  <ArrowRight size={16} />
+                </Link>
               </div>
 
               {/* Trust proof */}
@@ -414,7 +421,7 @@ export default function MurenStucenPage() {
                 },
                 {
                   img: "/images/muren-stucen-schilderen.webp",
-                  alt: "Schilder verflaag op glad gestuckte muur",
+                  alt: "Schilder verflaag op glad gestucte muur",
                   title: "Voorbereiding afwerking",
                   body: "Ideale ondergrond voor schilderen of behangen — egaal en hecht.",
                 },
@@ -522,7 +529,7 @@ export default function MurenStucenPage() {
                 <div className="relative w-full overflow-hidden rounded-2xl shadow-xl">
                   <Image
                     src="/images/muren-stucen-voordelen.webp"
-                    alt="Modern interieur met glad gestuckte wanden — BM Klus BV Rotterdam"
+                    alt="Modern interieur met glad gestucte wanden — BM klus BV Rotterdam"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 380px"
@@ -682,7 +689,7 @@ export default function MurenStucenPage() {
         </div>
 
         {/* ── WAAROM BM KLUS ── */}
-        <WaaromBmKlusSection subtitle="BM Klus BV voert binnenstucwerk uit — behangklaar of sausklaar — voor woningen en bedrijfspanden in de regio Rotterdam en omgeving." />
+        <WaaromBmKlusSection subtitle="Strakke binnenwanden, correcte voorbereiding per ondergrond en keuze in afwerkingsniveau — voor binnenstucwerk in regio Rotterdam en omgeving." />
 
         {/* ── WERKWIJZE ── */}
         <div className="bg-secondary/40">
@@ -716,6 +723,16 @@ export default function MurenStucenPage() {
                     </li>
                   ))}
                 </ul>
+                {werkwijze.verwachten.projectsLink && (
+                  <p className="mt-5 text-sm text-muted-foreground">
+                    <Link
+                      href={werkwijze.verwachten.projectsLink}
+                      className="font-semibold text-primary underline-offset-2 hover:underline"
+                    >
+                      Bekijk voorbeelden van ons stucwerk →
+                    </Link>
+                  </p>
+                )}
               </div>
             </div>
           </section>
@@ -818,21 +835,21 @@ export default function MurenStucenPage() {
                 {[
                   {
                     img: "/images/droogtijd-drying.webp",
-                    alt: "Vers gestuckte muur die aan het drogen is",
+                    alt: "Vers gestucte muur die aan het drogen is",
                     icon: Clock,
                     label: "1–2 weken drogen",
                     text: droogtijd.bullets[0],
                   },
                   {
                     img: "/images/droogtijd-schilderen.webp",
-                    alt: "Schilder brengt verf aan op droge gestuckte muur",
+                    alt: "Schilder brengt verf aan op droge gestucte muur",
                     icon: Paintbrush2,
                     label: "Schilderen",
                     text: droogtijd.bullets[1],
                   },
                   {
                     img: "/images/droogtijd-behangen.webp",
-                    alt: "Behang aanbrengen op geprimed gestuckt oppervlak",
+                    alt: "Behang aanbrengen op geprimed gestuct oppervlak",
                     icon: Layers,
                     label: "Behangen",
                     text: droogtijd.bullets[2],

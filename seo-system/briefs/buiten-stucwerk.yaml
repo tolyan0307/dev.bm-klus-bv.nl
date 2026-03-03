@@ -1,0 +1,102 @@
+# Brief: /buiten-stucwerk/ — money page (gevel stucen)
+
+page:
+  slug: "buiten-stucwerk"
+  url: "/buiten-stucwerk/"
+  pageType: "money"
+  taskType: "improve"
+  currentFile: "app/buiten-stucwerk/page.tsx"
+  contentFile: "lib/content/buiten-stucwerk.ts"
+
+seo:
+  primaryKeyword: "buitenmuur stucen"
+  secondaryKeywords:
+    - "gevel stucen"
+    - "buiten stucwerk"
+    - "buitenmuur stucen prijs"
+    - "gevel stucen kosten"
+    - "cementpleister buitenmuur"
+    - "spachtelputz buiten"
+    - "buitenstucwerk Rotterdam"
+  searchIntent: "commercial"
+  pageGoal: "Bezoeker begrijpt het verschil met ETICS en andere diensten, ziet BM klus als vakspecialist, en vraagt offerte aan"
+
+cannibalization:
+  siblingPages:
+    - "/gevelisolatie/"
+    - "/gevelisolatie/afwerkingen/"
+    - "/sierpleister/"
+    - "/gevel-schilderen/"
+  doNotCoverDeeply:
+    - "ETICS-isolatiesysteem details → /gevelisolatie/"
+    - "sierpleister/spachtelputz vergelijking in detail → /sierpleister/"
+    - "gevel schilderen werkwijze → /gevel-schilderen/"
+    - "afwerkingsopties na ETICS → /gevelisolatie/afwerkingen/"
+  differentiator: "Stucwerk zónder isolatie — puur pleisterwerk op bestaande gevel; focus op materialen, ondergronden, nadelen/risico's en reparatie"
+
+content:
+  pageRoleSummary: "Money page voor buitenmuur stucen als zelfstandige dienst (niet ETICS); commercieel + informatief voor woningeigenaren"
+  userQuestionsToAnswer:
+    - "Wat kost buitenmuur stucen per m²?"
+    - "Welk materiaal is het beste (cementpleister vs betonstuc vs spachtelputz vs crepi)?"
+    - "Wat is het verschil tussen buiten stucen en binnenstucwerk?"
+    - "Welke nadelen zijn er en hoe voorkom ik ze?"
+    - "Hoe wordt de ondergrond voorbereid?"
+    - "Wanneer is reparatie genoeg, wanneer herwerking nodig?"
+    - "Kan stucwerk ook in combinatie met isolatie (ETICS)?"
+  requiredSections:
+    - "Hero + H1 + trust bullets + CTA"
+    - "Wat is buitenmuur stucen (incl. verschil buiten/binnen)"
+    - "Voordelen"
+    - "Waarom BM Klus"
+    - "Kosten per m² (prijstabel + factoren)"
+    - "Werkwijze"
+    - "Materialen & afwerkingen"
+    - "Afwerking keuzehulp (interactief)"
+    - "Ondergronden & techniek"
+    - "Nadelen & risico's"
+    - "Reparatie & herstel"
+    - "Stucen met isolatie (ETICS cross-sell → /gevelisolatie/)"
+    - "Reviews"
+    - "FAQ"
+    - "Gerelateerde pagina's (internal links)"
+  faqIntents:
+    - "Wat kost buitenmuur stucen per m²?"
+    - "Verschil cementpleister en betonstuc?"
+    - "Is spachtelputz geschikt buiten?"
+    - "Wanneer is stucwerk repareren genoeg?"
+    - "Hoe lang moet stucwerk drogen?"
+    - "Is wapening (gaas) altijd nodig?"
+    - "Welke nadelen heeft buitenmuur stucen?"
+  ctaType: "mixed"
+
+links:
+  requiredOutgoing:
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+    - url: "/gevelisolatie/"
+      anchorIntent: "meer over buitengevelisolatie (ETICS)"
+  suggestedContextual:
+    - url: "/sierpleister/"
+      when: "spachtelputz/crepi sectie"
+      anchorIntent: "sierpleister buiten"
+    - url: "/gevel-schilderen/"
+      when: "voorbereiding voor schilderwerk"
+      anchorIntent: "gevel schilderen na stucen"
+    - url: "/onze-werken/"
+      when: "werkwijze of vertrouwensblok"
+      anchorIntent: "bekijk uitgevoerde projecten"
+
+serp:
+  topResultFormats:
+    - "prijstabel per materiaal"
+    - "voor- en nadelen lijst"
+    - "werkwijze stap-voor-stap"
+    - "FAQ sectie"
+  featuredSnippetType: "table"
+  peopleAlsoAsk:
+    - "Wat kost het om een buitenmuur te stucen?"
+    - "Wat is het verschil tussen spachtelputz en cementpleister?"
+    - "Kan je buitenmuur gewoon stucen?"
+    - "Hoe lang gaat buitenstucwerk mee?"
+  contentGaps: []

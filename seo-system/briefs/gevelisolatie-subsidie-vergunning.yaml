@@ -1,0 +1,85 @@
+# Brief: /gevelisolatie/subsidie-vergunning/ — cluster page (ISDE subsidie + vergunning)
+# Minimal brief for QA-only pass (no rewrite)
+# Created: 2026-03-03
+
+page:
+  slug: "gevelisolatie/subsidie-vergunning"
+  url: "/gevelisolatie/subsidie-vergunning/"
+  pageType: "cluster"
+  taskType: "qa-only"
+  currentFile: "app/gevelisolatie/subsidie-vergunning/page.tsx"
+  contentFile: "inline (no separate lib/content file)"
+
+seo:
+  primaryKeyword: "subsidie gevelisolatie"
+  secondaryKeywords:
+    - "ISDE gevelisolatie"
+    - "vergunning buitengevelisolatie"
+    - "gevelisolatie subsidie aanvragen"
+    - "omgevingsvergunning gevelisolatie"
+    - "ISDE subsidie isolatie"
+  searchIntent: "informational"
+  pageGoal: "Bezoeker begrijpt op hoofdlijnen of subsidie/vergunning van toepassing is, en stapt over naar offerteverzoek bij BM klus BV"
+
+cannibalization:
+  siblingPages:
+    - "/gevelisolatie/"
+    - "/gevelisolatie/kosten/"
+    - "/gevelisolatie/afwerkingen/"
+    - "/gevelisolatie/materialen/"
+    - "/gevelisolatie/rc-waarde-dikte/"
+  doNotCoverDeeply:
+    - "ETICS pillar overview (→ /gevelisolatie/)"
+    - "prijsdetails per m² (→ /gevelisolatie/kosten/)"
+    - "afwerkingsvergelijking (→ /gevelisolatie/afwerkingen/)"
+    - "materiaalspecs (→ /gevelisolatie/materialen/)"
+    - "rc-waarde berekening (→ /gevelisolatie/rc-waarde-dikte/)"
+  differentiator: "Uitsluitend subsidie (ISDE) en vergunning: voorwaarden op hoofdlijnen, stappenplan, checklist, FAQ"
+
+content:
+  pageRoleSummary: "Cluster page die subsidie- en vergunningsvragen beantwoordt met hoofdlijn-info en praktische stappen; geen juridische of financiële garanties"
+  disclaimerRequired: true
+  userQuestionsToAnswer:
+    - "Heb ik een vergunning nodig voor buitengevelisolatie?"
+    - "Kan ik ISDE-subsidie aanvragen voor gevelisolatie?"
+    - "Wanneer moet ik subsidie aanvragen (voor of na uitvoering)?"
+    - "Welke documenten heb ik nodig voor subsidie?"
+    - "Helpt BM klus BV bij de aanvraag?"
+    - "Hoe lang duurt een vergunningsprocedure?"
+  requiredSections:
+    - "Hero + H1 + trust bullets + disclaimer callout + CTA"
+    - "Wanneer vergunning nodig (situatiebeschrijving)"
+    - "Subsidie op hoofdlijnen (ISDE, geen bedragen/garanties)"
+    - "Stappenplan (opname → vergunning → subsidie → uitvoering → aanvraag)"
+    - "Checklist"
+    - "FAQ"
+    - "Related links"
+  ctaType: "offerte"
+
+links:
+  requiredOutgoing:
+    - url: "/gevelisolatie/"
+      anchorIntent: "terug naar gevelisolatie overzicht"
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen / gratis opname"
+    - url: "https://www.rvo.nl"
+      anchorIntent: "actuele ISDE-voorwaarden"
+  suggestedContextual:
+    - url: "/gevelisolatie/kosten/"
+      anchorIntent: "kosten en richtprijzen"
+    - url: "/gevelisolatie/materialen/"
+      anchorIntent: "isolatiemateriaal (RC-waarde voor ISDE)"
+
+serp:
+  topResultFormats:
+    - "informational guide with disclaimer"
+    - "checklist"
+    - "FAQ"
+    - "stappenplan"
+  featuredSnippetType: "list"
+  peopleAlsoAsk:
+    - "Is gevelisolatie vergunningplichtig?"
+    - "Hoeveel subsidie krijg ik voor buitengevelisolatie?"
+    - "Wanneer subsidie aanvragen voor isolatie?"
+    - "Hoe werkt ISDE subsidie?"
+  contentGaps: []

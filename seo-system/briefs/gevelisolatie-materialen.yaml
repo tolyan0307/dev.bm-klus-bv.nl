@@ -1,0 +1,89 @@
+# Brief: /gevelisolatie/materialen/ — cluster page (EPS, PIR, minerale wol)
+# Minimal brief for QA-only pass (no rewrite)
+# Created: 2026-03-03
+
+page:
+  slug: "gevelisolatie/materialen"
+  url: "/gevelisolatie/materialen/"
+  pageType: "cluster"
+  taskType: "qa-only"
+  currentFile: "app/gevelisolatie/materialen/page.tsx"
+  layoutFile: "app/gevelisolatie/materialen/layout.tsx"
+  contentFile: "inline (no separate lib/content file)"
+  note: >
+    "use client" page — metadata and JSON-LD live in layout.tsx (server component),
+    FAQ data is duplicated between layout.tsx and page.tsx.
+
+seo:
+  primaryKeyword: "gevelisolatie platen"
+  secondaryKeywords:
+    - "EPS isolatie gevel"
+    - "PIR isolatie gevel"
+    - "minerale wol gevelisolatie"
+    - "isolatiemateriaal ETICS"
+    - "gevelisolatie materialen vergelijken"
+  searchIntent: "informational"
+  pageGoal: "Bezoeker begrijpt welk isolatiemateriaal bij zijn gevel past en vraagt advies/offerte aan bij BM klus BV"
+
+cannibalization:
+  siblingPages:
+    - "/gevelisolatie/"
+    - "/gevelisolatie/kosten/"
+    - "/gevelisolatie/rc-waarde-dikte/"
+    - "/gevelisolatie/afwerkingen/"
+    - "/gevelisolatie/subsidie-vergunning/"
+  doNotCoverDeeply:
+    - "ETICS pillar overview (→ /gevelisolatie/)"
+    - "prijsdetails per m² (→ /gevelisolatie/kosten/)"
+    - "rc-waarde berekening in detail (→ /gevelisolatie/rc-waarde-dikte/)"
+    - "afwerkingsvergelijking (→ /gevelisolatie/afwerkingen/)"
+    - "subsidiedetails (→ /gevelisolatie/subsidie-vergunning/)"
+  differentiator: "Uitsluitend materiaalkeuze EPS/PIR/minerale wol: eigenschappen, vergelijking, keuzehulp, combinaties met afwerkingen"
+
+content:
+  pageRoleSummary: "Cluster page die alle materiaalgerelateerde vragen over ETICS beantwoordt met vergelijkingstabel, keuzehulp en FAQ"
+  userQuestionsToAnswer:
+    - "Welk isolatiemateriaal is het beste voor mijn gevel?"
+    - "Wat is het verschil tussen EPS, PIR en minerale wol?"
+    - "Hoe dik moet de isolatie zijn voor RC 3,5 of RC 5?"
+    - "Is minerale wol veiliger bij brand?"
+    - "Zijn steenstrips geschikt op alle materialen?"
+    - "Hoe lang gaan de materialen mee?"
+    - "Wat kost het verschil in materiaal?"
+  requiredSections:
+    - "Hero + H1 + trust bullets + CTA"
+    - "Snelle keuzehulp"
+    - "Vergelijkingstabel + tab-kaart per materiaal"
+    - "Factoren materiaalkeuze"
+    - "Materiaal & afwerking combinaties"
+    - "Materiaal & kosten (kwalitatief)"
+    - "FAQ"
+    - "Related links + internal links"
+  ctaType: "offerte"
+
+links:
+  requiredOutgoing:
+    - url: "/gevelisolatie/"
+      anchorIntent: "terug naar pillar (overzicht)"
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+    - url: "/gevelisolatie/kosten/"
+      anchorIntent: "richtprijzen per m²"
+  suggestedContextual:
+    - url: "/gevelisolatie/rc-waarde-dikte/"
+      anchorIntent: "RC-waarde en dikte berekenen"
+    - url: "/gevelisolatie/afwerkingen/"
+      anchorIntent: "afwerkingen vergelijken"
+
+serp:
+  topResultFormats:
+    - "comparison table EPS vs PIR vs mineral wool"
+    - "choice guide / decision tree"
+    - "FAQ"
+  featuredSnippetType: "table"
+  peopleAlsoAsk:
+    - "Welk isolatiemateriaal is het beste voor buitengevelisolatie?"
+    - "Wat is het verschil tussen EPS en PIR isolatie?"
+    - "Hoe dik moet gevelisolatie zijn?"
+    - "Is minerale wol beter dan EPS?"
+  contentGaps: []

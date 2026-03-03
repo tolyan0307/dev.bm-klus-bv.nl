@@ -20,15 +20,15 @@ export const hero = {
     "BM klus BV voert buiten stucwerk uit op bestaande gevels en in combinatie met gevelisolatie (ETICS), met aandacht voor details zoals hoeken, dagkanten en plint.",
   ],
   trustBullets: [
-    "Duurzame, weerbestendige systemen (mineraal/cementgebonden)",
+    "VCA*-gecertificeerd — duurzame, weerbestendige systemen",
     "Strakke detaillering: plint, hoeken, dagkanten",
-    "Heldere prijsopbouw per m² na opname",
+    "Heldere prijsopbouw per m² na opname op locatie",
   ],
   geoSentence:
     "Regio Rotterdam en omgeving (±80–100 km), Zuid-Holland en omliggende regio\u2019s.",
   ctaLinks: [
     { label: "Offerte aanvragen", href: "/contact/" },
-    { label: "Voorbeelden", href: "/onze-werken/" },
+    { label: "Voorbeelden bekijken", href: "/onze-werken/" },
   ],
 };
 
@@ -81,6 +81,7 @@ export const voordelen = {
     {
       title: "Goede basis voor gevel schilderen",
       body: "Gevel stucen levert een stabiele, egale ondergrond die ideaal is als voorbereiding voor een verfsysteem.",
+      link: { href: "/gevel-schilderen/", label: "meer over gevel schilderen" },
     },
     {
       title: "Herstel van oneffenheden en kleine schade",
@@ -103,7 +104,7 @@ export const kosten = {
   id: "kosten-prijs-per-m2",
   h2: "Kosten buitenmuur stucen (prijs per m²)",
   intro:
-    "De buitenmuur stucen kosten hangen af van de ondergrond, de voorbereiding en de gekozen afwerking. De richtprijs per m² is een indicatie; de exacte prijs wordt na opname ter plaatse vastgesteld.",
+    "De buitenmuur stucen kosten hangen af van de ondergrond, de voorbereiding en de gekozen afwerking. De richtprijs per m² is een indicatie; de exacte prijs wordt na opname op locatie vastgesteld.",
   prices: [
     { label: "Cementpleister",               value: "€50–€80/m²"   },
     { label: "Spachtelputz",                  value: "€35–€80/m²"   },
@@ -138,7 +139,7 @@ export const kosten = {
     ],
   },
   callout:
-    "Na opname stellen wij een duidelijke offerte op met scope en prijs per m².",
+    "Prijs is afhankelijk van ondergrond, voorbereiding en afwerking. Na opname op locatie ontvangt u een offerte met duidelijke scope en prijs per m².",
 };
 
 export const werkwijze = {
@@ -160,6 +161,7 @@ export const werkwijze = {
       "Correcte laagopbouw (geen stappen overslaan)",
       "Heldere communicatie",
     ],
+    projectsLink: "/onze-werken/",
   },
 };
 

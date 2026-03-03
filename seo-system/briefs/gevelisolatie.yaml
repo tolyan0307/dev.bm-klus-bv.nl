@@ -1,0 +1,115 @@
+# Brief: /gevelisolatie/ — pillar money page (ETICS)
+
+page:
+  slug: "gevelisolatie"
+  url: "/gevelisolatie/"
+  pageType: "money"
+  taskType: "improve"
+  currentFile: "app/gevelisolatie/page.tsx"
+  contentFile: "lib/content/gevelisolatie.ts"
+
+seo:
+  primaryKeyword: "gevelisolatie"
+  secondaryKeywords:
+    - "buitengevelisolatie"
+    - "ETICS"
+    - "gevelisolatie kosten"
+    - "gevelisolatie prijs per m2"
+    - "buitenmuur isoleren"
+    - "gevel isoleren buitenkant"
+    - "gevelisolatie Rotterdam"
+  searchIntent: "commercial"
+  pageGoal: "Bezoeker begrijpt ETICS, ziet BM klus als specialist, en vraagt offerte aan"
+
+cannibalization:
+  siblingPages:
+    - "/buiten-stucwerk/"
+    - "/sierpleister/"
+    - "/gevelisolatie/kosten/"
+    - "/gevelisolatie/afwerkingen/"
+    - "/gevelisolatie/materialen/"
+    - "/gevelisolatie/rc-waarde-dikte/"
+    - "/gevelisolatie/subsidie-vergunning/"
+  doNotCoverDeeply:
+    - "detailed pricing breakdowns → /gevelisolatie/kosten/"
+    - "finish options comparison → /gevelisolatie/afwerkingen/"
+    - "material specs (EPS/PIR/wol) → /gevelisolatie/materialen/"
+    - "Rc-waarde calculations → /gevelisolatie/rc-waarde-dikte/"
+    - "subsidy/permit details → /gevelisolatie/subsidie-vergunning/"
+    - "stucwerk without insulation → /buiten-stucwerk/"
+    - "sierpleister details → /sierpleister/"
+  differentiator: "Complete ETICS overview with commercial intent — touches all subtopics briefly but sends depth to cluster pages"
+
+content:
+  pageRoleSummary: "Pillar page that introduces ETICS, builds trust, and funnels to offerte or cluster pages for depth"
+  userQuestionsToAnswer:
+    - "Wat is buitengevelisolatie / ETICS?"
+    - "Welke voordelen heeft het?"
+    - "Wat kost het globaal per m²?"
+    - "Hoe werkt het proces?"
+    - "Welke afwerkingen zijn mogelijk?"
+    - "Welke materialen worden gebruikt?"
+    - "Heb ik subsidie/vergunning nodig?"
+    - "Waarom BM klus BV kiezen?"
+  requiredSections:
+    - "Hero + H1 + trust + CTA"
+    - "Wat is ETICS"
+    - "Voordelen"
+    - "Kosten (overview → link to /kosten/)"
+    - "Werkwijze"
+    - "Afwerkingen (overview → link to /afwerkingen/)"
+    - "Materialen (overview → link to /materialen/)"
+    - "Rc-waarde & dikte (overview → link to /rc-waarde-dikte/)"
+    - "Details & koudebruggen"
+    - "Subsidie & vergunning (overview → link to /subsidie-vergunning/)"
+    - "Verdieping (cluster links)"
+    - "Reviews"
+    - "FAQ"
+    - "Meer informatie (service + location links)"
+  faqIntents:
+    - "Wat kost gevelisolatie per m²?"
+    - "Hoe lang duurt het aanbrengen?"
+    - "Is een vergunning nodig?"
+    - "Welke subsidie kan ik krijgen?"
+    - "Welke afwerking is het beste?"
+    - "Kan het op elk type gevel?"
+    - "Wat is de terugverdientijd?"
+  ctaType: "mixed"
+
+links:
+  requiredOutgoing:
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+    - url: "/onze-werken/"
+      anchorIntent: "bekijk onze projecten"
+  suggestedContextual:
+    - url: "/gevelisolatie/kosten/"
+      when: "kosten section"
+      anchorIntent: "meer over kosten en prijs per m²"
+    - url: "/gevelisolatie/afwerkingen/"
+      when: "afwerkingen section"
+      anchorIntent: "alle afwerkingsopties vergelijken"
+    - url: "/gevelisolatie/materialen/"
+      when: "materialen section"
+      anchorIntent: "EPS, PIR of minerale wol"
+    - url: "/gevelisolatie/rc-waarde-dikte/"
+      when: "rc-waarde section"
+      anchorIntent: "hoeveel isolatie heeft u nodig"
+    - url: "/gevelisolatie/subsidie-vergunning/"
+      when: "subsidie section"
+      anchorIntent: "subsidie en vergunning checklist"
+
+serp:
+  topResultFormats:
+    - "comprehensive guide with price table"
+    - "process steps / werkwijze"
+    - "FAQ section"
+    - "comparison table (materials/finishes)"
+  featuredSnippetType: "paragraph"
+  peopleAlsoAsk:
+    - "Wat kost gevelisolatie per m2?"
+    - "Is gevelisolatie van buitenaf vergunningplichtig?"
+    - "Hoeveel bespaar je met gevelisolatie?"
+    - "Wat is de beste gevelisolatie?"
+    - "Hoe lang gaat gevelisolatie mee?"
+  contentGaps: []

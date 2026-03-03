@@ -42,7 +42,7 @@ const faqSchema = {
       name: "Hoeveel kan ik besparen met gevelisolatie?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Gemiddeld kunt u tot 40% besparen op uw energiekosten. De precieze besparing hangt af van de huidige staat van uw woning en de gekozen isolatiewaarde. Daarnaast verhoogt gevelisolatie het wooncomfort en de waarde van uw woning.",
+        text: "Afhankelijk van uw woning en beginsituatie kan gevelisolatie een merkbare verlaging van uw stookkosten opleveren. De mate van besparing hangt af van de huidige staat van uw woning en de gekozen isolatiewaarde. Daarnaast verhoogt gevelisolatie het wooncomfort en de waarde van uw woning.",
       },
     },
     {
@@ -76,7 +76,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${base}/#organization`,
-  name: "BM Klus BV",
+  name: "BM klus BV",
   url: base,
   logo: {
     "@type": "ImageObject",

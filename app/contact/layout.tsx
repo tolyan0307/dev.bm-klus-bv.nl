@@ -24,11 +24,11 @@ export default function ContactLayout({ children }: { children: ReactNode }) {
     "@type": "ContactPage",
     name: "Contact & offerte aanvragen",
     description:
-      "Neem contact op met BM Klus BV voor een offerte of advies. Telefoon/WhatsApp, e-mail, adres in Rotterdam en openingstijden.",
+      "Neem contact op met BM klus BV voor een offerte of advies. Telefoon/WhatsApp, e-mail, adres in Rotterdam en openingstijden.",
     url: `${base}/contact/`,
     mainEntity: {
       "@type": "Organization",
-      name: "BM Klus BV",
+      name: "BM klus BV",
       telephone: "+31612079808",
       email: "info@bm-klus-bv.nl",
       address: {

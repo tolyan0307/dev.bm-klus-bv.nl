@@ -4,7 +4,7 @@ import { ArrowRight, Layers, Paintbrush2, Palette, Images, LayoutGrid, MapPin, B
 const links = [
   {
     label: "Al onze diensten",
-    description: "Bekijk het volledige aanbod van BM Klus BV",
+    description: "Bekijk het volledige aanbod van BM klus BV",
     href: "/diensten/",
     icon: LayoutGrid,
   },

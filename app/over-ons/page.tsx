@@ -141,7 +141,7 @@ export default function OverOnsPage() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "BM Klus BV",
+    name: "BM klus BV",
     url: base,
     logo: `${base}/images/logo-bm-klus.svg`,
     description:
@@ -220,7 +220,7 @@ export default function OverOnsPage() {
               </h1>
 
               <p className="max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
-                BM Klus BV is gespecialiseerd in buitengevelisolatie (ETICS) en
+                BM klus BV is gespecialiseerd in buitengevelisolatie (ETICS) en
                 hoogwaardige gevelafwerking. Wij combineren vakmanschap met
                 duidelijke afspraken en een nette oplevering.
               </p>
@@ -304,7 +304,7 @@ export default function OverOnsPage() {
 
       {/* ══ ARTICLE ══ */}
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
-        {/* ── Over BM Klus BV ── */}
+        {/* ── Over BM klus BV ── */}
         <section className="py-16 sm:py-20 lg:py-24" id="bedrijf">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
@@ -317,13 +317,13 @@ export default function OverOnsPage() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                   Over{" "}
-                  <span className="text-primary">BM Klus BV</span>
+                  <span className="text-primary">BM klus BV</span>
                 </h2>
               </div>
               <div className="lg:col-span-7">
                 <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
                   <p>
-                    BM Klus BV is een gespecialiseerd bedrijf in
+                    BM klus BV is een gespecialiseerd bedrijf in
                     buitengevelisolatie en renovatie, actief in de regio
                     Rotterdam en Zuid-Holland. Wij werken met eigen vakkundige
                     medewerkers — geen onderaannemers, één aanspreekpunt per
@@ -382,7 +382,7 @@ export default function OverOnsPage() {
               <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                 <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                   Waarom{" "}
-                  <span className="text-primary">BM Klus BV</span>
+                  <span className="text-primary">BM klus BV</span>
                 </h2>
                 <p className="max-w-sm text-sm leading-relaxed text-muted-foreground lg:text-right">
                   Elk project krijgt de aandacht die het verdient — van eerste

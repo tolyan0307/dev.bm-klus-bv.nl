@@ -26,32 +26,32 @@ const faqItems = [
   {
     vraag: "Is minerale wol veiliger bij brand dan EPS of PIR?",
     antwoord:
-      "Ja. Minerale wol heeft brandklasse A1 (onbrandbaar). EPS valt in klasse E of B-s1,d0 en PIR in klasse B-s1,d0. Bij appartementencomplexen of panden met hoge brandveiligheidseisen schrijven verzekeraars of overheden soms klasse A1 voor.",
+      "Ja. Minerale wol heeft brandklasse A1 (onbrandbaar). EPS valt in klasse E of B-s1,d0 en PIR in klasse B-s1,d0. Bij appartementencomplexen of panden met hoge brandveiligheidseisen schrijven verzekeraars of overheden soms klasse A1 voor. Controleer altijd de specifieke projecteisen.",
   },
   {
     vraag: "Welke dikte heb ik nodig voor RC 3,5 of RC 5?",
     antwoord:
-      "De benodigde dikte verschilt per materiaal. Als indicatie: voor RC 3,5 m²K/W heeft u met EPS circa 12–13 cm nodig, met PIR circa 9 cm en met minerale wol circa 13–14 cm. Voor RC 5 komen die diktes op circa 18, 12 en 19 cm respectievelijk.",
+      "De benodigde dikte verschilt per materiaal. Als indicatie: voor RC 3,5 m²K/W heeft u met EPS (λ≈0,036) circa 12–13 cm nodig, met PIR (λ≈0,025) circa 9 cm en met minerale wol (λ≈0,038) circa 13–14 cm. Voor RC 5 komen die diktes op circa 18, 12 en 19 cm respectievelijk. Exacte waarden volgen na berekening op basis van uw specifieke productkeuze.",
   },
   {
     vraag: "Zijn steenstrips geschikt op alle drie de materialen?",
     antwoord:
-      "Steenstrips zijn relatief zwaar. EPS in een hogere dichtheid en minerale wol worden het meest toegepast voor steenstrips-ETICS. PIR is minder gebruikelijk in combinatie met steenstrips. Wij berekenen de draagkracht per situatie.",
+      "Steenstrips zijn relatief zwaar (circa 20–35 kg/m²). Niet alle isolatieplaten zijn direct geschikt als drager voor steenstrips — de opbouw (bevestiging, wapeningslaag) moet hierop worden berekend. EPS in een hogere dichtheid en minerale wol worden het meest toegepast voor steenstrips-ETICS. PIR is minder gebruikelijk in combinatie met steenstrips. Wij berekenen de draagkracht per situatie.",
   },
   {
     vraag: "Hoe lang gaan EPS, PIR en minerale wol mee?",
     antwoord:
-      "Bij correct aangebrachte ETICS met een goed onderhouden afwerklaag is de technische levensduur van alle drie de materialen minimaal 25–40 jaar.",
+      "Bij correct aangebrachte ETICS met een goed onderhouden afwerklaag is de technische levensduur van alle drie de materialen bij goed onderhoud meerdere tientallen jaren. De exacte levensduur is afhankelijk van de systeemkeuze, toepassing en onderhoud van de afwerklaag.",
   },
   {
     vraag: "Wat is de invloed van het materiaal op de totale prijs?",
     antwoord:
-      "EPS is doorgaans het goedkoopste isolatiemateriaal; minerale wol en PIR zijn duurder in aanschaf. Bij PIR kan een dunnere plaat het prijsverschil gedeeltelijk compenseren.",
+      "EPS is doorgaans het goedkoopste isolatiemateriaal; minerale wol en PIR zijn duurder in aanschaf. Bij PIR kan een dunnere plaat het prijsverschil gedeeltelijk compenseren (minder materiaalvolume, lichtere steiger). Minerale wol vraagt vaak iets meer arbeidstijd door het gewicht. Het exacte effect op de totaalprijs varieert per project; na opname geven wij een vergelijkend overzicht.",
   },
   {
     vraag: "Mag ik zelf het materiaal kiezen?",
     antwoord:
-      "In overleg absoluut. Wij adviseren op basis van uw gevel, uw wensen (RC-doel, budget, brandklasse, dampopenheid) en de specifieke projectsituatie.",
+      "In overleg absoluut. Wij adviseren op basis van uw gevel, uw wensen (RC-doel, budget, brandklasse, dampopenheid) en de specifieke projectsituatie. Sommige ETICS-systemen schrijven het te gebruiken materiaal voor, maar binnen die keuze bespreken wij de opties met u.",
   },
 ]
 
@@ -73,8 +73,6 @@ export default function MaterialenLayout({
     description:
       "Vergelijk isolatieplaten voor ETICS: EPS, PIR en minerale wol. Diktes, brandklasse, dampopenheid en afwerking.",
     url: `${base}/gevelisolatie/materialen/`,
-    lowPrice: "110",
-    highPrice: "280",
   })
 
   const faqSchema = {

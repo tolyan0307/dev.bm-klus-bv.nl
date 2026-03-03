@@ -75,7 +75,7 @@ export default function Navbar() {
             <Link href="/" className="relative flex items-center">
               <img
                 src="/images/logo-bm-klus.webp"
-                alt="BM Klus BV"
+                alt="BM klus BV"
                 width={120}
                 height={28}
                 className={`h-7 w-auto transition-all duration-500 ${

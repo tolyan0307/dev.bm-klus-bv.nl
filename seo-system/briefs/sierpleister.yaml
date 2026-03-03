@@ -1,0 +1,106 @@
+# Brief: /sierpleister/ — money page (gevel sierpleister / spachtelputz / crepi)
+
+page:
+  slug: "sierpleister"
+  url: "/sierpleister/"
+  pageType: "money"
+  taskType: "improve"
+  currentFile: "app/sierpleister/page.tsx"
+  contentFile: "lib/content/sierpleister.ts"
+
+seo:
+  primaryKeyword: "gevel sierpleister"
+  secondaryKeywords:
+    - "spachtelputz buiten"
+    - "crepi gevel"
+    - "sierpleister gevel prijs"
+    - "gevelsierpleister kosten"
+    - "spachtelputz of crepi"
+    - "sierpleister aanbrengen"
+    - "sierpleister Rotterdam"
+  searchIntent: "mixed"
+  pageGoal: "Bezoeker begrijpt het verschil tussen spachtelputz en crepi, ziet BM klus als specialist in gevelafwerking, en vraagt een offerte aan"
+
+cannibalization:
+  siblingPages:
+    - "/buiten-stucwerk/"
+    - "/gevelisolatie/afwerkingen/"
+    - "/gevel-schilderen/"
+  doNotCoverDeeply:
+    - "gladde cementpleister / betonstuc → /buiten-stucwerk/"
+    - "ETICS-systeem in detail (isolatieplaten, Rc-waarde) → /gevelisolatie/"
+    - "gevel schilderen werkwijze → /gevel-schilderen/"
+    - "afwerkingsopties na ETICS (diepgaand) → /gevelisolatie/afwerkingen/"
+  differentiator: "Decoratieve sierpleister zónder isolatie als zelfstandige renovatieafwerking — focus op type, korrel, detaillering, onderhoud en herstel"
+
+content:
+  pageRoleSummary: "Money page voor gevel sierpleister als renovatie- en eindafwerking; commercieel + informatief voor woningeigenaren die stucwerk willen vernieuwen"
+  userQuestionsToAnswer:
+    - "Wat kost sierpleister per m²?"
+    - "Wat is het verschil tussen spachtelputz en crepi?"
+    - "Welke korrelgrootte moet ik kiezen?"
+    - "Is sierpleister waterdicht?"
+    - "Hoe voorkom ik algen?"
+    - "Hoe lang gaat sierpleister mee?"
+    - "Kan ik sierpleister schilderen?"
+    - "Is sierpleister ook mogelijk op ETICS?"
+    - "Hoe herstel ik beschadigingen?"
+  requiredSections:
+    - "Hero + H1 + trust bullets + CTA"
+    - "Wat is gevel sierpleister (incl. soorten en korrelgrootte)"
+    - "Structuuroverzicht (GevelAfwerkingGids component)"
+    - "Voordelen"
+    - "Kosten per m² (prijs per type)"
+    - "Waarom BM Klus"
+    - "Werkwijze (stap voor stap)"
+    - "Details: plint, hoeken, dagkanten"
+    - "Onderhoud: reinigen, algen, levensduur"
+    - "Reparatie & herstel"
+    - "Sierpleister op ETICS (cross-sell → /gevelisolatie/)"
+    - "Reviews"
+    - "FAQ"
+    - "Gerelateerde pagina's (internal links)"
+  faqIntents:
+    - "Wat kost gevel sierpleister per m²?"
+    - "Spachtelputz of crepi: wat is beter?"
+    - "Welke korrelgrootte kiezen?"
+    - "Is gevel sierpleister waterdicht?"
+    - "Hoe voorkom ik algen en vervuiling?"
+    - "Hoe lang gaat sierpleister mee?"
+    - "Kan ik sierpleister later schilderen?"
+    - "Hoe repareer je beschadigingen?"
+    - "Is sierpleister ook mogelijk op ETICS?"
+  ctaType: "mixed"
+
+links:
+  requiredOutgoing:
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+    - url: "/gevelisolatie/"
+      anchorIntent: "meer over buitengevelisolatie (ETICS)"
+  suggestedContextual:
+    - url: "/buiten-stucwerk/"
+      when: "uitleg verschil glad stucwerk vs. sierpleister"
+      anchorIntent: "glad buiten stucwerk"
+    - url: "/gevel-schilderen/"
+      when: "sierpleister overschilderbaar / als basis voor schilderwerk"
+      anchorIntent: "gevel schilderen na sierpleister"
+    - url: "/onze-werken/"
+      when: "hero CTA en werkwijze verwachten-blok"
+      anchorIntent: "bekijk afgeronde projecten"
+
+serp:
+  topResultFormats:
+    - "vergelijking spachtelputz vs. crepi"
+    - "prijstabel per type/korrel"
+    - "voor- en nadelen lijst"
+    - "werkwijze stap-voor-stap"
+    - "FAQ sectie"
+  featuredSnippetType: "table"
+  peopleAlsoAsk:
+    - "Wat kost sierpleister per m²?"
+    - "Wat is het verschil tussen spachtelputz en crepi?"
+    - "Hoe lang gaat sierpleister mee?"
+    - "Hoe reinig je gevel sierpleister?"
+    - "Kan je sierpleister schilderen?"
+  contentGaps: []

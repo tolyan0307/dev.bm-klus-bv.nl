@@ -1,0 +1,102 @@
+# Brief: /muren-stucen/ — money page (muren stucen / binnenmuren stucen / stucwerk binnen)
+
+page:
+  slug: "muren-stucen"
+  url: "/muren-stucen/"
+  pageType: "money"
+  taskType: "improve"
+  currentFile: "app/muren-stucen/page.tsx"
+  contentFile: "lib/content/muren-stucen.ts"
+
+seo:
+  primaryKeyword: "muren stucen"
+  secondaryKeywords:
+    - "binnenmuren stucen"
+    - "stucwerk binnen"
+    - "wanden stucen"
+    - "muren stucen prijs per m2"
+    - "sausklaar stucwerk"
+    - "behangklaar stucwerk"
+    - "spackspuitwerk"
+    - "muren stucen Rotterdam"
+  searchIntent: "mixed"
+  pageGoal: "Bezoeker begrijpt welk afwerkingsniveau (behangklaar/sausklaar/spackspuitwerk) bij zijn situatie past, ziet BM klus als specialist in binnenstucwerk, en vraagt een offerte aan"
+
+cannibalization:
+  siblingPages:
+    - "/buiten-stucwerk/"
+    - "/sierpleister/"
+  doNotCoverDeeply:
+    - "buitenmuren stucen / gevelpleister (→ /buiten-stucwerk/)"
+    - "sierpleister / spachtelputz buiten (→ /sierpleister/)"
+    - "gevelisolatie met EPS/PUR (→ /gevelisolatie/)"
+  differentiator: "Uitsluitend BINNENSTUCWERK — wanden en muren binnen, niet buiten. Unieke sectie droogtijd (1–2 weken) en detail voorbereiding per ondergrond (nieuwbouw, bestaand, behang)"
+
+content:
+  pageRoleSummary: "Centrale money page voor binnenstucwerk — legt uit wat muren stucen is, welke varianten beschikbaar zijn, wat het kost en hoe het proces verloopt"
+  userQuestionsToAnswer:
+    - "Wat kost muren stucen per m²?"
+    - "Wat is het verschil tussen behangklaar en sausklaar?"
+    - "Wat is spackspuitwerk en wanneer is dat de juiste keuze?"
+    - "Hoe lang duurt het voor ik kan schilderen na het stucen?"
+    - "Hoe wordt de ondergrond voorbereid?"
+    - "Kunnen scheuren worden gerepareerd voor het stucen?"
+    - "Is een primer altijd nodig?"
+  requiredSections:
+    - "Hero met H1, trust bullets, geo, CTAs"
+    - "Wat is muren stucen (binnen)?"
+    - "Behangklaar vs. sausklaar vs. spackspuitwerk vs. raapwerk"
+    - "Voordelen van binnenmuren stucen"
+    - "Kosten muren stucen (prijs per m²) + prijsfactoren + wat zit erin"
+    - "WaaromBmKlus (trust section)"
+    - "Werkwijze: van voorbereiding tot oplevering"
+    - "Voorbereiding & ondergrond (nieuwbouw / bestaand / behang)"
+    - "Droogtijd: wanneer schilderen of behangen?"
+    - "Reviews"
+    - "FAQ (10 vragen)"
+    - "Internal links footer"
+  faqIntents:
+    - "Prijs per m² voor alle varianten"
+    - "Verschil behangklaar vs sausklaar"
+    - "Wat is spackspuitwerk"
+    - "Wat is raapwerk"
+    - "Scheuren herstellen voor stucen"
+    - "Primer noodzakelijk?"
+    - "Hoe ruimte voorbereiden"
+    - "Hoe lang duurt stucen kamer"
+    - "Wanneer schilderen/behangen na stucen"
+    - "Plafonds stucen"
+  ctaType: "mixed"
+
+links:
+  requiredOutgoing:
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+    - url: "/onze-werken/"
+      anchorIntent: "voorbeelden bekijken (hero + werkwijze)"
+  suggestedContextual:
+    - url: "/buiten-stucwerk/"
+      when: "Wanneer bezoeker ook buitenmuren wil stucen"
+      anchorIntent: "buiten stucwerk"
+    - url: "/diensten/"
+      when: "Footer / internal nav"
+      anchorIntent: "bekijk alle diensten"
+
+serp:
+  topResultFormats:
+    - "prijs-per-m2 tabel (behangklaar/sausklaar)"
+    - "stap-voor-stap werkwijze"
+    - "vraag-antwoord / FAQ"
+    - "verschil behangklaar vs sausklaar uitleg"
+  featuredSnippetType: "list"
+  peopleAlsoAsk:
+    - "Wat kost muren stucen per m²?"
+    - "Wat is het verschil tussen sausklaar en behangklaar stucwerk?"
+    - "Hoe lang duurt stucwerk drogen?"
+    - "Wanneer kan ik schilderen na het stucen?"
+    - "Wat is spackspuitwerk?"
+  contentGaps:
+    - "Droogtijd detail per situatie (al aanwezig, sterke differentiator)"
+    - "Raapwerk als losse variant (al aanwezig)"
+    - "VCA* vermelding ontbreekt in trust bullets (fix in stap 2)"
+    - "Link naar /onze-werken/ voor projectbewijs (fix in stap 2)"

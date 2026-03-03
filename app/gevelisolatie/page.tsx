@@ -164,7 +164,7 @@ export default function GevelisolatiePage() {
         </div>
 
         {/* ── WAAROM BM KLUS (own container) ── */}
-        <WaaromBmKlusSection subtitle="BM Klus BV is gespecialiseerd in buitengevelisolatie (ETICS) en gevelafwerking in de regio Rotterdam en omgeving." />
+        <WaaromBmKlusSection subtitle="Lokale vakmensen uit Rotterdam, duidelijke werkwijze en geveloplossingen op basis van echte projecten." />
 
         {/* ── Content Sections — part 1b ── */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
