@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Hoe vraag ik een offerte aan?",
     answer:
-      "U kunt via de contactpagina een gratis inspectie of offerte aanvragen. We nemen binnen één werkdag contact met u op.",
+      "U kunt via de contactpagina een gratis opname op locatie of offerte aanvragen. We nemen binnen één werkdag contact met u op.",
     link: true,
   },
 ];

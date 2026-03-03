@@ -182,7 +182,7 @@ export default function WerkwijzeStepper() {
             href="/contact/"
             className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Plan gratis inspectie
+            Plan gratis opname op locatie
             <ArrowRight size={14} />
           </Link>
         </div>

@@ -15,7 +15,7 @@ export const projects: ProjectCard[] = [
       year: 2025,
     },
     projectUrl:
-      "/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025",
+      "/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
     cardAlt:
       "Halsteren buitenstucwerk met sierpleister 1,5 mm – woning binnenplaats en gevel, voor/na (2025)",
     coverImage: {

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | BM klus BV",
   },
   description:
-    "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis inspectie en offerte.",
+    "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis opname op locatie en offerte.",
   robots: { index: true, follow: true },
   icons: {
     icon: [

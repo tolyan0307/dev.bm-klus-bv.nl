@@ -122,7 +122,7 @@ export default function HeroSection() {
             {/* Trust signals */}
             <ul className="mt-6 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-5 sm:gap-y-2">
               {[
-                "Gratis inspectie & offerte",
+                "Gratis opname op locatie & offerte",
                 "ETICS gecertificeerd systeem",
                 "Regio Rotterdam (±100 km)",
               ].map((text) => (

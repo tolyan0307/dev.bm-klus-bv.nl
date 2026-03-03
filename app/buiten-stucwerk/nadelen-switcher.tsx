@@ -142,7 +142,7 @@ export default function NadelenSwitcher() {
               href="/contact/"
               className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:brightness-110"
             >
-              Gratis inspectie aanvragen
+              Gratis opname op locatie aanvragen
               <ArrowRight size={14} />
             </Link>
           </div>

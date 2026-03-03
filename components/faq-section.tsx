@@ -4,38 +4,7 @@ import { ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 
-const faqs = [
-  {
-    question: "Wat is buitengevelisolatie (ETICS)?",
-    answer:
-      "ETICS staat voor External Thermal Insulation Composite System. Dit is een isolatiemethode waarbij isolatieplaten aan de buitenkant van uw gevel worden aangebracht, gevolgd door een wapening en een decoratieve afwerklaag zoals stucwerk of sierpleister. Het zorgt voor uitstekende isolatie en een frisse uitstraling.",
-    link: true,
-  },
-  {
-    question: "Hoeveel kan ik besparen met gevelisolatie?",
-    answer:
-      "Gemiddeld kunt u tot 40% besparen op uw energiekosten. De precieze besparing hangt af van de huidige staat van uw woning en de gekozen isolatiewaarde. Daarnaast verhoogt gevelisolatie het wooncomfort en de waarde van uw woning.",
-    link: false,
-  },
-  {
-    question: "Hoe lang duurt het aanbrengen van gevelisolatie?",
-    answer:
-      "Voor een gemiddelde woning duurt het project 2 tot 4 weken, afhankelijk van de grootte en complexiteit. We plannen het werk zorgvuldig en houden u tijdens het proces volledig op de hoogte.",
-    link: false,
-  },
-  {
-    question: "Krijg ik garantie op het werk?",
-    answer:
-      "Ja, wij bieden garantie op zowel het materiaal als de uitvoering. De duur van de garantie varieert per type isolatie en afwerking. Dit bespreken we vooraf in de offerte.",
-    link: true,
-  },
-  {
-    question: "Kan ik subsidie krijgen voor gevelisolatie?",
-    answer:
-      "Ja, er zijn verschillende subsidieregelingen beschikbaar voor gevelisolatie. We denken graag met u mee over de mogelijkheden en helpen u bij het aanvragen van subsidies.",
-    link: false,
-  },
-]
+import { homeFaqItems } from "@/lib/content/home-faq"
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
@@ -77,7 +46,7 @@ export default function FaqSection() {
             {/* Right: Accordion */}
             <div className="lg:col-span-7">
               <div className="space-y-3">
-                {faqs.map((faq, index) => (
+                {homeFaqItems.map((faq, index) => (
                   <div
                     key={index}
                     className={`overflow-hidden rounded-xl border transition-all ${

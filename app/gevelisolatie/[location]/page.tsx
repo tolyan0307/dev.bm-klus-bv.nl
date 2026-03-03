@@ -229,7 +229,7 @@ export default async function GevelisolatieLocationPage({
                 {data.h1}
                 <br />
                 <span className="text-white/90">
-                  prijs per m² na gratis opname
+                  opname op locatie & offerte
                 </span>
               </h1>
 
@@ -240,10 +240,7 @@ export default async function GevelisolatieLocationPage({
               {/* Price teaser */}
               <div className="flex items-center gap-3">
                 <span className="rounded-lg bg-[#EA6C20]/15 px-3 py-1.5 text-sm font-bold text-[#EA6C20] ring-1 ring-[#EA6C20]/25">
-                  Vanaf €110/m²
-                </span>
-                <span className="text-xs text-white/50">
-                  incl. arbeid & materiaal
+                  Prijsindicatie: zie kostenpagina
                 </span>
               </div>
 
@@ -365,9 +362,9 @@ export default async function GevelisolatieLocationPage({
                   </div>
                   <div className="divide-y divide-border">
                     {[
-                      ["Prijs vanaf", "€110/m²"],
+                      ["Prijsindicatie", "na opname op locatie"],
                       ["Doorlooptijd", "1–2 weken"],
-                      ["Opname", "Gratis, binnen 48 uur"],
+                      ["Opname", "Op locatie, op afspraak"],
                       [
                         "Bouwperiode",
                         data.bouwperiode.split(",")[0].split(".")[0],

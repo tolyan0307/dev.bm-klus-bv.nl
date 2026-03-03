@@ -15,6 +15,7 @@ import PortfolioSection from "@/components/portfolio-section"
 import ReviewsSection from "@/components/reviews-section"
 import WorkAreaSection from "@/components/work-area-section"
 import FaqSection from "@/components/faq-section"
+import { homeFaqItems } from "@/lib/content/home-faq"
 
 const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
@@ -28,48 +29,14 @@ const base = SITE.canonicalBase
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Wat is buitengevelisolatie (ETICS)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "ETICS staat voor External Thermal Insulation Composite System. Dit is een isolatiemethode waarbij isolatieplaten aan de buitenkant van uw gevel worden aangebracht, gevolgd door een wapening en een decoratieve afwerklaag zoals stucwerk of sierpleister. Het zorgt voor uitstekende isolatie en een frisse uitstraling.",
-      },
+  mainEntity: homeFaqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
     },
-    {
-      "@type": "Question",
-      name: "Hoeveel kan ik besparen met gevelisolatie?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Afhankelijk van uw woning en beginsituatie kan gevelisolatie een merkbare verlaging van uw stookkosten opleveren. De mate van besparing hangt af van de huidige staat van uw woning en de gekozen isolatiewaarde. Daarnaast verhoogt gevelisolatie het wooncomfort en de waarde van uw woning.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Hoe lang duurt het aanbrengen van gevelisolatie?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Voor een gemiddelde woning duurt het project 2 tot 4 weken, afhankelijk van de grootte en complexiteit. We plannen het werk zorgvuldig en houden u tijdens het proces volledig op de hoogte.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Krijg ik garantie op het werk?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Ja, wij bieden garantie op zowel het materiaal als de uitvoering. De duur van de garantie varieert per type isolatie en afwerking. Dit bespreken we vooraf in de offerte.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Kan ik subsidie krijgen voor gevelisolatie?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Ja, er zijn verschillende subsidieregelingen beschikbaar voor gevelisolatie. We denken graag met u mee over de mogelijkheden en helpen u bij het aanvragen van subsidies.",
-      },
-    },
-  ],
+  })),
 }
 
 const organizationSchema = {

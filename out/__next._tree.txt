@@ -6,4 +6,4 @@
 :HL["/images/projects/halsteren-buitenstucwerk-na-02.webp","image"]
 :HL["/images/projects/halsteren-buitenstucwerk-na-05.webp","image"]
 :HL["/images/projects/halsteren-buitenstucwerk-na-08.webp","image"]
-0:{"buildId":"vHDzYqjIp7rhn8lJd_ng-","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"fLLXmtGRsulNsnlnDGYP9","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

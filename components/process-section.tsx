@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     icon: Phone,
-    title: "Gratis inspectie",
+    title: "Gratis opname op locatie",
     description:
       "We komen langs voor een vrijblijvende opname en advies op maat.",
   },

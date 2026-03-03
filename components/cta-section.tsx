@@ -26,7 +26,7 @@ export default function CtaSection() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-background/70 sm:text-lg">
-            Plan een gratis inspectie en ontvang binnen 48 uur een vrijblijvende offerte.
+            Plan een gratis opname op locatie en ontvang binnen 48 uur een vrijblijvende offerte.
             Onze experts denken graag met u mee over de beste oplossing voor uw woning.
           </p>
 
@@ -37,7 +37,7 @@ export default function CtaSection() {
               className="group inline-flex items-center gap-3 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:shadow-xl"
             >
               <Phone className="h-5 w-5" />
-              Plan gratis inspectie
+              Plan gratis opname op locatie
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link

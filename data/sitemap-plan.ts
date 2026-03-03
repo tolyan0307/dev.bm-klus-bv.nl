@@ -7,16 +7,26 @@ export type PlannedRoute = {
   enabled?: boolean
 }
 
+/** Production hostnames for canonical/base URL. */
+const CANONICAL_HOSTS = new Set(["bm-klus-bv.nl", "www.bm-klus-bv.nl"])
+
+const CANONICAL_BASE = "https://bm-klus-bv.nl"
+
 /**
- * Returns the site base URL from NEXT_PUBLIC_SITE_URL env var,
- * falling back to the production canonical URL.
+ * Returns the site base URL for use in canonical URLs, OG tags, sitemap, etc.
+ * If NEXT_PUBLIC_SITE_URL is set to a known production hostname it is used;
+ * otherwise falls back to the hard-coded production canonical base.
  * Trailing slash is stripped so callers can append paths safely.
  */
 export function getSiteUrl(): string {
-  return (
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ||
-    "https://bm-klus-bv.nl"
-  )
+  const raw = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "")
+  if (!raw) return CANONICAL_BASE
+  try {
+    const host = new URL(raw).hostname
+    return CANONICAL_HOSTS.has(host) ? raw : CANONICAL_BASE
+  } catch {
+    return CANONICAL_BASE
+  }
 }
 
 export const PLANNED_ROUTES = [
@@ -24,7 +34,7 @@ export const PLANNED_ROUTES = [
   {
     path: "/",
     description:
-      "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis inspectie en offerte binnen 24–48 uur.",
+      "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis opname op locatie en offerte binnen 24–48 uur.",
     changefreq: "monthly",
     priority: 1.0,
   },
