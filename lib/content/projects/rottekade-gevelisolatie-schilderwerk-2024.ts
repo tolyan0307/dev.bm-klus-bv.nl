@@ -1,0 +1,15 @@
+// ─── Config ──────────────────────────────────────────────────────────────────
+export const IMAGE_EXT = "webp"
+
+// ─── Image helpers ────────────────────────────────────────────────────────────
+const pad = (n: number) => String(n).padStart(2, "0")
+
+export const beforeImages = Array.from({ length: 16 }, (_, i) => ({
+  src: `/images/projects/rottekade-gevelisolatie-10cm-voor-${pad(i + 1)}.${IMAGE_EXT}`,
+  alt: `Rottekade gevelisolatie 10 cm – voor de werken foto ${pad(i + 1)} (2024)`,
+}))
+
+export const afterImages = Array.from({ length: 9 }, (_, i) => ({
+  src: `/images/projects/rottekade-gevelisolatie-10cm-na-${pad(i + 1)}.${IMAGE_EXT}`,
+  alt: `Rottekade gevelisolatie 10 cm – na de werken foto ${pad(i + 1)} (2024)`,
+}))

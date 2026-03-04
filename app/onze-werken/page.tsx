@@ -22,7 +22,6 @@ import { projects } from "@/lib/content/projects"
 const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
 )
-const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 
 export const metadata = buildPageMetadata("/onze-werken/")
 
@@ -444,7 +443,6 @@ export default function OnzeWerkenPage() {
       </div>
 
       <StickyCTABar />
-      <QuoteModal dienst="geveloplossingen" />
     </>
   )
 }

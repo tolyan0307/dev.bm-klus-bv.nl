@@ -236,7 +236,7 @@ export default function HalsterenProjectPage() {
               className="inline-block rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wider text-white"
               style={{ background: "rgba(232,96,10,0.90)", border: "1px solid rgba(232,96,10,0.60)" }}
             >
-              Buitenstucwerk
+              Buiten-stucwerk
             </span>
           </div>
 

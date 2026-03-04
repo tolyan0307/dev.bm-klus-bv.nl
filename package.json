@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "images:webp": "node scripts/convert-to-webp.mjs"
+    "images:webp": "node scripts/convert-to-webp.mjs",
+    "images:convert-replace": "node scripts/convert-and-replace.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

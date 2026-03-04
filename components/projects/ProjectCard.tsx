@@ -35,10 +35,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {serviceType}
           </span>
         </div>
-        {meta.year && (
+        {(meta.yearDisplay ?? meta.year) && (
           <div className="absolute right-3 top-3">
             <span className="inline-flex items-center rounded-full bg-black/30 px-2 py-0.5 text-[9px] font-medium text-white/70 backdrop-blur-sm">
-              {meta.year}
+              {meta.yearDisplay ?? meta.year}
             </span>
           </div>
         )}

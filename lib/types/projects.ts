@@ -14,6 +14,7 @@ export interface ProjectCard {
     objectType: string
     highlight: string
     year?: number
+    yearDisplay?: string
   }
   projectUrl: string
   cardAlt: string

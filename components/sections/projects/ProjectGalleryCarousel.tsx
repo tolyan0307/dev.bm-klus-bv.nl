@@ -35,7 +35,7 @@ export default function ProjectGalleryCarousel({
     [total]
   )
 
-  // Scroll active thumbnail into view (skip initial render to prevent page jump)
+  // Scroll active thumbnail into view within the strip only (avoid scrolling the whole page)
   const isInitialRender = useRef(true)
   useEffect(() => {
     if (isInitialRender.current) {
@@ -46,7 +46,14 @@ export default function ProjectGalleryCarousel({
     if (!container) return
     const thumb = container.children[current] as HTMLElement | undefined
     if (thumb) {
-      thumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" })
+      // Use container.scrollTo instead of scrollIntoView to avoid scrolling the page.
+      // scrollIntoView scrolls all ancestors including viewport, which caused
+      // the "Na de werken" section to jump into view on page load.
+      const thumbLeft = thumb.offsetLeft
+      const thumbWidth = thumb.offsetWidth
+      const containerWidth = container.clientWidth
+      const scrollLeft = thumbLeft - containerWidth / 2 + thumbWidth / 2
+      container.scrollTo({ left: Math.max(0, scrollLeft), behavior: "smooth" })
     }
   }, [current])
 

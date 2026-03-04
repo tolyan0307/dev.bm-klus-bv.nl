@@ -16,7 +16,7 @@ export const afterImages = Array.from({ length: 10 }, (_, i) => ({
 
 // ─── "Onze werken" card object ────────────────────────────────────────────────
 export const projectCard = {
-  serviceType: "Buitenstucwerk",
+  serviceType: "Buiten-stucwerk",
   title: "Halsteren – buitenstucwerk, sierpleister & schilderwerk (2025)",
   subtitle:
     "Binnenplaats en centrale gevel: herstel cementstuc, sierpleister 1,5 mm, zinken afdekking en 2 lagen verf",
