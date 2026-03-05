@@ -50,11 +50,39 @@ jobs:
 
       - name: Setup SSH key
         run: |
+          set -euo pipefail
+
+          # sanitize env (на случай CRLF/лишних переносов)
+          REMOTE_HOST_CLEAN="$(printf '%s' "$REMOTE_HOST" | tr -d '\r\n')"
+          REMOTE_PORT_CLEAN="$(printf '%s' "$REMOTE_PORT" | tr -d '\r\n[:space:]')"
+          REMOTE_USER_CLEAN="$(printf '%s' "$REMOTE_USER" | tr -d '\r\n')"
+
+          test -n "$REMOTE_HOST_CLEAN" || (echo "ERROR: REMOTE_HOST empty" && exit 1)
+          test -n "$REMOTE_PORT_CLEAN" || (echo "ERROR: REMOTE_PORT empty" && exit 1)
+          test -n "$REMOTE_USER_CLEAN" || (echo "ERROR: REMOTE_USER empty" && exit 1)
+
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          printf "%s" "${{ secrets.ANTAGONIST_SSH_KEY }}" > ~/.ssh/id_ed25519
+
+          # private key (секрет)
+          printf "%s" "${{ secrets.ANTAGONIST_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -p "$REMOTE_PORT" "$REMOTE_HOST" >> ~/.ssh/known_hosts
+
+          # validate private key format
+          ssh-keygen -y -f ~/.ssh/id_ed25519 >/dev/null 2>&1 || (echo "ERROR: Invalid private key in ANTAGONIST_SSH_KEY" && exit 1)
+
+          # keyscan may fail on some shared hosts; don't fail here
+          ssh-keyscan -T 10 -p "$REMOTE_PORT_CLEAN" "$REMOTE_HOST_CLEAN" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+          # export sanitized values for next steps in this shell (and future steps)
+          echo "REMOTE_HOST=$REMOTE_HOST_CLEAN" >> "$GITHUB_ENV"
+          echo "REMOTE_PORT=$REMOTE_PORT_CLEAN" >> "$GITHUB_ENV"
+          echo "REMOTE_USER=$REMOTE_USER_CLEAN" >> "$GITHUB_ENV"
+
+          # real connectivity test
+          ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new -p "$REMOTE_PORT_CLEAN" \
+            "$REMOTE_USER_CLEAN@$REMOTE_HOST_CLEAN" "echo SSH_OK"
+
 
       - name: Prepare release name
         id: rel
