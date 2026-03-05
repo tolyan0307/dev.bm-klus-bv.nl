@@ -1,0 +1,142 @@
+name: Deploy dev (Antagonist Slim)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-dev-bmklus
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_ENV: production
+      NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+      NEXT_PUBLIC_CONTACT_API_BASE: ""
+      NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+
+      REMOTE_HOST: ${{ secrets.ANTAGONIST_HOST }}
+      REMOTE_PORT: ${{ secrets.ANTAGONIST_PORT }}
+      REMOTE_USER: ${{ secrets.ANTAGONIST_USER }}
+      DOMAIN_DIR: ${{ vars.DEPLOY_DOMAIN_DIR }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Verify out folder exists
+        run: |
+          test -d out || (echo "ERROR: out/ not found. Check Next export config (output: 'export')." && exit 1)
+          test -f out/index.html || (echo "ERROR: out/index.html not found." && exit 1)
+          test -d out/_next || (echo "ERROR: out/_next not found." && exit 1)
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf "%s" "${{ secrets.ANTAGONIST_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "$REMOTE_PORT" "$REMOTE_HOST" >> ~/.ssh/known_hosts
+
+      - name: Prepare release name
+        id: rel
+        run: |
+          REL="$(date -u +%Y%m%dT%H%M%SZ)_${GITHUB_SHA::12}"
+          echo "rel=$REL" >> "$GITHUB_OUTPUT"
+          echo "REMOTE_UPLOADS_DIR=$DOMAIN_DIR/wp-content/uploads/v0" >> "$GITHUB_ENV"
+          echo "REMOTE_REL_DIR=$DOMAIN_DIR/wp-content/uploads/v0/$REL" >> "$GITHUB_ENV"
+
+      - name: Create remote release directory
+        run: |
+          ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+            set -e
+            mkdir -p '$REMOTE_UPLOADS_DIR'
+            mkdir -p '$REMOTE_REL_DIR'
+          "
+
+      - name: Upload out/ (rsync if available, fallback to tar over ssh)
+        run: |
+          if ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "command -v rsync >/dev/null 2>&1"; then
+            echo "Using rsync"
+            rsync -az --delete \
+              -e "ssh -p $REMOTE_PORT" \
+              out/ "$REMOTE_USER@$REMOTE_HOST:$REMOTE_REL_DIR/"
+          else
+            echo "rsync not available on remote, using tar over ssh"
+            tar -C out -czf - . | ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+              set -e
+              tar -xzf - -C '$REMOTE_REL_DIR'
+            "
+          fi
+
+      - name: Switch current + _next/images symlinks (safe)
+        run: |
+          ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+            set -euo pipefail
+
+            DOMAIN_DIR='$DOMAIN_DIR'
+            UPLOADS_DIR='$REMOTE_UPLOADS_DIR'
+            REL='${{ steps.rel.outputs.rel }}'
+            REL_DIR='$REMOTE_UPLOADS_DIR/${{ steps.rel.outputs.rel }}'
+
+            # Sanity checks
+            test -f \"\$REL_DIR/index.html\"
+            test -d \"\$REL_DIR/_next\"
+
+            # current must be symlink or absent (safety)
+            if [ -e \"\$UPLOADS_DIR/current\" ] && [ ! -L \"\$UPLOADS_DIR/current\" ]; then
+              echo 'ERROR: \$UPLOADS_DIR/current exists and is not a symlink'
+              exit 1
+            fi
+
+            # _next/images in public_html must be symlink or absent (safety)
+            for p in \"\$DOMAIN_DIR/_next\" \"\$DOMAIN_DIR/images\"; do
+              if [ -e \"\$p\" ] && [ ! -L \"\$p\" ]; then
+                echo \"ERROR: \$p exists and is not a symlink. Refusing to replace.\"
+                exit 1
+              fi
+            done
+
+            ln -sfn \"\$REL_DIR\" \"\$UPLOADS_DIR/current\"
+            ln -sfn \"\$UPLOADS_DIR/current/_next\" \"\$DOMAIN_DIR/_next\"
+
+            # images may be absent in some builds; handle gracefully
+            if [ -d \"\$UPLOADS_DIR/current/images\" ]; then
+              ln -sfn \"\$UPLOADS_DIR/current/images\" \"\$DOMAIN_DIR/images\"
+            fi
+
+            echo 'Deployed release:' \"\$REL\"
+            echo 'current ->' \$(readlink \"\$UPLOADS_DIR/current\")
+            echo '_next   ->' \$(readlink \"\$DOMAIN_DIR/_next\") || true
+            if [ -L \"\$DOMAIN_DIR/images\" ]; then
+              echo 'images  ->' \$(readlink \"\$DOMAIN_DIR/images\")
+            fi
+          "
+
+      - name: Optional cleanup old releases (keep last 5)
+        run: |
+          ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+            set -e
+            UPLOADS_DIR='$REMOTE_UPLOADS_DIR'
+            cd \"\$UPLOADS_DIR\"
+            ls -1dt 20* 2>/dev/null | tail -n +6 | xargs -r rm -rf
+          "
