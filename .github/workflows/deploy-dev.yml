@@ -69,7 +69,11 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
 
           # validate private key format
-          ssh-keygen -y -f ~/.ssh/id_ed25519 >/dev/null 2>&1 || (echo "ERROR: Invalid private key in ANTAGONIST_SSH_KEY" && exit 1)
+          if ! ssh-keygen -y -f ~/.ssh/id_ed25519 >/dev/null 2> /tmp/sshkey_err.log; then
+            echo "ERROR: ssh-keygen could not read ANTAGONIST_SSH_KEY"
+            cat /tmp/sshkey_err.log || true
+            exit 1
+          fi
 
           # keyscan may fail on some shared hosts; don't fail here
           ssh-keyscan -T 10 -p "$REMOTE_PORT_CLEAN" "$REMOTE_HOST_CLEAN" >> ~/.ssh/known_hosts 2>/dev/null || true
