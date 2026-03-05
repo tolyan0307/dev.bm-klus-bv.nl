@@ -49,6 +49,9 @@ jobs:
           test -d out/_next || (echo "ERROR: out/_next not found." && exit 1)
 
       - name: Setup SSH key
+        shell: bash
+        env:
+          ANTAGONIST_SSH_KEY_B64: ${{ secrets.ANTAGONIST_SSH_KEY_B64 }}
         run: |
           set -euo pipefail
 
@@ -64,8 +67,10 @@ jobs:
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
 
-          # private key from base64 secret (устойчиво к форматированию)
-          printf "%s" "${{ secrets.ANTAGONIST_SSH_KEY_B64 }}" | tr -d '\r\n' | base64 -d > ~/.ssh/id_ed25519
+          # private key from base64 secret (устойчиво к форматированию: чистим whitespace)
+          KEY_B64_CLEAN="$(printf '%s' "${ANTAGONIST_SSH_KEY_B64:-}" | tr -d '\r\n\t ' )"
+          test -n "$KEY_B64_CLEAN" || { echo "ERROR: ANTAGONIST_SSH_KEY_B64 empty" && exit 1; }
+          printf '%s' "$KEY_B64_CLEAN" | base64 --decode > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
 
           # validate private key format
