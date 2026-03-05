@@ -75,17 +75,38 @@ jobs:
             exit 1
           fi
 
-          # keyscan may fail on some shared hosts; don't fail here
-          ssh-keyscan -T 10 -p "$REMOTE_PORT_CLEAN" "$REMOTE_HOST_CLEAN" >> ~/.ssh/known_hosts 2>/dev/null || true
-
           # export sanitized values for next steps in this shell (and future steps)
           echo "REMOTE_HOST=$REMOTE_HOST_CLEAN" >> "$GITHUB_ENV"
           echo "REMOTE_PORT=$REMOTE_PORT_CLEAN" >> "$GITHUB_ENV"
           echo "REMOTE_USER=$REMOTE_USER_CLEAN" >> "$GITHUB_ENV"
 
-          # real connectivity test
-          ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new -p "$REMOTE_PORT_CLEAN" \
-            "$REMOTE_USER_CLEAN@$REMOTE_HOST_CLEAN" "echo SSH_OK"
+          # diagnostics: show runner egress IP (полезно для IP allowlist проверки)
+          echo "Runner egress IP:"
+          curl -4s ifconfig.me || true
+          echo
+
+          # real connectivity test with retries (shared hosting can be picky)
+          ok=0
+          for i in 1 2 3 4 5; do
+            echo "SSH probe attempt $i..."
+            if ssh -4 \
+                -o BatchMode=yes \
+                -o IdentitiesOnly=yes \
+                -o PreferredAuthentications=publickey \
+                -o PasswordAuthentication=no \
+                -o KbdInteractiveAuthentication=no \
+                -o ConnectTimeout=10 \
+                -o ConnectionAttempts=1 \
+                -o StrictHostKeyChecking=accept-new \
+                -p "$REMOTE_PORT_CLEAN" \
+                "$REMOTE_USER_CLEAN@$REMOTE_HOST_CLEAN" "echo SSH_OK"; then
+              ok=1
+              break
+            fi
+            sleep $((i * 5))
+          done
+
+          test "$ok" -eq 1 || { echo "ERROR: SSH connectivity test failed after retries"; exit 1; }
 
 
       - name: Prepare release name
