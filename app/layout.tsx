@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
-import { AnalyticsProvider } from '@/components/analytics-provider'
 import { GtmProvider } from '@/components/gtm-provider'
 import './globals.css'
 
@@ -50,7 +49,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <AnalyticsProvider />
         <GtmProvider />
       </body>
     </html>
