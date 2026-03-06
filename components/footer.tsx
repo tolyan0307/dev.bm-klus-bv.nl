@@ -85,12 +85,12 @@ export default function Footer() {
               </h2>
             </div>
 
-            <div className="flex shrink-0 gap-3">
+            <div className="flex shrink-0 flex-wrap gap-3">
               <a
                 href="https://wa.me/31612079808"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#25D366]/30 bg-[#25D366]/10 px-6 py-4 text-base font-semibold text-background/90 backdrop-blur-sm transition-all hover:border-[#25D366]/50 hover:bg-[#25D366]/20 sm:w-auto"
+                className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-lg border-2 border-[#25D366]/30 bg-[#25D366]/10 px-6 py-3 text-base font-semibold text-background/90 backdrop-blur-sm transition-all hover:border-[#25D366]/50 hover:bg-[#25D366]/20"
               >
                 <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#25D366]/50 bg-[#25D366]/15 transition-transform group-hover:scale-110">
                   <MessageCircle className="h-4 w-4 text-[#25D366]" strokeWidth={1.5} />
@@ -99,7 +99,7 @@ export default function Footer() {
               </a>
               <a
                 href="#offerte"
-                className="group inline-flex items-center justify-center gap-3 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20 hover:brightness-110 sm:w-auto"
+                className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-lg bg-primary px-8 py-3 text-base font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20 hover:brightness-110"
               >
                 Offerte aanvragen
                 <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -235,12 +235,20 @@ export default function Footer() {
             <p className="text-xs text-background/50">
               &copy; {new Date().getFullYear()} BM klus BV &mdash; Alle rechten voorbehouden
             </p>
-            <Link
-              href="/privacybeleid/"
-              className="text-xs text-background/50 transition-colors hover:text-primary"
-            >
-              Privacybeleid
-            </Link>
+            <div className="flex items-center gap-4">
+              <button
+                className="csconsentlink text-xs text-background/50 transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
+                type="button"
+              >
+                Cookie-instellingen
+              </button>
+              <Link
+                href="/privacybeleid/"
+                className="text-xs text-background/50 transition-colors hover:text-primary"
+              >
+                Privacybeleid
+              </Link>
+            </div>
           </div>
         </div>
       </div>

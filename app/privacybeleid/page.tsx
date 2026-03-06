@@ -62,7 +62,8 @@ export default function PrivacybeleidPage() {
             <p className="text-base leading-relaxed text-muted-foreground mb-4">
               Wij zijn verantwoordelijk voor de verwerking van uw persoonsgegevens. Hieronder vindt u onze contactgegevens. Voor vragen of verzoeken met betrekking tot uw privacy kunt u contact met ons opnemen via het onderstaande e-mailadres.
             </p>
-            <table className="w-full text-sm border-collapse">
+            <div className="overflow-x-auto -mx-4 sm:mx-0">
+            <table className="w-full text-sm border-collapse min-w-[360px]">
               <tbody>
                 {[
                   ["Bedrijfsnaam", "BM klus BV"],
@@ -78,6 +79,7 @@ export default function PrivacybeleidPage() {
                 ))}
               </tbody>
             </table>
+            </div>
           </section>
 
           {/* Section 2 */}

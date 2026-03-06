@@ -21,8 +21,8 @@ export default function GevelisolatieHero({
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/gevelisolatie-hero.webp"
-          alt="Buitengevelisolatie (ETICS) afgewerkt met sierpleister op een woning in regio Rotterdam"
+          src="/images/projects/dordrecht-gevelisolatie-10cm-na-01.webp"
+          alt="Buitengevelisolatie (ETICS) afgewerkt op een woning in Dordrecht — BM klus BV"
           fill
           className="object-cover"
           sizes="100vw"

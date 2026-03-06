@@ -121,8 +121,8 @@ export default function BuitenStucwerkPage() {
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
           <Image
-            src="/images/buiten-stucwerk-hero.webp"
-            alt="Buitenmuur stucen — stukadoor brengt pleisterlaag aan op gevel in Rotterdam"
+            src="/images/projects/halsteren-buitenstucwerk-na-01.webp"
+            alt="Buitenmuur stucen — afgewerkt stucwerk op gevel in Halsteren"
             fill
             className="object-cover"
             sizes="100vw"

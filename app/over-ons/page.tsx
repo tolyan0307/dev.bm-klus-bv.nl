@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import {
@@ -175,8 +176,18 @@ export default function OverOnsPage() {
 
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/projects/klaaswaal-gevelisolatie-6cm-na-01.webp"
+            alt="Vakmanschap in gevelisolatie — afgewerkt project in Klaaswaal"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/40" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#1A1A1A]/60 via-transparent to-[#1A1A1A]/30" />
+        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
@@ -739,11 +750,11 @@ export default function OverOnsPage() {
                       open={i === 0}
                     >
                       <summary className="flex cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden">
-                        <div className="flex items-start gap-4">
-                          <span className="mt-0.5 text-lg font-bold tabular-nums text-primary/30 group-open:text-primary">
+                        <div className="flex min-w-0 items-start gap-4">
+                          <span className="mt-0.5 shrink-0 text-lg font-bold tabular-nums text-primary/30 group-open:text-primary">
                             {String(i + 1).padStart(2, "0")}
                           </span>
-                          <span className="text-base font-semibold text-foreground">
+                          <span className="min-w-0 break-words text-base font-semibold text-foreground">
                             {faq.question}
                           </span>
                         </div>

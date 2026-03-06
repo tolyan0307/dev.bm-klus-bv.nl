@@ -57,10 +57,10 @@ export default function StickyCTABar() {
 
           <a
             href="#offerte"
-            className="flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-opacity active:opacity-90"
+            className="flex min-w-0 flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-opacity active:opacity-90"
           >
             Offerte aanvragen
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4 shrink-0" />
           </a>
 
           <button

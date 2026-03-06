@@ -11,8 +11,8 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-home.webp"
-          alt="Professionele gevelisolatie door BM klus BV in Rotterdam"
+          src="/images/projects/bruinisse-gevelisolatie-6cm-na-03.webp"
+          alt="Gevelisolatie afgewerkt met sierpleister — BM klus BV regio Rotterdam"
           fill
           className="object-cover object-center"
           priority

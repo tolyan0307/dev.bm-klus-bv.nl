@@ -94,14 +94,14 @@ export default function EticsSection() {
         </div>
 
         {/* ── Stats ── */}
-        <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-4 lg:mt-14">
+        <div className="mt-12 hidden grid-cols-3 gap-4 sm:mt-12 sm:grid lg:mt-14">
           {stats.map(({ icon: Icon, value, label }) => (
             <div
               key={label}
-              className="rounded-xl border border-border/60 bg-card/80 px-4 py-5 shadow-sm transition-all hover:border-primary/25 hover:shadow-md sm:px-6"
+              className="rounded-xl border border-border/60 bg-card/80 px-6 py-5 shadow-sm transition-all hover:border-primary/25 hover:shadow-md"
             >
               <Icon className="h-5 w-5 text-primary/70" strokeWidth={1.5} />
-              <span className="mt-2 block text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+              <span className="mt-2 block text-3xl font-black tracking-tight text-foreground">
                 {value}
               </span>
               <span className="text-xs font-medium text-muted-foreground">{label}</span>

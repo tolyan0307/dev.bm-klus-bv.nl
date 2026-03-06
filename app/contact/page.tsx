@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import dynamic from "next/dynamic";
@@ -292,8 +293,18 @@ export default function ContactPage() {
 
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/projects/rottekade-gevelisolatie-10cm-na-01.webp"
+            alt="Gevelisolatie project — moderne woning aan de Rottekade"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/40" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#1A1A1A]/60 via-transparent to-[#1A1A1A]/30" />
+        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">

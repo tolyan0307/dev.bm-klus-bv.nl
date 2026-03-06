@@ -154,8 +154,8 @@ export default function SierpleisterPage() {
         />
         <div className="absolute inset-0">
           <Image
-            src="/images/sierpleister-hero.webp"
-            alt="Stukadoor brengt gevelsierpleister aan op een Nederlandse woning in Rotterdam"
+            src="/images/projects/vlaardingen-gevelisolatie-6cm-na-01.webp"
+            alt="Sierpleister afwerking op gevel — woning in Vlaardingen"
             fill
             className="object-cover opacity-40"
             sizes="100vw"

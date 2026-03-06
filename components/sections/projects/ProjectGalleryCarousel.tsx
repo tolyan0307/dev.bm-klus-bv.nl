@@ -70,8 +70,8 @@ export default function ProjectGalleryCarousel({
 
   // Lock body scroll when lightbox is open
   useEffect(() => {
-    document.body.style.overflow = lightboxOpen ? "hidden" : ""
-    return () => { document.body.style.overflow = "" }
+    document.body.style.overflowY = lightboxOpen ? "hidden" : ""
+    return () => { document.body.style.overflowY = "" }
   }, [lightboxOpen])
 
   const accentColor = variant === "voor" ? "border-amber-500" : "border-primary"

@@ -142,8 +142,8 @@ export default function GevelSchilderenPage() {
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
           <Image
-            src="/images/gevel-schilderen-hero.webp"
-            alt="Vakkundig gevel schilderen — buitenmuur verven in Rotterdam"
+            src="/images/projects/vlaardingen-gevelisolatie-10cm-na-01.webp"
+            alt="Gevel schilderen — vernieuwde buitenmuur in Vlaardingen"
             fill
             className="object-cover"
             sizes="100vw"

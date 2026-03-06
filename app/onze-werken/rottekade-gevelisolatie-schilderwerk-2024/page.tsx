@@ -189,10 +189,10 @@ export default function RottekadeProjectPage() {
         />
 
         {/* Content */}
-        <div className="relative z-10 container-default flex flex-col justify-end min-h-[80vh] lg:min-h-[65vh] pb-16 pt-36 sm:pt-40 sm:pb-20 lg:pt-44 lg:pb-24">
+        <div className="relative z-10 container-default flex flex-col justify-between min-h-[80vh] lg:min-h-[65vh]">
 
           {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="mb-7">
+          <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36 mb-7">
             <ol className="flex flex-wrap items-center gap-1.5 text-sm" style={{ color: "rgba(255,255,255,0.65)" }}>
               <li>
                 <Link href="/" className="transition-colors hover:text-white">
@@ -212,6 +212,7 @@ export default function RottekadeProjectPage() {
             </ol>
           </nav>
 
+          <div className="pb-16 sm:pb-20 lg:pb-24">
           {/* Badge */}
           <div className="mb-5">
             <span
@@ -287,6 +288,7 @@ export default function RottekadeProjectPage() {
               Terug naar Onze werken
             </Link>
           </div>
+        </div>
         </div>
       </section>
 

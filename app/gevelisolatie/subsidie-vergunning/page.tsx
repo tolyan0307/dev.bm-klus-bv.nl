@@ -798,11 +798,11 @@ export default function SubsidieVergunningPage() {
                     {...(idx === 0 ? { open: true } : {})}
                   >
                     <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
-                      <div className="flex items-start gap-4">
-                        <span className="mt-0.5 text-lg font-bold tabular-nums text-border transition-colors group-open:text-primary">
+                      <div className="flex min-w-0 items-start gap-4">
+                        <span className="mt-0.5 shrink-0 text-lg font-bold tabular-nums text-border transition-colors group-open:text-primary">
                           {String(idx + 1).padStart(2, "0")}
                         </span>
-                        <span className="text-base font-semibold text-foreground sm:text-lg">
+                        <span className="min-w-0 break-words text-base font-semibold text-foreground sm:text-lg">
                           {item.vraag}
                         </span>
                       </div>

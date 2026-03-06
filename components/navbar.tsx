@@ -53,8 +53,8 @@ export default function Navbar() {
 
   // M3: Body scroll lock
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : ""
-    return () => { document.body.style.overflow = "" }
+    document.body.style.overflowY = mobileOpen ? "hidden" : ""
+    return () => { document.body.style.overflowY = "" }
   }, [mobileOpen])
 
   return (
