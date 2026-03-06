@@ -37,16 +37,60 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci --include=dev
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --include=dev
+
+      # Guard: stop early if Turnstile site key is missing or looks like a private key
+      - name: Validate public env (Turnstile site key)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # FAIL если sitekey пустой
+          test -n "${NEXT_PUBLIC_TURNSTILE_SITE_KEY:-}" || { echo "ERROR: NEXT_PUBLIC_TURNSTILE_SITE_KEY is empty"; exit 1; }
+
+          # FAIL если похоже на PEM/SSH private key
+          case "$NEXT_PUBLIC_TURNSTILE_SITE_KEY" in
+            *"BEGIN "*|*"PRIVATE KEY"*|*"OPENSSH"*)
+              echo "ERROR: NEXT_PUBLIC_TURNSTILE_SITE_KEY looks like a private key/PEM"
+              echo "PREFIX=${NEXT_PUBLIC_TURNSTILE_SITE_KEY:0:24} LEN=${#NEXT_PUBLIC_TURNSTILE_SITE_KEY}"
+              exit 1
+              ;;
+          esac
+
+          # Turnstile site key обычно начинается с 0x...
+          if ! echo "$NEXT_PUBLIC_TURNSTILE_SITE_KEY" | grep -Eq '^0x[0-9A-Za-z_-]{10,}$'; then
+            echo "ERROR: NEXT_PUBLIC_TURNSTILE_SITE_KEY format unexpected (should start with 0x...)"
+            echo "PREFIX=${NEXT_PUBLIC_TURNSTILE_SITE_KEY:0:24} LEN=${#NEXT_PUBLIC_TURNSTILE_SITE_KEY}"
+            exit 1
+          fi
 
       - name: Build static export
-        run: npm run build
-
-      - name: Verify out folder exists
+        shell: bash
         run: |
+          set -euo pipefail
+          npm run build
+
+      - name: Verify out folder exists + security scan
+        shell: bash
+        run: |
+          set -euo pipefail
+
           test -d out || (echo "ERROR: out/ not found. Check Next export config (output: 'export')." && exit 1)
           test -f out/index.html || (echo "ERROR: out/index.html not found." && exit 1)
           test -d out/_next || (echo "ERROR: out/_next not found." && exit 1)
+
+          # Pages we expect to exist (so we catch partial exports)
+          test -f out/diensten/index.html || (echo "ERROR: out/diensten/index.html not found." && exit 1)
+          test -f out/contact/index.html || (echo "ERROR: out/contact/index.html not found." && exit 1)
+
+          # Guard: scan for obvious secret leakage in export
+          if grep -RIn --binary-files=without-match -E 'BEGIN (OPENSSH|RSA|EC) PRIVATE KEY|BEGIN OPENSSH PRIVATE KEY|ssh-ed25519 ' out/; then
+            echo "ERROR: possible secret/private key material found in out/"
+            exit 1
+          fi
 
       - name: Setup SSH key
         shell: bash
@@ -55,10 +99,10 @@ jobs:
         run: |
           set -euo pipefail
 
-          # sanitize env (на случай CRLF/лишних переносов)
-          REMOTE_HOST_CLEAN="$(printf '%s' "$REMOTE_HOST" | tr -d '\r\n')"
-          REMOTE_PORT_CLEAN="$(printf '%s' "$REMOTE_PORT" | tr -d '\r\n[:space:]')"
-          REMOTE_USER_CLEAN="$(printf '%s' "$REMOTE_USER" | tr -d '\r\n')"
+          # sanitize env (устойчиво к CRLF/whitespace)
+          REMOTE_HOST_CLEAN="$(printf '%s' "$REMOTE_HOST" | tr -d $'\r\n')"
+          REMOTE_PORT_CLEAN="$(printf '%s' "$REMOTE_PORT" | tr -d $'\r\n\t ' )"
+          REMOTE_USER_CLEAN="$(printf '%s' "$REMOTE_USER" | tr -d $'\r\n')"
 
           test -n "$REMOTE_HOST_CLEAN" || (echo "ERROR: REMOTE_HOST empty" && exit 1)
           test -n "$REMOTE_PORT_CLEAN" || (echo "ERROR: REMOTE_PORT empty" && exit 1)
@@ -67,9 +111,10 @@ jobs:
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
 
-          # private key from base64 secret (устойчиво к форматированию: чистим whitespace)
-          KEY_B64_CLEAN="$(printf '%s' "${ANTAGONIST_SSH_KEY_B64:-}" | tr -d '\r\n\t ' )"
+          # private key from base64 secret (чистим whitespace)
+          KEY_B64_CLEAN="$(printf '%s' "${ANTAGONIST_SSH_KEY_B64:-}" | tr -d $'\r\n\t ' )"
           test -n "$KEY_B64_CLEAN" || { echo "ERROR: ANTAGONIST_SSH_KEY_B64 empty" && exit 1; }
+
           printf '%s' "$KEY_B64_CLEAN" | base64 --decode > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
 
@@ -80,17 +125,17 @@ jobs:
             exit 1
           fi
 
-          # export sanitized values for next steps in this shell (and future steps)
+          # export sanitized values for next steps
           echo "REMOTE_HOST=$REMOTE_HOST_CLEAN" >> "$GITHUB_ENV"
           echo "REMOTE_PORT=$REMOTE_PORT_CLEAN" >> "$GITHUB_ENV"
           echo "REMOTE_USER=$REMOTE_USER_CLEAN" >> "$GITHUB_ENV"
 
-          # diagnostics: show runner egress IP (полезно для IP allowlist проверки)
+          # diagnostics: show runner egress IP
           echo "Runner egress IP:"
           curl -4s ifconfig.me || true
           echo
 
-          # real connectivity test with retries (shared hosting can be picky)
+          # real connectivity test with retries
           ok=0
           for i in 1 2 3 4 5; do
             echo "SSH probe attempt $i..."
@@ -113,17 +158,20 @@ jobs:
 
           test "$ok" -eq 1 || { echo "ERROR: SSH connectivity test failed after retries"; exit 1; }
 
-
       - name: Prepare release name
         id: rel
+        shell: bash
         run: |
+          set -euo pipefail
           REL="$(date -u +%Y%m%dT%H%M%SZ)_${GITHUB_SHA::12}"
           echo "rel=$REL" >> "$GITHUB_OUTPUT"
           echo "REMOTE_UPLOADS_DIR=$DOMAIN_DIR/wp-content/uploads/v0" >> "$GITHUB_ENV"
           echo "REMOTE_REL_DIR=$DOMAIN_DIR/wp-content/uploads/v0/$REL" >> "$GITHUB_ENV"
 
       - name: Create remote release directory
+        shell: bash
         run: |
+          set -euo pipefail
           ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
             set -e
             mkdir -p '$REMOTE_UPLOADS_DIR'
@@ -131,7 +179,9 @@ jobs:
           "
 
       - name: Upload out/ (rsync if available, fallback to tar over ssh)
+        shell: bash
         run: |
+          set -euo pipefail
           if ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "command -v rsync >/dev/null 2>&1"; then
             echo "Using rsync"
             rsync -az --delete \
@@ -146,7 +196,9 @@ jobs:
           fi
 
       - name: Switch current + _next/images symlinks (safe)
+        shell: bash
         run: |
+          set -euo pipefail
           ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
             set -euo pipefail
 
@@ -190,7 +242,9 @@ jobs:
           "
 
       - name: Optional cleanup old releases (keep last 5)
+        shell: bash
         run: |
+          set -euo pipefail
           ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
             set -e
             UPLOADS_DIR='$REMOTE_UPLOADS_DIR'

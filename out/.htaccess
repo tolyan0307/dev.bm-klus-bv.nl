@@ -20,17 +20,17 @@ Redirect 301 /buitenstucwerk-woning-halsteren-sierpleister-schilderwerk-2025/ /o
 # ─── 301 Redirects: project pages (old WP → new /onze-werken/) ───────────────
 # These redirect to /onze-werken/ until individual pages are built.
 # When a project page is created, update the target to the exact URL.
-Redirect 301 /gevelisolatie-woning-rottekade-10cm-schilderwerk-2024/ /onze-werken/
-Redirect 301 /vlaardingen-gevelisolatie-6cm-sierpleister-15mm/ /onze-werken/
-Redirect 301 /gevelisolatie-vrijstaande-woning-nieuw-beijerland-zuidzijdsedijk/ /onze-werken/
-Redirect 301 /gevelisolatie-woning-bruinisse-6cm-sierpleister/ /onze-werken/
-Redirect 301 /gevelisolatie-woning-dordrecht-10cm-sierpleister/ /onze-werken/
-Redirect 301 /gevelisolatie-woning-klaaswaal-6cm-sierpleister/ /onze-werken/
-Redirect 301 /buitenstucwerk-woning-rotterdam-cementpleister/ /onze-werken/
-Redirect 301 /gevelisolatie-woning-almere-35m2-sierpleister/ /onze-werken/
-Redirect 301 /gevelisolatie-woning-vlaardingen-10cm-sierpleister/ /onze-werken/
-Redirect 301 /vught-gevelisolatie-10cm-sierpleister/ /onze-werken/
-Redirect 301 /gevelisolatie-woning-katwijk-6cm-sierpleister/ /onze-werken/
+Redirect 301 /gevelisolatie-woning-rottekade-10cm-schilderwerk-2024/ /onze-werken/rottekade-gevelisolatie-schilderwerk-2024/
+Redirect 301 /vlaardingen-gevelisolatie-6cm-sierpleister-15mm/ /onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-vrijstaande-woning-nieuw-beijerland-zuidzijdsedijk/ /onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-bruinisse-6cm-sierpleister/ /onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-dordrecht-10cm-sierpleister/ /onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-klaaswaal-6cm-sierpleister/ /onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /buitenstucwerk-woning-rotterdam-cementpleister/ /onze-werken/rotterdam-buitenstucwerk-cementpleister-2024/
+Redirect 301 /gevelisolatie-woning-almere-35m2-sierpleister/ /onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-vlaardingen-10cm-sierpleister/ /onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /vught-gevelisolatie-10cm-sierpleister/ /onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-katwijk-6cm-sierpleister/ /onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/
 
 # ─── 301 Redirects: old /object* pages (image-only, no content) ──────────────
 Redirect 301 /object1/ /onze-werken/
