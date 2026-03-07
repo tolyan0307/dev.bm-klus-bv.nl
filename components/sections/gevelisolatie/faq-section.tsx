@@ -24,10 +24,11 @@ export default function FaqSection() {
 
   return (
       <section id={data.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
 
-          {/* Left: sticky header */}
-          <div className="lg:col-span-5">
+            {/* Left: sticky header */}
+            <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-32">
               <div className="mb-3 flex items-center gap-3">
                 <div className="h-px w-10 bg-primary" />
@@ -45,7 +46,7 @@ export default function FaqSection() {
               </p>
 
               {/* Category filters */}
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-6 flex min-w-0 flex-wrap gap-2">
                 {categories.map((cat, ci) => (
                   <button
                     key={cat.label}
@@ -71,17 +72,17 @@ export default function FaqSection() {
                 </Link>
               </p>
             </div>
-          </div>
+            </div>
 
-          {/* Right: accordion */}
-          <div className="lg:col-span-7">
+            {/* Right: accordion */}
+            <div className="lg:col-span-7">
             <div className="space-y-3">
               {visibleItems.map((item, idx) => {
                 const isOpen = openIndex === idx
                 return (
                   <div
                     key={item.originalIndex}
-                    className={`overflow-hidden rounded-xl border transition-all ${
+                    className={`min-w-0 overflow-hidden rounded-xl border transition-all ${
                       isOpen
                         ? "border-primary/40 bg-card shadow-md"
                         : "border-border bg-card shadow-sm"
@@ -89,7 +90,7 @@ export default function FaqSection() {
                   >
                     <button
                       onClick={() => setOpenIndex(isOpen ? null : idx)}
-                      className="flex w-full items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20"
+                      className="flex w-full min-w-0 items-start justify-between gap-3 p-4 text-left transition-colors hover:bg-secondary/20 sm:gap-4 sm:p-6"
                     >
                       <div className="flex min-w-0 items-start gap-4">
                         <span className={`mt-0.5 shrink-0 text-lg font-bold tabular-nums transition-colors ${isOpen ? "text-primary" : "text-border"}`}>
@@ -105,8 +106,8 @@ export default function FaqSection() {
                     </button>
                     <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                       <div className="overflow-hidden">
-                        <div className="border-t border-border/50 px-6 pb-6 pt-4">
-                          <div className="pl-12">
+                        <div className="border-t border-border/50 px-4 pb-4 pt-3 sm:px-6 sm:pb-6 sm:pt-4">
+                          <div className="pl-8 sm:pl-12">
                             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                               {item.antwoord}
                             </p>
@@ -119,6 +120,7 @@ export default function FaqSection() {
               })}
             </div>
           </div>
+        </div>
         </div>
       </section>
   )

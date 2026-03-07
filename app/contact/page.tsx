@@ -29,7 +29,8 @@ import {
   AtSign,
   Hammer,
   Star,
-} from "lucide-react";
+} from "lucide-react"
+import { trackEvent } from "@/components/gtm-provider";
 
 // ─── Turnstile global type ────────────────────────────────────────────────────
 
@@ -270,6 +271,10 @@ export default function ContactPage() {
 
       if (res.ok && data?.ok === true) {
         setSubmitted(true);
+        trackEvent("bm_lead_form_success", {
+          form_variant: "contact_page",
+          page_path: window.location.pathname,
+        });
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         setServerError(

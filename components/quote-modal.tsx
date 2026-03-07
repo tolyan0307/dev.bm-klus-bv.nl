@@ -17,6 +17,7 @@ import {
   Shield,
   X,
 } from "lucide-react"
+import { trackEvent } from "@/components/gtm-provider"
 
 interface TurnstileInstance {
   render: (
@@ -207,6 +208,10 @@ export default function QuoteModal({
 
       if (res.ok && data?.ok === true) {
         setSubmitted(true)
+        trackEvent("bm_lead_form_success", {
+          form_variant: "quote_modal",
+          page_path: window.location.pathname,
+        })
       } else {
         setServerError(
           data?.message ||
