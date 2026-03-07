@@ -1,6 +1,8 @@
+import { getSiteUrl } from "@/data/sitemap-plan"
+
 export const SITE = {
   siteName: "BM klus BV",
-  canonicalBase: "https://bm-klus-bv.nl",
+  canonicalBase: getSiteUrl(),
   locale: "nl_NL",
   lang: "nl-NL",
   regionText:

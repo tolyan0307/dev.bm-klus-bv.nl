@@ -7,25 +7,37 @@ export type PlannedRoute = {
   enabled?: boolean
 }
 
-/** Production hostnames for canonical/base URL. */
-const CANONICAL_HOSTS = new Set(["bm-klus-bv.nl", "www.bm-klus-bv.nl"])
+/** Production hostnames that should be indexed (used by robots.ts). */
+const PRODUCTION_HOSTS = new Set(["bm-klus-bv.nl", "www.bm-klus-bv.nl"])
 
-const CANONICAL_BASE = "https://bm-klus-bv.nl"
+const DEFAULT_BASE = "https://bm-klus-bv.nl"
 
 /**
- * Returns the site base URL for use in canonical URLs, OG tags, sitemap, etc.
- * If NEXT_PUBLIC_SITE_URL is set to a known production hostname it is used;
- * otherwise falls back to the hard-coded production canonical base.
+ * Returns true when the given absolute URL belongs to a production hostname.
+ * Consumers: robots.ts (Allow vs Disallow), layout.tsx (robots meta).
+ */
+export function isProductionHost(url: string): boolean {
+  try {
+    return PRODUCTION_HOSTS.has(new URL(url).hostname)
+  } catch {
+    return false
+  }
+}
+
+/**
+ * Returns the site base URL for canonical URLs, OG tags, sitemap, etc.
+ * Trusts NEXT_PUBLIC_SITE_URL when it is a valid absolute URL;
+ * falls back to the production base when unset or invalid.
  * Trailing slash is stripped so callers can append paths safely.
  */
 export function getSiteUrl(): string {
   const raw = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "")
-  if (!raw) return CANONICAL_BASE
+  if (!raw) return DEFAULT_BASE
   try {
-    const host = new URL(raw).hostname
-    return CANONICAL_HOSTS.has(host) ? raw : CANONICAL_BASE
+    new URL(raw)
+    return raw
   } catch {
-    return CANONICAL_BASE
+    return DEFAULT_BASE
   }
 }
 

@@ -3,9 +3,12 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { GtmProvider } from '@/components/gtm-provider'
+import { getSiteUrl, isProductionHost } from '@/data/sitemap-plan'
 import './globals.css'
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+const _isProd = isProductionHost(getSiteUrl())
 
 export const metadata: Metadata = {
   title: {
@@ -14,7 +17,7 @@ export const metadata: Metadata = {
   },
   description:
     "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis opname op locatie en offerte.",
-  robots: { index: true, follow: true },
+  robots: { index: _isProd, follow: _isProd },
   icons: {
     icon: [
       {

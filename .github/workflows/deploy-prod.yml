@@ -1,0 +1,272 @@
+name: Deploy prod (Antagonist Slim)
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: [self-hosted, oracle-bmklus]
+
+    env:
+      NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL_PROD }}
+      NEXT_PUBLIC_CONTACT_API_BASE: ""
+      NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY_PROD }}
+      NEXT_PUBLIC_GTM_ID: ${{ vars.NEXT_PUBLIC_GTM_ID_PROD }}
+
+      REMOTE_HOST: ${{ secrets.ANTAGONIST_HOST }}
+      REMOTE_PORT: ${{ secrets.ANTAGONIST_PORT }}
+      REMOTE_USER: ${{ secrets.ANTAGONIST_USER }}
+      DOMAIN_DIR: ${{ vars.DEPLOY_DOMAIN_DIR_PROD }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --include=dev
+
+      - name: Validate public env (Turnstile site key)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -n "${NEXT_PUBLIC_TURNSTILE_SITE_KEY:-}" || { echo "ERROR: NEXT_PUBLIC_TURNSTILE_SITE_KEY is empty"; exit 1; }
+
+          case "$NEXT_PUBLIC_TURNSTILE_SITE_KEY" in
+            *"BEGIN "*|*"PRIVATE KEY"*|*"OPENSSH"*)
+              echo "ERROR: NEXT_PUBLIC_TURNSTILE_SITE_KEY looks like a private key/PEM"
+              echo "PREFIX=${NEXT_PUBLIC_TURNSTILE_SITE_KEY:0:24} LEN=${#NEXT_PUBLIC_TURNSTILE_SITE_KEY}"
+              exit 1
+              ;;
+          esac
+
+          if ! echo "$NEXT_PUBLIC_TURNSTILE_SITE_KEY" | grep -Eq '^0x[0-9A-Za-z_-]{10,}$'; then
+            echo "ERROR: NEXT_PUBLIC_TURNSTILE_SITE_KEY format unexpected (should start with 0x...)"
+            echo "PREFIX=${NEXT_PUBLIC_TURNSTILE_SITE_KEY:0:24} LEN=${#NEXT_PUBLIC_TURNSTILE_SITE_KEY}"
+            exit 1
+          fi
+
+      - name: Validate prod site URL
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${NEXT_PUBLIC_SITE_URL:-}" || { echo "ERROR: NEXT_PUBLIC_SITE_URL is empty"; exit 1; }
+          case "$NEXT_PUBLIC_SITE_URL" in
+            https://bm-klus-bv.nl|https://www.bm-klus-bv.nl)
+              echo "OK: NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL"
+              ;;
+            *)
+              echo "ERROR: NEXT_PUBLIC_SITE_URL is not a known production URL: $NEXT_PUBLIC_SITE_URL"
+              exit 1
+              ;;
+          esac
+
+      - name: Build static export
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run build
+
+      - name: Verify out folder exists + security scan
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -d out || (echo "ERROR: out/ not found. Check Next export config (output: 'export')." && exit 1)
+          test -f out/index.html || (echo "ERROR: out/index.html not found." && exit 1)
+          test -d out/_next || (echo "ERROR: out/_next not found." && exit 1)
+
+          test -f out/diensten/index.html || (echo "ERROR: out/diensten/index.html not found." && exit 1)
+          test -f out/contact/index.html || (echo "ERROR: out/contact/index.html not found." && exit 1)
+
+          if grep -RIn --binary-files=without-match -E 'BEGIN (OPENSSH|RSA|EC) PRIVATE KEY|BEGIN OPENSSH PRIVATE KEY|ssh-ed25519 ' out/; then
+            echo "ERROR: possible secret/private key material found in out/"
+            exit 1
+          fi
+
+      - name: Verify prod robots/sitemap sanity
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if grep -q 'Disallow: /' out/robots.txt; then
+            echo "ERROR: robots.txt contains Disallow for prod build — check NEXT_PUBLIC_SITE_URL"
+            exit 1
+          fi
+
+          if grep -q 'dev\.bm-klus-bv\.nl' out/sitemap.xml; then
+            echo "ERROR: sitemap.xml contains dev domain references"
+            exit 1
+          fi
+
+          echo "OK: robots.txt allows indexing, sitemap uses prod domain"
+
+      - name: Setup SSH key
+        shell: bash
+        env:
+          ANTAGONIST_SSH_KEY_B64: ${{ secrets.ANTAGONIST_SSH_KEY_B64 }}
+        run: |
+          set -euo pipefail
+
+          REMOTE_HOST_CLEAN="$(printf '%s' "$REMOTE_HOST" | tr -d $'\r\n')"
+          REMOTE_PORT_CLEAN="$(printf '%s' "$REMOTE_PORT" | tr -d $'\r\n\t ' )"
+          REMOTE_USER_CLEAN="$(printf '%s' "$REMOTE_USER" | tr -d $'\r\n')"
+
+          test -n "$REMOTE_HOST_CLEAN" || (echo "ERROR: REMOTE_HOST empty" && exit 1)
+          test -n "$REMOTE_PORT_CLEAN" || (echo "ERROR: REMOTE_PORT empty" && exit 1)
+          test -n "$REMOTE_USER_CLEAN" || (echo "ERROR: REMOTE_USER empty" && exit 1)
+
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          KEY_B64_CLEAN="$(printf '%s' "${ANTAGONIST_SSH_KEY_B64:-}" | tr -d $'\r\n\t ' )"
+          test -n "$KEY_B64_CLEAN" || { echo "ERROR: ANTAGONIST_SSH_KEY_B64 empty" && exit 1; }
+
+          printf '%s' "$KEY_B64_CLEAN" | base64 --decode > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+          if ! ssh-keygen -y -f ~/.ssh/id_ed25519 >/dev/null 2> /tmp/sshkey_err.log; then
+            echo "ERROR: ssh-keygen could not read ANTAGONIST_SSH_KEY_B64"
+            cat /tmp/sshkey_err.log || true
+            exit 1
+          fi
+
+          echo "REMOTE_HOST=$REMOTE_HOST_CLEAN" >> "$GITHUB_ENV"
+          echo "REMOTE_PORT=$REMOTE_PORT_CLEAN" >> "$GITHUB_ENV"
+          echo "REMOTE_USER=$REMOTE_USER_CLEAN" >> "$GITHUB_ENV"
+
+          echo "Runner egress IP:"
+          curl -4s ifconfig.me || true
+          echo
+
+          ok=0
+          for i in 1 2 3 4 5; do
+            echo "SSH probe attempt $i..."
+            if ssh -4 \
+                -o BatchMode=yes \
+                -o IdentitiesOnly=yes \
+                -o PreferredAuthentications=publickey \
+                -o PasswordAuthentication=no \
+                -o KbdInteractiveAuthentication=no \
+                -o ConnectTimeout=10 \
+                -o ConnectionAttempts=1 \
+                -o StrictHostKeyChecking=accept-new \
+                -p "$REMOTE_PORT_CLEAN" \
+                "$REMOTE_USER_CLEAN@$REMOTE_HOST_CLEAN" "echo SSH_OK"; then
+              ok=1
+              break
+            fi
+            sleep $((i * 5))
+          done
+
+          test "$ok" -eq 1 || { echo "ERROR: SSH connectivity test failed after retries"; exit 1; }
+
+      - name: Prepare release name
+        id: rel
+        shell: bash
+        run: |
+          set -euo pipefail
+          REL="$(date -u +%Y%m%dT%H%M%SZ)_${GITHUB_SHA::12}"
+          echo "rel=$REL" >> "$GITHUB_OUTPUT"
+          echo "REMOTE_UPLOADS_DIR=$DOMAIN_DIR/wp-content/uploads/v0" >> "$GITHUB_ENV"
+          echo "REMOTE_REL_DIR=$DOMAIN_DIR/wp-content/uploads/v0/$REL" >> "$GITHUB_ENV"
+
+      - name: Create remote release directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+            set -e
+            mkdir -p '$REMOTE_UPLOADS_DIR'
+            mkdir -p '$REMOTE_REL_DIR'
+          "
+
+      - name: Upload out/ (rsync if available, fallback to tar over ssh)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "command -v rsync >/dev/null 2>&1"; then
+            echo "Using rsync"
+            rsync -az --delete \
+              -e "ssh -p $REMOTE_PORT" \
+              out/ "$REMOTE_USER@$REMOTE_HOST:$REMOTE_REL_DIR/"
+          else
+            echo "rsync not available on remote, using tar over ssh"
+            tar -C out -czf - . | ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+              set -e
+              tar -xzf - -C '$REMOTE_REL_DIR'
+            "
+          fi
+
+      - name: Switch current + _next/images symlinks (safe)
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+            set -euo pipefail
+
+            DOMAIN_DIR='$DOMAIN_DIR'
+            UPLOADS_DIR='$REMOTE_UPLOADS_DIR'
+            REL='${{ steps.rel.outputs.rel }}'
+            REL_DIR='$REMOTE_UPLOADS_DIR/${{ steps.rel.outputs.rel }}'
+
+            # Sanity checks
+            test -f \"\$REL_DIR/index.html\"
+            test -d \"\$REL_DIR/_next\"
+
+            # current must be symlink or absent (safety)
+            if [ -e \"\$UPLOADS_DIR/current\" ] && [ ! -L \"\$UPLOADS_DIR/current\" ]; then
+              echo 'ERROR: \$UPLOADS_DIR/current exists and is not a symlink'
+              exit 1
+            fi
+
+            # _next/images in public_html must be symlink or absent (safety)
+            for p in \"\$DOMAIN_DIR/_next\" \"\$DOMAIN_DIR/images\"; do
+              if [ -e \"\$p\" ] && [ ! -L \"\$p\" ]; then
+                echo \"ERROR: \$p exists and is not a symlink. Refusing to replace.\"
+                exit 1
+              fi
+            done
+
+            ln -sfn \"\$REL_DIR\" \"\$UPLOADS_DIR/current\"
+            ln -sfn \"\$UPLOADS_DIR/current/_next\" \"\$DOMAIN_DIR/_next\"
+
+            # images may be absent in some builds; handle gracefully
+            if [ -d \"\$UPLOADS_DIR/current/images\" ]; then
+              ln -sfn \"\$UPLOADS_DIR/current/images\" \"\$DOMAIN_DIR/images\"
+            fi
+
+            echo 'Deployed release:' \"\$REL\"
+            echo 'current ->' \$(readlink \"\$UPLOADS_DIR/current\")
+            echo '_next   ->' \$(readlink \"\$DOMAIN_DIR/_next\") || true
+            if [ -L \"\$DOMAIN_DIR/images\" ]; then
+              echo 'images  ->' \$(readlink \"\$DOMAIN_DIR/images\")
+            fi
+          "
+
+      - name: Optional cleanup old releases (keep last 5)
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+            set -e
+            UPLOADS_DIR='$REMOTE_UPLOADS_DIR'
+            cd \"\$UPLOADS_DIR\"
+            ls -1dt 20* 2>/dev/null | tail -n +6 | xargs -r rm -rf
+          "
