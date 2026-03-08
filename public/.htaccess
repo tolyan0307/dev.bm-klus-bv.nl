@@ -48,9 +48,26 @@ Redirect 301 /object12/ /onze-werken/
 Redirect 301 /object13/ /onze-werken/
 Redirect 301 /object14/ /onze-werken/
 Redirect 301 /object15/ /onze-werken/
+Redirect 301 /object17/ /onze-werken/
+Redirect 301 /object20/ /onze-werken/
+Redirect 301 /object21/ /onze-werken/
 
 # ─── 301 Redirect: removed service ───────────────────────────────────────────
 Redirect 301 /schoonmaak-na-verbouwing/ /diensten/
+
+# ─── 301 Redirects: old /onze-werken/ slugs (WP structure → new slugs) ────────
+# These paths appeared in GSC as redirect targets that don't exist in the new site.
+Redirect 301 /onze-werken/gevelisolatie-woning-vlaardingen-10cm-sierpleister/ /onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-klaaswaal-6cm-sierpleister/ /onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-katwijk-6cm-sierpleister/ /onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /onze-werken/buitenstucwerk-woning-rotterdam-cementpleister/ /onze-werken/rotterdam-buitenstucwerk-cementpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-almere-35m2-sierpleister/ /onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/
+Redirect 301 /onze-werken/vught-gevelisolatie-10cm-sierpleister/ /onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-dordrecht-10cm-sierpleister/ /onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-bruinisse-6cm-sierpleister/ /onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2024/
+
+# ─── 301 Redirect: /onze-werken/gevelisolatie/ (disabled future page) ─────────
+Redirect 301 /onze-werken/gevelisolatie/ /onze-werken/
 
 # ─── Block WordPress artifacts ───────────────────────────────────────────────
 # Return 410 Gone for WP paths (tells Google to deindex)
@@ -64,6 +81,9 @@ RewriteRule ^wp-json(/|$) - [G,L]
 # Block old Rank Math sitemap artifacts
 RewriteRule ^main-sitemap\.xsl$ - [G,L]
 RewriteRule ^page-sitemap\.xml$ - [G,L]
+
+# Block stray legacy files (410 Gone)
+RewriteRule ^locations\.kml$ - [G,L]
 
 # ─── Custom 404 ──────────────────────────────────────────────────────────────
 ErrorDocument 404 /404.html
