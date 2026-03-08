@@ -330,7 +330,7 @@ export default function KostenGevelisolatiePage() {
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <a
                   href="#offerte"
-                  className="btn-primary"
+                  className="btn-hero"
                 >
                   Offerte aanvragen
                   <ArrowRight className="h-4 w-4" />
@@ -339,7 +339,7 @@ export default function KostenGevelisolatiePage() {
                   href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition-all hover:border-white/25 hover:bg-white/10"
                 >
                   <MessageCircle className="h-4 w-4 text-[#25D366]" />
                   WhatsApp
@@ -352,7 +352,7 @@ export default function KostenGevelisolatiePage() {
                     <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                   ))}
                   <span className="ml-1 text-xs font-semibold text-white/70">
-                    <GoogleRatingBadge format="display" />
+                    <GoogleRatingBadge format="short" />
                   </span>
                 </div>
                 <span className="hidden h-3.5 w-px bg-white/20 sm:block" />

@@ -62,14 +62,25 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled || mobileOpen
-            ? "bg-background/95 shadow-sm backdrop-blur-xl"
+            ? "bg-white/75 shadow-[0_1px_3px_rgba(0,0,0,0.06)] backdrop-blur-2xl backdrop-saturate-[1.6]"
             : "bg-transparent"
         }`}
       >
-        {/* Top accent line */}
-        <div className={`h-[3px] w-full bg-gradient-to-r from-primary via-primary/80 to-primary transition-opacity duration-500 ${scrolled || mobileOpen ? "opacity-100" : "opacity-0"}`} />
+        {/* Noise grain overlay */}
+        <div
+          className={`pointer-events-none absolute inset-0 z-0 mix-blend-multiply transition-opacity duration-500 ${
+            scrolled || mobileOpen ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E")`,
+            backgroundSize: "128px 128px",
+          }}
+        />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Top accent line */}
+        <div className={`relative z-10 h-[3px] w-full bg-gradient-to-r from-primary via-primary/80 to-primary transition-opacity duration-500 ${scrolled || mobileOpen ? "opacity-100" : "opacity-0"}`} />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className={`flex items-center justify-between transition-all duration-500 ${scrolled ? "h-16" : "h-20"}`}>
             {/* Logo */}
             <Link href="/" className="relative flex items-center">
@@ -101,19 +112,24 @@ export default function Navbar() {
                     >
                       <Link
                         href={link.href}
-                        className={`group relative flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors duration-500 ${
+                        className={`group relative flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ${
                           active
-                            ? scrolled ? "text-foreground" : "text-white"
+                            ? scrolled ? "text-foreground bg-foreground/[0.05]" : "text-white bg-white/[0.08]"
                             : scrolled
-                              ? "text-foreground/70 hover:text-foreground"
-                              : "text-white/70 hover:text-white"
+                              ? "text-foreground/60 hover:text-foreground hover:bg-foreground/[0.04]"
+                              : "text-white/60 hover:text-white hover:bg-white/[0.06]"
                         }`}
                       >
-                        {link.label}
+                        <span className="relative">
+                          {link.label}
+                          <span className={`pointer-events-none absolute -bottom-[11px] -inset-x-1 transition-opacity duration-300 ${
+                            active ? "opacity-100" : "opacity-0 group-hover:opacity-50"
+                          }`}>
+                            <span className="block h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+                            <span className="mx-auto block h-3 w-8 -translate-y-1 bg-primary/25 blur-[6px]" />
+                          </span>
+                        </span>
                         <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${dienstenOpen ? "rotate-180" : ""}`} />
-                        <span className={`absolute inset-x-2 -bottom-0.5 h-[2px] rounded-full bg-primary transition-transform duration-300 ${
-                          active ? "scale-x-100" : "origin-left scale-x-0 group-hover:scale-x-100"
-                        }`} />
                       </Link>
 
                       {/* Dropdown */}
@@ -145,22 +161,25 @@ export default function Navbar() {
                                   key={sub.href}
                                   href={sub.href}
                                   onClick={() => setDienstenOpen(false)}
-                                  className={`group flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm transition-all ${
+                                  className={`group relative flex items-center gap-2.5 overflow-hidden rounded-xl px-3.5 py-2.5 text-sm transition-all ${
                                     isLast
                                       ? `mt-1 border-t pt-3 ${scrolled ? "border-border/40" : "border-white/[0.06]"}`
                                       : ""
                                   } ${
                                     active
-                                      ? "bg-primary/15 font-semibold text-primary"
+                                      ? "bg-primary/10 font-semibold text-primary"
                                       : scrolled
                                         ? "text-foreground/70 hover:bg-secondary hover:text-foreground"
                                         : "text-white/70 hover:bg-white/[0.06] hover:text-white"
                                   }`}
                                 >
+                                  <span className={`pointer-events-none absolute inset-y-1.5 left-0 w-px transition-opacity duration-300 ${
+                                    active ? "opacity-100" : "opacity-0 group-hover:opacity-40"
+                                  }`}>
+                                    <span className="block h-full w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
+                                    <span className="absolute left-0 top-1/2 h-5 w-3 -translate-x-1 -translate-y-1/2 bg-primary/30 blur-[5px]" />
+                                  </span>
                                   <span className="flex-1">{sub.label}</span>
-                                  {active && (
-                                    <span className="h-1 w-1 rounded-full bg-primary" />
-                                  )}
                                 </Link>
                               )
                             })}
@@ -175,18 +194,21 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`group relative px-4 py-2 text-sm font-medium transition-colors duration-500 ${
+                    className={`group relative rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ${
                       active
-                        ? scrolled ? "text-foreground" : "text-white"
+                        ? scrolled ? "text-foreground bg-foreground/[0.05]" : "text-white bg-white/[0.08]"
                         : scrolled
-                          ? "text-foreground/70 hover:text-foreground"
-                          : "text-white/70 hover:text-white"
+                          ? "text-foreground/60 hover:text-foreground hover:bg-foreground/[0.04]"
+                          : "text-white/60 hover:text-white hover:bg-white/[0.06]"
                     }`}
                   >
                     {link.label}
-                    <span className={`absolute inset-x-2 -bottom-0.5 h-[2px] rounded-full bg-primary transition-transform duration-300 ${
-                      active ? "scale-x-100" : "origin-left scale-x-0 group-hover:scale-x-100"
-                    }`} />
+                    <span className={`pointer-events-none absolute inset-x-3 -bottom-0.5 transition-opacity duration-300 ${
+                      active ? "opacity-100" : "opacity-0 group-hover:opacity-50"
+                    }`}>
+                      <span className="block h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+                      <span className="mx-auto block h-3 w-8 -translate-y-1 bg-primary/25 blur-[6px]" />
+                    </span>
                   </Link>
                 )
               })}
@@ -232,8 +254,8 @@ export default function Navbar() {
 
         {/* Bottom border */}
         <div
-          className={`h-px transition-opacity duration-500 ${
-            scrolled || mobileOpen ? "bg-border/60 opacity-100" : "bg-white/10 opacity-50"
+          className={`relative z-10 h-px transition-opacity duration-500 ${
+            scrolled || mobileOpen ? "bg-black/[0.06] opacity-100" : "bg-white/10 opacity-50"
           }`}
         />
 

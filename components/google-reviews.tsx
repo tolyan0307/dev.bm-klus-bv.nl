@@ -152,7 +152,7 @@ function SectionHeader() {
       </div>
       <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
         Klanten over{" "}
-        <span className="text-primary">BM klus BV</span>
+        <span className="whitespace-nowrap text-primary">BM klus BV</span>
       </h2>
       <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
         Lees wat onze tevreden klanten over ons vertellen.

@@ -222,10 +222,14 @@
   .btn-primary {
     @apply inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md;
   }
+
+  .btn-hero {
+    @apply inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/15 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all hover:border-primary/60 hover:bg-primary/25;
+  }
   
   /* CTA Button Secondary */
   .btn-secondary {
-    @apply inline-flex items-center gap-2 rounded-lg border-2 border-border bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-all hover:border-primary hover:bg-primary/5;
+    @apply inline-flex items-center gap-2 rounded-lg border border-border bg-transparent px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-primary hover:bg-primary/5;
   }
   
   /* Interactive Icon Container */

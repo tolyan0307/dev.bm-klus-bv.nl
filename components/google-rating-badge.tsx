@@ -6,13 +6,11 @@ import { fetchPlace, getCachedPlace } from "@/lib/google-place-cache"
 const _fbRating = parseFloat(process.env.NEXT_PUBLIC_GOOGLE_RATING ?? "4.8")
 const _fbCount = parseInt(process.env.NEXT_PUBLIC_GOOGLE_REVIEW_COUNT ?? "23", 10)
 
-type Format = "display" | "short" | "trust" | "count" | "stat-desc"
+type Format = "short" | "trust" | "count" | "stat-desc"
 
 function fmt(rating: number, count: number, f: Format): string {
   const r = rating.toFixed(1)
   switch (f) {
-    case "display":
-      return `${r} / 5`
     case "short":
       return `${r}/5 · ${count} reviews`
     case "trust":

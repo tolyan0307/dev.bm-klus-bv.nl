@@ -260,24 +260,18 @@ export default function OverOnsPage() {
               <div className="flex flex-col gap-3 pt-1 sm:flex-row">
                 <a
                   href="#offerte"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EA6C20] px-7 py-4 text-sm font-semibold tracking-wide text-white shadow-lg shadow-[#EA6C20]/20 transition-all hover:bg-[#d0540a] hover:shadow-xl hover:shadow-[#EA6C20]/25"
+                  className="group inline-flex items-center justify-center gap-2 rounded-lg border border-primary/40 bg-primary/15 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all hover:border-primary/60 hover:bg-primary/25"
                 >
                   Offerte aanvragen
-                  <ArrowRight size={16} />
+                  <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
                 </a>
                 <a
                   href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-3 rounded-lg border border-white/20 bg-white/8 px-7 py-4 text-sm font-semibold tracking-wide text-white backdrop-blur-md transition-all hover:border-white/35 hover:bg-white/14"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/80 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
                 >
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#25D366]/50 bg-[#25D366]/15 transition-transform group-hover:scale-110">
-                    <MessageCircle
-                      size={14}
-                      className="text-[#25D366]"
-                      strokeWidth={1.5}
-                    />
-                  </span>
+                  <MessageCircle size={15} className="text-[#25D366]" strokeWidth={1.5} />
                   WhatsApp
                 </a>
               </div>

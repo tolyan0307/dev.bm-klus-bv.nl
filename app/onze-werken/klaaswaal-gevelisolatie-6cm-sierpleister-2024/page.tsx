@@ -261,19 +261,13 @@ export default function KlaaswaalProjectPage() {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/contact/" className="btn-primary">
+            <Link href="/contact/" className="btn-hero">
               Offerte aanvragen
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/onze-werken/"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all"
-              style={{
-                background: "rgba(255,255,255,0.12)",
-                border: "1px solid rgba(255,255,255,0.30)",
-                color: "white",
-                backdropFilter: "blur(8px)",
-              }}
+              className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/80 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
             >
               Terug naar Onze werken
             </Link>

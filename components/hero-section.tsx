@@ -107,14 +107,14 @@ export default function HeroSection() {
             <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
               <Link
                 href="/contact/"
-                className="group inline-flex items-center gap-2.5 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-[#d45e18] hover:shadow-xl hover:shadow-primary/30 sm:px-8 sm:py-3.5 sm:text-base"
+                className="group inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/15 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all hover:border-primary/60 hover:bg-primary/25"
               >
                 Offerte aanvragen
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
                 href="/diensten/"
-                className="inline-flex items-center rounded-lg border-2 border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/25 sm:px-8 sm:py-3.5 sm:text-base"
+                className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/80 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
               >
                 Bekijk onze diensten
               </Link>
@@ -140,7 +140,7 @@ export default function HeroSection() {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                 ))}
-                <span className="ml-1.5 text-sm font-bold text-white/85"><GoogleRatingBadge format="display" /></span>
+                <span className="ml-1.5 text-sm font-bold text-white/85"><GoogleRatingBadge format="short" /></span>
               </div>
               <span className="hidden h-4 w-px bg-white/25 sm:block" />
               <a

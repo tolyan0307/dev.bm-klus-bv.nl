@@ -193,13 +193,13 @@ export default function OnzeWerkenPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
-                <Link href="/contact/" className="btn-primary">
+                <Link href="/contact/" className="btn-hero">
                   Plan gratis opname op locatie
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/diensten/"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition-all hover:border-white/25 hover:bg-white/10"
                 >
                   Bekijk onze diensten
                 </Link>
@@ -211,7 +211,7 @@ export default function OnzeWerkenPage() {
                     <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                   ))}
                   <span className="ml-1 text-xs font-semibold text-white/70">
-                    <GoogleRatingBadge format="display" />
+                    <GoogleRatingBadge format="short" />
                   </span>
                 </div>
                 <span className="hidden h-3.5 w-px bg-white/20 sm:block" />
