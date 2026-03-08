@@ -2,28 +2,11 @@
 
 import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
 import { useState, useEffect, useCallback, useRef } from "react"
-import { loadGoogleMaps } from "@/lib/google-maps-loader"
-
-/* ------------------------------------------------------------------ */
-/*  Types                                                              */
-/* ------------------------------------------------------------------ */
-
-interface ReviewCard {
-  author: string
-  initial: string
-  rating: number
-  text: string
-  relativeTime: string
-  authorUri?: string
-  photoUri?: string
-}
-
-interface PlaceData {
-  rating: number
-  reviewCount: number
-  reviews: ReviewCard[]
-  googleMapsUri?: string
-}
+import {
+  fetchPlace,
+  type PlaceReview as ReviewCard,
+  type PlaceData,
+} from "@/lib/google-place-cache"
 
 type LoadState = "idle" | "loading" | "done" | "error"
 
@@ -79,8 +62,8 @@ function ReviewCardEl({ review }: { review: ReviewCard }) {
   const needsTruncation = review.text.length > 120
 
   return (
-    <div className="w-[80%] shrink-0 snap-center sm:w-[calc(50%-12px)] sm:snap-start lg:w-[calc(25%-18px)]">
-      <div className="relative pt-10">
+    <div className="flex w-[95%] shrink-0 flex-col snap-center sm:w-[calc(50%-12px)] sm:snap-start lg:w-[calc(25%-18px)]">
+      <div className="relative flex flex-1 flex-col pt-10">
         {/* Avatar */}
         <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2">
           <div className="relative">
@@ -105,7 +88,7 @@ function ReviewCardEl({ review }: { review: ReviewCard }) {
         </div>
 
         {/* Card body */}
-        <div className="rounded-xl border border-border bg-card px-6 pb-6 pt-12 text-center shadow-md transition-shadow hover:shadow-lg">
+        <div className="flex flex-1 flex-col rounded-xl border border-border bg-card px-6 pb-6 pt-12 text-center shadow-md transition-shadow hover:shadow-lg">
           <h3 className="text-base font-bold text-foreground">
             {review.authorUri ? (
               <a
@@ -128,7 +111,7 @@ function ReviewCardEl({ review }: { review: ReviewCard }) {
             <FullStars count={review.rating} />
           </div>
 
-          <div className="relative mt-4">
+          <div className="relative mt-4 flex-1">
             <p className="text-sm leading-relaxed text-foreground/80">
               {needsTruncation && !expanded
                 ? review.text.slice(0, 120) + "…"
@@ -234,11 +217,11 @@ function LoadingSkeleton() {
           <div className="h-5 w-24 animate-pulse rounded bg-muted" />
           <div className="h-5 w-48 animate-pulse rounded bg-muted" />
         </div>
-        <div className="mt-10 flex gap-5 overflow-hidden pl-[10%] sm:gap-6 sm:pl-0">
+        <div className="mt-10 flex gap-5 overflow-hidden pl-[2.5%] sm:gap-6 sm:pl-0">
           {Array.from({ length: 4 }).map((_, i) => (
             <div
               key={i}
-              className="w-[80%] shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+              className="w-[95%] shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
             >
               <div className="pt-10">
                 <div className="rounded-xl border border-border bg-card px-6 pb-6 pt-12 shadow-md">
@@ -279,59 +262,32 @@ export default function GoogleReviews() {
   const dragStartScroll = useRef(0)
   const dragMoved = useRef(false)
 
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ""
   const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID ?? ""
 
   const fallbackMapsUri = placeId
     ? `https://search.google.com/local/reviews?placeid=${placeId}`
     : undefined
 
-  /* ---- data fetch ---- */
+  /* ---- data fetch (shared singleton via google-place-cache) ---- */
   useEffect(() => {
     if (fetchedRef.current) return
     fetchedRef.current = true
 
-    if (!apiKey || !placeId) {
-      setState("error")
-      return
-    }
-
     setState("loading")
 
-    loadGoogleMaps(apiKey)
-      .then(async (maps) => {
-        const { Place } = (await maps.importLibrary(
-          "places",
-        )) as google.maps.PlacesLibrary
-        const p = new Place({ id: placeId })
-        await p.fetchFields({
-          fields: ["rating", "userRatingCount", "reviews", "googleMapsURI"],
-        })
-
-        const reviews: ReviewCard[] = (p.reviews ?? []).map((r) => ({
-          author: r.authorAttribution?.displayName ?? "Anoniem",
-          initial: (r.authorAttribution?.displayName ?? "A")
-            .charAt(0)
-            .toUpperCase(),
-          rating: r.rating ?? 5,
-          text: r.text ?? "",
-          relativeTime: r.relativePublishTimeDescription ?? "",
-          authorUri: r.authorAttribution?.uri ?? undefined,
-          photoUri: r.authorAttribution?.photoURI ?? undefined,
-        }))
-
-        setPlace({
-          rating: p.rating ?? 0,
-          reviewCount: p.userRatingCount ?? 0,
-          reviews,
-          googleMapsUri: p.googleMapsURI ?? undefined,
-        })
+    fetchPlace()
+      .then((data) => {
+        if (!data) {
+          setState("error")
+          return
+        }
+        setPlace(data)
         setState("done")
       })
       .catch(() => {
         setState("error")
       })
-  }, [apiKey, placeId])
+  }, [])
 
   /* ---- scroll state sync ---- */
   const syncScroll = useCallback(() => {
@@ -477,21 +433,6 @@ export default function GoogleReviews() {
           </span>
         </div>
 
-        {/* Honest subtitle */}
-        <p className="mb-10 text-center text-sm text-muted-foreground">
-          Een selectie van recente Google reviews.{" "}
-          {mapsUri && (
-            <a
-              href={mapsUri}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-primary hover:underline"
-            >
-              Bekijk alle reviews op Google
-            </a>
-          )}
-        </p>
-
         {/* Carousel */}
         <div className="relative">
           {/* Left arrow */}
@@ -517,8 +458,7 @@ export default function GoogleReviews() {
           {/* Scroll container — native overflow + snap */}
           <div
             ref={scrollRef}
-            className="flex cursor-grab gap-5 overflow-x-auto pl-[10%] pr-[10%] snap-x snap-mandatory active:cursor-grabbing sm:gap-6 sm:pl-0 sm:pr-0"
-            style={{ scrollbarWidth: "none" }}
+            className="no-scrollbar flex cursor-grab items-stretch gap-5 overflow-x-auto pl-[2.5%] pr-[2.5%] snap-x snap-mandatory active:cursor-grabbing sm:gap-6 sm:pl-0 sm:pr-0"
             onScroll={handleScroll}
             onPointerDown={onPointerDown}
             onClickCapture={onClickCapture}
@@ -552,8 +492,11 @@ export default function GoogleReviews() {
           </div>
         </div>
 
-        {/* External link + attribution */}
+        {/* Subtitle + external link + attribution */}
         <div className="mt-12 flex flex-col items-center gap-3">
+          <p className="text-sm text-muted-foreground">
+            Een selectie van recente Google reviews.
+          </p>
           <GoogleMapsLink uri={mapsUri} />
           <p className="text-xs text-muted-foreground/60">
             Reviews van Google Maps

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { MessageCircle, ArrowRight, CheckCircle2, MapPin, Star, Phone } from "lucide-react"
 import type { ReactNode } from "react"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const WA_URL =
   "https://wa.me/31612079808?text=Hallo%2C%20ik%20heb%20interesse%20in%20gevelisolatie.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
@@ -121,7 +122,7 @@ export default function GevelisolatieHero({
                   ))}
                 </div>
                 <span className="text-xs font-medium text-white/60">
-                  4.8/5 · 23+ reviews
+                  <GoogleRatingBadge format="short" />
                 </span>
               </div>
               <span className="h-3 w-px bg-white/20" />

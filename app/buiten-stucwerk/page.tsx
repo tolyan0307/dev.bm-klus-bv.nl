@@ -43,6 +43,7 @@ import {
 } from "@/lib/content/buiten-stucwerk"
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const WerkwijzeStepper = dynamic(() => import("./werkwijze-stepper"))
 const AfwerkingKeuzehulp = dynamic(() => import("@/components/sections/buiten-stucwerk/AfwerkingKeuzehulp"))
@@ -236,7 +237,7 @@ export default function BuitenStucwerkPage() {
                       <Star key={i} className="h-3.5 w-3.5 fill-[#FBBC05] text-[#FBBC05]" />
                     ))}
                   </div>
-                  <span className="text-xs font-medium text-white/60">4.8/5 · 23+ reviews</span>
+                  <GoogleRatingBadge format="short" />
                 </div>
                 <span className="h-3 w-px bg-white/20" />
                 <a href="tel:+31612079808" className="flex items-center gap-1.5 text-xs text-white/50 transition-colors hover:text-white/80">

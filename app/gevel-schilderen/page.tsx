@@ -48,6 +48,7 @@ import {
 } from "@/lib/content/gevel-schilderen"
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const FaqAccordion = dynamic(() =>
   import("./faq-accordion").then((mod) => mod.FaqAccordion),
@@ -284,9 +285,7 @@ export default function GevelSchilderenPage() {
                       />
                     ))}
                   </div>
-                  <span className="text-xs font-medium text-white/60">
-                    4.8/5 · 23+ reviews
-                  </span>
+                  <GoogleRatingBadge format="short" />
                 </div>
                 <span className="h-3 w-px bg-white/20" />
                 <a

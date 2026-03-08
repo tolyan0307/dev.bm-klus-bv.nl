@@ -9,7 +9,7 @@ import { beforeImages, afterImages } from "@/lib/content/projects/almere-gevelis
 export const metadata = buildPageMetadata(
   "/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/",
   {
-    title: "Almere gevelisolatie 35 m² & sierpleister – project 2024–2025",
+    title: "Almere gevelisolatie 35 m² sierpleister – 2024–2025",
     description:
       "Project in Almere: ca. 35 m² gevel vernieuwd met gevelisolatie, wapeningsnet, GW-Plus en sierpleister 1,5 mm in standaard wit.",
   },

@@ -28,6 +28,7 @@ import {
   breadcrumbSchema,
 } from "@/lib/seo/schema"
 import TrustStrip from "@/components/trust-strip"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const ReviewsSection = dynamic(() => import("@/components/reviews-section"))
 const StickyCTABar = dynamic(
@@ -293,7 +294,7 @@ export default function OverOnsPage() {
                     ))}
                   </div>
                   <span className="text-xs font-medium text-white/60">
-                    4.8/5 · 23+ reviews
+                    <GoogleRatingBadge format="short" />
                   </span>
                 </div>
                 <span className="h-3 w-px bg-white/20" />

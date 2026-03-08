@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { ArrowRight, Phone, Star, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 export default function HeroSection() {
   return (
@@ -139,7 +140,7 @@ export default function HeroSection() {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                 ))}
-                <span className="ml-1.5 text-sm font-bold text-white/85">4.8 / 5</span>
+                <span className="ml-1.5 text-sm font-bold text-white/85"><GoogleRatingBadge format="display" /></span>
               </div>
               <span className="hidden h-4 w-px bg-white/25 sm:block" />
               <a

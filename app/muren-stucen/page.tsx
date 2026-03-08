@@ -44,6 +44,7 @@ import {
 } from "@/lib/content/muren-stucen"
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const WerkwijzeStepper = dynamic(() => import("./werkwijze-stepper"))
 const FaqAccordionInner = dynamic(() => import("./faq-accordion"))
@@ -264,9 +265,7 @@ export default function MurenStucenPage() {
                       />
                     ))}
                   </div>
-                  <span className="text-xs font-medium text-white/60">
-                    4.8/5 · 23+ reviews
-                  </span>
+                  <GoogleRatingBadge format="short" />
                 </div>
                 <span className="h-3 w-px bg-white/20" />
                 <a

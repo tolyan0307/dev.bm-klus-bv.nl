@@ -26,6 +26,7 @@ import Callout from "@/components/page/Callout"
 import PriceCards from "@/components/page/PriceCards"
 import RelatedLinks from "@/components/page/RelatedLinks"
 import type { RelatedLinkItem } from "@/components/page/RelatedLinks"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
@@ -351,7 +352,7 @@ export default function KostenGevelisolatiePage() {
                     <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                   ))}
                   <span className="ml-1 text-xs font-semibold text-white/70">
-                    4.8 / 5
+                    <GoogleRatingBadge format="display" />
                   </span>
                 </div>
                 <span className="hidden h-3.5 w-px bg-white/20 sm:block" />

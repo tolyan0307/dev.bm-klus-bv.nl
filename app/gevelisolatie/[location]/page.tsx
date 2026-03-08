@@ -35,6 +35,7 @@ import {
 } from "@/lib/content/gevelisolatie-locations"
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const KostenCalculator = dynamic(
   () => import("@/components/sections/gevelisolatie/kosten-calculator"),
@@ -288,7 +289,7 @@ export default async function GevelisolatieLocationPage({
                     ))}
                   </div>
                   <span className="text-xs font-medium text-white/60">
-                    4.8/5 · 23+ reviews
+                    <GoogleRatingBadge format="short" />
                   </span>
                 </div>
                 <span className="h-3 w-px bg-white/20" />

@@ -24,6 +24,7 @@ import {
   MapPin,
   MessageCircle,
 } from "lucide-react"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const TrustStrip = dynamic(() => import("@/components/trust-strip"))
 const StickyCTABar = dynamic(
@@ -316,7 +317,7 @@ export default function MaterialenPage() {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                   ))}
-                  <span className="ml-1 text-xs font-semibold text-white/70">4.8 / 5</span>
+                  <span className="ml-1 text-xs font-semibold text-white/70"><GoogleRatingBadge format="display" /></span>
                 </div>
                 <span className="hidden h-3.5 w-px bg-white/20 sm:block" />
                 <a href="tel:+31612079808" className="flex items-center gap-1.5 text-xs text-white/50 transition-colors hover:text-white">

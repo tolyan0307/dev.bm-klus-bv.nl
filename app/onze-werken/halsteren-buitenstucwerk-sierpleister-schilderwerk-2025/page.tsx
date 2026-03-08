@@ -17,8 +17,7 @@ export const metadata = buildPageMetadata(
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const heroBullets = [
-  "Selectief herstel van loszittend stucwerk",
-  "Wapeningslaag met glasvezelnet op kritieke zones",
+  "Selectief herstel van loszittend stucwerk met wapening",
   "Sierpleister 1,5 mm (wit) + nette profielen",
   "Zinken afdekking tegen inwateren",
 ]
@@ -108,7 +107,7 @@ const bevindingen = [
 const resultaten = [
   {
     title: "Gestabiliseerde en versterkte ondergrond",
-    body: "Losse zones volledig gesaneerd, glasvezelnet op hoeken — geen herhaald loszittend stucwerk.",
+    body: "Losse zones volledig gesaneerd, glasvezelnet op hoeken — basis voor een duurzame opbouw.",
   },
   {
     title: "Uniforme sierpleisterafwerking",
@@ -116,11 +115,11 @@ const resultaten = [
   },
   {
     title: "Structurele afdichting bovenrand",
-    body: "Zinken afdekprofiel leidt regenwater direct af — de voornaamste oorzaak van schade is opgelost.",
+    body: "Zinken afdekprofiel leidt regenwater direct af — de voornaamste oorzaak van schade is aangepakt.",
   },
   {
-    title: "Klare gevel voor 15–20 jaar",
-    body: "Twee lagen buitenverf, antraciet plint op spatwaterhoogte. Geen achterstallig onderhoud.",
+    title: "Verzorgde gevel met duurzame afwerking",
+    body: "Twee lagen buitenverf, antraciet plint op spatwaterhoogte. De gevel is klaar voor de komende jaren.",
   },
 ]
 
@@ -128,9 +127,7 @@ const relatedLinks = [
   { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
   { label: "Sierpleister", href: "/sierpleister/" },
   { label: "Gevel schilderen", href: "/gevel-schilderen/" },
-  { label: "Muren stucen", href: "/muren-stucen/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
-  { label: "Diensten", href: "/diensten/" },
 ]
 
 // ─── Page ─────────────────────────────────────────────────────────────────────

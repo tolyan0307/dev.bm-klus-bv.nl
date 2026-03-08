@@ -11,6 +11,7 @@ import {
 } from "@/lib/seo/schema"
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
+import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const ProcessSection = dynamic(() => import("@/components/process-section"))
 const ServicesRail = dynamic(() => import("@/components/services/ServicesRail"))
@@ -234,7 +235,7 @@ export default function DienstenPage() {
                     ))}
                   </div>
                   <span className="text-xs font-medium text-white/60">
-                    4.8/5 · 23+ reviews
+                    <GoogleRatingBadge format="short" />
                   </span>
                 </div>
                 <span className="h-3 w-px bg-white/20" />
@@ -254,7 +255,7 @@ export default function DienstenPage() {
                 {[
                   { value: "6", label: "Diensten", desc: "Geveloplossingen" },
                   { value: "21+", label: "Steden", desc: "Zuid-Holland e.o." },
-                  { value: "23+", label: "Reviews", desc: "Google · 4.8 ★" },
+                  { value: <GoogleRatingBadge format="count" />, label: "Reviews", desc: <GoogleRatingBadge format="stat-desc" /> },
                   { value: "100%", label: "Garantie", desc: "Op vakmanschap" },
                 ].map((stat) => (
                   <div

@@ -31,6 +31,7 @@ import {
   Star,
 } from "lucide-react"
 import { trackEvent } from "@/components/gtm-provider";
+import GoogleRatingBadge from "@/components/google-rating-badge";
 
 // ─── Turnstile global type ────────────────────────────────────────────────────
 
@@ -392,7 +393,7 @@ export default function ContactPage() {
                     <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                   ))}
                   <span className="ml-1 text-xs font-semibold text-white/70">
-                    4.8 / 5
+                    <GoogleRatingBadge format="display" />
                   </span>
                 </div>
                 <span className="hidden h-3.5 w-px bg-white/20 sm:block" />

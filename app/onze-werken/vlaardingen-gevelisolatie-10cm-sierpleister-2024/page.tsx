@@ -9,7 +9,7 @@ import { beforeImages, afterImages } from "@/lib/content/projects/vlaardingen-ge
 export const metadata = buildPageMetadata(
   "/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2024/",
   {
-    title: "Vlaardingen gevelisolatie 10 cm & sierpleister – project 2025",
+    title: "Vlaardingen gevelisolatie 10 cm sierpleister – 2025",
     description:
       "Project in Vlaardingen: gevelrenovatie met 10 cm gevelisolatie, sierpleister 1,5 mm, nieuwe raamdorpels en hoekafwerking met steenstrips.",
   },
