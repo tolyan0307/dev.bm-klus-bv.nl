@@ -127,7 +127,7 @@ export default function GevelisolatiePage() {
       <TrustStrip />
 
       {/* ── Article content ── */}
-      <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
+      <article className="overflow-x-hidden bg-background pb-16 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
 
           {/* ── Table of Contents ── */}
@@ -189,7 +189,7 @@ export default function GevelisolatiePage() {
         {/* ── Reviews ── */}
         <ReviewsSection />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl overflow-x-hidden px-4 sm:px-6 lg:px-8">
           <FaqSection />
           <MeerInformatieSection />
         </div>

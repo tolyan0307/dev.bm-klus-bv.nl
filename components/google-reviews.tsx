@@ -36,12 +36,13 @@ const GOOGLE_COLORS = [
 
 function initialColor(name: string): string {
   let hash = 0
-  for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash)
+  for (let i = 0; i < name.length; i++)
+    hash = name.charCodeAt(i) + ((hash << 5) - hash)
   return GOOGLE_COLORS[Math.abs(hash) % GOOGLE_COLORS.length]
 }
 
 /* ------------------------------------------------------------------ */
-/*  Google badge SVG (inline, no external image)                       */
+/*  Google badge SVG                                                   */
 /* ------------------------------------------------------------------ */
 
 function GoogleBadge() {
@@ -56,7 +57,7 @@ function GoogleBadge() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Star renderers                                                     */
+/*  Stars                                                              */
 /* ------------------------------------------------------------------ */
 
 function FullStars({ count, size = "h-4 w-4" }: { count: number; size?: string }) {
@@ -78,7 +79,7 @@ function ReviewCardEl({ review }: { review: ReviewCard }) {
   const needsTruncation = review.text.length > 120
 
   return (
-    <div className="w-[85%] shrink-0 sm:w-[46%] lg:w-[calc(25%-18px)]">
+    <div className="w-[80%] shrink-0 snap-center sm:w-[calc(50%-12px)] sm:snap-start lg:w-[calc(25%-18px)]">
       <div className="relative pt-10">
         {/* Avatar */}
         <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2">
@@ -119,9 +120,10 @@ function ReviewCardEl({ review }: { review: ReviewCard }) {
               review.author
             )}
           </h3>
-          <p className="mt-1 text-xs text-muted-foreground">{review.relativeTime}</p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            {review.relativeTime}
+          </p>
 
-          {/* Stars */}
           <div className="mt-3 flex items-center justify-center gap-1">
             <FullStars count={review.rating} />
           </div>
@@ -152,7 +154,7 @@ function ReviewCardEl({ review }: { review: ReviewCard }) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Section header (shared between loaded and fallback states)         */
+/*  Section header                                                     */
 /* ------------------------------------------------------------------ */
 
 function SectionHeader() {
@@ -177,7 +179,7 @@ function SectionHeader() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Google Maps external link                                          */
+/*  Google Maps link                                                   */
 /* ------------------------------------------------------------------ */
 
 function GoogleMapsLink({ uri }: { uri?: string }) {
@@ -232,9 +234,12 @@ function LoadingSkeleton() {
           <div className="h-5 w-24 animate-pulse rounded bg-muted" />
           <div className="h-5 w-48 animate-pulse rounded bg-muted" />
         </div>
-        <div className="mt-10 flex gap-5 overflow-hidden sm:gap-6">
+        <div className="mt-10 flex gap-5 overflow-hidden pl-[10%] sm:gap-6 sm:pl-0">
           {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="w-[85%] shrink-0 sm:w-[46%] lg:w-[calc(25%-18px)]">
+            <div
+              key={i}
+              className="w-[80%] shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+            >
               <div className="pt-10">
                 <div className="rounded-xl border border-border bg-card px-6 pb-6 pt-12 shadow-md">
                   <div className="mx-auto h-4 w-24 animate-pulse rounded bg-muted" />
@@ -261,8 +266,18 @@ function LoadingSkeleton() {
 export default function GoogleReviews() {
   const [state, setState] = useState<LoadState>("idle")
   const [place, setPlace] = useState<PlaceData | null>(null)
-  const [scrollOffset, setScrollOffset] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(false)
+
   const fetchedRef = useRef(false)
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const rafId = useRef(0)
+
+  const isDragging = useRef(false)
+  const dragStartX = useRef(0)
+  const dragStartScroll = useRef(0)
+  const dragMoved = useRef(false)
 
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ""
   const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID ?? ""
@@ -271,6 +286,7 @@ export default function GoogleReviews() {
     ? `https://search.google.com/local/reviews?placeid=${placeId}`
     : undefined
 
+  /* ---- data fetch ---- */
   useEffect(() => {
     if (fetchedRef.current) return
     fetchedRef.current = true
@@ -284,20 +300,19 @@ export default function GoogleReviews() {
 
     loadGoogleMaps(apiKey)
       .then(async (maps) => {
-        const { Place } = (await maps.importLibrary("places")) as google.maps.PlacesLibrary
+        const { Place } = (await maps.importLibrary(
+          "places",
+        )) as google.maps.PlacesLibrary
         const p = new Place({ id: placeId })
         await p.fetchFields({
-          fields: [
-            "rating",
-            "userRatingCount",
-            "reviews",
-            "googleMapsURI",
-          ],
+          fields: ["rating", "userRatingCount", "reviews", "googleMapsURI"],
         })
 
         const reviews: ReviewCard[] = (p.reviews ?? []).map((r) => ({
           author: r.authorAttribution?.displayName ?? "Anoniem",
-          initial: (r.authorAttribution?.displayName ?? "A").charAt(0).toUpperCase(),
+          initial: (r.authorAttribution?.displayName ?? "A")
+            .charAt(0)
+            .toUpperCase(),
           rating: r.rating ?? 5,
           text: r.text ?? "",
           relativeTime: r.relativePublishTimeDescription ?? "",
@@ -318,12 +333,131 @@ export default function GoogleReviews() {
       })
   }, [apiKey, placeId])
 
+  /* ---- scroll state sync ---- */
+  const syncScroll = useCallback(() => {
+    const el = scrollRef.current
+    if (!el || el.children.length === 0) return
+
+    setCanScrollLeft(el.scrollLeft > 1)
+    setCanScrollRight(
+      el.scrollLeft < el.scrollWidth - el.clientWidth - 1,
+    )
+
+    const firstCard = el.children[0] as HTMLElement
+    const cardWidth = firstCard.offsetWidth
+    const gap = parseFloat(getComputedStyle(el).gap) || 0
+    const step = cardWidth + gap
+    const idx = step > 0 ? Math.round(el.scrollLeft / step) : 0
+    setActiveIndex(
+      Math.max(0, Math.min(idx, el.children.length - 1)),
+    )
+  }, [])
+
+  const handleScroll = useCallback(() => {
+    cancelAnimationFrame(rafId.current)
+    rafId.current = requestAnimationFrame(syncScroll)
+  }, [syncScroll])
+
+  useEffect(() => {
+    if (state !== "done") return
+    const timer = setTimeout(syncScroll, 60)
+    window.addEventListener("resize", syncScroll)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener("resize", syncScroll)
+      cancelAnimationFrame(rafId.current)
+    }
+  }, [state, syncScroll])
+
+  /* ---- mouse drag (pointer events on window) ---- */
+  useEffect(() => {
+    if (state !== "done") return
+
+    const onMove = (e: PointerEvent) => {
+      if (!isDragging.current) return
+      const dx = e.clientX - dragStartX.current
+      if (Math.abs(dx) > 3) dragMoved.current = true
+      const el = scrollRef.current
+      if (el) el.scrollLeft = dragStartScroll.current - dx
+    }
+
+    const onUp = () => {
+      if (!isDragging.current) return
+      isDragging.current = false
+      const el = scrollRef.current
+      if (el) {
+        el.style.scrollSnapType = ""
+        el.style.cursor = ""
+        el.style.userSelect = ""
+      }
+    }
+
+    window.addEventListener("pointermove", onMove)
+    window.addEventListener("pointerup", onUp)
+    return () => {
+      window.removeEventListener("pointermove", onMove)
+      window.removeEventListener("pointerup", onUp)
+    }
+  }, [state])
+
+  /* ---- handlers ---- */
+  const onPointerDown = useCallback((e: React.PointerEvent) => {
+    if (e.pointerType !== "mouse" || e.button !== 0) return
+    const el = scrollRef.current
+    if (!el) return
+    isDragging.current = true
+    dragMoved.current = false
+    dragStartX.current = e.clientX
+    dragStartScroll.current = el.scrollLeft
+    el.style.scrollSnapType = "none"
+    el.style.cursor = "grabbing"
+    el.style.userSelect = "none"
+  }, [])
+
+  const onClickCapture = useCallback((e: React.MouseEvent) => {
+    if (dragMoved.current) {
+      e.stopPropagation()
+      e.preventDefault()
+      dragMoved.current = false
+    }
+  }, [])
+
+  const scrollByCard = useCallback((direction: 1 | -1) => {
+    const el = scrollRef.current
+    if (!el || el.children.length === 0) return
+    const firstCard = el.children[0] as HTMLElement
+    const cardWidth = firstCard.offsetWidth
+    const gap = parseFloat(getComputedStyle(el).gap) || 0
+    el.scrollBy({ left: direction * (cardWidth + gap), behavior: "smooth" })
+  }, [])
+
+  const scrollToIndex = useCallback((index: number) => {
+    const el = scrollRef.current
+    if (!el) return
+    const card = el.children[index] as HTMLElement | undefined
+    if (!card) return
+    const containerRect = el.getBoundingClientRect()
+    const cardRect = card.getBoundingClientRect()
+    const offset =
+      cardRect.left - containerRect.left + el.scrollLeft
+    const target = offset - (el.clientWidth - card.offsetWidth) / 2
+    el.scrollTo({
+      left: Math.max(0, target),
+      behavior: "smooth",
+    })
+  }, [])
+
+  /* ---- render gates ---- */
   if (state === "idle" || state === "loading") return <LoadingSkeleton />
   if (state === "error" || !place || place.reviews.length === 0) {
-    return <FallbackState googleMapsUri={place?.googleMapsUri ?? fallbackMapsUri} />
+    return (
+      <FallbackState
+        googleMapsUri={place?.googleMapsUri ?? fallbackMapsUri}
+      />
+    )
   }
 
-  const maxScroll = Math.max(0, place.reviews.length - 1)
+  const mapsUri = place.googleMapsUri ?? fallbackMapsUri
 
   return (
     <section className="py-16 sm:py-20 lg:py-24">
@@ -331,7 +465,7 @@ export default function GoogleReviews() {
         <SectionHeader />
 
         {/* Aggregate rating */}
-        <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
+        <div className="mb-4 flex flex-wrap items-center justify-center gap-3">
           <div className="flex items-center gap-1">
             <FullStars count={Math.round(place.rating)} size="h-5 w-5" />
           </div>
@@ -343,12 +477,27 @@ export default function GoogleReviews() {
           </span>
         </div>
 
-        {/* Carousel container */}
+        {/* Honest subtitle */}
+        <p className="mb-10 text-center text-sm text-muted-foreground">
+          Een selectie van recente Google reviews.{" "}
+          {mapsUri && (
+            <a
+              href={mapsUri}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary hover:underline"
+            >
+              Bekijk alle reviews op Google
+            </a>
+          )}
+        </p>
+
+        {/* Carousel */}
         <div className="relative">
           {/* Left arrow */}
           <button
-            onClick={() => setScrollOffset((prev) => Math.max(0, prev - 1))}
-            disabled={scrollOffset === 0}
+            onClick={() => scrollByCard(-1)}
+            disabled={!canScrollLeft}
             className="absolute -left-5 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 shadow-lg transition-all hover:bg-secondary hover:shadow-xl disabled:opacity-30 sm:-left-6 lg:flex"
             aria-label="Vorige reviews"
           >
@@ -357,36 +506,43 @@ export default function GoogleReviews() {
 
           {/* Right arrow */}
           <button
-            onClick={() => setScrollOffset((prev) => Math.min(maxScroll, prev + 1))}
-            disabled={scrollOffset >= maxScroll}
+            onClick={() => scrollByCard(1)}
+            disabled={!canScrollRight}
             className="absolute -right-5 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 shadow-lg transition-all hover:bg-secondary hover:shadow-xl disabled:opacity-30 sm:-right-6 lg:flex"
             aria-label="Volgende reviews"
           >
             <ChevronRight className="h-5 w-5 text-foreground" />
           </button>
 
-          {/* Cards */}
-          <div className="overflow-hidden">
-            <div
-              className="flex gap-5 transition-transform duration-500 ease-in-out sm:gap-6"
-              style={{
-                transform: `translateX(-${scrollOffset * (100 / 4 + 1.5)}%)`,
-              }}
-            >
-              {place.reviews.map((review, idx) => (
-                <ReviewCardEl key={`${review.author}-${idx}`} review={review} />
-              ))}
-            </div>
+          {/* Scroll container — native overflow + snap */}
+          <div
+            ref={scrollRef}
+            className="flex cursor-grab gap-5 overflow-x-auto pl-[10%] pr-[10%] snap-x snap-mandatory active:cursor-grabbing sm:gap-6 sm:pl-0 sm:pr-0"
+            style={{ scrollbarWidth: "none" }}
+            onScroll={handleScroll}
+            onPointerDown={onPointerDown}
+            onClickCapture={onClickCapture}
+            tabIndex={0}
+            role="region"
+            aria-label="Google reviews carousel"
+            aria-roledescription="carousel"
+          >
+            {place.reviews.map((review, idx) => (
+              <ReviewCardEl
+                key={`${review.author}-${idx}`}
+                review={review}
+              />
+            ))}
           </div>
 
-          {/* Mobile navigation dots */}
-          <div className="mt-8 flex justify-center gap-2 lg:hidden">
+          {/* Dots — visible on all breakpoints */}
+          <div className="mt-8 flex justify-center gap-2">
             {place.reviews.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setScrollOffset(index)}
+                onClick={() => scrollToIndex(index)}
                 className={`h-2 rounded-full transition-all ${
-                  index === scrollOffset
+                  index === activeIndex
                     ? "w-8 bg-primary"
                     : "w-2 bg-border hover:bg-primary/50"
                 }`}
@@ -398,7 +554,7 @@ export default function GoogleReviews() {
 
         {/* External link + attribution */}
         <div className="mt-12 flex flex-col items-center gap-3">
-          <GoogleMapsLink uri={place.googleMapsUri ?? fallbackMapsUri} />
+          <GoogleMapsLink uri={mapsUri} />
           <p className="text-xs text-muted-foreground/60">
             Reviews van Google Maps
           </p>
