@@ -262,6 +262,23 @@ jobs:
             fi
           "
 
+      - name: Deploy root .htaccess (redirects + WP routing)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          ROOT_HTACCESS="deploy/apache/root.htaccess"
+          test -f "$ROOT_HTACCESS" || { echo "ERROR: $ROOT_HTACCESS not found in repo"; exit 1; }
+
+          scp -P "$REMOTE_PORT" "$ROOT_HTACCESS" "$REMOTE_USER@$REMOTE_HOST:$DOMAIN_DIR/.htaccess"
+
+          ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "
+            set -euo pipefail
+            echo 'Root .htaccess deployed'
+            head -3 '$DOMAIN_DIR/.htaccess'
+            wc -l < '$DOMAIN_DIR/.htaccess'
+          "
+
       - name: Optional cleanup old releases (keep last 5)
         shell: bash
         run: |

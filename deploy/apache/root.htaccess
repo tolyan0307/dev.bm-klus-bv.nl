@@ -1,0 +1,146 @@
+# ─── BM klus BV — Root .htaccess (domain root) ──────────────────────────────
+# Managed in repo: deploy/apache/root.htaccess
+# Deployed to: $DOMAIN_DIR/.htaccess  (= /public_html/.htaccess)
+#
+# !! This file is the SINGLE SOURCE OF TRUTH for the domain root .htaccess.
+# !! It is copied to the server on every deploy (see deploy-*.yml).
+# !! Manual edits on the server will be overwritten on next deploy.
+#
+# Order of processing:
+#   1. HTTPS + canonical host
+#   2. Legacy 301 redirects (old WP URLs → new static site URLs)
+#   3. 410 Gone for stray/attack paths
+#   4. Security headers, caching, compression
+#   5. WordPress routing (MU-plugin serves static pages from v0 release)
+
+RewriteEngine On
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 1. CANONICAL HOST
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ─── Force HTTPS ──────────────────────────────────────────────────────────────
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ─── Remove www (canonical: bm-klus-bv.nl without www) ───────────────────────
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 2. LEGACY 301 REDIRECTS
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ─── Changed URLs ────────────────────────────────────────────────────────────
+Redirect 301 /over_ons/ /over-ons/
+Redirect 301 /muren-stucen-2/ /muren-stucen/
+Redirect 301 /buitenstucwerk-woning-halsteren-sierpleister-schilderwerk-2025/ /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/
+
+# ─── Old WP project pages (root slug → /onze-werken/) ────────────────────────
+Redirect 301 /gevelisolatie-woning-rottekade-10cm-schilderwerk-2024/ /onze-werken/rottekade-gevelisolatie-schilderwerk-2024/
+Redirect 301 /vlaardingen-gevelisolatie-6cm-sierpleister-15mm/ /onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-vrijstaande-woning-nieuw-beijerland-zuidzijdsedijk/ /onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-bruinisse-6cm-sierpleister/ /onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-dordrecht-10cm-sierpleister/ /onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-klaaswaal-6cm-sierpleister/ /onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /buitenstucwerk-woning-rotterdam-cementpleister/ /onze-werken/rotterdam-buitenstucwerk-cementpleister-2024/
+Redirect 301 /gevelisolatie-woning-almere-35m2-sierpleister/ /onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-vlaardingen-10cm-sierpleister/ /onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /vught-gevelisolatie-10cm-sierpleister/ /onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /gevelisolatie-woning-katwijk-6cm-sierpleister/ /onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/
+
+# ─── Old /onze-werken/ slugs (GSC crawl artifacts) ──────────────────────────
+Redirect 301 /onze-werken/gevelisolatie-woning-vlaardingen-10cm-sierpleister/ /onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-klaaswaal-6cm-sierpleister/ /onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-katwijk-6cm-sierpleister/ /onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/
+Redirect 301 /onze-werken/buitenstucwerk-woning-rotterdam-cementpleister/ /onze-werken/rotterdam-buitenstucwerk-cementpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-almere-35m2-sierpleister/ /onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/
+Redirect 301 /onze-werken/vught-gevelisolatie-10cm-sierpleister/ /onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-dordrecht-10cm-sierpleister/ /onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2024/
+Redirect 301 /onze-werken/gevelisolatie-woning-bruinisse-6cm-sierpleister/ /onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2024/
+
+# ─── Disabled future page ────────────────────────────────────────────────────
+Redirect 301 /onze-werken/gevelisolatie/ /onze-werken/
+
+# ─── Old /object* pages (image-only, no content) ────────────────────────────
+Redirect 301 /object1/ /onze-werken/
+Redirect 301 /object2/ /onze-werken/
+Redirect 301 /object3/ /onze-werken/
+Redirect 301 /object4/ /onze-werken/
+Redirect 301 /object5/ /onze-werken/
+Redirect 301 /object6/ /onze-werken/
+Redirect 301 /object7/ /onze-werken/
+Redirect 301 /object8/ /onze-werken/
+Redirect 301 /object9/ /onze-werken/
+Redirect 301 /object10/ /onze-werken/
+Redirect 301 /object-11/ /onze-werken/
+Redirect 301 /object12/ /onze-werken/
+Redirect 301 /object13/ /onze-werken/
+Redirect 301 /object14/ /onze-werken/
+Redirect 301 /object15/ /onze-werken/
+Redirect 301 /object17/ /onze-werken/
+Redirect 301 /object20/ /onze-werken/
+Redirect 301 /object21/ /onze-werken/
+
+# ─── Removed service ─────────────────────────────────────────────────────────
+Redirect 301 /schoonmaak-na-verbouwing/ /diensten/
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 3. BLOCK STRAY / ATTACK PATHS (410 Gone)
+# ══════════════════════════════════════════════════════════════════════════════
+
+# WordPress attack vector (WP is active but xmlrpc is unused)
+RewriteRule ^xmlrpc\.php$ - [G,L]
+
+# Old Rank Math sitemap artifacts
+RewriteRule ^main-sitemap\.xsl$ - [G,L]
+RewriteRule ^page-sitemap\.xml$ - [G,L]
+
+# Stray legacy file found by GSC
+RewriteRule ^locations\.kml$ - [G,L]
+
+# NOTE: wp-admin, wp-content, wp-includes, wp-json are NOT blocked.
+# WordPress is still active (admin, MU-plugin, contact form REST API).
+# Block these paths after WordPress is fully decommissioned.
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 4. SECURITY HEADERS / CACHING / COMPRESSION
+# ══════════════════════════════════════════════════════════════════════════════
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 5. WORDPRESS ROUTING
+# ══════════════════════════════════════════════════════════════════════════════
+# Standard WP rules — MU-plugin intercepts known pages and serves static HTML
+# from the v0 release directory. Unknown paths fall through to WP 404 handling.
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
