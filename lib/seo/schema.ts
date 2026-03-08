@@ -54,12 +54,6 @@ export function localBusinessSchema(): Record<string, unknown> {
       { "@type": "City", name: "Vlaardingen" },
       { "@type": "City", name: "Gouda" },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "23",
-      bestRating: "5",
-    },
     sameAs: [
       "https://www.instagram.com/bm_klus_bv",
       "https://www.facebook.com/profile.php?id=61556805434705",
