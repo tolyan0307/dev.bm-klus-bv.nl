@@ -4,7 +4,12 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { GtmProvider } from '@/components/gtm-provider'
 import { getSiteUrl, isProductionHost } from '@/data/sitemap-plan'
+import dynamic from 'next/dynamic'
 import './globals.css'
+
+const PageviewBeacon = dynamic(() => import('@/components/pageview-beacon'), {
+  ssr: false,
+})
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -53,6 +58,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <GtmProvider />
+        <PageviewBeacon />
       </body>
     </html>
   )
