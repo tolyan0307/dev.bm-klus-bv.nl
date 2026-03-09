@@ -296,6 +296,7 @@ export default function InlineQuoteForm({
                 id="iqf-telefoon"
                 type="tel"
                 autoComplete="tel"
+                data-google-ads-phone="true"
                 placeholder="+31 6 …"
                 value={telefoon}
                 onChange={(e) => {

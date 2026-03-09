@@ -423,6 +423,7 @@ export default function QuoteModal({
                     id="qm-email"
                     type="email"
                     autoComplete="email"
+                    data-google-ads-email="true"
                     placeholder="Voor de offerte per mail"
                     value={email}
                     onChange={(e) => {
@@ -452,6 +453,7 @@ export default function QuoteModal({
                     id="qm-telefoon"
                     type="tel"
                     autoComplete="tel"
+                    data-google-ads-phone="true"
                     placeholder="+31 6 …"
                     value={telefoon}
                     onChange={(e) => setTelefoon(e.target.value)}

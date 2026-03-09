@@ -150,6 +150,8 @@ export default function OverOnsPage() {
       "Specialist in buitengevelisolatie (ETICS) en gevelafwerking in regio Rotterdam en Zuid-Holland.",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Bonaventurastraat 58B",
+      postalCode: "3081 HE",
       addressLocality: "Rotterdam",
       addressRegion: "Zuid-Holland",
       addressCountry: "NL",

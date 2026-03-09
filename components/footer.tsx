@@ -203,7 +203,7 @@ export default function Footer() {
                 </a>
                 <div className="flex items-center gap-3 text-sm text-background/70">
                   <MapPin className="h-4 w-4 shrink-0 text-primary" />
-                  <span>Rotterdam, Nederland</span>
+                  <span>Bonaventurastraat 58B, 3081 HE Rotterdam</span>
                 </div>
               </div>
 

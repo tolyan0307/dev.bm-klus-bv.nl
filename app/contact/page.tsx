@@ -503,6 +503,7 @@ export default function ContactPage() {
                   <FormField id="telefoon" label="Telefoon" required error={errors.telefoon} icon={<PhoneCall className="w-3.5 h-3.5" />}>
                     <input
                       id="telefoon" name="telefoon" type="tel" autoComplete="tel"
+                      data-google-ads-phone="true"
                       placeholder="+31 6 12 07 98 08" value={form.telefoon} onChange={handleChange}
                       className={`${inputClass} ${errors.telefoon ? "border-destructive focus:ring-destructive/40" : ""}`}
                       aria-invalid={!!errors.telefoon}
@@ -538,11 +539,12 @@ export default function ContactPage() {
                   {/* E-mail + Dienst */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <FormField id="email" label="E-mail" error={errors.email} icon={<AtSign className="w-3.5 h-3.5" />}>
-                      <input
-                        id="email" name="email" type="email" autoComplete="email"
-                        placeholder="Uw e-mailadres" value={form.email} onChange={handleChange}
-                        className={inputClass}
-                      />
+                    <input
+                      id="email" name="email" type="email" autoComplete="email"
+                      data-google-ads-email="true"
+                      placeholder="Uw e-mailadres" value={form.email} onChange={handleChange}
+                      className={inputClass}
+                    />
                     </FormField>
 
                     <FormField id="dienst" label="Dienst" error={errors.dienst} icon={<Hammer className="w-3.5 h-3.5" />}>

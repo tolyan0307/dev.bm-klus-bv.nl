@@ -3,9 +3,6 @@
 import { useEffect, useState } from "react"
 import { fetchPlace, getCachedPlace } from "@/lib/google-place-cache"
 
-const _fbRating = parseFloat(process.env.NEXT_PUBLIC_GOOGLE_RATING ?? "4.8")
-const _fbCount = parseInt(process.env.NEXT_PUBLIC_GOOGLE_REVIEW_COUNT ?? "23", 10)
-
 type Format = "short" | "trust" | "count" | "stat-desc"
 
 function fmt(rating: number, count: number, f: Format): string {
@@ -22,19 +19,33 @@ function fmt(rating: number, count: number, f: Format): string {
   }
 }
 
+function neutralFallback(f: Format): string {
+  switch (f) {
+    case "short":
+      return "Google reviews"
+    case "trust":
+      return "Google reviews"
+    case "count":
+      return "–"
+    case "stat-desc":
+      return "Google reviews"
+  }
+}
+
 /**
  * Lightweight client component that renders live Google rating data.
  *
- * On first render it shows build-time fallback values (from env vars).
+ * On first render it shows a neutral placeholder (no fake numbers).
  * Once the shared Google Place cache resolves, the text updates to
- * real API data. All `<GoogleRatingBadge>` instances on a page share
+ * real API data. If the API fails, the neutral text stays.
+ * All `<GoogleRatingBadge>` instances on a page share
  * a single API call via `lib/google-place-cache.ts`.
  */
 export default function GoogleRatingBadge({ format }: { format: Format }) {
   const init = getCachedPlace()
 
   const [text, setText] = useState(() =>
-    fmt(init?.rating ?? _fbRating, init?.reviewCount ?? _fbCount, format),
+    init ? fmt(init.rating, init.reviewCount, format) : neutralFallback(format),
   )
 
   useEffect(() => {
