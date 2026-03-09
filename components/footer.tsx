@@ -131,7 +131,7 @@ export default function Footer() {
                 Vakmanschap, kwaliteit en persoonlijke service.
               </p>
               <div className="mt-5 flex flex-col gap-1.5 text-xs text-background/50">
-                <span>KVK: 90826167</span>
+                <span>KVK: 77356039</span>
                 <span>VCA* gecertificeerd</span>
               </div>
             </div>

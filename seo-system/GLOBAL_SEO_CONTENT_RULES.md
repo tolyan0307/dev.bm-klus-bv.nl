@@ -17,7 +17,7 @@
 | Phone | +31 6 12 07 98 08 |
 | Email | info@bm-klus-bv.nl |
 | Address | Bonaventurastraat 58B, 3081 HE Rotterdam |
-| KVK | 90826167 |
+| KVK | 77356039 |
 | Certifications | VCA* gecertificeerd |
 | Tech stack | Next.js 16, static export (`output: 'export'`), Tailwind v4, React 19 |
 | CMS | None — content lives in `lib/content/*.ts` files and inline JSX |

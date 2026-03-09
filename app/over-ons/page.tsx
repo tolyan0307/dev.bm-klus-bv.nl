@@ -358,7 +358,7 @@ export default function OverOnsPage() {
                   <div className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3">
                     <ShieldCheck size={18} className="text-primary" />
                     <div>
-                      <p className="text-sm font-bold text-foreground">KVK: 90826167</p>
+                      <p className="text-sm font-bold text-foreground">KVK: 77356039</p>
                       <p className="text-xs text-muted-foreground">VCA* gecertificeerd</p>
                     </div>
                   </div>
