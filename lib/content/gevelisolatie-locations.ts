@@ -104,7 +104,7 @@ export const locations: LocationData[] = [
     gemiddeldBesparing: "Gemiddeld €500–€850/jaar besparing bij een bovenwoning of rijtjeshuis.",
     subsidieInfo: "ISDE-subsidie (landelijk) tot ±€4.400. Gemeente Den Haag biedt de Ookal-lening en het Haags Energieakkoord voor verduurzaming.",
     vergunningTip: "In het Willemspark, Statenkwartier en andere beschermde stadsgezichten in Den Haag kunnen aanvullende regels van kracht zijn. Of een vergunning nodig is, hangt af van uw woning, locatie en de actuele gemeentelijke eisen. Controleer altijd de actuele regels via de gemeente Den Haag en het Omgevingsloket.",
-    energieTip: "Veel Haagse vooroorlogse woningen hebben massief metselwerk zonder spouw. ETICS is hier de enige effectieve gevelisolatiemethode.",
+    energieTip: "Veel Haagse vooroorlogse woningen hebben massief metselwerk zonder spouw. ETICS is hier vaak de meest effectieve gevelisolatiemethode.",
     gemeenteWebsite: "https://www.denhaag.nl/nl/wonen-en-bouwen/duurzaam-wonen.htm",
   },
   {
@@ -306,7 +306,7 @@ export const locations: LocationData[] = [
     gemiddeldBesparing: "Gemiddeld €500–€850/jaar besparing bij een rijtjeshuis in Merenwijk of Stevenshof.",
     subsidieInfo: "ISDE-subsidie (landelijk) tot ±€4.400. Gemeente Leiden biedt de Leidse Duurzaamheidslening en een gratis energiescan voor woningeigenaren.",
     vergunningTip: "De Leidse binnenstad is beschermd stadsgezicht met aanvullende regelgeving. Of een vergunning nodig is, hangt af van uw woning, locatie en de actuele regels van de gemeente Leiden. Controleer altijd de actuele regels via uw gemeente en het Omgevingsloket.",
-    energieTip: "Veel grachtenpanden in Leiden hebben massieve gevels zonder spouw. ETICS is hier de enige optie, mits de gemeente toestemming geeft voor het gewijzigde gevelbeeld.",
+    energieTip: "Veel grachtenpanden in Leiden hebben massieve gevels zonder spouw. ETICS is hier vaak de meest praktische optie, mits de gemeente toestemming geeft voor het gewijzigde gevelbeeld.",
     gemeenteWebsite: "https://www.leiden.nl/duurzaam",
   },
   {
@@ -489,7 +489,7 @@ export const locations: LocationData[] = [
       {
         vraag: "Wat kost gevelisolatie in Barendrecht?",
         antwoord:
-          "De kosten voor buitengevelisolatie in Barendrecht starten vanaf €110/m² voor ETICS + pleisterafwerking. De exacte prijs wordt na een gratis opname op locatie vastgesteld.",
+          "De kosten voor buitengevelisolatie in Barendrecht hangen af van het type woning, de oppervlakte en de gekozen afwerking. Prijsindicaties verschillen per project. Bekijk de richtprijzen op onze kostenpagina of vraag een opname op locatie aan.",
       },
       {
         vraag: "Zijn de woningen in Carnisselande geschikt voor ETICS?",
@@ -539,7 +539,7 @@ export const locations: LocationData[] = [
     gemiddeldBesparing: "Gemiddeld €550–€850/jaar besparing bij een naoorlogs rijtjeshuis.",
     subsidieInfo: "ISDE-subsidie (landelijk) tot ±€4.400. Gemeente Ridderkerk biedt advies via het Energieloket BAR-gemeenten.",
     vergunningTip: "Of een vergunning nodig is, hangt af van uw woning, locatie en de actuele regels van de gemeente Ridderkerk. Historische dorpskernen kunnen aanvullende eisen hebben. Controleer altijd de actuele regels via uw gemeente en het Omgevingsloket.",
-    energieTip: "De naoorlogse woningen in Drievliet en Bolnes hebben enkelsteens gevels met een Rc-waarde van 0,2–0,4. ETICS is hier de meest effectieve isolatiemethode.",
+    energieTip: "De naoorlogse woningen in Drievliet en Bolnes hebben enkelsteens gevels met een Rc-waarde van 0,2–0,4. ETICS is hier doorgaans de meest effectieve isolatiemethode.",
     gemeenteWebsite: "https://www.ridderkerk.nl/duurzaamheid",
   },
   {
@@ -641,7 +641,7 @@ export const locations: LocationData[] = [
       {
         vraag: "Wat kost gevelisolatie in Hellevoetsluis?",
         antwoord:
-          "De kosten voor buitengevelisolatie in Hellevoetsluis starten vanaf €110/m² voor ETICS + pleisterafwerking. De exacte prijs wordt na een gratis opname op locatie vastgesteld.",
+          "De kosten voor buitengevelisolatie in Hellevoetsluis hangen af van het type woning, de oppervlakte en de gekozen afwerking. Prijsindicaties verschillen per project. Bekijk de richtprijzen op onze kostenpagina of vraag een opname op locatie aan.",
       },
       {
         vraag: "Werkt BM klus BV ook in Brielle en Oostvoorne?",
@@ -736,6 +736,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "ISDE-subsidie (landelijk) tot ±€4.400. Gemeente Bergen op Zoom biedt de Duurzaamheidslening en advies via het West-Brabants Energieloket.",
     vergunningTip: "De binnenstad van Bergen op Zoom is beschermd stadsgezicht. Of een vergunning nodig is, hangt af van uw woning, locatie en de actuele regels van de gemeente Bergen op Zoom. Controleer altijd de actuele regels via uw gemeente en het Omgevingsloket.",
     energieTip: "Door de ligging nabij de Westerschelde heeft Bergen op Zoom een relatief vochtig klimaat. ETICS beschermt de gevel niet alleen thermisch maar ook tegen vochtindringing.",
+    gemeenteWebsite: "https://www.bergenopzoom.nl/duurzaamheid",
   },
   {
     slug: "roosendaal",
@@ -773,6 +774,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "ISDE-subsidie (landelijk) tot ±€4.400. Gemeente Roosendaal biedt advies via het West-Brabants Energieloket en de gemeentelijke Duurzaamheidslening.",
     vergunningTip: "Of een vergunning nodig is, hangt af van uw woning, locatie en de actuele regels van de gemeente Roosendaal. Controleer altijd de actuele regels via uw gemeente en het Omgevingsloket.",
     energieTip: "De naoorlogse rijtjeshuizen in Kroeven en Tolberg hebben een compacte gevelindeling die ETICS bijzonder kosteneffectief maakt — relatief veel m² oppervlak per woning.",
+    gemeenteWebsite: "https://www.roosendaal.nl/verduurzamen-van-uw-woning",
   },
   {
     slug: "leidschendam-voorburg",
@@ -797,7 +799,7 @@ export const locations: LocationData[] = [
       {
         vraag: "Wat kost gevelisolatie in Leidschendam-Voorburg?",
         antwoord:
-          "De kosten voor buitengevelisolatie in Leidschendam-Voorburg starten vanaf €110/m² voor ETICS + pleisterafwerking. De exacte prijs wordt na een gratis opname op locatie vastgesteld.",
+          "De kosten voor buitengevelisolatie in Leidschendam-Voorburg hangen af van het type woning, de oppervlakte en de gekozen afwerking. Prijsindicaties verschillen per project. Bekijk de richtprijzen op onze kostenpagina of vraag een opname op locatie aan.",
       },
       {
         vraag: "Werkt BM klus BV ook in Stompwijk?",
@@ -810,6 +812,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "ISDE-subsidie (landelijk) tot ±€4.400. Gemeente Leidschendam-Voorburg biedt de Duurzaamheidslening en het Energieloket Haaglanden.",
     vergunningTip: "In Voorburg zijn historische panden waarvoor aanvullende regels kunnen gelden. Of een vergunning nodig is, hangt af van uw woning, locatie en de actuele regels van de gemeente Leidschendam-Voorburg. Controleer altijd de actuele regels via uw gemeente en het Omgevingsloket.",
     energieTip: "De jaren '70-flats in Leidschendam-Noord hebben veelal ongeïsoleerde gevels. VvE-projecten met ETICS zijn hier een effectieve oplossing.",
+    gemeenteWebsite: "https://www.lv.nl/duurzaam-wonen-en-leven",
   },
   {
     slug: "hendrik-ido-ambacht",
@@ -847,6 +850,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "ISDE-subsidie (landelijk) tot ±€4.400. Gemeente Hendrik-Ido-Ambacht biedt advies via het Energieloket Drechtsteden.",
     vergunningTip: "Of een vergunning nodig is, hangt af van uw woning, locatie en de actuele regels van de gemeente Hendrik-Ido-Ambacht. Controleer altijd de actuele regels via uw gemeente en het Omgevingsloket.",
     energieTip: "De woningen in Volgerlanden (2005+) hebben een moderne isolatiestandaard. De oudere woningen in Oud-Ambacht en de Sandelingen (jaren '60–'80) hebben echter een lage Rc-waarde en profiteren sterk van ETICS.",
+    gemeenteWebsite: "https://www.h-i-ambacht.nl/Inwoners/Alle_onderwerpen_Inwoners/Duurzaamheid",
   },
 ]
 
