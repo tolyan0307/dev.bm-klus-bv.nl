@@ -24,8 +24,8 @@ const blocks = [
     tekst:
       "Er bestaan diverse regelingen voor woningisolatie. Of u in aanmerking komt, hangt af van het type woning, de behaalde RC-waarde en de geldende subsidieregelingen. Wij helpen u bij het uitzoeken van de mogelijkheden en de benodigde documentatie.",
     bullets: [
-      "Minimaal RC 3,5 m²K/W vereist (ISDE)",
-      "Subsidie aanvragen vóór uitvoering",
+      "Minimaal Rd 3,5 m²K/W vereist (ISDE)",
+      "Subsidie aanvragen ná uitvoering (binnen 24 maanden)",
       "Wij ondersteunen bij documentatie",
     ],
   },

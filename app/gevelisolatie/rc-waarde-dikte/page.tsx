@@ -95,7 +95,7 @@ const faqItems = [
   {
     vraag: "Geldt er een subsidie- of vergunningsvereiste voor een minimale Rc?",
     antwoord:
-      "Voor subsidies (zoals ISDE of SEEH) geldt doorgaans een minimale Rd-waarde voor het isolatiepakket. Wij geven bij de offerte aan of uw project in aanmerking komt en welke documentatie vereist is. Een omgevingsvergunning is in de meeste gevallen niet nodig bij isolatie aan de eigen buitengevel, maar afhankelijk van gemeente en monument status kan dit afwijken.",
+      "Voor subsidies (zoals ISDE) geldt een minimale Rd-waarde van 3,5 m²K/W voor het isolatiepakket. Wij geven bij de offerte aan of uw project in aanmerking komt en welke documentatie vereist is. Voor buitengevelisolatie (ETICS) is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. Spouwmuurisolatie is sinds 2025 in de meeste gevallen vergunningsvrij. Controleer de actuele regels via het Omgevingsloket.",
   },
   {
     vraag: "Waarom varieert de totale opbouwdikte zoveel (10–18 cm)?",

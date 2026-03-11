@@ -634,25 +634,34 @@ export default async function GevelisolatieLocationPage({
             </div>
           </section>
 
-          {/* ── Other locations ── */}
+          {/* ── Nearby locations ── */}
+          {data.nearbyLocations.length > 0 && (
           <section className="mb-4">
             <p className="mb-4 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-              Ook actief in
+              Ook actief in de regio
             </p>
             <div className="flex flex-wrap gap-2">
-              {locations
-                .filter((l) => l.slug !== slug)
+              {data.nearbyLocations
+                .map((s) => locations.find((l) => l.slug === s))
+                .filter(Boolean)
                 .map((l) => (
                   <Link
-                    key={l.slug}
-                    href={`/gevelisolatie/${l.slug}/`}
+                    key={l!.slug}
+                    href={`/gevelisolatie/${l!.slug}/`}
                     className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
                   >
-                    {l.city}
+                    {l!.city}
                   </Link>
                 ))}
+              <Link
+                href="/gevelisolatie/"
+                className="rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition-all hover:border-primary/40 hover:bg-primary/10"
+              >
+                Alle locaties →
+              </Link>
             </div>
           </section>
+          )}
 
           {/* ── Internal links ── */}
           <div className="pt-4">

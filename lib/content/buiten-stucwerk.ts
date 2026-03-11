@@ -107,8 +107,8 @@ export const kosten = {
     "De buitenmuur stucen kosten hangen af van de ondergrond, de voorbereiding en de gekozen afwerking. De richtprijs per m² is een indicatie; de exacte prijs wordt na opname op locatie vastgesteld.",
   prices: [
     { label: "Cementpleister",               value: "€50–€80/m²"   },
-    { label: "Spachtelputz",                  value: "€35–€80/m²"   },
-    { label: "Crepi / sierpleister",          value: "€60–€95/m²"   },
+    { label: "Spachtelputz",                  value: "€50–€95/m²"   },
+    { label: "Crepi / sierpleister",          value: "€55–€105/m²"  },
     { label: "Betonlook / betonstuc (buiten)", value: "€80–€110/m²" },
   ],
   disclaimer: [
@@ -291,7 +291,7 @@ export const faq = {
     {
       question: "Wat kost buitenmuur stucen per m²?",
       answer:
-        "De prijs is afhankelijk van de ondergrond, het te verwerken systeem en de benodigde voorbereiding. Als richtprijs (indicatie): cementpleister €50–€80/m², spachtelputz €35–€80/m², crepi €60–€95/m², betonstuc €80–€110/m² (incl. arbeid & materiaal). Steiger, herstel en complexe detaillering kunnen de prijs verhogen. Na opname ontvangt u een offerte met duidelijke scope en prijs per m².",
+        "De prijs is afhankelijk van de ondergrond, het te verwerken systeem en de benodigde voorbereiding. Als richtprijs (indicatie): cementpleister €50–€80/m², spachtelputz €50–€95/m², crepi €55–€105/m², betonstuc €80–€110/m² (incl. arbeid & materiaal). Steiger, herstel en complexe detaillering kunnen de prijs verhogen. Na opname ontvangt u een offerte met duidelijke scope en prijs per m².",
     },
     {
       question: "Wat is het verschil tussen cementpleister en betonstuc?",

@@ -153,12 +153,12 @@ const faqItems = [
   {
     vraag: "Welke documenten moet ik bewaren voor een subsidieaanvraag?",
     antwoord:
-      "Minimaal: de factuur van de uitgevoerde werkzaamheden, de technische omschrijving met materiaalspecificaties (inclusief lambda-waarde en RC-waarde), foto's van voor en na de uitvoering, en bewijsstukken dat de maatregel nog niet gestart was bij de aanvraag. Raadpleeg altijd de actuele documentatievereisten bij RVO.",
+      "Minimaal: de factuur van de uitgevoerde werkzaamheden, de technische omschrijving met materiaalspecificaties (inclusief lambda-waarde en Rd-waarde), foto's van de uitvoering, en de RVO-meldcode van het gebruikte isolatiemateriaal. De subsidie wordt aangevraagd ná uitvoering, binnen 24 maanden. Raadpleeg altijd de actuele documentatievereisten bij RVO.",
   },
   {
     vraag: "Kan ik subsidie aanvragen als ik slechts één gevel isoleer?",
     antwoord:
-      "In veel gevallen kan dat. De voorwaarden voor regelingen zoals ISDE stellen doorgaans een minimumisolatieopppervlak en een minimale RC-waarde. Of één gevel voldoende is, hangt af van de oppervlakte en de actuele subsidieregelgeving. Check de voorwaarden bij RVO of vraag ons om advies.",
+      "In veel gevallen kan dat. De voorwaarden voor ISDE stellen een minimaal isolatieoppervlak van 10 m² en een minimale Rd-waarde van 3,5 m²K/W. Of één gevel voldoende is, hangt af van de oppervlakte. Check de actuele voorwaarden bij RVO of vraag ons om advies.",
   },
   {
     vraag: "Wanneer moet ik de subsidie aanvragen: voor of na de uitvoering?",
@@ -557,7 +557,7 @@ export default function SubsidieVergunningPage() {
                   </p>
                   <ul className="space-y-2">
                     {[
-                      "Minimale RC-waarde (Rd) van isolatiemateriaal — check rvo.nl voor actuele norm",
+                      "Minimale Rd-waarde van isolatiemateriaal (3,5 m²K/W) — check rvo.nl voor actuele norm",
                       "Minimaal te isoleren oppervlak (m²) — afhankelijk van actuele regelgeving",
                       "Woning is in bezit van particuliere eigenaar (geen verhuurder of VvE zonder aanvraagrecht)",
                       "Aanvraag indienen na afronding, binnen de gestelde termijn bij RVO",

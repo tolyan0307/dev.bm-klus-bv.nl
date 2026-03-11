@@ -44,7 +44,7 @@ const faqItems = [
   {
     question: "Hoe wordt de prijs bepaald en zijn er verborgen kosten?",
     answer:
-      "De prijs is gebaseerd op de oppervlakte, gekozen materialen en complexiteit van het project. Onze offertes zijn all-in: materiaal, arbeid, steiger en afvoer van afval zijn inbegrepen. Geen verrassingen achteraf. Meerwerk wordt altijd vooraf overlegd.",
+      "De prijs is gebaseerd op de oppervlakte, gekozen materialen en complexiteit van het project. In onze offertes staat precies vermeld wat inbegrepen is — materiaal, arbeid en afvoer van afval — en wat apart wordt berekend, zoals steigerwerk. Geen verrassingen achteraf. Meerwerk wordt altijd vooraf overlegd.",
   },
   {
     question: "In welke regio's zijn jullie actief?",
