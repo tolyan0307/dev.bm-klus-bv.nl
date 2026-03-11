@@ -220,8 +220,8 @@ jobs:
               exit 1
             fi
 
-            # _next/images in public_html must be symlink or absent (safety)
-            for p in \"\$DOMAIN_DIR/_next\" \"\$DOMAIN_DIR/images\"; do
+            # _next/images/data in public_html must be symlink or absent (safety)
+            for p in \"\$DOMAIN_DIR/_next\" \"\$DOMAIN_DIR/images\" \"\$DOMAIN_DIR/data\"; do
               if [ -e \"\$p\" ] && [ ! -L \"\$p\" ]; then
                 echo \"ERROR: \$p exists and is not a symlink. Refusing to replace.\"
                 exit 1
@@ -234,6 +234,11 @@ jobs:
             # images may be absent in some builds; handle gracefully
             if [ -d \"\$UPLOADS_DIR/current/images\" ]; then
               ln -sfn \"\$UPLOADS_DIR/current/images\" \"\$DOMAIN_DIR/images\"
+            fi
+
+            # data (prebuild Google Place cache)
+            if [ -d \"\$UPLOADS_DIR/current/data\" ]; then
+              ln -sfn \"\$UPLOADS_DIR/current/data\" \"\$DOMAIN_DIR/data\"
             fi
 
             echo 'Deployed release:' \"\$REL\"

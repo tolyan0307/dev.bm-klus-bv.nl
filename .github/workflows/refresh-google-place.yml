@@ -1,0 +1,88 @@
+name: Refresh Google Place data
+
+on:
+  schedule:
+    # Daily at 05:00 UTC (07:00 NL) — 1 API call, ~5 sec total
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: refresh-google-place
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: [self-hosted, oracle-bmklus]
+
+    env:
+      NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ vars.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
+      NEXT_PUBLIC_GOOGLE_PLACE_ID: ${{ vars.NEXT_PUBLIC_GOOGLE_PLACE_ID_PROD }}
+
+      REMOTE_HOST: ${{ secrets.ANTAGONIST_HOST }}
+      REMOTE_PORT: ${{ secrets.ANTAGONIST_PORT }}
+      REMOTE_USER: ${{ secrets.ANTAGONIST_USER }}
+      DOMAIN_DIR_DEV: ${{ vars.DEPLOY_DOMAIN_DIR }}
+      DOMAIN_DIR_PROD: ${{ vars.DEPLOY_DOMAIN_DIR_PROD }}
+
+    steps:
+      - name: Checkout (only scripts needed)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+          sparse-checkout-cone-mode: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch Google Place data (1 API call)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/fetch-google-place.mjs
+          test -f public/data/google-place.json || { echo "ERROR: JSON not generated"; exit 1; }
+          echo "--- Generated file ---"
+          head -4 public/data/google-place.json
+
+      - name: Setup SSH key
+        shell: bash
+        env:
+          ANTAGONIST_SSH_KEY_B64: ${{ secrets.ANTAGONIST_SSH_KEY_B64 }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          REMOTE_HOST_CLEAN="$(printf '%s' "$REMOTE_HOST" | tr -d $'\r\n')"
+          REMOTE_PORT_CLEAN="$(printf '%s' "$REMOTE_PORT" | tr -d $'\r\n\t ')"
+          REMOTE_USER_CLEAN="$(printf '%s' "$REMOTE_USER" | tr -d $'\r\n')"
+          KEY_B64_CLEAN="$(printf '%s' "${ANTAGONIST_SSH_KEY_B64:-}" | tr -d $'\r\n\t ')"
+          printf '%s' "$KEY_B64_CLEAN" | base64 --decode > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          echo "REMOTE_HOST=$REMOTE_HOST_CLEAN" >> "$GITHUB_ENV"
+          echo "REMOTE_PORT=$REMOTE_PORT_CLEAN" >> "$GITHUB_ENV"
+          echo "REMOTE_USER=$REMOTE_USER_CLEAN" >> "$GITHUB_ENV"
+
+      - name: Upload to dev + prod
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SRC="public/data/google-place.json"
+
+          for DOMAIN_DIR in "$DOMAIN_DIR_DEV" "$DOMAIN_DIR_PROD"; do
+            REMOTE_DATA_DIR="$DOMAIN_DIR/wp-content/uploads/v0/current/data"
+
+            echo "--- Updating $DOMAIN_DIR ---"
+
+            ssh -o StrictHostKeyChecking=accept-new \
+                -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" \
+                "mkdir -p '$REMOTE_DATA_DIR'"
+
+            scp -P "$REMOTE_PORT" "$SRC" \
+                "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DATA_DIR/google-place.json"
+
+            echo "OK: $REMOTE_DATA_DIR/google-place.json updated"
+          done

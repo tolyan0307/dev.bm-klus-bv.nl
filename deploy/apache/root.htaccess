@@ -19,13 +19,14 @@ RewriteEngine On
 # 1. CANONICAL HOST
 # ══════════════════════════════════════════════════════════════════════════════
 
-# ─── Force HTTPS ──────────────────────────────────────────────────────────────
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# ─── Remove www (canonical: bm-klus-bv.nl without www) ───────────────────────
+# ─── Remove www + force HTTPS in one hop ──────────────────────────────────────
+# Order matters: www-check first so http://www.* becomes https://apex in 1 redirect.
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# ─── Force HTTPS (host is already non-www at this point) ─────────────────────
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ══════════════════════════════════════════════════════════════════════════════
 # 2. LEGACY 301 REDIRECTS
@@ -111,6 +112,7 @@ RewriteRule ^locations\.kml$ - [G,L]
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
 </IfModule>
 
 <IfModule mod_expires.c>

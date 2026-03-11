@@ -299,7 +299,7 @@ export default function GevelSchilderenPage() {
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
-      <article className="overflow-hidden bg-background pb-16 sm:pb-20 lg:pb-24">
+      <article className="overflow-clip bg-background pb-16 sm:pb-20 lg:pb-24">
 
         {/* ── TOC ── */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">

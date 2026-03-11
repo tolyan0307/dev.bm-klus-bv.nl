@@ -2,6 +2,30 @@ import { createElement } from "react"
 
 import { SITE } from "@/lib/seo/routes"
 
+const AREA_SERVED = [
+  "Rotterdam",
+  "Den Haag",
+  "Delft",
+  "Dordrecht",
+  "Schiedam",
+  "Vlaardingen",
+  "Leiden",
+  "Gouda",
+  "Zoetermeer",
+  "Capelle aan den IJssel",
+  "Spijkenisse",
+  "Barendrecht",
+  "Ridderkerk",
+  "Alphen aan den Rijn",
+  "Maassluis",
+  "Hellevoetsluis",
+  "Breda",
+  "Bergen op Zoom",
+  "Roosendaal",
+  "Leidschendam-Voorburg",
+  "Hendrik-Ido-Ambacht",
+].map((name) => ({ "@type": "City" as const, name }))
+
 export function jsonLdScript(data: object) {
   return createElement("script", {
     type: "application/ld+json",
@@ -44,16 +68,7 @@ export function localBusinessSchema(): Record<string, unknown> {
     openingHoursSpecification: [
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "09:00", closes: "18:00" },
     ],
-    areaServed: [
-      { "@type": "City", name: "Rotterdam" },
-      { "@type": "City", name: "Den Haag" },
-      { "@type": "City", name: "Delft" },
-      { "@type": "City", name: "Leiden" },
-      { "@type": "City", name: "Dordrecht" },
-      { "@type": "City", name: "Schiedam" },
-      { "@type": "City", name: "Vlaardingen" },
-      { "@type": "City", name: "Gouda" },
-    ],
+    areaServed: AREA_SERVED,
     sameAs: [
       "https://www.instagram.com/bm_klus_bv",
       "https://www.facebook.com/profile.php?id=61556805434705",
@@ -79,12 +94,7 @@ export function serviceSchema(opts: {
     description: opts.description,
     url: opts.url,
     provider: { "@id": `${SITE.canonicalBase}/#business` },
-    areaServed: [
-      { "@type": "City", name: "Rotterdam" },
-      { "@type": "City", name: "Den Haag" },
-      { "@type": "City", name: "Delft" },
-      { "@type": "City", name: "Dordrecht" },
-    ],
+    areaServed: AREA_SERVED,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Gevelisolatie diensten",

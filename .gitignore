@@ -12,6 +12,9 @@ out/
 .env.*.local
 .DS_Store
 
+# Generated at build time (prebuild fetch)
+public/data/
+
 # Build / cache artifacts
 *.tsbuildinfo
 .turbo/

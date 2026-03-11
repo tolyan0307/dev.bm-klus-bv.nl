@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { fetchPlace, getCachedPlace } from "@/lib/google-place-cache"
+import { fetchRating, getCachedRating } from "@/lib/google-place-cache"
 
 type Format = "short" | "trust" | "count" | "stat-desc"
 
@@ -42,14 +42,14 @@ function neutralFallback(f: Format): string {
  * a single API call via `lib/google-place-cache.ts`.
  */
 export default function GoogleRatingBadge({ format }: { format: Format }) {
-  const init = getCachedPlace()
+  const init = getCachedRating()
 
   const [text, setText] = useState(() =>
     init ? fmt(init.rating, init.reviewCount, format) : neutralFallback(format),
   )
 
   useEffect(() => {
-    fetchPlace().then((data) => {
+    fetchRating().then((data) => {
       if (data) setText(fmt(data.rating, data.reviewCount, format))
     })
   }, [format])

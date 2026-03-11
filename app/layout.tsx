@@ -6,6 +6,7 @@ import { GtmProvider } from '@/components/gtm-provider'
 import { getSiteUrl, isProductionHost } from '@/data/sitemap-plan'
 import { Suspense } from 'react'
 import PageviewBeacon from '@/components/pageview-beacon'
+import GoogleAggregateRatingJsonLd from '@/components/google-aggregate-rating-jsonld'
 import './globals.css'
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -56,6 +57,7 @@ export default function RootLayout({
         <Footer />
         <GtmProvider />
         <Suspense fallback={null}><PageviewBeacon /></Suspense>
+        <Suspense fallback={null}><GoogleAggregateRatingJsonLd /></Suspense>
       </body>
     </html>
   )
