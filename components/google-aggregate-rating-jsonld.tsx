@@ -41,6 +41,7 @@ function buildJson(rating: number, count: number): string {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "@id": BUSINESS_ID,
+    name: "BM klus BV",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: rating.toFixed(1),
