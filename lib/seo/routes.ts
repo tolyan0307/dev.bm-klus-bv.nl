@@ -1,5 +1,7 @@
 import { getSiteUrl } from "@/data/sitemap-plan"
 
+export const TITLE_SUFFIX = " | BM klus BV"
+
 export const SITE = {
   siteName: "BM klus BV",
   canonicalBase: getSiteUrl(),

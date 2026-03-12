@@ -30,7 +30,7 @@ export const projects: ProjectCard[] = [
     },
   },
   {
-    slug: "nieuw-beijerland-gevelisolatie-12cm-sierpleister-2024",
+    slug: "nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],
     title: "Nieuw-Beijerland – gevelisolatie 12 cm & sierpleister 1,5 mm (2025)",
@@ -42,7 +42,7 @@ export const projects: ProjectCard[] = [
         "Vrijstaande woning voorzien van 12 cm buitengevelisolatie en afgewerkt met sierpleister 1,5 mm.",
       year: 2025,
     },
-    projectUrl: "/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2024/",
+    projectUrl: "/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/",
     cardAlt:
       "Nieuw-Beijerland gevelisolatie 12 cm en sierpleister – vrijstaande woning na de werken (2025)",
     coverImage: {
@@ -55,7 +55,7 @@ export const projects: ProjectCard[] = [
     },
   },
   {
-    slug: "bruinisse-gevelisolatie-6cm-sierpleister-2024",
+    slug: "bruinisse-gevelisolatie-6cm-sierpleister-2025",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],
     title: "Bruinisse – gevelisolatie 6 cm & sierpleister 1,5 mm (2025)",
@@ -68,7 +68,7 @@ export const projects: ProjectCard[] = [
         "Gevelrenovatie met 6 cm buitengevelisolatie en sierpleister 1,5 mm, inclusief vernieuwde raamdorpels, ventilatie-openingen, sokkelbescherming en regenpijpen.",
       year: 2025,
     },
-    projectUrl: "/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2024/",
+    projectUrl: "/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/",
     cardAlt:
       "Bruinisse gevelisolatie 6 cm en sierpleister – eengezinswoning na de werken (2025)",
     coverImage: {
@@ -81,7 +81,7 @@ export const projects: ProjectCard[] = [
     },
   },
   {
-    slug: "dordrecht-gevelisolatie-10cm-sierpleister-2024",
+    slug: "dordrecht-gevelisolatie-10cm-sierpleister-2025",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister", "Buiten-stucwerk"],
     title: "Dordrecht – gevelisolatie 10 cm & sierpleister 1,5 mm (2025)",
@@ -94,7 +94,7 @@ export const projects: ProjectCard[] = [
         "Gevelrenovatie met 10 cm buitengevelisolatie en sierpleister 1,5 mm, inclusief aluminium raamdorpels, vernieuwde regenpijpen, bitumen sokkel en plint met steenstrips.",
       year: 2025,
     },
-    projectUrl: "/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2024/",
+    projectUrl: "/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
     cardAlt:
       "Dordrecht gevelisolatie 10 cm en sierpleister – woning na de werken (2025)",
     coverImage: {
@@ -107,7 +107,7 @@ export const projects: ProjectCard[] = [
     },
   },
   {
-    slug: "klaaswaal-gevelisolatie-6cm-sierpleister-2024",
+    slug: "klaaswaal-gevelisolatie-6cm-sierpleister-2025",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],
     title: "Klaaswaal – gevelisolatie 6 cm & sierpleister 1,5 mm (2025)",
@@ -120,7 +120,7 @@ export const projects: ProjectCard[] = [
         "Woning voorzien van 6 cm gevelisolatie, scheurherstel met ankers en sierpleister 1,5 mm, inclusief technisch verbeterde plint en vernieuwde geveldetails.",
       year: 2025,
     },
-    projectUrl: "/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2024/",
+    projectUrl: "/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/",
     cardAlt: "Klaaswaal gevelisolatie 6 cm en sierpleister – woning na de werken (2025)",
     coverImage: {
       src: "/images/projects/klaaswaal-gevelisolatie-6cm-na-01.webp",
@@ -132,7 +132,7 @@ export const projects: ProjectCard[] = [
     },
   },
   {
-    slug: "rotterdam-buitenstucwerk-cementpleister-2024",
+    slug: "rotterdam-buitenstucwerk-cementpleister-2025",
     serviceType: "Buiten-stucwerk",
     serviceTypes: ["Buiten-stucwerk"],
     title: "Rotterdam – buitenstucwerk met cementpleister (2025)",
@@ -145,7 +145,7 @@ export const projects: ProjectCard[] = [
         "Beschadigde buitengevel plaatselijk hersteld met cementgebonden pleister en wapeningsnet, afgewerkt tot een strak en egaal gevelvlak.",
       year: 2025,
     },
-    projectUrl: "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2024/",
+    projectUrl: "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
     cardAlt: "Rotterdam buitenstucwerk cementpleister – woning na de werken (2025)",
     coverImage: {
       src: "/images/projects/rotterdam-buitenstucwerk-na-01.webp",
@@ -157,7 +157,7 @@ export const projects: ProjectCard[] = [
     },
   },
   {
-    slug: "vlaardingen-gevelisolatie-10cm-sierpleister-2024",
+    slug: "vlaardingen-gevelisolatie-10cm-sierpleister-2025",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],
     title: "Vlaardingen – gevelisolatie 10 cm & sierpleister 1,5 mm (2025)",
@@ -170,7 +170,7 @@ export const projects: ProjectCard[] = [
         "Woning voorzien van 10 cm gevelisolatie en sierpleister 1,5 mm, met vernieuwde raamdorpels en versterkte hoekafwerking met profielen en steenstrips.",
       year: 2025,
     },
-    projectUrl: "/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2024/",
+    projectUrl: "/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/",
     cardAlt: "Vlaardingen gevelisolatie 10 cm en sierpleister – woning na de werken (2025)",
     coverImage: {
       src: "/images/projects/vlaardingen-gevelisolatie-10cm-na-01.webp",

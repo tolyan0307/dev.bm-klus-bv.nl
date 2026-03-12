@@ -16,7 +16,7 @@ const projects = [
     city: "Dordrecht",
     service: "Gevelisolatie 10 cm & sierpleister",
     highlight: "ETICS isolatie + steenstrips plint",
-    href: "/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2024/",
+    href: "/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
   },
   {
     id: "bruinisse-gevelisolatie-2025",
@@ -24,7 +24,7 @@ const projects = [
     city: "Bruinisse",
     service: "Gevelisolatie 6 cm & sierpleister",
     highlight: "Energiebesparing + nieuwe uitstraling",
-    href: "/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2024/",
+    href: "/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/",
   },
   {
     id: "rotterdam-buitenstucwerk-2025",
@@ -32,7 +32,7 @@ const projects = [
     city: "Rotterdam",
     service: "Buitenstucwerk & cementpleister",
     highlight: "Strakke moderne afwerking",
-    href: "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2024/",
+    href: "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
   },
 ]
 

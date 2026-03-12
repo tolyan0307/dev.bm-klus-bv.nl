@@ -3,11 +3,11 @@ import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo/meta"
 import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGalleryCarousel"
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
-import { beforeImages, afterImages } from "@/lib/content/projects/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2024"
+import { beforeImages, afterImages } from "@/lib/content/projects/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
-  "/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2024/",
+  "/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/",
   {
     title: "Nieuw-Beijerland gevelisolatie 12 cm – project 2025",
     description:

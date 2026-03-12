@@ -3,13 +3,13 @@ import { ArrowRight, Check, Zap, TrendingUp, Shield } from "lucide-react"
 import Link from "next/link"
 
 const benefits = [
-  "Energierekening tot 40% lager",
+  "Energierekening tot 40% lager (bron: Milieu Centraal)",
   "Verhoogt de waarde van uw woning",
   "Duurzaam en onderhoudsarm",
 ]
 
 const stats = [
-  { icon: Zap, value: "40%", label: "energiebesparing" },
+  { icon: Zap, value: "tot 40%", label: "energiebesparing*" },
   { icon: TrendingUp, value: "2–4×", label: "meer woningwaarde" },
   { icon: Shield, value: "25 jr", label: "systeemlevensduur" },
 ]
@@ -93,7 +93,7 @@ export default function EticsSection() {
           </div>
         </div>
 
-        {/* ── Stats ── */}
+        {/* ── Stats ── (asterisk footnote rendered below the grid) */}
         <div className="mt-12 hidden grid-cols-3 gap-4 sm:mt-12 sm:grid lg:mt-14">
           {stats.map(({ icon: Icon, value, label }) => (
             <div
@@ -108,6 +108,9 @@ export default function EticsSection() {
             </div>
           ))}
         </div>
+        <p className="mt-2 hidden text-[11px] leading-snug text-muted-foreground/60 sm:block">
+          * Indicatief; werkelijke besparing verschilt per woning (bron: Milieu Centraal).
+        </p>
 
         {/* ── Finishes ── */}
         <div className="mt-12 lg:mt-14">

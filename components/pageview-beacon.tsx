@@ -26,15 +26,14 @@ function send(url: string, referrer: string) {
 export default function PageviewBeacon() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const isFirstRender = useRef(true)
+  const lastUrl = useRef("")
 
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false
-      return
-    }
+    const url = window.location.href
+    if (url === lastUrl.current) return
+    lastUrl.current = url
 
-    send(window.location.href, document.referrer)
+    send(url, document.referrer)
   }, [pathname, searchParams])
 
   return null

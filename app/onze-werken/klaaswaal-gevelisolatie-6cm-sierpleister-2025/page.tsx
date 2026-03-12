@@ -3,11 +3,11 @@ import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo/meta"
 import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGalleryCarousel"
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
-import { beforeImages, afterImages } from "@/lib/content/projects/klaaswaal-gevelisolatie-6cm-sierpleister-2024"
+import { beforeImages, afterImages } from "@/lib/content/projects/klaaswaal-gevelisolatie-6cm-sierpleister-2025"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
-  "/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2024/",
+  "/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/",
   {
     title: "Klaaswaal gevelisolatie 6 cm & sierpleister – project 2025",
     description:

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 import { getPagePlan, getSiteUrl } from "@/data/sitemap-plan"
-import { SITE } from "@/lib/seo/routes"
+import { SITE, TITLE_SUFFIX } from "@/lib/seo/routes"
 
 function normalizeText(value: string): string {
   return (value ?? "").replace(/\s+/g, " ").trim()
@@ -47,7 +47,8 @@ export function buildPageMetadata(
   const description = overrides?.description ?? plan?.description ?? ""
   const canonical = `${baseUrl}${normalizedPath}`
 
-  const finalTitle = title ? truncateWithEllipsis(title, 60) : undefined
+  const titleBudget = 60 - TITLE_SUFFIX.length
+  const finalTitle = title ? truncateWithEllipsis(title, titleBudget) : undefined
   const finalDescription = description
     ? truncateWithEllipsis(description, 160)
     : undefined

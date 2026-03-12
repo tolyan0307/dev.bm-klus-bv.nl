@@ -3,11 +3,11 @@ import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo/meta"
 import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGalleryCarousel"
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
-import { beforeImages, afterImages } from "@/lib/content/projects/rotterdam-buitenstucwerk-cementpleister-2024"
+import { beforeImages, afterImages } from "@/lib/content/projects/rotterdam-buitenstucwerk-cementpleister-2025"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
-  "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2024/",
+  "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
   {
     title: "Rotterdam buitenstucwerk cementpleister – project 2025",
     description:
