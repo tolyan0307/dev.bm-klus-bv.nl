@@ -41,6 +41,13 @@ function neutralFallback(f: Format): string {
  * All `<GoogleRatingBadge>` instances on a page share
  * a single API call via `lib/google-place-cache.ts`.
  */
+const FORMAT_MIN_W: Record<Format, string> = {
+  short: "min-w-[9.5em]",
+  trust: "min-w-[13em]",
+  count: "min-w-[1.5em]",
+  "stat-desc": "min-w-[8em]",
+}
+
 export default function GoogleRatingBadge({ format }: { format: Format }) {
   const init = getCachedRating()
 
@@ -54,5 +61,5 @@ export default function GoogleRatingBadge({ format }: { format: Format }) {
     })
   }, [format])
 
-  return <>{text}</>
+  return <span className={`inline-block ${FORMAT_MIN_W[format]}`}>{text}</span>
 }

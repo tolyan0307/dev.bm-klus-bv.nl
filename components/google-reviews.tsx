@@ -72,6 +72,8 @@ function ReviewCardEl({ review }: { review: ReviewCard }) {
                 src={review.photoUri}
                 alt={review.author}
                 className="h-[72px] w-[72px] rounded-full object-cover shadow-lg"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             ) : (

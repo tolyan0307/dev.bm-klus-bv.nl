@@ -43,6 +43,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" className={_inter.variable}>
+      <head>
+        <link rel="preconnect" href="https://cdn.cookie-script.com" />
+        <link rel="preconnect" href="https://lh3.googleusercontent.com" />
+      </head>
       <body className="font-sans antialiased bg-background text-foreground">
         <a
           href="#main-content"

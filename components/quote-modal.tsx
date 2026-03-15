@@ -247,7 +247,7 @@ export default function QuoteModal({
 
   return (
     <>
-      {TURNSTILE_SITE_KEY && (
+      {TURNSTILE_SITE_KEY && open && (
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
           strategy="afterInteractive"

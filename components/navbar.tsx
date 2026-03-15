@@ -89,6 +89,7 @@ export default function Navbar() {
                 alt="BM klus BV"
                 width={120}
                 height={28}
+                fetchPriority="low"
                 className={`h-7 w-auto transition-all duration-500 ${
                   scrolled || mobileOpen ? "brightness-100" : "brightness-0 invert"
                 }`}
