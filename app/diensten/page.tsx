@@ -1,4 +1,4 @@
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import { ArrowRight, ChevronRight, Star, Phone, MessageCircle, MapPin } from "lucide-react"
@@ -130,11 +130,12 @@ export default function DienstenPage() {
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
-          <Image
-            src="/images/projects/klaaswaal-gevelisolatie-6cm-na-02.webp"
+          <ResponsiveImage
+            baseName="klaaswaal-gevelisolatie-6cm-na-02"
+            dir="/images/projects"
+            preset="hero"
             alt="Gevelisolatie en stucwerk op woning in Klaaswaal — BM klus BV"
-            fill
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             sizes="100vw"
             priority
           />

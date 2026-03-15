@@ -161,3 +161,43 @@ export function breadcrumbSchema(items: BreadcrumbSchemaItem[]): Record<string, 
   }
 }
 
+export function projectPageSchema(opts: {
+  title: string
+  description: string
+  url: string
+  image: string
+  city: string
+  year: number
+  serviceTypes: string[]
+}): Record<string, unknown>[] {
+  const base = SITE.canonicalBase
+
+  return [
+    breadcrumbSchema([
+      { name: "Home", item: `${base}/` },
+      { name: "Onze werken", item: `${base}/onze-werken/` },
+      { name: opts.title, item: opts.url },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: opts.title,
+      description: opts.description,
+      url: opts.url,
+      image: `${base}${opts.image}`,
+      author: { "@id": `${base}/#business` },
+      publisher: { "@id": `${base}/#business` },
+      datePublished: `${opts.year}-01-01`,
+      about: opts.serviceTypes.map((s) => ({
+        "@type": "Service",
+        name: s,
+      })),
+      contentLocation: {
+        "@type": "Place",
+        name: opts.city,
+        address: { "@type": "PostalAddress", addressCountry: "NL" },
+      },
+    },
+  ]
+}
+

@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react"
 import Link from "next/link"
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import { ArrowRight, Zap, Sparkles, Shield, Home, PackageCheck } from "lucide-react"
 
 /* ─── Types ─────────────────────────────────────────────────────────────────── */
@@ -15,7 +15,7 @@ interface Service {
   title: string
   subtitle: string
   href: string
-  imageSrc: string
+  baseName: string
   badge?: string
   chips: [string, string, string]
   outcomeKey: OutcomeKey
@@ -44,7 +44,7 @@ const SERVICES: Service[] = [
     title: "Buitengevelisolatie (ETICS)",
     subtitle: "Energiezuinige gevel + nieuwe uitstraling",
     href: "/gevelisolatie/",
-    imageSrc: "/images/dienst-isolatie.webp",
+    baseName: "dienst-isolatie",
     badge: "Meest gekozen",
     chips: ["Energie-label", "Comfort", "Nette details"],
     outcomeKey: "energie",
@@ -59,7 +59,7 @@ const SERVICES: Service[] = [
     title: "Gevel schilderen",
     subtitle: "Beschermt en verfrist uw gevel",
     href: "/gevel-schilderen/",
-    imageSrc: "/images/dienst-schilderen.webp",
+    baseName: "dienst-schilderen",
     chips: ["Duurzame verf", "Reparaties", "Strakke afwerking"],
     outcomeKey: "beschermen",
     previewText:
@@ -73,7 +73,7 @@ const SERVICES: Service[] = [
     title: "Buiten stucwerk",
     subtitle: "Gevel stucen voor een strak resultaat",
     href: "/buiten-stucwerk/",
-    imageSrc: "/images/dienst-stucwerk.webp",
+    baseName: "dienst-stucwerk",
     chips: ["Weerbestendig", "Scheurherstel", "Netjes opgeleverd"],
     outcomeKey: "look",
     previewText:
@@ -87,7 +87,7 @@ const SERVICES: Service[] = [
     title: "Sierpleister (gevel)",
     subtitle: "Spachtelputz/crepi met karakter",
     href: "/sierpleister/",
-    imageSrc: "/images/dienst-sierpleister.webp",
+    baseName: "dienst-sierpleister",
     chips: ["Structuurkeuze", "Kleuren", "Onderhoudsvriendelijk"],
     outcomeKey: "look",
     previewText:
@@ -101,7 +101,7 @@ const SERVICES: Service[] = [
     title: "Muren stucen (binnen)",
     subtitle: "Behangklaar of sausklaar stucwerk",
     href: "/muren-stucen/",
-    imageSrc: "/images/dienst-muren.webp",
+    baseName: "dienst-muren",
     chips: ["Sausklaar", "Strakke wanden", "Renovatie"],
     outcomeKey: "binnen",
     previewText:
@@ -115,7 +115,7 @@ const SERVICES: Service[] = [
     title: "Schoonmaak na verbouwing",
     subtitle: "Op aanvraag (vraag naar de mogelijkheden)",
     href: "/contact/",
-    imageSrc: "/images/dienst-schoonmaak.webp",
+    baseName: "dienst-schoonmaak",
     badge: "Op aanvraag",
     chips: ["Stofvrij", "Oplevering", "Snel gepland"],
     outcomeKey: "oplevering",
@@ -380,13 +380,13 @@ export default function ServicesRail() {
             >
               {/* Image */}
               <div className="relative aspect-video w-full overflow-hidden bg-secondary shrink-0">
-                <Image
-                  src={active.imageSrc}
+                <ResponsiveImage
+                  baseName={active.baseName}
+                  dir="/images"
+                  preset="serviceCard"
                   alt={active.title}
-                  fill
-                  className="object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                   sizes="(max-width: 1280px) 420px, 460px"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-foreground/40 via-transparent to-transparent" />
                 {active.badge && (
@@ -469,13 +469,13 @@ export default function ServicesRail() {
                 >
                   {/* Photo */}
                   <div className="relative aspect-video w-full overflow-hidden bg-secondary">
-                    <Image
-                      src={service.imageSrc}
+                    <ResponsiveImage
+                      baseName={service.baseName}
+                      dir="/images"
+                      preset="serviceCard"
                       alt={service.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                       sizes="(max-width: 640px) 100vw, 50vw"
-                      unoptimized
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-foreground/50 via-foreground/10 to-transparent" />
                     {service.badge && (

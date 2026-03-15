@@ -237,6 +237,6 @@ File to create: `public/_htaccess` → copy to `.htaccess` on deploy.
 - Google Ads campaign setup for service pages (not city pages, not /diensten/)
 - Build 11 project pages (template exists: Halsteren project page)
 - **Инструкция по добавлению проекта:** [docs/ADD-PROJECT.md](docs/ADD-PROJECT.md) — передай AI JSON с данными
-- **Конвертация JPEG→WebP:** `pnpm images:webp` ([scripts/convert-to-webp.mjs](scripts/convert-to-webp.mjs))
+- **Генерация responsive variants:** `pnpm images:generate <preset> <path>` (см. [docs/IMAGE-PIPELINE.md](docs/IMAGE-PIPELINE.md))
 - Create `.htaccess` redirect file before production deploy
 - Final pre-deploy SEO checklist (Lighthouse, sitemap validation, OG images)

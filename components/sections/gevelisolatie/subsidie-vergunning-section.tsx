@@ -1,6 +1,6 @@
 // FUTURE EXTRACTION TARGET: /gevelisolatie/subsidie-vergunning/
 import Link from "next/link"
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import { subsidieVergunningContent } from "@/lib/content/gevelisolatie"
 import { FileCheck, Euro, Check, ArrowRight } from "lucide-react"
 
@@ -56,12 +56,13 @@ export default function SubsidieVergunningSection() {
 
         {/* Photo */}
         <div className="relative overflow-hidden rounded-2xl">
-          <Image
-            src="/images/subsidie-vergunning.webp"
+          <ResponsiveImage
+            baseName="subsidie-vergunning"
+            dir="/images"
+            preset="serviceCard"
             alt="Subsidie en vergunning documentatie"
-            width={380}
-            height={480}
             className="h-64 w-full object-cover lg:h-full"
+            sizes="(max-width: 1024px) 100vw, 380px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           <div className="absolute bottom-5 left-5 right-5">

@@ -52,7 +52,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/diensten/",
-    title: "Diensten",
+    title: "Onze diensten: gevelisolatie en stucwerk",
     description:
       "Overzicht van onze geveloplossingen: buitengevelisolatie, stucwerk, sierpleister, gevel schilderen en meer in regio Rotterdam.",
     changefreq: "monthly",
@@ -60,7 +60,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/onze-werken/",
-    title: "Onze werken",
+    title: "Onze werken – projecten regio Rotterdam",
     description:
       "Bekijk recente projecten met buitengevelisolatie (ETICS) en gevelafwerking. Per project: plaats, aanpak en afwerking. Regio Rotterdam en omgeving.",
     changefreq: "monthly",
@@ -68,7 +68,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/over-ons/",
-    title: "Over ons",
+    title: "Over ons – gevelspecialist Rotterdam",
     description:
       "BM klus BV: specialist in buitengevelisolatie (ETICS) en gevelafwerking (stuc, sierpleister, schilderwerk) in regio Rotterdam en omgeving.",
     changefreq: "yearly",

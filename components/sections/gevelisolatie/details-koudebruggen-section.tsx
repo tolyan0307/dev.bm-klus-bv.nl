@@ -1,16 +1,16 @@
 "use client"
 
 // FUTURE EXTRACTION TARGET: stays on pillar for now
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import { detailsKoudebruggenContent } from "@/lib/content/gevelisolatie"
 import { Check } from "lucide-react"
 import { useState } from "react"
 
-const subsectionImages: string[] = [
-  "/images/detail-dagkanten.webp",
-  "/images/detail-plint.webp",
-  "/images/detail-hoeken.webp",
-  "/images/detail-koudebruggen.webp",
+const subsectionBaseNames: string[] = [
+  "detail-dagkanten",
+  "detail-plint",
+  "detail-hoeken",
+  "detail-koudebruggen",
 ]
 
 export default function DetailsKoudebruggenSection() {
@@ -50,11 +50,12 @@ export default function DetailsKoudebruggenSection() {
               active === i ? "border-primary" : "border-transparent"
             }`}
           >
-            <Image
-              src={subsectionImages[i]}
+            <ResponsiveImage
+              baseName={subsectionBaseNames[i]}
+              dir="/images"
+              preset="serviceCard"
               alt={sub.h3}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="50vw"
             />
             <div className={`absolute inset-0 transition-colors ${active === i ? "bg-primary/50" : "bg-black/45"}`} />
@@ -105,11 +106,12 @@ export default function DetailsKoudebruggenSection() {
 
           {/* Photo */}
           <div className="relative overflow-hidden">
-            <Image
-              src={subsectionImages[active]}
+            <ResponsiveImage
+              baseName={subsectionBaseNames[active]}
+              dir="/images"
+              preset="serviceCard"
               alt={current.h3}
-              fill
-              className="object-cover transition-all duration-500"
+              className="absolute inset-0 h-full w-full object-cover transition-all duration-500"
               sizes="(max-width: 1024px) 100vw, 420px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:bg-gradient-to-r" />

@@ -1,10 +1,27 @@
 import { ArrowRight, MapPin } from "lucide-react"
 import Link from "next/link"
+import ResponsiveImage from "@/components/responsive-image"
 
 const projects = [
   {
+    id: "etten-leur-gevelisolatie-6cm-2025",
+    baseName: "etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-01",
+    city: "Etten-Leur",
+    service: "Gevelisolatie 6 cm & sierpleister",
+    highlight: "Strikolith isolatie + profielafwerking",
+    href: "/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
+  },
+  {
+    id: "etten-leur-gevelisolatie-10cm-2025",
+    baseName: "etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-01",
+    city: "Etten-Leur",
+    service: "Gevelisolatie 10 cm & RAL 9010",
+    highlight: "Volledige gevelisolatie + schilderwerk",
+    href: "/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
+  },
+  {
     id: "halsteren-buitenstucwerk-2025",
-    image: "/images/projects/halsteren-buitenstucwerk-na-01.webp",
+    baseName: "halsteren-buitenstucwerk-na-01",
     city: "Halsteren",
     service: "Buitenstucwerk & sierpleister",
     highlight: "Volledige gevelrenovatie",
@@ -12,27 +29,11 @@ const projects = [
   },
   {
     id: "dordrecht-gevelisolatie-2025",
-    image: "/images/projects/dordrecht-gevelisolatie-10cm-na-01.webp",
+    baseName: "dordrecht-gevelisolatie-10cm-na-01",
     city: "Dordrecht",
     service: "Gevelisolatie 10 cm & sierpleister",
     highlight: "ETICS isolatie + steenstrips plint",
     href: "/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
-  },
-  {
-    id: "bruinisse-gevelisolatie-2025",
-    image: "/images/projects/bruinisse-gevelisolatie-6cm-na-01.webp",
-    city: "Bruinisse",
-    service: "Gevelisolatie 6 cm & sierpleister",
-    highlight: "Energiebesparing + nieuwe uitstraling",
-    href: "/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/",
-  },
-  {
-    id: "rotterdam-buitenstucwerk-2025",
-    image: "/images/projects/rotterdam-buitenstucwerk-na-01.webp",
-    city: "Rotterdam",
-    service: "Buitenstucwerk & cementpleister",
-    highlight: "Strakke moderne afwerking",
-    href: "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
   },
 ]
 
@@ -66,9 +67,12 @@ export default function PortfolioSection() {
               className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-md transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="aspect-4/3 overflow-hidden">
-                <img
-                  src={project.image}
+                <ResponsiveImage
+                  baseName={project.baseName}
+                  dir="/images/projects"
+                  preset="card"
                   alt={`Gevelproject in ${project.city}`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   width={480}
                   height={360}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"

@@ -3,15 +3,18 @@ export const IMAGE_EXT = "webp"
 
 // ─── Image helpers ────────────────────────────────────────────────────────────
 const pad = (n: number) => String(n).padStart(2, "0")
+const PREFIX = "halsteren-buitenstucwerk"
 
 export const beforeImages = Array.from({ length: 21 }, (_, i) => ({
-  src: `/images/projects/halsteren-buitenstucwerk-voor-${pad(i + 1)}.${IMAGE_EXT}`,
+  src: `/images/projects/${PREFIX}-voor-${pad(i + 1)}.${IMAGE_EXT}`,
   alt: `Halsteren buitenstucwerk met sierpleister – voor de werken foto ${pad(i + 1)} (2025)`,
+  baseName: `${PREFIX}-voor-${pad(i + 1)}`,
 }))
 
 export const afterImages = Array.from({ length: 10 }, (_, i) => ({
-  src: `/images/projects/halsteren-buitenstucwerk-na-${pad(i + 1)}.${IMAGE_EXT}`,
+  src: `/images/projects/${PREFIX}-na-${pad(i + 1)}.${IMAGE_EXT}`,
   alt: `Halsteren buitenstucwerk met sierpleister – na de werken foto ${pad(i + 1)} (2025)`,
+  baseName: `${PREFIX}-na-${pad(i + 1)}`,
 }))
 
 // ─── "Onze werken" card object ────────────────────────────────────────────────

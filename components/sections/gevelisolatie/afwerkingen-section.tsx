@@ -2,17 +2,17 @@
 
 // FUTURE EXTRACTION TARGET: /gevelisolatie/afwerkingen/
 import Link from "next/link"
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import { afwerkingenContent } from "@/lib/content/gevelisolatie"
 import { Check, AlertTriangle, ArrowRight } from "lucide-react"
 import { useState } from "react"
 
 // Photo map per afwerking
-const optieImages: Record<string, string> = {
-  "Stucwerk": "/images/dienst-stucwerk.webp",
-  "Sierpleister": "/images/dienst-sierpleister.webp",
-  "Crepi": "/images/afwerking-crepi.webp",
-  "Steenstrips": "/images/afwerking-steenstrips.webp",
+const optieBaseNames: Record<string, string> = {
+  "Stucwerk": "dienst-stucwerk",
+  "Sierpleister": "dienst-sierpleister",
+  "Crepi": "afwerking-crepi",
+  "Steenstrips": "afwerking-steenstrips",
 }
 
 // Budget indicator helpers
@@ -64,11 +64,12 @@ export default function AfwerkingenSection() {
               active === i ? "border-primary" : "border-transparent"
             }`}
           >
-            <Image
-              src={optieImages[optie.h3] ?? "/images/dienst-stucwerk.webp"}
+            <ResponsiveImage
+              baseName={optieBaseNames[optie.h3] ?? "dienst-stucwerk"}
+              dir="/images"
+              preset="serviceCard"
               alt={optie.h3}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="50vw"
             />
             <div className={`absolute inset-0 transition-colors ${active === i ? "bg-primary/50" : "bg-black/40"}`} />
@@ -119,11 +120,12 @@ export default function AfwerkingenSection() {
 
           {/* Photo */}
           <div className="relative overflow-hidden">
-            <Image
-              src={optieImages[current.h3] ?? "/images/dienst-stucwerk.webp"}
+            <ResponsiveImage
+              baseName={optieBaseNames[current.h3] ?? "dienst-stucwerk"}
+              dir="/images"
+              preset="serviceCard"
               alt={current.h3}
-              fill
-              className="object-cover transition-all duration-500"
+              className="absolute inset-0 h-full w-full object-cover transition-all duration-500"
               sizes="(max-width: 1024px) 100vw, 420px"
             />
             {/* dark gradient over photo */}

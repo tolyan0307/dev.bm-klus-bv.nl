@@ -1,8 +1,12 @@
 import Link from "next/link"
+import { Fragment } from "react"
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
+import { jsonLdScript, projectPageSchema } from "@/lib/seo/schema"
+import { SITE } from "@/lib/seo/routes"
 import { buildPageMetadata } from "@/lib/seo/meta"
 import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGalleryCarousel"
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
+import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
@@ -104,21 +108,35 @@ const relatedLinks = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function NieuwBeijerlandProjectPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      {projectPageSchema({
+        title: "Nieuw-Beijerland gevelisolatie 12 cm – project 2025",
+        description:
+          "Project in Nieuw-Beijerland: vrijstaande woning met 12 cm buitengevelisolatie, wapeningslaag en sierpleister 1,5 mm.",
+        url: `${SITE.canonicalBase}/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/`,
+        image: "/images/projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-01.webp",
+        city: "Nieuw-Beijerland",
+        year: 2025,
+        serviceTypes: ["Gevelisolatie", "Sierpleister"],
+      }).map((s, i) => (
+        <Fragment key={i}>{jsonLdScript(s)}</Fragment>
+      ))}
+      <div className="min-h-screen bg-background">
 
       {/* ── A · HERO ─────────────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden min-h-[80vh] lg:min-h-[65vh]">
 
-        <img
-          src="/images/projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-01.webp"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          draggable={false}
-        />
+  <ResponsiveImage
+    baseName="zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-01"
+    dir="/images/projects"
+    preset="hero"
+    alt=""
+    aria-hidden="true"
+    className="absolute inset-0 h-full w-full object-cover object-center"
+    sizes="100vw"
+    priority
+    draggable={false}
+  />
 
         <div className="absolute inset-0" style={{ background: "rgba(10,7,3,0.48)" }} />
         <div
@@ -149,7 +167,7 @@ export default function NieuwBeijerlandProjectPage() {
         <div
           className="absolute inset-x-0 bottom-0"
           style={{
-            height: 180,
+            height: 80,
             background:
               "linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.70) 40%, transparent 100%)",
           }}
@@ -465,5 +483,6 @@ export default function NieuwBeijerlandProjectPage() {
       </aside>
 
     </div>
+    </>
   )
 }

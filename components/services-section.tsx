@@ -2,7 +2,8 @@
 
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { buildSrcSet, getFallbackSrc } from "@/lib/responsive-image"
 
 const services = [
   {
@@ -11,7 +12,7 @@ const services = [
     subtitle: "ETICS systeem",
     description:
       "Professionele buitengevelisolatie voor optimale energiebesparing. Wij plaatsen ETICS-systemen die uw energiekosten drastisch verlagen en het wooncomfort verhogen.",
-    image: "/images/service-isolatie.webp",
+    baseName: "service-isolatie",
     href: "/gevelisolatie/",
     features: ["Energielabel verbetering", "Vochtwerend", "Geluidsdemping"],
   },
@@ -21,7 +22,7 @@ const services = [
     subtitle: "Bescherming & uitstraling",
     description:
       "Vakkundig schilderwerk voor een frisse uitstraling en langdurige bescherming tegen weersinvloeden. Keuze uit diverse kleuren.",
-    image: "/images/service-coating.webp",
+    baseName: "service-coating",
     href: "/gevel-schilderen/",
     features: ["UV-bestendig", "Waterafstotend", "Nette detaillering"],
   },
@@ -31,7 +32,7 @@ const services = [
     subtitle: "Strakke gevelafwerking",
     description:
       "Duurzaam buitenstucwerk voor een strakke, moderne gevelafwerking. Onderhoudsarm en bestand tegen alle weersomstandigheden.",
-    image: "/images/service-renovatie.webp",
+    baseName: "service-renovatie",
     href: "/buiten-stucwerk/",
     features: ["Scheurherstel", "Voegwerk", "Nieuwe afwerking"],
   },
@@ -41,7 +42,7 @@ const services = [
     subtitle: "Vakmanschap op maat",
     description:
       "Vakkundig sierpleister voor een strakke, moderne gevelafwerking. Van sierpleister tot glad stucwerk — altijd een perfect resultaat.",
-    image: "/images/service-stucwerk.webp",
+    baseName: "service-stucwerk",
     href: "/sierpleister/",
     features: ["Sierpleister", "Glad stucwerk", "Spachtelputz"],
   },
@@ -51,15 +52,52 @@ const services = [
     subtitle: "Binnen strak & sausklaar",
     description:
       "Professioneel stucwerk voor binnenwanden. Behangklaar of sausklaar opgeleverd — ideaal bij renovatie, verbouwing of nieuwbouw.",
-    image: "/images/dienst-muren.webp",
+    baseName: "dienst-muren",
     href: "/muren-stucen/",
     features: ["Sausklaar", "Strakke wanden", "Renovatie"],
   },
 ]
 
+function ServiceImage({
+  baseName,
+  alt,
+  className,
+  loading = "lazy",
+}: {
+  baseName: string
+  alt: string
+  className?: string
+  loading?: "lazy" | "eager"
+}) {
+  const dir = "/images/services"
+  return (
+    <img
+      src={getFallbackSrc(baseName, dir, "serviceCard")}
+      srcSet={buildSrcSet(baseName, dir, "serviceCard") || undefined}
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px"
+      alt={alt}
+      width={640}
+      height={480}
+      loading={loading}
+      decoding="async"
+      className={className}
+    />
+  )
+}
+
 export default function ServicesSection() {
   const [activeService, setActiveService] = useState(0)
   const current = services[activeService]
+
+  const [isLg, setIsLg] = useState<boolean | null>(null)
+
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 1024px)")
+    setIsLg(mql.matches)
+    const onChange = (e: MediaQueryListEvent) => setIsLg(e.matches)
+    mql.addEventListener("change", onChange)
+    return () => mql.removeEventListener("change", onChange)
+  }, [])
 
   return (
     <section className="bg-secondary/10 py-16 sm:py-20 lg:py-24">
@@ -95,7 +133,8 @@ export default function ServicesSection() {
         </div>
 
         {/* Desktop: Interactive showcase layout */}
-        <div className="hidden lg:block">
+        {isLg !== false && (
+        <div className={isLg === null ? "hidden lg:block" : ""}>
           <div className="grid grid-cols-2 gap-10 items-stretch">
             {/* Left: Navigation tabs + active description */}
             <div className="flex flex-col">
@@ -110,7 +149,6 @@ export default function ServicesSection() {
                         : "hover:bg-card/60"
                     }`}
                   >
-                    {/* Number */}
                     <span
                       className={`text-xl font-bold transition-colors ${
                         activeService === index
@@ -153,7 +191,6 @@ export default function ServicesSection() {
                       </Link>
                     </div>
 
-                    {/* Active indicator line */}
                     {activeService === index && (
                       <div className="absolute left-0 top-3 bottom-3 w-[3px] rounded-full bg-primary" />
                     )}
@@ -179,15 +216,13 @@ export default function ServicesSection() {
               </div>
             </div>
 
-            {/* Right: Image with crossfade — stretches full height of left column */}
+            {/* Right: Image crossfade — all 5 stacked, opacity toggles */}
             <div className="relative overflow-hidden rounded-2xl border border-border shadow-xl">
               {services.map((service, index) => (
-                <img
+                <ServiceImage
                   key={service.id}
-                  src={service.image}
+                  baseName={service.baseName}
                   alt={service.title}
-                  width={640}
-                  height={480}
                   className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
                     activeService === index ? "opacity-100" : "opacity-0"
                   }`}
@@ -196,32 +231,29 @@ export default function ServicesSection() {
             </div>
           </div>
         </div>
+        )}
 
-        {/* Mobile/Tablet: Stacked cards */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:hidden">
+        {/* Mobile/Tablet: Stacked cards — lazy loaded, below the fold */}
+        {isLg !== true && (
+        <div className={`grid gap-6 sm:grid-cols-2 ${isLg === null ? "lg:hidden" : ""}`}>
           {services.map((service) => (
             <Link
               key={service.id}
               href={service.href}
               className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all hover:shadow-lg"
             >
-              {/* Image */}
               <div className="relative h-48 overflow-hidden">
-                <img
-                  src={service.image}
+                <ServiceImage
+                  baseName={service.baseName}
                   alt={service.title}
-                  width={400}
-                  height={192}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-foreground/60 to-transparent" />
-                {/* Number overlay */}
                 <span className="absolute bottom-3 right-4 text-4xl font-bold text-background/30">
                   {service.id}
                 </span>
               </div>
 
-              {/* Content */}
               <div className="p-5">
                 <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">
                   {service.subtitle}
@@ -240,6 +272,7 @@ export default function ServicesSection() {
             </Link>
           ))}
         </div>
+        )}
 
         {/* Mobile-only bottom CTA */}
         <div className="mt-10 text-center sm:hidden">

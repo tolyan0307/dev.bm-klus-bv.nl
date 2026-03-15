@@ -1,4 +1,4 @@
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import {
@@ -64,7 +64,6 @@ const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
 )
-
 const WA_URL =
   "https://wa.me/31612079808?text=Hallo%2C%20ik%20heb%20interesse%20in%20sierpleister%20voor%20de%20gevel.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
 
@@ -154,11 +153,12 @@ export default function SierpleisterPage() {
           }}
         />
         <div className="absolute inset-0">
-          <Image
-            src="/images/projects/vlaardingen-gevelisolatie-6cm-na-01.webp"
+          <ResponsiveImage
+            baseName="vlaardingen-gevelisolatie-6cm-na-01"
+            dir="/images/projects"
+            preset="hero"
             alt="Sierpleister afwerking op gevel — woning in Vlaardingen"
-            fill
-            className="object-cover opacity-40"
+            className="absolute inset-0 h-full w-full object-cover opacity-40"
             sizes="100vw"
             priority
           />
@@ -358,12 +358,13 @@ export default function SierpleisterPage() {
             <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card lg:grid lg:grid-cols-[480px_1fr]">
               {/* Image */}
               <div className="relative h-60 lg:h-auto">
-                <Image
-                  src="/images/wat-is-gevel-sierpleister.webp"
+                <ResponsiveImage
+                  baseName="wat-is-gevel-sierpleister"
+                  dir="/images"
+                  preset="serviceCard"
                   alt="Stukadoor brengt gevelsierpleister aan op een Nederlandse woning"
-                  fill
+                  className="absolute inset-0 h-full w-full object-cover"
                   sizes="(max-width: 1024px) 100vw, 480px"
-                  className="object-cover"
                   priority
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent lg:bg-linear-to-r lg:from-transparent lg:to-card/20" />
@@ -491,12 +492,13 @@ export default function SierpleisterPage() {
               {/* Hero card — spans 2 cols */}
               <div className="group relative overflow-hidden rounded-2xl bg-foreground lg:col-span-2">
                 <div className="absolute inset-0">
-                  <Image
-                    src="/images/gevel-sierpleister-spachtelputz.webp"
+                  <ResponsiveImage
+                    baseName="gevel-sierpleister-spachtelputz"
+                    dir="/images"
+                    preset="serviceCard"
                     alt="Spachtelputz gevelafwerking close-up"
-                    fill
+                    className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 66vw"
-                    className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-linear-to-r from-foreground/90 via-foreground/55 to-foreground/10" />
                 </div>
@@ -668,12 +670,13 @@ export default function SierpleisterPage() {
               {/* Right: inPrijs */}
               <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card">
                 <div className="relative h-48 w-full shrink-0">
-                  <Image
-                    src="/images/offerte-berekening.webp"
+                  <ResponsiveImage
+                    baseName="offerte-berekening"
+                    dir="/images"
+                    preset="serviceCard"
                     alt="Offerte berekening voor gevel sierpleister"
-                    fill
+                    className="absolute inset-0 h-full w-full object-cover"
                     sizes="(max-width: 1024px) 100vw, 420px"
-                    className="object-cover"
                   />
                 </div>
                 <div className="px-6 py-6">
@@ -765,18 +768,19 @@ export default function SierpleisterPage() {
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {details.cards.map(({ num, title, body, image, imageAlt }) => (
+              {details.cards.map(({ num, title, body, baseName, imageAlt }) => (
                 <div
                   key={num}
                   className="group overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/40"
                 >
                   <div className="relative h-40 w-full overflow-hidden">
-                    <Image
-                      src={image}
+                    <ResponsiveImage
+                      baseName={baseName}
+                      dir="/images/sierpleister"
+                      preset="serviceCard"
                       alt={imageAlt}
-                      fill
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute bottom-0 left-0 right-0 h-10 bg-linear-to-t from-card to-transparent" />
                   </div>
@@ -1011,12 +1015,13 @@ export default function SierpleisterPage() {
             <div className="overflow-hidden rounded-2xl border border-border bg-card lg:grid lg:grid-cols-[320px_1fr]">
               {/* Left: dark photo panel */}
               <div className="relative flex min-h-[280px] flex-col justify-between bg-foreground p-7 lg:min-h-0">
-                <Image
-                  src="/images/sierpleister/details-wapening.webp"
+                <ResponsiveImage
+                  baseName="details-wapening"
+                  dir="/images/sierpleister"
+                  preset="serviceCard"
                   alt="ETICS glasvezeldoek wapening"
-                  fill
+                  className="absolute inset-0 h-full w-full object-cover opacity-25"
                   sizes="(max-width: 1024px) 100vw, 320px"
-                  className="object-cover opacity-25"
                 />
                 <span className="pointer-events-none absolute -bottom-4 -right-3 select-none text-[88px] font-black leading-none tracking-tighter text-white/5">
                   ETICS

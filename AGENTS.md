@@ -21,7 +21,7 @@ Standard scripts are in `package.json`:
 | Path | Contents |
 |------|----------|
 | `docs/` | ADD-PROJECT.md, project instructions |
-| `scripts/` | convert-to-webp.mjs, take-screenshots.mjs — local dev tools |
+| `scripts/` | generate-variants.mjs, take-screenshots.mjs — local dev tools |
 
 These folders are not deployed (only `out/` goes to production) but must remain in the repo.
 

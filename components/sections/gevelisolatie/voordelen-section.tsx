@@ -1,5 +1,5 @@
 // FUTURE EXTRACTION TARGET: /gevelisolatie/
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import { voordelenContent } from "@/lib/content/gevelisolatie"
 
 export default function VoordelenSection() {
@@ -28,12 +28,13 @@ export default function VoordelenSection() {
         {/* Photo — sticky on desktop */}
         <div className="lg:sticky lg:top-32 lg:self-start">
           <div className="relative overflow-hidden rounded-2xl border border-border">
-            <Image
-              src="/images/gevelisolatie-voordelen.webp"
+            <ResponsiveImage
+              baseName="gevelisolatie-voordelen"
+              dir="/images"
+              preset="serviceCard"
               alt="Mooi afgewerkte gevel na buitengevelisolatie"
-              width={380}
-              height={480}
               className="h-64 w-full object-cover lg:h-[440px]"
+              sizes="(max-width: 1024px) 100vw, 380px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5">

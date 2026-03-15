@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Phone, FileText, Hammer, CheckCircle2 } from "lucide-react"
+import ResponsiveImage from "@/components/responsive-image"
 
 const steps = [
   {
@@ -41,12 +42,14 @@ export default function ProcessSection() {
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
       {/* Subtle background texture */}
       <div className="absolute inset-0">
-        <img
-          src="/images/process-hero.webp"
+        <ResponsiveImage
+          baseName="process-hero"
+          dir="/images"
+          preset="hero"
           alt=""
-          width={1920}
-          height={1080}
+          aria-hidden="true"
           className="h-full w-full object-cover opacity-[0.06]"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-linear-to-b from-background/40 via-transparent to-background/40" />
         <div

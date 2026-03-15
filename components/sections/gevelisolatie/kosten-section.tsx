@@ -1,6 +1,6 @@
 // FUTURE EXTRACTION TARGET: /gevelisolatie/kosten/
-import Image from "next/image"
 import Link from "next/link"
+import ResponsiveImage from "@/components/responsive-image"
 import { kostenContent } from "@/lib/content/gevelisolatie"
 import { Check, ArrowRight } from "lucide-react"
 import KostenCalculator from "@/components/sections/gevelisolatie/kosten-calculator"
@@ -32,11 +32,12 @@ export default function KostenSection() {
 
           {/* Photo */}
           <div className="relative overflow-hidden">
-            <Image
-              src="/images/gevelisolatie-kosten.webp"
+            <ResponsiveImage
+              baseName="gevelisolatie-kosten"
+              dir="/images"
+              preset="serviceCard"
               alt="Adviesgesprek over kosten gevelisolatie"
-              fill
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
               sizes="(max-width: 1024px) 100vw, 380px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent lg:bg-gradient-to-r" />

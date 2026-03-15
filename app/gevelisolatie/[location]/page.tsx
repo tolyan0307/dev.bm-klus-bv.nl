@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import dynamic from "next/dynamic"
 import Link from "next/link"
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import {
   ArrowRight,
   MapPin,
@@ -177,12 +177,13 @@ export default async function GevelisolatieLocationPage({
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
-          <Image
-            src="/images/projects/dordrecht-gevelisolatie-10cm-na-01.webp"
+          <ResponsiveImage
+            baseName="dordrecht-gevelisolatie-10cm-na-01"
+            dir="/images/projects"
+            preset="hero"
             alt={`Buitengevelisolatie in ${data.city}`}
-            fill
-            className="object-cover"
             sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover"
             priority
           />
           <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/35" />

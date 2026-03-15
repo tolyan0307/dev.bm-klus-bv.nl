@@ -1,7 +1,7 @@
-import Image from "next/image"
 import { ArrowRight, Phone, Star, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
 import GoogleRatingBadge from "@/components/google-rating-badge"
+import ResponsiveImage from "@/components/responsive-image"
 
 export default function HeroSection() {
   return (
@@ -11,11 +11,12 @@ export default function HeroSection() {
     >
       {/* Background image */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/projects/bruinisse-gevelisolatie-6cm-na-03.webp"
+        <ResponsiveImage
+          baseName="bruinisse-gevelisolatie-6cm-na-03"
+          dir="/images/projects"
+          preset="hero"
           alt="Gevelisolatie afgewerkt met sierpleister — BM klus BV regio Rotterdam"
-          fill
-          className="object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center"
           priority
           sizes="100vw"
         />

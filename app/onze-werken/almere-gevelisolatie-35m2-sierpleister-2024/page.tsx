@@ -1,8 +1,12 @@
+import { Fragment } from "react"
 import Link from "next/link"
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo/meta"
+import { jsonLdScript, projectPageSchema } from "@/lib/seo/schema"
+import { SITE } from "@/lib/seo/routes"
 import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGalleryCarousel"
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
+import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/almere-gevelisolatie-35m2-sierpleister-2024"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
@@ -124,21 +128,35 @@ const relatedLinks = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function AlmereGevelisolatieProjectPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      {projectPageSchema({
+        title: "Almere gevelisolatie 35 m² sierpleister – 2024–2025",
+        description:
+          "Project in Almere: ca. 35 m² gevel vernieuwd met gevelisolatie, wapeningsnet, GW-Plus en sierpleister 1,5 mm in standaard wit.",
+        url: `${SITE.canonicalBase}/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/`,
+        image: "/images/projects/almere-gevelisolatie-35m2-na-01.webp",
+        city: "Almere",
+        year: 2024,
+        serviceTypes: ["Gevelisolatie", "Sierpleister"],
+      }).map((s, i) => (
+        <Fragment key={i}>{jsonLdScript(s)}</Fragment>
+      ))}
+      <div className="min-h-screen bg-background">
 
       {/* ── A · HERO ─────────────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden min-h-[80vh] lg:min-h-[65vh]">
 
-        <img
-          src="/images/projects/almere-gevelisolatie-35m2-na-01.webp"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          draggable={false}
-        />
+  <ResponsiveImage
+    baseName="almere-gevelisolatie-35m2-na-01"
+    dir="/images/projects"
+    preset="hero"
+    alt=""
+    aria-hidden="true"
+    className="absolute inset-0 h-full w-full object-cover object-center"
+    sizes="100vw"
+    priority
+    draggable={false}
+  />
 
         <div className="absolute inset-0" style={{ background: "rgba(10,7,3,0.48)" }} />
         <div
@@ -169,7 +187,7 @@ export default function AlmereGevelisolatieProjectPage() {
         <div
           className="absolute inset-x-0 bottom-0"
           style={{
-            height: 180,
+            height: 80,
             background:
               "linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.70) 40%, transparent 100%)",
           }}
@@ -450,5 +468,6 @@ export default function AlmereGevelisolatieProjectPage() {
       </aside>
 
     </div>
+    </>
   )
 }

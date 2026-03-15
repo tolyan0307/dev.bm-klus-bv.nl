@@ -1,5 +1,5 @@
 // FUTURE EXTRACTION TARGET: /gevelisolatie/
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import { watIsEticsContent } from "@/lib/content/gevelisolatie"
 import { Check, AlertTriangle, ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -81,11 +81,12 @@ export default function WatIsEticsSection() {
 
         {/* Row 1: Photo — full width, cinematic */}
         <div className="relative h-56 w-full sm:h-72 lg:h-80">
-          <Image
-            src="/images/wat-is-gevelisolatie.webp"
+          <ResponsiveImage
+            baseName="wat-is-gevelisolatie"
+            dir="/images"
+            preset="serviceCard"
             alt="Montage van buitengevelisolatie op een woning in regio Rotterdam"
-            fill
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             sizes="100vw"
             priority
           />

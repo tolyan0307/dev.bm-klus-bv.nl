@@ -1,6 +1,6 @@
 import Link from "next/link"
-import Image from "next/image"
 import dynamic from "next/dynamic"
+import ResponsiveImage from "@/components/responsive-image"
 import {
   FileCheck,
   Euro,
@@ -477,11 +477,12 @@ export default function SubsidieVergunningPage() {
 
               {/* Image card */}
               <div className="relative overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/subsidie-vergunning.webp"
+                <ResponsiveImage
+                  baseName="subsidie-vergunning"
+                  dir="/images"
+                  preset="serviceCard"
                   alt="Controleren van vergunningsvereisten voor gevelisolatie"
-                  width={380}
-                  height={460}
+                  sizes="(max-width: 1024px) 100vw, 380px"
                   className="h-64 w-full object-cover lg:h-full"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />

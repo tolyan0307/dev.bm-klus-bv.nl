@@ -1,4 +1,4 @@
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import {
@@ -121,11 +121,12 @@ export default function BuitenStucwerkPage() {
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
-          <Image
-            src="/images/projects/halsteren-buitenstucwerk-na-01.webp"
+          <ResponsiveImage
+            baseName="halsteren-buitenstucwerk-na-01"
+            dir="/images/projects"
+            preset="hero"
             alt="Buitenmuur stucen — afgewerkt stucwerk op gevel in Halsteren"
-            fill
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             sizes="100vw"
             priority
           />
@@ -299,7 +300,7 @@ export default function BuitenStucwerkPage() {
                 </div>
               </div>
               <div className="relative h-52 w-full lg:h-auto">
-                <Image src="/images/wat-is-buitenmuur-stucen.webp" alt="Stukadoor brengt cementpleister aan op de buitenmuur" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+                <ResponsiveImage baseName="wat-is-buitenmuur-stucen" dir="/images" preset="serviceCard" alt="Stukadoor brengt cementpleister aan op de buitenmuur" className="absolute inset-0 h-full w-full object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
                 <div className="absolute inset-0 bg-linear-to-r from-card/20 to-transparent" />
               </div>
             </div>

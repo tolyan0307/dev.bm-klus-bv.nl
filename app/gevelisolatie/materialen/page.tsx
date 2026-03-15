@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import dynamic from "next/dynamic"
+import ResponsiveImage from "@/components/responsive-image"
 import { useState } from "react"
 import {
   Check,
@@ -46,7 +46,7 @@ interface MateriaalRij {
   wanneer: string
   pluspunt: string
   aandachtspunt: string
-  imageSrc: string
+  baseName: string
   beschrijving: string
 }
 
@@ -70,7 +70,7 @@ const materialen: MateriaalRij[] = [
     wanneer: "Veelzijdig inzetbaar bij droge tot normale gevels; goede prijs-kwaliteitverhouding",
     pluspunt: "Licht, gemakkelijk te bewerken en breed verkrijgbaar",
     aandachtspunt: "Beperkte dampopenheid; controleer vochthuishouding bij vochtige gevels",
-    imageSrc: "/images/materiaal-eps.webp",
+    baseName: "materiaal-eps",
     beschrijving:
       "EPS (geëxpandeerd polystyreen) is een van de meest toegepaste isolatiematerialen voor ETICS. De gesloten cellenstructuur zorgt voor goede isolatiewaarden, een lage wateropname en een stevige hechting voor de wapeningslaag. EPS is licht van gewicht, wat de verwerking vergemakkelijkt en de belasting op de bevestiging beperkt.",
   },
@@ -84,7 +84,7 @@ const materialen: MateriaalRij[] = [
     wanneer: "Hoge isolatiewaarde bij beperkte opbouwdikte nodig; stadswoningen met krappe uitdagingen",
     pluspunt: "Laagste lambdawaarde van de drie: dunste opbouw voor dezelfde RC-waarde",
     aandachtspunt: "Niet dampopen; niet geschikt voor alle geveltypen — vochtcheck vereist",
-    imageSrc: "/images/materiaal-pir.webp",
+    baseName: "materiaal-pir",
     beschrijving:
       "PIR (polyisocyanuraat) is een stijf schuimisolatiemateriaal met de beste thermische prestaties per centimeter dikte. Dat maakt het aantrekkelijk wanneer de beschikbare ruimte voor de isolatieopbouw beperkt is, zoals bij smalle dagkanten of strikte esthetische eisen. PIR is echter volledig dampdicht, waardoor de vochthuishouding van de gevel extra aandacht vraagt.",
   },
@@ -98,7 +98,7 @@ const materialen: MateriaalRij[] = [
     wanneer: "Dampopenheid vereist, hoge brandveiligheid gewenst of gevel heeft vochtproblemen",
     pluspunt: "Onbrandbaar (A1), uitstekende dampopenheid en goede geluidsabsorptie",
     aandachtspunt: "Iets hogere lambdawaarde: dikker pakket nodig voor dezelfde RC-waarde",
-    imageSrc: "/images/materiaal-minerale-wol.webp",
+    baseName: "materiaal-minerale-wol",
     beschrijving:
       "Minerale wol (steenwol of glaswol in plaatsvorm) is dampopen en brandwerend (klasse A1 — onbrandbaar). Daarmee is het de voorkeursoplossing voor gevels met vochtproblemen, voor panden met hoge brandveiligheidseisen (bijv. VvE-appartementen, utiliteit) en voor constructies waarbij de gevel moet kunnen 'ademen'. De hogere lambdawaarde betekent dat een iets dikkere plaat nodig is om dezelfde RC te bereiken.",
   },
@@ -442,12 +442,13 @@ export default function MaterialenPage() {
                     onClick={() => setActiveTab(i)}
                     className={`group relative h-24 overflow-hidden rounded-xl border-2 transition-all ${activeTab === i ? "border-primary" : "border-transparent"}`}
                   >
-                    <Image
-                      src={mat.imageSrc}
+                    <ResponsiveImage
+                      baseName={mat.baseName}
+                      dir="/images"
+                      preset="serviceCard"
                       alt={mat.materiaal}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="33vw"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className={`absolute inset-0 transition-colors ${activeTab === i ? "bg-primary/50" : "bg-black/45"}`} />
                     <span className="absolute inset-0 flex items-end justify-center pb-2 text-xs font-bold text-white">
@@ -487,12 +488,13 @@ export default function MaterialenPage() {
                 <div className="grid grid-rows-[220px_1fr] lg:grid-rows-none lg:grid-cols-[420px_1fr]">
                   {/* Photo */}
                   <div className="relative overflow-hidden">
-                    <Image
-                      src={current.imageSrc}
+                    <ResponsiveImage
+                      baseName={current.baseName}
+                      dir="/images"
+                      preset="serviceCard"
                       alt={current.materiaal}
-                      fill
-                      className="object-cover transition-all duration-500"
                       sizes="(max-width: 1024px) 100vw, 420px"
+                      className="absolute inset-0 h-full w-full object-cover transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent lg:bg-linear-to-r" />
                     <div className="absolute bottom-4 left-4 flex items-center gap-2 lg:hidden">

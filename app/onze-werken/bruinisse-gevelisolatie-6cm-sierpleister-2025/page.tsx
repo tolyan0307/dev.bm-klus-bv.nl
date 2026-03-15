@@ -1,8 +1,12 @@
 import Link from "next/link"
+import { Fragment } from "react"
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
+import { jsonLdScript, projectPageSchema } from "@/lib/seo/schema"
+import { SITE } from "@/lib/seo/routes"
 import { buildPageMetadata } from "@/lib/seo/meta"
 import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGalleryCarousel"
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
+import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/bruinisse-gevelisolatie-6cm-sierpleister-2025"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
@@ -127,17 +131,31 @@ const relatedLinks = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function BruinisseProjectPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      {projectPageSchema({
+        title: "Bruinisse gevelisolatie 6 cm & sierpleister – project 2025",
+        description:
+          "Project in Bruinisse: gevelrenovatie met 6 cm buitengevelisolatie, sierpleister 1,5 mm, zwarte raamdorpels, ventilatie en bitumen sokkelbescherming.",
+        url: `${SITE.canonicalBase}/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/`,
+        image: "/images/projects/bruinisse-gevelisolatie-6cm-na-01.webp",
+        city: "Bruinisse",
+        year: 2025,
+        serviceTypes: ["Gevelisolatie", "Sierpleister"],
+      }).map((s, i) => (
+        <Fragment key={i}>{jsonLdScript(s)}</Fragment>
+      ))}
+      <div className="min-h-screen bg-background">
       {/* ── A · HERO ─────────────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden min-h-[80vh] lg:min-h-[65vh]">
-        <img
-          src="/images/projects/bruinisse-gevelisolatie-6cm-na-01.webp"
+        <ResponsiveImage
+          baseName="bruinisse-gevelisolatie-6cm-na-01"
+          dir="/images/projects"
+          preset="hero"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover object-center"
-          width={1920}
-          height={1080}
-          fetchPriority="high"
+          sizes="100vw"
+          priority
           draggable={false}
         />
 
@@ -170,7 +188,7 @@ export default function BruinisseProjectPage() {
         <div
           className="absolute inset-x-0 bottom-0"
           style={{
-            height: 180,
+            height: 80,
             background:
               "linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.70) 40%, transparent 100%)",
           }}
@@ -484,6 +502,7 @@ export default function BruinisseProjectPage() {
         </div>
       </aside>
     </div>
+    </>
   )
 }
 

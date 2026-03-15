@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useId } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import ResponsiveImage from "@/components/responsive-image";
 import {
   X,
   ChevronDown,
@@ -24,7 +24,7 @@ interface Finish {
   id: string;
   name: string;
   subtitle: string;
-  image: string;
+  baseName: string;
   imageAlt: string;
   structuur: "Fijn" | "Midden" | "Grof" | "Fijn–Midden" | "Fijn–Grof" | "Midden–Grof" | "Rustiek";
   structuurFilter: StructuurFilter[];
@@ -57,7 +57,7 @@ const FINISHES: Finish[] = [
     id: "spachtelputz",
     name: "Spachtelputz",
     subtitle: "Schuurstructuur gevelpleister",
-    image: "/images/gevel-sierpleister-spachtelputz.webp",
+    baseName: "gevel-sierpleister-spachtelputz",
     imageAlt: "Rotterdam gevel sierpleister spachtelputz – schuurstructuur close-up",
     structuur: "Midden",
     structuurFilter: ["Midden"],
@@ -89,7 +89,7 @@ const FINISHES: Finish[] = [
     id: "crepi",
     name: "Crepi",
     subtitle: "Rustieke gevelpleister",
-    image: "/images/gevel-sierpleister-crepi.webp",
+    baseName: "gevel-sierpleister-crepi",
     imageAlt: "Rotterdam gevel sierpleister crepi – robuuste structuur close-up",
     structuur: "Midden–Grof",
     structuurFilter: ["Midden", "Grof"],
@@ -121,7 +121,7 @@ const FINISHES: Finish[] = [
     id: "siliconenhars",
     name: "Siliconenhars sierpleister",
     subtitle: "Waterafstotend & duurzaam",
-    image: "/images/gevel-sierpleister-siliconenhars.webp",
+    baseName: "gevel-sierpleister-siliconenhars",
     imageAlt: "Rotterdam gevel sierpleister siliconenhars – waterafstotende afwerking",
     structuur: "Fijn–Grof",
     structuurFilter: ["Fijn", "Midden", "Grof"],
@@ -153,7 +153,7 @@ const FINISHES: Finish[] = [
     id: "silicaat",
     name: "Silicaat sierpleister",
     subtitle: "Dampopen minerale afwerking",
-    image: "/images/gevel-sierpleister-silicaat.webp",
+    baseName: "gevel-sierpleister-silicaat",
     imageAlt: "Rotterdam gevel sierpleister silicaat – minerale dampopen afwerking",
     structuur: "Fijn–Midden",
     structuurFilter: ["Fijn", "Midden"],
@@ -185,7 +185,7 @@ const FINISHES: Finish[] = [
     id: "krabpleister",
     name: "Krabpleister",
     subtitle: "Krabstructuur, mineraal",
-    image: "/images/gevel-sierpleister-krabpleister.webp",
+    baseName: "gevel-sierpleister-krabpleister",
     imageAlt: "Rotterdam gevel sierpleister krabpleister – minerale krabstructuur detail",
     structuur: "Grof",
     structuurFilter: ["Grof"],
@@ -217,7 +217,7 @@ const FINISHES: Finish[] = [
     id: "kalei",
     name: "Kaleien",
     subtitle: "Kalkpleister techniek",
-    image: "/images/gevel-sierpleister-kalei.webp",
+    baseName: "gevel-sierpleister-kalei",
     imageAlt: "Rotterdam gevel sierpleister kaleien – kalkpleister techniek op metselwerk",
     structuur: "Rustiek",
     structuurFilter: ["Grof"],
@@ -502,11 +502,12 @@ function DetailModal({ finish, onClose }: DetailModalProps) {
       <div className="relative z-10 w-full max-w-lg rounded-t-2xl sm:rounded-2xl border border-border bg-card shadow-2xl max-h-[90dvh] overflow-y-auto">
         {/* Image */}
         <div className="relative h-48 w-full overflow-hidden rounded-t-2xl bg-secondary sm:h-56">
-          <Image
-            src={f.image}
+          <ResponsiveImage
+            baseName={f.baseName}
+            dir="/images"
+            preset="serviceCard"
             alt={f.imageAlt}
-            fill
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             sizes="(max-width: 640px) 100vw, 512px"
           />
           <button
@@ -778,11 +779,12 @@ function FinishCard({
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md">
       {/* Image */}
       <div className="relative h-44 w-full overflow-hidden bg-secondary">
-        <Image
-          src={f.image}
+        <ResponsiveImage
+          baseName={f.baseName}
+          dir="/images"
+          preset="serviceCard"
           alt={f.imageAlt}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

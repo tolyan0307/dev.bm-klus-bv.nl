@@ -1,6 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
 import dynamic from "next/dynamic"
+import ResponsiveImage from "@/components/responsive-image"
 import {
   ArrowRight,
   CheckCircle2,
@@ -180,12 +180,13 @@ export default function OverOnsPage() {
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
-          <Image
-            src="/images/projects/klaaswaal-gevelisolatie-6cm-na-01.webp"
+          <ResponsiveImage
+            baseName="klaaswaal-gevelisolatie-6cm-na-01"
+            dir="/images/projects"
+            preset="hero"
             alt="Vakmanschap in gevelisolatie — afgewerkt project in Klaaswaal"
-            fill
-            className="object-cover"
             sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover"
             priority
           />
           <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/40" />
@@ -451,13 +452,13 @@ export default function OverOnsPage() {
               {/* Card: ETICS */}
               <div className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md">
                 <div className="relative h-52 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/etics-isolatie.webp"
+                  <ResponsiveImage
+                    baseName="etics-isolatie"
+                    dir="/images"
+                    preset="serviceCard"
                     alt="ETICS buitengevelisolatie — montage isolatieplaten op gevel"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    width={640}
-                    height={360}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-transparent" />
                   <span className="absolute bottom-4 left-4 rounded-full bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white shadow">
@@ -504,13 +505,13 @@ export default function OverOnsPage() {
               {/* Card: Gevelafwerking */}
               <div className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md">
                 <div className="relative h-52 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/gevelafwerking.webp"
+                  <ResponsiveImage
+                    baseName="gevelafwerking"
+                    dir="/images"
+                    preset="serviceCard"
                     alt="Gevelafwerking — sierpleister aanbrengen op gevel"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    width={640}
-                    height={360}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-transparent" />
                   <span className="absolute bottom-4 left-4 rounded-full bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white shadow">
@@ -551,13 +552,13 @@ export default function OverOnsPage() {
               {/* Card: Schilderwerk */}
               <div className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md">
                 <div className="relative h-52 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/gevel-schilderen.webp"
+                  <ResponsiveImage
+                    baseName="gevel-schilderen"
+                    dir="/images"
+                    preset="serviceCard"
                     alt="Gevel schilderen — professioneel buitenschilderwerk"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    width={640}
-                    height={360}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-transparent" />
                   <span className="absolute bottom-4 left-4 rounded-full bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white shadow">

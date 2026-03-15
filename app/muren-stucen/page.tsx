@@ -1,4 +1,4 @@
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import {
@@ -123,11 +123,12 @@ export default function MurenStucenPage() {
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
-          <Image
-            src="/images/muren-stucen-hero.webp"
+          <ResponsiveImage
+            baseName="muren-stucen-renovatie"
+            dir="/images"
+            preset="hero"
             alt="Vakman brengt stucwerk aan op binnenmuur — BM klus BV Rotterdam"
-            fill
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             sizes="100vw"
             priority
           />
@@ -368,12 +369,13 @@ export default function MurenStucenPage() {
                   className="absolute -left-4 -top-4 h-16 w-16 rounded-xl bg-primary/8 lg:-left-5 lg:-top-5"
                 />
                 <div className="relative overflow-hidden rounded-2xl shadow-xl">
-                  <Image
-                    src="/images/muren-stucen-wat-is.webp"
+                  <ResponsiveImage
+                    baseName="muren-stucen-wat-is"
+                    dir="/images"
+                    preset="serviceCard"
                     alt="Vakman brengt stucwerk aan op binnenmuur — BM klus BV Rotterdam"
-                    width={720}
-                    height={540}
                     className="h-[260px] w-full object-cover sm:h-[320px] lg:h-[380px]"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div
                     aria-hidden
@@ -395,25 +397,25 @@ export default function MurenStucenPage() {
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
-                  img: "/images/muren-stucen-nieuwbouw.webp",
+                  baseName: "muren-stucen-nieuwbouw",
                   alt: "Nieuwbouw wanden klaar voor stucwerk",
                   title: "Nieuwbouw",
                   body: "Strakke wanden direct na de bouw afwerken voor een perfecte basis.",
                 },
                 {
-                  img: "/images/muren-stucen-renovatie.webp",
+                  baseName: "muren-stucen-renovatie",
                   alt: "Beschadigd en gebarsten pleisterwerk bij renovatie",
                   title: "Renovatie",
                   body: "Verouderd of beschadigd pleisterwerk vervangen voor een als nieuw resultaat.",
                 },
                 {
-                  img: "/images/muren-stucen-behang-verwijderen.webp",
+                  baseName: "muren-stucen-behang-verwijderen",
                   alt: "Oud behang verwijderd van de muur",
                   title: "Na behang verwijderen",
                   body: "Lijmresten en oneffenheden egaliseren na het strippen van oud behang.",
                 },
                 {
-                  img: "/images/muren-stucen-schilderen.webp",
+                  baseName: "muren-stucen-schilderen",
                   alt: "Schilder verflaag op glad gestucte muur",
                   title: "Voorbereiding afwerking",
                   body: "Ideale ondergrond voor schilderen of behangen — egaal en hecht.",
@@ -424,11 +426,12 @@ export default function MurenStucenPage() {
                   className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
                 >
                   <div className="relative h-44 overflow-hidden">
-                    <Image
-                      src={c.img}
+                    <ResponsiveImage
+                      baseName={c.baseName}
+                      dir="/images"
+                      preset="serviceCard"
                       alt={c.alt}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
                   </div>
@@ -520,11 +523,12 @@ export default function MurenStucenPage() {
               {/* Photo */}
               <div className="flex min-h-[280px] sm:min-h-[360px] lg:min-h-0">
                 <div className="relative w-full overflow-hidden rounded-2xl shadow-xl">
-                  <Image
-                    src="/images/muren-stucen-voordelen.webp"
+                  <ResponsiveImage
+                    baseName="muren-stucen-voordelen"
+                    dir="/images"
+                    preset="serviceCard"
                     alt="Modern interieur met glad gestucte wanden — BM klus BV Rotterdam"
-                    fill
-                    className="object-cover"
+                    className="absolute inset-0 h-full w-full object-cover"
                     sizes="(max-width: 1024px) 100vw, 380px"
                   />
                   <div
@@ -747,33 +751,34 @@ export default function MurenStucenPage() {
               {[
                 {
                   icon: Home,
-                  img: "/images/voorbereiding-nieuwbouw.webp",
+                  baseName: "voorbereiding-nieuwbouw",
                   imgAlt: "Primer aanbrengen op nieuwe binnenmuur",
                   ...voorbereiding.cards[0],
                 },
                 {
                   icon: Hammer,
-                  img: "/images/voorbereiding-bestaand.webp",
+                  baseName: "voorbereiding-bestaand",
                   imgAlt: "Scheuren herstellen in bestaand pleisterwerk",
                   ...voorbereiding.cards[1],
                 },
                 {
                   icon: RotateCcw,
-                  img: "/images/voorbereiding-behang.webp",
+                  baseName: "voorbereiding-behang",
                   imgAlt: "Oude stenen muur klaar voor stucwerk",
                   ...voorbereiding.cards[2],
                 },
-              ].map(({ icon: Icon, img, imgAlt, title, body }) => (
+              ].map(({ icon: Icon, baseName, imgAlt, title, body }) => (
                 <div
                   key={title}
                   className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={img}
+                    <ResponsiveImage
+                      baseName={baseName}
+                      dir="/images"
+                      preset="serviceCard"
                       alt={imgAlt}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, 33vw"
                     />
                     <div
@@ -827,37 +832,38 @@ export default function MurenStucenPage() {
               <div className="grid gap-5 sm:grid-cols-3">
                 {[
                   {
-                    img: "/images/droogtijd-drying.webp",
+                    baseName: "droogtijd-drying",
                     alt: "Vers gestucte muur die aan het drogen is",
                     icon: Clock,
                     label: "1–2 weken drogen",
                     text: droogtijd.bullets[0],
                   },
                   {
-                    img: "/images/droogtijd-schilderen.webp",
+                    baseName: "droogtijd-schilderen",
                     alt: "Schilder brengt verf aan op droge gestucte muur",
                     icon: Paintbrush2,
                     label: "Schilderen",
                     text: droogtijd.bullets[1],
                   },
                   {
-                    img: "/images/droogtijd-behangen.webp",
+                    baseName: "droogtijd-behangen",
                     alt: "Behang aanbrengen op geprimed gestuct oppervlak",
                     icon: Layers,
                     label: "Behangen",
                     text: droogtijd.bullets[2],
                   },
-                ].map(({ img, alt, icon: Icon, label, text }) => (
+                ].map(({ baseName, alt, icon: Icon, label, text }) => (
                   <div
                     key={label}
                     className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
                   >
                     <div className="relative h-48 overflow-hidden">
-                      <Image
-                        src={img}
+                      <ResponsiveImage
+                        baseName={baseName}
+                        dir="/images"
+                        preset="serviceCard"
                         alt={alt}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 640px) 100vw, 33vw"
                       />
                       <div

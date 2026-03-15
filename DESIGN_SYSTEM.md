@@ -230,11 +230,12 @@ Elke sectie begint met dit standaard patroon:
 
 ## 9. Foto's
 
-- Alle foto's in `/public/images/`
-- Altijd `next/image` met `alt` tekst
-- Foto's in kaarten: `fill` + `object-cover` + gradient overlay
-- Foto's naast tekst: `width`/`height` + `lg:sticky lg:top-32 lg:self-start`
+- Alle foto's in `/public/images/` (variants via `pnpm images:generate`)
+- Altijd `ResponsiveImage` component met `baseName`, `preset`, `sizes` en `alt`
+- Foto's in kaarten: `object-cover` + gradient overlay
+- Foto's naast tekst: expliciete `width`/`height` + `lg:sticky lg:top-32 lg:self-start`
 - Overlay gradient: `bg-gradient-to-t from-black/50 via-transparent to-transparent`
+- Zie [docs/IMAGE-PIPELINE.md](docs/IMAGE-PIPELINE.md) voor het volledige workflow
 
 ---
 

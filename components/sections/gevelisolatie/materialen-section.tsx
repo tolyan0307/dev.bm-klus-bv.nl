@@ -1,16 +1,16 @@
 "use client"
 
 // FUTURE EXTRACTION TARGET: /gevelisolatie/materialen/
-import Image from "next/image"
 import Link from "next/link"
+import ResponsiveImage from "@/components/responsive-image"
 import { materialenContent } from "@/lib/content/gevelisolatie"
 import { Check, AlertTriangle, Flame, Droplets, ArrowRight } from "lucide-react"
 import { useState } from "react"
 
-const materialImages: Record<string, string> = {
-  "EPS":          "/images/materiaal-eps.webp",
-  "PIR":          "/images/materiaal-pir.webp",
-  "Minerale wol": "/images/materiaal-minerale-wol.webp",
+const materialBaseNames: Record<string, string> = {
+  "EPS":          "materiaal-eps",
+  "PIR":          "materiaal-pir",
+  "Minerale wol": "materiaal-minerale-wol",
 }
 
 const brandBadge: Record<string, { label: string; cls: string }> = {
@@ -64,11 +64,12 @@ export default function MaterialenSection() {
               active === i ? "border-primary" : "border-transparent"
             }`}
           >
-            <Image
-              src={materialImages[rij.materiaal] ?? "/images/materiaal-eps.webp"}
+            <ResponsiveImage
+              baseName={materialBaseNames[rij.materiaal] ?? "materiaal-eps"}
+              dir="/images"
+              preset="serviceCard"
               alt={rij.materiaal}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="33vw"
             />
             <div className={`absolute inset-0 transition-colors ${active === i ? "bg-primary/50" : "bg-black/45"}`} />
@@ -119,11 +120,12 @@ export default function MaterialenSection() {
 
           {/* Photo */}
           <div className="relative overflow-hidden">
-            <Image
-              src={materialImages[current.materiaal] ?? "/images/materiaal-eps.webp"}
+            <ResponsiveImage
+              baseName={materialBaseNames[current.materiaal] ?? "materiaal-eps"}
+              dir="/images"
+              preset="serviceCard"
               alt={current.materiaal}
-              fill
-              className="object-cover transition-all duration-500"
+              className="absolute inset-0 h-full w-full object-cover transition-all duration-500"
               sizes="(max-width: 1024px) 100vw, 420px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:bg-gradient-to-r" />

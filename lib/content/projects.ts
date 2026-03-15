@@ -1,8 +1,60 @@
 import type { ProjectCard } from "@/lib/types/projects"
 
-// Order: 1 Halsteren, 2 Nieuw-Beijerland, 3 Bruinisse, 4 Dordrecht, 5 Klaaswaal, 6 Rotterdam,
-// 7 Vlaardingen 10cm, 8 Almere, 9 Vlaardingen 6cm, 10 Rottekade, 11 Vught, 12 Katwijk
+// Order: 1 Etten-Leur 6cm, 2 Etten-Leur 10cm, 3 Halsteren, 4 Nieuw-Beijerland, 5 Bruinisse, 6 Dordrecht,
+// 7 Klaaswaal, 8 Rotterdam, 9 Vlaardingen 10cm, 10 Almere, 11 Vlaardingen 6cm, 12 Rottekade, 13 Vught, 14 Katwijk
 export const projects: ProjectCard[] = [
+  {
+    slug: "etten-leur-gevelisolatie-6cm-strikolith-2025",
+    serviceType: "Gevelisolatie",
+    serviceTypes: ["Gevelisolatie", "Sierpleister"],
+    title: "Etten-Leur – gevelisolatie 6 cm Strikolith & sierpleister (2025)",
+    subtitle: "Woning in Etten-Leur voorzien van 6 cm Strikolith gevelisolatie, glasvezelwapening, sierpleister 1,5 mm en verzorgde profielafwerking rond ramen, deuren en gevelhoeken.",
+    meta: {
+      city: "Etten-Leur",
+      objectType: "Woning",
+      highlight:
+        "Woning voorzien van 6 cm Strikolith gevelisolatie en sierpleister 1,5 mm, met glasvezelwapening, profielafwerking rond openingen en een afgewerkte sokkelzone.",
+      year: 2025,
+    },
+    projectUrl:
+      "/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
+    cardAlt:
+      "Etten-Leur gevelisolatie 6 cm Strikolith – woning na de werken (2025)",
+    coverImage: {
+      src: "/images/projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-01.webp",
+      alt: "Etten-Leur gevelisolatie 6 cm Strikolith – na de werken foto 01 (2025)",
+    },
+    beforeThumb: {
+      src: "/images/projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-01.webp",
+      alt: "Etten-Leur gevelisolatie 6 cm Strikolith – voor de werken foto 01 (2025)",
+    },
+  },
+  {
+    slug: "etten-leur-gevelisolatie-10cm-ral9010-2025",
+    serviceType: "Gevelisolatie",
+    serviceTypes: ["Gevelisolatie", "Sierpleister", "Gevel schilderen"],
+    title: "Etten-Leur – gevelisolatie 10 cm, sierpleister & schilderwerk (2025)",
+    subtitle: "Woning in Etten-Leur voorzien van 10 cm Strikolith gevelisolatie, sierpleister, gevelafwerking in RAL 9010, bitumen sokkelbescherming en vernieuwde details rond ramen en dakrand.",
+    meta: {
+      city: "Etten-Leur",
+      objectType: "Woning",
+      highlight:
+        "Woning voorzien van 10 cm gevelisolatie, sierpleister en schilderafwerking in RAL 9010, inclusief bitumen aan de sokkel, vernieuwde raamdorpels en geschilderde daklijst.",
+      year: 2025,
+    },
+    projectUrl:
+      "/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
+    cardAlt:
+      "Etten-Leur gevelisolatie 10 cm RAL 9010 – woning na de werken (2025)",
+    coverImage: {
+      src: "/images/projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-01.webp",
+      alt: "Etten-Leur gevelisolatie 10 cm RAL 9010 - na de werken foto 01 (2025)",
+    },
+    beforeThumb: {
+      src: "/images/projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-01.webp",
+      alt: "Etten-Leur gevelisolatie 10 cm RAL 9010 - voor de werken foto 01 (2025)",
+    },
+  },
   {
     slug: "halsteren-buitenstucwerk-sierpleister-schilderwerk-2025",
     serviceType: "Buiten-stucwerk",

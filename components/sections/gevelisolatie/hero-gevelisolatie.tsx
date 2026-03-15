@@ -1,5 +1,5 @@
-import Image from "next/image"
 import { MessageCircle, ArrowRight, CheckCircle2, MapPin, Star, Phone } from "lucide-react"
+import ResponsiveImage from "@/components/responsive-image"
 import type { ReactNode } from "react"
 import GoogleRatingBadge from "@/components/google-rating-badge"
 
@@ -21,11 +21,12 @@ export default function GevelisolatieHero({
     <section aria-label="Hero" className="relative overflow-hidden bg-[#1A1A1A]">
       {/* Background image */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/projects/dordrecht-gevelisolatie-10cm-na-01.webp"
+        <ResponsiveImage
+          baseName="dordrecht-gevelisolatie-10cm-na-01"
+          dir="/images/projects"
+          preset="hero"
           alt="Buitengevelisolatie (ETICS) afgewerkt op een woning in Dordrecht — BM klus BV"
-          fill
-          className="object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
           sizes="100vw"
           priority
         />

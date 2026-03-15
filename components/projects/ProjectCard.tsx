@@ -1,6 +1,10 @@
-import Image from "next/image"
 import Link from "next/link"
+import ResponsiveImage from "@/components/responsive-image"
 import type { ProjectCard } from "@/lib/types/projects"
+
+function srcToBaseName(src: string): string {
+  return src.replace(/^\/images\/projects\//, "").replace(/\.\w+$/, "")
+}
 
 interface ProjectCardProps {
   project: ProjectCard
@@ -21,12 +25,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       {/* Media */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted/60">
-        <Image
-          src={coverImage.src}
+        <ResponsiveImage
+          baseName={srcToBaseName(coverImage.src)}
+          dir="/images/projects"
+          preset="card"
           alt={coverImage.alt}
-          fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           priority
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
@@ -45,12 +50,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {beforeThumb && (
           <div className="absolute bottom-3 left-3 overflow-hidden rounded-md border-2 border-white/70 shadow-md">
             <div className="relative h-14 w-14">
-              <Image
-                src={beforeThumb.src}
+              <ResponsiveImage
+                baseName={srcToBaseName(beforeThumb.src)}
+                dir="/images/projects"
+                preset="thumbnail"
                 alt={beforeThumb.alt}
-                fill
                 sizes="56px"
-                className="object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-x-0 bottom-0 bg-black/60 py-0.5 text-center text-[8px] font-bold uppercase tracking-wider text-white">
                 Voor

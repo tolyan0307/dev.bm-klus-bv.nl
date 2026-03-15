@@ -1,0 +1,3936 @@
+{
+  "afwerking-crepi": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "afwerking-steenstrips": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "detail-dagkanten": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "detail-hoeken": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "detail-koudebruggen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "detail-plint": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      432,
+      576,
+      671
+    ]
+  },
+  "dienst-isolatie": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "dienst-muren": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "dienst-schilderen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "dienst-schoonmaak": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "dienst-sierpleister": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "dienst-stucwerk": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "droogtijd-behangen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "droogtijd-drying": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "droogtijd-schilderen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "etics-isolatie": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "etics-layer-finish-ext": {
+    "originalWidth": 320,
+    "originalHeight": 207,
+    "aspectRatio": 1.546,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
+  "etics-layer-insulation-ext": {
+    "originalWidth": 320,
+    "originalHeight": 205,
+    "aspectRatio": 1.561,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
+  "etics-layer-mesh-ext": {
+    "originalWidth": 320,
+    "originalHeight": 205,
+    "aspectRatio": 1.561,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
+  "etics-layer-wall-ext": {
+    "originalWidth": 320,
+    "originalHeight": 203,
+    "aspectRatio": 1.576,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
+  "gevel-schilderen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "gevel-schilderen-voordelen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "gevel-sierpleister-crepi": {
+    "originalWidth": 259,
+    "originalHeight": 259,
+    "aspectRatio": 1,
+    "variants": [
+      259,
+      350,
+      466,
+      604
+    ]
+  },
+  "gevel-sierpleister-kalei": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      432,
+      576,
+      671
+    ]
+  },
+  "gevel-sierpleister-krabpleister": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      432,
+      518,
+      604
+    ]
+  },
+  "gevel-sierpleister-silicaat": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "gevel-sierpleister-siliconenhars": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "gevel-sierpleister-spachtelputz": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      576,
+      745
+    ]
+  },
+  "gevel-voorbereiding": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      745
+    ]
+  },
+  "gevelafwerking": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "gevelisolatie-kosten": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "gevelisolatie-voordelen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "materiaal-eps": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "materiaal-minerale-wol": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "materiaal-pir": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "muren-stucen-behang-verwijderen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "muren-stucen-nieuwbouw": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "muren-stucen-renovatie": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      576,
+      671,
+      691
+    ]
+  },
+  "muren-stucen-schilderen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "muren-stucen-voordelen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "muren-stucen-wat-is": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "offerte-berekening": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "ondergrond-baksteen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "ondergrond-beton": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      432,
+      518,
+      604
+    ]
+  },
+  "ondergrond-pleister": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "process-hero": {
+    "originalWidth": 768,
+    "originalHeight": 768,
+    "aspectRatio": 1,
+    "variants": [
+      768
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 1200,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-na-03": {
+    "originalWidth": 160,
+    "originalHeight": 347,
+    "aspectRatio": 0.461,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-na-04": {
+    "originalWidth": 160,
+    "originalHeight": 356,
+    "aspectRatio": 0.449,
+    "variants": [
+      160,
+      240,
+      320,
+      480
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-na-05": {
+    "originalWidth": 160,
+    "originalHeight": 214,
+    "aspectRatio": 0.748,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-voor-01": {
+    "originalWidth": 160,
+    "originalHeight": 284,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      320,
+      583
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-voor-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-voor-03": {
+    "originalWidth": 160,
+    "originalHeight": 284,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      320,
+      583
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-voor-04": {
+    "originalWidth": 1166,
+    "originalHeight": 656,
+    "aspectRatio": 1.777,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      875,
+      1166
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-voor-05": {
+    "originalWidth": 1200,
+    "originalHeight": 675,
+    "aspectRatio": 1.778,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-voor-06": {
+    "originalWidth": 1200,
+    "originalHeight": 675,
+    "aspectRatio": 1.778,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-voor-07": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-voor-08": {
+    "originalWidth": 1166,
+    "originalHeight": 656,
+    "aspectRatio": 1.777,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      875,
+      1166
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-03": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      768,
+      800,
+      1200,
+      1280,
+      1600
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-04": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      768,
+      800,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-05": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-06": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-07": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-08": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-09": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-na-10": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-01": {
+    "originalWidth": 1080,
+    "originalHeight": 1440,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-02": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-03": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-04": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-05": {
+    "originalWidth": 1200,
+    "originalHeight": 675,
+    "aspectRatio": 1.778,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-06": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-07": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-08": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-09": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-10": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/bruinisse-gevelisolatie-6cm-voor-11": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-na-03": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-na-04": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-na-05": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-na-06": {
+    "originalWidth": 160,
+    "originalHeight": 214,
+    "aspectRatio": 0.748,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-03": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-04": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-05": {
+    "originalWidth": 160,
+    "originalHeight": 355,
+    "aspectRatio": 0.451,
+    "variants": [
+      160,
+      240,
+      288,
+      583
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-06": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-07": {
+    "originalWidth": 160,
+    "originalHeight": 355,
+    "aspectRatio": 0.451,
+    "variants": [
+      160,
+      240,
+      320,
+      648
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-08": {
+    "originalWidth": 1200,
+    "originalHeight": 1183,
+    "aspectRatio": 1.014,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-09": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-10": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-11": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/dordrecht-gevelisolatie-10cm-voor-12": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-01": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1080,
+      1152
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-02": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-03": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-04": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-05": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-06": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-07": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-01": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-02": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-03": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-04": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1440
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-05": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-06": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-07": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-08": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-09": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-10": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-11": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-12": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1296
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-13": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-14": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-15": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-16": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-17": {
+    "originalWidth": 2040,
+    "originalHeight": 1530,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-01": {
+    "originalWidth": 2048,
+    "originalHeight": 1536,
+    "aspectRatio": 1.333,
+    "variants": [
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-02": {
+    "originalWidth": 2048,
+    "originalHeight": 1536,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-03": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-04": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      480,
+      583,
+      875
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-05": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-06": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      432,
+      583,
+      875
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-07": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-08": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-09": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      480,
+      720,
+      875
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-02": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-03": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      800,
+      1080,
+      1296
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-04": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      720,
+      972,
+      1296
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-05": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-06": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      800,
+      1080,
+      1296
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-07": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-08": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      800,
+      1080,
+      1296
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-09": {
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "aspectRatio": 1.333,
+    "variants": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-10": {
+    "originalWidth": 1536,
+    "originalHeight": 2048,
+    "aspectRatio": 0.75,
+    "variants": [
+      480,
+      583,
+      875
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-03": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-04": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-05": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-06": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-07": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-08": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-09": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-na-10": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-02": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-03": {
+    "originalWidth": 1440,
+    "originalHeight": 1080,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972,
+      1440
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-04": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-05": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-06": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-07": {
+    "originalWidth": 1080,
+    "originalHeight": 810,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-08": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-09": {
+    "originalWidth": 160,
+    "originalHeight": 214,
+    "aspectRatio": 0.748,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      583,
+      875
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-10": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-11": {
+    "originalWidth": 160,
+    "originalHeight": 214,
+    "aspectRatio": 0.748,
+    "variants": [
+      160,
+      240,
+      320,
+      583,
+      875
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-12": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-13": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-14": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-15": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-16": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-17": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-18": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-19": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-20": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/halsteren-buitenstucwerk-voor-21": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-na-03": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-na-04": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-voor-01": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-voor-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-voor-03": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-voor-04": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1440
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-voor-05": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-voor-06": {
+    "originalWidth": 1080,
+    "originalHeight": 1440,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/katwijk-gevelisolatie-6cm-voor-07": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      768,
+      800,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-na-03": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1440
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-na-04": {
+    "originalWidth": 1080,
+    "originalHeight": 1440,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-na-05": {
+    "originalWidth": 160,
+    "originalHeight": 214,
+    "aspectRatio": 0.748,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-na-06": {
+    "originalWidth": 1080,
+    "originalHeight": 1440,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-02": {
+    "originalWidth": 160,
+    "originalHeight": 160,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-03": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-04": {
+    "originalWidth": 1080,
+    "originalHeight": 810,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080,
+      1296
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-05": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      583,
+      875
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-06": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-07": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      583,
+      875
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-08": {
+    "originalWidth": 160,
+    "originalHeight": 284,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      320,
+      583
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-09": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      583,
+      875
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-10": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/klaaswaal-gevelisolatie-6cm-voor-11": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-03": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-04": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-05": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-06": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-07": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      288,
+      583,
+      875
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-08": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-na-09": {
+    "originalWidth": 1080,
+    "originalHeight": 1440,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-01": {
+    "originalWidth": 160,
+    "originalHeight": 284,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-02": {
+    "originalWidth": 1080,
+    "originalHeight": 1440,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-03": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-04": {
+    "originalWidth": 1200,
+    "originalHeight": 928,
+    "aspectRatio": 1.293,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-05": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-06": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-07": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-08": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-09": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-10": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-11": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-12": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-13": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-14": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-15": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rottekade-gevelisolatie-10cm-voor-16": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-na-01": {
+    "originalWidth": 160,
+    "originalHeight": 284,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      320,
+      389,
+      432,
+      466,
+      518,
+      560,
+      583,
+      604,
+      622
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-na-03": {
+    "originalWidth": 160,
+    "originalHeight": 214,
+    "aspectRatio": 0.748,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      972
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-na-04": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-na-05": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-na-06": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-na-07": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-voor-01": {
+    "originalWidth": 160,
+    "originalHeight": 284,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      320,
+      583
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-voor-02": {
+    "originalWidth": 160,
+    "originalHeight": 122,
+    "aspectRatio": 1.311,
+    "variants": [
+      160,
+      240,
+      320,
+      480
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-voor-03": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      583,
+      875
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-voor-04": {
+    "originalWidth": 160,
+    "originalHeight": 284,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648
+    ]
+  },
+  "projects/rotterdam-buitenstucwerk-voor-05": {
+    "originalWidth": 160,
+    "originalHeight": 285,
+    "aspectRatio": 0.561,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 967,
+    "aspectRatio": 1.241,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 1608,
+    "aspectRatio": 0.746,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-na-03": {
+    "originalWidth": 1200,
+    "originalHeight": 1512,
+    "aspectRatio": 0.794,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-na-04": {
+    "originalWidth": 1200,
+    "originalHeight": 964,
+    "aspectRatio": 1.245,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-na-05": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-voor-01": {
+    "originalWidth": 160,
+    "originalHeight": 224,
+    "aspectRatio": 0.714,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-voor-02": {
+    "originalWidth": 160,
+    "originalHeight": 200,
+    "aspectRatio": 0.8,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-voor-03": {
+    "originalWidth": 160,
+    "originalHeight": 203,
+    "aspectRatio": 0.788,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-voor-04": {
+    "originalWidth": 1080,
+    "originalHeight": 1080,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-voor-05": {
+    "originalWidth": 1166,
+    "originalHeight": 915,
+    "aspectRatio": 1.274,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972,
+      1166
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-voor-06": {
+    "originalWidth": 1200,
+    "originalHeight": 1022,
+    "aspectRatio": 1.174,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-10cm-voor-07": {
+    "originalWidth": 1200,
+    "originalHeight": 972,
+    "aspectRatio": 1.235,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-na-01": {
+    "originalWidth": 1200,
+    "originalHeight": 902,
+    "aspectRatio": 1.33,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-na-02": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-na-03": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-01": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-03": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-04": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-05": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-06": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-07": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-08": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-09": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vlaardingen-gevelisolatie-6cm-voor-10": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      972
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-na-1": {
+    "originalWidth": 1080,
+    "originalHeight": 1080,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1080,
+      1280
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-na-2": {
+    "originalWidth": 1200,
+    "originalHeight": 1200,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-na-3": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-voor-1": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-voor-2": {
+    "originalWidth": 1080,
+    "originalHeight": 1440,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-voor-3": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-voor-4": {
+    "originalWidth": 1200,
+    "originalHeight": 1200,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-voor-5": {
+    "originalWidth": 1200,
+    "originalHeight": 1200,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/vught-gevelisolatie-10cm-voor-6": {
+    "originalWidth": 1200,
+    "originalHeight": 1200,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-01": {
+    "originalWidth": 1152,
+    "originalHeight": 1152,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      720,
+      768,
+      828,
+      972,
+      1152,
+      1296,
+      1440,
+      1728
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-03": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-04": {
+    "originalWidth": 1200,
+    "originalHeight": 1200,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-05": {
+    "originalWidth": 160,
+    "originalHeight": 355,
+    "aspectRatio": 0.451,
+    "variants": [
+      160,
+      240,
+      320,
+      583
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-na-06": {
+    "originalWidth": 160,
+    "originalHeight": 355,
+    "aspectRatio": 0.451,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-01": {
+    "originalWidth": 1080,
+    "originalHeight": 1440,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-02": {
+    "originalWidth": 1200,
+    "originalHeight": 900,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-03": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-04": {
+    "originalWidth": 160,
+    "originalHeight": 213,
+    "aspectRatio": 0.751,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      972
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-05": {
+    "originalWidth": 1200,
+    "originalHeight": 540,
+    "aspectRatio": 2.222,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-06": {
+    "originalWidth": 160,
+    "originalHeight": 347,
+    "aspectRatio": 0.461,
+    "variants": [
+      160,
+      194,
+      259,
+      583
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-07": {
+    "originalWidth": 160,
+    "originalHeight": 284,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      320,
+      583
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-08": {
+    "originalWidth": 160,
+    "originalHeight": 347,
+    "aspectRatio": 0.461,
+    "variants": [
+      160,
+      240,
+      320,
+      648
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-09": {
+    "originalWidth": 160,
+    "originalHeight": 355,
+    "aspectRatio": 0.451,
+    "variants": [
+      160,
+      240,
+      288,
+      583
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-10": {
+    "originalWidth": 160,
+    "originalHeight": 356,
+    "aspectRatio": 0.449,
+    "variants": [
+      160,
+      240,
+      320,
+      480
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-11": {
+    "originalWidth": 1200,
+    "originalHeight": 1200,
+    "aspectRatio": 1,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/zuidzijdsedijk-nieuw-beijerland-gevelisolatie-voor-12": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "services/dienst-muren": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "services/service-coating": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "services/service-isolatie": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "services/service-renovatie": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "services/service-stucwerk": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "sierpleister/details-dagkanten": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "sierpleister/details-hoekprofielen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "sierpleister/details-plintzone": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "sierpleister/details-wapening": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "subsidie-vergunning": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "verfsoorten-silicaat-siloxaan": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "voorbereiding-behang": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "voorbereiding-bestaand": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "voorbereiding-nieuwbouw": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "wat-is-buitenmuur-stucen": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "wat-is-gevel-sierpleister": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "wat-is-gevelisolatie": {
+    "originalWidth": 320,
+    "originalHeight": 320,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  }
+}

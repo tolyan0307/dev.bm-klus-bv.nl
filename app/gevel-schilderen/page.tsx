@@ -1,4 +1,4 @@
-import Image from "next/image"
+import ResponsiveImage from "@/components/responsive-image"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import {
@@ -58,7 +58,6 @@ const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
 )
-
 const WA_URL =
   "https://wa.me/31612079808?text=Hallo%2C%20ik%20heb%20interesse%20in%20gevel%20schilderen.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
 
@@ -142,11 +141,12 @@ export default function GevelSchilderenPage() {
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
-          <Image
-            src="/images/projects/vlaardingen-gevelisolatie-10cm-na-01.webp"
+          <ResponsiveImage
+            baseName="vlaardingen-gevelisolatie-10cm-na-01"
+            dir="/images/projects"
+            preset="hero"
             alt="Gevel schilderen — vernieuwde buitenmuur in Vlaardingen"
-            fill
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             sizes="100vw"
             priority
           />
@@ -339,11 +339,12 @@ export default function GevelSchilderenPage() {
             />
             <div className="mt-10 overflow-hidden rounded-2xl border border-border shadow-sm lg:grid lg:grid-cols-[42%_58%]">
               <div className="relative min-h-64 lg:min-h-0">
-                <Image
-                  src="/images/gevel-schilderen-voordelen.webp"
+                <ResponsiveImage
+                  baseName="gevel-schilderen-voordelen"
+                  dir="/images"
+                  preset="serviceCard"
                   alt="Vakkundig gevel schilderen — bescherming en uitstraling"
-                  fill
-                  className="object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent lg:bg-linear-to-r lg:from-transparent lg:to-black/20" />
@@ -649,12 +650,13 @@ export default function GevelSchilderenPage() {
 
               {/* Right — image */}
               <div className="relative min-h-64 overflow-hidden rounded-2xl border border-border shadow-sm">
-                <Image
-                  src="/images/offerte-berekening.webp"
+                <ResponsiveImage
+                  baseName="offerte-berekening"
+                  dir="/images"
+                  preset="serviceCard"
                   alt="Gevel schilderen offerte — berekening en planning"
-                  fill
+                  className="absolute inset-0 h-full w-full object-cover"
                   sizes="(max-width: 1024px) 100vw, 420px"
-                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
@@ -685,12 +687,13 @@ export default function GevelSchilderenPage() {
             <div className="mt-10 grid gap-5 lg:grid-cols-[280px_1fr]">
               {/* Photo */}
               <div className="relative overflow-hidden rounded-2xl border border-border">
-                <Image
-                  src="/images/verfsoorten-silicaat-siloxaan.webp"
+                <ResponsiveImage
+                  baseName="verfsoorten-silicaat-siloxaan"
+                  dir="/images"
+                  preset="serviceCard"
                   alt="Silicaatverf en siloxaanverf voor gevels"
-                  width={280}
-                  height={360}
                   className="h-52 w-full object-cover lg:h-full"
+                  sizes="(max-width: 1024px) 100vw, 280px"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
@@ -847,12 +850,13 @@ export default function GevelSchilderenPage() {
               {/* Right column */}
               <div className="flex flex-col gap-4">
                 <div className="relative min-h-56 flex-1 overflow-hidden rounded-2xl border border-border shadow-sm">
-                  <Image
-                    src="/images/gevel-voorbereiding.webp"
+                  <ResponsiveImage
+                    baseName="gevel-voorbereiding"
+                    dir="/images"
+                    preset="serviceCard"
                     alt="Voorbereiding gevel schilderen — reiniging en herstel"
-                    fill
+                    className="absolute inset-0 h-full w-full object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
@@ -893,33 +897,34 @@ export default function GevelSchilderenPage() {
                 {
                   sub: techniek.subsections[0],
                   tag: "Dampopen systeem vereist",
-                  img: "/images/ondergrond-baksteen.webp",
+                  baseName: "ondergrond-baksteen",
                   imgAlt: "Baksteen gevel textuur close-up",
                 },
                 {
                   sub: techniek.subsections[1],
                   tag: "Haarscheuren fixeren",
-                  img: "/images/ondergrond-pleister.webp",
+                  baseName: "ondergrond-pleister",
                   imgAlt: "Pleister stucwerk gevel textuur close-up",
                 },
                 {
                   sub: techniek.subsections[2],
                   tag: "Alkalische primer nodig",
-                  img: "/images/ondergrond-beton.jpg",
+                  baseName: "ondergrond-beton",
                   imgAlt: "Betonnen gevel textuur close-up",
                 },
-              ].map(({ sub, tag, img, imgAlt }) => (
+              ].map(({ sub, tag, baseName, imgAlt }) => (
                 <div
                   key={sub.h3}
                   className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-md"
                 >
                   <div className="relative h-28 overflow-hidden">
-                    <Image
-                      src={img}
+                    <ResponsiveImage
+                      baseName={baseName}
+                      dir="/images"
+                      preset="serviceCard"
                       alt={imgAlt}
-                      fill
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
                     <span className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/50 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">

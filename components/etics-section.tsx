@@ -1,5 +1,5 @@
-import Image from "next/image"
 import { ArrowRight, Check, Zap, TrendingUp, Shield } from "lucide-react"
+import ResponsiveImage from "@/components/responsive-image"
 import Link from "next/link"
 
 const benefits = [
@@ -15,10 +15,10 @@ const stats = [
 ]
 
 const finishes = [
-  { name: "Stucwerk", image: "/images/etics-layer-wall-ext.webp", href: "/buiten-stucwerk/" },
-  { name: "Steenstrips", image: "/images/etics-layer-insulation-ext.webp", href: "/gevelisolatie/afwerkingen/" },
-  { name: "Schilderwerk", image: "/images/etics-layer-mesh-ext.webp", href: "/gevel-schilderen/" },
-  { name: "Sierpleister", image: "/images/etics-layer-finish-ext.webp", href: "/sierpleister/" },
+  { name: "Stucwerk", baseName: "etics-layer-wall-ext", href: "/buiten-stucwerk/" },
+  { name: "Steenstrips", baseName: "etics-layer-insulation-ext", href: "/gevelisolatie/afwerkingen/" },
+  { name: "Schilderwerk", baseName: "etics-layer-mesh-ext", href: "/gevel-schilderen/" },
+  { name: "Sierpleister", baseName: "etics-layer-finish-ext", href: "/sierpleister/" },
 ]
 
 export default function EticsSection() {
@@ -74,12 +74,13 @@ export default function EticsSection() {
             <div aria-hidden="true" className="absolute -inset-4 rounded-3xl bg-primary/4 sm:-inset-5" />
 
             <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-border/40">
-              <Image
-                src="/images/gevelisolatie-voordelen.webp"
+              <ResponsiveImage
+                baseName="gevelisolatie-voordelen"
+                dir="/images"
+                preset="serviceCard"
                 alt="Buitengevelisolatie (ETICS) — professioneel resultaat"
-                width={640}
-                height={480}
                 className="aspect-4/3 w-full object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
 
@@ -143,12 +144,13 @@ export default function EticsSection() {
                 className="group overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm transition-all hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-md"
               >
                 <div className="aspect-4/5 overflow-hidden">
-                  <Image
-                    src={finish.image}
+                  <ResponsiveImage
+                    baseName={finish.baseName}
+                    dir="/images"
+                    preset="serviceCard"
                     alt={finish.name}
-                    width={300}
-                    height={375}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, 25vw"
                   />
                 </div>
                 <div className="flex items-center justify-between px-4 py-3.5">

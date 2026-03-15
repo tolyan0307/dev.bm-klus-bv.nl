@@ -21,6 +21,9 @@ public/data/
 .vercel/
 .cache/
 
+# Source images (raw originals, processed by pipeline)
+source-images/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

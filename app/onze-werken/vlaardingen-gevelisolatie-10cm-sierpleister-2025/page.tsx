@@ -1,8 +1,12 @@
 import Link from "next/link"
+import { Fragment } from "react"
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
+import { jsonLdScript, projectPageSchema } from "@/lib/seo/schema"
+import { SITE } from "@/lib/seo/routes"
 import { buildPageMetadata } from "@/lib/seo/meta"
 import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGalleryCarousel"
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
+import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/vlaardingen-gevelisolatie-10cm-sierpleister-2025"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
@@ -119,21 +123,35 @@ const relatedLinks = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function VlaardingenGevelisolatie10cmProjectPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      {projectPageSchema({
+        title: "Vlaardingen gevelisolatie 10 cm sierpleister – 2025",
+        description:
+          "Project in Vlaardingen: gevelrenovatie met 10 cm gevelisolatie, sierpleister 1,5 mm, nieuwe raamdorpels en hoekafwerking met steenstrips.",
+        url: `${SITE.canonicalBase}/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/`,
+        image: "/images/projects/vlaardingen-gevelisolatie-10cm-na-01.webp",
+        city: "Vlaardingen",
+        year: 2025,
+        serviceTypes: ["Gevelisolatie", "Sierpleister"],
+      }).map((s, i) => (
+        <Fragment key={i}>{jsonLdScript(s)}</Fragment>
+      ))}
+      <div className="min-h-screen bg-background">
 
       {/* ── A · HERO ─────────────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden min-h-[80vh] lg:min-h-[65vh]">
 
-        <img
-          src="/images/projects/vlaardingen-gevelisolatie-10cm-na-01.webp"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          draggable={false}
-        />
+  <ResponsiveImage
+    baseName="vlaardingen-gevelisolatie-10cm-na-01"
+    dir="/images/projects"
+    preset="hero"
+    alt=""
+    aria-hidden="true"
+    className="absolute inset-0 h-full w-full object-cover object-center"
+    sizes="100vw"
+    priority
+    draggable={false}
+  />
 
         <div className="absolute inset-0" style={{ background: "rgba(10,7,3,0.48)" }} />
         <div
@@ -164,7 +182,7 @@ export default function VlaardingenGevelisolatie10cmProjectPage() {
         <div
           className="absolute inset-x-0 bottom-0"
           style={{
-            height: 180,
+            height: 80,
             background:
               "linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.70) 40%, transparent 100%)",
           }}
@@ -447,5 +465,6 @@ export default function VlaardingenGevelisolatie10cmProjectPage() {
       </aside>
 
     </div>
+    </>
   )
 }

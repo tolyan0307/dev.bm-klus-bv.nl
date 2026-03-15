@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import dynamic from "next/dynamic";
+import ResponsiveImage from "@/components/responsive-image";
 
 const QuoteModal = dynamic(() => import("@/components/quote-modal"));
 const TrustStrip = dynamic(() => import("@/components/trust-strip"));
@@ -300,12 +300,13 @@ export default function ContactPage() {
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0">
-          <Image
-            src="/images/projects/rottekade-gevelisolatie-10cm-na-01.webp"
+          <ResponsiveImage
+            baseName="rottekade-gevelisolatie-10cm-na-01"
+            dir="/images/projects"
+            preset="hero"
             alt="Gevelisolatie project — moderne woning aan de Rottekade"
-            fill
-            className="object-cover"
             sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover"
             priority
           />
           <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/40" />
