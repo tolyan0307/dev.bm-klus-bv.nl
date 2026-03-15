@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { GtmProvider } from '@/components/gtm-provider'
@@ -45,12 +44,7 @@ export default function RootLayout({
   return (
     <html lang="nl" className={_inter.variable}>
       <head>
-        <Script
-          id="cookiescript-selfhosted"
-          src="/vendor/cookiescript/d0155e1334498811a509131c3fda40b3.js"
-          strategy="beforeInteractive"
-          charSet="UTF-8"
-        />
+        <link rel="preconnect" href="https://cdn.cookie-script.com" />
         <link rel="preconnect" href="https://lh3.googleusercontent.com" />
       </head>
       <body className="font-sans antialiased bg-background text-foreground">
