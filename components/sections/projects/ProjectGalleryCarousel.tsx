@@ -2,52 +2,18 @@
 
 import { useState, useEffect, useCallback, useRef } from "react"
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react"
-import { buildSrcSet, getFallbackSrc, type ImagePreset } from "@/lib/responsive-image"
 
-interface GalleryImage {
+export interface GalleryImage {
   src: string
+  srcSet: string
+  thumbSrcSet: string
   alt: string
-  baseName?: string
 }
 
 interface ProjectGalleryCarouselProps {
   title: string
   images: GalleryImage[]
   variant: "voor" | "na"
-}
-
-const DIR = "/images/projects"
-
-function ResponsiveImg({
-  image,
-  preset,
-  sizes,
-  className,
-  priority = false,
-  loading,
-}: {
-  image: GalleryImage
-  preset: ImagePreset
-  sizes: string
-  className?: string
-  priority?: boolean
-  loading?: "lazy" | "eager"
-}) {
-  const baseName = image.baseName ?? image.src.replace(/^\/images\/projects\//, "").replace(/\.\w+$/, "")
-  const srcSet = buildSrcSet(baseName, DIR, preset)
-  const src = getFallbackSrc(baseName, DIR, preset)
-  return (
-    <img
-      src={src}
-      srcSet={srcSet || undefined}
-      sizes={sizes}
-      alt={image.alt}
-      loading={priority ? undefined : (loading ?? "lazy")}
-      fetchPriority={priority ? "high" : undefined}
-      decoding={priority ? "sync" : "async"}
-      className={className}
-    />
-  )
 }
 
 export default function ProjectGalleryCarousel({
@@ -139,11 +105,14 @@ export default function ProjectGalleryCarousel({
         tabIndex={0}
         onKeyDown={(e) => e.key === "Enter" && setLightboxOpen(true)}
       >
-        <ResponsiveImg
-          image={images[current]}
-          preset="gallery"
+        <img
+          src={images[current].src}
+          srcSet={images[current].srcSet || undefined}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 800px"
-          priority={current === 0}
+          alt={images[current].alt}
+          fetchPriority={current === 0 ? "high" : undefined}
+          decoding={current === 0 ? "sync" : "async"}
+          loading={current === 0 ? undefined : "lazy"}
           className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300"
         />
 
@@ -190,10 +159,13 @@ export default function ProjectGalleryCarousel({
                 : "border-border opacity-60 hover:opacity-90"
             }`}
           >
-            <ResponsiveImg
-              image={img}
-              preset="thumbnail"
+            <img
+              src={img.src}
+              srcSet={img.thumbSrcSet || undefined}
               sizes="80px"
+              alt={img.alt}
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 h-full w-full object-cover"
             />
           </button>
@@ -238,11 +210,13 @@ export default function ProjectGalleryCarousel({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-              <ResponsiveImg
-                image={images[current]}
-                preset="gallery"
+              <img
+                src={images[current].src}
+                srcSet={images[current].srcSet || undefined}
                 sizes="(max-width: 1280px) 100vw, 1280px"
-                priority
+                alt={images[current].alt}
+                fetchPriority="high"
+                decoding="sync"
                 className="absolute inset-0 h-full w-full object-contain"
               />
             </div>

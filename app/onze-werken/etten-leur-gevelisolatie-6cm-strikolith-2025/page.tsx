@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+﻿import { Fragment } from "react"
 import Link from "next/link"
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo/meta"
@@ -8,6 +8,7 @@ import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGaller
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/etten-leur-gevelisolatie-6cm-strikolith-2025"
+import { resolveGalleryImages } from "@/lib/gallery-utils"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -364,7 +365,7 @@ export default function EttenLeur6cmProjectPage() {
             <ProjectGalleryCarousel
               title="Voor de werken"
               variant="voor"
-              images={beforeImages}
+              images={resolveGalleryImages(beforeImages)}
             />
           </div>
         </div>
@@ -417,7 +418,7 @@ export default function EttenLeur6cmProjectPage() {
             <ProjectGalleryCarousel
               title="Na de werken"
               variant="na"
-              images={afterImages}
+              images={resolveGalleryImages(afterImages)}
             />
           </div>
         </div>

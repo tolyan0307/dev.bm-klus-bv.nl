@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 import { Fragment } from "react"
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
 import { jsonLdScript, projectPageSchema } from "@/lib/seo/schema"
@@ -8,6 +8,7 @@ import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGaller
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/dordrecht-gevelisolatie-10cm-sierpleister-2025"
+import { resolveGalleryImages } from "@/lib/gallery-utils"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -359,7 +360,7 @@ export default function DordrechtProjectPage() {
               </span>
               <span className="h-px flex-1 bg-border" aria-hidden />
             </div>
-            <ProjectGalleryCarousel title="Voor de werken" variant="voor" images={beforeImages} />
+            <ProjectGalleryCarousel title="Voor de werken" variant="voor" images={resolveGalleryImages(beforeImages)} />
           </div>
         </div>
       </section>
@@ -406,7 +407,7 @@ export default function DordrechtProjectPage() {
               </span>
               <span className="h-px flex-1 bg-border" aria-hidden />
             </div>
-            <ProjectGalleryCarousel title="Na de werken" variant="na" images={afterImages} />
+            <ProjectGalleryCarousel title="Na de werken" variant="na" images={resolveGalleryImages(afterImages)} />
           </div>
         </div>
       </section>
