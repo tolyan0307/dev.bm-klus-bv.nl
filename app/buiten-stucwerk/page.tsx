@@ -300,7 +300,7 @@ export default function BuitenStucwerkPage() {
                 </div>
               </div>
               <div className="relative h-52 w-full lg:h-auto">
-                <ResponsiveImage baseName="wat-is-buitenmuur-stucen" dir="/images" preset="serviceCard" alt="Stukadoor brengt cementpleister aan op de buitenmuur" className="absolute inset-0 h-full w-full object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
+                <ResponsiveImage baseName="wat-is-buitenmuur-stucen" dir="/images" preset="serviceCard" alt="Stukadoor brengt cementpleister aan op de buitenmuur" className="absolute inset-0 h-full w-full object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-linear-to-r from-card/20 to-transparent" />
               </div>
             </div>

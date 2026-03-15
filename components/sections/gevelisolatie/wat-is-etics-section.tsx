@@ -88,7 +88,6 @@ export default function WatIsEticsSection() {
             alt="Montage van buitengevelisolatie op een woning in regio Rotterdam"
             className="absolute inset-0 h-full w-full object-cover"
             sizes="100vw"
-            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/25 to-[#EA6C20]/20" />
 

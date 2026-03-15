@@ -1,29 +1,36 @@
 {
   "afwerking-crepi": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
+      432,
       480,
+      518,
       640,
+      671,
       828
     ]
   },
   "afwerking-steenstrips": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
+      288,
       320,
+      389,
+      466,
       480,
+      604,
       640,
       828
     ]
   },
   "detail-dagkanten": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -33,8 +40,8 @@
     ]
   },
   "detail-hoeken": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -44,8 +51,8 @@
     ]
   },
   "detail-koudebruggen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -55,19 +62,23 @@
     ]
   },
   "detail-plint": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
+      259,
       320,
+      350,
       432,
+      466,
       576,
+      604,
       671
     ]
   },
   "dienst-isolatie": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -77,8 +88,8 @@
     ]
   },
   "dienst-muren": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -88,8 +99,8 @@
     ]
   },
   "dienst-schilderen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -99,8 +110,8 @@
     ]
   },
   "dienst-schoonmaak": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -110,19 +121,22 @@
     ]
   },
   "dienst-sierpleister": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
+      432,
       480,
+      518,
       640,
+      671,
       828
     ]
   },
   "dienst-stucwerk": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -132,8 +146,8 @@
     ]
   },
   "droogtijd-behangen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -143,8 +157,8 @@
     ]
   },
   "droogtijd-drying": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -154,8 +168,8 @@
     ]
   },
   "droogtijd-schilderen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -165,8 +179,8 @@
     ]
   },
   "etics-isolatie": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -176,8 +190,8 @@
     ]
   },
   "etics-layer-finish-ext": {
-    "originalWidth": 320,
-    "originalHeight": 207,
+    "originalWidth": 694,
+    "originalHeight": 449,
     "aspectRatio": 1.546,
     "variants": [
       320,
@@ -186,9 +200,9 @@
     ]
   },
   "etics-layer-insulation-ext": {
-    "originalWidth": 320,
-    "originalHeight": 205,
-    "aspectRatio": 1.561,
+    "originalWidth": 698,
+    "originalHeight": 448,
+    "aspectRatio": 1.558,
     "variants": [
       320,
       480,
@@ -196,9 +210,9 @@
     ]
   },
   "etics-layer-mesh-ext": {
-    "originalWidth": 320,
-    "originalHeight": 205,
-    "aspectRatio": 1.561,
+    "originalWidth": 696,
+    "originalHeight": 445,
+    "aspectRatio": 1.564,
     "variants": [
       320,
       480,
@@ -206,29 +220,91 @@
     ]
   },
   "etics-layer-wall-ext": {
-    "originalWidth": 320,
-    "originalHeight": 203,
-    "aspectRatio": 1.576,
+    "originalWidth": 699,
+    "originalHeight": 443,
+    "aspectRatio": 1.578,
     "variants": [
       320,
       480,
       640
     ]
   },
-  "gevel-schilderen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
-    "aspectRatio": 1,
+  "general/etics-layer-finish-ext": {
+    "originalWidth": 694,
+    "originalHeight": 449,
+    "aspectRatio": 1.546,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
+  "general/etics-layer-insulation-ext": {
+    "originalWidth": 698,
+    "originalHeight": 448,
+    "aspectRatio": 1.558,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
+  "general/etics-layer-mesh-ext": {
+    "originalWidth": 696,
+    "originalHeight": 445,
+    "aspectRatio": 1.564,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
+  "general/etics-layer-wall-ext": {
+    "originalWidth": 699,
+    "originalHeight": 443,
+    "aspectRatio": 1.578,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
+  "general/hero-home": {
+    "originalWidth": 1536,
+    "originalHeight": 1024,
+    "aspectRatio": 1.5,
     "variants": [
       320,
       480,
       640,
+      745
+    ]
+  },
+  "general/logo-bm-klus": {
+    "originalWidth": 384,
+    "originalHeight": 64,
+    "aspectRatio": 6,
+    "variants": [
+      320
+    ]
+  },
+  "gevel-schilderen": {
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      432,
+      480,
+      518,
+      640,
+      671,
       828
     ]
   },
   "gevel-schilderen-voordelen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -238,10 +314,11 @@
     ]
   },
   "gevel-sierpleister-crepi": {
-    "originalWidth": 259,
-    "originalHeight": 259,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
+      233,
       259,
       350,
       466,
@@ -249,30 +326,37 @@
     ]
   },
   "gevel-sierpleister-kalei": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
+      288,
       320,
+      389,
       432,
+      466,
       576,
+      604,
       671
     ]
   },
   "gevel-sierpleister-krabpleister": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
+      259,
       320,
+      350,
       432,
+      466,
       518,
       604
     ]
   },
   "gevel-sierpleister-silicaat": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1200,
+    "originalHeight": 1200,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -282,8 +366,8 @@
     ]
   },
   "gevel-sierpleister-siliconenhars": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -293,30 +377,37 @@
     ]
   },
   "gevel-sierpleister-spachtelputz": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
+      389,
+      466,
       480,
       576,
+      604,
       745
     ]
   },
   "gevel-voorbereiding": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
+      288,
       320,
+      350,
+      466,
       480,
+      604,
       640,
       745
     ]
   },
   "gevelafwerking": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -326,8 +417,8 @@
     ]
   },
   "gevelisolatie-kosten": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -337,19 +428,22 @@
     ]
   },
   "gevelisolatie-voordelen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
+      432,
       480,
+      518,
       640,
+      671,
       828
     ]
   },
   "materiaal-eps": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -359,19 +453,20 @@
     ]
   },
   "materiaal-minerale-wol": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
       480,
       640,
+      745,
       828
     ]
   },
   "materiaal-pir": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -381,8 +476,8 @@
     ]
   },
   "muren-stucen-behang-verwijderen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -392,8 +487,8 @@
     ]
   },
   "muren-stucen-nieuwbouw": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -403,20 +498,18 @@
     ]
   },
   "muren-stucen-renovatie": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
       480,
-      576,
-      671,
-      691
+      768
     ]
   },
   "muren-stucen-schilderen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -426,8 +519,8 @@
     ]
   },
   "muren-stucen-voordelen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -437,8 +530,8 @@
     ]
   },
   "muren-stucen-wat-is": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -448,8 +541,8 @@
     ]
   },
   "offerte-berekening": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -459,8 +552,8 @@
     ]
   },
   "ondergrond-baksteen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -470,19 +563,22 @@
     ]
   },
   "ondergrond-beton": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
+      288,
       320,
+      350,
       432,
+      466,
       518,
       604
     ]
   },
   "ondergrond-pleister": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -492,26 +588,27 @@
     ]
   },
   "process-hero": {
-    "originalWidth": 768,
-    "originalHeight": 768,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
-      768
-    ]
-  },
-  "projects/almere-gevelisolatie-35m2-na-01": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
-    "aspectRatio": 1.333,
-    "variants": [
-      160,
-      240,
       320,
       480,
       640,
       768,
+      828
+    ]
+  },
+  "projects/almere-gevelisolatie-35m2-na-01": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      480,
+      768,
       800,
-      828,
       1200,
       1280,
       1600,
@@ -519,73 +616,68 @@
     ]
   },
   "projects/almere-gevelisolatie-35m2-na-02": {
-    "originalWidth": 1200,
-    "originalHeight": 1200,
+    "originalWidth": 1494,
+    "originalHeight": 1494,
     "aspectRatio": 1,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/almere-gevelisolatie-35m2-na-03": {
-    "originalWidth": 160,
-    "originalHeight": 347,
+    "originalWidth": 945,
+    "originalHeight": 2048,
     "aspectRatio": 0.461,
     "variants": [
       160,
       240,
-      320,
       480,
       800
     ]
   },
   "projects/almere-gevelisolatie-35m2-na-04": {
-    "originalWidth": 160,
-    "originalHeight": 356,
-    "aspectRatio": 0.449,
+    "originalWidth": 697,
+    "originalHeight": 1550,
+    "aspectRatio": 0.45,
     "variants": [
       160,
       240,
-      320,
       480
     ]
   },
   "projects/almere-gevelisolatie-35m2-na-05": {
-    "originalWidth": 160,
-    "originalHeight": 214,
-    "aspectRatio": 0.748,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       648,
       875
     ]
   },
   "projects/almere-gevelisolatie-35m2-voor-01": {
-    "originalWidth": 160,
-    "originalHeight": 284,
+    "originalWidth": 1148,
+    "originalHeight": 2040,
     "aspectRatio": 0.563,
     "variants": [
       160,
       240,
-      320,
+      432,
       583
     ]
   },
   "projects/almere-gevelisolatie-35m2-voor-02": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -593,24 +685,23 @@
     ]
   },
   "projects/almere-gevelisolatie-35m2-voor-03": {
-    "originalWidth": 160,
-    "originalHeight": 284,
+    "originalWidth": 1125,
+    "originalHeight": 2000,
     "aspectRatio": 0.563,
     "variants": [
       160,
       240,
-      320,
+      432,
       583
     ]
   },
   "projects/almere-gevelisolatie-35m2-voor-04": {
-    "originalWidth": 1166,
-    "originalHeight": 656,
-    "aspectRatio": 1.777,
+    "originalWidth": 2000,
+    "originalHeight": 1125,
+    "aspectRatio": 1.778,
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       875,
@@ -618,13 +709,12 @@
     ]
   },
   "projects/almere-gevelisolatie-35m2-voor-05": {
-    "originalWidth": 1200,
-    "originalHeight": 675,
+    "originalWidth": 2000,
+    "originalHeight": 1125,
     "aspectRatio": 1.778,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -632,13 +722,12 @@
     ]
   },
   "projects/almere-gevelisolatie-35m2-voor-06": {
-    "originalWidth": 1200,
-    "originalHeight": 675,
+    "originalWidth": 2000,
+    "originalHeight": 1125,
     "aspectRatio": 1.778,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -646,26 +735,24 @@
     ]
   },
   "projects/almere-gevelisolatie-35m2-voor-07": {
-    "originalWidth": 160,
-    "originalHeight": 213,
-    "aspectRatio": 0.751,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       648,
       875
     ]
   },
   "projects/almere-gevelisolatie-35m2-voor-08": {
-    "originalWidth": 1166,
-    "originalHeight": 656,
-    "aspectRatio": 1.777,
+    "originalWidth": 2000,
+    "originalHeight": 1125,
+    "aspectRatio": 1.778,
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       875,
@@ -673,18 +760,15 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-01": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
-      640,
       768,
       800,
-      828,
       1200,
       1280,
       1600,
@@ -692,13 +776,12 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-02": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -706,13 +789,12 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-03": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       768,
       800,
@@ -722,13 +804,12 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-04": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       768,
       800,
@@ -739,117 +820,110 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-05": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-06": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-07": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-08": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-09": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-na-10": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-01": {
-    "originalWidth": 1080,
-    "originalHeight": 1440,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       720,
-      1080
+      800,
+      1080,
+      1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-02": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-03": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -857,13 +931,12 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-04": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -871,13 +944,12 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-05": {
-    "originalWidth": 1200,
-    "originalHeight": 675,
+    "originalWidth": 1824,
+    "originalHeight": 1026,
     "aspectRatio": 1.778,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -885,13 +957,12 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-06": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -899,13 +970,12 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-07": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -913,52 +983,48 @@
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-08": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-09": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-10": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/bruinisse-gevelisolatie-6cm-voor-11": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -966,8 +1032,8 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-na-01": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
@@ -991,20 +1057,18 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-na-03": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1012,13 +1076,12 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-na-04": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1026,13 +1089,12 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-na-05": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1040,26 +1102,25 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-na-06": {
-    "originalWidth": 160,
-    "originalHeight": 214,
-    "aspectRatio": 0.748,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       648,
+      720,
       875
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-01": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1067,13 +1128,12 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-02": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1081,74 +1141,71 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-03": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-04": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-05": {
-    "originalWidth": 160,
-    "originalHeight": 355,
-    "aspectRatio": 0.451,
+    "originalWidth": 908,
+    "originalHeight": 2016,
+    "aspectRatio": 0.45,
     "variants": [
       160,
       240,
       288,
+      389,
       583
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-06": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-07": {
-    "originalWidth": 160,
-    "originalHeight": 355,
-    "aspectRatio": 0.451,
+    "originalWidth": 908,
+    "originalHeight": 2016,
+    "aspectRatio": 0.45,
     "variants": [
       160,
       240,
-      320,
+      480,
       648
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-08": {
-    "originalWidth": 1200,
-    "originalHeight": 1183,
+    "originalWidth": 2048,
+    "originalHeight": 2019,
     "aspectRatio": 1.014,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1156,13 +1213,12 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-09": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1170,26 +1226,24 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-10": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-11": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1197,13 +1251,12 @@
     ]
   },
   "projects/dordrecht-gevelisolatie-10cm-voor-12": {
-    "originalWidth": 1200,
-    "originalHeight": 1600,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
     "aspectRatio": 0.75,
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1233,7 +1286,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1246,7 +1298,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1080
@@ -1259,7 +1310,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1080
@@ -1272,9 +1322,9 @@
     "variants": [
       160,
       240,
-      320,
       480,
       648,
+      720,
       875
     ]
   },
@@ -1285,7 +1335,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       648,
       875
@@ -1298,7 +1347,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1311,7 +1359,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1325,7 +1372,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1339,7 +1385,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1353,11 +1398,11 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
-      1440
+      1440,
+      1600
     ]
   },
   "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-05": {
@@ -1367,7 +1412,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1381,7 +1425,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1395,7 +1438,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1409,7 +1451,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1423,7 +1464,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1437,7 +1477,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1451,7 +1490,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1465,11 +1503,11 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1080,
-      1296
+      1296,
+      1440
     ]
   },
   "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-voor-13": {
@@ -1479,10 +1517,10 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1080,
+      1200,
       1440
     ]
   },
@@ -1493,7 +1531,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1507,7 +1544,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1521,7 +1557,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1080,
@@ -1535,7 +1570,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1587,6 +1621,7 @@
     "variants": [
       480,
       583,
+      648,
       875
     ]
   },
@@ -1607,7 +1642,9 @@
     "variants": [
       432,
       583,
-      875
+      648,
+      875,
+      972
     ]
   },
   "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-07": {
@@ -1627,7 +1664,9 @@
     "variants": [
       480,
       648,
-      875
+      720,
+      875,
+      972
     ]
   },
   "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-09": {
@@ -1637,7 +1676,8 @@
     "variants": [
       480,
       720,
-      875
+      875,
+      972
     ]
   },
   "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-01": {
@@ -1647,7 +1687,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1672,7 +1711,8 @@
       480,
       800,
       1080,
-      1296
+      1296,
+      1440
     ]
   },
   "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-04": {
@@ -1682,8 +1722,11 @@
     "variants": [
       480,
       720,
+      800,
       972,
-      1296
+      1080,
+      1296,
+      1440
     ]
   },
   "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-05": {
@@ -1705,7 +1748,8 @@
       480,
       800,
       1080,
-      1296
+      1296,
+      1440
     ]
   },
   "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-07": {
@@ -1727,7 +1771,8 @@
       480,
       800,
       1080,
-      1296
+      1296,
+      1440
     ]
   },
   "projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-voor-09": {
@@ -1748,12 +1793,13 @@
     "variants": [
       480,
       583,
+      648,
       875
     ]
   },
   "projects/halsteren-buitenstucwerk-na-01": {
-    "originalWidth": 1200,
-    "originalHeight": 900,
+    "originalWidth": 2000,
+    "originalHeight": 1500,
     "aspectRatio": 1.333,
     "variants": [
       160,
@@ -1777,7 +1823,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1791,7 +1836,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1805,7 +1849,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1819,7 +1862,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1832,7 +1874,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1845,7 +1886,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1859,7 +1899,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1873,7 +1912,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1886,7 +1924,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1900,7 +1937,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1914,7 +1950,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1927,7 +1962,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       972,
@@ -1941,7 +1975,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1954,7 +1987,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -1967,7 +1999,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -1981,7 +2012,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1080,
@@ -1995,7 +2025,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2009,7 +2038,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       583,
       875
@@ -2022,7 +2050,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2036,7 +2063,6 @@
     "variants": [
       160,
       240,
-      320,
       583,
       875
     ]
@@ -2048,7 +2074,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2061,7 +2086,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2075,7 +2099,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2088,7 +2111,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2101,7 +2123,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2114,7 +2135,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2127,7 +2147,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2141,7 +2160,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2155,7 +2173,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2168,7 +2185,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2182,12 +2198,9 @@
     "variants": [
       160,
       240,
-      320,
       480,
-      640,
       768,
       800,
-      828,
       1200,
       1280,
       1600
@@ -2200,7 +2213,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2214,7 +2226,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       972
@@ -2227,7 +2238,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2241,7 +2251,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2254,7 +2263,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2268,7 +2276,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2282,7 +2289,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2296,7 +2302,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2309,7 +2314,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1080
@@ -2322,7 +2326,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800
     ]
@@ -2334,12 +2337,9 @@
     "variants": [
       160,
       240,
-      320,
       480,
-      640,
       768,
       800,
-      828,
       1200,
       1280,
       1600,
@@ -2353,7 +2353,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       768,
       800,
@@ -2370,7 +2369,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200,
@@ -2384,7 +2382,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1080
@@ -2397,7 +2394,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       972
@@ -2410,7 +2406,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       1080
@@ -2477,7 +2472,6 @@
     "variants": [
       160,
       240,
-      320,
       583,
       875
     ]
@@ -2489,7 +2483,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       648,
       875
@@ -2502,7 +2495,6 @@
     "variants": [
       160,
       240,
-      320,
       583,
       875
     ]
@@ -2514,7 +2506,6 @@
     "variants": [
       160,
       240,
-      320,
       583
     ]
   },
@@ -2525,7 +2516,6 @@
     "variants": [
       160,
       240,
-      320,
       583,
       875
     ]
@@ -2570,7 +2560,6 @@
       640,
       768,
       800,
-      828,
       1200,
       1280,
       1600,
@@ -2687,7 +2676,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720
     ]
@@ -2699,7 +2687,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       1080
@@ -2805,7 +2792,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2870,7 +2856,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -2883,7 +2868,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       972
@@ -2896,7 +2880,6 @@
     "variants": [
       160,
       240,
-      320,
       389,
       432,
       466,
@@ -2996,7 +2979,6 @@
     "variants": [
       160,
       240,
-      320,
       583
     ]
   },
@@ -3018,7 +3000,6 @@
     "variants": [
       160,
       240,
-      320,
       583,
       875
     ]
@@ -3030,7 +3011,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       648
     ]
@@ -3235,7 +3215,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       648,
       875
@@ -3382,7 +3361,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       648,
       972
@@ -3397,10 +3375,8 @@
       240,
       320,
       480,
-      640,
       768,
       800,
-      828,
       1080,
       1280
     ]
@@ -3439,7 +3415,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       972
@@ -3465,7 +3440,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       972
@@ -3478,7 +3452,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       800,
       1200
@@ -3521,10 +3494,8 @@
       240,
       320,
       480,
-      640,
       720,
       768,
-      828,
       972,
       1152,
       1296,
@@ -3581,7 +3552,6 @@
     "variants": [
       160,
       240,
-      320,
       583
     ]
   },
@@ -3592,7 +3562,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       648
     ]
@@ -3631,7 +3600,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       720,
       972
@@ -3644,7 +3612,6 @@
     "variants": [
       160,
       240,
-      320,
       480,
       648,
       972
@@ -3682,7 +3649,6 @@
     "variants": [
       160,
       240,
-      320,
       583
     ]
   },
@@ -3693,7 +3659,6 @@
     "variants": [
       160,
       240,
-      320,
       648
     ]
   },
@@ -3715,7 +3680,6 @@
     "variants": [
       160,
       240,
-      320,
       480
     ]
   },
@@ -3747,8 +3711,8 @@
     ]
   },
   "services/dienst-muren": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3758,8 +3722,8 @@
     ]
   },
   "services/service-coating": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3769,8 +3733,8 @@
     ]
   },
   "services/service-isolatie": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3780,8 +3744,8 @@
     ]
   },
   "services/service-renovatie": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3791,8 +3755,8 @@
     ]
   },
   "services/service-stucwerk": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3802,8 +3766,8 @@
     ]
   },
   "sierpleister/details-dagkanten": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3813,8 +3777,8 @@
     ]
   },
   "sierpleister/details-hoekprofielen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3824,8 +3788,8 @@
     ]
   },
   "sierpleister/details-plintzone": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3835,19 +3799,22 @@
     ]
   },
   "sierpleister/details-wapening": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
+      432,
       480,
+      518,
       640,
+      671,
       828
     ]
   },
   "subsidie-vergunning": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3857,8 +3824,8 @@
     ]
   },
   "verfsoorten-silicaat-siloxaan": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3868,8 +3835,8 @@
     ]
   },
   "voorbereiding-behang": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3879,8 +3846,8 @@
     ]
   },
   "voorbereiding-bestaand": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3890,8 +3857,8 @@
     ]
   },
   "voorbereiding-nieuwbouw": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3901,8 +3868,8 @@
     ]
   },
   "wat-is-buitenmuur-stucen": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -3912,19 +3879,22 @@
     ]
   },
   "wat-is-gevel-sierpleister": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,
+      432,
       480,
+      518,
       640,
+      671,
       828
     ]
   },
   "wat-is-gevelisolatie": {
-    "originalWidth": 320,
-    "originalHeight": 320,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
     "aspectRatio": 1,
     "variants": [
       320,

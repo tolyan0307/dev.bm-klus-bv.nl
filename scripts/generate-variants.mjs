@@ -41,7 +41,7 @@ const PRESETS = {
   },
   serviceCard: {
     widths: [320, 480, 640, 828],
-    maxBytes: { 320: 25 * 1024, 480: 40 * 1024, 640: 60 * 1024, 828: 85 * 1024 },
+    maxBytes: { 320: 16 * 1024, 480: 25 * 1024, 640: 35 * 1024, 828: 50 * 1024 },
   },
   gallery: {
     widths: [480, 800, 1200, 1600],
@@ -53,7 +53,7 @@ const PRESETS = {
   },
 }
 
-const QUALITY_LADDER = [82, 76, 70, 64, 58]
+const QUALITY_LADDER = [82, 76, 70, 64, 58, 52]
 const SUPPORTED_EXT = [".webp", ".jpg", ".jpeg", ".png", ".tiff", ".avif"]
 
 // ── Helpers ──────────────────────────────────────────────────────────────────

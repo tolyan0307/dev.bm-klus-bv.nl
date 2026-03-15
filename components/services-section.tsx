@@ -74,7 +74,7 @@ function ServiceImage({
     <img
       src={getFallbackSrc(baseName, dir, "serviceCard")}
       srcSet={buildSrcSet(baseName, dir, "serviceCard") || undefined}
-      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px"
+      sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(50vw - 1.5rem), 600px"
       alt={alt}
       width={640}
       height={480}
