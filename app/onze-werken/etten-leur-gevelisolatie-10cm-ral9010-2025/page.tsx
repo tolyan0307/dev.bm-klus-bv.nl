@@ -287,6 +287,7 @@ export default function EttenLeurProjectPage() {
         </div>
       </section>
 
+      <div className="below-fold">
       {/* ── B · OVERZICHT WERKZAAMHEDEN ──────────────────────────────────── */}
       <section className="section-spacing border-b border-border" aria-labelledby="werkzaamheden-heading">
         <div className="container-default">
@@ -501,6 +502,7 @@ export default function EttenLeurProjectPage() {
           </div>
         </div>
       </aside>
+      </div>{/* end below-fold */}
 
     </div>
     </>

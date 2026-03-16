@@ -368,6 +368,7 @@ export default function KostenGevelisolatiePage() {
 
       <TrustStrip />
 
+      <div className="below-fold">
       <div className="bg-background">
         <div className="mx-auto max-w-7xl px-4 pb-20 pt-14 sm:px-6 lg:px-8">
 
@@ -590,6 +591,8 @@ export default function KostenGevelisolatiePage() {
         </div>{/* end container */}
 
       </div>
+
+      </div>{/* end below-fold */}
 
       <StickyCTABar />
       <QuoteModal dienst="gevelisolatie" />

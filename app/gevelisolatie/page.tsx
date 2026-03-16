@@ -127,6 +127,7 @@ export default function GevelisolatiePage() {
       <TrustStrip />
 
       {/* ── Article content ── */}
+      <div className="below-fold">
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
 
@@ -194,6 +195,7 @@ export default function GevelisolatiePage() {
           <MeerInformatieSection />
         </div>
       </article>
+      </div>
 
       {/* ── Sticky TOC (desktop xl) ── */}
       <StickyToc items={toc} />

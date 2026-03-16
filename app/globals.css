@@ -199,6 +199,11 @@
   }
 }
 
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
 .no-scrollbar {
   scrollbar-width: none;          /* Firefox */
   -ms-overflow-style: none;       /* IE / Edge */

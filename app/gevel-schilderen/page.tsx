@@ -299,6 +299,7 @@ export default function GevelSchilderenPage() {
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
+      <div className="below-fold">
       <article className="overflow-clip bg-background pb-16 sm:pb-20 lg:pb-24">
 
         {/* ── TOC ── */}
@@ -1294,6 +1295,7 @@ export default function GevelSchilderenPage() {
           </div>
         </div>
       </article>
+      </div>
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

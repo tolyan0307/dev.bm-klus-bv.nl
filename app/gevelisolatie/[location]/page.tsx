@@ -305,6 +305,7 @@ export default async function GevelisolatieLocationPage({
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
+      <div className="below-fold">
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
           {/* ── Local context ── */}
@@ -688,6 +689,7 @@ export default async function GevelisolatieLocationPage({
           </div>
         </div>
       </article>
+      </div>
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

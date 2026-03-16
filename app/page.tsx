@@ -45,13 +45,27 @@ export default function Home() {
       <div className="min-h-screen bg-background">
         <HeroSection />
         <TrustStrip />
-        <EticsSection />
-        <ServicesSection />
-        <ProcessSection />
-        <PortfolioSection />
-        <ReviewsSection />
-        <WorkAreaSection />
-        <FaqSection />
+        <div className="below-fold">
+          <EticsSection />
+        </div>
+        <div className="below-fold">
+          <ServicesSection />
+        </div>
+        <div className="below-fold">
+          <ProcessSection />
+        </div>
+        <div className="below-fold">
+          <PortfolioSection />
+        </div>
+        <div className="below-fold">
+          <ReviewsSection />
+        </div>
+        <div className="below-fold">
+          <WorkAreaSection />
+        </div>
+        <div className="below-fold">
+          <FaqSection />
+        </div>
         <StickyCTABar />
         <QuoteModal dienst="geveloplossingen" />
       </div>

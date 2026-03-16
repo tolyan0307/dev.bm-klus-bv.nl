@@ -280,6 +280,7 @@ export default function OverOnsPage() {
       {/* ── Trust Strip ── */}
       <TrustStrip />
 
+      <div className="below-fold">
       {/* ══ ARTICLE ══ */}
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
         {/* ── Over BM klus BV ── */}
@@ -763,6 +764,8 @@ export default function OverOnsPage() {
           </nav>
         </div>
       </article>
+
+      </div>{/* end below-fold */}
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

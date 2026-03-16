@@ -276,6 +276,7 @@ export default function DienstenPage() {
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
+      <div className="below-fold">
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
         {/* ── Services Rail with Keuzehulp ── */}
         <ServicesRail />
@@ -377,6 +378,7 @@ export default function DienstenPage() {
           </nav>
         </div>
       </article>
+      </div>
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

@@ -239,6 +239,7 @@ export default function RcWaardeDiktePage() {
 
       <TrustStrip />
 
+      <div className="below-fold">
       <div className="bg-background pb-16 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
 
@@ -619,6 +620,8 @@ export default function RcWaardeDiktePage() {
           </div>
         </div>
       </div>
+
+      </div>{/* end below-fold */}
 
       <StickyCTABar />
       <QuoteModal dienst="gevelisolatie" />

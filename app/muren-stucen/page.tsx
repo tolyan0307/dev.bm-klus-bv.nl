@@ -279,6 +279,7 @@ export default function MurenStucenPage() {
       {/* ── Trust Strip ── */}
       <TrustStrip />
 
+      <div className="below-fold">
       {/* ══ ARTICLE ══ */}
       <article className="overflow-clip bg-background pb-16 sm:pb-20 lg:pb-24">
 
@@ -967,6 +968,8 @@ export default function MurenStucenPage() {
           </nav>
         </div>
       </article>
+
+      </div>{/* end below-fold */}
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

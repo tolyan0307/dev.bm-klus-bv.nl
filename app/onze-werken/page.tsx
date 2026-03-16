@@ -228,6 +228,7 @@ export default function OnzeWerkenPage() {
 
       <TrustStrip />
 
+      <div className="below-fold">
       <div className="bg-background">
         <div className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8">
 
@@ -453,6 +454,7 @@ export default function OnzeWerkenPage() {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       <StickyCTABar />
