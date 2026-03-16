@@ -143,7 +143,6 @@ export default function ContactPage() {
 
       <TrustStrip />
 
-      <div className="below-fold">
       {/* ── Main Content ───────────────────────────────────────────────────── */}
       <section id="formulier" className="section-spacing">
         <div className="container-default">
@@ -287,6 +286,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <div className="below-fold">
       {/* ── Snelle afhandeling ─────────────────────────────────────────────── */}
       <section className="border-t border-border bg-secondary/30 section-spacing">
         <div className="container-default">
@@ -343,7 +343,9 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+      </div>
 
+      <div className="below-fold">
       {/* ── Meer weten ────────────────────────────────────────────────────── */}
       <section className="border-t border-border bg-card py-8">
         <div className="container-default">
@@ -375,7 +377,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      </div>{/* end below-fold */}
+      </div>
 
       <StickyCTABar />
       <QuoteModal dienst="geveloplossingen" />

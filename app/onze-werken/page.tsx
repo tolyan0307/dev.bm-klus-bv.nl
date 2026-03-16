@@ -228,7 +228,6 @@ export default function OnzeWerkenPage() {
 
       <TrustStrip />
 
-      <div className="below-fold">
       <div className="bg-background">
         <div className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8">
 
@@ -292,6 +291,7 @@ export default function OnzeWerkenPage() {
             </section>
 
             {/* Projecten */}
+            <div className="below-fold">
             <section id="projecten" className="scroll-mt-24 border-b border-border py-16 sm:py-20 lg:py-24">
               <SectionLabel>Projecten</SectionLabel>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
@@ -302,8 +302,10 @@ export default function OnzeWerkenPage() {
               </p>
               <ProjectsSection projects={projects} />
             </section>
+            </div>
 
             {/* Populaire diensten */}
+            <div className="below-fold">
             <section className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
               <SectionLabel>Populaire diensten</SectionLabel>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
@@ -337,8 +339,10 @@ export default function OnzeWerkenPage() {
                 ))}
               </div>
             </section>
+            </div>
 
             {/* FAQ */}
+            <div className="below-fold">
             <section id="faq" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
               <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
                 <div className="lg:col-span-5">
@@ -387,8 +391,10 @@ export default function OnzeWerkenPage() {
                 </div>
               </div>
             </section>
+            </div>
 
             {/* Werkgebied */}
+            <div className="below-fold">
             <section id="werkgebied" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
               <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-14">
                 <div className="lg:w-72 lg:shrink-0">
@@ -427,11 +433,13 @@ export default function OnzeWerkenPage() {
                 </div>
               </div>
             </section>
+            </div>
 
           </div>
         </div>
 
         {/* Bottom micro-links */}
+        <div className="below-fold">
         <div className="border-t border-border py-6">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
@@ -454,7 +462,7 @@ export default function OnzeWerkenPage() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
       </div>
 
       <StickyCTABar />

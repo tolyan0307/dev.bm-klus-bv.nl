@@ -280,7 +280,6 @@ export default function OverOnsPage() {
       {/* ── Trust Strip ── */}
       <TrustStrip />
 
-      <div className="below-fold">
       {/* ══ ARTICLE ══ */}
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
         {/* ── Over BM klus BV ── */}
@@ -348,6 +347,7 @@ export default function OverOnsPage() {
           </div>
         </section>
 
+        <div className="below-fold">
         {/* ── Onze kracht (values) ── */}
         <section className="py-16 sm:py-20 lg:py-24" id="waarom">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -395,7 +395,9 @@ export default function OverOnsPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── Kernactiviteiten ── */}
         <section className="py-16 sm:py-20 lg:py-24" id="diensten">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -574,7 +576,9 @@ export default function OverOnsPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── Onze aanpak (werkwijze) ── */}
         <section className="py-16 sm:py-20 lg:py-24" id="aanpak">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -672,10 +676,14 @@ export default function OverOnsPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── Reviews ── */}
         <ReviewsSection />
+        </div>
 
+        <div className="below-fold">
         {/* ── FAQ ── */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <section className="scroll-mt-24 py-16 sm:py-20" id="faq">
@@ -763,9 +771,8 @@ export default function OverOnsPage() {
             </div>
           </nav>
         </div>
+        </div>
       </article>
-
-      </div>{/* end below-fold */}
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

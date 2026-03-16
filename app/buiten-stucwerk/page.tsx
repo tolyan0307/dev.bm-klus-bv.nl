@@ -253,7 +253,6 @@ export default function BuitenStucwerkPage() {
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
-      <div className="below-fold">
       <article className="overflow-clip bg-background pb-16 sm:pb-20 lg:pb-24">
 
         {/* ── TOC ── */}
@@ -274,6 +273,7 @@ export default function BuitenStucwerkPage() {
           </nav>
         </div>
 
+        <div className="below-fold">
         {/* ── WAT IS ── */}
         <section id={watIs.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -307,7 +307,9 @@ export default function BuitenStucwerkPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── VOORDELEN ── */}
         <section id={voordelen.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -348,10 +350,14 @@ export default function BuitenStucwerkPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── WAAROM BM KLUS ── */}
         <WaaromBmKlusSection subtitle="Strakke detaillering, de juiste systemen per ondergrond en eerlijke prijzen — voor buitenmuur stucen in regio Rotterdam en omgeving." />
+        </div>
 
+        <div className="below-fold">
         {/* ── KOSTEN ── */}
         <section id={kosten.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -410,7 +416,9 @@ export default function BuitenStucwerkPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── WERKWIJZE ── */}
         <section id={werkwijze.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -421,7 +429,9 @@ export default function BuitenStucwerkPage() {
             <WerkwijzeStepper />
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── MATERIALEN ── */}
         <section id={materialen.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -471,7 +481,9 @@ export default function BuitenStucwerkPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── KEUZEHULP ── */}
         <section id="keuzehulp" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -485,7 +497,9 @@ export default function BuitenStucwerkPage() {
             <AfwerkingKeuzehulp />
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── ONDERGRONDEN ── */}
         <section id={ondergronden.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -509,7 +523,9 @@ export default function BuitenStucwerkPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── NADELEN ── */}
         <section id={nadelen.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -521,7 +537,9 @@ export default function BuitenStucwerkPage() {
             <NadelenSwitcher />
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── REPARATIE ── */}
         <section id={reparatie.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -559,7 +577,9 @@ export default function BuitenStucwerkPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── ISOLATIE (cross-sell) ── */}
         <section id={isolatie.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -592,10 +612,14 @@ export default function BuitenStucwerkPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── REVIEWS ── */}
         <ReviewsSection />
+        </div>
 
+        <div className="below-fold">
         {/* ── FAQ ── */}
         <div className="relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40">
           <section id="faq" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
@@ -626,7 +650,9 @@ export default function BuitenStucwerkPage() {
             </div>
           </section>
         </div>
+        </div>
 
+        <div className="below-fold">
         {/* ── INTERNAL LINKS ── */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4">
           <nav aria-label="Gerelateerde pagina's">
@@ -641,8 +667,8 @@ export default function BuitenStucwerkPage() {
             </div>
           </nav>
         </div>
+        </div>
       </article>
-      </div>
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

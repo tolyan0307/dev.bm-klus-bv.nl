@@ -301,7 +301,6 @@ export default function SierpleisterPage() {
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
-      <div className="below-fold">
       <article className="overflow-clip bg-background pb-16 sm:pb-20 lg:pb-24">
 
         {/* ── TOC ── */}
@@ -332,6 +331,7 @@ export default function SierpleisterPage() {
           </nav>
         </div>
 
+        <div className="below-fold">
         {/* ── WAT IS GEVEL SIERPLEISTER ── */}
         <section
           id={watIs.id}
@@ -455,10 +455,14 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── GEVEL AFWERKING GIDS ── */}
         <GevelAfwerkingGids />
+        </div>
 
+        <div className="below-fold">
         {/* ── VOORDELEN ── */}
         <section
           id={voordelen.id}
@@ -569,7 +573,9 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── KOSTEN ── */}
         <section
           id={kosten.id}
@@ -700,10 +706,14 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── WAAROM BM KLUS ── */}
         <WaaromBmKlusSection subtitle="Correcte voorbereiding, strakke detaillering en de juiste korrelkeuze — voor sierpleister-gevelafwerking in regio Rotterdam en omgeving." />
+        </div>
 
+        <div className="below-fold">
         {/* ── WERKWIJZE ── */}
         <section
           id={werkwijze.id}
@@ -740,7 +750,9 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── DETAILS: PLINT, HOEKEN, DAGKANTEN ── */}
         <section
           id={details.id}
@@ -789,7 +801,9 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── ONDERHOUD & REINIGEN ── */}
         <section
           id={onderhoud.id}
@@ -883,7 +897,9 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── REPARATIE & HERSTEL ── */}
         <section
           id={reparatie.id}
@@ -985,7 +1001,9 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── ETICS KOPPELING ── */}
         <section
           id={etics.id}
@@ -1098,10 +1116,14 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── REVIEWS ── */}
         <ReviewsSection />
+        </div>
 
+        <div className="below-fold">
         {/* ── FAQ ── */}
         <div className="relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-background">
           <section id={faq.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
@@ -1142,7 +1164,9 @@ export default function SierpleisterPage() {
             </div>
           </section>
         </div>
+        </div>
 
+        <div className="below-fold">
         {/* ── INTERNAL LINKS ── */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4">
           <nav aria-label="Gerelateerde pagina's">
@@ -1168,8 +1192,8 @@ export default function SierpleisterPage() {
             </div>
           </nav>
         </div>
+        </div>
       </article>
-      </div>
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

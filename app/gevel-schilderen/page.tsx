@@ -299,7 +299,6 @@ export default function GevelSchilderenPage() {
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
-      <div className="below-fold">
       <article className="overflow-clip bg-background pb-16 sm:pb-20 lg:pb-24">
 
         {/* ── TOC ── */}
@@ -331,6 +330,7 @@ export default function GevelSchilderenPage() {
         </div>
 
         {/* ── VOORDELEN (core) ── */}
+        <div className="below-fold">
         <section id={core.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTagline>Voordelen</SectionTagline>
@@ -393,8 +393,10 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── KOSTEN ── */}
+        <div className="below-fold">
         <section
           id={kosten.id}
           className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40"
@@ -529,8 +531,10 @@ export default function GevelSchilderenPage() {
             </p>
           </div>
         </section>
+        </div>
 
         {/* ── OFFERTE INFO ── */}
+        <div className="below-fold">
         <section
           id="offerte-info"
           className="scroll-mt-24 py-16 sm:py-20 lg:py-24"
@@ -672,8 +676,10 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── VERFSOORTEN ── */}
+        <div className="below-fold">
         <section
           id={verfsoorten.id}
           className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40"
@@ -799,8 +805,10 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── VOORBEREIDING ── */}
+        <div className="below-fold">
         <section
           id={voorbereiding.id}
           className="scroll-mt-24 py-16 sm:py-20 lg:py-24"
@@ -880,8 +888,10 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── TECHNIEK ── */}
+        <div className="below-fold">
         <section
           id={techniek.id}
           className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40"
@@ -998,8 +1008,10 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── ONDERHOUD ── */}
+        <div className="below-fold">
         <section
           id={onderhoud.id}
           className="scroll-mt-24 py-16 sm:py-20 lg:py-24"
@@ -1132,11 +1144,15 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── WAAROM BM KLUS ── */}
+        <div className="below-fold">
         <WaaromBmKlusSection subtitle="Correcte voorbereiding, de juiste verfkeuze per ondergrond en nette uitvoering — voor duurzaam gevel schilderen in regio Rotterdam en omgeving." />
+        </div>
 
         {/* ── WERKGEBIED ── */}
+        <div className="below-fold">
         <section
           id={werkgebied.id}
           className="scroll-mt-24 py-16 sm:py-20 lg:py-24"
@@ -1234,11 +1250,15 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── REVIEWS ── */}
+        <div className="below-fold">
         <ReviewsSection />
+        </div>
 
         {/* ── FAQ ── */}
+        <div className="below-fold">
         <section
           id={faqData.id}
           className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40"
@@ -1274,8 +1294,10 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── INTERNAL LINKS ── */}
+        <div className="below-fold">
         <div className="border-t border-border bg-muted/30 py-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
@@ -1294,8 +1316,8 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </div>
+        </div>
       </article>
-      </div>
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

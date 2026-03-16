@@ -127,7 +127,6 @@ export default function GevelisolatiePage() {
       <TrustStrip />
 
       {/* ── Article content ── */}
-      <div className="below-fold">
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
 
@@ -165,16 +164,21 @@ export default function GevelisolatiePage() {
         </div>
 
         {/* ── WAAROM BM KLUS (own container) ── */}
+        <div className="below-fold">
         <WaaromBmKlusSection subtitle="Lokale vakmensen uit Rotterdam, duidelijke werkwijze en geveloplossingen op basis van echte projecten." />
+        </div>
 
         {/* ── Content Sections — part 1b ── */}
+        <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div>
             <KostenSection />
             <WerkwijzeSection />
           </div>
         </div>
+        </div>
 
+        <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Content Sections — part 2 ── */}
           <div>
@@ -186,16 +190,20 @@ export default function GevelisolatiePage() {
             <VerdiepingSection />
           </div>
         </div>
+        </div>
 
         {/* ── Reviews ── */}
+        <div className="below-fold">
         <ReviewsSection />
+        </div>
 
+        <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FaqSection />
           <MeerInformatieSection />
         </div>
+        </div>
       </article>
-      </div>
 
       {/* ── Sticky TOC (desktop xl) ── */}
       <StickyToc items={toc} />

@@ -305,7 +305,6 @@ export default async function GevelisolatieLocationPage({
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
-      <div className="below-fold">
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
           {/* ── Local context ── */}
@@ -387,6 +386,7 @@ export default async function GevelisolatieLocationPage({
           </section>
 
           {/* ── Voordelen (compact) ── */}
+          <div className="below-fold">
           <section className="scroll-mt-24 py-16 sm:py-20">
             <div className="mb-4 flex items-center gap-3">
               <div className="h-px w-10 bg-primary" />
@@ -421,11 +421,15 @@ export default async function GevelisolatieLocationPage({
               })}
             </div>
           </section>
+          </div>
         </div>
 
         {/* ── Waarom BM klus (own container) ── */}
+        <div className="below-fold">
         <WaaromBmKlusSection subtitle="BM klus BV is gespecialiseerd in buitengevelisolatie (ETICS) en gevelafwerking in de regio Rotterdam en omgeving." />
+        </div>
 
+        <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Kosten calculator ── */}
           <section className="scroll-mt-24 py-16 sm:py-20">
@@ -514,7 +518,9 @@ export default async function GevelisolatieLocationPage({
             )}
           </section>
         </div>
+        </div>
 
+        <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Cluster links ── */}
           <section className="py-16 sm:py-20">
@@ -566,10 +572,14 @@ export default async function GevelisolatieLocationPage({
             </div>
           </section>
         </div>
+        </div>
 
         {/* ── Reviews ── */}
+        <div className="below-fold">
         <ReviewsSection />
+        </div>
 
+        <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── FAQ ── */}
           <section className="scroll-mt-24 py-16 sm:py-20">
@@ -688,8 +698,8 @@ export default async function GevelisolatieLocationPage({
             </nav>
           </div>
         </div>
+        </div>
       </article>
-      </div>
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

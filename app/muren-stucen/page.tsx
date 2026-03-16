@@ -279,7 +279,6 @@ export default function MurenStucenPage() {
       {/* ── Trust Strip ── */}
       <TrustStrip />
 
-      <div className="below-fold">
       {/* ══ ARTICLE ══ */}
       <article className="overflow-clip bg-background pb-16 sm:pb-20 lg:pb-24">
 
@@ -450,6 +449,7 @@ export default function MurenStucenPage() {
         </section>
 
         {/* ── AFWERKING ── */}
+        <div className="below-fold">
         <div className="bg-secondary/40">
           <section
             id={afwerking.id}
@@ -502,7 +502,9 @@ export default function MurenStucenPage() {
             </div>
           </section>
         </div>
+        </div>
 
+        <div className="below-fold">
         {/* ── VOORDELEN ── */}
         <section
           id={voordelen.id}
@@ -575,7 +577,9 @@ export default function MurenStucenPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── KOSTEN ── */}
         <div className="bg-secondary/40">
           <section
@@ -685,10 +689,14 @@ export default function MurenStucenPage() {
             </div>
           </section>
         </div>
+        </div>
 
+        <div className="below-fold">
         {/* ── WAAROM BM KLUS ── */}
         <WaaromBmKlusSection subtitle="Strakke binnenwanden, correcte voorbereiding per ondergrond en keuze in afwerkingsniveau — voor binnenstucwerk in regio Rotterdam en omgeving." />
+        </div>
 
+        <div className="below-fold">
         {/* ── WERKWIJZE ── */}
         <div className="bg-secondary/40">
           <section
@@ -735,7 +743,9 @@ export default function MurenStucenPage() {
             </div>
           </section>
         </div>
+        </div>
 
+        <div className="below-fold">
         {/* ── VOORBEREIDING & ONDERGROND ── */}
         <section
           id={voorbereiding.id}
@@ -811,7 +821,9 @@ export default function MurenStucenPage() {
             </div>
           </div>
         </section>
+        </div>
 
+        <div className="below-fold">
         {/* ── DROOGTIJD ── */}
         <div className="bg-secondary/40">
           <section
@@ -897,10 +909,14 @@ export default function MurenStucenPage() {
             </div>
           </section>
         </div>
+        </div>
 
+        <div className="below-fold">
         {/* ── REVIEWS ── */}
         <ReviewsSection />
+        </div>
 
+        <div className="below-fold">
         {/* ── FAQ ── */}
         <div className="bg-secondary/40">
           <section id={faq.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
@@ -941,7 +957,9 @@ export default function MurenStucenPage() {
             </div>
           </section>
         </div>
+        </div>
 
+        <div className="below-fold">
         {/* ── INTERNAL LINKS ── */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4">
           <nav aria-label="Gerelateerde pagina's">
@@ -967,9 +985,8 @@ export default function MurenStucenPage() {
             </div>
           </nav>
         </div>
+        </div>
       </article>
-
-      </div>{/* end below-fold */}
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />

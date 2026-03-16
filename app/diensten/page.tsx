@@ -276,21 +276,27 @@ export default function DienstenPage() {
       <TrustStrip />
 
       {/* ══ ARTICLE ══ */}
-      <div className="below-fold">
       <article className="bg-background pb-16 sm:pb-20 lg:pb-24">
         {/* ── Services Rail with Keuzehulp ── */}
         <ServicesRail />
 
         {/* ── Process Section ── */}
+        <div className="below-fold">
         <ProcessSection />
+        </div>
 
         {/* ── Waarom BM klus ── */}
+        <div className="below-fold">
         <WaaromBmKlusSection subtitle="BM klus BV verzorgt gevelisolatie, stucwerk, sierpleister en schilderwerk voor woningen en bedrijfspanden in de regio Rotterdam en omgeving." />
+        </div>
 
         {/* ── Reviews ── */}
+        <div className="below-fold">
         <ReviewsSection />
+        </div>
 
         {/* ── FAQ Section ── */}
+        <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <section className="scroll-mt-24 py-16 sm:py-20">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
@@ -377,8 +383,8 @@ export default function DienstenPage() {
             </div>
           </nav>
         </div>
+        </div>
       </article>
-      </div>
 
       {/* ── Sticky CTA bar ── */}
       <StickyCTABar />
