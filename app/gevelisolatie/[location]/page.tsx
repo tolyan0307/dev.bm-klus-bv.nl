@@ -182,7 +182,7 @@ export default async function GevelisolatieLocationPage({
             dir="/images/projects"
             preset="hero"
             alt={`Buitengevelisolatie in ${data.city}`}
-            sizes="100vw"
+            sizes="(max-width: 1920px) 100vw, 1920px"
             className="absolute inset-0 h-full w-full object-cover"
             priority
           />

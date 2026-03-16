@@ -35,7 +35,7 @@ data/image-manifest.json ← metadata for all processed images (committed)
 
 | Preset        | Target widths (px)     | Use case                                     |
 | ------------- | ---------------------- | -------------------------------------------- |
-| `hero`        | 768, 1280, 1600, 1920  | Full-width hero backgrounds                  |
+| `hero`        | 480, 768, 1280, 1600, 1920 | Full-width hero backgrounds                  |
 | `card`        | 320, 480, 640, 828     | Portfolio / project cards                     |
 | `serviceCard` | 320, 480, 640, 828     | Service section cards                         |
 | `gallery`     | 480, 800, 1200, 1600   | Project gallery main images, large content    |
@@ -47,6 +47,7 @@ data/image-manifest.json ← metadata for all processed images (committed)
 
 | Width | Max    |
 | ----- | ------ |
+| 480   | 50 KB  |
 | 768   | 90 KB  |
 | 1280  | 170 KB |
 | 1600  | 250 KB |
@@ -180,7 +181,7 @@ import ResponsiveImage from "@/components/responsive-image"
   dir="/images/projects"
   preset="hero"
   alt="Gevelisolatie — BM klus BV"
-  sizes="100vw"
+  sizes="(max-width: 1920px) 100vw, 1920px"
   priority          // sets fetchpriority="high", disables lazy loading
   className="…"
 />

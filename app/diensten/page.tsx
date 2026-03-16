@@ -136,7 +136,7 @@ export default function DienstenPage() {
             preset="hero"
             alt="Gevelisolatie en stucwerk op woning in Klaaswaal — BM klus BV"
             className="absolute inset-0 h-full w-full object-cover"
-            sizes="100vw"
+            sizes="(max-width: 1920px) 100vw, 1920px"
             priority
           />
           <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/40" />

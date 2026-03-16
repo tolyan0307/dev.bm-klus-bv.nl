@@ -3,7 +3,7 @@ import manifest from "@/data/image-manifest.json"
 export type ImagePreset = "hero" | "card" | "serviceCard" | "gallery" | "thumbnail"
 
 const PRESET_WIDTHS: Record<ImagePreset, number[]> = {
-  hero: [768, 1280, 1600, 1920],
+  hero: [480, 768, 1280, 1600, 1920],
   card: [320, 480, 640, 828],
   serviceCard: [320, 480, 640, 828],
   gallery: [480, 800, 1200, 1600],

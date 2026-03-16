@@ -114,7 +114,7 @@ Without the subfolder in `baseName`, gallery images won't display.
   dir="/images/projects/{prefix}"
   preset="hero"
   alt="…"
-  sizes="100vw"
+  sizes="(max-width: 1920px) 100vw, 1920px"
   priority
 />
 

@@ -32,8 +32,8 @@ const MANIFEST_PATH = join(ROOT, "data", "image-manifest.json")
 
 const PRESETS = {
   hero: {
-    widths: [768, 1280, 1600, 1920],
-    maxBytes: { 768: 90 * 1024, 1280: 170 * 1024, 1600: 250 * 1024, 1920: 340 * 1024 },
+    widths: [480, 768, 1280, 1600, 1920],
+    maxBytes: { 480: 50 * 1024, 768: 90 * 1024, 1280: 170 * 1024, 1600: 250 * 1024, 1920: 340 * 1024 },
   },
   card: {
     widths: [320, 480, 640, 828],

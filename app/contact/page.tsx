@@ -38,7 +38,7 @@ export default function ContactPage() {
             dir="/images/projects"
             preset="hero"
             alt="Gevelisolatie project — moderne woning aan de Rottekade"
-            sizes="100vw"
+            sizes="(max-width: 1920px) 100vw, 1920px"
             className="absolute inset-0 h-full w-full object-cover"
             priority
           />

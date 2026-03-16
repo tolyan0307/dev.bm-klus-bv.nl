@@ -13,7 +13,7 @@ export default function ProcessSection() {
           alt=""
           aria-hidden="true"
           className="h-full w-full object-cover opacity-[0.06]"
-          sizes="100vw"
+          sizes="(max-width: 1920px) 100vw, 1920px"
         />
         <div className="absolute inset-0 bg-linear-to-b from-background/40 via-transparent to-background/40" />
         <div

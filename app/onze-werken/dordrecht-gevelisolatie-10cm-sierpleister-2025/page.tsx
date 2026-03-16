@@ -1,4 +1,4 @@
-﻿import Link from "next/link"
+import Link from "next/link"
 import { Fragment } from "react"
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
 import { jsonLdScript, projectPageSchema } from "@/lib/seo/schema"
@@ -160,7 +160,7 @@ export default function DordrechtProjectPage() {
     alt=""
     aria-hidden="true"
     className="absolute inset-0 h-full w-full object-cover object-center"
-    sizes="100vw"
+    sizes="(max-width: 1920px) 100vw, 1920px"
     priority
     draggable={false}
   />

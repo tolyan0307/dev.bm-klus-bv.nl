@@ -18,7 +18,7 @@ export default function HeroSection() {
           alt="Gevelisolatie afgewerkt met sierpleister — BM klus BV regio Rotterdam"
           className="absolute inset-0 h-full w-full object-cover object-center"
           priority
-          sizes="100vw"
+          sizes="(max-width: 1920px) 100vw, 1920px"
         />
 
         {/* Base darkening layer */}

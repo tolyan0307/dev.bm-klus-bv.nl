@@ -185,7 +185,7 @@ export default function OverOnsPage() {
             dir="/images/projects"
             preset="hero"
             alt="Vakmanschap in gevelisolatie — afgewerkt project in Klaaswaal"
-            sizes="100vw"
+            sizes="(max-width: 1920px) 100vw, 1920px"
             className="absolute inset-0 h-full w-full object-cover"
             priority
           />

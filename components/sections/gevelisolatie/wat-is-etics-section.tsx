@@ -87,7 +87,7 @@ export default function WatIsEticsSection() {
             preset="serviceCard"
             alt="Montage van buitengevelisolatie op een woning in regio Rotterdam"
             className="absolute inset-0 h-full w-full object-cover"
-            sizes="100vw"
+            sizes="(max-width: 828px) 100vw, 828px"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/25 to-[#EA6C20]/20" />
 

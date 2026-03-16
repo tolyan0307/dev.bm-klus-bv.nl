@@ -251,7 +251,7 @@ pnpm images:generate card "SRCDIR/{prefix}-na-01.jpg"
 
 | Preset | Widths (px) | Назначение |
 |--------|-------------|------------|
-| `hero` | 768, 1280, 1600, 1920 | Фоновое изображение hero |
+| `hero` | 480, 768, 1280, 1600, 1920 | Фоновое изображение hero |
 | `card` | 320, 480, 640, 828 | Карточка в `/onze-werken/` |
 | `gallery` | 480, 800, 1200, 1600 | Галерея voor/na |
 | `thumbnail` | 160, 240, 320 | Превью в полосе миниатюр |
@@ -442,7 +442,7 @@ export const metadata = buildPageMetadata(
   alt=""
   aria-hidden="true"
   className="absolute inset-0 h-full w-full object-cover object-center"
-  sizes="100vw"
+  sizes="(max-width: 1920px) 100vw, 1920px"
   priority
   draggable={false}
 />
