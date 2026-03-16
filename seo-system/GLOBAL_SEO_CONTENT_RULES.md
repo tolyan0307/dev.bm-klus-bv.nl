@@ -167,7 +167,7 @@ Required sections (adapt per brief):
 4. Werkwijze (process steps)
 5. Options / materials / finishes (if relevant)
 6. Pricing factors (no fabricated pricing — use ranges with context)
-7. Why BM Klus BV (proof-oriented, no fake claims)
+7. Why BM klus BV (proof-oriented, no fake claims)
 8. FAQ (relevant, not generic)
 9. CTA (offerte / contact / WhatsApp)
 10. Related pages links

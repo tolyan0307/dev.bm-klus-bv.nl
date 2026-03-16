@@ -1,11 +1,11 @@
 import dynamic from "next/dynamic"
 import { buildPageMetadata } from "@/lib/seo/meta"
-import { SITE } from "@/lib/seo/routes"
 import {
   jsonLdScript,
   localBusinessSchema,
   websiteSchema,
 } from "@/lib/seo/schema"
+import { buildSrcSet } from "@/lib/responsive-image"
 import HeroSection from "@/components/hero-section"
 import TrustStrip from "@/components/trust-strip"
 import EticsSection from "@/components/etics-section"
@@ -24,8 +24,6 @@ const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 
 export const metadata = buildPageMetadata("/")
 
-const base = SITE.canonicalBase
-
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -39,54 +37,24 @@ const faqSchema = {
   })),
 }
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${base}/#organization`,
-  name: "BM klus BV",
-  url: base,
-  logo: {
-    "@type": "ImageObject",
-    url: `${base}/images/logo-bm-klus.webp`,
-    width: 180,
-    height: 60,
-  },
-  description:
-    "Specialist in buitengevelisolatie (ETICS) en gevelafwerking in regio Rotterdam en Zuid-Holland.",
-  telephone: "+31612079808",
-  email: "info@bm-klus-bv.nl",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Bonaventurastraat 58B",
-    postalCode: "3081 HE",
-    addressLocality: "Rotterdam",
-    addressRegion: "Zuid-Holland",
-    addressCountry: "NL",
-  },
-  areaServed: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: 51.9225,
-      longitude: 4.4792,
-    },
-    geoRadius: "100000",
-  },
-  sameAs: [
-    "https://www.instagram.com/bm_klus_bv",
-    "https://www.facebook.com/profile.php?id=61556805434705",
-    "https://www.linkedin.com/in/boris-mitov-a436902b9",
-    "https://nl.pinterest.com/bmklusbv/",
-    "https://www.youtube.com/@bm-klus-bv",
-  ],
-}
+const heroSrcSet = buildSrcSet(
+  "bruinisse-gevelisolatie-6cm-na-03",
+  "/images/projects",
+  "hero",
+)
 
 export default function Home() {
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        type="image/webp"
+        imageSrcSet={heroSrcSet}
+        imageSizes="(max-width: 1920px) 100vw, 1920px"
+      />
       {jsonLdScript(websiteSchema())}
       {jsonLdScript(localBusinessSchema())}
-      {jsonLdScript(organizationSchema)}
       {jsonLdScript(faqSchema)}
       <div className="min-h-screen bg-background">
         <HeroSection />

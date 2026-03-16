@@ -20,7 +20,13 @@ export const metadata: Metadata = {
   },
   description:
     "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis opname op locatie en offerte.",
-  robots: { index: _isProd, follow: _isProd },
+  robots: {
+    index: _isProd,
+    follow: _isProd,
+    "max-snippet": -1,
+    "max-image-preview": "large" as const,
+    "max-video-preview": -1,
+  },
   icons: {
     icon: [
       {

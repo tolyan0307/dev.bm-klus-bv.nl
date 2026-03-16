@@ -100,7 +100,7 @@ Write section by section in this order (skip sections marked irrelevant in the b
 3) Werkwijze (process steps)
 4) Options / materials / finishes (if relevant)
 5) Pricing factors (no fabricated pricing — use ranges with context)
-6) Why BM Klus BV (proof-based only: projects, reviews, certifications)
+6) Why BM klus BV (proof-based only: projects, reviews, certifications)
 7) FAQ (Dutch, relevant to page intent)
 8) CTA (offerte / contact / WhatsApp)
 

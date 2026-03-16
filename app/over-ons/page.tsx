@@ -140,42 +140,11 @@ export default function OverOnsPage() {
     })),
   }
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "BM klus BV",
-    url: base,
-    logo: `${base}/images/logo-bm-klus.svg`,
-    description:
-      "Specialist in buitengevelisolatie (ETICS) en gevelafwerking in regio Rotterdam en Zuid-Holland.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Bonaventurastraat 58B",
-      postalCode: "3081 HE",
-      addressLocality: "Rotterdam",
-      addressRegion: "Zuid-Holland",
-      addressCountry: "NL",
-    },
-    telephone: "+31612079808",
-    email: "info@bm-klus-bv.nl",
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: { "@type": "GeoCoordinates", latitude: 51.9225, longitude: 4.4792 },
-      geoRadius: "100000",
-    },
-    sameAs: [
-      "https://www.instagram.com/bm_klus_bv",
-      "https://www.facebook.com/profile.php?id=61556805434705",
-      "https://www.linkedin.com/in/boris-mitov-a436902b9",
-    ],
-  }
-
   return (
     <>
       {jsonLdScript(breadcrumbsData)}
       {jsonLdScript(business)}
       {jsonLdScript(faqSchema)}
-      {jsonLdScript(organizationSchema)}
 
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">

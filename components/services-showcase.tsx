@@ -86,7 +86,7 @@ export default function ServicesShowcase({ services }: { services: ServiceItem[]
                           : "text-muted-foreground/70 group-hover:text-primary/70"
                       }`}
                     >
-                      Meer info <ArrowRight size={11} />
+                      Meer over {service.title.toLowerCase()} <ArrowRight size={11} />
                     </Link>
                   </div>
 
@@ -176,7 +176,7 @@ export default function ServicesShowcase({ services }: { services: ServiceItem[]
                 {service.description}
               </p>
               <div className="mt-4 flex items-center text-sm font-medium text-primary">
-                Meer info
+                Meer over {service.title.toLowerCase()}
                 <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </div>
             </div>

@@ -94,7 +94,7 @@ export default function FaqSection() {
                                     href="/gevelisolatie/"
                                     className="font-medium text-primary hover:underline"
                                   >
-                                    Lees meer
+                                    Meer over gevelisolatie
                                   </Link>
                                   .
                                 </>
