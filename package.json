@@ -60,6 +60,12 @@
     "vaul": "^1.1.2",
     "zod": "^3.24.1"
   },
+  "browserslist": [
+    "chrome 93",
+    "edge 93",
+    "firefox 90",
+    "safari 15.4"
+  ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
     "@types/google.maps": "^3.58.1",

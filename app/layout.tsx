@@ -49,9 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" className={_inter.variable}>
-      <head>
-        <link rel="preconnect" href="https://cdn.cookie-script.com" />
-      </head>
+      <head />
       <body className="font-sans antialiased bg-background text-foreground">
         <a
           href="#main-content"

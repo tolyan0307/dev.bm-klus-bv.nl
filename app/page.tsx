@@ -5,7 +5,6 @@ import {
   localBusinessSchema,
   websiteSchema,
 } from "@/lib/seo/schema"
-import { buildSrcSet } from "@/lib/responsive-image"
 import HeroSection from "@/components/hero-section"
 import TrustStrip from "@/components/trust-strip"
 import EticsSection from "@/components/etics-section"
@@ -37,22 +36,9 @@ const faqSchema = {
   })),
 }
 
-const heroSrcSet = buildSrcSet(
-  "bruinisse-gevelisolatie-6cm-na-03",
-  "/images/projects",
-  "hero",
-)
-
 export default function Home() {
   return (
     <>
-      <link
-        rel="preload"
-        as="image"
-        type="image/webp"
-        imageSrcSet={heroSrcSet}
-        imageSizes="(max-width: 1920px) 100vw, 1920px"
-      />
       {jsonLdScript(websiteSchema())}
       {jsonLdScript(localBusinessSchema())}
       {jsonLdScript(faqSchema)}

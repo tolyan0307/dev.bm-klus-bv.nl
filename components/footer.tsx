@@ -123,6 +123,7 @@ export default function Footer() {
                   alt="BM klus BV"
                   width={100}
                   height={24}
+                  loading="lazy"
                   className="h-6 w-auto brightness-0 invert"
                 />
               </div>
