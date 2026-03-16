@@ -450,7 +450,11 @@ export default async function GevelisolatieLocationPage({
             </p>
             <KostenCalculator />
           </section>
+        </div>
+        </div>
 
+        <div className="below-fold">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Lokale informatie ── */}
           <section className="scroll-mt-24 py-16 sm:py-20">
             <div className="mb-4 flex items-center gap-3">
@@ -582,7 +586,7 @@ export default async function GevelisolatieLocationPage({
         <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── FAQ ── */}
-          <section className="scroll-mt-24 py-16 sm:py-20">
+          <section className="scroll-mt-24 py-16 sm:py-20 mb-8">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
               <div className="lg:col-span-5">
                 <div className="lg:sticky lg:top-32">
@@ -645,7 +649,11 @@ export default async function GevelisolatieLocationPage({
               </div>
             </div>
           </section>
+        </div>
+        </div>
 
+        <div className="below-fold">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Nearby locations ── */}
           {data.nearbyLocations.length > 0 && (
           <section className="mb-4">

@@ -156,52 +156,84 @@ export default function GevelisolatiePage() {
             </div>
           </nav>
 
-          {/* ── Content Sections — part 1a ── */}
-          <div>
-            <WatIsEticsSection />
+          {/* ── Content Sections ── */}
+          <WatIsEticsSection />
+        </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <VoordelenSection />
           </div>
         </div>
 
-        {/* ── WAAROM BM KLUS (own container) ── */}
+        {/* ── WAAROM BM KLUS ── */}
         <div className="below-fold">
-        <WaaromBmKlusSection subtitle="Lokale vakmensen uit Rotterdam, duidelijke werkwijze en geveloplossingen op basis van echte projecten." />
+          <WaaromBmKlusSection subtitle="Lokale vakmensen uit Rotterdam, duidelijke werkwijze en geveloplossingen op basis van echte projecten." />
         </div>
 
-        {/* ── Content Sections — part 1b ── */}
         <div className="below-fold">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <KostenSection />
+          </div>
+        </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <WerkwijzeSection />
           </div>
         </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <AfwerkingenSection />
+          </div>
         </div>
 
         <div className="below-fold">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* ── Content Sections — part 2 ── */}
-          <div>
-            <AfwerkingenSection />
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <MaterialenSection />
-            <RcWaardeDikteSection />
-            <DetailsKoudebruggenSection />
-            <SubsidieVergunningSection />
-            <VerdiepingSection />
           </div>
         </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <RcWaardeDikteSection />
+          </div>
+        </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <DetailsKoudebruggenSection />
+          </div>
+        </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SubsidieVergunningSection />
+          </div>
+        </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <VerdiepingSection />
+          </div>
         </div>
 
         {/* ── Reviews ── */}
         <div className="below-fold">
-        <ReviewsSection />
+          <ReviewsSection />
         </div>
 
         <div className="below-fold">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <FaqSection />
-          <MeerInformatieSection />
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <FaqSection />
+          </div>
         </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <MeerInformatieSection />
+          </div>
         </div>
       </article>
 

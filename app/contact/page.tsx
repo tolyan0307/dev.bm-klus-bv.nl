@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import ResponsiveImage from "@/components/responsive-image";
 import ContactFormCard from "@/components/contact/ContactFormCard";
 import ContactOpeningHours from "@/components/contact/ContactOpeningHours";
+import LazyGoogleMap from "@/components/contact/LazyGoogleMap";
 
 const QuoteModal = dynamic(() => import("@/components/quote-modal"));
 const TrustStrip = dynamic(() => import("@/components/trust-strip"));
@@ -16,7 +17,6 @@ import {
   MapPin,
   CheckCircle2,
   ChevronRight,
-  ExternalLink,
   ArrowRight,
   Home,
   PhoneCall,
@@ -243,29 +243,7 @@ export default function ContactPage() {
                 </a>
 
                 {/* Map */}
-                <div className="relative h-32 overflow-hidden border-t border-border">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.7!2d4.4663!3d51.9008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBonaventurastraat+58B%2C+3081+HE+Rotterdam!5e0!3m2!1snl!2snl!4v1"
-                    className="absolute inset-0 w-full h-full border-0 grayscale"
-                    loading="lazy"
-                    title="BM klus BV locatie"
-                    aria-label="Kaart met locatie BM klus BV"
-                  />
-                  <div className="absolute inset-0 bg-primary/8 pointer-events-none" />
-                  <div className="absolute bottom-2.5 left-3 flex items-center gap-1.5 rounded-lg bg-card/95 border border-border px-2.5 py-1.5 backdrop-blur-sm shadow-sm">
-                    <MapPin className="w-3 h-3 text-primary shrink-0" />
-                    <span className="text-[11px] font-semibold text-foreground">Rotterdam</span>
-                  </div>
-                  <a
-                    href="https://www.google.com/maps?q=Bonaventurastraat+58B,+3081+HE+Rotterdam"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute bottom-2.5 right-3 flex items-center gap-1 rounded-lg bg-card/95 border border-border px-2.5 py-1.5 backdrop-blur-sm shadow-sm text-[11px] font-semibold text-primary hover:bg-primary hover:text-white hover:border-primary transition-all"
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                    Maps
-                  </a>
-                </div>
+                <LazyGoogleMap />
 
                 {/* Address */}
                 <div className="bg-card px-5 py-4 border-t border-border">
