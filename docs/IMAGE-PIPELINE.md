@@ -41,14 +41,18 @@ data/image-manifest.json ← metadata for all processed images (committed)
 | `gallery`     | 480, 800, 1200, 1600   | Project gallery main images, large content    |
 | `thumbnail`   | 160, 240, 320          | Gallery thumbnail strips, mini previews       |
 
-### File size limits
+### File size limits (v2 — mobile-first, 2026-03)
+
+Limits are aggressive by design: most images appear behind overlays,
+gradients or at small mobile viewports. Tighter budgets save bandwidth
+on slow 4G and improve PageSpeed scores.
 
 #### hero
 
 | Width | Max    |
 | ----- | ------ |
 | 480   | 50 KB  |
-| 768   | 90 KB  |
+| 768   | 40 KB  |
 | 1280  | 170 KB |
 | 1600  | 250 KB |
 | 1920  | 340 KB |
@@ -57,19 +61,19 @@ data/image-manifest.json ← metadata for all processed images (committed)
 
 | Width | Max    |
 | ----- | ------ |
-| 320   | 30 KB  |
-| 480   | 45 KB  |
-| 640   | 65 KB  |
-| 828   | 90 KB  |
+| 320   | 15 KB  |
+| 480   | 22 KB  |
+| 640   | 30 KB  |
+| 828   | 45 KB  |
 
 #### serviceCard
 
 | Width | Max    |
 | ----- | ------ |
-| 320   | 25 KB  |
-| 480   | 40 KB  |
-| 640   | 60 KB  |
-| 828   | 85 KB  |
+| 320   | 10 KB  |
+| 480   | 14 KB  |
+| 640   | 18 KB  |
+| 828   | 25 KB  |
 
 #### gallery
 
@@ -136,9 +140,9 @@ Numbering uses zero-padded two digits: `01`, `02`, … `21`.
 ## Adaptive compression
 
 1. Start at quality **82**
-2. If file exceeds limit → try **76 → 70 → 64 → 58**
-3. Below 58 is never used
-4. If still over at q58 → reduce width by ~10%, restart quality ladder
+2. If file exceeds limit → try **76 → 70 → 64 → 58 → 52**
+3. Below 52 is never used
+4. If still over at q52 → reduce width by ~10%, restart quality ladder
 5. Up to 3 width-reduction attempts
 6. Goal: fit within limit without destroying visual quality
 
