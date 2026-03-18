@@ -69,10 +69,25 @@ export default function ProjectGalleryCarousel({
     return () => window.removeEventListener("keydown", onKey)
   }, [prev, next])
 
-  // Lock body scroll when lightbox is open
+  // Lock body scroll when lightbox is open (iOS-safe)
   useEffect(() => {
-    document.body.style.overflowY = lightboxOpen ? "hidden" : ""
-    return () => { document.body.style.overflowY = "" }
+    if (!lightboxOpen) return
+    const scrollY = window.scrollY
+    const html = document.documentElement
+    const { body } = document
+    html.style.overflow = "hidden"
+    body.style.position = "fixed"
+    body.style.top = `-${scrollY}px`
+    body.style.left = "0"
+    body.style.right = "0"
+    return () => {
+      html.style.overflow = ""
+      body.style.position = ""
+      body.style.top = ""
+      body.style.left = ""
+      body.style.right = ""
+      window.scrollTo(0, scrollY)
+    }
   }, [lightboxOpen])
 
   const accentColor = variant === "voor" ? "border-amber-500" : "border-primary"
@@ -98,7 +113,7 @@ export default function ProjectGalleryCarousel({
 
       {/* Main image */}
       <div
-        className={`relative overflow-hidden rounded-xl border-2 bg-muted aspect-[4/3] cursor-zoom-in ${accentColor}`}
+        className={`relative overflow-hidden rounded-xl border-2 bg-muted aspect-4/3 cursor-zoom-in ${accentColor}`}
         onClick={() => setLightboxOpen(true)}
         role="button"
         aria-label="Vergroot afbeelding"
@@ -206,20 +221,18 @@ export default function ProjectGalleryCarousel({
 
           {/* Main lightbox image */}
           <div
-            className="relative max-h-[90vh] w-full max-w-5xl"
+            className="flex max-h-[85vh] w-full max-w-5xl flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-              <img
-                src={images[current].src}
-                srcSet={images[current].srcSet || undefined}
-                sizes="(max-width: 1280px) 100vw, 1280px"
-                alt={images[current].alt}
-                fetchPriority="high"
-                decoding="sync"
-                className="absolute inset-0 h-full w-full object-contain"
-              />
-            </div>
+            <img
+              src={images[current].src}
+              srcSet={images[current].srcSet || undefined}
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              alt={images[current].alt}
+              fetchPriority="high"
+              decoding="sync"
+              className="max-h-[80vh] w-auto max-w-full rounded-xl object-contain"
+            />
             <p className="mt-3 text-center text-sm text-white/70">{images[current].alt}</p>
           </div>
 

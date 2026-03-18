@@ -14,6 +14,9 @@ import {
   Star,
   MapPin,
   MessageCircle,
+  Search,
+  FileText,
+  Hammer,
 } from "lucide-react"
 
 import { buildPageMetadata } from "@/lib/seo/meta"
@@ -31,11 +34,15 @@ import Callout from "@/components/page/Callout"
 import RelatedLinks from "@/components/page/RelatedLinks"
 import type { RelatedLinkItem } from "@/components/page/RelatedLinks"
 import GoogleRatingBadge from "@/components/google-rating-badge"
+import ResponsiveImage from "@/components/responsive-image"
+import { projects } from "@/lib/content/projects"
+import { ProjectCard as ProjectCardComponent } from "@/components/projects/ProjectCard"
 
 const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
 )
 const QuoteModal = dynamic(() => import("@/components/quote-modal"))
+const ReviewsSection = dynamic(() => import("@/components/reviews-section"))
 
 /* ── Metadata ── */
 export const metadata = buildPageMetadata("/gevelisolatie/afwerkingen/")
@@ -54,16 +61,29 @@ const heroBreadcrumbs = [
 
 const toc = [
   { id: "overzicht",    label: "Overzicht afwerkingen" },
+  { id: "projecten",    label: "Onze projecten" },
   { id: "stuc-vs-crepi", label: "Stucwerk vs sierpleister/crepi" },
   { id: "steenstrips",  label: "Steenstrips (baksteenlook)" },
+  { id: "werkwijze",    label: "Werkwijze" },
   { id: "onderhoud",    label: "Onderhoud & levensduur" },
   { id: "prijs",        label: "Afwerking en prijs" },
+  { id: "reviews",      label: "Reviews" },
   { id: "faq",          label: "Veelgestelde vragen" },
 ]
+
+const featuredSlugs = [
+  "halsteren-buitenstucwerk-sierpleister-schilderwerk-2025",
+  "nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025",
+  "dordrecht-gevelisolatie-10cm-sierpleister-2025",
+]
+const featuredProjects = featuredSlugs
+  .map((s) => projects.find((p) => p.slug === s))
+  .filter(Boolean) as typeof projects
 
 interface FinishOption {
   icon: React.ReactNode
   name: string
+  baseName: string
   uitstraling: string
   onderhoud: string
   budget: string
@@ -76,6 +96,7 @@ const finishOptions: FinishOption[] = [
   {
     icon: <Paintbrush className="h-5 w-5" />,
     name: "Glad stucwerk",
+    baseName: "dienst-stucwerk",
     uitstraling: "Strak, modern, egaal",
     onderhoud: "Schilderen elke 8–12 jaar",
     budget: "€ – €€",
@@ -93,6 +114,7 @@ const finishOptions: FinishOption[] = [
   {
     icon: <Layers className="h-5 w-5" />,
     name: "Sierpleister / spachtelputz",
+    baseName: "dienst-sierpleister",
     uitstraling: "Fijne structuur, levendig",
     onderhoud: "Laag – biocide variant mogelijk",
     budget: "€€",
@@ -110,6 +132,7 @@ const finishOptions: FinishOption[] = [
   {
     icon: <Layers className="h-5 w-5" />,
     name: "Crepi / gevelpleister",
+    baseName: "afwerking-crepi",
     uitstraling: "Grove korrel, traditioneel",
     onderhoud: "Laag – biocide variant mogelijk",
     budget: "€",
@@ -127,6 +150,7 @@ const finishOptions: FinishOption[] = [
   {
     icon: <SquareStack className="h-5 w-5" />,
     name: "Steenstrips (baksteenlook)",
+    baseName: "afwerking-steenstrips",
     uitstraling: "Authentiek metselwerk",
     onderhoud: "Laag – voegen nalopen na 15–20 j.",
     budget: "€€€",
@@ -287,9 +311,31 @@ export default function AfwerkingenPage() {
       {jsonLdScript(faqSchema)}
 
       {/* ══ HERO ══ */}
-      <section className="relative overflow-hidden bg-[#1A1A1A]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
+      <section aria-label="Hero" className="relative overflow-hidden bg-[#1A1A1A]">
+        <ResponsiveImage
+          baseName="bruinisse-gevelisolatie-6cm-na-04"
+          dir="/images/projects"
+          preset="hero"
+          alt=""
+          sizes="(max-width: 1920px) 100vw, 1920px"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[rgba(14,10,6,0.38)]" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(105deg, rgba(14,10,6,0.88) 0%, rgba(14,10,6,0.72) 22%, rgba(14,10,6,0.44) 42%, rgba(14,10,6,0.12) 62%, transparent 80%)",
+          }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0"
+          style={{
+            height: 120,
+            background:
+              "linear-gradient(to bottom, transparent 0%, rgba(14,10,6,0.30) 100%)",
+          }}
+        />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
@@ -378,7 +424,6 @@ export default function AfwerkingenPage() {
 
       <TrustStrip />
 
-      <div className="below-fold">
       <div className="bg-background">
         <div className="mx-auto max-w-7xl px-4 pb-20 pt-14 sm:px-6 lg:px-8">
 
@@ -386,8 +431,8 @@ export default function AfwerkingenPage() {
           <TableOfContents items={toc} className="mb-2" />
 
           {/* ── Sections ── */}
-          <div className="space-y-2 divide-y divide-border/40">
 
+          <div className="below-fold">
             {/* 1. Overzicht */}
             <Section
               id="overzicht"
@@ -402,8 +447,23 @@ export default function AfwerkingenPage() {
                 {finishOptions.map((opt) => (
                   <div
                     key={opt.name}
-                    className="rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm flex flex-col gap-4 hover:border-primary/40 hover:shadow-md transition-all"
+                    className="overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm flex flex-col hover:border-primary/40 hover:shadow-md transition-all"
                   >
+                    <div className="relative h-40 w-full overflow-hidden bg-muted/60">
+                      <ResponsiveImage
+                        baseName={opt.baseName}
+                        dir="/images"
+                        preset="serviceCard"
+                        alt={opt.name}
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
+                      <span className="absolute bottom-3 left-3 rounded-full bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
+                        {opt.name}
+                      </span>
+                    </div>
+                    <div className="flex flex-col gap-4 p-5">
                     <div className="flex items-center gap-3">
                       <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-primary/10 text-primary shrink-0">
                         {opt.icon}
@@ -446,6 +506,7 @@ export default function AfwerkingenPage() {
                         ))}
                       </ul>
                     </div>
+                    </div>{/* end p-5 content wrapper */}
                   </div>
                 ))}
               </div>
@@ -481,61 +542,202 @@ export default function AfwerkingenPage() {
                 </div>
               </div>
             </Section>
+          </div>
 
-            {/* 2. Stucwerk vs sierpleister/crepi */}
+          <div className="below-fold">
+            {/* 2. Onze projecten */}
+            <section id="projecten" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="h-px w-8 bg-primary" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
+                  Onze projecten
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                Afwerkingen in de{" "}
+                <span className="text-primary">praktijk</span>
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+                Bekijk hoe verschillende afwerkingen eruitzien op recente projecten in de regio.
+              </p>
+              <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {featuredProjects.map((project) => (
+                  <ProjectCardComponent key={project.slug} project={project} />
+                ))}
+              </div>
+              <p className="mt-6 text-sm text-muted-foreground">
+                Meer bekijken?{" "}
+                <Link href="/onze-werken/" className="font-semibold text-primary underline-offset-2 hover:underline">
+                  Bekijk al onze projecten →
+                </Link>
+              </p>
+            </section>
+          </div>
+
+          <div className="below-fold">
+            {/* 3. Stucwerk vs sierpleister/crepi */}
             <Section
               id="stuc-vs-crepi"
               eyebrow="Stuc & sierpleister"
               h2="Stucwerk vs sierpleister / crepi"
               accentWord="sierpleister / crepi"
+              lead="Drie afwerkingsmethoden die onderling sterk verschillen in applicatie, textuur en onderhoud. Wanneer kiest u welke?"
             >
-              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                <p>
-                  <strong className="text-foreground">Glad stucwerk</strong> — ook wel gevelplamuur
-                  met topcoat — geeft een strakke, egale afwerking die sterk associeert met
-                  hedendaagse architectuur. Het is een tweestappenproces: een basislaag van
-                  fijne plamuur gevolgd door een adembrekende gevelverf. Het nadeel is dat
-                  fijne scheuren direct zichtbaar zijn en dat u eens per 8–12 jaar moet
-                  herschilderen om de vochtbeschermende werking te behouden.
-                </p>
-                <p>
-                  <strong className="text-foreground">Sierpleister (spachtelputz)</strong> is in
-                  Nederland een van de meest gebruikte afwerkingen op ETICS. Handmatig aangebracht met een
-                  roestvrij stalen spatel, legt dit product een subtiele korrelstructuur vast die
-                  kleine oneffenheden maskeert. Beschikbaar in tientallen kleuren en met
-                  optionele biocide-toevoeging die algengroei langdurig remt.
-                </p>
-                <p>
-                  <strong className="text-foreground">Crepi (gevelpleister)</strong> wordt gespoten
-                  of gewalst en heeft een grovere korrel. De applicatietijd is korter, wat de
-                  arbeidskosten verlaagt. Crepi past goed bij traditionele rijwoningen en
-                  wederopbouwwijken in Rotterdam, maar minder bij strakke, moderne gevels.
-                </p>
+              <div className="space-y-6">
+                {([
+                  {
+                    name: "Glad stucwerk",
+                    when: "Moderne architectuur, strakke gevels, nieuwbouw",
+                    body: "Ook wel gevelplamuur met topcoat — geeft een strakke, egale afwerking die sterk associeert met hedendaagse architectuur. Het is een tweestappenproces: een basislaag van fijne plamuur gevolgd door een adembrekende gevelverf. Het nadeel is dat fijne scheuren direct zichtbaar zijn en dat u eens per 8–12 jaar moet herschilderen om de vochtbeschermende werking te behouden.",
+                    accent: "border-l-primary",
+                  },
+                  {
+                    name: "Sierpleister (spachtelputz)",
+                    when: "Allround — een van de meest toegepaste ETICS-afwerkingen in Nederland",
+                    body: "Handmatig aangebracht met een roestvrij stalen spatel, legt dit product een subtiele korrelstructuur vast die kleine oneffenheden maskeert. Beschikbaar in tientallen kleuren en met optionele biocide-toevoeging die algengroei langdurig remt. Moeilijker plaatselijk te repareren dan glad stucwerk.",
+                    accent: "border-l-primary",
+                  },
+                  {
+                    name: "Crepi (gevelpleister)",
+                    when: "Traditionele rijwoningen, wederopbouwwijken, budgetbewust",
+                    body: "Wordt gespoten of gewalst en heeft een grovere korrel. De applicatietijd is korter, wat de arbeidskosten verlaagt. Crepi past goed bij traditionele rijwoningen en wederopbouwwijken in Rotterdam, maar minder bij strakke, moderne gevels. Kleur kan verbleken bij slechte kwaliteit.",
+                    accent: "border-l-primary",
+                  },
+                ] as const).map((item) => (
+                  <div
+                    key={item.name}
+                    className={`rounded-xl border border-border/60 bg-card/80 ${item.accent} border-l-[3px] p-5 sm:p-6 shadow-sm`}
+                  >
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:gap-6">
+                      <div className="sm:flex-1">
+                        <h3 className="text-base font-bold text-foreground sm:text-lg">{item.name}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">{item.body}</p>
+                      </div>
+                      <div className="mt-3 sm:mt-0 sm:w-56 shrink-0">
+                        <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-1.5">Ideaal voor</p>
+                        <p className="text-sm font-semibold text-primary leading-snug">{item.when}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </Section>
+          </div>
 
-            {/* 3. Steenstrips */}
+          <div className="below-fold">
+            {/* 4. Steenstrips */}
             <Section
               id="steenstrips"
               eyebrow="Steenstrips"
               h2="Steenstrips (baksteenlook)"
               accentWord="(baksteenlook)"
-              lead="Steenstrips zijn dunne kleikeramische plakjes (4–15 mm) die op de afwerklaag van het ETICS-systeem worden aangebracht voor een authentieke baksteenuitstraling."
             >
-              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Doordat steenstrips zwaarder zijn dan pleisterlagen, is extra mechanische
-                verankering nodig — via langere pluggen die door de isolatie heen in de
-                draagmuur gaan. Niet alle bestaande ETICS-systemen zijn hier direct op
-                berekend; een constructieve check is altijd nodig voor aanvang.
-              </p>
+              <div className="overflow-hidden rounded-2xl border border-border/60 bg-card/80 shadow-sm">
+                <div className="grid grid-rows-[220px_1fr] sm:grid-rows-none sm:grid-cols-[320px_1fr]">
+                  <div className="relative overflow-hidden bg-muted/60">
+                    <ResponsiveImage
+                      baseName="afwerking-steenstrips"
+                      dir="/images"
+                      preset="serviceCard"
+                      alt="Steenstrips baksteenlook op gevelisolatie"
+                      sizes="(max-width: 640px) 100vw, 320px"
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent sm:bg-linear-to-r sm:from-transparent sm:to-black/10" />
+                    <span className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
+                      Authentiek metselwerk
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col gap-4 p-5 sm:p-6">
+                    <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+                      Steenstrips zijn dunne kleikeramische plakjes (4–15 mm) die op de afwerklaag van het ETICS-systeem worden aangebracht voor een authentieke baksteenuitstraling. Doordat steenstrips zwaarder zijn dan pleisterlagen, is extra mechanische verankering nodig — via langere pluggen die door de isolatie heen in de draagmuur gaan.
+                    </p>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        { label: "Levensduur", value: "Tientallen jaren" },
+                        { label: "Onderhoud", value: "Zeer laag" },
+                        { label: "Uitstraling", value: "Authentiek" },
+                        { label: "Budget", value: "€€€" },
+                      ].map((spec) => (
+                        <div key={spec.label} className="rounded-lg bg-muted/40 px-3 py-2">
+                          <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{spec.label}</p>
+                          <p className="text-sm font-semibold text-foreground">{spec.value}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      {["Keramisch materiaal", "Extra verankering vereist", "Constructieve check nodig"].map((tag) => (
+                        <span key={tag} className="rounded-full border border-border bg-background px-2.5 py-1 text-muted-foreground">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <Callout variant="warning" className="mt-6" title="Let op: detailafwerking dagkanten en plint">
                 <p>
                   Bij elke gevelisolatie zijn de <strong>dagkanten</strong> (rondom kozijnen, deuren en vensterbanken) en de <strong>plintzone</strong> (de onderste 20–30 cm boven het maaiveld) kritische zones. Een slordig afgewerkte dagkant zorgt voor koudlekkage en vochtinfiltratie. Wij verwerken de dagkanten altijd met glasvezelwapening en een passend profiel, zodat aansluitingen waterdicht en stabiel blijven.
                 </p>
               </Callout>
             </Section>
+          </div>
 
-            {/* 4. Onderhoud & levensduur */}
+          <div className="below-fold">
+            {/* 5. Werkwijze */}
+            <Section
+              id="werkwijze"
+              eyebrow="Werkwijze"
+              h2="Van advies tot oplevering"
+              accentWord="oplevering"
+              lead="Hoe verloopt een afwerkingsproject bij BM klus BV? In drie stappen van eerste inspectie tot een volledig afgewerkte gevel."
+            >
+              <div className="grid gap-5 sm:grid-cols-3">
+                {[
+                  {
+                    icon: <Search className="h-5 w-5" />,
+                    step: "01",
+                    title: "Inspectie op locatie",
+                    body: "Wij komen gratis langs, beoordelen de ondergrond, meten de gevel op en bespreken uw wensen voor de afwerking. U ontvangt een helder advies over welk type het beste past bij uw situatie.",
+                  },
+                  {
+                    icon: <FileText className="h-5 w-5" />,
+                    step: "02",
+                    title: "Advies & offerte",
+                    body: "Op basis van de opname stellen wij een gedetailleerde offerte op: materiaal, afwerkingstype, kleur, planning en totaalprijs. Geen verborgen kosten.",
+                  },
+                  {
+                    icon: <Hammer className="h-5 w-5" />,
+                    step: "03",
+                    title: "Uitvoering & oplevering",
+                    body: "Onze vakmensen brengen de gekozen afwerking aan conform ETICS-normen. Na oplevering loopt u samen met de uitvoerder het resultaat door.",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.step}
+                    className="relative overflow-hidden rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm"
+                  >
+                    <span className="absolute -right-2 -top-3 text-6xl font-black tabular-nums text-primary/6">
+                      {item.step}
+                    </span>
+                    <span className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary mb-4">
+                      {item.icon}
+                    </span>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-primary/60 mb-1">
+                      Stap {item.step}
+                    </p>
+                    <h3 className="text-sm font-bold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          </div>
+
+          <div className="below-fold">
+            {/* 6. Onderhoud & levensduur */}
             <Section
               id="onderhoud"
               eyebrow="Onderhoud"
@@ -556,8 +758,10 @@ export default function AfwerkingenPage() {
                 ))}
               </div>
             </Section>
+          </div>
 
-            {/* 5. Afwerking en prijs */}
+          <div className="below-fold">
+            {/* 6. Afwerking en prijs */}
             <Section
               id="prijs"
               eyebrow="Prijsinvloed"
@@ -595,65 +799,79 @@ export default function AfwerkingenPage() {
                 </p>
               </Callout>
             </Section>
+          </div>
 
-            {/* 6. FAQ */}
-            <section id="faq" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
-              <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-                <div className="lg:col-span-5">
-                  <div className="lg:sticky lg:top-32">
-                    <div className="mb-3 flex items-center gap-3">
-                      <div className="h-px w-10 bg-primary" />
-                      <span className="text-sm font-semibold uppercase tracking-widest text-primary">FAQ</span>
-                    </div>
-                    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                      Veelgestelde<br />
-                      <span className="text-primary">vragen</span>
-                    </h2>
-                    <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground sm:text-base">
-                      Heeft u vragen over afwerkingen bij gevelisolatie? Hier vindt u de antwoorden op de meest gestelde vragen.
-                    </p>
-                    <p className="mt-8 text-sm text-muted-foreground">
-                      Staat uw vraag er niet tussen?{" "}
-                      <Link href="/contact/" className="font-semibold text-primary hover:underline">
-                        Neem contact op
-                      </Link>
-                    </p>
+        </div>{/* end container */}
+
+      </div>
+
+      {/* ── Reviews ── */}
+      <div className="below-fold">
+        <div id="reviews" className="scroll-mt-24">
+          <ReviewsSection />
+        </div>
+      </div>
+
+      {/* ── FAQ + Related links ── */}
+      <div className="below-fold">
+      <div className="bg-background">
+        <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+
+          <section id="faq" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-5">
+                <div className="lg:sticky lg:top-32">
+                  <div className="mb-3 flex items-center gap-3">
+                    <div className="h-px w-10 bg-primary" />
+                    <span className="text-sm font-semibold uppercase tracking-widest text-primary">FAQ</span>
                   </div>
-                </div>
-
-                <div className="lg:col-span-7 space-y-3">
-                  {faqItems.map((item, idx) => (
-                    <details
-                      key={idx}
-                      className="group overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm transition-all open:border-primary/40 open:shadow-md"
-                      {...(idx === 0 ? { open: true } : {})}
-                    >
-                      <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
-                        <div className="flex min-w-0 items-start gap-4">
-                          <span className="mt-0.5 shrink-0 text-lg font-bold tabular-nums text-border transition-colors group-open:text-primary">
-                            {String(idx + 1).padStart(2, "0")}
-                          </span>
-                          <span className="min-w-0 break-words text-base font-semibold text-foreground sm:text-lg">
-                            {item.vraag}
-                          </span>
-                        </div>
-                        <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" />
-                      </summary>
-                      <div className="border-t border-border/50 px-6 pb-6 pt-4">
-                        <p className="pl-12 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                          {item.antwoord}
-                        </p>
-                      </div>
-                    </details>
-                  ))}
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                    Veelgestelde<br />
+                    <span className="text-primary">vragen</span>
+                  </h2>
+                  <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    Heeft u vragen over afwerkingen bij gevelisolatie? Hier vindt u de antwoorden op de meest gestelde vragen.
+                  </p>
+                  <p className="mt-8 text-sm text-muted-foreground">
+                    Staat uw vraag er niet tussen?{" "}
+                    <Link href="/contact/" className="font-semibold text-primary hover:underline">
+                      Neem contact op
+                    </Link>
+                  </p>
                 </div>
               </div>
-            </section>
 
-          </div>{/* end sections */}
+              <div className="lg:col-span-7 space-y-3">
+                {faqItems.map((item, idx) => (
+                  <details
+                    key={idx}
+                    className="group overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm transition-all open:border-primary/40 open:shadow-md"
+                    {...(idx === 0 ? { open: true } : {})}
+                  >
+                    <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
+                      <div className="flex min-w-0 items-start gap-4">
+                        <span className="mt-0.5 shrink-0 text-lg font-bold tabular-nums text-border transition-colors group-open:text-primary">
+                          {String(idx + 1).padStart(2, "0")}
+                        </span>
+                        <span className="min-w-0 wrap-break-word text-base font-semibold text-foreground sm:text-lg">
+                          {item.vraag}
+                        </span>
+                      </div>
+                      <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" />
+                    </summary>
+                    <div className="border-t border-border/50 px-6 pb-6 pt-4">
+                      <p className="pl-12 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                        {item.antwoord}
+                      </p>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
 
           {/* ── Related links ── */}
-          <div className="mt-16 border-t border-border/40 pt-12">
+          <div className="border-t border-border/40 pt-12">
             <RelatedLinks items={relatedLinks} />
           </div>
 
@@ -681,8 +899,7 @@ export default function AfwerkingenPage() {
         </div>{/* end container */}
 
       </div>
-
-      </div>{/* end below-fold */}
+      </div>{/* end below-fold FAQ */}
 
       <StickyCTABar />
       <QuoteModal dienst="gevelisolatie" />

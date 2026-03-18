@@ -318,7 +318,51 @@ components/
 
 ---
 
-## 14. SEO
+## 14. Performance: below-fold rendering
+
+Elke pagina gebruikt `content-visibility: auto` om off-screen secties pas te renderen wanneer de gebruiker er naartoe scrollt. Dit verbetert LCP en TBT, vooral op mobiel.
+
+### Regel
+
+Wrap **elke logische sectie** onder de hero/TrustStrip in een eigen `<div className="below-fold">`. Nooit één grote wrapper om alles heen — de browser kan dan geen individuele secties overslaan.
+
+### CSS (globals.css)
+
+```css
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+```
+
+### Patroon (zie homepage als referentie)
+
+```tsx
+<HeroSection />        {/* geen below-fold — altijd zichtbaar */}
+<TrustStrip />         {/* geen below-fold — altijd zichtbaar */}
+
+<div className="below-fold">
+  <SectieA />
+</div>
+<div className="below-fold">
+  <SectieB />
+</div>
+<div className="below-fold">
+  <SectieC />
+</div>
+```
+
+### Wat NIET doen
+
+| Fout | Waarom |
+|------|--------|
+| Eén `below-fold` om alle secties | Browser ziet één blok, kan niets overslaan |
+| `below-fold` op hero of TrustStrip | Above-the-fold content moet direct renderen |
+| `below-fold` op StickyCTABar/QuoteModal | Deze zijn al `dynamic()` geïmporteerd |
+
+---
+
+## 15. SEO
 
 - Elke pagina: `generateMetadata()` met `title`, `description`, `keywords`, `openGraph`, `alternates.canonical`
 - Schema.org: `FAQPage` JSON-LD op pillar-pagina's
