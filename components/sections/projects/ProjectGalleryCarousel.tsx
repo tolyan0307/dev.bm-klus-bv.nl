@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useCallback, useRef } from "react"
+import { createPortal } from "react-dom"
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react"
 
 export interface GalleryImage {
@@ -47,13 +48,11 @@ export default function ProjectGalleryCarousel({
     if (!container) return
     const thumb = container.children[current] as HTMLElement | undefined
     if (thumb) {
-      // Use container.scrollTo instead of scrollIntoView to avoid scrolling the page.
-      // scrollIntoView scrolls all ancestors including viewport, which caused
-      // the "Na de werken" section to jump into view on page load.
-      const thumbLeft = thumb.offsetLeft
-      const thumbWidth = thumb.offsetWidth
-      const containerWidth = container.clientWidth
-      const scrollLeft = thumbLeft - containerWidth / 2 + thumbWidth / 2
+      const thumbRect = thumb.getBoundingClientRect()
+      const containerRect = container.getBoundingClientRect()
+      const thumbCenter = thumbRect.left + thumbRect.width / 2
+      const containerCenter = containerRect.left + containerRect.width / 2
+      const scrollLeft = container.scrollLeft + (thumbCenter - containerCenter)
       container.scrollTo({ left: Math.max(0, scrollLeft), behavior: "smooth" })
     }
   }, [current])
@@ -157,7 +156,7 @@ export default function ProjectGalleryCarousel({
       {/* Thumbnail strip */}
       <div
         ref={thumbnailsRef}
-        className="flex gap-2 overflow-x-auto pb-1 scrollbar-thin"
+        className="relative flex gap-2 overflow-x-auto pb-1 scrollbar-thin"
         role="list"
         aria-label="Fotominiaturen"
       >
@@ -187,8 +186,8 @@ export default function ProjectGalleryCarousel({
         ))}
       </div>
 
-      {/* Lightbox */}
-      {lightboxOpen && (
+      {/* Lightbox — rendered via portal to escape contain:paint from .below-fold */}
+      {lightboxOpen && createPortal(
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/90 p-4 backdrop-blur-sm"
           onClick={() => setLightboxOpen(false)}
@@ -244,7 +243,8 @@ export default function ProjectGalleryCarousel({
           >
             <ChevronRight className="h-6 w-6" />
           </button>
-        </div>
+        </div>,
+        document.body,
       )}
     </div>
   )
