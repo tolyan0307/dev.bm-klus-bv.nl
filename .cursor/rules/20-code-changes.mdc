@@ -1,0 +1,22 @@
+---
+description: Code architecture rules. Auto-applied when working on app, components, or lib files.
+globs: ["app/**/*.tsx", "app/**/*.ts", "components/**/*.tsx", "lib/**/*.ts", "hooks/**/*.ts"]
+alwaysApply: false
+---
+
+# Code Architecture Rules
+
+Full rules → `docs/governance/30-architecture-and-code-rules.md`
+Design/UI patterns → `DESIGN_SYSTEM.md`
+Image pipeline → `docs/IMAGE-PIPELINE.md`
+
+## Critical reminders
+
+- **Default: Server Component.** `"use client"` only for hooks/events/browser APIs
+- Never `"use client"` at page level (exception: `/contact/page.tsx` — do not refactor)
+- `below-fold`: wrap each section individually — never one large wrapper around all sections
+- `dynamic()` for QuoteModal, StickyCTABar, ReviewsSection — do NOT also wrap in `below-fold`
+- Always `<ResponsiveImage>` — never Next.js `<Image>`
+- Never import `buildSrcSet`/`getFallbackSrc`/`image-manifest.json` in `"use client"` — manifest leak
+- Design tokens only (`bg-primary`, `text-foreground`) — no hex in `className` (hero gradient `style={}` is OK)
+- Tailwind v4: `bg-linear-to-r` not `bg-gradient-to-r`

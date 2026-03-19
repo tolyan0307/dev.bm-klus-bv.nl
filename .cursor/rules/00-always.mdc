@@ -1,0 +1,35 @@
+---
+description: Core project rules — BM klus BV. Always applied.
+alwaysApply: true
+---
+
+# BM klus BV — Core Rules
+
+Full governance: `docs/governance/`
+
+## Communication
+- Respond to user in **Russian (RU)**
+- All website content must be in **Dutch (nl-NL) only**
+- Never write Russian or English text for public pages unless explicitly asked
+
+## Hard bans (never do these)
+- Never use hex colors in `className` — use design tokens (`text-primary`, `bg-card`, `border-border`). Exception: hero gradient `style={}`
+- Never use Next.js `<Image>` — use `<ResponsiveImage baseName=... preset=... sizes=... alt=...>`
+- Never import `buildSrcSet`, `getFallbackSrc`, or `image-manifest.json` in `"use client"` components — causes 47KB manifest leak
+- Never create new routes without entry in `data/sitemap-plan.ts`
+- Never fabricate prices, certifications, stats, or project counts — flag `[CLAIM_NEEDS_CONFIRMATION]`
+- Never use npm or yarn — use `pnpm`
+- `pnpm lint` will fail (ESLint not installed) — use `npx tsc --noEmit`
+- Never output Dutch or Russian in the same sentence — pick one per context
+
+## Key business facts
+- Domain: `bm-klus-bv.nl` | Phone: `+31 6 12 07 98 08` (`tel:+31612079808`)
+- Address: Bonaventurastraat 58B, 3081 HE Rotterdam | KVK: 77356039
+- Primary CTA: `#offerte` → QuoteModal | WhatsApp primary, phone secondary
+- No mid-page CTA blocks — Hero + StickyCTABar is sufficient
+
+## For any significant task
+1. Check `docs/governance/60-decisions-and-bans.md` first
+2. Code work → `docs/governance/30-architecture-and-code-rules.md`
+3. Content work → `seo-system/GLOBAL_SEO_CONTENT_RULES.md` + page brief
+4. Adding project → `docs/ADD-PROJECT.md` (SCOPE LOCK — 5 files only)

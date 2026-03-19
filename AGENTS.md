@@ -1,33 +1,55 @@
 # AGENTS.md
 
-## Cursor Cloud specific instructions
+Neutral agent bridge for BM klus BV repository.
+Read by any AI agent operating in this codebase.
 
-### Project overview
+## Project
 
-Static marketing website for **BM klus BV** (Dutch construction company). Built with Next.js 16 (App Router, `output: 'export'`), React 19, Tailwind CSS 4, and shadcn/ui. No backend, no database, no environment variables required.
+Static marketing website for **BM klus BV** (Dutch facade/construction company).
+Next.js 16, App Router, `output: 'export'` — fully static, no server runtime.
+Full project facts → `docs/governance/00-project-constitution.md`
 
-### Development commands
+---
 
-Standard scripts are in `package.json`:
+## Development commands
 
 | Task | Command |
 |------|---------|
 | Dev server | `pnpm dev` (port 3000) |
-| Build | `pnpm build` (static export to `out/`) |
+| Build | `pnpm build` (static export → `out/`) |
 | Type check | `npx tsc --noEmit` |
+| Generate image variants | `pnpm images:generate` |
 
-### Protected folders — do not delete
+- `pnpm lint` will fail — ESLint is not installed
+- Package manager: **pnpm** only (pnpm-lock.yaml is authoritative)
+- No automated test suite
 
-| Path | Contents |
-|------|----------|
-| `docs/` | ADD-PROJECT.md, project instructions |
-| `scripts/` | generate-variants.mjs, take-screenshots.mjs — local dev tools |
+---
 
-These folders are not deployed (only `out/` goes to production) but must remain in the repo.
+## Communication
 
-### Known caveats
+- Respond to owner in **Russian (RU)**
+- All public site content: **Dutch (nl-NL) only**
+- Full rules → `docs/governance/10-language-and-content-rules.md`
 
-- **ESLint is not installed.** The `pnpm lint` script (`eslint .`) will fail because `eslint` is not in `devDependencies`. Use `npx tsc --noEmit` for type checking instead.
-- **Package manager:** Use `pnpm` (lockfile: `pnpm-lock.yaml`). A `package-lock.json` also exists but `pnpm` is the primary manager.
-- **Static export:** The site uses `output: 'export'` so there are no API routes or server-side rendering. `pnpm dev` still works normally for development.
-- **No tests:** The project has no automated test suite configured.
+---
+
+## Governance
+
+All project rules → `docs/governance/`
+Check `docs/governance/60-decisions-and-bans.md` before any task.
+
+| Task | Source |
+|------|--------|
+| SEO content + workflow | `seo-system/GLOBAL_SEO_CONTENT_RULES.md` + `seo-system/WORKFLOW.md` + page brief |
+| Code changes | `docs/governance/30-architecture-and-code-rules.md` |
+| Adding a project page | `docs/ADD-PROJECT.md` (SCOPE LOCK — 5 files only) |
+| Image handling | `docs/IMAGE-WORKFLOW-SOP.md` |
+| Design/UI | `DESIGN_SYSTEM.md` |
+| Page checklists | `docs/governance/70-page-type-checklists.md` |
+
+---
+
+## Protected folders
+
+Do not delete: `docs/`, `scripts/`, `seo-system/`, `source-images/`

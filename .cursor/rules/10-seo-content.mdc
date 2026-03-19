@@ -1,0 +1,38 @@
+---
+description: SEO content rules. Auto-applied when working on content files or page components.
+globs: ["lib/content/**/*.ts", "app/**/page.tsx", "seo-system/**/*.yaml", "data/sitemap-plan.ts"]
+alwaysApply: false
+---
+
+# SEO Content Rules
+
+## Always read before writing content
+1. `seo-system/GLOBAL_SEO_CONTENT_RULES.md` — SSoT for all SEO content rules
+2. `seo-system/briefs/[slug].yaml` — page-specific intent, sections, cannibalization map
+3. Current page file + content file
+
+## 3-step workflow (never skip steps)
+- **Step 1:** Analyze + Outline only — no writing yet
+- **Step 2:** Edit/create content by section
+- **Step 3:** QA audit (scores for 6 dimensions) — mandatory
+
+Full workflow: `seo-system/WORKFLOW.md`
+Full task template: `seo-system/CURSOR_TASK_TEMPLATE.md`
+
+## Content language
+- All page copy (H1/H2/H3, body, CTA, FAQ, meta title/description): **Dutch (NL)**
+- All analysis, outlines, QA reports to owner: **Russian (RU)**
+
+## Non-negotiable constraints
+- No fabricated claims, prices, guarantees, certifications
+- Uncertainty flags: `[CLAIM_NEEDS_CONFIRMATION]`, `[MISSING_BUSINESS_INPUT]`, `[UNCERTAIN_TERM]`
+- Energy savings always conditional: "kan leiden tot", never "leidt tot"
+- Check sibling pages for cannibalization (listed in brief under `cannibalization.siblingPages`)
+- Preserve existing internal links and JSON-LD — only suggest content-level changes
+- Do not touch `lib/seo/meta.ts`, `lib/seo/schema.ts`, `app/sitemap.ts` without explicit request
+
+## Content edit rules
+- Edit `lib/content/[slug].ts` when content lives there
+- Edit inline in `page.tsx` only when content is not in a separate content file
+- Edit section by section — show what changes and why
+- Preserve existing good content — do not rewrite what works
