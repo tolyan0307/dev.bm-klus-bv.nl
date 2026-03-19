@@ -211,6 +211,9 @@ export default function SierpleisterPage() {
               <p className="max-w-lg text-base leading-relaxed text-white/75 sm:text-lg">
                 {hero.lead[0]}
               </p>
+              <p className="max-w-lg text-sm leading-relaxed text-white/60 sm:text-base">
+                {hero.lead[1]}
+              </p>
 
               {/* Price teaser */}
               <div className="flex items-center gap-3">
@@ -418,7 +421,7 @@ export default function SierpleisterPage() {
 
             {/* Soorten: 3 cards */}
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
-              {soorten.types.map(({ name, badge, description }) => (
+              {soorten.types.map(({ name, badge, description, bullets }) => (
                 <div
                   key={name}
                   className="group relative overflow-hidden rounded-xl border border-border bg-card px-5 py-5 transition-colors hover:border-primary/40"
@@ -435,6 +438,14 @@ export default function SierpleisterPage() {
                   <p className="text-xs leading-relaxed text-muted-foreground">
                     {description}
                   </p>
+                  <ul className="mt-3 space-y-1.5 border-t border-border pt-3">
+                    {bullets.map(({ label, value }) => (
+                      <li key={label} className="flex gap-1.5 text-[11px] leading-snug">
+                        <span className="shrink-0 font-semibold text-foreground/60">{label}:</span>
+                        <span className="text-muted-foreground">{value}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

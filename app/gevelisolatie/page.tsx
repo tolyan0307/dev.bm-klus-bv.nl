@@ -18,7 +18,7 @@ import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-k
 import WatIsEticsSection from "@/components/sections/gevelisolatie/wat-is-etics-section"
 import VoordelenSection from "@/components/sections/gevelisolatie/voordelen-section"
 import KostenSection from "@/components/sections/gevelisolatie/kosten-section"
-import WerkwijzeSection from "@/components/sections/gevelisolatie/werkwijze-section"
+const WerkwijzeSection = dynamic(() => import("@/components/sections/gevelisolatie/werkwijze-section"))
 
 const AfwerkingenSection = dynamic(() => import("@/components/sections/gevelisolatie/afwerkingen-section"))
 const MaterialenSection = dynamic(() => import("@/components/sections/gevelisolatie/materialen-section"))
@@ -156,8 +156,12 @@ export default function GevelisolatiePage() {
             </div>
           </nav>
 
-          {/* ── Content Sections ── */}
-          <WatIsEticsSection />
+        </div>
+
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <WatIsEticsSection />
+          </div>
         </div>
 
         <div className="below-fold">
