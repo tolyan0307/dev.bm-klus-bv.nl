@@ -7,6 +7,49 @@
 
 ---
 
+## 2026-03-20 — Safe technical SEO batch (3 files)
+**Agent:** Claude Code
+**Files changed:**
+- `app/gevelisolatie/materialen/page.tsx` — added `export const metadata = buildPageMetadata(...)`, BreadcrumbList JSON-LD, FAQPage JSON-LD (7/8 items — 1 JSX-antwoord filtered for schema)
+- `app/gevelisolatie/rc-waarde-dikte/page.tsx` — added `export const metadata = buildPageMetadata(...)`, BreadcrumbList JSON-LD (FAQPage already existed)
+- `components/google-aggregate-rating-jsonld.tsx` — replaced hardcoded `BUSINESS_ID = "https://bm-klus-bv.nl/#business"` with dynamic `` `${SITE.canonicalBase}/#business` ``
+
+**Why:** Site-wide technical SEO audit found 2 cluster pages without metadata/canonical/OG (in sitemap but rendering default Next.js title) and 1 hardcoded business @id not using central config. All 3 are governance-required (§20-seo-and-url-rules: cluster page = BreadcrumbList + FAQPage).
+**Verification:** `npx tsc --noEmit` — zero errors. Only 3 target files changed.
+
+---
+
+## 2026-03-20 — Metadata title fix batch: 6 long-city-name city pages
+**Agent:** Claude Code
+**File:** `lib/content/gevelisolatie-locations.ts` — 6 city entries (title field only)
+
+**What:** Shortened meta titles for cities whose full title exceeded 60-character governance limit (§20-seo-and-url-rules: title ≤ 60 chars). Adjusted title wording while preserving primary keyword and city name.
+**Cities affected:** 6 city pages with long compound names (exact list in git diff)
+**Not touched:** description, h1, slug, content, FAQ, schema, any other field
+**Verification:** `npx tsc --noEmit` — zero errors
+
+---
+
+## 2026-03-20 — City pages rollout complete: Waves 4–7 (remaining 11 cities)
+**Agent:** Claude Code
+**File:** `lib/content/gevelisolatie-locations.ts` — 11 city entries
+
+**Cities:** Rotterdam, Den Haag, Delft, Barendrecht, Ridderkerk, Alphen aan den Rijn, Hellevoetsluis, Bergen op Zoom, Roosendaal, Leidschendam-Voorburg, Hendrik-Ido-Ambacht
+
+**Applied per city (same framework as Waves 1–3):**
+- `localContext` rewrite: unique constructief/wijk-level differentiator, no intro duplication
+- `energieTip`: unique per city, no Rc-jargon, user-perspective language
+- `vergunningTip`: differentiator where applicable (beschermd stadsgezicht, geen beschermde stadsgezichten, etc.)
+- FAQ edits: replaced generic werkgebied FAQ with city-specific question, added 1 local FAQ where applicable
+- `afstanden`: project references where available
+
+**Not touched:** intro, title, description, h1, slug, bouwperiode, gemiddeldBesparing, subsidieInfo, gemeenteWebsite, nearbyLocations, pricing, calculator, CTA, page template
+**Verification:** `npx tsc --noEmit` — zero errors
+
+**Status:** All 21/21 city pages now have unique localContext, energieTip, vergunningTip, and at least 1 city-specific FAQ. City pages content rollout is complete.
+
+---
+
 ## 2026-03-20 — Wave 3: Capelle a/d IJssel, Vlaardingen, Maassluis, Gouda
 **Agent:** Claude Code
 **File:** `lib/content/gevelisolatie-locations.ts` — 4 city entries

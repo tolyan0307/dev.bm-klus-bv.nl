@@ -23,6 +23,14 @@ import {
 import GoogleRatingBadge from "@/components/google-rating-badge"
 import { buildSrcSet, getFallbackSrc } from "@/lib/responsive-image"
 import MaterialenVergelijking, { type MaterialenItem } from "@/components/sections/gevelisolatie/materialen-vergelijking"
+import { buildPageMetadata } from "@/lib/seo/meta"
+import { SITE } from "@/lib/seo/routes"
+import { jsonLdScript, breadcrumbSchema } from "@/lib/seo/schema"
+
+/* ── Metadata ── */
+export const metadata = buildPageMetadata("/gevelisolatie/materialen/")
+
+const base = SITE.canonicalBase
 
 const TrustStrip = dynamic(() => import("@/components/trust-strip"))
 const StickyCTABar = dynamic(
@@ -223,6 +231,24 @@ const WA_URL =
 const DIR = "/images"
 
 export default function MaterialenPage() {
+  const breadcrumbsSchema = breadcrumbSchema([
+    { name: "Home", item: `${base}/` },
+    { name: "Gevelisolatie", item: `${base}/gevelisolatie/` },
+    { name: "Materialen", item: `${base}/gevelisolatie/materialen/` },
+  ])
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems
+      .filter((item) => typeof item.antwoord === "string")
+      .map((item) => ({
+        "@type": "Question",
+        name: item.vraag,
+        acceptedAnswer: { "@type": "Answer", text: item.antwoord as string },
+      })),
+  }
+
   // Resolve image data server-side — manifest stays out of client bundle
   const materialenItems: MaterialenItem[] = materialen.map((mat) => {
     const brand = brandBadge[mat.brandKey]
@@ -248,6 +274,9 @@ export default function MaterialenPage() {
 
   return (
     <>
+      {jsonLdScript(breadcrumbsSchema)}
+      {jsonLdScript(faqSchema)}
+
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />

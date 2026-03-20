@@ -23,6 +23,25 @@
 | `docs/audit/CITY_PAGE_ROLLOUT_FRAMEWORK.md` | 2026-03-20 | Reusable process for remaining 18 city pages | Pilot lessons, 5-step process, per-city checklist, invariants, wave 2 recommendation (Leiden, Schiedam, Spijkenisse) |
 | Wave 2: 3 cities | 2026-03-20 | Leiden, Schiedam, Spijkenisse in gevelisolatie-locations.ts | localContext rewrite (constructief per wijk), energieTip unique per city, FAQ replace generic→local, project refs in afstanden, Spijkenisse vergunningTip + jargon removal |
 | Wave 3: 4 cities | 2026-03-20 | Capelle, Vlaardingen, Maassluis, Gouda in gevelisolatie-locations.ts | VvE-schaal (Capelle), eigen projecten E-E-A-T (Vlaardingen), oud/nieuw + foutcorrectie (Maassluis), smalle percelen binnenstad (Gouda), Rc-jargon removal (Vlaardingen/Gouda) |
+| Waves 4–7: 11 cities | 2026-03-20 | Rotterdam, Den Haag, Delft, Barendrecht, Ridderkerk, Alphen a/d Rijn, Hellevoetsluis, Bergen op Zoom, Roosendaal, Leidschendam-Voorburg, Hendrik-Ido-Ambacht | **21/21 city pages complete.** Same framework: localContext rewrite, energieTip unique, vergunningTip differentiator, FAQ replace generic→local, project refs |
+| Metadata title fix batch | 2026-03-20 | 6 long-city-name city pages in gevelisolatie-locations.ts | Shortened meta titles exceeding 60-char governance limit (title field only) |
+| Safe technical SEO batch | 2026-03-20 | materialen/page.tsx, rc-waarde-dikte/page.tsx, google-aggregate-rating-jsonld.tsx | materialen: +metadata +BreadcrumbList +FAQPage; rc-waarde-dikte: +metadata +BreadcrumbList; aggregate-rating: BUSINESS_ID→SITE.canonicalBase |
+| `docs/audit/LEGACY_REDIRECT_MAP.md` | 2026-03-20 | Analysis-only: legacy redirect inventory from root.htaccess + PROJECT-STATUS.md | 48 redirect rules already implemented in deploy/apache/root.htaccess; 14 project pages verified against actual slugs; 3 PROJECT-STATUS.md discrepancies noted |
+
+---
+
+## Phase status (2026-03-20)
+
+**City pages block: COMPLETE.** All 21/21 city pages have unique content, metadata QA passed, title fix batch applied. No further broad rollout work planned.
+
+**Current phase:** Monitoring / indexing / manual verification / possible later GSC-driven refinement.
+
+**Next steps (not code):**
+- Verify indexing via Google Search Console (submit sitemap, URL Inspection for key pages)
+- Monitor coverage report for crawl errors
+- Rich Results Test for JSON-LD on homepage, money pages, location pages
+- Verify www→non-www redirect and canonical domain behavior live
+- After GSC data accumulates: possible targeted refinement based on actual performance
 
 ---
 

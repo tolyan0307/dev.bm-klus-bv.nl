@@ -506,6 +506,19 @@ export default function DordrechtProjectPage() {
           </div>
         </div>
       </aside>
+
+      {/* ── Contextual city link (Dordrecht pilot) ── */}
+      <div className="container-default py-6">
+        <p className="text-sm text-muted-foreground">
+          Meer over gevelisolatie in Dordrecht?{" "}
+          <Link
+            href="/gevelisolatie/dordrecht/"
+            className="font-semibold text-primary underline-offset-4 transition-colors hover:underline"
+          >
+            Bekijk onze pagina over gevelisolatie in Dordrecht
+          </Link>
+        </p>
+      </div>
       </div>{/* end below-fold */}
 
     </div>

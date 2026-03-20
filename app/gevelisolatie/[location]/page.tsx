@@ -33,6 +33,7 @@ import {
   getLocation,
   getAllLocationSlugs,
 } from "@/lib/content/gevelisolatie-locations"
+import { projects } from "@/lib/content/projects"
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
 import GoogleRatingBadge from "@/components/google-rating-badge"
@@ -47,6 +48,9 @@ const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
 )
 const QuoteModal = dynamic(() => import("@/components/quote-modal"))
+const LazyBeforeAfterSlider = dynamic(
+  () => import("@/components/lazy-before-after-slider"),
+)
 
 const WA_URL =
   "https://wa.me/31612079808?text=Hallo%2C%20ik%20heb%20interesse%20in%20gevelisolatie.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
@@ -385,6 +389,70 @@ export default async function GevelisolatieLocationPage({
             </div>
           </section>
 
+          {/* ── Aanpak subsection (Dordrecht only) ── */}
+          {slug === "dordrecht" && (
+            <section className="pb-12">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="h-px w-10 bg-primary" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                  Aanpak
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Onze aanpak in{" "}
+                <span className="text-primary">Dordrecht</span>
+              </h3>
+
+              <div className="mt-6 space-y-3 max-w-2xl">
+                <div className="group relative flex flex-col gap-1 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/20">
+                  <span className="absolute left-0 top-4 h-5 w-[3px] rounded-r-full bg-primary/30" aria-hidden />
+                  <p className="text-sm font-semibold text-foreground">
+                    Vochtbehandeling sokkel &amp; plint
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Dordrecht ligt op een eiland omringd door rivieren. Bij elke
+                    opname beoordelen wij de onderzijde van de gevel en kiezen we
+                    voor een opbouw bestand tegen opspattend water en grondvocht,
+                    met waar nodig bitumenbehandeling en vochtbestendige
+                    plintafwerking.
+                  </p>
+                </div>
+
+                <div className="group relative flex flex-col gap-1 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/20">
+                  <span className="absolute left-0 top-4 h-5 w-[3px] rounded-r-full bg-primary/30" aria-hidden />
+                  <p className="text-sm font-semibold text-foreground">
+                    Collectieve aanpak portiekflats
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    In Wielwijk en Crabbehof staan portiekflats van 3–4
+                    verdiepingen met grote geveloppervlakken. Bij deze complexen
+                    werken wij samen met het VvE-bestuur — een collectieve aanpak
+                    per m² houdt de kosten per bewoner beheersbaar.
+                  </p>
+                </div>
+
+                <div className="group relative flex flex-col gap-1 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/20">
+                  <span className="absolute left-0 top-4 h-5 w-[3px] rounded-r-full bg-primary/30" aria-hidden />
+                  <p className="text-sm font-semibold text-foreground">
+                    Uitgevoerd in Dordrecht
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Recent hebben wij een woning voorzien van 10 cm
+                    buitengevelisolatie met sierpleister en plintafwerking met
+                    steenstrips —{" "}
+                    <Link
+                      href="/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/"
+                      className="font-semibold text-primary underline-offset-4 transition-colors hover:underline"
+                    >
+                      bekijk het resultaat
+                    </Link>
+                    .
+                  </p>
+                </div>
+              </div>
+            </section>
+          )}
+
           {/* ── Voordelen (compact) ── */}
           <div className="below-fold">
           <section className="scroll-mt-24 py-16 sm:py-20">
@@ -448,6 +516,23 @@ export default async function GevelisolatieLocationPage({
               gekozen afwerking. Gebruik de calculator voor een globale
               indicatie.
             </p>
+
+            {slug === "dordrecht" && (
+              <div className="mt-6 max-w-2xl space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  <span className="font-semibold text-foreground">ETICS + sierpleister of crepi:</span>{" "}
+                  indicatief €&thinsp;110–€&thinsp;200 per m²
+                </p>
+                <p>
+                  <span className="font-semibold text-foreground">ETICS + steenstrips:</span>{" "}
+                  indicatief €&thinsp;200–€&thinsp;280 per m²
+                </p>
+                <p className="pt-1 text-xs text-muted-foreground/70">
+                  Incl. arbeid &amp; materiaal, excl. steiger, herstel en complexe detaillering.
+                </p>
+              </div>
+            )}
+
             <KostenCalculator />
           </section>
         </div>
@@ -523,6 +608,124 @@ export default async function GevelisolatieLocationPage({
           </section>
         </div>
         </div>
+
+        {/* ── Featured project (Dordrecht pilot) ── */}
+        {slug === "dordrecht" && (() => {
+          const dordrechtProject = projects.find(
+            (p) => p.slug === "dordrecht-gevelisolatie-10cm-sierpleister-2025",
+          )
+          if (!dordrechtProject) return null
+          return (
+            <div className="below-fold">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <section className="py-16 sm:py-20">
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="h-px w-10 bg-primary" />
+                    <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                      Uitgevoerd project
+                    </span>
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                    Project in{" "}
+                    <span className="text-primary">Dordrecht</span>
+                  </h2>
+
+                  <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
+                    {/* Before / After slider */}
+                    <div className="aspect-[4/3] sm:aspect-auto sm:h-full">
+                      <LazyBeforeAfterSlider
+                        beforeBaseName="dordrecht-gevelisolatie-10cm-voor-01"
+                        afterBaseName="dordrecht-gevelisolatie-10cm-na-01"
+                        beforeAlt="Dordrecht gevelisolatie – voor de werken"
+                        afterAlt="Dordrecht gevelisolatie – na de werken"
+                        sizes="(max-width: 640px) 100vw, 360px"
+                        className="h-full w-full"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <Link
+                      href={dordrechtProject.projectUrl}
+                      className="group flex flex-col justify-center gap-3 p-6 transition-colors hover:bg-secondary/20 sm:p-8"
+                    >
+                      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                        {dordrechtProject.meta.city} · {dordrechtProject.meta.objectType} · {dordrechtProject.meta.year}
+                      </p>
+                      <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
+                        {dordrechtProject.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {dordrechtProject.meta.highlight}
+                      </p>
+                      <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
+                        Bekijk project in Dordrecht →
+                      </p>
+                    </Link>
+                  </div>
+                </section>
+              </div>
+            </div>
+          )
+        })()}
+
+        {/* ── Featured project (Vlaardingen pilot) ── */}
+        {slug === "vlaardingen" && (() => {
+          const vlaardingenProject = projects.find(
+            (p) => p.slug === "vlaardingen-gevelisolatie-6cm-sierpleister-2024",
+          )
+          if (!vlaardingenProject) return null
+          return (
+            <div className="below-fold">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <section className="py-16 sm:py-20">
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="h-px w-10 bg-primary" />
+                    <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                      Uitgevoerd project
+                    </span>
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                    Project in{" "}
+                    <span className="text-primary">Vlaardingen</span>
+                  </h2>
+
+                  <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
+                    {/* Before / After slider */}
+                    <div className="aspect-[4/3] sm:aspect-auto sm:h-full">
+                      <LazyBeforeAfterSlider
+                        beforeBaseName="vlaardingen-gevelisolatie-6cm-voor-01"
+                        afterBaseName="vlaardingen-gevelisolatie-6cm-na-01"
+                        beforeAlt="Vlaardingen gevelisolatie – voor de werken"
+                        afterAlt="Vlaardingen gevelisolatie – na de werken"
+                        sizes="(max-width: 640px) 100vw, 360px"
+                        className="h-full w-full"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <Link
+                      href={vlaardingenProject.projectUrl}
+                      className="group flex flex-col justify-center gap-3 p-6 transition-colors hover:bg-secondary/20 sm:p-8"
+                    >
+                      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                        {vlaardingenProject.meta.city} · {vlaardingenProject.meta.objectType} · {vlaardingenProject.meta.year}
+                      </p>
+                      <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
+                        {vlaardingenProject.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {vlaardingenProject.meta.highlight}
+                      </p>
+                      <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
+                        Bekijk project in Vlaardingen →
+                      </p>
+                    </Link>
+                  </div>
+                </section>
+              </div>
+            </div>
+          )
+        })()}
 
         <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

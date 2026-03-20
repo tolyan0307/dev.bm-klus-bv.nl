@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { fetchRating, getCachedRating } from "@/lib/google-place-cache"
+import { SITE } from "@/lib/seo/routes"
 
-const BUSINESS_ID = "https://bm-klus-bv.nl/#business"
+const BUSINESS_ID = `${SITE.canonicalBase}/#business`
 
 /**
  * Injects AggregateRating structured data (JSON-LD) using live

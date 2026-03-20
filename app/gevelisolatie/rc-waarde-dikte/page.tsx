@@ -13,7 +13,12 @@ import {
 
 import GoogleRatingBadge from "@/components/google-rating-badge"
 import RcWaardeDikteCalculator from "@/components/sections/gevelisolatie/rc-waarde-dikte-calculator"
-import { jsonLdScript } from "@/lib/seo/schema"
+import { buildPageMetadata } from "@/lib/seo/meta"
+import { SITE } from "@/lib/seo/routes"
+import { jsonLdScript, breadcrumbSchema } from "@/lib/seo/schema"
+
+/* ── Metadata ── */
+export const metadata = buildPageMetadata("/gevelisolatie/rc-waarde-dikte/")
 
 const TrustStrip = dynamic(() => import("@/components/trust-strip"))
 const StickyCTABar = dynamic(
@@ -141,7 +146,15 @@ function BulletList({ items }: { items: string[] }) {
 }
 
 /* ─── Page ───────────────────────────────────────────── */
+const base = SITE.canonicalBase
+
 export default function RcWaardeDiktePage() {
+  const breadcrumbsSchema = breadcrumbSchema([
+    { name: "Home", item: `${base}/` },
+    { name: "Gevelisolatie", item: `${base}/gevelisolatie/` },
+    { name: "Rc-waarde & dikte", item: `${base}/gevelisolatie/rc-waarde-dikte/` },
+  ])
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -154,6 +167,7 @@ export default function RcWaardeDiktePage() {
 
   return (
     <>
+      {jsonLdScript(breadcrumbsSchema)}
       {jsonLdScript(faqSchema)}
 
       {/* ══ HERO ══ */}
