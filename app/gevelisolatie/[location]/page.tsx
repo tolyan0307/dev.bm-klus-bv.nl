@@ -323,76 +323,150 @@ export default async function GevelisolatieLocationPage({
               Gevelisolatie in{" "}
               <span className="text-primary">{data.city}</span>
             </h2>
-            <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px] lg:gap-12">
-              <div>
-                <p className="text-base leading-relaxed text-muted-foreground">
-                  {data.localContext}
-                </p>
+            {slug === "dordrecht" ? (
+              <div className="mt-10 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm">
+                {/* ── Facts header ── */}
+                <div className="relative overflow-hidden border-b border-border/40 bg-linear-to-r from-secondary/50 to-secondary/20 px-5 py-6 sm:px-8 sm:py-9">
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary/30" />
+                  <span
+                    className="pointer-events-none absolute -right-2 top-1/2 -translate-y-1/2 select-none font-black leading-none tracking-tighter text-primary/5 text-[min(11rem,22vw)]"
+                    aria-hidden="true"
+                  >
+                    {data.city.toUpperCase()}
+                  </span>
 
-                {/* Woningtypes */}
-                <div className="mt-8">
-                  <p className="mb-4 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                    Geschikte woningtypes in {data.city}
-                  </p>
-                  <div className="space-y-2">
-                    {data.woningTypes.map((type, i) => (
-                      <div
-                        key={type}
-                        className="flex items-center gap-4 rounded-lg border border-border bg-card px-4 py-3 transition-colors hover:border-primary/20"
-                      >
-                        <span className="w-6 shrink-0 text-xs font-black tabular-nums text-primary/30">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <span className="text-sm font-medium text-foreground/80">
-                          {type}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Side card */}
-              <div className="lg:sticky lg:top-32 lg:self-start">
-                <div className="overflow-hidden rounded-2xl border border-primary/15 bg-card shadow-lg ring-1 ring-primary/5">
-                  <div className="border-b border-border bg-primary/3 px-6 py-4">
-                    <p className="text-[11px] font-bold uppercase tracking-widest text-primary">
-                      Snelle feiten
-                    </p>
-                  </div>
-                  <div className="divide-y divide-border">
-                    {[
+                  {(() => {
+                    const facts = [
                       ["Prijsindicatie", "na opname op locatie"],
                       ["Doorlooptijd", "1–2 weken"],
                       ["Opname", "Op locatie, op afspraak"],
                       [
                         "Bouwperiode",
-                        data.bouwperiode.split(",")[0].split(".")[0],
+                        data.bouwperiode
+                          .split(",")[0]
+                          .replace(/\s*\(.*$/, ""),
                       ],
                       ["Werkgebied", data.city],
-                    ].map(([label, value]) => (
-                      <div
-                        key={label}
-                        className="flex items-center justify-between gap-4 px-6 py-3"
-                      >
-                        <span className="shrink-0 text-xs text-muted-foreground">
-                          {label}
-                        </span>
-                        <span className="text-right text-sm font-bold text-foreground">
-                          {value}
-                        </span>
+                    ] as const
+                    return (
+                      <div className="relative z-10 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-0 lg:divide-x lg:divide-primary/10">
+                        {facts.map(([label, value], i) => (
+                          <div
+                            key={label}
+                            className={`${i > 0 ? "lg:pl-7" : ""}${i === facts.length - 1 ? " col-span-2 sm:col-span-1" : ""}`}
+                          >
+                            <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-primary/50">
+                              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary/40" />
+                              {label}
+                            </p>
+                            <p className="mt-1.5 text-sm font-bold text-foreground sm:text-[15px]">
+                              {value}
+                            </p>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    )
+                  })()}
+                </div>
+
+                {/* ── Content body ── */}
+                <div className="px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-10">
+                  <p className="max-w-3xl text-base leading-[1.85] text-foreground/70 sm:text-[17px]">
+                    {data.localContext}
+                  </p>
+
+                  <div className="mt-8 border-t border-border/40 pt-6">
+                    <p className="mb-4 text-[11px] font-bold uppercase tracking-widest text-muted-foreground/70">
+                      Geschikte woningtypes in {data.city}
+                    </p>
+                    <div className="grid gap-2.5 sm:grid-cols-2">
+                      {data.woningTypes.map((type, i) => (
+                        <div
+                          key={type}
+                          className="flex items-start gap-3 rounded-xl border border-border/40 bg-secondary/20 px-4 py-3 transition-colors hover:bg-secondary/40"
+                        >
+                          <span className="mt-px shrink-0 text-xs font-black tabular-nums text-primary/30">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <span className="text-[13px] leading-snug text-foreground/70">
+                            {type}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px] lg:gap-12">
+                <div>
+                  <p className="text-base leading-relaxed text-muted-foreground">
+                    {data.localContext}
+                  </p>
+                  {/* Woningtypes */}
+                  <div className="mt-8">
+                    <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                      Geschikte woningtypes in {data.city}
+                    </p>
+                    <div className="divide-y divide-border/60">
+                      {data.woningTypes.map((type, i) => (
+                        <div
+                          key={type}
+                          className="flex items-center gap-4 py-2.5"
+                        >
+                          <span className="w-5 shrink-0 text-xs font-black tabular-nums text-primary/25">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <span className="text-sm text-foreground/75">
+                            {type}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                {/* Side card */}
+                <div className="lg:sticky lg:top-32 lg:self-start">
+                  <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+                    <div className="px-6 pb-1 pt-5">
+                      <p className="text-[11px] font-bold uppercase tracking-widest text-primary">
+                        Snelle feiten
+                      </p>
+                    </div>
+                    <div className="px-6 pb-5 pt-3">
+                      {[
+                        ["Prijsindicatie", "na opname op locatie"],
+                        ["Doorlooptijd", "1–2 weken"],
+                        ["Opname", "Op locatie, op afspraak"],
+                        [
+                          "Bouwperiode",
+                          data.bouwperiode.split(",")[0].split(".")[0],
+                        ],
+                        ["Werkgebied", data.city],
+                      ].map(([label, value], i, arr) => (
+                        <div
+                          key={label}
+                          className={`flex items-baseline justify-between gap-4 py-2.5 ${i < arr.length - 1 ? "border-b border-border/40" : ""}`}
+                        >
+                          <span className="shrink-0 text-xs text-muted-foreground/70">
+                            {label}
+                          </span>
+                          <span className="text-right text-sm font-semibold text-foreground">
+                            {value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </section>
 
           {/* ── Aanpak subsection (Dordrecht only) ── */}
           {slug === "dordrecht" && (
-            <section className="pb-12">
-              <div className="mb-3 flex items-center gap-3">
+            <section className="py-16 sm:py-20">
+              <div className="mb-4 flex items-center gap-3">
                 <div className="h-px w-10 bg-primary" />
                 <span className="text-sm font-semibold uppercase tracking-wider text-primary">
                   Aanpak
@@ -403,51 +477,71 @@ export default async function GevelisolatieLocationPage({
                 <span className="text-primary">Dordrecht</span>
               </h3>
 
-              <div className="mt-6 space-y-3 max-w-2xl">
-                <div className="group relative flex flex-col gap-1 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/20">
-                  <span className="absolute left-0 top-4 h-5 w-[3px] rounded-r-full bg-primary/30" aria-hidden />
-                  <p className="text-sm font-semibold text-foreground">
-                    Vochtbehandeling sokkel &amp; plint
-                  </p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    Dordrecht ligt op een eiland omringd door rivieren. Bij elke
-                    opname beoordelen wij de onderzijde van de gevel en kiezen we
-                    voor een opbouw bestand tegen opspattend water en grondvocht,
-                    met waar nodig bitumenbehandeling en vochtbestendige
-                    plintafwerking.
-                  </p>
-                </div>
-
-                <div className="group relative flex flex-col gap-1 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/20">
-                  <span className="absolute left-0 top-4 h-5 w-[3px] rounded-r-full bg-primary/30" aria-hidden />
-                  <p className="text-sm font-semibold text-foreground">
-                    Collectieve aanpak portiekflats
-                  </p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    In Wielwijk en Crabbehof staan portiekflats van 3–4
-                    verdiepingen met grote geveloppervlakken. Bij deze complexen
-                    werken wij samen met het VvE-bestuur — een collectieve aanpak
-                    per m² houdt de kosten per bewoner beheersbaar.
-                  </p>
-                </div>
-
-                <div className="group relative flex flex-col gap-1 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/20">
-                  <span className="absolute left-0 top-4 h-5 w-[3px] rounded-r-full bg-primary/30" aria-hidden />
-                  <p className="text-sm font-semibold text-foreground">
-                    Uitgevoerd in Dordrecht
-                  </p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    Recent hebben wij een woning voorzien van 10 cm
-                    buitengevelisolatie met sierpleister en plintafwerking met
-                    steenstrips —{" "}
-                    <Link
-                      href="/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/"
-                      className="font-semibold text-primary underline-offset-4 transition-colors hover:underline"
+              <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_320px] lg:gap-10">
+                <div className="space-y-0 divide-y divide-border/50">
+                  {[
+                    {
+                      num: "01",
+                      title: "Vochtbehandeling sokkel & plint",
+                      text: "Dordrecht ligt op een eiland omringd door rivieren. Bij elke opname beoordelen wij de onderzijde van de gevel en kiezen we voor een opbouw bestand tegen opspattend water en grondvocht, met waar nodig bitumenbehandeling en vochtbestendige plintafwerking.",
+                    },
+                    {
+                      num: "02",
+                      title: "Collectieve aanpak portiekflats",
+                      text: "In Wielwijk en Crabbehof staan portiekflats van 3–4 verdiepingen met grote geveloppervlakken. Bij deze complexen werken wij samen met het VvE-bestuur — een collectieve aanpak per m² houdt de kosten per bewoner beheersbaar.",
+                    },
+                    {
+                      num: "03",
+                      title: "Uitgevoerd in Dordrecht",
+                      link: {
+                        href: "/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
+                        label: "bekijk het resultaat",
+                      },
+                      text: "Recent hebben wij een woning voorzien van 10 cm buitengevelisolatie met sierpleister en plintafwerking met steenstrips",
+                    },
+                  ].map((item) => (
+                    <div
+                      key={item.num}
+                      className="group flex gap-5 py-6 first:pt-0 last:pb-0 sm:gap-6"
                     >
-                      bekijk het resultaat
-                    </Link>
-                    .
-                  </p>
+                      <span className="mt-1 shrink-0 text-2xl font-black tabular-nums text-primary/15 sm:text-3xl">
+                        {item.num}
+                      </span>
+                      <div>
+                        <p className="text-[15px] font-semibold text-foreground">
+                          {item.title}
+                        </p>
+                        <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                          {item.text}
+                          {item.link && (
+                            <>
+                              {" — "}
+                              <Link
+                                href={item.link.href}
+                                className="font-semibold text-primary underline-offset-4 transition-colors hover:underline"
+                              >
+                                {item.link.label}
+                              </Link>
+                              .
+                            </>
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="self-center">
+                  <div className="overflow-hidden rounded-2xl shadow-sm ring-1 ring-black/4">
+                    <ResponsiveImage
+                      baseName="dordrecht-gevelisolatie-10cm-na-03"
+                      dir="/images/projects"
+                      preset="card"
+                      alt="Detail gevelisolatie afwerking Dordrecht"
+                      sizes="(max-width: 1024px) 100vw, 320px"
+                      className="aspect-4/3 w-full object-cover lg:aspect-4/5"
+                    />
+                  </div>
                 </div>
               </div>
             </section>
@@ -518,19 +612,32 @@ export default async function GevelisolatieLocationPage({
             </p>
 
             {slug === "dordrecht" && (
-              <div className="mt-6 max-w-2xl space-y-1.5 text-sm leading-relaxed text-muted-foreground">
-                <p>
-                  <span className="font-semibold text-foreground">ETICS + sierpleister of crepi:</span>{" "}
-                  indicatief €&thinsp;110–€&thinsp;200 per m²
-                </p>
-                <p>
-                  <span className="font-semibold text-foreground">ETICS + steenstrips:</span>{" "}
-                  indicatief €&thinsp;200–€&thinsp;280 per m²
-                </p>
-                <p className="pt-1 text-xs text-muted-foreground/70">
+              <>
+                <div className="mt-8 flex max-w-2xl flex-col gap-5 sm:flex-row sm:items-end sm:gap-10">
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                      ETICS + sierpleister of crepi
+                    </p>
+                    <p className="mt-1 text-xl font-bold tracking-tight text-foreground">
+                      €&thinsp;110–€&thinsp;200{" "}
+                      <span className="text-sm font-normal text-muted-foreground">per m²</span>
+                    </p>
+                  </div>
+                  <div className="hidden h-10 w-px bg-border/40 sm:block" />
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                      ETICS + steenstrips
+                    </p>
+                    <p className="mt-1 text-xl font-bold tracking-tight text-foreground">
+                      €&thinsp;200–€&thinsp;280{" "}
+                      <span className="text-sm font-normal text-muted-foreground">per m²</span>
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-3 text-xs text-muted-foreground/50">
                   Incl. arbeid &amp; materiaal, excl. steiger, herstel en complexe detaillering.
                 </p>
-              </div>
+              </>
             )}
 
             <KostenCalculator />
