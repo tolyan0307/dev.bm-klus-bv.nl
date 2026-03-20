@@ -13,6 +13,7 @@ import {
 
 import GoogleRatingBadge from "@/components/google-rating-badge"
 import RcWaardeDikteCalculator from "@/components/sections/gevelisolatie/rc-waarde-dikte-calculator"
+import { jsonLdScript } from "@/lib/seo/schema"
 
 const TrustStrip = dynamic(() => import("@/components/trust-strip"))
 const StickyCTABar = dynamic(
@@ -141,8 +142,20 @@ function BulletList({ items }: { items: string[] }) {
 
 /* ─── Page ───────────────────────────────────────────── */
 export default function RcWaardeDiktePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.vraag,
+      acceptedAnswer: { "@type": "Answer", text: item.antwoord },
+    })),
+  }
+
   return (
     <>
+      {jsonLdScript(faqSchema)}
+
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />

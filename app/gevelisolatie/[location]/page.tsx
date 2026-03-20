@@ -426,7 +426,7 @@ export default async function GevelisolatieLocationPage({
 
         {/* ── Waarom BM klus (own container) ── */}
         <div className="below-fold">
-        <WaaromBmKlusSection subtitle="BM klus BV is gespecialiseerd in buitengevelisolatie (ETICS) en gevelafwerking in de regio Rotterdam en omgeving." />
+        <WaaromBmKlusSection subtitle={`BM klus BV is gespecialiseerd in buitengevelisolatie (ETICS) en gevelafwerking in ${data.city} en omgeving.`} />
         </div>
 
         <div className="below-fold">

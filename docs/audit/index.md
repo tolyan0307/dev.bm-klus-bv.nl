@@ -15,6 +15,14 @@
 | `app/gevelisolatie/page.tsx` (inline fix) | 2026-03-19 | `/gevelisolatie/` page technical fixes | `WatIsEticsSection` added `below-fold` wrapper (was missing); `WerkwijzeSection` converted from static import to `dynamic()` (was client component, caused SSR bundle leak) |
 | `app/sierpleister/page.tsx` (inline fix) | 2026-03-19 | `/sierpleister/` page content/SEO fixes | `hero.lead[1]` surfaced in hero (was dead content); `soorten.types[*].bullets` added to type cards (comparison data was in content file but not rendered — brief requires "vergelijking" SERP format) |
 | `docs/perf/homepage-audit-lighthouse-followup.md` | 2026-03-15 | Homepage only | Manifest leak was root cause (now fixed); vendor baseline ~500KB; CSS 140KB Tailwind output |
+| `docs/audit/TECH_AUDIT_STATUS.md` | 2026-03-19 | Full project: routes, metadata, schema, below-fold, dead code, CTAs, perf | 1 critical (ReviewsSection static import on homepage); 5 major; 4 medium; 4 minor. See file for full findings. |
+| `docs/audit/CONTENT_AUDIT_STATUS.md` | 2026-03-19 | Full project: content quality, SEO alignment, claims safety, cannibalization, Dutch compliance | 2 critical ("100% Garantie" badge, banned phrase); 5 major (CTA mismatch, FAQ conflict, subsidy boilerplate); 6 medium; 4 minor. |
+| 5 priority fixes (inline) | 2026-03-19 | diensten, gevel-schilderen, homepage, hero-section, rc-waarde-dikte | "100% Garantie" → VCA*; banned phrase removed; ReviewsSection→dynamic(); hero CTA→#offerte; FAQ conflict resolved (layout→page JSON-LD) |
+| Location pages batch | 2026-03-19 | 21 location pages via gevelisolatie-locations.ts + [location]/page.tsx | subsidieInfo: removed hardcoded ISDE amounts, lead with local supplement, conditional language; WaaromBmKlusSection: city-aware subtitle |
+| Pilot deep-pass: 3 cities | 2026-03-20 | Dordrecht, Zoetermeer, Breda in gevelisolatie-locations.ts | localContext rewrite (no intro duplication), unique energieTip per city, FAQ +1 each (water/systeembouw/beschermd), Breda superlative governance fix, vergunningTip differentiator Zoetermeer |
+| `docs/audit/CITY_PAGE_ROLLOUT_FRAMEWORK.md` | 2026-03-20 | Reusable process for remaining 18 city pages | Pilot lessons, 5-step process, per-city checklist, invariants, wave 2 recommendation (Leiden, Schiedam, Spijkenisse) |
+| Wave 2: 3 cities | 2026-03-20 | Leiden, Schiedam, Spijkenisse in gevelisolatie-locations.ts | localContext rewrite (constructief per wijk), energieTip unique per city, FAQ replace generic→local, project refs in afstanden, Spijkenisse vergunningTip + jargon removal |
+| Wave 3: 4 cities | 2026-03-20 | Capelle, Vlaardingen, Maassluis, Gouda in gevelisolatie-locations.ts | VvE-schaal (Capelle), eigen projecten E-E-A-T (Vlaardingen), oud/nieuw + foutcorrectie (Maassluis), smalle percelen binnenstad (Gouda), Rc-jargon removal (Vlaardingen/Gouda) |
 
 ---
 

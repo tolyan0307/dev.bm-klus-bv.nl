@@ -251,7 +251,7 @@ export default function DienstenPage() {
                   { value: "6", label: "Diensten", desc: "Geveloplossingen" },
                   { value: "21+", label: "Steden", desc: "Zuid-Holland e.o." },
                   { value: <GoogleRatingBadge format="count" />, label: "Reviews", desc: <GoogleRatingBadge format="stat-desc" /> },
-                  { value: "100%", label: "Garantie", desc: "Op vakmanschap" },
+                  { value: "VCA*", label: "Gecertificeerd", desc: "Veiligheid & kwaliteit" },
                 ].map((stat) => (
                   <div
                     key={stat.label}

@@ -11,7 +11,7 @@ import EticsSection from "@/components/etics-section"
 import ServicesSection from "@/components/services-section"
 import ProcessSection from "@/components/process-section"
 import PortfolioSection from "@/components/portfolio-section"
-import ReviewsSection from "@/components/reviews-section"
+const ReviewsSection = dynamic(() => import("@/components/reviews-section"))
 import WorkAreaSection from "@/components/work-area-section"
 import FaqSection from "@/components/faq-section"
 import { homeFaqItems } from "@/lib/content/home-faq"
@@ -57,9 +57,7 @@ export default function Home() {
         <div className="below-fold">
           <PortfolioSection />
         </div>
-        <div className="below-fold">
-          <ReviewsSection />
-        </div>
+        <ReviewsSection />
         <div className="below-fold">
           <WorkAreaSection />
         </div>

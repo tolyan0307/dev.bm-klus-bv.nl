@@ -64,7 +64,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Overwegend jaren '50–'70, met naoorlogse wederopbouw en portiekflats.",
     gemiddeldBesparing: "Indicatief €600–€900/jaar besparing op stookkosten bij een typisch rijtjeshuis (bron: Milieu Centraal). Het werkelijke bedrag hangt af van uw woning, isolatiedikte en stookgedrag.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Rotterdam biedt het Energietransitiefonds (ETF) en advies via Duurzaam 010.",
+    subsidieInfo: "Gemeente Rotterdam biedt het Energietransitiefonds (ETF) en advies via Duurzaam 010. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In beschermde stadsgezichten (bijv. Delfshaven, Kralingen-Midden, Tuindorp Vreewijk) en bij monumenten gelden aanvullende eisen. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Veel naoorlogse woningen in Rotterdam hebben een energielabel D–F. Buitengevelisolatie kan het label met 1–3 stappen verbeteren.",
     gemeenteWebsite: "https://www.rotterdam.nl/wonen-leven/energiebesparing/",
@@ -114,7 +114,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Mix van vooroorlogse herenhuizen en naoorlogse portiekflats (jaren '50–'70).",
     gemiddeldBesparing: "Indicatief €500–€850/jaar besparing bij een bovenwoning of rijtjeshuis (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Den Haag biedt de Energiebespaarlening (via Warmtefonds) en een gratis energie- en duurzaamheidsscan.",
+    subsidieInfo: "Gemeente Den Haag biedt de Energiebespaarlening (via Warmtefonds) en een gratis energie- en duurzaamheidsscan. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. Den Haag telt 21 beschermde stadsgezichten (11 rijks, 10 gemeentelijk), waaronder het Willemspark, Statenkwartier, Archipelbuurt en Benoordenhout. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Veel Haagse vooroorlogse woningen hebben massief metselwerk zonder spouw. ETICS is hier vaak de meest effectieve gevelisolatiemethode.",
     gemeenteWebsite: "https://www.denhaag.nl/nl/wonen-en-bouwen/duurzaam-wonen.htm",
@@ -158,7 +158,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Naoorlogse uitbreidingswijken (jaren '60–'80) naast historische binnenstad.",
     gemiddeldBesparing: "Indicatief €550–€800/jaar besparing bij een rijtjeshuis in Voorhof of Tanthof (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Delft biedt de Duurzaamheidslening en gratis energieadvies voor woningeigenaren.",
+    subsidieInfo: "Gemeente Delft biedt de Duurzaamheidslening en gratis energieadvies voor woningeigenaren. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. Delft heeft vier beschermde stadsgezichten (Binnenstad, Nieuwe Plantage, Agnetapark en TU-Noord). Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De jaren '70-woningen in Voorhof en Buitenhof hebben vaak een Rc-waarde van 0,3–0,5. ETICS brengt dit naar Rc 3,5+ conform het Bbl (Besluit bouwwerken leefomgeving).",
     gemeenteWebsite: "https://www.delft.nl/duurzaamheid",
@@ -175,14 +175,14 @@ export const locations: LocationData[] = [
     intro:
       "Dordrecht — de oudste stad van Holland — heeft in wijken als Wielwijk, Crabbehof en Sterrenburg een groot bestand aan portiekflats en rijtjeshuizen uit de jaren '50–'70. Deze woningen zijn vaak volledig ongeïsoleerd. Met buitengevelisolatie (ETICS) verbetert u zowel het wooncomfort als de uitstraling van de gevel, zonder dat u binnenruimte verliest.",
     localContext:
-      "Dordrecht heeft veel naoorlogse wijken (Wielwijk, Crabbehof, Sterrenburg) met woningen die toe zijn aan een grondige isolatie-upgrade. De typische bouwstijl — enkelsteens of smalle spouw — maakt buitengevelisolatie de meest effectieve methode.",
+      "Dordrecht ligt op een eiland omringd door rivieren. Dat maakt vocht een belangrijk aandachtspunt bij gevelisolatie — vooral onderaan de gevel, waar regenwater kan opspatten. Wij passen daar vochtbestendige materialen en detaillering toe. De portiekflats in Wielwijk en Crabbehof zijn 3–4 verdiepingen hoog met enkelsteens gevels: grote, vlakke oppervlakken die zich goed lenen voor ETICS. In Sterrenburg en Dubbeldam staan laagbouwwoningen waar vooral de afwerking rondom kozijnen en de dakrand aandacht vraagt.",
     woningTypes: [
       "Naoorlogse eengezinswoningen",
       "Portiekflats (Wielwijk, Crabbehof)",
       "Twee-onder-een-kapwoningen (Dubbeldam)",
-      "Bedrijfspanden op industrieterreinen",
+      "Laagbouwwoningen en rijtjeshuizen (Sterrenburg, Dubbeldam)",
     ],
-    afstanden: "Dordrecht ligt op ±25 km van ons kantoor in Rotterdam — wij werken in de regio Rotterdam en omgeving.",
+    afstanden: "Dordrecht ligt op ±25 km van ons kantoor in Rotterdam. Wij hebben recent een gevelisolatieproject uitgevoerd in Dordrecht — bekijk het resultaat bij onze werken.",
     faq: [
       {
         vraag: "Wat kost gevelisolatie in Dordrecht?",
@@ -197,14 +197,19 @@ export const locations: LocationData[] = [
       {
         vraag: "Hoe pakt BM klus BV gevelisolatie aan bij portiekflats in Wielwijk of Crabbehof?",
         antwoord:
-          "Bij portiekflats werken wij samen met het VvE-bestuur. Wij maken een totaalofferte per m² en stemmen de planning af zodat bewoners zo min mogelijk hinder ondervinden. De plint- en raamdorpeldetails krijgen extra aandacht.",
+          "Bij portiekflats in Wielwijk of Crabbehof werken wij samen met het VvE-bestuur. Wij maken een totaalofferte per m² voor het hele complex en stemmen de planning af zodat bewoners zo min mogelijk hinder ondervinden. De afwerking onderaan de gevel krijgt bij deze locatie extra zorg vanwege de nabijheid van water.",
+      },
+      {
+        vraag: "Heeft de waterrijke ligging van Dordrecht invloed op gevelisolatie?",
+        antwoord:
+          "Ja. Vocht vanuit de grond en opspattend regenwater kunnen problemen geven als de onderkant van de gevel niet goed is afgewerkt. Wij controleren dit bij de opname en kiezen materialen die hiertegen bestand zijn. Dit speelt vooral bij woningen langs de Oude Maas en op het eiland van Dordrecht.",
       },
     ],
     bouwperiode: "Overwegend jaren '50–'70 met grote naoorlogse wijken (Wielwijk, Crabbehof).",
     gemiddeldBesparing: "Indicatief €600–€900/jaar besparing bij een typisch naoorlogs rijtjeshuis (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Dordrecht biedt de Duurzaamheidslening en het Energieloket Drechtsteden.",
+    subsidieInfo: "Gemeente Dordrecht biedt de Duurzaamheidslening en het Energieloket Drechtsteden. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De historische binnenstad (eiland van Dordrecht) heeft beschermd stadsgezicht met aanvullende eisen. Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "Dordrecht heeft relatief veel enkelsteens woningen uit de wederopbouwperiode. Deze profiteren het meest van buitengevelisolatie.",
+    energieTip: "Bij woningen nabij water besteden wij extra aandacht aan de onderkant van de gevel en de vochtafvoer. Wij kiezen voor een opbouw die vocht uit de muur kan laten ontsnappen, zodat de isolatie jarenlang goed blijft functioneren.",
     gemeenteWebsite: "https://www.dordrecht.nl/duurzaamheid",
     nearbyLocations: ["ridderkerk", "hendrik-ido-ambacht", "barendrecht", "spijkenisse"],
   },
@@ -219,7 +224,7 @@ export const locations: LocationData[] = [
     intro:
       "Schiedam grenst direct aan Rotterdam, waardoor wij snel ter plekke zijn voor een opname. De stad kent naast een historische binnenstad met de hoogste klassieke windmolens ter wereld veel naoorlogse portiekflats en galerijflats in Nieuwland en Groenoord. Voor deze woningen is buitengevelisolatie vaak de meest praktische oplossing.",
     localContext:
-      "Schiedam grenst direct aan Rotterdam en kent veel naoorlogse woningbouw in wijken als Nieuwland, Groenoord en Woudhoek. De typische portiekflats en rijtjeshuizen uit de jaren '50–'70 zijn vaak slecht geïsoleerd. Buitengevelisolatie is hier een effectieve aanpak: geen woonruimteverlies en direct zichtbaar resultaat aan de gevel.",
+      "In Groenoord staan portiekflats en galerijflats van 4–5 verdiepingen — bij VvE-projecten bepalen steigerhoogte en planning een groot deel van de aanpak. In Nieuwland en Woudhoek zijn het vooral rijtjeshuizen en twee-onder-een-kappers waar ETICS met minder steigerwerk is uit te voeren. De vooroorlogse panden in de binnenstad vragen om maatwerk vanwege het beschermde stadsgezicht.",
     woningTypes: [
       "Naoorlogse rijtjeshuizen (Nieuwland, Woudhoek)",
       "Portiekflats en galerijflats (Groenoord)",
@@ -227,7 +232,7 @@ export const locations: LocationData[] = [
       "Twee-onder-een-kapwoningen (Kethel)",
       "VvE-complexen",
     ],
-    afstanden: "Schiedam grenst aan Rotterdam — wij werken in de regio Rotterdam en directe omgeving.",
+    afstanden: "Schiedam grenst aan Rotterdam — wij werken in de directe omgeving. Recent nog in het naastgelegen Vlaardingen.",
     faq: [
       {
         vraag: "Wat kost gevelisolatie in Schiedam?",
@@ -240,16 +245,16 @@ export const locations: LocationData[] = [
           "Of een vergunning nodig is, hangt af van uw woning, locatie en de actuele regels van de gemeente Schiedam. In de historische binnenstad kunnen aanvullende eisen gelden. Controleer altijd de actuele regels via uw gemeente en het Omgevingsloket.",
       },
       {
-        vraag: "Werkt BM klus BV ook in Kethel en Woudhoek?",
+        vraag: "Verschilt de aanpak bij portiekflats en rijtjeshuizen in Schiedam?",
         antwoord:
-          "Ja, wij werken in heel Schiedam inclusief alle wijken: Nieuwland, Groenoord, Woudhoek, Kethel, West-Frankelandsepolder en de binnenstad.",
+          "Ja. Bij portiekflats in Groenoord werken wij samen met het VvE-bestuur en is meer steigerwerk nodig. Bij rijtjeshuizen in Nieuwland of Woudhoek is de gevel lager en de aanpak eenvoudiger. In beide gevallen maken wij een offerte per m² op basis van de opname.",
       },
     ],
     bouwperiode: "Voornamelijk jaren '50–'70, met grote naoorlogse flatwijken.",
     gemiddeldBesparing: "Indicatief €500–€800/jaar besparing bij een portiekflat of rijtjeshuis (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Schiedam biedt de Duurzaamheidslening en werkt samen met het regionaal Energieloket.",
+    subsidieInfo: "Gemeente Schiedam biedt de Duurzaamheidslening en werkt samen met het regionaal Energieloket. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De binnenstad van Schiedam is sinds 2005 aangewezen als beschermd stadsgezicht, waar aanvullende eisen gelden. Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "De portiekflats in Groenoord en Nieuwland zijn veelal ongeïsoleerd. VvE-projecten met ETICS leveren hier grote energiebesparingen op.",
+    energieTip: "Bij de portiekflats in Groenoord is de prijs per woning bij collectieve VvE-aanpak lager dan bij individuele projecten, doordat steigerwerk en voorbereiding worden gedeeld. Zo wordt gevelisolatie ook voor kleinere appartementen bereikbaar.",
     gemeenteWebsite: "https://www.schiedam.nl/duurzaamheid",
     nearbyLocations: ["rotterdam", "vlaardingen", "delft", "maassluis"],
   },
@@ -264,14 +269,14 @@ export const locations: LocationData[] = [
     intro:
       "Veel woningen in de Vlaardingse wijken Holy en Westwijk zijn gebouwd in de jaren '60–'80 met enkelsteens gevels en weinig tot geen isolatie. Buitengevelisolatie (ETICS) pakt hier het probleem aan de buitenkant aan, zonder verbouwing binnenin. Wij beoordelen de staat van de ondergrond en adviseren over isolatiedikte en afwerking.",
     localContext:
-      "Vlaardingen heeft veel naoorlogse woonwijken zoals Holy, Westwijk en de Vettenoordse polder met rijtjeshuizen en flats die veelal een enkelsteens of smalle spouwmuur hebben. Deze woningen zijn bij uitstek geschikt voor buitengevelisolatie. Ook in de oudere stadskernen zijn er mogelijkheden, mits de ondergrond goed beoordeeld wordt.",
+      "In Holy en Westwijk staan compacte rijtjeshuizen uit de jaren '65–'80 met relatief veel geveloppervlak per woning — dat maakt ETICS hier efficiënt toepasbaar. In de Vettenoordse polder zijn de woningen iets groter en gevarieerder. Bij het oude centrum van Vlaardingen controleren wij vooraf of er aanvullende eisen gelden vanwege het gevelbeeld.",
     woningTypes: [
       "Naoorlogse rijtjeshuizen (Holy, Westwijk)",
       "Portiekflats en galerijflats",
       "Eengezinswoningen (Vettenoordse polder)",
       "Vooroorlogse woningen in het centrum",
     ],
-    afstanden: "Vlaardingen ligt op ±13 km van ons kantoor in Rotterdam — wij werken in de regio Rotterdam en omgeving.",
+    afstanden: "Vlaardingen ligt op ±13 km van ons kantoor in Rotterdam. Wij hebben hier meerdere gevelisolatieprojecten uitgevoerd — bekijk de resultaten bij onze werken.",
     faq: [
       {
         vraag: "Wat kost gevelisolatie in Vlaardingen?",
@@ -286,14 +291,14 @@ export const locations: LocationData[] = [
       {
         vraag: "Welke woningen in Holy en Westwijk zijn het meest geschikt?",
         antwoord:
-          "De rijtjeshuizen en portiekflats in Holy en Westwijk (bouwjaar '65–'80) hebben typisch een Rc-waarde van 0,2–0,5. Deze enkelsteens of smalle spouwgevels zijn bij uitstek geschikt voor buitengevelisolatie.",
+          "De rijtjeshuizen en portiekflats in Holy en Westwijk (bouwjaar '65–'80) hebben enkelsteens of smalle spouwgevels met weinig isolatiewaarde. Deze woningen zijn bij uitstek geschikt voor buitengevelisolatie — het verschil in comfort is direct merkbaar.",
       },
     ],
     bouwperiode: "Overwegend jaren '60–'80 met typische groeikernwoningen.",
     gemiddeldBesparing: "Indicatief €550–€800/jaar besparing bij een rijtjeshuis in Holy of Westwijk (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Vlaardingen werkt samen met het regionaal Energieloket voor advies en financieringsmogelijkheden.",
+    subsidieInfo: "Gemeente Vlaardingen werkt samen met het regionaal Energieloket voor advies en financieringsmogelijkheden. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In het oude centrum van Vlaardingen kunnen aanvullende eisen gelden. Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "De rijtjeshuizen in Holy en Westwijk (bouwjaar '65–'80) hebben typisch een Rc-waarde van 0,2–0,5. Na ETICS bereiken zij Rc 3,5+ (conform Bbl).",
+    energieTip: "Wij hebben inmiddels meerdere gevelisolatieprojecten in Vlaardingen uitgevoerd. De ervaring leert dat de enkelsteens gevels in Holy en Westwijk zich goed lenen voor ETICS — de resultaten zijn zichtbaar bij onze werken.",
     gemeenteWebsite: "https://www.vlaardingen.nl/duurzaamheid",
     nearbyLocations: ["schiedam", "maassluis", "rotterdam", "delft"],
   },
@@ -308,7 +313,7 @@ export const locations: LocationData[] = [
     intro:
       "Leiden kent een scherp contrast: in de historische binnenstad staan grachtenpanden waar maatwerk essentieel is, terwijl naoorlogse wijken als Merenwijk en Stevenshof rijtjeshuizen en flats hebben die baat hebben bij standaard ETICS. Wij komen langs om de situatie te bekijken en adviseren welke aanpak past — ook als uw woning in een beschermd stadsgezicht ligt.",
     localContext:
-      "Leiden is een historische universiteitsstad met een gevarieerd woningbestand. De stad heeft twee beschermde stadsgezichten — de Binnenstad (189,7 ha) en de Zuidelijke Schil (141,2 ha) — waarvoor maatwerk nodig is. In de naoorlogse wijk Merenwijk (jaren '70) en Stevenshof (jaren '80–'90) staan veel rijtjeshuizen en flats met slechte isolatiewaarden. Buitengevelisolatie biedt hier een duurzame oplossing.",
+      "De grachtenpanden en herenhuizen in de Leidse binnenstad hebben vaak massieve gevels zonder spouw — buitengevelisolatie is dan vaak een praktische oplossing, maar vraagt om afstemming met de gemeente. In Merenwijk en Stevenshof staan naoorlogse rijtjeshuizen en flats met enkelsteens gevels, waar standaard ETICS efficiënt is uit te voeren.",
     woningTypes: [
       "Naoorlogse rijtjeshuizen (Merenwijk, Stevenshof)",
       "Portiekflats en galerijflats (Leiden-Noord)",
@@ -316,7 +321,7 @@ export const locations: LocationData[] = [
       "Eengezinswoningen (Professorenwijk, De Kooi)",
       "VvE-complexen",
     ],
-    afstanden: "Leiden ligt op ±35 km van ons kantoor in Rotterdam — wij werken in de regio Rotterdam en omgeving.",
+    afstanden: "Leiden ligt op ±35 km van ons kantoor in Rotterdam. Wij werken ook in de regio — recent nog in het nabijgelegen Katwijk.",
     faq: [
       {
         vraag: "Wat kost gevelisolatie in Leiden?",
@@ -326,17 +331,17 @@ export const locations: LocationData[] = [
       {
         vraag: "Mag ik mijn gevel isoleren in de Leidse binnenstad?",
         antwoord:
-          "Dat hangt af van de exacte locatie en het type pand. In het beschermd stadsgezicht gelden strengere regels. Wij checken vooraf bij de gemeente Leiden welke mogelijkheden er zijn en of een vergunning nodig is.",
+          "Dat hangt af van de exacte locatie en het type pand. In het beschermd stadsgezicht gelden strengere regels. Wij controleren vooraf bij de gemeente Leiden welke mogelijkheden er zijn en of een vergunning nodig is.",
       },
       {
-        vraag: "Werkt BM klus BV ook in Leiderdorp en Oegstgeest?",
+        vraag: "Is buitengevelisolatie geschikt voor grachtenpanden met massief metselwerk?",
         antwoord:
-          "Ja, ons werkgebied omvat heel Leiden en de omliggende gemeenten: Leiderdorp, Oegstgeest, Voorschoten en Zoeterwoude.",
+          "Ja, bij massieve gevels zonder spouw is ETICS vaak een praktische buitenisolatie-optie. De bevestiging moet worden afgestemd op het type metselwerk en de staat van de voegen. In beschermde stadsgezichten gelden aanvullende eisen aan het uiterlijk — wij controleren dit vooraf bij de gemeente.",
       },
     ],
     bouwperiode: "Mix van historische grachtenpanden, Merenwijk (jaren '70) en Stevenshof (jaren '80–'90).",
     gemiddeldBesparing: "Indicatief €500–€850/jaar besparing bij een rijtjeshuis in Merenwijk of Stevenshof (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Leiden biedt de Leidse Duurzaamheidslening en een gratis energiescan voor woningeigenaren.",
+    subsidieInfo: "Gemeente Leiden biedt de Leidse Duurzaamheidslening en een gratis energiescan voor woningeigenaren. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. Leiden heeft twee beschermde stadsgezichten: de Binnenstad en de Zuidelijke Schil (Professorenwijk, Tuinstadwijk). Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Veel grachtenpanden in Leiden hebben massieve gevels zonder spouw. ETICS is hier vaak de meest praktische optie, mits de gemeente toestemming geeft voor het gewijzigde gevelbeeld.",
     gemeenteWebsite: "https://www.leiden.nl/duurzaam",
@@ -353,7 +358,7 @@ export const locations: LocationData[] = [
     intro:
       "Rond de historische binnenstad van Gouda — met zijn kenmerkende gevels, grachtjes en hofjes — liggen naoorlogse uitbreidingswijken als Goverwelle, Bloemendaal en Plaswijckbuurt. Hier staan rijtjeshuizen en flats uit de jaren '60–'80 die doorgaans slecht geïsoleerd zijn. Wij bekijken de gevel ter plekke en stellen een passende ETICS-oplossing voor.",
     localContext:
-      "Gouda kent naast de historische binnenstad veel naoorlogse uitbreidingswijken zoals Goverwelle, Bloemendaal en de Plaswijckbuurt. De woningen in deze wijken — vaak rijtjeshuizen met enkelsteens gevels — zijn bij uitstek geschikt voor buitengevelisolatie. In de binnenstad gelden aanvullende regels vanwege het beschermde stadsgezicht.",
+      "In Goverwelle en Bloemendaal staan rijtjeshuizen met enkelsteens gevels die zich goed lenen voor standaard ETICS. In de beschermde binnenstad van Gouda zijn de percelen vaak smal en de gevels aaneengebouwd — hier is ETICS vooral op vrije geveldelen een praktische oplossing en vraagt de uitvoering om afstemming met de gemeente.",
     woningTypes: [
       "Naoorlogse rijtjeshuizen (Goverwelle, Bloemendaal)",
       "Portiekflats (Kort Haarlem, Oost)",
@@ -375,14 +380,14 @@ export const locations: LocationData[] = [
       {
         vraag: "Zijn de jaren '70-rijtjeshuizen in Goverwelle geschikt voor ETICS?",
         antwoord:
-          "Ja, deze woningen hebben een typische Rc-waarde van 0,3–0,6. De enkelsteens gevels zijn bij uitstek geschikt voor buitengevelisolatie. ETICS brengt de isolatiewaarde naar Rc 3,5+ (conform Bbl) en verbetert het energielabel aanzienlijk.",
+          "Ja, deze woningen hebben enkelsteens gevels met weinig isolatiewaarde. Ze zijn bij uitstek geschikt voor buitengevelisolatie — na ETICS verbetert zowel het wooncomfort als het energielabel.",
       },
     ],
     bouwperiode: "Naoorlogse uitbreidingswijken (jaren '60–'80) en historische binnenstad.",
     gemiddeldBesparing: "Indicatief €550–€800/jaar besparing bij een rijtjeshuis in Goverwelle of Bloemendaal (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Gouda biedt de Duurzaamheidslening en het Energieloket Midden-Holland.",
+    subsidieInfo: "Gemeente Gouda biedt de Duurzaamheidslening en het Energieloket Midden-Holland. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De binnenstad van Gouda is rijksbeschermd stadsgezicht (sinds 1978). Daarnaast is de Tuindorp Josephbuurt gemeentelijk beschermd. Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "De jaren '70-rijtjeshuizen in Goverwelle hebben een typische Rc-waarde van 0,3–0,6. Buitengevelisolatie brengt dit naar Rc 3,5+ (conform Bbl) en verbetert het energielabel aanzienlijk.",
+    energieTip: "De rijtjeshuizen in Goverwelle en Bloemendaal zijn gebouwd met minimale gevelisolatie. Na ETICS merkt u het verschil direct: een warmer huis in de winter en lagere stookkosten.",
     gemeenteWebsite: "https://www.gouda.nl/duurzaamheid",
     nearbyLocations: ["zoetermeer", "alphen-aan-den-rijn", "rotterdam"],
   },
@@ -397,12 +402,12 @@ export const locations: LocationData[] = [
     intro:
       "Als groeikern groeide Zoetermeer vanaf de jaren '60 explosief, met grote aantallen rijtjeshuizen en flats in Palenstein, Meerzicht en Buytenwegh. Deze woningen werden snel gebouwd met dunne, vaak ongeïsoleerde gevels. Buitengevelisolatie is hier een bewezen manier om het comfort te verbeteren en energiekosten te verlagen.",
     localContext:
-      "Zoetermeer is vanaf 1962 aangewezen als groeikern van Den Haag en grotendeels gebouwd in de jaren '66–'90. De wijken Palenstein (1966), Meerzicht (1969), Buytenwegh (1974) en Seghwaert bestaan voornamelijk uit rijtjeshuizen en portiekflats met enkelsteens of smalle spouwgevels. Deze woningen zijn bij uitstek geschikt voor buitengevelisolatie — er is veel oppervlak te winnen met relatief eenvoudige geveldetaillering.",
+      "Zoetermeer is vanaf 1962 ontwikkeld als groeikern van Den Haag. Veel woningen in Palenstein (1966), Meerzicht (1969) en Buytenwegh (1974) zijn in systeembouw opgetrokken — snel gebouwd, maar nauwelijks geïsoleerd. Buitengevelisolatie is bij deze woningen bijzonder effectief. Wij controleren bij de opname of de bevestiging op het bestaande geveltype is afgestemd.",
     woningTypes: [
       "Rijtjeshuizen (Palenstein, Meerzicht, Buytenwegh)",
       "Portiekflats en galerijflats (Seghwaert)",
       "Eengezinswoningen (Rokkeveen, Oosterheem)",
-      "VvE-complexen",
+      "VvE-complexen (galerijflats Seghwaert, portiekflats Palenstein)",
     ],
     afstanden: "Zoetermeer ligt op ±20 km van ons kantoor in Rotterdam — wij werken in de regio Rotterdam en omgeving.",
     faq: [
@@ -419,14 +424,19 @@ export const locations: LocationData[] = [
       {
         vraag: "Werkt BM klus BV ook samen met VvE's in Zoetermeer?",
         antwoord:
-          "Ja, wij werken regelmatig samen met VvE's. Wij maken een offerte per m² op basis van het totale geveloppervlak en stemmen de planning af met het VvE-bestuur.",
+          "Ja, bij galerijflats en portiekflats in wijken als Seghwaert en Palenstein werken wij samen met het VvE-bestuur. Wij maken een offerte per m² voor het hele complex, stemmen de planning af en zorgen dat bewoners zo min mogelijk hinder ondervinden.",
+      },
+      {
+        vraag: "Zijn systeembouwwoningen in Zoetermeer geschikt voor buitengevelisolatie?",
+        antwoord:
+          "Ja, veel woningen in Zoetermeer zijn in systeembouw opgetrokken met prefab geveldelen. Deze constructies lenen zich goed voor ETICS. Wel moet de bevestiging zijn afgestemd op het type gevel — wij beoordelen dit bij de opname op locatie.",
       },
     ],
     bouwperiode: "Grotendeels jaren '66–'90, gebouwd als groeikern van Den Haag.",
     gemiddeldBesparing: "Indicatief €600–€900/jaar besparing bij een typische groeikernwoning (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Zoetermeer biedt het Zoetermeers Duurzaamheidsfonds en de Energiecoach aan huis.",
-    vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "Als groeikern zijn veel woningen in Zoetermeer snel gebouwd met minimale isolatie. ETICS is bijzonder effectief bij de typische enkelsteens gevels in Palenstein en Meerzicht.",
+    subsidieInfo: "Gemeente Zoetermeer biedt het Zoetermeers Duurzaamheidsfonds en de Energiecoach aan huis. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
+    vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In de meeste woonwijken van Zoetermeer spelen beschermde stadsgezichten geen rol, wat het vergunningsproces doorgaans eenvoudiger maakt. Controleer de actuele regels via het Omgevingsloket.",
+    energieTip: "Bij systeembouwwoningen letten wij op punten die typisch zijn voor dit bouwtype: koudebruggen bij balkons en galerijen, naden tussen bouwdelen en de hechting van de isolatie op de bestaande gevel. Een grondige opname vooraf voorkomt verrassingen bij de uitvoering.",
     gemeenteWebsite: "https://www.zoetermeer.nl/duurzaamheid",
     nearbyLocations: ["den-haag", "delft", "gouda", "leidschendam-voorburg", "leiden"],
   },
@@ -441,7 +451,7 @@ export const locations: LocationData[] = [
     intro:
       "Capelle aan den IJssel groeide in de jaren '70 als overloopgebied van Rotterdam van 9.000 naar ruim 57.000 inwoners. In Schollevaar en Oostgaarde staan duizenden portiekflats en rijtjeshuizen die destijds snel werden gebouwd — veelal zonder of met minimale gevelisolatie. ETICS is voor deze woningen een effectieve en veelgekozen oplossing.",
     localContext:
-      "Capelle aan den IJssel grenst direct aan Rotterdam en is vanaf de jaren '70 snel uitgebreid met wijken als Schollevaar (1970+), Oostgaarde en 's-Gravenland. De typische portiekflats, galerijflats en rijtjeshuizen uit de jaren '70–'85 hebben vaak ongeïsoleerde of slecht geïsoleerde gevels. Buitengevelisolatie is hier een effectieve en veelgekozen oplossing.",
+      "Schollevaar en Oostgaarde bestaan uit grote flatcomplexen — bij deze projecten is een heldere VvE-afstemming en projectplanning essentieel. In 's-Gravenland staan kleinere rijtjeshuizen waar de aanpak per woning of per straat wordt bepaald. De gevelconstructie is in beide wijken vergelijkbaar: enkelsteens of smalle spouw, snel gebouwd in de jaren '70–'80.",
     woningTypes: [
       "Portiekflats en galerijflats (Schollevaar, Oostgaarde)",
       "Naoorlogse rijtjeshuizen ('s-Gravenland)",
@@ -468,9 +478,9 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Voornamelijk jaren '70–'85, als uitbreiding van Rotterdam.",
     gemiddeldBesparing: "Indicatief €600–€850/jaar besparing bij een portiekflat of rijtjeshuis (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Capelle aan den IJssel biedt een Duurzaamheidslening en werkt samen met het Energieloket.",
-    vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "De portiekflats in Schollevaar en Oostgaarde (bouwjaar '70–'85) zijn veelal volledig ongeïsoleerd. VvE-projecten met ETICS leveren direct merkbare comfort- en energieverbetering.",
+    subsidieInfo: "Gemeente Capelle aan den IJssel biedt een Duurzaamheidslening en werkt samen met het Energieloket. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
+    vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In de woonwijken van Capelle aan den IJssel spelen beschermde stadsgezichten geen rol, wat het vergunningsproces doorgaans eenvoudiger maakt. Controleer de actuele regels via het Omgevingsloket.",
+    energieTip: "Bij de grotere flatcomplexen in Capelle kan een VvE-project meerdere weken duren. Door vooraf een duidelijke planning en communicatie op te stellen zorgen wij dat de overlast voor bewoners beperkt blijft en het project soepel verloopt.",
     gemeenteWebsite: "https://www.capelleaandenijssel.nl/duurzaamheid",
     nearbyLocations: ["rotterdam", "ridderkerk", "hendrik-ido-ambacht"],
   },
@@ -485,14 +495,14 @@ export const locations: LocationData[] = [
     intro:
       "Spijkenisse werd in 1966 aangewezen als groeikern en kreeg in korte tijd duizenden woningen erbij. De rijtjeshuizen en flats uit de jaren '70–'85 in wijken als de Akkers, Waterland en Vogelenzang hebben grote, ongeïsoleerde geveloppervlakken — ideaal voor buitengevelisolatie met sierpleister of steenstrips als afwerking.",
     localContext:
-      "Spijkenisse is als groeikern sterk uitgebreid in de jaren '70–'80 met grote woonwijken als de Akkers, Groenewoud en Waterland. De massale woningbouw uit deze periode — rijtjeshuizen, twee-onder-een-kapwoningen en flats — heeft veelal enkelsteens of smalle spouwgevels zonder noemenswaardige isolatie. Buitengevelisolatie levert hier direct merkbaar comfort en energiebesparing op.",
+      "De woningen in de Akkers en Groenewoud zijn grotendeels in dezelfde periode en bouwstijl opgetrokken — grote aantallen identieke rijtjeshuizen met enkelsteens gevels. Dat maakt collectieve aanpak per straat of blok bijzonder efficiënt: dezelfde isolatie-opbouw en hetzelfde steigerwerk voor een reeks woningen tegelijk. In Waterland en Vogelenzang staan meer twee-onder-een-kappers waar de aanpak per woning wordt bepaald.",
     woningTypes: [
       "Rijtjeshuizen (de Akkers, Groenewoud)",
       "Twee-onder-een-kapwoningen (Waterland)",
-      "Portiekflats en galerijflats",
+      "Portiekflats en galerijflats (de Akkers, Groenewoud)",
       "Eengezinswoningen (Vogelenzang, de Hoek)",
     ],
-    afstanden: "Spijkenisse ligt op ±20 km van ons kantoor in Rotterdam — wij werken in de regio Rotterdam en omgeving.",
+    afstanden: "Spijkenisse ligt op ±20 km van ons kantoor in Rotterdam. Wij werken ook in de omgeving — recent nog in Nieuw-Beijerland.",
     faq: [
       {
         vraag: "Wat kost gevelisolatie in Spijkenisse?",
@@ -505,16 +515,16 @@ export const locations: LocationData[] = [
           "Ja, de typische groeikernwoningen in Spijkenisse (bouwjaar '70–'85) zijn zeer geschikt voor buitengevelisolatie. De enkelsteens of smalle spouwgevels bieden weinig isolatiewaarde — ETICS brengt de gevel direct op het gewenste niveau.",
       },
       {
-        vraag: "Werkt BM klus BV ook in andere kernen van Nissewaard?",
+        vraag: "Kan een hele straat of blok tegelijk gevelisolatie laten uitvoeren?",
         antwoord:
-          "Ja, ons werkgebied omvat de hele gemeente Nissewaard: Spijkenisse, Hekelingen, Zuidland, Abbenbroek en Heenvliet. Na een opname op locatie ontvangt u een vaste offerte per m².",
+          "Ja, bij identieke woningen (zoals de rijtjeshuizen in de Akkers of Groenewoud) is een gezamenlijke aanpak per straat of blok bijzonder efficiënt. Dezelfde isolatie-opbouw en hetzelfde steigerwerk drukken de kosten per woning. Wij maken een totaalofferte en stemmen de planning af met alle bewoners.",
       },
     ],
     bouwperiode: "Grotendeels jaren '70–'85, gebouwd als groeikern (aangewezen in 1966).",
     gemiddeldBesparing: "Indicatief €550–€850/jaar besparing bij een typische groeikernwoning (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Nissewaard biedt advies via het Energieloket Voorne-Putten.",
-    vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "De groeikernwoningen in de Akkers en Groenewoud (bouwjaar '72–'85) hebben standaard minimale isolatie. ETICS verbetert de Rc-waarde naar 3,5+ (conform Bbl) en het energielabel met 1–3 stappen.",
+    subsidieInfo: "Gemeente Nissewaard biedt advies via het Energieloket Voorne-Putten. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
+    vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In de woonwijken van Spijkenisse spelen beschermde stadsgezichten geen rol, wat het vergunningsproces doorgaans eenvoudiger maakt. Controleer de actuele regels via het Omgevingsloket.",
+    energieTip: "De groeikernwoningen in Spijkenisse zijn destijds gebouwd met minimale isolatie. Na buitengevelisolatie merkt u het verschil direct: minder tocht, een gelijkmatigere temperatuur en lagere stookkosten.",
     gemeenteWebsite: "https://www.nissewaard.nl/duurzaamheid",
     nearbyLocations: ["hellevoetsluis", "barendrecht", "rotterdam"],
   },
@@ -556,7 +566,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Mix van oudere dorpsbebouwing en vinex-nieuwbouw (Carnisselande, 1997–2004).",
     gemiddeldBesparing: "Indicatief €400–€700/jaar besparing. Nieuwere woningen (Carnisselande) hebben een lagere besparing dan oudere dorpswoningen (bron: Milieu Centraal).",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Barendrecht biedt de Duurzaamheidslening via het Energieloket BAR-gemeenten.",
+    subsidieInfo: "Gemeente Barendrecht biedt de Duurzaamheidslening via het Energieloket BAR-gemeenten. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De oudere dorpswoningen in het centrum van Barendrecht profiteren het meest. Woningen in Carnisselande (vinex, 1997–2004) hebben vaak al een betere basisisolatie — een energiescan bepaalt of ETICS meerwaarde biedt.",
     gemeenteWebsite: "https://www.barendrecht.nl/duurzaamheid",
@@ -600,7 +610,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Overwegend jaren '50–'70 met naoorlogse wijken op IJsselmonde.",
     gemiddeldBesparing: "Indicatief €550–€850/jaar besparing bij een naoorlogs rijtjeshuis (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Ridderkerk biedt advies via het Energieloket BAR-gemeenten.",
+    subsidieInfo: "Gemeente Ridderkerk biedt advies via het Energieloket BAR-gemeenten. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In historische dorpskernen kunnen aanvullende eisen gelden. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De naoorlogse woningen in Drievliet en Bolnes hebben enkelsteens gevels met een Rc-waarde van 0,2–0,4. ETICS is hier doorgaans de meest effectieve isolatiemethode.",
     gemeenteWebsite: "https://www.ridderkerk.nl/duurzaamheid",
@@ -644,7 +654,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Naoorlogse uitbreidingswijken (jaren '60–'80) en nieuwere vinexlocaties.",
     gemiddeldBesparing: "Indicatief €550–€800/jaar besparing bij een rijtjeshuis in Ridderveld of De Baronie (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Alphen aan den Rijn biedt de Duurzaamheidslening en een gratis energieadvies.",
+    subsidieInfo: "Gemeente Alphen aan den Rijn biedt de Duurzaamheidslening en een gratis energieadvies. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In het centrum van Alphen aan den Rijn kunnen aanvullende regels gelden. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De jaren '70-woningen in Ridderveld en De Baronie hebben een Rc-waarde van 0,3–0,5. Na ETICS stijgt deze naar 3,5+ (conform Bbl) en verbetert het energielabel aanzienlijk.",
     gemeenteWebsite: "https://www.alphenaandenrijn.nl/duurzaamheid",
@@ -661,7 +671,7 @@ export const locations: LocationData[] = [
     intro:
       "Tussen Rotterdam en Hoek van Holland ligt Maassluis — een compacte stad met naoorlogse portiekflats in Sluispolder en nieuwere eengezinswoningen in het Balkon en de Dijkpolder. Bij gevelisolatie is het hier extra belangrijk om de plint-zone en vochthuishouding goed te controleren. Wij doen dit altijd tijdens de opname.",
     localContext:
-      "Maassluis ligt tussen Rotterdam en Hoek van Holland en kent een compacte mix van naoorlogse woningbouw en nieuwere uitbreidingen. De wijk Sluispolder bevat veel naoorlogse portiekflats en rijtjeshuizen die baat hebben bij buitengevelisolatie. Het Balkon (2007+) en de Dijkpolder zijn nieuwere wijken met modernere woningen, maar ook daar kan ETICS meerwaarde bieden bij onvoldoende gevuld spouwwerk.",
+      "In Sluispolder staan naoorlogse portiekflats en rijtjeshuizen uit de jaren '60–'80 die doorgaans weinig tot geen gevelisolatie hebben — hier is ETICS het meest effectief. Het Balkon en de Dijkpolder zijn nieuwer en hebben veelal een betere basisisolatie. Bij de opname beoordelen wij of buitengevelisolatie hier meerwaarde biedt.",
     woningTypes: [
       "Naoorlogse rijtjeshuizen en portiekflats (Sluispolder)",
       "Eengezinswoningen (Dijkpolder, het Balkon)",
@@ -676,9 +686,9 @@ export const locations: LocationData[] = [
           "De prijs hangt af van de oppervlakte en afwerking. Bij naoorlogse portiekflats in Sluispolder is de plint-zone een aandachtspunt dat de uitvoering kan beïnvloeden. Wij controleren altijd de vochthuishouding vóór isolatie en verwerken dit in een gespecificeerde offerte. Bekijk ook de richtprijzen op onze kostenpagina.",
       },
       {
-        vraag: "Werkt BM klus BV ook in Maasland en Hoek van Holland?",
+        vraag: "Heeft mijn nieuwbouwwoning in het Balkon of Dijkpolder ook baat bij gevelisolatie?",
         antwoord:
-          "Ja, ons werkgebied omvat heel Maassluis en de omliggende gebieden, inclusief Maasland en Hoek van Holland.",
+          "Dat hangt af van de huidige isolatiewaarde van de gevel. Nieuwere woningen hebben vaak al spouwmuurisolatie, maar als deze onvoldoende of slecht is aangebracht kan buitengevelisolatie alsnog meerwaarde bieden. Wij beoordelen dit bij de opname op locatie.",
       },
       {
         vraag: "Waar let BM klus BV op bij gevelisolatie in Maassluis?",
@@ -688,9 +698,9 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Overwegend jaren '60–'80 met compacte naoorlogse wijken.",
     gemiddeldBesparing: "Indicatief €500–€750/jaar besparing bij een rijtjeshuis (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Maassluis biedt advies via het regionaal Energieloket.",
+    subsidieInfo: "Gemeente Maassluis biedt advies via het regionaal Energieloket. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In het oude centrum van Maassluis kunnen aanvullende eisen gelden. Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "De rijtjeshuizen in Sluispolder en het Balkon (bouwjaar '60–'80) zijn typisch ongeïsoleerd. Bij vochtproblematiek is een voorafgaand vochtonderzoek noodzakelijk — wij controleren dit bij de opname.",
+    energieTip: "Bij de naoorlogse woningen in Sluispolder besteden wij extra aandacht aan de vochthuishouding — vochtproblemen moeten vooraf worden opgelost zodat de isolatie duurzaam blijft. Wij controleren dit altijd bij de opname.",
     gemeenteWebsite: "https://www.maassluis.nl/duurzaamheid",
     nearbyLocations: ["vlaardingen", "schiedam", "hellevoetsluis", "delft"],
   },
@@ -732,7 +742,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Mix van historische vestingbouw en naoorlogse uitbreiding (jaren '70–'90).",
     gemiddeldBesparing: "Indicatief €500–€750/jaar besparing bij een eengezinswoning (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Voorne aan Zee biedt advies via het Energieloket Voorne-Putten.",
+    subsidieInfo: "Gemeente Voorne aan Zee biedt advies via het Energieloket Voorne-Putten. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De Vesting van Hellevoetsluis is sinds 1985 beschermd dorpsgezicht (68,9 ha), hier gelden aanvullende eisen. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Bij woningen op Voorne-Putten kan vocht een aandachtspunt zijn. Wij controleren bij de opname altijd op vochtproblemen en ventilatie, zodat ETICS duurzaam en veilig wordt aangebracht.",
     gemeenteWebsite: "https://www.voornenaanzee.nl/duurzaamheid",
@@ -749,7 +759,7 @@ export const locations: LocationData[] = [
     intro:
       "Als grootste stad van West-Brabant heeft Breda een omvangrijk woningbestand met portiekflats en rijtjeshuizen in wijken als Hoge Vucht, Brabantpark en Geeren-Zuid. Voor VvE-complexen werken wij met een heldere projectaanpak; voor particulieren beginnen wij met een opname op locatie en offerte per m².",
     localContext:
-      "Breda is de grootste stad in West-Brabant met een gevarieerd woningbestand. De naoorlogse wijken Hoge Vucht, Brabantpark en Geeren-Zuid bevatten veel portiekflats en rijtjeshuizen die toe zijn aan een isolatie-upgrade. Ook in Princenhage en Tuinzigt zijn er veel woningen met ongeïsoleerde gevels. Buitengevelisolatie is hier een populaire en effectieve maatregel.",
+      "In Hoge Vucht staan portiekflats van 4–5 verdiepingen met enkelsteens gevels — hier bepalen steigerhoogte en VvE-afstemming een groot deel van de projectaanpak. In Brabantpark en Geeren-Zuid zijn het vooral laagbouwrijtjeshuizen (2–3 lagen) waar ETICS met minder steigerwerk is uit te voeren. De vooroorlogse woningen in de binnenstad en Ginneken vragen om maatwerk vanwege het beschermde stadsgezicht.",
     woningTypes: [
       "Portiekflats en galerijflats (Hoge Vucht, Geeren-Zuid)",
       "Naoorlogse rijtjeshuizen (Brabantpark)",
@@ -757,7 +767,7 @@ export const locations: LocationData[] = [
       "Twee-onder-een-kapwoningen",
       "VvE-complexen",
     ],
-    afstanden: "Breda ligt op ±55 km van ons kantoor in Rotterdam — wij werken in de regio Rotterdam en omgeving.",
+    afstanden: "Breda ligt op ±55 km van ons kantoor in Rotterdam. Wij werken ook in West-Brabant — recent nog in het nabijgelegen Halsteren.",
     faq: [
       {
         vraag: "Wat kost gevelisolatie in Breda?",
@@ -770,16 +780,21 @@ export const locations: LocationData[] = [
           "Ja, Breda (±55 km) valt binnen ons werkgebied rond Rotterdam. Wij werken regelmatig in West-Brabant. Na een opname op locatie ontvangt u een vaste offerte per m².",
       },
       {
-        vraag: "Werkt BM klus BV ook in Oosterhout en Etten-Leur?",
+        vraag: "Heeft de hoogte van portiekflats invloed op de kosten van gevelisolatie?",
         antwoord:
-          "Ja, ons werkgebied omvat heel Breda en omliggende gemeenten: Oosterhout, Etten-Leur, Prinsenbeek en Teteringen.",
+          "Ja, bij portiekflats van 4–5 verdiepingen (zoals in Hoge Vucht) is meer steigerwerk nodig, wat de kosten verhoogt. Bij collectieve VvE-aanpak worden de steigerkosten over alle woningen verdeeld, wat de prijs per appartement drukt. Wij geven dit inzichtelijk in de offerte.",
+      },
+      {
+        vraag: "Mag ik gevelisolatie aanbrengen bij een woning in het beschermde stadsgezicht van Breda?",
+        antwoord:
+          "Voor buitengevelisolatie in een beschermd stadsgezicht gelden aanvullende eisen aan materiaal, kleur en detaillering. Breda heeft beschermde gezichten in het centrum en Ginneken. Wij controleren vooraf bij de gemeente welke mogelijkheden er zijn en adviseren over een passende uitvoering. Controleer ook zelf de actuele regels via het Omgevingsloket.",
       },
     ],
     bouwperiode: "Grote naoorlogse wijken (jaren '50–'70) en nieuwere uitbreidingswijken.",
     gemiddeldBesparing: "Indicatief €600–€900/jaar besparing bij een naoorlogs rijtjeshuis of portiekflat (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Breda biedt de Toekomstbestendig Wonen Lening en gratis advies via de Energie Bespaar Coach.",
+    subsidieInfo: "Gemeente Breda biedt de Toekomstbestendig Wonen Lening en gratis advies via de Energie Bespaar Coach. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De binnenstad van Breda heeft drie beschermde gezichten: het centrum (sinds 1967), de uitbreiding (2013) en Ginneken (1991). Controleer de actuele regels via het Omgevingsloket.",
-    energieTip: "De portiekflats in Hoge Vucht en Geeren-Zuid behoren tot de slechtst geïsoleerde woningen in West-Brabant. Collectieve ETICS-projecten via de VvE leveren hier de grootste besparingen op.",
+    energieTip: "De naoorlogse portiekflats in Hoge Vucht en Geeren-Zuid hebben doorgaans enkelsteens gevels met een zeer lage isolatiewaarde. Bij collectieve VvE-projecten is de prijs per woning lager dan bij individuele aanpak, doordat steigerwerk en voorbereiding worden gedeeld.",
     gemeenteWebsite: "https://www.breda.nl/duurzaam",
     nearbyLocations: ["bergen-op-zoom", "roosendaal"],
   },
@@ -821,7 +836,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Naoorlogse uitbreidingswijken (jaren '60–'80) naast historische vestingstad.",
     gemiddeldBesparing: "Indicatief €500–€800/jaar besparing bij een eengezinswoning of rijtjeshuis (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Bergen op Zoom biedt de Duurzaamheidslening en advies via het West-Brabants Energieloket.",
+    subsidieInfo: "Gemeente Bergen op Zoom biedt de Duurzaamheidslening en advies via het West-Brabants Energieloket. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De binnenstad van Bergen op Zoom is sinds 1986 rijksbeschermd stadsgezicht (49,9 ha), hier gelden aanvullende eisen. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Bergen op Zoom ligt nabij het Markiezaatsmeer en de Oosterschelde. Bij vochtgevoelige gevels controleren wij vooraf op vochtproblemen, zodat ETICS duurzaam en veilig wordt aangebracht.",
     gemeenteWebsite: "https://www.bergenopzoom.nl/duurzaamheid",
@@ -865,7 +880,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Overwegend jaren '60–'80 met typische naoorlogse woonwijken.",
     gemiddeldBesparing: "Indicatief €550–€800/jaar besparing bij een rijtjeshuis in Kroeven of Langdonk (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Roosendaal biedt advies via het West-Brabants Energieloket en de gemeentelijke Duurzaamheidslening.",
+    subsidieInfo: "Gemeente Roosendaal biedt advies via het West-Brabants Energieloket en de gemeentelijke Duurzaamheidslening. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De naoorlogse rijtjeshuizen in Kroeven en Tolberg hebben een compacte gevelindeling die ETICS bijzonder kosteneffectief maakt — relatief veel m² oppervlak per woning.",
     gemeenteWebsite: "https://www.roosendaal.nl/verduurzamen-van-uw-woning",
@@ -914,7 +929,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Mix van vooroorlogse bebouwing (Voorburg) en naoorlogse uitbreidingswijken (Leidschendam, jaren '60–'80).",
     gemiddeldBesparing: "Indicatief €500–€800/jaar besparing bij een rijtjeshuis of bovenwoning (bron: Milieu Centraal). De werkelijke besparing verschilt per woning.",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Leidschendam-Voorburg biedt de Duurzaamheidslening en het Energieloket Haaglanden.",
+    subsidieInfo: "Gemeente Leidschendam-Voorburg biedt de Duurzaamheidslening en het Energieloket Haaglanden. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. In Voorburg zijn historische panden waarvoor aanvullende welstandseisen kunnen gelden. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De jaren '70-flats in Leidschendam-Noord hebben veelal ongeïsoleerde gevels. VvE-projecten met ETICS zijn hier een effectieve oplossing.",
     gemeenteWebsite: "https://www.lv.nl/duurzaam-wonen-en-leven",
@@ -958,7 +973,7 @@ export const locations: LocationData[] = [
     ],
     bouwperiode: "Mix van oudere dorpsbebouwing en nieuwbouw (Volgerlanden, vanaf 2005).",
     gemiddeldBesparing: "Indicatief €400–€700/jaar besparing. Oudere woningen in Oud-Ambacht profiteren het meest (bron: Milieu Centraal).",
-    subsidieInfo: "ISDE-subsidie voor gevelisolatie: €20,25/m² (bij één maatregel) of €40,50/m² (bij combinatie met andere isolatie). Min. 10 m², Rd ≥ 3,5 m²K/W. Raadpleeg rvo.nl voor actuele voorwaarden. Gemeente Hendrik-Ido-Ambacht biedt advies via het Energieloket Drechtsteden.",
+    subsidieInfo: "Gemeente Hendrik-Ido-Ambacht biedt advies via het Energieloket Drechtsteden. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiepakket. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De woningen in Volgerlanden (2005+) hebben een moderne isolatiestandaard. De oudere woningen in Oud-Ambacht en de Sandelingen (jaren '60–'80) hebben echter een lage Rc-waarde en profiteren sterk van ETICS.",
     gemeenteWebsite: "https://www.h-i-ambacht.nl/Inwoners/Alle_onderwerpen_Inwoners/Duurzaamheid",

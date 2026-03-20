@@ -623,7 +623,7 @@ export default function GevelSchilderenPage() {
                   <div className="flex flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex flex-wrap gap-x-5 gap-y-2">
                       {[
-                        "Snelle reactie tijdens openingstijden",
+                        "Persoonlijk contact per telefoon of WhatsApp",
                         "Opname ter plaatse",
                         "Duidelijke offerte met scope",
                       ].map((t) => (

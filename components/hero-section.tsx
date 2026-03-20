@@ -98,7 +98,7 @@ export default function HeroSection() {
             {/* Buttons */}
             <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
               <Link
-                href="/contact/"
+                href="#offerte"
                 className="group inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/15 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all hover:border-primary/60 hover:bg-primary/25"
               >
                 Offerte aanvragen
