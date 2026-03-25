@@ -750,6 +750,66 @@ export default async function GevelisolatieLocationPage({
           )
         })()}
 
+        {/* ── Featured project (Rotterdam Julianastraat) ── */}
+        {slug === "rotterdam" && (() => {
+          const rotterdamProject = projects.find(
+            (p) => p.slug === "rotterdam-julianastraat-aanbouw-isolatie-4cm-2026",
+          )
+          if (!rotterdamProject) return null
+          return (
+            <div className="below-fold">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <section className="py-16 sm:py-20">
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="h-px w-10 bg-primary" />
+                    <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                      Uitgevoerd project
+                    </span>
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                    Project in{" "}
+                    <span className="text-primary">Rotterdam</span>
+                  </h2>
+
+                  <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
+                    {/* Before / After slider */}
+                    <div className="aspect-[4/3] sm:aspect-auto sm:h-full">
+                      <LazyBeforeAfterSlider
+                        beforeBaseName="rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-01"
+                        afterBaseName="rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01"
+                        beforeAlt="Rotterdam Julianastraat aanbouw isolatie – voor de werken"
+                        afterAlt="Rotterdam Julianastraat aanbouw isolatie – na de werken"
+                        dir="/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026"
+                        sizes="(max-width: 640px) 100vw, 360px"
+                        className="h-full w-full"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <Link
+                      href={rotterdamProject.projectUrl}
+                      className="group flex flex-col justify-center gap-3 p-6 transition-colors hover:bg-secondary/20 sm:p-8"
+                    >
+                      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                        {rotterdamProject.meta.city} · {rotterdamProject.meta.objectType} · {rotterdamProject.meta.year}
+                      </p>
+                      <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
+                        {rotterdamProject.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {rotterdamProject.meta.highlight}
+                      </p>
+                      <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
+                        Bekijk project in Rotterdam →
+                      </p>
+                    </Link>
+                  </div>
+                </section>
+              </div>
+            </div>
+          )
+        })()}
+
         <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Cluster links ── */}

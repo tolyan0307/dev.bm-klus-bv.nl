@@ -11,7 +11,7 @@ function fmt(rating: number, count: number, f: Format): string {
     case "short":
       return `${r}/5 · ${count} reviews`
     case "trust":
-      return `${r}★ Google reviews (${count})`
+      return `${r}★ reviews (${count})`
     case "count":
       return `${count}`
     case "stat-desc":
@@ -43,7 +43,7 @@ function neutralFallback(f: Format): string {
  */
 const FORMAT_MIN_W: Record<Format, string> = {
   short: "min-w-[9.5em]",
-  trust: "min-w-[13em]",
+  trust: "min-w-[10em]",
   count: "min-w-[1.5em]",
   "stat-desc": "min-w-[8em]",
 }

@@ -47,6 +47,7 @@ All project rules live in `docs/governance/`. Read before any significant task:
 |------|---------------|
 | SEO content (write/edit/audit) | `seo-system/GLOBAL_SEO_CONTENT_RULES.md` + `seo-system/WORKFLOW.md` + page brief |
 | Adding a project page | `docs/ADD-PROJECT.md` (SCOPE LOCK — 5 files only) |
+| Adding portfolio card to homepage | `docs/ADD-PORTFOLIO-CARD.md` (SCOPE LOCK — 1 file only) |
 | Image handling | `docs/IMAGE-WORKFLOW-SOP.md` + `docs/IMAGE-PIPELINE.md` |
 | Design/UI patterns | `DESIGN_SYSTEM.md` |
 | Page/navigation inventory | `SITE_STRUCTURE.md` |

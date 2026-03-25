@@ -76,6 +76,7 @@ const FIELDS = [
   "reviews.authorAttribution.displayName",
   "reviews.authorAttribution.uri",
   "reviews.authorAttribution.photoUri",
+  "reviews.publishTime",
   "googleMapsUri",
 ].join(",")
 
@@ -116,7 +117,12 @@ try {
       relativeTime: r.relativePublishTimeDescription ?? "",
       authorUri: r.authorAttribution?.uri ?? undefined,
       photoUri: r.authorAttribution?.photoUri ?? undefined,
-    })),
+      publishTime: r.publishTime ?? undefined,
+    })).sort((a, b) => {
+      if (!a.publishTime) return 1
+      if (!b.publishTime) return -1
+      return b.publishTime.localeCompare(a.publishTime)
+    }),
     fetchedAt: new Date().toISOString(),
   }
 

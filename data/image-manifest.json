@@ -3256,6 +3256,454 @@
       604
     ]
   },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-na-01": {
+    "originalWidth": 1753,
+    "originalHeight": 1270,
+    "aspectRatio": 1.38,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-na-02": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-na-03": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1440
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-na-04": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1296
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-na-05": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      972,
+      1166
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-na-06": {
+    "originalWidth": 4032,
+    "originalHeight": 3024,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-01": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-02": {
+    "originalWidth": 1080,
+    "originalHeight": 1693,
+    "aspectRatio": 0.638,
+    "variants": [
+      160,
+      240,
+      288,
+      389,
+      583
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-03": {
+    "originalWidth": 945,
+    "originalHeight": 1674,
+    "aspectRatio": 0.565,
+    "variants": [
+      160,
+      216,
+      259,
+      350,
+      583
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-04": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-05": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-06": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-07": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-08": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-09": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1440
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025-voor-10": {
+    "originalWidth": 4032,
+    "originalHeight": 3024,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1296
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01": {
+    "originalWidth": 1753,
+    "originalHeight": 1270,
+    "aspectRatio": 1.38,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-02": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-03": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1440
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-04": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1296
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-05": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      972,
+      1166
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-06": {
+    "originalWidth": 4032,
+    "originalHeight": 3024,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-01": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-02": {
+    "originalWidth": 1080,
+    "originalHeight": 1693,
+    "aspectRatio": 0.638,
+    "variants": [
+      160,
+      240,
+      288,
+      389,
+      583
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-03": {
+    "originalWidth": 945,
+    "originalHeight": 1674,
+    "aspectRatio": 0.565,
+    "variants": [
+      160,
+      216,
+      259,
+      350,
+      583
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-04": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-05": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-06": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-07": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-08": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-09": {
+    "originalWidth": 5712,
+    "originalHeight": 4284,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1440
+    ]
+  },
+  "projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-10": {
+    "originalWidth": 4032,
+    "originalHeight": 3024,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1296
+    ]
+  },
   "projects/vlaardingen-gevelisolatie-10cm-na-01": {
     "originalWidth": 1861,
     "originalHeight": 1500,

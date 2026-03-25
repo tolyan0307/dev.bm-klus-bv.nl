@@ -4,6 +4,32 @@ import type { ProjectCard } from "@/lib/types/projects"
 // 7 Klaaswaal, 8 Rotterdam, 9 Vlaardingen 10cm, 10 Almere, 11 Vlaardingen 6cm, 12 Rottekade, 13 Vught, 14 Katwijk
 export const projects: ProjectCard[] = [
   {
+    slug: "rotterdam-julianastraat-aanbouw-isolatie-4cm-2026",
+    serviceType: "Gevelisolatie",
+    serviceTypes: ["Gevelisolatie", "Sierpleister"],
+    title: "Rotterdam Julianastraat – aanbouw isolatie 4 cm & sierpleister (2026)",
+    subtitle: "Twee gevelwanden van een aanbouw in Rotterdam Julianastraat voorzien van 4 cm isolatie, sierpleister 1,5 mm, bitumen aan de plint en een contrasterende plintafwerking in antraciet.",
+    meta: {
+      city: "Rotterdam Julianastraat",
+      objectType: "Aanbouw",
+      highlight:
+        "Aanbouw met twee vernieuwde gevelwanden, 4 cm isolatie, sierpleister 1,5 mm, bitumen aan de plint en een contrasterende afwerking in antraciet.",
+      year: 2026,
+    },
+    projectUrl:
+      "/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
+    cardAlt:
+      "Rotterdam Julianastraat aanbouw isolatie 4 cm – na de werken (2026)",
+    coverImage: {
+      src: "/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01.webp",
+      alt: "Rotterdam Julianastraat aanbouw isolatie 4 cm – na de werken foto 01 (2026)",
+    },
+    beforeThumb: {
+      src: "/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-01.webp",
+      alt: "Rotterdam Julianastraat aanbouw isolatie 4 cm – voor de werken foto 01 (2026)",
+    },
+  },
+  {
     slug: "etten-leur-gevelisolatie-6cm-strikolith-2025",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],

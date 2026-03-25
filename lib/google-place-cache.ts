@@ -21,6 +21,7 @@ export interface PlaceReview {
   relativeTime: string
   authorUri?: string
   photoUri?: string
+  publishTime?: string
 }
 
 export interface RatingData {

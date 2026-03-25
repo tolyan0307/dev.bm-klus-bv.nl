@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useId } from "react";
+import { useState, useId, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import {
   X,
@@ -210,14 +211,14 @@ function CompareModal({
       role="dialog"
       aria-modal="true"
       aria-label={`Vergelijking: ${a.name} vs ${b.name}`}
-      className="fixed inset-0 z-50 flex items-end justify-center sm:items-center"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 overscroll-contain"
     >
       <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className="relative z-10 w-full max-w-2xl rounded-t-2xl sm:rounded-2xl border border-border bg-card shadow-2xl max-h-[90dvh] overflow-y-auto">
+      <div className="relative z-10 w-full max-w-2xl rounded-2xl border border-border bg-card shadow-2xl max-h-[90dvh] overflow-y-auto">
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-card px-5 py-4">
           <p className="text-sm font-semibold text-foreground">
             {a.name} <span className="text-muted-foreground">vs</span> {b.name}
@@ -283,14 +284,14 @@ function DetailModal({
       role="dialog"
       aria-modal="true"
       aria-label={`Details: ${f.name}`}
-      className="fixed inset-0 z-50 flex items-end justify-center sm:items-center"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 overscroll-contain"
     >
       <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className="relative z-10 w-full max-w-lg rounded-t-2xl sm:rounded-2xl border border-border bg-card shadow-2xl max-h-[90dvh] overflow-y-auto">
+      <div className="relative z-10 w-full max-w-lg rounded-2xl border border-border bg-card shadow-2xl max-h-[90dvh] overflow-y-auto">
         {/* Image */}
         <div className="relative h-48 w-full overflow-hidden rounded-t-2xl bg-secondary sm:h-56">
           <img
@@ -674,6 +675,26 @@ export default function GevelAfwerkingGidsInteractive({ finishes }: { finishes: 
 
   const detailFinish = detailId ? finishes.find((f) => f.id === detailId) ?? null : null;
 
+  const isAnyModalOpen = !!detailFinish || (showCompare && compareIds.length === 2);
+  useEffect(() => {
+    if (!isAnyModalOpen) return;
+    const scrollY = window.scrollY;
+    const { body } = document;
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.overflow = "hidden";
+    return () => {
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.overflow = "";
+      window.scrollTo(0, scrollY);
+    };
+  }, [isAnyModalOpen]);
+
   return (
     <>
       <section
@@ -793,17 +814,21 @@ export default function GevelAfwerkingGidsInteractive({ finishes }: { finishes: 
         onReset={resetCompare}
       />
 
-      {showCompare && compareIds.length === 2 && (
-        <CompareModal
-          ids={compareIds as [string, string]}
-          finishes={finishes}
-          onClose={() => setShowCompare(false)}
-        />
-      )}
+      {showCompare && compareIds.length === 2 &&
+        createPortal(
+          <CompareModal
+            ids={compareIds as [string, string]}
+            finishes={finishes}
+            onClose={() => setShowCompare(false)}
+          />,
+          document.body,
+        )}
 
-      {detailFinish && (
-        <DetailModal finish={detailFinish} onClose={() => setDetailId(null)} />
-      )}
+      {detailFinish &&
+        createPortal(
+          <DetailModal finish={detailFinish} onClose={() => setDetailId(null)} />,
+          document.body,
+        )}
     </>
   );
 }
