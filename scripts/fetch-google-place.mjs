@@ -124,9 +124,13 @@ try {
     "Referer": "https://bm-klus-bv.nl/",
   }
 
+  const legacyHeaders = {
+    "Referer": "https://bm-klus-bv.nl/",
+  }
+
   const [ratingRes, reviewsRes] = await Promise.all([
     fetch(ratingUrl, { headers: ratingHeaders }),
-    fetch(legacyUrl),
+    fetch(legacyUrl, { headers: legacyHeaders }),
   ])
 
   if (!ratingRes.ok) {
@@ -142,6 +146,12 @@ try {
 
   const ratingRaw = await ratingRes.json()
   const reviewsRaw = await reviewsRes.json()
+
+  /* --- Check Legacy API status (HTTP is always 200, real status is in body) --- */
+  if (reviewsRaw.status && reviewsRaw.status !== "OK") {
+    console.error(`[fetch-google-place] Legacy reviews API status: ${reviewsRaw.status} — ${reviewsRaw.error_message ?? "no details"}`)
+    console.error("[fetch-google-place] Falling back to rating-only output (no review texts).")
+  }
 
   /* --- LEGACY mapper — field names differ from New API --- */
   const legacyReviews = (reviewsRaw.result?.reviews ?? []).map((r) => ({
