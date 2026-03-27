@@ -4586,6 +4586,17 @@
       828
     ]
   },
+  "waarom-detail-stucwerk": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      320,
+      480,
+      576,
+      745
+    ]
+  },
   "wat-is-buitenmuur-stucen": {
     "originalWidth": 1024,
     "originalHeight": 1024,

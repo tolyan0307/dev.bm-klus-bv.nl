@@ -492,7 +492,7 @@ export default async function GevelisolatieLocationPage({
                 Voordelen
               </span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               Waarom <span className="text-primary">buitengevelisolatie?</span>
             </h2>
             <div className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
@@ -532,7 +532,7 @@ export default async function GevelisolatieLocationPage({
                 Kosten
               </span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               Wat kost gevelisolatie in{" "}
               <span className="text-primary">{data.city}?</span>
             </h2>
@@ -586,7 +586,7 @@ export default async function GevelisolatieLocationPage({
                 Lokale informatie
               </span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               Goed om te weten in{" "}
               <span className="text-primary">{data.city}</span>
             </h2>
@@ -663,7 +663,7 @@ export default async function GevelisolatieLocationPage({
                       Uitgevoerd project
                     </span>
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                     Project in{" "}
                     <span className="text-primary">Dordrecht</span>
                   </h2>
@@ -722,7 +722,7 @@ export default async function GevelisolatieLocationPage({
                       Uitgevoerd project
                     </span>
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                     Project in{" "}
                     <span className="text-primary">Vlaardingen</span>
                   </h2>
@@ -781,7 +781,7 @@ export default async function GevelisolatieLocationPage({
                       Uitgevoerd project
                     </span>
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                     Project in{" "}
                     <span className="text-primary">Rotterdam</span>
                   </h2>
@@ -829,7 +829,7 @@ export default async function GevelisolatieLocationPage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Cluster links ── */}
           <section className="py-16 sm:py-20">
-            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               Verdieping:{" "}
               <span className="text-primary">alles over gevelisolatie</span>
             </h2>
@@ -897,7 +897,7 @@ export default async function GevelisolatieLocationPage({
                       FAQ
                     </span>
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                     Veelgestelde vragen
                     <br />
                     <span className="text-primary">{data.city}</span>

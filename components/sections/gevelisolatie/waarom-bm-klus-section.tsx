@@ -1,4 +1,5 @@
 import Link from "next/link"
+import ResponsiveImage from "@/components/responsive-image"
 import { Shield, Users, Clock, Award, ArrowRight } from "lucide-react"
 
 const usps = [
@@ -53,39 +54,63 @@ export default function WaaromBmKlusSection({
           {subtitle}
         </p>
 
-        {/* USP Grid */}
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          {usps.map((usp) => {
-            const Icon = usp.icon
-            return (
-              <div
-                key={usp.title}
-                className="group flex gap-4 rounded-xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
-              >
-                <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/15">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-base font-bold text-foreground">
-                    {usp.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                    {usp.description}
-                  </p>
+        {/* Image + USPs */}
+        <div className="mt-12 grid items-stretch gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
+          {/* Image — matches right column height */}
+          <div className="relative min-h-[240px] sm:min-h-[280px]">
+            <div className="absolute -bottom-3 -right-3 left-0 top-0 rounded-2xl bg-primary/[0.06]" />
+            <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-[0_12px_40px_-8px_rgba(0,0,0,0.15)]">
+              <ResponsiveImage
+                baseName="waarom-detail-stucwerk"
+                preset="card"
+                alt="Detaillering stucwerk na gevelisolatie"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/[0.08]" />
+              {/* Glass badge */}
+              <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5">
+                <div className="inline-flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2.5 backdrop-blur-md">
+                  <span className="h-2 w-2 rounded-full bg-[#EA6C20]" />
+                  <span className="text-[13px] font-medium text-white/90">
+                    Vakmanschap &amp; oog voor detail
+                  </span>
                 </div>
               </div>
-            )
-          })}
-        </div>
+            </div>
+          </div>
 
-        <div className="mt-8 flex justify-center">
-          <Link
-            href="/over-ons/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 transition-colors hover:underline"
-          >
-            Meer over ons team
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          {/* USPs stack */}
+          <div className="flex flex-col justify-center space-y-6">
+            {usps.map((usp) => {
+              const Icon = usp.icon
+              return (
+                <div key={usp.title} className="group flex gap-4">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/[0.07] transition-colors group-hover:bg-primary/[0.12]">
+                    <Icon className="h-5 w-5 text-primary/70" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h3 className="text-[15px] font-semibold tracking-tight text-foreground">
+                      {usp.title}
+                    </h3>
+                    <p className="mt-1 text-sm leading-[1.7] text-foreground/45">
+                      {usp.description}
+                    </p>
+                  </div>
+                </div>
+              )
+            })}
+
+            <div className="pt-2">
+              <Link
+                href="/over-ons/"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 transition-colors hover:underline"
+              >
+                Meer over ons team
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
