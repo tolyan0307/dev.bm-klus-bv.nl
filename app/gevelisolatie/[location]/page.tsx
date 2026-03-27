@@ -495,25 +495,20 @@ export default async function GevelisolatieLocationPage({
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Waarom <span className="text-primary">buitengevelisolatie?</span>
             </h2>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
               {voordelen.map((v) => {
                 const Icon = v.icon
                 return (
-                  <div
-                    key={v.title}
-                    className="group flex gap-4 rounded-xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
-                  >
-                    <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/15">
-                      <Icon className="h-5 w-5 text-primary" />
+                  <div key={v.title} className="group text-center">
+                    <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/[0.07]">
+                      <Icon className="h-[22px] w-[22px] text-primary/80" strokeWidth={1.5} />
                     </div>
-                    <div>
-                      <h3 className="text-base font-bold text-foreground">
-                        {v.title}
-                      </h3>
-                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                        {v.text}
-                      </p>
-                    </div>
+                    <h3 className="text-base font-semibold tracking-tight text-foreground">
+                      {v.title}
+                    </h3>
+                    <p className="mx-auto mt-2 max-w-[26ch] text-[15px] leading-relaxed text-foreground/45">
+                      {v.text}
+                    </p>
                   </div>
                 )
               })}
