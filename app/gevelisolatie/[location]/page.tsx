@@ -10,6 +10,7 @@ import {
   ChevronRight,
   Thermometer,
   Shield,
+  CheckCircle2,
   Paintbrush2,
   Clock,
   MessageCircle,
@@ -398,26 +399,80 @@ export default async function GevelisolatieLocationPage({
                 </div>
               </div>
             ) : (
-              <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px] lg:gap-12">
-                <div>
-                  <p className="text-base leading-relaxed text-muted-foreground">
-                    {data.localContext}
-                  </p>
-                  {/* Woningtypes */}
-                  <div className="mt-8">
-                    <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                      Geschikte woningtypes in {data.city}
+              <div className="mt-12 grid lg:grid-cols-[1fr_1fr] lg:gap-12">
+                  {/* ── Left: image + text (height matches right) ── */}
+                  <div className="flex flex-col lg:pr-0">
+                    {/* Image — absolute inside flex-1 so it fills remaining space */}
+                    <div className="relative min-h-[200px] flex-1 sm:min-h-[220px]">
+                      <div className="absolute -bottom-3 -right-3 left-0 top-0 rounded-2xl bg-primary/[0.06]" />
+                      <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-[0_12px_40px_-8px_rgba(0,0,0,0.15)]">
+                        <img
+                          src="/images/gevelisolatie-voordelen.webp"
+                          alt={`Buitengevelisolatie resultaat`}
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/[0.08]" />
+                        {/* Glass badge */}
+                        <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5">
+                          <div className="inline-flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2.5 backdrop-blur-md">
+                            <span className="h-2 w-2 rounded-full bg-[#EA6C20]" />
+                            <span className="text-[13px] font-medium text-white/90">
+                              Buitengevelisolatie specialist · {data.city} &amp; omgeving
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Text */}
+                    <div className="pt-8">
+                      <p className="text-base leading-[1.9] text-foreground/55 sm:text-[17px]">
+                        {data.localContext}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* ── Right: Facts + woningtypes ── */}
+                  <div className="relative border-t border-border/30 pt-8 lg:border-l-2 lg:border-l-primary/15 lg:border-t-0 lg:pl-12 lg:pt-0">
+                    {/* Decorative gradient blob */}
+                    <div className="pointer-events-none absolute -right-20 -top-10 h-52 w-52 rounded-full bg-primary/[0.04] blur-[80px] lg:-right-10" />
+
+                    {/* Facts 2x2 */}
+                    <div className="relative grid grid-cols-2 gap-x-5 gap-y-5 sm:gap-x-8">
+                      {[
+                        ["Doorlooptijd", "1–2 weken"],
+                        ["Opname", "Op locatie"],
+                        ["Bouwperiode", data.bouwperiode.split(",")[0].split(".")[0]],
+                        ["Prijsindicatie", "na opname"],
+                      ].map(([label, value]) => (
+                        <div key={label} className="border-l-[3px] border-primary/15 pl-3 sm:pl-4">
+                          <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-primary/45">
+                            {label}
+                          </p>
+                          <p className="mt-1.5 text-base font-bold tracking-tight text-foreground/85 sm:text-lg">
+                            {value}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Divider */}
+                    <div className="my-7 flex items-center gap-4">
+                      <div className="h-[2px] flex-1 bg-linear-to-r from-primary/20 to-transparent" />
+                    </div>
+
+                    {/* Woningtypes label */}
+                    <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.3em] text-primary/40">
+                      Geschikte woningtypes
                     </p>
-                    <div className="divide-y divide-border/60">
-                      {data.woningTypes.map((type, i) => (
-                        <div
-                          key={type}
-                          className="flex items-center gap-4 py-2.5"
-                        >
-                          <span className="w-5 shrink-0 text-xs font-black tabular-nums text-primary/25">
-                            {String(i + 1).padStart(2, "0")}
-                          </span>
-                          <span className="text-sm text-foreground/75">
+
+                    {/* Woningtypes */}
+                    <div className="space-y-2.5">
+                      {data.woningTypes.map((type) => (
+                        <div key={type} className="group flex items-start gap-3">
+                          <CheckCircle2 className="mt-[2px] h-[18px] w-[18px] shrink-0 text-primary/60 transition-colors group-hover:text-primary" />
+                          <span className="text-[14px] leading-snug text-foreground/55 transition-colors group-hover:text-foreground/85">
                             {type}
                           </span>
                         </div>
@@ -425,41 +480,6 @@ export default async function GevelisolatieLocationPage({
                     </div>
                   </div>
                 </div>
-                {/* Side card */}
-                <div className="lg:sticky lg:top-32 lg:self-start">
-                  <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-                    <div className="px-6 pb-1 pt-5">
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-primary">
-                        Snelle feiten
-                      </p>
-                    </div>
-                    <div className="px-6 pb-5 pt-3">
-                      {[
-                        ["Prijsindicatie", "na opname op locatie"],
-                        ["Doorlooptijd", "1–2 weken"],
-                        ["Opname", "Op locatie, op afspraak"],
-                        [
-                          "Bouwperiode",
-                          data.bouwperiode.split(",")[0].split(".")[0],
-                        ],
-                        ["Werkgebied", data.city],
-                      ].map(([label, value], i, arr) => (
-                        <div
-                          key={label}
-                          className={`flex items-baseline justify-between gap-4 py-2.5 ${i < arr.length - 1 ? "border-b border-border/40" : ""}`}
-                        >
-                          <span className="shrink-0 text-xs text-muted-foreground/70">
-                            {label}
-                          </span>
-                          <span className="text-right text-sm font-semibold text-foreground">
-                            {value}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
             )}
           </section>
 
