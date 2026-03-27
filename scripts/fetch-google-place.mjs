@@ -1,6 +1,6 @@
 /**
- * Prebuild script — fetches Google Places data via REST API (New)
- * and writes it to public/data/google-place.json.
+ * Prebuild script — fetches Google Places data and writes it to
+ * public/data/google-place.json.
  *
  * Run: node scripts/fetch-google-place.mjs
  *
@@ -11,6 +11,16 @@
  *
  * Output: public/data/google-place.json — consumed by the client
  * as a static asset (zero Google API calls from visitors).
+ *
+ * ⚠️  LEGACY API NOTICE (2026-03-27)
+ * Reviews are fetched via the Legacy Place Details endpoint because it
+ * supports `reviews_sort=newest` — the New API (v1) does not.
+ * Rating + reviewCount still come from the New API (v1).
+ *
+ * When Google sunsets the Legacy endpoint, revert reviews fetching to
+ * the New API (v1).  Search for "LEGACY" in this file to find all
+ * related code.  The New API code is preserved in comments marked
+ * "// [NEW-API]" so the rollback is copy-paste.
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs"
@@ -50,79 +60,126 @@ loadEnvFile()
 
 const SERVER_KEY = process.env.GOOGLE_PLACES_SERVER_KEY ?? ""
 const CLIENT_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ""
-const API_KEY = SERVER_KEY || CLIENT_KEY
 const PLACE_ID = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID ?? ""
-const NEEDS_REFERER = !SERVER_KEY && !!CLIENT_KEY
 
-if (!API_KEY || !PLACE_ID) {
+/* Server key → Legacy reviews (no Referer restriction needed).
+   Client key → New API rating (Referer header required).
+   Both must be present for the hybrid approach. */
+const LEGACY_KEY = SERVER_KEY || CLIENT_KEY
+const NEW_API_KEY = CLIENT_KEY || SERVER_KEY
+
+if ((!SERVER_KEY && !CLIENT_KEY) || !PLACE_ID) {
   console.warn("[fetch-google-place] API key or Place ID missing — skipping.")
   process.exit(0)
 }
 
-if (NEEDS_REFERER) {
-  console.log("[fetch-google-place] Using client key with Referer header (set GOOGLE_PLACES_SERVER_KEY for a cleaner setup).")
+if (!SERVER_KEY) {
+  console.warn("[fetch-google-place] GOOGLE_PLACES_SERVER_KEY missing — Legacy reviews API may fail with Referer-restricted key.")
 }
 
 /* ------------------------------------------------------------------ */
-/*  Fetch from Google Places API (New) REST endpoint                  */
+/*  1. Rating + reviewCount — New API (v1)                            */
 /* ------------------------------------------------------------------ */
 
-const FIELDS = [
-  "rating",
-  "userRatingCount",
-  "reviews.rating",
-  "reviews.text",
-  "reviews.relativePublishTimeDescription",
-  "reviews.authorAttribution.displayName",
-  "reviews.authorAttribution.uri",
-  "reviews.authorAttribution.photoUri",
-  "reviews.publishTime",
-  "googleMapsUri",
-].join(",")
+const RATING_FIELDS = ["rating", "userRatingCount", "googleMapsUri"].join(",")
+const ratingUrl = `https://places.googleapis.com/v1/places/${PLACE_ID}`
 
-const url = `https://places.googleapis.com/v1/places/${PLACE_ID}`
+/* ------------------------------------------------------------------ */
+/*  2. Reviews — LEGACY Place Details (supports reviews_sort=newest)  */
+/* ------------------------------------------------------------------ */
 
-console.log("[fetch-google-place] Fetching place data…")
+const legacyUrl =
+  `https://maps.googleapis.com/maps/api/place/details/json` +
+  `?place_id=${PLACE_ID}` +
+  `&fields=reviews` +
+  `&reviews_sort=newest` +
+  `&key=${LEGACY_KEY}`
+
+// [NEW-API] To revert to New API for reviews, replace the LEGACY block
+// below with this single fetch:
+//
+// const FIELDS = [
+//   "rating", "userRatingCount", "reviews.rating", "reviews.text",
+//   "reviews.relativePublishTimeDescription",
+//   "reviews.authorAttribution.displayName",
+//   "reviews.authorAttribution.uri",
+//   "reviews.authorAttribution.photoUri",
+//   "reviews.publishTime", "googleMapsUri",
+// ].join(",")
+//
+// const url = `https://places.googleapis.com/v1/places/${PLACE_ID}`
+// const res = await fetch(url, {
+//   headers: { "X-Goog-Api-Key": API_KEY, "X-Goog-FieldMask": FIELDS },
+// })
+// const raw = await res.json()
+// Then map raw.reviews using the [NEW-API] mapper below.
+
+console.log("[fetch-google-place] Fetching rating (New API) + reviews (Legacy API, newest first)…")
 
 try {
-  const headers = {
-    "X-Goog-Api-Key": API_KEY,
-    "X-Goog-FieldMask": FIELDS,
-  }
-  if (NEEDS_REFERER) {
-    headers["Referer"] = "https://bm-klus-bv.nl/"
+  /* --- Fetch both in parallel --- */
+  const ratingHeaders = {
+    "X-Goog-Api-Key": NEW_API_KEY,
+    "X-Goog-FieldMask": RATING_FIELDS,
+    "Referer": "https://bm-klus-bv.nl/",
   }
 
-  const res = await fetch(url, { headers })
+  const [ratingRes, reviewsRes] = await Promise.all([
+    fetch(ratingUrl, { headers: ratingHeaders }),
+    fetch(legacyUrl),
+  ])
 
-  if (!res.ok) {
-    const body = await res.text()
-    console.error(`[fetch-google-place] API error ${res.status}: ${body}`)
+  if (!ratingRes.ok) {
+    const body = await ratingRes.text()
+    console.error(`[fetch-google-place] Rating API error ${ratingRes.status}: ${body}`)
+    process.exit(0)
+  }
+  if (!reviewsRes.ok) {
+    const body = await reviewsRes.text()
+    console.error(`[fetch-google-place] Legacy reviews API error ${reviewsRes.status}: ${body}`)
     process.exit(0)
   }
 
-  const raw = await res.json()
+  const ratingRaw = await ratingRes.json()
+  const reviewsRaw = await reviewsRes.json()
+
+  /* --- LEGACY mapper — field names differ from New API --- */
+  const legacyReviews = (reviewsRaw.result?.reviews ?? []).map((r) => ({
+    author: r.author_name ?? "Anoniem",
+    initial: (r.author_name ?? "A").charAt(0).toUpperCase(),
+    rating: r.rating ?? 5,
+    text: r.text ?? "",
+    relativeTime: r.relative_time_description ?? "",
+    authorUri: r.author_url ?? undefined,
+    photoUri: r.profile_photo_url ?? undefined,
+    publishTime: r.time ? new Date(r.time * 1000).toISOString() : undefined,
+  }))
+
+  // [NEW-API] mapper (for rollback):
+  // const reviews = (raw.reviews ?? []).map((r) => ({
+  //   author: r.authorAttribution?.displayName ?? "Anoniem",
+  //   initial: (r.authorAttribution?.displayName ?? "A").charAt(0).toUpperCase(),
+  //   rating: r.rating ?? 5,
+  //   text: r.text?.text ?? r.text ?? "",
+  //   relativeTime: r.relativePublishTimeDescription ?? "",
+  //   authorUri: r.authorAttribution?.uri ?? undefined,
+  //   photoUri: r.authorAttribution?.photoUri ?? undefined,
+  //   publishTime: r.publishTime ?? undefined,
+  // }))
+
+  /* Reviews already come sorted by newest from Legacy API,
+     but sort explicitly to be safe. */
+  legacyReviews.sort((a, b) => {
+    if (!a.publishTime) return 1
+    if (!b.publishTime) return -1
+    return b.publishTime.localeCompare(a.publishTime)
+  })
 
   const data = {
-    rating: raw.rating ?? 0,
-    reviewCount: raw.userRatingCount ?? 0,
-    googleMapsUri: raw.googleMapsUri ?? undefined,
-    reviews: (raw.reviews ?? []).map((r) => ({
-      author: r.authorAttribution?.displayName ?? "Anoniem",
-      initial: (r.authorAttribution?.displayName ?? "A")
-        .charAt(0)
-        .toUpperCase(),
-      rating: r.rating ?? 5,
-      text: r.text?.text ?? r.text ?? "",
-      relativeTime: r.relativePublishTimeDescription ?? "",
-      authorUri: r.authorAttribution?.uri ?? undefined,
-      photoUri: r.authorAttribution?.photoUri ?? undefined,
-      publishTime: r.publishTime ?? undefined,
-    })).sort((a, b) => {
-      if (!a.publishTime) return 1
-      if (!b.publishTime) return -1
-      return b.publishTime.localeCompare(a.publishTime)
-    }),
+    rating: ratingRaw.rating ?? 0,
+    reviewCount: ratingRaw.userRatingCount ?? 0,
+    googleMapsUri: ratingRaw.googleMapsUri ?? undefined,
+    reviews: legacyReviews,
     fetchedAt: new Date().toISOString(),
   }
 

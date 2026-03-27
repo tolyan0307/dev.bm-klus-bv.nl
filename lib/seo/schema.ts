@@ -161,6 +161,28 @@ export function breadcrumbSchema(items: BreadcrumbSchemaItem[]): Record<string, 
   }
 }
 
+export function videoSchema(opts: {
+  name: string
+  description: string
+  videoId: string
+  thumbnailUrl: string
+  uploadDate: string
+  duration: string
+}): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: opts.name,
+    description: opts.description,
+    thumbnailUrl: opts.thumbnailUrl,
+    uploadDate: opts.uploadDate,
+    duration: opts.duration,
+    embedUrl: `https://www.youtube.com/embed/${opts.videoId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${opts.videoId}`,
+    publisher: { "@id": `${SITE.canonicalBase}/#business` },
+  }
+}
+
 export function projectPageSchema(opts: {
   title: string
   description: string

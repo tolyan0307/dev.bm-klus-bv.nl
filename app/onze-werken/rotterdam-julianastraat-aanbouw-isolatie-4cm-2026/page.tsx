@@ -2,13 +2,14 @@ import { Fragment } from "react"
 import Link from "next/link"
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo/meta"
-import { jsonLdScript, projectPageSchema } from "@/lib/seo/schema"
+import { jsonLdScript, projectPageSchema, videoSchema } from "@/lib/seo/schema"
 import { SITE } from "@/lib/seo/routes"
 import ProjectGalleryCarousel from "@/components/sections/projects/ProjectGalleryCarousel"
 import WerkzaamhedenAccordion from "@/components/sections/projects/WerkzaamhedenAccordion"
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import YouTubeEmbed from "@/components/youtube-embed"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -135,6 +136,15 @@ export default function RotterdamJulianastraatProjectPage() {
       }).map((s, i) => (
         <Fragment key={i}>{jsonLdScript(s)}</Fragment>
       ))}
+      {jsonLdScript(videoSchema({
+        name: "Aanbouw isoleren in Rotterdam Julianastraat | 4 cm gevelisolatie",
+        description:
+          "Bij dit project hebben we de gevelplint behandeld met bitumen, 4 cm isolatie verlijmd en verankerd met pluggen, gaas gemonteerd en geplamuurd, en de gevel afgewerkt met sierpleister 1,5 mm in standaard wit. De plint is afgewerkt in antraciet voor een strak contrast.",
+        videoId: "iSUV_L9tD-E",
+        thumbnailUrl: "https://i.ytimg.com/vi/iSUV_L9tD-E/maxresdefault.jpg",
+        uploadDate: "2026-03-26",
+        duration: "PT33S",
+      }))}
       <div className="min-h-screen bg-background">
 
       {/* ── A · HERO ─────────────────────────────────────────────────────── */}
@@ -422,6 +432,77 @@ export default function RotterdamJulianastraatProjectPage() {
               variant="na"
               images={resolveGalleryImages(afterImages)}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ── D½ · VIDEO ──────────────────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden border-b border-border py-16 sm:py-20 lg:py-24"
+        aria-labelledby="video-heading"
+        style={{ background: "linear-gradient(175deg, #1A1A1A 0%, #1F1710 45%, #2A1C0E 70%, #1A1A1A 100%)" }}
+      >
+        {/* Decorative orange glow — top-right */}
+        <div
+          className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full opacity-[0.07] blur-3xl"
+          style={{ background: "#E8600A" }}
+          aria-hidden
+        />
+        {/* Decorative orange glow — bottom-left */}
+        <div
+          className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full opacity-[0.05] blur-3xl"
+          style={{ background: "#E8600A" }}
+          aria-hidden
+        />
+
+        <div className="container-default max-w-4xl">
+          {/* Section header — adapted for dark background */}
+          <div className="mb-3 flex items-center gap-3">
+            <span className="h-px w-12 bg-primary" aria-hidden />
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+              Video
+            </span>
+          </div>
+          <h2
+            id="video-heading"
+            className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
+            Bekijk het project{" "}
+            <span className="text-primary">in beeld</span>
+          </h2>
+          <p
+            className="mt-3 max-w-2xl text-base leading-relaxed"
+            style={{ color: "rgba(255,255,255,0.6)" }}
+          >
+            In deze korte video ziet u hoe de aanbouw in Rotterdam
+            Julianastraat stap voor stap is voorzien van isolatie, wapening
+            en sierpleister.
+          </p>
+
+          {/* Video card */}
+          <div className="mt-8 rounded-2xl p-2 sm:p-3" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <YouTubeEmbed
+              videoId="iSUV_L9tD-E"
+              title="Aanbouw isoleren in Rotterdam Julianastraat – 4 cm gevelisolatie"
+              duration="0:33"
+            />
+          </div>
+
+          {/* Metadata strip */}
+          <div
+            className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm"
+            style={{ color: "rgba(255,255,255,0.4)" }}
+          >
+            <span className="flex items-center gap-1.5">
+              <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="currentColor" aria-hidden>
+                <path d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM6.5 5l5 3-5 3V5z" />
+              </svg>
+              BM klus BV op YouTube
+            </span>
+            <span className="h-3 w-px" style={{ background: "rgba(255,255,255,0.15)" }} aria-hidden />
+            <span>Rotterdam Julianastraat</span>
+            <span className="h-3 w-px" style={{ background: "rgba(255,255,255,0.15)" }} aria-hidden />
+            <span>2026</span>
           </div>
         </div>
       </section>
