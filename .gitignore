@@ -11,6 +11,7 @@ out/
 .env.local
 .env.*.local
 .DS_Store
+.agents/
 
 # Generated at build time (prebuild fetch)
 public/data/
