@@ -37,7 +37,7 @@ export default function WaaromBmKlusSection({
   subtitle = "BM klus BV voert stucwerk, schilderwerk en gevelisolatie uit in de regio Rotterdam en omgeving.",
 }: WaaromBmKlusSectionProps) {
   return (
-    <section className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+    <section className="scroll-mt-24 bg-secondary/30 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-4 flex items-center gap-3">
@@ -54,63 +54,74 @@ export default function WaaromBmKlusSection({
           {subtitle}
         </p>
 
-        {/* Image + USPs */}
-        <div className="mt-12 grid items-stretch gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
-          {/* Image — matches right column height */}
-          <div className="relative min-h-[240px] sm:min-h-[280px]">
-            <div className="absolute -bottom-3 -right-3 left-0 top-0 rounded-2xl bg-primary/[0.06]" />
-            <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-[0_12px_40px_-8px_rgba(0,0,0,0.15)]">
-              <ResponsiveImage
-                baseName="waarom-detail-stucwerk"
-                preset="card"
-                alt="Detaillering stucwerk na gevelisolatie"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/[0.08]" />
-              {/* Glass badge */}
-              <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5">
-                <div className="inline-flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2.5 backdrop-blur-md">
-                  <span className="h-2 w-2 rounded-full bg-[#EA6C20]" />
-                  <span className="text-[13px] font-medium text-white/90">
-                    Vakmanschap &amp; oog voor detail
-                  </span>
-                </div>
+        {/* Bento grid: image + USP cards */}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Image — spans 2 rows on lg */}
+          <div className="relative min-h-[280px] overflow-hidden rounded-2xl shadow-[0_8px_40px_-12px_rgba(0,0,0,0.12)] sm:min-h-[320px] sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:min-h-0">
+            <ResponsiveImage
+              baseName="waarom-detail-stucwerk"
+              preset="card"
+              alt="Detaillering stucwerk na gevelisolatie"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
+            <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/8" />
+            {/* Glass badge */}
+            <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5">
+              <div className="inline-flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2.5 backdrop-blur-md ring-1 ring-white/10">
+                <span className="h-2 w-2 rounded-full bg-[#EA6C20]" />
+                <span className="text-[13px] font-medium text-white/90">
+                  Vakmanschap &amp; oog voor detail
+                </span>
               </div>
             </div>
           </div>
 
-          {/* USPs stack */}
-          <div className="flex flex-col justify-center space-y-6">
-            {usps.map((usp) => {
-              const Icon = usp.icon
-              return (
-                <div key={usp.title} className="group flex gap-4">
-                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/[0.07] transition-colors group-hover:bg-primary/[0.12]">
-                    <Icon className="h-5 w-5 text-primary/70" strokeWidth={1.5} />
-                  </div>
-                  <div>
+          {/* USP cards */}
+          {usps.map((usp, i) => {
+            const Icon = usp.icon
+            return (
+              <div
+                key={usp.title}
+                className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card shadow-sm transition-all hover:border-primary/25 hover:shadow-md"
+              >
+                <div className="h-[2px] bg-linear-to-r from-primary/50 via-primary/15 to-transparent" />
+                <div className="relative p-6">
+                  {/* Decorative number */}
+                  <span
+                    className="pointer-events-none absolute -right-1 -top-3 select-none font-black text-[5rem] leading-none text-primary/4 transition-colors group-hover:text-primary/7"
+                    aria-hidden="true"
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="relative">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/7 ring-1 ring-primary/10 transition-all group-hover:bg-primary/12 group-hover:ring-primary/25 group-hover:shadow-[0_0_16px_rgba(234,108,32,0.1)]">
+                      <Icon className="h-5 w-5 text-primary/70 transition-colors group-hover:text-primary" strokeWidth={1.5} />
+                    </div>
                     <h3 className="text-[15px] font-semibold tracking-tight text-foreground">
                       {usp.title}
                     </h3>
-                    <p className="mt-1 text-sm leading-[1.7] text-foreground/45">
+                    <p className="mt-1.5 text-sm leading-[1.7] text-muted-foreground">
                       {usp.description}
                     </p>
                   </div>
                 </div>
-              )
-            })}
+              </div>
+            )
+          })}
+        </div>
 
-            <div className="pt-2">
-              <Link
-                href="/over-ons/"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 transition-colors hover:underline"
-              >
-                Meer over ons team
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
+        {/* CTA */}
+        <div className="mt-10 flex items-center gap-5">
+          <Link
+            href="/over-ons/"
+            className="group inline-flex items-center gap-2 rounded-xl border border-primary/25 bg-card px-5 py-3 text-sm font-semibold text-primary shadow-sm transition-all hover:border-primary/40 hover:shadow-md"
+          >
+            Meer over ons team
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+          <div className="hidden h-px flex-1 bg-linear-to-r from-primary/15 to-transparent sm:block" />
         </div>
       </div>
     </section>

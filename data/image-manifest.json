@@ -384,6 +384,16 @@
       828
     ]
   },
+  "gevelisolatie-eindresultaat-stucwerk": {
+    "originalWidth": 768,
+    "originalHeight": 778,
+    "aspectRatio": 0.987,
+    "variants": [
+      320,
+      480,
+      640
+    ]
+  },
   "gevelisolatie-kosten": {
     "originalWidth": 1024,
     "originalHeight": 1024,
@@ -4540,6 +4550,17 @@
       480,
       640,
       828
+    ]
+  },
+  "verdieping-gevelwerk-proces": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      320,
+      432,
+      466,
+      671
     ]
   },
   "verfsoorten-silicaat-siloxaan": {

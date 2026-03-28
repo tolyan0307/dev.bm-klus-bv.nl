@@ -29,8 +29,9 @@ export default function KostenCalculator() {
     n.toLocaleString("nl-NL", { style: "currency", currency: "EUR", maximumFractionDigits: 0 })
 
   return (
-    <div className="mt-8 overflow-hidden rounded-2xl border border-primary/20 bg-card">
-      <div className="border-b border-border bg-primary/[0.03] px-6 py-4">
+    <div className="mt-8 overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+      <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+      <div className="border-b border-border/40 bg-primary/[0.03] px-6 py-4">
         <p className="text-[11px] font-bold uppercase tracking-widest text-primary">
           Indicatieve prijscalculator
         </p>
@@ -100,7 +101,7 @@ export default function KostenCalculator() {
         <div className="hidden bg-border lg:block" />
 
         {/* Result */}
-        <div className="flex flex-col justify-center rounded-xl bg-primary/[0.04] p-5 lg:min-w-[200px]">
+        <div className="flex flex-col justify-center rounded-xl bg-linear-to-br from-primary/5 to-primary/2 p-5 ring-1 ring-primary/10 lg:min-w-[200px]">
           <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
             Indicatie totaal
           </p>
@@ -121,7 +122,7 @@ export default function KostenCalculator() {
       </div>
 
       {/* Disclaimer */}
-      <div className="flex items-start gap-2 border-t border-border bg-muted/20 px-6 py-3">
+      <div className="flex items-start gap-2 border-t border-border/40 bg-secondary/15 px-6 py-3">
         <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground/50" />
         <p className="text-[11px] leading-relaxed text-muted-foreground/70">
           Indicatieve richtprijzen, incl. arbeid & materiaal, excl. steiger, herstel en complexe detaillering.

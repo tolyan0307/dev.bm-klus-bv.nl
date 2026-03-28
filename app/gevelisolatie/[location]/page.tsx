@@ -19,6 +19,8 @@ import {
   Zap,
   Building2,
   ExternalLink,
+  Euro,
+  Layers,
 } from "lucide-react"
 
 import { buildPageMetadata } from "@/lib/seo/meta"
@@ -324,163 +326,99 @@ export default async function GevelisolatieLocationPage({
               Gevelisolatie in{" "}
               <span className="text-primary">{data.city}</span>
             </h2>
-            {slug === "dordrecht" ? (
-              <div className="mt-10 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm">
-                {/* ── Facts header ── */}
-                <div className="relative overflow-hidden border-b border-border/40 bg-linear-to-r from-secondary/50 to-secondary/20 px-5 py-6 sm:px-8 sm:py-9">
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary/30" />
-                  <span
-                    className="pointer-events-none absolute -right-2 top-1/2 -translate-y-1/2 select-none font-black leading-none tracking-tighter text-primary/5 text-[min(11rem,22vw)]"
-                    aria-hidden="true"
-                  >
-                    {data.city.toUpperCase()}
-                  </span>
+            {(() => {
+              const facts = slug === "dordrecht"
+                ? [
+                    ["Prijsindicatie", "na opname op locatie"],
+                    ["Doorlooptijd", "1–2 weken"],
+                    ["Opname", "Op locatie, op afspraak"],
+                    ["Bouwperiode", data.bouwperiode.split(",")[0].replace(/\s*\(.*$/, "")],
+                    ["Werkgebied", data.city],
+                  ] as const
+                : [
+                    ["Doorlooptijd", "1–2 weken"],
+                    ["Opname", "Op locatie"],
+                    ["Bouwperiode", data.bouwperiode.split(",")[0].split(".")[0]],
+                    ["Prijsindicatie", "na opname"],
+                  ] as const
 
-                  {(() => {
-                    const facts = [
-                      ["Prijsindicatie", "na opname op locatie"],
-                      ["Doorlooptijd", "1–2 weken"],
-                      ["Opname", "Op locatie, op afspraak"],
-                      [
-                        "Bouwperiode",
-                        data.bouwperiode
-                          .split(",")[0]
-                          .replace(/\s*\(.*$/, ""),
-                      ],
-                      ["Werkgebied", data.city],
-                    ] as const
-                    return (
-                      <div className="relative z-10 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-0 lg:divide-x lg:divide-primary/10">
-                        {facts.map(([label, value], i) => (
-                          <div
-                            key={label}
-                            className={`${i > 0 ? "lg:pl-7" : ""}${i === facts.length - 1 ? " col-span-2 sm:col-span-1" : ""}`}
-                          >
-                            <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-primary/50">
-                              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary/40" />
-                              {label}
-                            </p>
-                            <p className="mt-1.5 text-sm font-bold text-foreground sm:text-[15px]">
-                              {value}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    )
-                  })()}
-                </div>
+              return (
+                <div className="mt-10 overflow-hidden rounded-2xl border border-border/50 bg-card shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+                  {/* Accent line */}
+                  <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
 
-                {/* ── Content body ── */}
-                <div className="px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-10">
-                  <p className="max-w-3xl text-base leading-[1.85] text-foreground/70 sm:text-[17px]">
-                    {data.localContext}
-                  </p>
-
-                  <div className="mt-8 border-t border-border/40 pt-6">
-                    <p className="mb-4 text-[11px] font-bold uppercase tracking-widest text-muted-foreground/70">
-                      Geschikte woningtypes in {data.city}
-                    </p>
-                    <div className="grid gap-2.5 sm:grid-cols-2">
-                      {data.woningTypes.map((type, i) => (
-                        <div
-                          key={type}
-                          className="flex items-start gap-3 rounded-xl border border-border/40 bg-secondary/20 px-4 py-3 transition-colors hover:bg-secondary/40"
-                        >
-                          <span className="mt-px shrink-0 text-xs font-black tabular-nums text-primary/30">
-                            {String(i + 1).padStart(2, "0")}
-                          </span>
-                          <span className="text-[13px] leading-snug text-foreground/70">
-                            {type}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="mt-12 grid lg:grid-cols-[1fr_1fr] lg:gap-12">
-                  {/* ── Left: image + text (height matches right) ── */}
-                  <div className="flex flex-col lg:pr-0">
-                    {/* Image — absolute inside flex-1 so it fills remaining space */}
-                    <div className="relative min-h-[200px] flex-1 sm:min-h-[220px]">
-                      <div className="absolute -bottom-3 -right-3 left-0 top-0 rounded-2xl bg-primary/[0.06]" />
-                      <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-[0_12px_40px_-8px_rgba(0,0,0,0.15)]">
-                        <img
-                          src="/images/gevelisolatie-voordelen.webp"
-                          alt={`Buitengevelisolatie resultaat`}
-                          className="h-full w-full object-cover"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/[0.08]" />
-                        {/* Glass badge */}
-                        <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5">
-                          <div className="inline-flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2.5 backdrop-blur-md">
-                            <span className="h-2 w-2 rounded-full bg-[#EA6C20]" />
-                            <span className="text-[13px] font-medium text-white/90">
-                              Buitengevelisolatie specialist · {data.city} &amp; omgeving
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Text */}
-                    <div className="pt-8">
-                      <p className="text-base leading-[1.9] text-foreground/55 sm:text-[17px]">
-                        {data.localContext}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* ── Right: Facts + woningtypes ── */}
-                  <div className="relative border-t border-border/30 pt-8 lg:border-l-2 lg:border-l-primary/15 lg:border-t-0 lg:pl-12 lg:pt-0">
-                    {/* Decorative gradient blob */}
-                    <div className="pointer-events-none absolute -right-20 -top-10 h-52 w-52 rounded-full bg-primary/[0.04] blur-[80px] lg:-right-10" />
-
-                    {/* Facts 2x2 */}
-                    <div className="relative grid grid-cols-2 gap-x-5 gap-y-5 sm:gap-x-8">
-                      {[
-                        ["Doorlooptijd", "1–2 weken"],
-                        ["Opname", "Op locatie"],
-                        ["Bouwperiode", data.bouwperiode.split(",")[0].split(".")[0]],
-                        ["Prijsindicatie", "na opname"],
-                      ].map(([label, value]) => (
-                        <div key={label} className="border-l-[3px] border-primary/15 pl-3 sm:pl-4">
-                          <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-primary/45">
+                  {/* Facts strip */}
+                  <div className="relative overflow-hidden border-b border-border/30 bg-secondary/25 px-5 py-5 sm:px-7 sm:py-6">
+                    <span
+                      className="pointer-events-none absolute -right-2 top-1/2 -translate-y-1/2 select-none font-black leading-none tracking-tighter text-primary/3 text-[min(10rem,20vw)]"
+                      aria-hidden="true"
+                    >
+                      {data.city.toUpperCase()}
+                    </span>
+                    <div className={`relative grid grid-cols-2 gap-x-5 gap-y-4 sm:grid-cols-${slug === "dordrecht" ? "3" : "2"} lg:grid-cols-${facts.length} lg:gap-x-0 lg:divide-x lg:divide-primary/10`}>
+                      {facts.map(([label, value], i) => (
+                        <div key={label} className={i > 0 ? "lg:pl-6" : ""}>
+                          <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-primary/45">
+                            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary/30" />
                             {label}
                           </p>
-                          <p className="mt-1.5 text-base font-bold tracking-tight text-foreground/85 sm:text-lg">
+                          <p className="mt-1.5 text-sm font-bold text-foreground sm:text-[15px]">
                             {value}
                           </p>
                         </div>
                       ))}
                     </div>
+                  </div>
 
-                    {/* Divider */}
-                    <div className="my-7 flex items-center gap-4">
-                      <div className="h-[2px] flex-1 bg-linear-to-r from-primary/20 to-transparent" />
-                    </div>
-
-                    {/* Woningtypes label */}
-                    <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.3em] text-primary/40">
-                      Geschikte woningtypes
-                    </p>
-
-                    {/* Woningtypes */}
-                    <div className="space-y-2.5">
-                      {data.woningTypes.map((type) => (
-                        <div key={type} className="group flex items-start gap-3">
-                          <CheckCircle2 className="mt-[2px] h-[18px] w-[18px] shrink-0 text-primary/60 transition-colors group-hover:text-primary" />
-                          <span className="text-[14px] leading-snug text-foreground/55 transition-colors group-hover:text-foreground/85">
-                            {type}
+                  {/* Image + content */}
+                  <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
+                    {/* Image */}
+                    <div className="relative min-h-[240px] sm:min-h-[280px] lg:min-h-0">
+                      <ResponsiveImage
+                        baseName="gevelisolatie-eindresultaat-stucwerk"
+                        preset="card"
+                        alt={`Buitengevelisolatie resultaat in ${data.city}`}
+                        sizes="(max-width: 1024px) 100vw, 45vw"
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:via-transparent lg:to-transparent" />
+                      {/* Glass badge */}
+                      <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5">
+                        <div className="inline-flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2.5 backdrop-blur-md ring-1 ring-white/10">
+                          <span className="h-2 w-2 rounded-full bg-[#EA6C20]" />
+                          <span className="text-[13px] font-medium text-white/90">
+                            Buitengevelisolatie specialist · {data.city} &amp; omgeving
                           </span>
                         </div>
-                      ))}
+                      </div>
+                    </div>
+
+                    {/* Text + woningtypes */}
+                    <div className="border-t border-border/30 px-5 py-6 sm:px-7 sm:py-8 lg:border-l lg:border-t-0 lg:px-8 lg:py-8">
+                      <p className="max-w-2xl text-base leading-[1.85] text-muted-foreground sm:text-[17px]">
+                        {data.localContext}
+                      </p>
+
+                      <div className="mt-7 border-t border-border/30 pt-6">
+                        <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.3em] text-primary/40">
+                          Geschikte woningtypes in {data.city}
+                        </p>
+                        <div className="grid gap-2 sm:grid-cols-2">
+                          {data.woningTypes.map((type) => (
+                            <div key={type} className="group flex items-start gap-3 rounded-xl px-3 py-2 transition-colors hover:bg-primary/4">
+                              <CheckCircle2 className="mt-[2px] h-[18px] w-[18px] shrink-0 text-primary/50 transition-colors group-hover:text-primary" />
+                              <span className="text-[14px] leading-snug text-muted-foreground transition-colors group-hover:text-foreground/85">
+                                {type}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-            )}
+              )
+            })()}
           </section>
 
           {/* ── Voordelen (compact) ── */}
@@ -495,23 +433,44 @@ export default async function GevelisolatieLocationPage({
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               Waarom <span className="text-primary">buitengevelisolatie?</span>
             </h2>
-            <div className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-              {voordelen.map((v) => {
-                const Icon = v.icon
-                return (
-                  <div key={v.title} className="group text-center">
-                    <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/[0.07]">
-                      <Icon className="h-[22px] w-[22px] text-primary/80" strokeWidth={1.5} />
+            <div className="relative mt-14">
+              {/* Connecting line — desktop */}
+              <div className="pointer-events-none absolute left-[calc(12.5%)] right-[calc(12.5%)] top-[26px] hidden h-px lg:block">
+                <div className="h-full w-full bg-linear-to-r from-transparent via-primary/25 to-transparent" />
+                <div className="absolute inset-0 animate-pulse bg-linear-to-r from-transparent via-primary/15 to-transparent blur-sm" />
+              </div>
+
+              {/* Connecting line — mobile/tablet */}
+              <div className="pointer-events-none absolute bottom-0 left-1/2 top-[52px] w-px -translate-x-1/2 sm:left-1/4 lg:hidden">
+                <div className="h-full bg-linear-to-b from-primary/20 via-primary/10 to-transparent" />
+              </div>
+
+              <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+                {voordelen.map((v, i) => {
+                  const Icon = v.icon
+                  return (
+                    <div key={v.title} className="group relative text-center">
+                      {/* Node icon */}
+                      <div className="relative mx-auto mb-6 flex h-[52px] w-[52px] items-center justify-center">
+                        {/* Outer ring pulse */}
+                        <div className="absolute inset-0 rounded-full bg-primary/6 transition-all duration-300 group-hover:scale-[1.35] group-hover:bg-primary/8" />
+                        {/* Connection dot */}
+                        <div className="absolute -left-[11px] top-1/2 hidden h-[5px] w-[5px] -translate-y-1/2 rounded-full bg-primary/30 lg:block" />
+                        <div className="absolute -right-[11px] top-1/2 hidden h-[5px] w-[5px] -translate-y-1/2 rounded-full bg-primary/30 lg:block" />
+                        {/* Inner ring */}
+                        <div className="absolute inset-[6px] rounded-full bg-card ring-2 ring-primary/20 transition-all duration-300 group-hover:ring-primary/50 group-hover:shadow-[0_0_28px_rgba(234,108,32,0.25)]" />
+                        <Icon className="relative h-5 w-5 text-primary/70 transition-colors duration-300 group-hover:text-primary" strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-base font-semibold tracking-tight text-foreground transition-colors duration-300 group-hover:text-primary">
+                        {v.title}
+                      </h3>
+                      <p className="mx-auto mt-2 max-w-[26ch] text-[15px] leading-relaxed text-muted-foreground">
+                        {v.text}
+                      </p>
                     </div>
-                    <h3 className="text-base font-semibold tracking-tight text-foreground">
-                      {v.title}
-                    </h3>
-                    <p className="mx-auto mt-2 max-w-[26ch] text-[15px] leading-relaxed text-foreground/45">
-                      {v.text}
-                    </p>
-                  </div>
-                )
-              })}
+                  )
+                })}
+              </div>
             </div>
           </section>
           </div>
@@ -594,24 +553,23 @@ export default async function GevelisolatieLocationPage({
               Subsidie, vergunning en energiesituatie — specifiek voor {data.city}.
             </p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="mt-12 grid gap-5 sm:grid-cols-2">
               {lokaleInfoCards.map((card) => {
                 const Icon = card.icon
                 return (
                   <div
                     key={card.field}
-                    className="group flex gap-4 rounded-xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
+                    className="group relative overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card to-secondary/20 p-6 shadow-sm transition-all hover:border-border/70 hover:shadow-md sm:p-7"
                   >
-                    <div
-                      className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${card.bg}`}
-                    >
-                      <Icon className={`h-5 w-5 ${card.color}`} />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-foreground">
+                    <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full opacity-40 blur-[50px]" style={{ background: card.color === 'text-green-600' ? '#22c55e' : card.color === 'text-blue-600' ? '#3b82f6' : card.color === 'text-amber-600' ? '#d97706' : '#8b5cf6' }} />
+                    <div className="relative">
+                      <div className={`mb-5 flex h-11 w-11 items-center justify-center rounded-xl ${card.bg} ring-1 ring-border/30 transition-shadow group-hover:shadow-sm`}>
+                        <Icon className={`h-5 w-5 ${card.color}`} strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-[15px] font-semibold tracking-tight text-foreground">
                         {card.title}
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-2 text-sm leading-[1.8] text-muted-foreground">
                         {data[card.field]}
                       </p>
                     </div>
@@ -621,17 +579,22 @@ export default async function GevelisolatieLocationPage({
             </div>
 
             {/* Besparing callout */}
-            <div className="mt-6 rounded-xl border border-green-200/50 bg-green-50/50 p-5 dark:border-green-900/30 dark:bg-green-950/20">
-              <p className="text-sm font-semibold text-green-800 dark:text-green-300">
-                💡 Gemiddelde besparing in {data.city}
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-green-700 dark:text-green-400">
-                {data.gemiddeldBesparing}
-              </p>
+            <div className="relative mt-10 overflow-hidden rounded-2xl border border-primary/15 bg-linear-to-r from-primary/5 via-primary/3 to-transparent px-7 py-7 shadow-sm">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-primary/60 via-primary/30 to-transparent" />
+              <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/6 blur-[60px]" />
+              <div className="relative">
+                <p className="text-[15px] font-semibold text-foreground">
+                  Gemiddelde besparing in {data.city}
+                </p>
+                <p className="mt-2 text-sm leading-[1.7] text-muted-foreground">
+                  {data.gemiddeldBesparing}
+                </p>
+              </div>
             </div>
 
             {data.gemeenteWebsite && (
-              <p className="mt-5">
+              <div className="mt-6 flex items-center gap-3">
+                <div className="h-px flex-1 max-w-8 bg-primary/20" />
                 <a
                   href={data.gemeenteWebsite}
                   target="_blank"
@@ -641,7 +604,7 @@ export default async function GevelisolatieLocationPage({
                   Duurzaamheidsinfo gemeente {data.city}
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
-              </p>
+              </div>
             )}
           </section>
         </div>
@@ -668,37 +631,40 @@ export default async function GevelisolatieLocationPage({
                     <span className="text-primary">Dordrecht</span>
                   </h2>
 
-                  <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
-                    {/* Before / After slider */}
-                    <div className="aspect-[4/3] sm:aspect-auto sm:h-full">
-                      <LazyBeforeAfterSlider
-                        beforeBaseName="dordrecht-gevelisolatie-10cm-voor-01"
-                        afterBaseName="dordrecht-gevelisolatie-10cm-na-01"
-                        beforeAlt="Dordrecht gevelisolatie – voor de werken"
-                        afterAlt="Dordrecht gevelisolatie – na de werken"
-                        sizes="(max-width: 640px) 100vw, 360px"
-                        className="h-full w-full"
-                      />
-                    </div>
+                  <div className="mt-8 overflow-hidden rounded-2xl border border-border/50 bg-card shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+                    <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                    <div className="sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
+                      {/* Before / After slider */}
+                      <div className="aspect-4/3 sm:aspect-auto sm:h-full">
+                        <LazyBeforeAfterSlider
+                          beforeBaseName="dordrecht-gevelisolatie-10cm-voor-01"
+                          afterBaseName="dordrecht-gevelisolatie-10cm-na-01"
+                          beforeAlt="Dordrecht gevelisolatie – voor de werken"
+                          afterAlt="Dordrecht gevelisolatie – na de werken"
+                          sizes="(max-width: 640px) 100vw, 360px"
+                          className="h-full w-full"
+                        />
+                      </div>
 
-                    {/* Content */}
-                    <Link
-                      href={dordrechtProject.projectUrl}
-                      className="group flex flex-col justify-center gap-3 p-6 transition-colors hover:bg-secondary/20 sm:p-8"
-                    >
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                        {dordrechtProject.meta.city} · {dordrechtProject.meta.objectType} · {dordrechtProject.meta.year}
-                      </p>
-                      <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
-                        {dordrechtProject.title}
-                      </h3>
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        {dordrechtProject.meta.highlight}
-                      </p>
-                      <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
-                        Bekijk project in Dordrecht →
-                      </p>
-                    </Link>
+                      {/* Content */}
+                      <Link
+                        href={dordrechtProject.projectUrl}
+                        className="group flex flex-col justify-center gap-3 border-t border-border/30 p-6 transition-colors hover:bg-primary/4 sm:border-l sm:border-t-0 sm:p-8"
+                      >
+                        <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                          {dordrechtProject.meta.city} · {dordrechtProject.meta.objectType} · {dordrechtProject.meta.year}
+                        </p>
+                        <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
+                          {dordrechtProject.title}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {dordrechtProject.meta.highlight}
+                        </p>
+                        <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
+                          Bekijk project in Dordrecht →
+                        </p>
+                      </Link>
+                    </div>
                   </div>
                 </section>
               </div>
@@ -727,37 +693,40 @@ export default async function GevelisolatieLocationPage({
                     <span className="text-primary">Vlaardingen</span>
                   </h2>
 
-                  <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
-                    {/* Before / After slider */}
-                    <div className="aspect-[4/3] sm:aspect-auto sm:h-full">
-                      <LazyBeforeAfterSlider
-                        beforeBaseName="vlaardingen-gevelisolatie-6cm-voor-01"
-                        afterBaseName="vlaardingen-gevelisolatie-6cm-na-01"
-                        beforeAlt="Vlaardingen gevelisolatie – voor de werken"
-                        afterAlt="Vlaardingen gevelisolatie – na de werken"
-                        sizes="(max-width: 640px) 100vw, 360px"
-                        className="h-full w-full"
-                      />
-                    </div>
+                  <div className="mt-8 overflow-hidden rounded-2xl border border-border/50 bg-card shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+                    <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                    <div className="sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
+                      {/* Before / After slider */}
+                      <div className="aspect-4/3 sm:aspect-auto sm:h-full">
+                        <LazyBeforeAfterSlider
+                          beforeBaseName="vlaardingen-gevelisolatie-6cm-voor-01"
+                          afterBaseName="vlaardingen-gevelisolatie-6cm-na-01"
+                          beforeAlt="Vlaardingen gevelisolatie – voor de werken"
+                          afterAlt="Vlaardingen gevelisolatie – na de werken"
+                          sizes="(max-width: 640px) 100vw, 360px"
+                          className="h-full w-full"
+                        />
+                      </div>
 
-                    {/* Content */}
-                    <Link
-                      href={vlaardingenProject.projectUrl}
-                      className="group flex flex-col justify-center gap-3 p-6 transition-colors hover:bg-secondary/20 sm:p-8"
-                    >
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                        {vlaardingenProject.meta.city} · {vlaardingenProject.meta.objectType} · {vlaardingenProject.meta.year}
-                      </p>
-                      <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
-                        {vlaardingenProject.title}
-                      </h3>
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        {vlaardingenProject.meta.highlight}
-                      </p>
-                      <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
-                        Bekijk project in Vlaardingen →
-                      </p>
-                    </Link>
+                      {/* Content */}
+                      <Link
+                        href={vlaardingenProject.projectUrl}
+                        className="group flex flex-col justify-center gap-3 border-t border-border/30 p-6 transition-colors hover:bg-primary/4 sm:border-l sm:border-t-0 sm:p-8"
+                      >
+                        <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                          {vlaardingenProject.meta.city} · {vlaardingenProject.meta.objectType} · {vlaardingenProject.meta.year}
+                        </p>
+                        <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
+                          {vlaardingenProject.title}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {vlaardingenProject.meta.highlight}
+                        </p>
+                        <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
+                          Bekijk project in Vlaardingen →
+                        </p>
+                      </Link>
+                    </div>
                   </div>
                 </section>
               </div>
@@ -786,38 +755,41 @@ export default async function GevelisolatieLocationPage({
                     <span className="text-primary">Rotterdam</span>
                   </h2>
 
-                  <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
-                    {/* Before / After slider */}
-                    <div className="aspect-[4/3] sm:aspect-auto sm:h-full">
-                      <LazyBeforeAfterSlider
-                        beforeBaseName="rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-01"
-                        afterBaseName="rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01"
-                        beforeAlt="Rotterdam Julianastraat aanbouw isolatie – voor de werken"
-                        afterAlt="Rotterdam Julianastraat aanbouw isolatie – na de werken"
-                        dir="/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026"
-                        sizes="(max-width: 640px) 100vw, 360px"
-                        className="h-full w-full"
-                      />
-                    </div>
+                  <div className="mt-8 overflow-hidden rounded-2xl border border-border/50 bg-card shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+                    <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                    <div className="sm:grid sm:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr]">
+                      {/* Before / After slider */}
+                      <div className="aspect-4/3 sm:aspect-auto sm:h-full">
+                        <LazyBeforeAfterSlider
+                          beforeBaseName="rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-01"
+                          afterBaseName="rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01"
+                          beforeAlt="Rotterdam Julianastraat aanbouw isolatie – voor de werken"
+                          afterAlt="Rotterdam Julianastraat aanbouw isolatie – na de werken"
+                          dir="/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026"
+                          sizes="(max-width: 640px) 100vw, 360px"
+                          className="h-full w-full"
+                        />
+                      </div>
 
-                    {/* Content */}
-                    <Link
-                      href={rotterdamProject.projectUrl}
-                      className="group flex flex-col justify-center gap-3 p-6 transition-colors hover:bg-secondary/20 sm:p-8"
-                    >
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                        {rotterdamProject.meta.city} · {rotterdamProject.meta.objectType} · {rotterdamProject.meta.year}
-                      </p>
-                      <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
-                        {rotterdamProject.title}
-                      </h3>
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        {rotterdamProject.meta.highlight}
-                      </p>
-                      <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
-                        Bekijk project in Rotterdam →
-                      </p>
-                    </Link>
+                      {/* Content */}
+                      <Link
+                        href={rotterdamProject.projectUrl}
+                        className="group flex flex-col justify-center gap-3 border-t border-border/30 p-6 transition-colors hover:bg-primary/4 sm:border-l sm:border-t-0 sm:p-8"
+                      >
+                        <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                          {rotterdamProject.meta.city} · {rotterdamProject.meta.objectType} · {rotterdamProject.meta.year}
+                        </p>
+                        <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground sm:text-xl">
+                          {rotterdamProject.title}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {rotterdamProject.meta.highlight}
+                        </p>
+                        <p className="mt-1 text-sm font-semibold text-primary transition-colors group-hover:underline">
+                          Bekijk project in Rotterdam →
+                        </p>
+                      </Link>
+                    </div>
                   </div>
                 </section>
               </div>
@@ -829,51 +801,119 @@ export default async function GevelisolatieLocationPage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ── Cluster links ── */}
           <section className="py-16 sm:py-20">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="h-px w-10 bg-primary" />
+              <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                Verdieping
+              </span>
+            </div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Verdieping:{" "}
-              <span className="text-primary">alles over gevelisolatie</span>
+              Alles over{" "}
+              <span className="text-primary">gevelisolatie</span>
             </h2>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               Kosten, materialen, afwerkingen en meer — per onderwerp uitgelegd.
             </p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  label: "Kosten & prijs per m²",
-                  href: "/gevelisolatie/kosten/",
-                },
-                {
-                  label: "Afwerkingen vergelijken",
-                  href: "/gevelisolatie/afwerkingen/",
-                },
-                {
-                  label: "Materialen (EPS, PIR, wol)",
-                  href: "/gevelisolatie/materialen/",
-                },
-                {
-                  label: "Rc-waarde & isolatiedikte",
-                  href: "/gevelisolatie/rc-waarde-dikte/",
-                },
-                {
-                  label: "Subsidie & vergunning",
-                  href: "/gevelisolatie/subsidie-vergunning/",
-                },
-                {
-                  label: "Alles over gevelisolatie",
-                  href: "/gevelisolatie/",
-                },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="group flex items-center justify-between rounded-xl border border-border bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
-                >
-                  <span className="text-sm font-semibold text-foreground transition-colors group-hover:text-primary">
-                    {link.label}
-                  </span>
-                  <ArrowRight className="h-4 w-4 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
-                </Link>
-              ))}
+
+            <div className="mt-12 overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card via-card to-secondary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+              {/* Top accent line */}
+              <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+
+              <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+                {/* Image half */}
+                <div className="relative min-h-[260px] sm:min-h-[320px] lg:min-h-0">
+                  <ResponsiveImage
+                    baseName="verdieping-gevelwerk-proces"
+                    preset="card"
+                    alt="Gevelisolatie werkzaamheden"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent lg:bg-linear-to-l lg:from-transparent lg:via-transparent lg:to-transparent" />
+                  {/* Glass badge */}
+                  <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5">
+                    <div className="inline-flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2.5 backdrop-blur-md ring-1 ring-white/10">
+                      <span className="h-2 w-2 rounded-full bg-[#EA6C20]" />
+                      <span className="text-[13px] font-medium text-white/90">
+                        ETICS isolatie &amp; afwerking
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Links half */}
+                <div className="flex flex-col border-t border-border/30 lg:border-l lg:border-t-0">
+                  <div className="flex-1 divide-y divide-border/25">
+                    {[
+                      {
+                        label: "Kosten & prijs per m²",
+                        desc: "Richtprijzen en kostenfactoren",
+                        href: "/gevelisolatie/kosten/",
+                        icon: Euro,
+                      },
+                      {
+                        label: "Afwerkingen vergelijken",
+                        desc: "Stuc, sierpleister, crepi of steenstrips",
+                        href: "/gevelisolatie/afwerkingen/",
+                        icon: Paintbrush2,
+                      },
+                      {
+                        label: "Materialen (EPS, PIR, wol)",
+                        desc: "Lambda, brandklasse en budget",
+                        href: "/gevelisolatie/materialen/",
+                        icon: Layers,
+                      },
+                      {
+                        label: "Rc-waarde & isolatiedikte",
+                        desc: "Dikte bij gewenste energieprestatie",
+                        href: "/gevelisolatie/rc-waarde-dikte/",
+                        icon: Thermometer,
+                      },
+                      {
+                        label: "Subsidie & vergunning",
+                        desc: "ISDE, SEEH en omgevingsvergunning",
+                        href: "/gevelisolatie/subsidie-vergunning/",
+                        icon: FileCheck,
+                      },
+                    ].map((link) => {
+                      const Icon = link.icon
+                      return (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="group flex items-center gap-4 px-5 py-[18px] transition-colors hover:bg-primary/4 sm:px-7"
+                        >
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/7 ring-1 ring-primary/10 transition-all group-hover:bg-primary/12 group-hover:ring-primary/25 group-hover:shadow-[0_0_16px_rgba(234,108,32,0.1)]">
+                            <Icon className="h-[18px] w-[18px] text-primary/70 transition-colors group-hover:text-primary" strokeWidth={1.5} />
+                          </span>
+                          <div className="min-w-0 flex-1">
+                            <p className="text-[15px] font-semibold tracking-tight text-foreground transition-colors group-hover:text-primary">
+                              {link.label}
+                            </p>
+                            <p className="mt-0.5 text-[12px] leading-snug text-muted-foreground/60">
+                              {link.desc}
+                            </p>
+                          </div>
+                          <ArrowRight className="h-4 w-4 shrink-0 text-primary/25 transition-all group-hover:translate-x-1 group-hover:text-primary" />
+                        </Link>
+                      )
+                    })}
+                  </div>
+
+                  {/* Bottom CTA row */}
+                  <div className="border-t border-border/40 bg-secondary/25 px-5 py-3.5 sm:px-7">
+                    <Link
+                      href="/gevelisolatie/"
+                      className="group flex items-center justify-between"
+                    >
+                      <span className="text-[13px] font-bold uppercase tracking-wider text-primary/60 transition-colors group-hover:text-primary">
+                        Alles over gevelisolatie
+                      </span>
+                      <ArrowRight className="h-4 w-4 text-primary/30 transition-all group-hover:translate-x-1 group-hover:text-primary" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -923,7 +963,8 @@ export default async function GevelisolatieLocationPage({
                   {data.faq.map((item, i) => (
                     <details
                       key={i}
-                      className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm"
+                      name="faq"
+                      className="group overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm"
                       open={i === 0}
                     >
                       <summary className="flex cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden">
