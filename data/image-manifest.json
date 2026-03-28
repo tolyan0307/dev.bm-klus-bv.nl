@@ -21,6 +21,28 @@
       604
     ]
   },
+  "afwerking-steenstrips-resultaat": {
+    "originalWidth": 2752,
+    "originalHeight": 1536,
+    "aspectRatio": 1.792,
+    "variants": [
+      320,
+      389,
+      466,
+      604
+    ]
+  },
+  "afwerking-stucwerk-resultaat": {
+    "originalWidth": 2752,
+    "originalHeight": 1536,
+    "aspectRatio": 1.792,
+    "variants": [
+      320,
+      480,
+      640,
+      745
+    ]
+  },
   "detail-dagkanten": {
     "originalWidth": 1024,
     "originalHeight": 1024,
@@ -400,6 +422,29 @@
     "aspectRatio": 1,
     "variants": [
       259,
+      350,
+      466,
+      604
+    ]
+  },
+  "gevelisolatie-kosten-stucwerk-resultaat": {
+    "originalWidth": 2390,
+    "originalHeight": 1635,
+    "aspectRatio": 1.462,
+    "variants": [
+      480,
+      691,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "gevelisolatie-montage-isolatieplaten": {
+    "originalWidth": 2048,
+    "originalHeight": 1745,
+    "aspectRatio": 1.174,
+    "variants": [
+      288,
       350,
       466,
       604
@@ -4440,6 +4485,39 @@
       691,
       745,
       1280
+    ]
+  },
+  "scenario-hoekwoning-sierpleister": {
+    "originalWidth": 2752,
+    "originalHeight": 1536,
+    "aspectRatio": 1.792,
+    "variants": [
+      320,
+      480,
+      576,
+      671
+    ]
+  },
+  "scenario-rijwoning-stucwerk": {
+    "originalWidth": 2752,
+    "originalHeight": 1536,
+    "aspectRatio": 1.792,
+    "variants": [
+      320,
+      480,
+      640,
+      828
+    ]
+  },
+  "scenario-tweekap-steenstrips": {
+    "originalWidth": 2752,
+    "originalHeight": 1536,
+    "aspectRatio": 1.792,
+    "variants": [
+      320,
+      432,
+      466,
+      604
     ]
   },
   "services/dienst-muren": {

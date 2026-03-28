@@ -9,6 +9,13 @@ import {
   Star,
   MapPin,
   MessageCircle,
+  Layers,
+  Paintbrush2,
+  Building2,
+  Wrench,
+  Ruler,
+  Info,
+  type LucideIcon,
 } from "lucide-react"
 
 import { buildPageMetadata } from "@/lib/seo/meta"
@@ -24,9 +31,11 @@ import TableOfContents from "@/components/page/TableOfContents"
 import Section from "@/components/page/Section"
 import Callout from "@/components/page/Callout"
 import PriceCards from "@/components/page/PriceCards"
+import FaqAccordion from "@/components/page/FaqAccordion"
 import RelatedLinks from "@/components/page/RelatedLinks"
 import type { RelatedLinkItem } from "@/components/page/RelatedLinks"
 import GoogleRatingBadge from "@/components/google-rating-badge"
+import ResponsiveImage from "@/components/responsive-image"
 
 const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
@@ -52,7 +61,7 @@ const heroBreadcrumbs = [
 const toc = [
   { id: "richtprijzen",       label: "Richtprijzen per m²" },
   { id: "kostenfactoren",     label: "Welke factoren bepalen de prijs?" },
-  { id: "wat-zit-erin",       label: "Wat zit er meestal in de prijs?" },
+  { id: "wat-zit-erin",       label: "Wat zit er in de prijs?" },
   { id: "voorbeeldscenarios", label: "Voorbeeldscenario's" },
   { id: "besparen",           label: "Besparen zonder kwaliteitsverlies" },
   { id: "faq",                label: "Veelgestelde vragen" },
@@ -86,13 +95,13 @@ const kostenfactoren = [
 ]
 
 const prijsopbouwItems = [
-  "Opname en inmeting op locatie",
-  "Werkvoorbereiding en materiaalbegroting",
-  "Isolatieplaten inclusief bevestiging (lijm en/of pluggen)",
-  "Wapeningslaag (mortel + glasvezelweefsel)",
-  "Gekozen afwerklaag",
-  "Profielen en detaillering (dagkanten, hoeken, plint)",
-  "Oplevering en eindcontrole",
+  { step: "Opname en inmeting", detail: "Bezoek op locatie" },
+  { step: "Werkvoorbereiding", detail: "Materiaalbegroting & planning" },
+  { step: "Isolatieplaten", detail: "Bevestiging met lijm en/of pluggen" },
+  { step: "Wapeningslaag", detail: "Mortel + glasvezelweefsel" },
+  { step: "Afwerklaag", detail: "Uw gekozen finish" },
+  { step: "Detaillering", detail: "Dagkanten, hoeken & plint" },
+  { step: "Oplevering", detail: "Eindcontrole & oplevering" },
 ]
 
 const scenarios = [
@@ -102,6 +111,8 @@ const scenarios = [
     afwerking: "Stuc of sierpleister (ETICS)",
     indicatie: "€3.500 – €10.000",
     opmerking: "Brede bandbreedte door variaties in detaillering (dagkanten, plint) en steigerhoogte.",
+    image: { baseName: "scenario-rijwoning-stucwerk", alt: "Rijwoning met stucwerk afwerking na gevelisolatie" },
+    badge: "Rijwoning",
   },
   {
     title: "Hoekwoning – meerdere gevels",
@@ -109,6 +120,8 @@ const scenarios = [
     afwerking: "Stuc of sierpleister (ETICS)",
     indicatie: "€9.000 – €26.000",
     opmerking: "Meer hoekprofielen en aansluitpunten; exact oppervlak en bereikbaarheid bepalen de eindprijs.",
+    image: { baseName: "scenario-hoekwoning-sierpleister", alt: "Hoekwoning met sierpleister afwerking op twee gevels" },
+    badge: "Hoekwoning",
   },
   {
     title: "Twee-onder-één-kapwoning – voorgevel + zijgevel",
@@ -116,6 +129,8 @@ const scenarios = [
     afwerking: "ETICS + steenstrips",
     indicatie: "€12.000 – €25.000",
     opmerking: "Steenstrips vragen meer arbeid; exacte prijs sterk afhankelijk van striptype en detaillering.",
+    image: { baseName: "scenario-tweekap-steenstrips", alt: "Twee-onder-één-kapwoning met steenstrips afwerking" },
+    badge: "Twee-onder-één-kap",
   },
 ]
 
@@ -224,6 +239,14 @@ const relatedLinks: RelatedLinkItem[] = [
   },
 ]
 
+const kostenfactorenIcons: Record<string, LucideIcon> = {
+  "Materiaal & systeem": Layers,
+  "Afwerking": Paintbrush2,
+  "Steiger & bereikbaarheid": Building2,
+  "Ondergrond & herstel": Wrench,
+  "Detaillering": Ruler,
+}
+
 /* ── Page Component ── */
 export default function KostenGevelisolatiePage() {
   const breadcrumbsSchema = breadcrumbSchema(
@@ -263,8 +286,18 @@ export default function KostenGevelisolatiePage() {
 
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
+        <div className="absolute inset-0">
+          <ResponsiveImage
+            baseName="gevelisolatie-kosten-stucwerk-resultaat"
+            preset="hero"
+            alt="Afgewerkte gevelisolatie met stucwerk — kostenoverzicht"
+            sizes="(max-width: 1920px) 100vw, 1920px"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/35" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#1A1A1A]/60 via-transparent to-[#1A1A1A]/30" />
+        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
@@ -369,31 +402,129 @@ export default function KostenGevelisolatiePage() {
       <TrustStrip />
 
       <div className="below-fold">
-      <div className="bg-background">
-        <div className="mx-auto max-w-7xl px-4 pb-20 pt-14 sm:px-6 lg:px-8">
 
-          {/* ── Table of Contents ── */}
+        {/* ── Table of Contents ── */}
+        <div className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8">
           <TableOfContents items={toc} className="mb-2" />
+        </div>
 
-          {/* ── Sections ── */}
-          <div className="space-y-2 divide-y divide-border/40">
+        {/* ── 1. Richtprijzen ── */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Section
+            id="richtprijzen"
+            eyebrow="Prijsoverzicht"
+            h2="Richtprijzen per m²"
+            accentWord="per m²"
+          >
+            <div className="overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card via-card to-secondary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+              <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+              <div className="p-6 sm:p-8">
+                <div className="grid gap-6 sm:grid-cols-2">
 
-            {/* 1. Richtprijzen */}
-            <Section
-              id="richtprijzen"
-              eyebrow="Prijsoverzicht"
-              h2="Richtprijzen per m²"
-              accentWord="per m²"
-            >
-              <PriceCards cards={priceCards} noteLines={priceNoteLines} />
-              <Callout variant="orange" className="mt-6">
-                <p>
-                  <strong>Exacte prijs na opname op locatie:</strong> na een bezoek ter plaatse ontvangt u een heldere offerte met de specifieke RC-waarde, isolatiedikte en gekozen afwerking — zodat u precies weet wat de investering inhoudt.
-                </p>
-              </Callout>
-            </Section>
+                  {/* Pleisterafwerking */}
+                  <div className="group relative overflow-hidden rounded-xl border border-border/40 bg-card/80 transition-all hover:border-primary/20 hover:shadow-md">
+                    <div className="relative h-44 w-full overflow-hidden">
+                      <ResponsiveImage
+                        baseName="afwerking-stucwerk-resultaat"
+                        preset="serviceCard"
+                        alt="Stucwerk afwerking op geïsoleerde gevel — glad en duurzaam resultaat"
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-card/40 to-transparent" />
+                      <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/20 px-3 py-1 shadow-sm backdrop-blur-md">
+                        <CheckCircle2 className="h-3 w-3 text-white drop-shadow-sm" />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-white drop-shadow-sm">
+                          Meest gekozen
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-5 sm:p-6">
+                      <p className="mb-3 text-sm font-semibold leading-snug text-foreground">
+                        {priceCards[0].title}
+                      </p>
+                      <p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">
+                        {priceCards[0].range}
+                      </p>
+                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                      {priceCards[0].note}
+                    </p>
+                      <ul className="mt-4 space-y-1.5 border-t border-border/30 pt-4">
+                        {["Onderhoudsarm", "Snelle verwerking", "Breed kleurenpalet"].map((item) => (
+                          <li key={item} className="flex items-center gap-2 text-xs text-foreground/70">
+                            <Check className="h-3 w-3 shrink-0 text-primary" strokeWidth={3} />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
 
-            {/* 2. Kostenfactoren */}
+                  {/* Steenstrips */}
+                  <div className="group relative overflow-hidden rounded-xl border border-border/40 bg-card/80 transition-all hover:border-primary/20 hover:shadow-md">
+                    <div className="relative h-44 w-full overflow-hidden">
+                      <ResponsiveImage
+                        baseName="afwerking-steenstrips-resultaat"
+                        preset="serviceCard"
+                        alt="Steenstrips afwerking op buitengevelisolatie — authentieke baksteenlook"
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-card/40 to-transparent" />
+                      <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/20 px-3 py-1 shadow-sm backdrop-blur-md">
+                        <Star className="h-3 w-3 fill-white text-white drop-shadow-sm" />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-white drop-shadow-sm">
+                          Premium optie
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-5 sm:p-6">
+                      <p className="mb-3 text-sm font-semibold leading-snug text-foreground">
+                        {priceCards[1].title}
+                      </p>
+                      <p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">
+                        {priceCards[1].range}
+                      </p>
+                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                      {priceCards[1].note}
+                    </p>
+                      <ul className="mt-4 space-y-1.5 border-t border-border/30 pt-4">
+                        {["Authentieke uitstraling", "Jarenlang kleurvast", "Maximale duurzaamheid"].map((item) => (
+                          <li key={item} className="flex items-center gap-2 text-xs text-foreground/70">
+                            <Check className="h-3 w-3 shrink-0 text-primary" strokeWidth={3} />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="mt-6 flex gap-3 rounded-lg border border-border/30 bg-secondary/15 px-4 py-3">
+                  <Info className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/60" strokeWidth={1.5} />
+                  <div className="space-y-1">
+                    {priceNoteLines.map((line, i) => (
+                      <p key={i} className="text-[11px] leading-relaxed text-muted-foreground">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Callout variant="orange" className="mt-8">
+              <p>
+                <strong>Exacte prijs na opname op locatie:</strong> na een bezoek ter plaatse ontvangt u een heldere offerte met de specifieke RC-waarde, isolatiedikte en gekozen afwerking — zodat u precies weet wat de investering inhoudt.
+              </p>
+            </Callout>
+          </Section>
+        </div>
+
+        {/* ── 2. Kostenfactoren (warm bg) ── */}
+        <div className="bg-secondary/30">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Section
               id="kostenfactoren"
               eyebrow="Kostenfactoren"
@@ -401,51 +532,102 @@ export default function KostenGevelisolatiePage() {
               accentWord="de prijs?"
               lead="De uiteindelijke prijs per m² hangt af van een combinatie van factoren. Hieronder vindt u de belangrijkste, gegroepeerd per categorie."
             >
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {kostenfactoren.map((groep) => (
-                  <div key={groep.groep} className="rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm">
-                    <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-primary">
-                      {groep.groep}
-                    </p>
-                    <ul className="space-y-2">
-                      {groep.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5">
-                          <div className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/50" />
-                          <span className="text-sm leading-snug text-foreground/75">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </Section>
-
-            {/* 3. Wat zit erin */}
-            <Section
-              id="wat-zit-erin"
-              eyebrow="Inbegrepen"
-              h2="Wat zit er meestal in de prijs?"
-              accentWord="in de prijs?"
-              lead="Een complete ETICS-offerte omvat doorgaans de onderstaande onderdelen. Posten zoals steigerhuur en herstelwerk worden apart inzichtelijk gemaakt, omdat deze sterk variëren per situatie."
-            >
-              <div className="rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm">
-                <ul className="grid gap-3 sm:grid-cols-2">
-                  {prijsopbouwItems.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                        <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {kostenfactoren.map((groep, i) => {
+                  const Icon = kostenfactorenIcons[groep.groep]
+                  return (
+                    <div
+                      key={groep.groep}
+                      className="group relative overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card via-card to-secondary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)] transition-all hover:shadow-[0_8px_40px_-12px_rgba(0,0,0,0.12)]"
+                    >
+                      <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                      <div className="relative p-6 sm:p-8">
+                        <span
+                          className="pointer-events-none absolute -right-1 -top-3 select-none font-black text-[5rem] leading-none text-primary/4 transition-colors group-hover:text-primary/7"
+                          aria-hidden="true"
+                        >
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        {Icon && (
+                          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/7 ring-1 ring-primary/10 transition-all group-hover:bg-primary/12 group-hover:ring-primary/25">
+                            <Icon className="h-5 w-5 text-primary/70 group-hover:text-primary" strokeWidth={1.5} />
+                          </div>
+                        )}
+                        <p className="mb-4 text-sm font-bold text-foreground">
+                          {groep.groep}
+                        </p>
+                        <ul className="space-y-2.5">
+                          {groep.items.map((item) => (
+                            <li key={item} className="flex items-start gap-2.5">
+                              <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/40" />
+                              <span className="text-sm leading-snug text-foreground/75">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <span className="text-sm leading-snug text-foreground/80">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-                  Steigerhuur en -montage, alsmede uitgebreider herstelwerk aan de ondergrond, worden altijd afzonderlijk in de offerte vermeld. Zo weet u vooraf precies wat erbij komt.
-                </p>
+                    </div>
+                  )
+                })}
               </div>
             </Section>
+          </div>
+        </div>
 
-            {/* 4. Voorbeeldscenario's */}
+        {/* ── 3. Wat zit erin ── */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Section
+            id="wat-zit-erin"
+            eyebrow="Inbegrepen"
+            h2="Wat zit er in de prijs?"
+            accentWord="in de prijs?"
+            lead="Een complete ETICS-offerte doorloopt vaste stappen — van opname tot oplevering. Hieronder ziet u wat er standaard inbegrepen is."
+          >
+            <div className="overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card via-card to-secondary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+              <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+              <div className="grid lg:grid-cols-5">
+                <div className="p-6 sm:p-8 lg:col-span-3">
+                  <ol className="space-y-0">
+                    {prijsopbouwItems.map((item, i) => (
+                      <li key={item.step} className="group/step relative flex gap-4">
+                        <div className="flex flex-col items-center">
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary ring-1 ring-primary/20">
+                            {i + 1}
+                          </div>
+                          {i < prijsopbouwItems.length - 1 && (
+                            <div className="mt-1 w-px grow bg-border/50" />
+                          )}
+                        </div>
+                        <div className={i < prijsopbouwItems.length - 1 ? "pb-5" : ""}>
+                          <p className="text-sm font-semibold text-foreground">{item.step}</p>
+                          <p className="mt-0.5 text-xs text-muted-foreground">{item.detail}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                  <div className="mt-6 flex items-start gap-2 rounded-lg border border-border/30 bg-secondary/15 px-4 py-3">
+                    <Info className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/60" strokeWidth={1.5} />
+                    <p className="text-[11px] leading-relaxed text-muted-foreground">
+                      Steigerhuur en -montage, alsmede uitgebreider herstelwerk aan de ondergrond, worden altijd afzonderlijk in de offerte vermeld.
+                    </p>
+                  </div>
+                </div>
+                <div className="relative hidden lg:col-span-2 lg:block">
+                  <ResponsiveImage
+                    baseName="projects/vught-gevelisolatie-10cm-voor-6"
+                        preset="serviceCard"
+                        alt="ETICS gevelisolatie werkproces — stucwerk en steiger in Vught"
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="absolute inset-0 h-full w-full object-cover object-center"
+                  />
+                </div>
+              </div>
+            </div>
+          </Section>
+        </div>
+
+        {/* ── 4. Voorbeeldscenario's (warm bg) ── */}
+        <div className="bg-secondary/30">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Section
               id="voorbeeldscenarios"
               eyebrow="Voorbeelden"
@@ -453,61 +635,98 @@ export default function KostenGevelisolatiePage() {
               accentWord="Voorbeeldscenario's"
               lead="Onderstaande scenario's geven een indicatief beeld. De brede bandbreedtes weerspiegelen de invloed van detaillering, steigerhoogte en afwerking op de eindprijs."
             >
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {scenarios.map((scenario) => (
-                  <div key={scenario.title} className="rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm">
-                    <p className="mb-4 text-sm font-bold text-foreground">{scenario.title}</p>
-                    <dl className="space-y-2 text-sm">
-                      <div className="flex justify-between gap-2">
-                        <dt className="text-muted-foreground">Oppervlak</dt>
-                        <dd className="font-medium text-foreground">{scenario.oppervlak}</dd>
+                  <div
+                    key={scenario.title}
+                    className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card/80 transition-all hover:border-primary/20 hover:shadow-md"
+                  >
+                    <div className="relative h-44 w-full overflow-hidden">
+                      <ResponsiveImage
+                        baseName={scenario.image.baseName}
+                        preset="serviceCard"
+                        alt={scenario.image.alt}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-card/40 to-transparent" />
+                      <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/20 px-3 py-1 shadow-sm backdrop-blur-md">
+                        <Building2 className="h-3 w-3 text-white drop-shadow-sm" />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-white drop-shadow-sm">
+                          {scenario.badge}
+                        </span>
                       </div>
-                      <div className="flex justify-between gap-2">
-                        <dt className="text-muted-foreground">Afwerking</dt>
-                        <dd className="font-medium text-foreground text-right">{scenario.afwerking}</dd>
+                    </div>
+                    <div className="p-5 sm:p-6">
+                      <p className="mb-3 text-sm font-semibold text-foreground">{scenario.title}</p>
+                      <dl className="space-y-2.5 text-sm">
+                        <div className="flex justify-between gap-2">
+                          <dt className="text-muted-foreground">Oppervlak</dt>
+                          <dd className="font-medium text-foreground">{scenario.oppervlak}</dd>
+                        </div>
+                        <div className="flex justify-between gap-2">
+                          <dt className="text-muted-foreground">Afwerking</dt>
+                          <dd className="font-medium text-foreground text-right">{scenario.afwerking}</dd>
+                        </div>
+                      </dl>
+                      <div className="mt-4 rounded-lg bg-primary/5 px-4 py-3 text-center">
+                        <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Indicatie totaal</p>
+                        <p className="mt-1 text-2xl font-black tracking-tight text-primary">{scenario.indicatie}</p>
                       </div>
-                      <div className="flex justify-between gap-2 border-t border-border/60 pt-2">
-                        <dt className="font-semibold text-foreground">Indicatie totaal</dt>
-                        <dd className="text-lg font-black text-primary">{scenario.indicatie}</dd>
+                      <div className="mt-3 flex items-start gap-2">
+                        <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground/50" strokeWidth={1.5} />
+                        <p className="text-[11px] leading-relaxed text-muted-foreground">
+                          {scenario.opmerking}
+                        </p>
                       </div>
-                    </dl>
-                    <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground/80">
-                      {scenario.opmerking}
-                    </p>
+                    </div>
                   </div>
                 ))}
               </div>
-              <Callout variant="warning" className="mt-6" title="Let op: indicaties, geen vaste prijzen">
+              <Callout variant="warning" className="mt-8" title="Let op: indicaties, geen vaste prijzen">
                 <p>
                   Bovenstaande bedragen zijn brede bandbreedtes ter oriëntatie. De exacte prijs is altijd maatwerk en volgt na de opname op locatie.
                 </p>
               </Callout>
             </Section>
+          </div>
+        </div>
 
-            {/* 5. Besparen */}
-            <Section
-              id="besparen"
-              eyebrow="Bespaartips"
-              h2="Besparen zonder kwaliteitsverlies"
-              accentWord="kwaliteitsverlies"
-              lead="Er zijn een aantal praktische keuzes die de kosten kunnen beïnvloeden, zonder afbreuk te doen aan de kwaliteit van het eindresultaat."
-            >
-              <div className="grid gap-4 sm:grid-cols-2">
-                {besparenTips.map((tip, i) => (
-                  <div key={tip.title} className="flex gap-4 rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm">
-                    <span className="mt-0.5 text-2xl font-black tabular-nums text-primary/20">
+        {/* ── 5. Bespaartips ── */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Section
+            id="besparen"
+            eyebrow="Bespaartips"
+            h2="Besparen zonder kwaliteitsverlies"
+            accentWord="kwaliteitsverlies"
+            lead="Er zijn een aantal praktische keuzes die de kosten kunnen beïnvloeden, zonder afbreuk te doen aan de kwaliteit van het eindresultaat."
+          >
+            <div className="grid gap-6 sm:grid-cols-2">
+              {besparenTips.map((tip, i) => (
+                <div
+                  key={tip.title}
+                  className="group relative overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card via-card to-secondary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)] transition-all hover:shadow-[0_8px_40px_-12px_rgba(0,0,0,0.12)]"
+                >
+                  <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                  <div className="relative p-6 sm:p-8">
+                    <span
+                      className="pointer-events-none absolute -right-1 -top-3 select-none font-black text-[5rem] leading-none text-primary/4 transition-colors group-hover:text-primary/7"
+                      aria-hidden="true"
+                    >
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <div>
-                      <p className="mb-1 text-sm font-semibold text-foreground">{tip.title}</p>
-                      <p className="text-sm leading-relaxed text-muted-foreground">{tip.text}</p>
-                    </div>
+                    <p className="mb-2 text-sm font-bold text-foreground">{tip.title}</p>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{tip.text}</p>
                   </div>
-                ))}
-              </div>
-            </Section>
+                </div>
+              ))}
+            </div>
+          </Section>
+        </div>
 
-            {/* 6. FAQ */}
+        {/* ── 6. FAQ ── */}
+        <div className="bg-secondary/30">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <section id="faq" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
               <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
                 <div className="lg:col-span-5">
@@ -531,44 +750,22 @@ export default function KostenGevelisolatiePage() {
                     </p>
                   </div>
                 </div>
-                <div className="lg:col-span-7 space-y-3">
-                  {faqItems.map((faq, i) => (
-                    <details
-                      key={i}
-                      className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all open:border-primary/40 open:shadow-md"
-                      {...(i === 0 ? { open: true } : {})}
-                    >
-                      <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
-                        <div className="flex min-w-0 items-start gap-4">
-                          <span className="mt-0.5 shrink-0 text-lg font-bold text-border group-open:text-primary transition-colors">
-                            {String(i + 1).padStart(2, "0")}
-                          </span>
-                          <span className="min-w-0 break-words text-base font-semibold text-foreground sm:text-lg">
-                            {faq.vraag}
-                          </span>
-                        </div>
-                        <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 rotate-90 group-open:rotate-270" />
-                      </summary>
-                      <div className="border-t border-border/50 px-6 pb-6 pt-4">
-                        <p className="pl-12 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                          {faq.antwoord}
-                        </p>
-                      </div>
-                    </details>
-                  ))}
+                <div className="lg:col-span-7">
+                  <FaqAccordion items={faqItems} defaultOpen={0} variant="premium" />
                 </div>
               </div>
             </section>
+          </div>
+        </div>
 
-          </div>{/* end sections */}
-
-          {/* ── Related links ── */}
-          <div className="mt-16 border-t border-border/40 pt-12">
+        {/* ── Related links ── */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="pt-16 pb-4">
             <RelatedLinks items={relatedLinks} />
           </div>
 
           {/* ── Internal links ── */}
-          <nav aria-label="Overige pagina's" className="mt-8">
+          <nav aria-label="Overige pagina's" className="pb-20 pt-4">
             <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
               <span className="font-semibold text-foreground">Overige pagina&apos;s:</span>
               {[
@@ -587,10 +784,7 @@ export default function KostenGevelisolatiePage() {
               ))}
             </div>
           </nav>
-
-        </div>{/* end container */}
-
-      </div>
+        </div>
 
       </div>{/* end below-fold */}
 

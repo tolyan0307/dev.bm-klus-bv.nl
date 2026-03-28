@@ -5,10 +5,6 @@ export interface PriceCard {
   highlighted?: boolean
 }
 
-interface NoteLineProps {
-  lines: string[]
-}
-
 interface PriceCardsProps {
   cards: PriceCard[]
   noteLines?: string[]
@@ -17,37 +13,46 @@ interface PriceCardsProps {
 export default function PriceCards({ cards, noteLines = [] }: PriceCardsProps) {
   return (
     <div>
-      {/* Cards grid */}
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2">
         {cards.map((card) => (
           <div
             key={card.title}
-            className={`flex flex-col justify-between gap-4 rounded-xl border p-6 transition-all ${
+            className={`group relative overflow-hidden rounded-2xl border bg-linear-to-br from-card via-card to-secondary/30 transition-all ${
               card.highlighted
-                ? "border-primary/30 bg-primary/5 shadow-md"
-                : "border-border/60 bg-card/80 shadow-sm"
+                ? "border-primary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.12)]"
+                : "border-border/50 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]"
             }`}
           >
-            <p className="text-sm leading-snug text-foreground/80">{card.title}</p>
-            <div>
-              <p className="text-2xl font-black tracking-tight text-primary sm:text-3xl">
-                {card.range}
+            <div
+              className={`h-[3px] bg-linear-to-r ${
+                card.highlighted
+                  ? "from-primary via-primary/40 to-transparent"
+                  : "from-primary/70 via-primary/25 to-transparent"
+              }`}
+            />
+            <div className="flex flex-col justify-between gap-4 p-6 sm:p-8">
+              <p className="text-sm font-medium leading-snug text-foreground/80">
+                {card.title}
               </p>
-              {card.note && (
-                <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-                  {card.note}
+              <div>
+                <p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">
+                  {card.range}
                 </p>
-              )}
+                {card.note && (
+                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                    {card.note}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Disclaimer lines */}
       {noteLines.length > 0 && (
-        <div className="mt-4 space-y-1 rounded-lg bg-muted/40 px-4 py-3">
+        <div className="mt-5 space-y-1 rounded-xl border border-border/40 bg-secondary/20 px-5 py-4">
           {noteLines.map((line, i) => (
-            <p key={i} className="text-[11px] leading-relaxed text-muted-foreground/80">
+            <p key={i} className="text-[11px] leading-relaxed text-muted-foreground">
               {line}
             </p>
           ))}

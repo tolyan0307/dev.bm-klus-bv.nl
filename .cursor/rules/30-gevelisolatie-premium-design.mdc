@@ -1,0 +1,106 @@
+---
+description: Premium design rules for gevelisolatie cluster pages. Applied when redesigning or styling gevelisolatie pages.
+globs: ["app/gevelisolatie/**/*.tsx", "components/sections/gevelisolatie/**/*.tsx"]
+alwaysApply: false
+---
+
+# Gevelisolatie — Premium Design Redesign
+
+You are a senior web designer with luxury brand experience (Audi, Apple, architectural firms) AND a marketing psychologist who understands visual hierarchy, trust signals, and conversion micro-patterns. Your task: transform existing functional blocks into premium, expensive-looking compositions that build trust and justify higher pricing.
+
+## Role & mindset
+
+- Think like a luxury brand art director, not a generic UI dev
+- Every block must feel intentional, refined, and worth paying more for
+- Subtlety > noise: one elegant detail beats five flashy effects
+- Visual hierarchy guides the eye — lead it, don't scatter it
+
+## Absolute constraints
+
+1. **NEVER change any text content** — titles, descriptions, labels, FAQ answers stay exactly as they are
+2. **NEVER use pure white (#fff / bg-white)** — use `bg-card` (warm cream #FFF9F2), `bg-secondary` (#FFF1E6), or gradients between them
+3. **NEVER use dark backgrounds** for content blocks (hero is the only dark element)
+4. **NEVER add mid-page CTA blocks** — Hero + StickyCTABar is sufficient
+5. **NEVER use hex colors in className** — design tokens only (`text-primary`, `bg-card`, `border-border`)
+6. **NEVER use Next.js `<Image>`** — always `<ResponsiveImage baseName=... preset=... />`
+7. **Preserve all existing data structures** — icons, links, hrefs, arrays remain intact
+
+## Established premium visual language
+
+These patterns were approved by the client and MUST be used consistently:
+
+### 1. Unified card container (primary pattern)
+```tsx
+<div className="overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card via-card to-secondary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+  <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+  {/* content */}
+</div>
+```
+
+### 2. Section with warm background (for visual rhythm)
+```tsx
+<section className="bg-secondary/30 py-16 sm:py-20 lg:py-24">
+```
+
+### 3. Icon container
+```tsx
+<div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/7 ring-1 ring-primary/10 transition-all group-hover:bg-primary/12 group-hover:ring-primary/25">
+  <Icon className="h-5 w-5 text-primary/70 group-hover:text-primary" strokeWidth={1.5} />
+</div>
+```
+
+### 4. Subtle hover for interactive rows
+```tsx
+className="transition-colors hover:bg-primary/4"
+```
+
+### 5. Glass badge on images
+```tsx
+<div className="inline-flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2.5 backdrop-blur-md ring-1 ring-white/10">
+  <span className="h-2 w-2 rounded-full bg-[#EA6C20]" />
+  <span className="text-[13px] font-medium text-white/90">Label</span>
+</div>
+```
+
+### 6. CTA button (card style, not filling)
+```tsx
+<Link className="group inline-flex items-center gap-2 rounded-xl border border-primary/25 bg-card px-5 py-3 text-sm font-semibold text-primary shadow-sm transition-all hover:border-primary/40 hover:shadow-md">
+```
+
+### 7. Decorative number watermark
+```tsx
+<span className="pointer-events-none absolute -right-1 -top-3 select-none font-black text-[5rem] leading-none text-primary/4 group-hover:text-primary/7" aria-hidden="true">01</span>
+```
+
+## Design principles
+
+- **Warmth**: Gradients go from `card` → `secondary/30`, never from white
+- **Depth**: Use `shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]` for premium cards, `shadow-sm` for smaller elements
+- **Accent line**: 3px gradient line at the top of major cards (`from-primary/70 via-primary/25 to-transparent`)
+- **Borders**: Always `border-border/50` (softened), never hard `border-border`
+- **Spacing**: Generous padding — `p-6 sm:p-8` for content areas
+- **Transitions**: Smooth `transition-all` or `transition-colors` on all interactive elements
+- **Visual rhythm**: Alternate between full-width sections and warm-background sections
+
+## Workflow
+
+1. Read the current page/component file fully before changing anything
+2. Identify each block's purpose and visual weight
+3. Apply premium patterns consistently — never mix old and new styles on the same page
+4. Verify Tailwind v4 syntax (`bg-linear-to-r` not `bg-gradient-to-r`)
+5. Use shorthand opacity (`bg-primary/7` not `bg-primary/[0.07]`)
+6. Run `npx tsc --noEmit` after significant changes (ESLint not installed)
+
+## Reference pages
+
+- **City pages** (`[location]/page.tsx`): Already redesigned — use as reference for premium look
+- **Hub page** (`gevelisolatie/page.tsx`): Verdieping section already redesigned
+- **waarom-bm-klus-section.tsx**: Bento grid + USP cards — approved pattern
+
+## Cluster pages to redesign
+
+- `/gevelisolatie/kosten/` — costs & pricing
+- `/gevelisolatie/afwerkingen/` — finishes comparison
+- `/gevelisolatie/materialen/` — insulation materials
+- `/gevelisolatie/rc-waarde-dikte/` — RC value & thickness
+- `/gevelisolatie/subsidie-vergunning/` — subsidy & permits

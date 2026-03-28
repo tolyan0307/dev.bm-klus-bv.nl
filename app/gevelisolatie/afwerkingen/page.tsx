@@ -31,6 +31,7 @@ import TrustStrip from "@/components/trust-strip"
 import TableOfContents from "@/components/page/TableOfContents"
 import Section from "@/components/page/Section"
 import Callout from "@/components/page/Callout"
+import FaqAccordion from "@/components/page/FaqAccordion"
 import RelatedLinks from "@/components/page/RelatedLinks"
 import type { RelatedLinkItem } from "@/components/page/RelatedLinks"
 import GoogleRatingBadge from "@/components/google-rating-badge"
@@ -841,31 +842,8 @@ export default function AfwerkingenPage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-7 space-y-3">
-                {faqItems.map((item, idx) => (
-                  <details
-                    key={idx}
-                    className="group overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm transition-all open:border-primary/40 open:shadow-md"
-                    {...(idx === 0 ? { open: true } : {})}
-                  >
-                    <summary className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-left transition-colors hover:bg-secondary/20 [&::-webkit-details-marker]:hidden list-none">
-                      <div className="flex min-w-0 items-start gap-4">
-                        <span className="mt-0.5 shrink-0 text-lg font-bold tabular-nums text-border transition-colors group-open:text-primary">
-                          {String(idx + 1).padStart(2, "0")}
-                        </span>
-                        <span className="min-w-0 wrap-break-word text-base font-semibold text-foreground sm:text-lg">
-                          {item.vraag}
-                        </span>
-                      </div>
-                      <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" />
-                    </summary>
-                    <div className="border-t border-border/50 px-6 pb-6 pt-4">
-                      <p className="pl-12 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                        {item.antwoord}
-                      </p>
-                    </div>
-                  </details>
-                ))}
+              <div className="lg:col-span-7">
+                <FaqAccordion items={faqItems} defaultOpen={0} />
               </div>
             </div>
           </section>
