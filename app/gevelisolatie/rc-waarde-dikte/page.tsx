@@ -42,7 +42,7 @@ const faqItems = [
   {
     vraag: "Is een Rc-waarde van 3,5 m²K/W voldoende voor mijn woning?",
     antwoord:
-      "Rc 3,5 is de gangbare drempelwaarde voor energiesubsidies (ISDE/SEEH) en levert doorgaans al een merkbare besparing op stookkosten, afhankelijk van uw woning en verwarmingssysteem. Voor oudere woningen met een slechte beginsituatie is Rc 3,5 een uitstekend startpunt. Wilt u het maximale resultaat of voldoen aan nieuwbouwprestaties, dan adviseren wij Rc 4,5 of hoger. Wij bepalen de optimale waarde tijdens de gratis opname op locatie.",
+      "Rc 3,5 is de gangbare drempelwaarde voor energiesubsidies (ISDE) en levert doorgaans al een merkbare besparing op stookkosten, afhankelijk van uw woning en verwarmingssysteem. Voor oudere woningen met een slechte beginsituatie is Rc 3,5 een uitstekend startpunt. Wilt u het maximale resultaat of voldoen aan nieuwbouwprestaties, dan adviseren wij Rc 4,5 of hoger. Wij bepalen de optimale waarde tijdens de gratis opname op locatie.",
   },
   {
     vraag: "Kan de isolatielaag te dik worden?",
@@ -87,7 +87,7 @@ const relatedLinks = [
   { label: "Kosten gevelisolatie",   href: "/gevelisolatie/kosten/",           description: "Prijzen, factoren en voorbeeldberekeningen" },
   { label: "Materialen",             href: "/gevelisolatie/materialen/",      description: "EPS, PIR en minerale wol vergeleken" },
   { label: "Afwerkingen",            href: "/gevelisolatie/afwerkingen/",     description: "Sierpleister, crepi, steenstrips en meer" },
-  { label: "Subsidie & vergunning",  href: "/gevelisolatie/subsidie-vergunning/", description: "ISDE, SEEH en wat u moet regelen" },
+  { label: "Subsidie & vergunning",  href: "/gevelisolatie/subsidie-vergunning/", description: "ISDE-subsidie en omgevingsvergunning" },
   { label: "Onze werken",            href: "/onze-werken/",                   description: "Uitgevoerde gevelisolatie- en afwerkingsprojecten in de regio." },
 ]
 
@@ -401,7 +401,7 @@ export default function RcWaardeDiktePage() {
                 {[
                   { rc: "Rc 1,3",   kleur: "bg-muted",       label: "Indicatief renovatie minimum (check actuele bouwregelgeving)" },
                   { rc: "Rc 2,5",   kleur: "bg-muted",       label: "Basis verbetering — merkbare besparing, geen subsidie" },
-                  { rc: "Rc 3,5+",  kleur: "bg-primary/10",  label: "Subsidiedrempel ISDE/SEEH (check actuele voorwaarden)" },
+                  { rc: "Rc 3,5+",  kleur: "bg-primary/10",  label: "Subsidiedrempel ISDE (check actuele voorwaarden)" },
                   { rc: "Rc 4,7+",  kleur: "bg-primary/20",  label: "Nieuwbouwnorm — hoog comfortniveau" },
                   { rc: "Rc 5,5+",  kleur: "bg-primary/30",  label: "Premium isolatie — optimaal voor bijna-energieneutrale renovatie" },
                 ].map((row) => (
@@ -529,8 +529,8 @@ export default function RcWaardeDiktePage() {
                     items={[
                       "Huidige energielabel of energieverbruik",
                       "Gewenste Rc-waarde op basis van doel en budget",
-                      "Subsidiegeschiktheid (ISDE/SEEH drempelwaarden)",
-                      "Vergunningplicht op basis van monument of bestemmingsplan",
+                      "Subsidiegeschiktheid (ISDE drempelwaarden)",
+                      "Vergunningplicht op basis van monument of omgevingsplan",
                       "Combinatie met zonnepanelen of warmtepomp (warmtevraag)",
                     ]}
                   />

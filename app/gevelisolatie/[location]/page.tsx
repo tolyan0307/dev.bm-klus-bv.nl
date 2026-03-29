@@ -871,7 +871,7 @@ export default async function GevelisolatieLocationPage({
                       },
                       {
                         label: "Subsidie & vergunning",
-                        desc: "ISDE, SEEH en omgevingsvergunning",
+                        desc: "ISDE-subsidie en omgevingsvergunning",
                         href: "/gevelisolatie/subsidie-vergunning/",
                         icon: FileCheck,
                       },

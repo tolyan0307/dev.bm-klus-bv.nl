@@ -1,4 +1,3 @@
-// FUTURE EXTRACTION TARGET: /gevelisolatie/subsidie-vergunning/
 import Link from "next/link"
 import ResponsiveImage from "@/components/responsive-image"
 import { subsidieVergunningContent } from "@/lib/content/gevelisolatie"
@@ -20,12 +19,12 @@ const blocks = [
   {
     icon: Euro,
     label: "Subsidie & regelingen",
-    badge: { text: "ISDE / SEEH", cls: "bg-green-100 text-green-700" },
+    badge: { text: "ISDE", cls: "bg-green-100 text-green-700" },
     tekst:
       "Er bestaan diverse regelingen voor woningisolatie. Of u in aanmerking komt, hangt af van het type woning, de behaalde RC-waarde en de geldende subsidieregelingen. Wij helpen u bij het uitzoeken van de mogelijkheden en de benodigde documentatie.",
     bullets: [
-      "Minimaal Rd 3,5 m²K/W vereist (ISDE)",
-      "Subsidie aanvragen ná uitvoering (binnen 24 maanden)",
+      "Minimaal Rd 3,5 m²K/W vereist — check rvo.nl voor actuele norm",
+      "Subsidie aanvragen ná uitvoering, binnen 24 maanden (check rvo.nl)",
       "Wij ondersteunen bij documentatie",
     ],
   },

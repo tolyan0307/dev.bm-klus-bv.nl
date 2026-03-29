@@ -34,6 +34,12 @@ const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
 )
 const QuoteModal = dynamic(() => import("@/components/quote-modal"))
+const StappenplanTimeline = dynamic(
+  () => import("@/components/sections/gevelisolatie/stappenplan-timeline"),
+)
+const ChecklistInteractive = dynamic(
+  () => import("@/components/sections/gevelisolatie/checklist-interactive"),
+)
 
 /* ─────────────────────────────────────────────────────────────────────────────
    DATA — all copy lives here so the file stays readable
@@ -102,40 +108,40 @@ const stappen = [
 /* ── Checklist items ── */
 const checklistItems = [
   {
-    icon: ShieldAlert,
+    iconName: "ShieldAlert",
     label: "Beschermd stadsgezicht of monument",
     tekst:
-      "Controleer of uw woning of pand in een beschermd stads- of dorpsgezicht staat, of een monumentenstatus heeft. In beide gevallen gelden strengere regels voor gevelwijzigingen.",
+      "Controleer of uw woning in een beschermd stads- of dorpsgezicht staat, of een monumentenstatus heeft. In beide gevallen gelden strengere regels en is een vergunningcheck altijd verstandig. Vaak is een omgevingsvergunning nodig.",
   },
   {
-    icon: Home,
-    label: "Gevelbeeld en straatbeeld",
+    iconName: "Home",
+    label: "Voorgevel of zicht vanaf de straat",
     tekst:
-      "Buitengevelisolatie voegt dikte toe aan de gevel en kan de afwerking wijzigen. Of dit vergunningsplichtig is, hangt af van de mate van zichtbare verandering en de gemeentelijke welstandsnormen.",
+      "Gaat het om de voorgevel of een zijgevel die zichtbaar is vanaf openbaar toegankelijk gebied? Dan gelden vaak strengere welstandseisen voor afwerking, kleur en structuur. Controleer het omgevingsplan en de welstandsnota van uw gemeente.",
   },
   {
-    icon: MapPin,
-    label: "Erfgrens en overstek",
+    iconName: "MapPin",
+    label: "Erfgrens en extra geveldikte",
     tekst:
-      "Door de toegevoegde isolatiedikte kan de gevel dichter bij de erfgrens of het trottoir komen. Check of de nieuwe geveldikte binnen de wettelijke grenzen blijft.",
+      "Buitengevelisolatie kan de gevel circa 10–20 cm dikker maken. Controleer uw erfgrens en de beschikbare ruimte langs de gevel — met name bij smalle stegen, trottoirs of perceelgrenzen.",
   },
   {
-    icon: ClipboardList,
-    label: "Afwerking, kleur en structuur",
+    iconName: "FileText",
+    label: "Meldcode en productgegevens",
     tekst:
-      "Sommige gemeenten stellen eisen aan kleur en structuur van de afwerking, met name in welstandsgebieden. Vraag de lokale welstandsnota op of laat ons dit voor u navragen.",
+      "Elk isolatiemateriaal dat in aanmerking komt voor ISDE heeft een meldcode uit de RVO-productenlijst. Vraag uw uitvoerder om de meldcode, productnaam, m² en Rd-waarde vóór de uitvoering te bevestigen.",
   },
   {
-    icon: Calendar,
+    iconName: "Calendar",
     label: "Planning en volgorde",
     tekst:
-      "Bij ISDE dient u de aanvraag in ná de uitvoering, binnen de gestelde termijn bij RVO. Check altijd de actuele aanvraagprocedure bij RVO, want deze kan wijzigen.",
+      "Is een vergunning nodig? Vraag die aan vóór de start (beslistermijn doorgaans 8 weken). ISDE-subsidie voor woningeigenaren vraagt u pas aan ná uitvoering, binnen 24 maanden via rvo.nl.",
   },
   {
-    icon: FileText,
+    iconName: "ClipboardList",
     label: "Documentatie bewaren",
     tekst:
-      "Bewaar facturen, materiaalspecificaties (inclusief lambda-waarde en RC-berekening), foto's van voor/tijdens/na de uitvoering en uw goedkeuring van de offerte.",
+      "Bewaar vanaf het begin: de factuur (met m², productnaam, Rd-waarde en meldcode), het betaalbewijs, en duidelijke foto's van de woning en de uitgevoerde werkzaamheden.",
   },
 ]
 
@@ -159,12 +165,12 @@ const faqItems = [
   {
     vraag: "Kan ik subsidie aanvragen als ik slechts één gevel isoleer?",
     antwoord:
-      "In veel gevallen kan dat. De voorwaarden voor ISDE stellen een minimaal isolatieoppervlak van 10 m² en een minimale Rd-waarde van 3,5 m²K/W. Of één gevel voldoende is, hangt af van de oppervlakte. Check de actuele voorwaarden bij RVO of vraag ons om advies.",
+      "In veel gevallen kan dat. De voorwaarden voor ISDE stellen een minimaal isolatieoppervlak van 10 m² en een minimale Rd-waarde van 3,5 m²K/W. Of één gevel voldoende is, hangt af van de oppervlakte. Houd er rekening mee dat bij één enkele maatregel het subsidiebedrag lager kan zijn dan bij twee of meer maatregelen binnen 24 maanden. Check de actuele voorwaarden bij RVO of vraag ons om advies.",
   },
   {
     vraag: "Wanneer moet ik de subsidie aanvragen: voor of na de uitvoering?",
     antwoord:
-      "Bij ISDE dient u de aanvraag in ná uitvoering maar binnen de gestelde termijn. De werkzaamheden mogen pas starten nadat u zeker bent over de procedure. Check altijd de actuele aanvraagprocedure bij RVO, want deze kan per regeling en jaar wijzigen.",
+      "Bij ISDE dient u de aanvraag in ná uitvoering, binnen 24 maanden na afronding van de werkzaamheden. Controleer vóór de start of u aan de voorwaarden kunt voldoen en of een vergunning nodig is — de ISDE-aanvraag zelf doet u pas na uitvoering. Check altijd de actuele aanvraagprocedure bij RVO, want deze kan per regeling en jaar wijzigen.",
   },
   {
     vraag: "Hoe lang duurt een vergunningsprocedure?",
@@ -179,7 +185,7 @@ const faqItems = [
   {
     vraag: "Geeft BM klus BV garantie dat ik subsidie ontvang?",
     antwoord:
-      "Nee — het toekennen van subsidie is de verantwoordelijkheid van RVO en de betrokken overheden. Wij geven geen juridische of financiële garanties. Wij helpen u zo goed mogelijk om aan de technische en documentaire voorwaarden te voldoen.",
+      "Nee — het toekennen van subsidie is de verantwoordelijkheid van RVO en de betrokken overheden. Wij geven geen juridische of financiële garanties. Wij helpen u zo goed mogelijk om aan de technische en documentaire voorwaarden te voldoen: correcte factuur met m², dikte en Rd-waarde, meldcode, foto-documentatie en betaalbewijs.",
   },
 ]
 
@@ -254,8 +260,18 @@ export default function SubsidieVergunningPage() {
 
       {/* ══ HERO ══ */}
       <section className="relative overflow-hidden bg-[#1A1A1A]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(234,108,32,0.08)_0%,transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,108,32,0.04)_0%,transparent_40%)]" />
+        <div className="absolute inset-0">
+          <ResponsiveImage
+            baseName="subsidie-vergunning-hero"
+            preset="hero"
+            alt="Woning met afgewerkte buitengevelisolatie — subsidie en vergunning"
+            sizes="(max-width: 1920px) 100vw, 1920px"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-[#1A1A1A]/95 via-[#1A1A1A]/75 to-[#1A1A1A]/35" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#1A1A1A]/60 via-transparent to-[#1A1A1A]/30" />
+        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="pt-28 sm:pt-32 lg:pt-36">
@@ -353,7 +369,7 @@ export default function SubsidieVergunningPage() {
       <TrustStrip />
 
       <div className="below-fold">
-      <div className="bg-background pb-16 sm:pb-20 lg:pb-24">
+      <div className="bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
 
           {/* ── Table of Contents ─────────────────────────────────────────── */}
@@ -388,10 +404,9 @@ export default function SubsidieVergunningPage() {
             aria-labelledby="h2-vergunning"
             className="mt-16 scroll-mt-24"
           >
-            {/* Header */}
             <div className="mb-4 flex items-center gap-3">
               <div className="h-px w-10 bg-primary" />
-              <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+              <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                 Vergunning
               </span>
             </div>
@@ -399,117 +414,132 @@ export default function SubsidieVergunningPage() {
               id="h2-vergunning"
               className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
             >
-              Wanneer heb je een{" "}
-              <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
-                vergunning nodig?
-                  </span>
+              Wanneer heeft u een{" "}
+              <span className="text-primary">vergunning nodig?</span>
             </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Buitengevelisolatie verandert het uiterlijk van uw gevel. Of u een vergunning nodig
+              heeft, hangt af van het lokale omgevingsplan, monumentenstatus en de mate van de
+              gevelwijziging.
+            </p>
 
-            <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_380px]">
-              {/* Text block */}
-              <div className="space-y-5 rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm lg:p-8">
-                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  Buitengevelisolatie (ETICS) verandert het uiterlijk van uw gevel: de dikte neemt
-                  toe en de afwerking wijzigt. In sommige situaties is hiervoor een{" "}
-                  <strong className="font-semibold text-foreground">
-                    omgevingsvergunning (activiteit bouwen of handelen in strijd met
-                    bestemmingsplan)
-                  </strong>{" "}
-                  vereist.
-                </p>
-                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  Of u een vergunning nodig heeft, hangt af van drie factoren: de lokale
-                  bestemmingsplanregels en welstandsnota, of het pand een monumentale of
-                  cultuurhistorische status heeft, en de mate van de gevelwijziging.
-                </p>
-
-                {/* Wanneer WEL vergunning */}
-                <div>
-                  <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                    Wanneer is een vergunning vaak wel nodig?
-                  </p>
-                  <ul className="space-y-2.5">
-                    {[
-                      "Beschermd stadsgezicht of rijks-/gemeentelijk monument",
-                      "Welstandsgebied met strikte eisen aan geveluiterlijk",
-                      "Overschrijding van de erfgrens door de extra dikte",
-                      "Wijziging van de voorgevel in het straatgericht zichtbaar",
-                    ].map((b) => (
-                      <li key={b} className="flex items-start gap-2.5">
-                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                          <Check className="h-3 w-3 text-primary" strokeWidth={3} />
-                        </div>
-                        <span className="text-sm leading-snug text-foreground/70">{b}</span>
-                      </li>
-                    ))}
-                  </ul>
+            <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_380px]">
+              <div className="space-y-6">
+                {/* WEL vergunning */}
+                <div className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 transition-all hover:shadow-md">
+                  <div className="h-[3px] bg-linear-to-r from-amber-500/70 via-amber-500/25 to-transparent" />
+                  <div className="p-6 sm:p-8">
+                    <div className="mb-5 flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 ring-1 ring-amber-500/20">
+                        <ShieldAlert className="h-5 w-5 text-amber-600" strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-foreground">Vergunning vaak wél nodig</p>
+                        <p className="text-[11px] text-muted-foreground">Let op bij deze situaties</p>
+                      </div>
+                    </div>
+                    <ul className="grid gap-3 sm:grid-cols-2">
+                      {[
+                        "Beschermd stadsgezicht of rijks-/gemeentelijk monument",
+                        "Welstandsgebied met strikte eisen aan geveluiterlijk",
+                        "Overschrijding van de erfgrens door de extra dikte",
+                        "Wijziging van de voorgevel in het straatgericht zichtbaar",
+                      ].map((b) => (
+                        <li key={b} className="flex items-start gap-2.5">
+                          <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 ring-1 ring-amber-500/20">
+                            <ShieldAlert className="h-2.5 w-2.5 text-amber-600" />
+                          </div>
+                          <span className="text-sm leading-snug text-foreground/75">{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
-                {/* Wanneer NIET vergunning */}
-                <div>
-                  <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                    Wanneer is een vergunning soms niet nodig?
-                  </p>
-                  <ul className="space-y-2.5">
-                    {[
-                      "Woning buiten beschermd stads- of dorpsgezicht",
-                      "Gevelwijziging blijft binnen de erfrooilijn",
-                      "Afwerking past binnen de bestaande welstandscriteria",
-                      "Geen monument of cultureel erfgoed",
-                    ].map((b) => (
-                      <li key={b} className="flex items-start gap-2.5">
-                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted">
-                          <Check className="h-3 w-3 text-muted-foreground" strokeWidth={3} />
-                        </div>
-                        <span className="text-sm leading-snug text-foreground/70">{b}</span>
-                      </li>
-                    ))}
-                  </ul>
+                {/* NIET vergunning */}
+                <div className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 transition-all hover:shadow-md">
+                  <div className="h-[3px] bg-linear-to-r from-green-500/70 via-green-500/25 to-transparent" />
+                  <div className="p-6 sm:p-8">
+                    <div className="mb-5 flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-500/10 ring-1 ring-green-500/20">
+                        <CheckCircle2 className="h-5 w-5 text-green-600" strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-foreground">Vergunning soms niet nodig</p>
+                        <p className="text-[11px] text-muted-foreground">Vergunningsvrij onder deze voorwaarden</p>
+                      </div>
+                    </div>
+                    <ul className="grid gap-3 sm:grid-cols-2">
+                      {[
+                        "Woning buiten beschermd stads- of dorpsgezicht",
+                        "Gevelwijziging blijft binnen de erfrooilijn",
+                        "Afwerking past binnen de bestaande welstandscriteria",
+                        "Geen monument of cultureel erfgoed",
+                      ].map((b) => (
+                        <li key={b} className="flex items-start gap-2.5">
+                          <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-500/10 ring-1 ring-green-500/20">
+                            <Check className="h-2.5 w-2.5 text-green-600" strokeWidth={3} />
+                          </div>
+                          <span className="text-sm leading-snug text-foreground/75">{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
                 {/* Disclaimer */}
-                <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
-                  <p className="text-xs leading-relaxed text-amber-800">
-                    <strong>Belangrijk:</strong> Controleer altijd bij uw gemeente. Wij voeren deze
-                    check standaard uit tijdens de gratis opname, maar de uiteindelijke beoordeling
-                    ligt bij de gemeente.
+                <div className="flex items-start gap-3 rounded-xl border border-border/30 bg-secondary/15 px-5 py-4">
+                  <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" strokeWidth={1.5} />
+                  <p className="text-xs leading-relaxed text-muted-foreground">
+                    <strong className="font-semibold text-foreground">Belangrijk:</strong> Controleer
+                    altijd bij uw gemeente. Wij voeren deze check standaard uit tijdens de gratis
+                    opname, maar de uiteindelijke beoordeling ligt bij de gemeente.
                   </p>
                 </div>
               </div>
 
               {/* Image card */}
-              <div className="relative overflow-hidden rounded-2xl">
+              <div className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card/80">
                 <ResponsiveImage
                   baseName="subsidie-vergunning"
                   dir="/images"
                   preset="serviceCard"
                   alt="Controleren van vergunningsvereisten voor gevelisolatie"
                   sizes="(max-width: 1024px) 100vw, 380px"
-                  className="h-64 w-full object-cover lg:h-full"
+                  className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105 lg:h-full"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5">
-                  <p className="text-xs font-bold uppercase tracking-widest text-white/60">
-                    Wist u dat
-                  </p>
-                  <p className="mt-1 text-sm font-semibold leading-snug text-white">
-                    Wij vooraf controleren of een vergunning nodig is — zonder extra kosten.
+                  <div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/20 px-3 py-1 backdrop-blur-md">
+                    <FileCheck className="h-3 w-3 text-white drop-shadow-sm" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-white drop-shadow-sm">
+                      Gratis service
+                    </span>
+                  </div>
+                  <p className="text-sm font-semibold leading-snug text-white">
+                    Wij controleren vooraf of een vergunning nodig is — zonder extra kosten.
                   </p>
                 </div>
               </div>
             </div>
           </section>
+        </div>
+      </div>
+      </div>{/* end below-fold: TOC + Vergunning */}
+
+      <div className="below-fold">
+      <div className="bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* ── Section 2: Subsidie ──────────────────────────────────────── */}
           <section
             id="subsidie-hoofdlijnen"
             aria-labelledby="h2-subsidie"
-            className="mt-20 scroll-mt-24"
+            className="pt-20 scroll-mt-24"
           >
-            {/* Header */}
             <div className="mb-4 flex items-center gap-3">
               <div className="h-px w-10 bg-primary" />
-              <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+              <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                 Subsidie
               </span>
             </div>
@@ -518,11 +548,9 @@ export default function SubsidieVergunningPage() {
               className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
             >
               Subsidie op{" "}
-              <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
-                hoofdlijnen
-                  </span>
+              <span className="text-primary">hoofdlijnen</span>
             </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Er bestaan meerdere regelingen voor woningisolatie. De bekendste voor
               buitengevelisolatie is de{" "}
               <strong className="font-semibold text-foreground">ISDE (Investeringssubsidie
@@ -533,74 +561,78 @@ export default function SubsidieVergunningPage() {
             </p>
 
             {/* Two info cards */}
-            <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {/* ISDE card */}
-              <div className="flex flex-col gap-5 rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <Euro className="h-5 w-5 text-primary" />
+              <div className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 transition-all hover:shadow-md">
+                <div className="h-[3px] bg-linear-to-r from-green-500/70 via-green-500/25 to-transparent" />
+                <div className="p-6 sm:p-8">
+                  <div className="mb-5 flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-500/10 ring-1 ring-green-500/20">
+                      <Euro className="h-5 w-5 text-green-600" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-foreground">ISDE-subsidie</h3>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-green-600">
+                        Isolatie woning
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-base font-bold text-foreground">ISDE-subsidie</h3>
-                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] font-bold text-green-700">
-                      Isolatie woning
-                    </span>
-                  </div>
-                </div>
 
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  De ISDE is een rijkssubsidie voor woningeigenaren die hun woning verduurzamen.
-                  Gevelisolatie aan de buitenkant valt hieronder als aan de minimale
-                  isolatiewaarde wordt voldaan.
-                </p>
+                  <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+                    De ISDE is een rijkssubsidie voor eigenaar-bewoners die hun woning verduurzamen.
+                    Gevelisolatie aan de buitenkant valt hieronder als aan de minimale
+                    isolatiewaarde wordt voldaan. Controleer altijd de actuele voorwaarden
+                    op rvo.nl.
+                  </p>
 
-                <div>
                   <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
                     Voorwaarden op hoofdlijnen
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2.5">
                     {[
-                      "Minimale Rd-waarde van isolatiemateriaal (3,5 m²K/W) — check rvo.nl voor actuele norm",
-                      "Minimaal te isoleren oppervlak (m²) — afhankelijk van actuele regelgeving",
-                      "Woning is in bezit van particuliere eigenaar (geen verhuurder of VvE zonder aanvraagrecht)",
-                      "Aanvraag indienen na afronding, binnen de gestelde termijn bij RVO",
-                      "Bewijsdocumenten: factuur, materiaalspecificatie, foto's",
+                      "Minimale Rd-waarde van het isolatiemateriaal: 3,5 m²K/W",
+                      "Minimaal 10 m² te isoleren geveloppervlak (max. 170 m²)",
+                      "Bestaande woning met bouwjaar vóór 1 januari 2019 (of omgevingsvergunning aangevraagd vóór 1 juli 2018)",
+                      "Aanvrager is eigenaar-bewoner van de woning",
+                      "Aanvraag indienen ná uitvoering, binnen 24 maanden",
+                      "Bewijsdocumenten: factuur, betaalbewijs, meldcode, foto's",
                     ].map((b) => (
                       <li key={b} className="flex items-start gap-2.5">
-                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                          <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-500/10 ring-1 ring-green-500/20">
+                          <Check className="h-2.5 w-2.5 text-green-600" strokeWidth={3} />
                         </div>
-                        <span className="text-sm leading-snug text-foreground/70">{b}</span>
+                        <span className="text-sm leading-snug text-foreground/75">{b}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
 
-              {/* Vergunning card */}
-              <div className="flex flex-col gap-5 rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <FileCheck className="h-5 w-5 text-primary" />
+              {/* Wat wij regelen card */}
+              <div className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 transition-all hover:shadow-md">
+                <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                <div className="p-6 sm:p-8">
+                  <div className="mb-5 flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/7 ring-1 ring-primary/10">
+                      <FileCheck className="h-5 w-5 text-primary/70" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-foreground">Wat wij regelen</h3>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-primary">
+                        Gratis service
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-base font-bold text-foreground">Wat wij regelen</h3>
-                    <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[11px] font-bold text-amber-700">
-                      Gratis service
-                    </span>
-                  </div>
-                </div>
 
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  BM klus BV ondersteunt u bij elke stap waar wij een bijdrage kunnen leveren.
-                  Zo hoeft u niet zelf alles uit te zoeken.
-                </p>
+                  <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+                    BM klus BV ondersteunt u bij elke stap waar wij een bijdrage kunnen leveren.
+                    Zo hoeft u niet zelf alles uit te zoeken.
+                  </p>
 
-                <div>
                   <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
                     Onze ondersteuning
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2.5">
                     {[
                       "Vergunningscheck bij gemeente tijdens opname",
                       "Advies over toepasselijke subsidieregeling(en)",
@@ -609,10 +641,10 @@ export default function SubsidieVergunningPage() {
                       "Assistentie bij samenstellen subsidiedossier",
                     ].map((b) => (
                       <li key={b} className="flex items-start gap-2.5">
-                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                          <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 ring-1 ring-primary/15">
+                          <Check className="h-2.5 w-2.5 text-primary" strokeWidth={3} />
                         </div>
-                        <span className="text-sm leading-snug text-foreground/70">{b}</span>
+                        <span className="text-sm leading-snug text-foreground/75">{b}</span>
                       </li>
                     ))}
                   </ul>
@@ -620,30 +652,173 @@ export default function SubsidieVergunningPage() {
               </div>
             </div>
 
+            {/* Voor wie? */}
+            <div className="mt-6 overflow-hidden rounded-2xl border border-border/40 bg-card/80">
+              <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+              <div className="p-6 sm:p-8">
+                <h3 className="text-base font-bold text-foreground">Voor wie is ISDE-subsidie bedoeld?</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  De ISDE richt zich op eigenaar-bewoners. Bent u geen eigenaar-bewoner? Dan gelden andere regelingen:
+                </p>
+                <div className="mt-5 grid gap-4 sm:grid-cols-3">
+                  {[
+                    {
+                      label: "Eigenaar-bewoner",
+                      badge: "ISDE",
+                      badgeCls: "bg-green-500/10 text-green-600 ring-1 ring-green-500/20",
+                      tekst: "U woont zelf in uw woning en bent eigenaar. U kunt rechtstreeks ISDE-subsidie aanvragen via rvo.nl.",
+                    },
+                    {
+                      label: "VvE",
+                      badge: "Apart",
+                      badgeCls: "bg-blue-500/10 text-blue-600 ring-1 ring-blue-500/20",
+                      tekst: "Verenigingen van Eigenaren hebben een aparte aanvraagprocedure. Raadpleeg rvo.nl voor de actuele VvE-regeling.",
+                    },
+                    {
+                      label: "Verhuurder",
+                      badge: "SVOH",
+                      badgeCls: "bg-purple-500/10 text-purple-600 ring-1 ring-purple-500/20",
+                      tekst: "Particuliere verhuurders kunnen terecht bij de Subsidieregeling Verduurzaming en Onderhoud Huurwoningen (SVOH).",
+                    },
+                  ].map((item) => (
+                    <div key={item.label} className="flex flex-col gap-2.5 rounded-xl border border-border/30 bg-background/60 p-5">
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-bold text-foreground">{item.label}</span>
+                        <span className={`rounded-full px-2.5 py-0.5 text-[10px] font-bold ${item.badgeCls}`}>
+                          {item.badge}
+                        </span>
+                      </div>
+                      <p className="text-xs leading-relaxed text-muted-foreground">{item.tekst}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Visual break — result photo */}
+            <div className="group relative mt-6 overflow-hidden rounded-2xl">
+              <ResponsiveImage
+                baseName="subsidie-resultaat-gevel"
+                preset="serviceCard"
+                alt="Woning met afgewerkte buitengevelisolatie — resultaat na ETICS"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+                className="h-48 w-full object-cover object-bottom transition-transform duration-500 group-hover:scale-105 sm:h-[22rem] sm:object-[center_90%] lg:h-96 lg:object-[center_90%]"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/20 px-3 py-1 backdrop-blur-md">
+                  <Check className="h-3 w-3 text-white drop-shadow-sm" strokeWidth={3} />
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-white drop-shadow-sm">
+                    Resultaat
+                  </span>
+                </div>
+                <p className="text-sm font-semibold leading-snug text-white">
+                  Buitengevelisolatie met stucwerk afwerking — woning verduurzaamd en klaar voor subsidieaanvraag.
+                </p>
+              </div>
+            </div>
+
+            {/* Twee maatregelen + Uitsluitingen */}
+            <div className="mt-6 grid gap-6 sm:grid-cols-2">
+              {/* Twee maatregelen */}
+              <div className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 transition-all hover:shadow-md">
+                <div className="h-[3px] bg-linear-to-r from-green-500/70 via-green-500/25 to-transparent" />
+                <div className="p-6 sm:p-8">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-green-500/10 ring-1 ring-green-500/20">
+                    <Euro className="h-5 w-5 text-green-600" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-sm font-bold text-foreground">Twee maatregelen? Dubbel subsidiebedrag</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    Voert u binnen 24 maanden meer dan één isolatiemaatregel uit (bijvoorbeeld gevel + dak of vloer)?
+                    Dan verdubbelt het subsidiebedrag per m² voor de isolatiemaatregelen. Combineren met een warmtepomp
+                    of zonneboiler telt ook mee. Controleer de actuele voorwaarden op rvo.nl.
+                  </p>
+                </div>
+              </div>
+
+              {/* Uitsluitingen */}
+              <div className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 transition-all hover:shadow-md">
+                <div className="h-[3px] bg-linear-to-r from-red-500/70 via-red-500/25 to-transparent" />
+                <div className="p-6 sm:p-8">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-red-500/10 ring-1 ring-red-500/20">
+                    <ShieldAlert className="h-5 w-5 text-red-500" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-sm font-bold text-foreground">Waar geldt de subsidie niet voor?</h3>
+                  <ul className="mt-3 space-y-2.5">
+                    {[
+                      "Aanbouw, nieuwe verdieping of dakkapel",
+                      "Nieuw bijgebouw of garage",
+                      "Binnenwanden of scheidingsmuren",
+                      "Woningen met bouwjaar ná 1 januari 2019",
+                    ].map((b) => (
+                      <li key={b} className="flex items-start gap-2.5">
+                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-500/10 ring-1 ring-red-500/20">
+                          <span className="text-[10px] font-bold text-red-500">✕</span>
+                        </div>
+                        <span className="text-sm leading-snug text-foreground/75">{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Documenten checklist */}
+            <div className="mt-6 overflow-hidden rounded-2xl border border-border/40 bg-card/80">
+              <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+              <div className="p-6 sm:p-8">
+                <h3 className="text-base font-bold text-foreground">Welke documenten heeft u nodig?</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Voor een complete subsidieaanvraag bij RVO heeft u de volgende documenten nodig. Wij leveren de technische onderdelen.
+                </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "Factuur met: m², dikte, Rd-waarde, type isolatiemateriaal en uitvoerder",
+                    "Betaalbewijs (bankafschrift of screenshot van overboeking)",
+                    "Meldcode van het isolatiemateriaal (uit de RVO-productenlijst)",
+                    "Foto's van de uitvoering (adres herkenbaar, materiaal zichtbaar)",
+                    "Gegevens van de uitvoerder (naam, KvK-nummer)",
+                    "Eventueel: RC-berekening bij afwijkende opbouw",
+                  ].map((b) => (
+                    <div key={b} className="flex items-start gap-3 rounded-xl border border-border/30 bg-background/60 px-4 py-3">
+                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 ring-1 ring-primary/15">
+                        <Check className="h-2.5 w-2.5 text-primary" strokeWidth={3} />
+                      </div>
+                      <span className="text-sm leading-snug text-foreground/75">{b}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             {/* Disclaimer */}
-            <div className="mt-5 rounded-lg border border-amber-200 bg-amber-50 px-5 py-4">
-              <p className="text-xs leading-relaxed text-amber-800">
-                <strong>Disclaimer:</strong> Subsidiebedragen en exacte voorwaarden wijzigen
+            <div className="mt-6 flex items-start gap-3 rounded-xl border border-border/30 bg-secondary/15 px-5 py-4">
+              <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" strokeWidth={1.5} />
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                <strong className="font-semibold text-foreground">Disclaimer:</strong> Subsidiebedragen en exacte voorwaarden wijzigen
                 regelmatig. BM klus BV geeft geen subsidie- of juridische garanties. Controleer
                 altijd de actuele regelgeving via{" "}
-                <strong>rvo.nl</strong> en uw gemeente.
+                <strong className="font-semibold text-foreground">rvo.nl</strong> en uw gemeente.
               </p>
             </div>
           </section>
         </div>
+      </div>
+      </div>{/* end below-fold: Subsidie */}
 
+      <div className="below-fold">
+      <div className="bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* ── Section 3: Stappenplan ───────────────────────────────────── */}
           <section
             id="stappenplan"
             aria-labelledby="h2-stappenplan"
-            className="mt-20 scroll-mt-24"
+            className="pt-20 scroll-mt-24"
           >
-            {/* Header */}
             <div className="mb-4 flex items-center gap-3">
               <div className="h-px w-10 bg-primary" />
-              <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+              <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                 Stappenplan
               </span>
             </div>
@@ -652,47 +827,32 @@ export default function SubsidieVergunningPage() {
               className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
             >
               Van{" "}
-              <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
-                opname tot aanvraag
-                  </span>
+              <span className="text-primary">opname tot aanvraag</span>
             </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Zo verlopen vergunning en subsidie in de praktijk — van het eerste contact tot het
               indienen van het subsidiedossier.
             </p>
 
-            {/* Steps */}
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {stappen.map((stap) => (
-                <div
-                  key={stap.num}
-                  className="relative flex flex-col gap-4 rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm"
-                >
-                  {/* Step number */}
-                  <span className="text-4xl font-black leading-none tabular-nums text-primary/10">
-                    {stap.num}
-                  </span>
-                  <div>
-                    <h3 className="text-base font-bold text-foreground">{stap.titel}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {stap.tekst}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <StappenplanTimeline stappen={stappen} />
           </section>
+        </div>
+      </div>
+      </div>{/* end below-fold: Stappenplan */}
+
+      <div className="below-fold">
+      <div className="bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* ── Section 4: Checklist ─────────────────────────────────────── */}
           <section
             id="checklist"
             aria-labelledby="h2-checklist"
-            className="mt-20 scroll-mt-24"
+            className="pt-20 scroll-mt-24"
           >
-            {/* Header */}
             <div className="mb-4 flex items-center gap-3">
               <div className="h-px w-10 bg-primary" />
-              <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+              <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                 Checklist
               </span>
             </div>
@@ -701,60 +861,32 @@ export default function SubsidieVergunningPage() {
               className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
             >
               Praktische{" "}
-              <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
-                checklist
-                  </span>
+              <span className="text-primary">checklist</span>
             </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Loop deze punten door voordat de werkzaamheden starten. Wij helpen u bij elk punt
               tijdens de gratis opname.
             </p>
+            <p className="mt-3 max-w-2xl text-xs leading-relaxed text-muted-foreground/60">
+              Deze checklist is bedoeld voor woningeigenaren die ISDE voor gevelisolatie willen voorbereiden. Voor VvE&apos;s en verhuurders gelden andere subsidieregelingen.
+            </p>
 
-            {/* Checklist grid */}
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {checklistItems.map((item, i) => {
-                const Icon = item.icon
-                return (
-                  <div
-                    key={item.label}
-                    className="flex flex-col gap-3 rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                        <Icon className="h-4 w-4 text-primary" />
-                      </div>
-                      <span className="text-[10px] font-black tabular-nums text-primary/30">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-                    <h3 className="text-sm font-bold text-foreground">{item.label}</h3>
-                    <p className="text-xs leading-relaxed text-muted-foreground">{item.tekst}</p>
-                  </div>
-                )
-              })}
-            </div>
+            <ChecklistInteractive items={checklistItems} />
 
-            {/* CTA strip */}
-            <div className="mt-6 flex flex-col items-start gap-4 rounded-xl border border-primary/20 bg-primary/5 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm leading-relaxed text-foreground/80">
-                Wilt u weten wat er in uw situatie speelt? Wij checken gratis of een vergunning
-                nodig is en welke subsidie van toepassing kan zijn.
-              </p>
-              <Link
-                href="/contact/"
-                className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Plan gratis opname
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
           </section>
+        </div>
+      </div>
+      </div>{/* end below-fold: Checklist */}
+
+      <div className="below-fold">
+      <div className="bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* ── Section 5: FAQ ───────────────────────────────────────────── */}
           <section
             id="faq"
             aria-labelledby="h2-faq"
-            className="mt-20 scroll-mt-24"
+            className="pt-20 scroll-mt-24"
           >
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
 
@@ -798,9 +930,16 @@ export default function SubsidieVergunningPage() {
               </div>
             </div>
           </section>
+        </div>
+      </div>
+      </div>{/* end below-fold: FAQ */}
+
+      <div className="below-fold">
+      <div className="bg-background pb-16 sm:pb-20 lg:pb-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* ── Related links ───────────────────────────────────────────── */}
-          <nav aria-label="Gerelateerde pagina's" className="mt-20">
+          <nav aria-label="Gerelateerde pagina's" className="pt-20">
             <div className="mb-6 flex items-center gap-3">
               <div className="h-px w-10 bg-primary" />
               <span className="text-sm font-semibold uppercase tracking-wider text-primary">
@@ -852,8 +991,7 @@ export default function SubsidieVergunningPage() {
 
         </div>
       </div>
-
-      </div>{/* end below-fold */}
+      </div>{/* end below-fold: Related links */}
 
       <StickyCTABar />
       <QuoteModal dienst="gevelisolatie" />

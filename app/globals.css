@@ -204,6 +204,11 @@
   contain-intrinsic-size: auto 500px;
 }
 
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 .no-scrollbar {
   scrollbar-width: none;          /* Firefox */
   -ms-overflow-style: none;       /* IE / Edge */

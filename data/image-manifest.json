@@ -4619,6 +4619,19 @@
       604
     ]
   },
+  "subsidie-resultaat-gevel": {
+    "originalWidth": 1500,
+    "originalHeight": 998,
+    "aspectRatio": 1.503,
+    "variants": [
+      320,
+      389,
+      432,
+      466,
+      518,
+      604
+    ]
+  },
   "subsidie-vergunning": {
     "originalWidth": 1024,
     "originalHeight": 1024,
@@ -4628,6 +4641,16 @@
       480,
       640,
       828
+    ]
+  },
+  "subsidie-vergunning-hero": {
+    "originalWidth": 1440,
+    "originalHeight": 1640,
+    "aspectRatio": 0.878,
+    "variants": [
+      480,
+      622,
+      1280
     ]
   },
   "verdieping-gevelwerk-proces": {

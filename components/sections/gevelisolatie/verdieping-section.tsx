@@ -30,7 +30,7 @@ const cards = [
   {
     icon: FileCheck,
     title: "Subsidie & vergunning",
-    description: "ISDE, SEEH en omgevingsvergunning — checklist op maat.",
+    description: "ISDE-subsidie en omgevingsvergunning — checklist op maat.",
     href: "/gevelisolatie/subsidie-vergunning/",
   },
 ]
