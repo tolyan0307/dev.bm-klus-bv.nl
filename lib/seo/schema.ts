@@ -166,6 +166,7 @@ export function videoSchema(opts: {
   description: string
   videoId: string
   thumbnailUrl: string
+  /** ISO 8601 with timezone, e.g. "2026-03-26T00:00:00+01:00" */
   uploadDate: string
   duration: string
 }): Record<string, unknown> {

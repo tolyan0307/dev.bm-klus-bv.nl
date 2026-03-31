@@ -142,7 +142,7 @@ export default function RotterdamJulianastraatProjectPage() {
           "Bij dit project hebben we de gevelplint behandeld met bitumen, 4 cm isolatie verlijmd en verankerd met pluggen, gaas gemonteerd en geplamuurd, en de gevel afgewerkt met sierpleister 1,5 mm in standaard wit. De plint is afgewerkt in antraciet voor een strak contrast.",
         videoId: "iSUV_L9tD-E",
         thumbnailUrl: "https://i.ytimg.com/vi/iSUV_L9tD-E/maxresdefault.jpg",
-        uploadDate: "2026-03-26",
+        uploadDate: "2026-03-26T00:00:00+01:00",
         duration: "PT33S",
       }))}
       <div className="min-h-screen bg-background">

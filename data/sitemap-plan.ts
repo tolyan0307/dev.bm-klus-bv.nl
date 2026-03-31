@@ -163,7 +163,7 @@ export const PLANNED_ROUTES = [
     path: "/gevelisolatie/afwerkingen/",
     title: "Afwerking gevelisolatie – stuc, crepi, strips",
     description:
-      "Welke afwerking past bij buitengevelisolatie? Stucwerk, sierpleister/crepi, steenstrips of schilderwerk. Keuzes, voor- en nadelen.",
+      "Welke afwerking past bij buitengevelisolatie? Stucwerk, sierpleister/crepi of steenstrips. Keuzes, voor- en nadelen.",
     changefreq: "yearly",
     priority: 0.6,
   },

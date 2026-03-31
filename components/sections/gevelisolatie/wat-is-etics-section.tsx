@@ -97,7 +97,7 @@ export default function WatIsEticsSection() {
             </span>
             <p className="max-w-sm text-sm font-semibold leading-snug text-white sm:text-base">
               Isolatie aan de buitenzijde —{" "}
-              <span className="font-normal text-white/70">gevel én comfort in één arbeidsgang.</span>
+              <span className="font-normal text-white/70">gevel én comfort in één traject.</span>
             </p>
           </div>
 

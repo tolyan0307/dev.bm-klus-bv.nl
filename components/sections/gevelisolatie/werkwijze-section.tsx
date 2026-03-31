@@ -24,7 +24,7 @@ const stapFaqs: { q: string; a: string }[][] = [
     { q: "Worden beschadigingen hersteld?", a: "Ja, scheuren en losstaand metselwerk worden eerst hersteld voordat de isolatie begint." },
   ],
   [
-    { q: "Welke isolatiedikte wordt gebruikt?", a: "Minimaal 100 mm EPS of gelijkwaardig, afgestemd op de gewenste RC-waarde (minimaal RC 3,5)." },
+    { q: "Welke isolatiedikte wordt gebruikt?", a: "Minimaal 100 mm EPS of gelijkwaardig, afgestemd op de gewenste Rc-waarde. Voor ISDE-subsidie geldt minimaal Rd 3,5 m²K/W." },
     { q: "Hoe lang duurt deze fase?", a: "Afhankelijk van de oppervlakte: 1–3 werkdagen voor een gemiddelde rijwoning." },
   ],
   [

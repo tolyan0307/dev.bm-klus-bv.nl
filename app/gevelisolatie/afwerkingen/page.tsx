@@ -17,6 +17,7 @@ import {
   Search,
   FileText,
   Hammer,
+  Euro,
 } from "lucide-react"
 
 import { buildPageMetadata } from "@/lib/seo/meta"
@@ -44,6 +45,8 @@ const StickyCTABar = dynamic(
 )
 const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 const ReviewsSection = dynamic(() => import("@/components/reviews-section"))
+const AnimatedDots = dynamic(() => import("@/components/page/AnimatedDots"))
+const FadeInOnScroll = dynamic(() => import("@/components/page/FadeInOnScroll"))
 
 /* ── Metadata ── */
 export const metadata = buildPageMetadata("/gevelisolatie/afwerkingen/")
@@ -56,12 +59,14 @@ const WA_URL =
 
 const heroBreadcrumbs = [
   { label: "Home", href: "/" },
+  { label: "Diensten", href: "/diensten/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
   { label: "Afwerkingen", href: "/gevelisolatie/afwerkingen/" },
 ]
 
 const toc = [
   { id: "overzicht",    label: "Overzicht afwerkingen" },
+  { id: "keuzehulp",   label: "Keuzehulp" },
   { id: "projecten",    label: "Onze projecten" },
   { id: "stuc-vs-crepi", label: "Stucwerk vs sierpleister/crepi" },
   { id: "steenstrips",  label: "Steenstrips (baksteenlook)" },
@@ -194,7 +199,7 @@ const onderhoudItems = [
   {
     icon: <Paintbrush className="h-5 w-5" />,
     title: "Schilderonderhoud stucwerk",
-    body: "Glad stucwerk vereist adembrekende gevelverf eens per 8–12 jaar. Kies altijd dampdoorlatende verf om schade aan de isolatielaag te voorkomen.",
+    body: "Glad stucwerk vereist dampdoorlatende gevelverf eens per 8–12 jaar. Kies altijd dampdoorlatende verf om schade aan de isolatielaag te voorkomen.",
   },
 ]
 
@@ -207,7 +212,7 @@ const faqItems: FaqItem[] = [
   {
     vraag: "Wat is het verschil tussen crepi en sierpleister?",
     antwoord:
-      "Crepi (ook wel gevelpleister of spuitpleister) wordt gespoten of met een rolaggregaat aangebracht en heeft een grove, korrelachtige structuur. Sierpleister of spachtelputz wordt handmatig met een staalspatel aangebracht en heeft een fijnere, meer speelse structuur. Beide zijn minerale afwerkingen op ETICS-isolatiesystemen, maar crepi is vaak iets goedkoper door de snellere applicatie.",
+      "Crepi (ook wel gevelpleister of spuitpleister) wordt gespoten of met een rolaggregaat aangebracht en heeft een grove, korrelachtige structuur. Sierpleister of spachtelputz wordt handmatig met een staalspatel aangebracht en heeft een fijnere, meer speelse structuur. Beide zijn pleisterafwerkingen binnen systemen voor buitengevelisolatie; het exacte bindmiddel (mineraal, siliconenhars of kunsthars) verschilt per product. Crepi is vaak iets goedkoper door de snellere applicatie.",
   },
   {
     vraag: "Is steenstrips altijd mogelijk op gevelisolatie?",
@@ -217,12 +222,12 @@ const faqItems: FaqItem[] = [
   {
     vraag: "Hoeveel onderhoud vraagt een stucwerk gevel?",
     antwoord:
-      "Glad stucwerk vraagt eens per 8–12 jaar opnieuw schilderen om de vochtwerend eigenschappen te behouden. Kies voor een adembrekende gevelverf die dampen doorlaat maar water buiten houdt. Regelmatige inspectie van scheuren of loszittende plekken is verstandig, met name na vorstperiodes.",
+      "Glad stucwerk vraagt eens per 8–12 jaar opnieuw schilderen om de vochtwerende eigenschappen te behouden. Kies voor een dampdoorlatende gevelverf die dampen doorlaat maar water buiten houdt. Regelmatige inspectie van scheuren of loszittende plekken is verstandig, met name na vorstperiodes.",
   },
   {
     vraag: "Hoe voorkom ik algengroei op mijn gevel?",
     antwoord:
-      "Algen en zwarte aanslag ontstaan op plekken die langdurig vochtig blijven, zoals onder overhangschilderingen en in de schaduw. Kies voor een afwerking met ingebouwde biocide (fungicide sierpleister), zorg voor goede waterafvoer en houd overhangende begroeiing op afstand. Crepi-afwerkingen met biocide-toevoeging zijn het meest algenresistent in ons klimaat.",
+      "Algen en zwarte aanslag ontstaan op plekken die langdurig vochtig blijven, zoals onder overstekken en in de schaduw. Kies voor een afwerking met ingebouwde biocide (fungicide sierpleister), zorg voor goede waterafvoer en houd overhangende begroeiing op afstand. Een afwerking met biocide-toevoeging remt algengroei; productkeuze, detaillering en snelle droging van het oppervlak zijn minstens zo belangrijk als de textuur.",
   },
   {
     vraag: "Kan een beschadigde pleisterlaag plaatselijk worden gerepareerd?",
@@ -371,8 +376,8 @@ export default function AfwerkingenPage() {
               </h1>
 
               <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
-                Glad stucwerk, sierpleister, crepi of steenstrips — elke afwerking heeft eigen
-                eigenschappen, onderhoud en prijs. Wij adviseren op locatie.
+                Vergelijk glad stucwerk, sierpleister, crepi en steenstrips op uitstraling,
+                onderhoud en meerprijs — en ontdek welke afwerking het best past bij uw woning.
               </p>
 
               <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
@@ -444,104 +449,201 @@ export default function AfwerkingenPage() {
             >
 
               {/* Finish option cards */}
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid gap-6 sm:grid-cols-2">
                 {finishOptions.map((opt) => (
                   <div
                     key={opt.name}
-                    className="overflow-hidden rounded-xl border border-border/60 bg-card/80 shadow-sm flex flex-col hover:border-primary/40 hover:shadow-md transition-all"
+                    className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.12)]"
                   >
-                    <div className="relative h-40 w-full overflow-hidden bg-muted/60">
+                    {/* Image */}
+                    <div className="relative h-48 w-full overflow-hidden bg-muted/60">
                       <ResponsiveImage
                         baseName={opt.baseName}
                         dir="/images"
                         preset="serviceCard"
                         alt={opt.name}
                         sizes="(max-width: 640px) 100vw, 50vw"
-                        className="absolute inset-0 h-full w-full object-cover"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
-                      <span className="absolute bottom-3 left-3 rounded-full bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+                      <span className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/20 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm backdrop-blur-md">
                         {opt.name}
                       </span>
                     </div>
-                    <div className="flex flex-col gap-4 p-5">
-                    <div className="flex items-center gap-3">
-                      <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-primary/10 text-primary shrink-0">
-                        {opt.icon}
-                      </span>
-                      <h3 className="text-sm font-bold text-foreground">{opt.name}</h3>
+
+                    {/* Accent bar */}
+                    <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+
+                    {/* Content */}
+                    <div className="flex flex-1 flex-col gap-4 p-6">
+                      {/* Title row */}
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20 shrink-0">
+                          {opt.icon}
+                        </div>
+                        <h3 className="text-base font-bold text-foreground">{opt.name}</h3>
+                      </div>
+
+                      {/* Metadata grid */}
+                      <dl className="grid grid-cols-2 gap-x-4 gap-y-3 rounded-xl bg-secondary/15 p-4 text-sm">
+                        <div>
+                          <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Uitstraling</dt>
+                          <dd className="mt-0.5 font-medium text-foreground">{opt.uitstraling}</dd>
+                        </div>
+                        <div>
+                          <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Onderhoud</dt>
+                          <dd className="mt-0.5 font-medium text-foreground">{opt.onderhoud}</dd>
+                        </div>
+                        <div>
+                          <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Budget</dt>
+                          <dd className="mt-0.5 font-bold text-primary">{opt.budget}</dd>
+                        </div>
+                        <div>
+                          <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Opmerking</dt>
+                          <dd className="mt-0.5 text-foreground/70">{opt.opmerking}</dd>
+                        </div>
+                      </dl>
+
+                      {/* Pros & Cons */}
+                      <div className="grid grid-cols-1 gap-3 pt-3 border-t border-border/60 sm:grid-cols-2">
+                        <div className="rounded-lg bg-green-500/5 p-3">
+                          <ul className="space-y-2">
+                            {opt.pros.map((p) => (
+                              <li key={p} className="flex items-start gap-2 text-xs text-muted-foreground">
+                                <CheckCircle2 className="h-3.5 w-3.5 text-green-500 shrink-0 mt-0.5" aria-hidden="true" />
+                                {p}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="rounded-lg bg-amber-500/5 p-3">
+                          <ul className="space-y-2">
+                            {opt.cons.map((c) => (
+                              <li key={c} className="flex items-start gap-2 text-xs text-muted-foreground">
+                                <AlertCircle className="h-3.5 w-3.5 text-amber-500 shrink-0 mt-0.5" aria-hidden="true" />
+                                {c}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-                      <div>
-                        <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Uitstraling</dt>
-                        <dd className="mt-0.5 font-medium text-foreground">{opt.uitstraling}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Onderhoud</dt>
-                        <dd className="mt-0.5 font-medium text-foreground">{opt.onderhoud}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Budget</dt>
-                        <dd className="mt-0.5 font-bold text-primary">{opt.budget}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Opmerking</dt>
-                        <dd className="mt-0.5 text-foreground/70">{opt.opmerking}</dd>
-                      </div>
-                    </dl>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-border/60">
-                      <ul className="space-y-1.5">
-                        {opt.pros.map((p) => (
-                          <li key={p} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <CheckCircle2 className="h-3.5 w-3.5 text-green-500 shrink-0 mt-0.5" aria-hidden="true" />
-                            {p}
-                          </li>
-                        ))}
-                      </ul>
-                      <ul className="space-y-1.5">
-                        {opt.cons.map((c) => (
-                          <li key={c} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <AlertCircle className="h-3.5 w-3.5 text-amber-500 shrink-0 mt-0.5" aria-hidden="true" />
-                            {c}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    </div>{/* end p-5 content wrapper */}
                   </div>
                 ))}
               </div>
 
               {/* Comparison table */}
-              <div className="mt-10">
+              <div className="mt-12">
                 <p className="mb-4 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
                   Vergelijking op een rij
                 </p>
-                <div className="overflow-x-auto rounded-xl border border-border">
+                <div className="overflow-x-auto overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)]">
                   <table className="w-full text-sm text-left">
                     <thead>
-                      <tr className="border-b border-border bg-muted/40">
+                      <tr className="border-b border-border bg-muted/50">
                         {["Afwerking", "Uitstraling", "Onderhoud", "Budget", "Opmerking"].map((col) => (
-                          <th key={col} className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                          <th key={col} className="px-5 py-4 text-[11px] font-bold uppercase tracking-widest text-muted-foreground first:pl-6 last:pr-6">
                             {col}
                           </th>
                         ))}
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-border/40">
+                    <tbody className="divide-y divide-border/30">
                       {comparisonRows.map((row, i) => (
-                        <tr key={i} className={i % 2 === 0 ? "bg-background" : "bg-muted/20"}>
-                          <td className="px-4 py-3 font-semibold text-foreground">{row.finish}</td>
-                          <td className="px-4 py-3 text-primary">{row.uitstraling}</td>
-                          <td className="px-4 py-3 text-muted-foreground">{row.onderhoud}</td>
-                          <td className="px-4 py-3 font-semibold text-foreground">{row.budget}</td>
-                          <td className="px-4 py-3 text-muted-foreground">{row.opmerking}</td>
+                        <tr key={i} className={`transition-colors hover:bg-primary/[0.03] ${i % 2 === 0 ? "bg-background" : "bg-muted/15"}`}>
+                          <td className="px-5 py-4 font-semibold text-foreground first:pl-6">{row.finish}</td>
+                          <td className="px-5 py-4 font-medium text-primary">{row.uitstraling}</td>
+                          <td className="px-5 py-4 text-muted-foreground">{row.onderhoud}</td>
+                          <td className="px-5 py-4 font-semibold text-foreground">{row.budget}</td>
+                          <td className="px-5 py-4 text-muted-foreground last:pr-6">{row.opmerking}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
               </div>
+            </Section>
+          </div>
+
+          <div className="below-fold">
+            {/* Keuzehulp */}
+            <Section
+              id="keuzehulp"
+              eyebrow="Keuzehulp"
+              h2="Welke afwerking past bij uw situatie?"
+              accentWord="uw situatie"
+              lead="Hieronder vindt u de meest voorkomende uitgangspunten. Kies het scenario dat het dichtst bij uw situatie past — wij adviseren u graag verder op locatie."
+            >
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {([
+                  {
+                    scenario: "Strakke, moderne uitstraling",
+                    advies: "Glad stucwerk of fijne sierpleister",
+                    toelichting: "Geeft een egaal, hedendaags gevelbeeld. Glad stuc vraagt wel periodiek schilderonderhoud.",
+                    icon: <Paintbrush className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                  },
+                  {
+                    scenario: "Zo min mogelijk onderhoud",
+                    advies: "Sierpleister met biocide of steenstrips",
+                    toelichting: "Sierpleister met biocide kan algengroei helpen remmen. Detaillering, waterafvoer en snelle droging blijven belangrijk. Steenstrips zijn keramisch en vrijwel onderhoudsarm.",
+                    icon: <Clock className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                  },
+                  {
+                    scenario: "Oorspronkelijke baksteenlook behouden",
+                    advies: "Steenstrips",
+                    toelichting: "Keramische strips in de kleur en het formaat van het oorspronkelijke metselwerk. Zwaarder systeem, hogere kosten.",
+                    icon: <SquareStack className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                  },
+                  {
+                    scenario: "Budgetbewust isoleren",
+                    advies: "Crepi (gevelpleister)",
+                    toelichting: "Snelle applicatie, lagere arbeidskosten. Past bij traditionele rijwoningen en wederopbouwwijken.",
+                    icon: <Layers className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                  },
+                  {
+                    scenario: "Donkere kleur gewenst",
+                    advies: "Sierpleister of glad stucwerk",
+                    toelichting: "Donkere tinten vereisen extra UV-bestendige pigmenten en soms aanvullende verflagen. Houd rekening met meerkosten.",
+                    icon: <Droplets className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                  },
+                ] as const).map((item, i) => (
+                  <div
+                    key={item.scenario}
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_8px_30px_-8px_rgba(0,0,0,0.10)]"
+                  >
+                    <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                    <div className="flex flex-1 flex-col gap-4 p-6">
+                      {/* Header */}
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20 shrink-0">
+                          {item.icon}
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-bold uppercase tracking-widest text-primary/60">Uw uitgangspunt</p>
+                          <p className="text-sm font-bold text-foreground">{item.scenario}</p>
+                        </div>
+                      </div>
+
+                      {/* Advies badge */}
+                      <div className="flex items-start gap-2.5 rounded-xl bg-primary/[0.06] px-4 py-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm font-semibold text-primary">{item.advies}</p>
+                      </div>
+
+                      {/* Toelichting */}
+                      <p className="text-xs leading-relaxed text-muted-foreground">{item.toelichting}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Callout variant="tip" className="mt-8" title="Wanneer kiezen wij dit meestal niet?">
+                <ul className="mt-1 space-y-1">
+                  <li><strong>Glad stucwerk</strong> — minder logisch als u zo min mogelijk schilderwerk wilt.</li>
+                  <li><strong>Steenstrips</strong> — minder logisch bij een strak budget.</li>
+                  <li><strong>Crepi</strong> — minder logisch als u een heel strakke moderne uitstraling zoekt.</li>
+                </ul>
+              </Callout>
             </Section>
           </div>
 
@@ -584,40 +686,55 @@ export default function AfwerkingenPage() {
               accentWord="sierpleister / crepi"
               lead="Drie afwerkingsmethoden die onderling sterk verschillen in applicatie, textuur en onderhoud. Wanneer kiest u welke?"
             >
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {([
                   {
                     name: "Glad stucwerk",
                     when: "Moderne architectuur, strakke gevels, nieuwbouw",
-                    body: "Ook wel gevelplamuur met topcoat — geeft een strakke, egale afwerking die sterk associeert met hedendaagse architectuur. Het is een tweestappenproces: een basislaag van fijne plamuur gevolgd door een adembrekende gevelverf. Het nadeel is dat fijne scheuren direct zichtbaar zijn en dat u eens per 8–12 jaar moet herschilderen om de vochtbeschermende werking te behouden.",
-                    accent: "border-l-primary",
+                    body: "Ook wel gevelplamuur met topcoat — geeft een strakke, egale afwerking die sterk associeert met hedendaagse architectuur. Het is een tweestappenproces: een basislaag van fijne plamuur gevolgd door een dampdoorlatende gevelverf. Het nadeel is dat fijne scheuren direct zichtbaar zijn en dat u eens per 8–12 jaar moet herschilderen om de vochtbeschermende werking te behouden.",
+                    icon: <Paintbrush className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                    texture: "Strak & egaal",
                   },
                   {
                     name: "Sierpleister (spachtelputz)",
                     when: "Allround — een van de meest toegepaste ETICS-afwerkingen in Nederland",
                     body: "Handmatig aangebracht met een roestvrij stalen spatel, legt dit product een subtiele korrelstructuur vast die kleine oneffenheden maskeert. Beschikbaar in tientallen kleuren en met optionele biocide-toevoeging die algengroei langdurig remt. Moeilijker plaatselijk te repareren dan glad stucwerk.",
-                    accent: "border-l-primary",
+                    icon: <Layers className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                    texture: "Fijne korrel",
                   },
                   {
                     name: "Crepi (gevelpleister)",
                     when: "Traditionele rijwoningen, wederopbouwwijken, budgetbewust",
                     body: "Wordt gespoten of gewalst en heeft een grovere korrel. De applicatietijd is korter, wat de arbeidskosten verlaagt. Crepi past goed bij traditionele rijwoningen en wederopbouwwijken in Rotterdam, maar minder bij strakke, moderne gevels. Kleur kan verbleken bij slechte kwaliteit.",
-                    accent: "border-l-primary",
+                    icon: <Droplets className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                    texture: "Grove korrel",
                   },
                 ] as const).map((item) => (
                   <div
                     key={item.name}
-                    className={`rounded-xl border border-border/60 bg-card/80 ${item.accent} border-l-[3px] p-5 sm:p-6 shadow-sm`}
+                    className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-primary/30 hover:shadow-[0_8px_30px_-8px_rgba(0,0,0,0.10)]"
                   >
-                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:gap-6">
-                      <div className="sm:flex-1">
-                        <h3 className="text-base font-bold text-foreground sm:text-lg">{item.name}</h3>
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">{item.body}</p>
+                    <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                    <div className="p-6 sm:p-8">
+                      {/* Header: icon + name + texture tag + ideaal-voor badge */}
+                      <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20 shrink-0">
+                            {item.icon}
+                          </div>
+                          <div>
+                            <h3 className="text-base font-bold text-foreground sm:text-lg">{item.name}</h3>
+                            <p className="text-[11px] font-medium text-muted-foreground">Textuur: {item.texture}</p>
+                          </div>
+                        </div>
+                        <div className="rounded-xl bg-primary/[0.06] px-4 py-2.5 sm:text-right">
+                          <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Ideaal voor</p>
+                          <p className="mt-0.5 text-sm font-semibold leading-snug text-primary">{item.when}</p>
+                        </div>
                       </div>
-                      <div className="mt-3 sm:mt-0 sm:w-56 shrink-0">
-                        <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-1.5">Ideaal voor</p>
-                        <p className="text-sm font-semibold text-primary leading-snug">{item.when}</p>
-                      </div>
+
+                      {/* Body */}
+                      <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{item.body}</p>
                     </div>
                   </div>
                 ))}
@@ -633,28 +750,34 @@ export default function AfwerkingenPage() {
               h2="Steenstrips (baksteenlook)"
               accentWord="(baksteenlook)"
             >
-              <div className="overflow-hidden rounded-2xl border border-border/60 bg-card/80 shadow-sm">
-                <div className="grid grid-rows-[220px_1fr] sm:grid-rows-none sm:grid-cols-[320px_1fr]">
+              <div className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)] transition-all duration-300 hover:shadow-[0_8px_30px_-8px_rgba(0,0,0,0.10)]">
+                <div className="grid grid-rows-[240px_1fr] sm:grid-rows-none sm:grid-cols-[380px_1fr]">
+                  {/* Image */}
                   <div className="relative overflow-hidden bg-muted/60">
                     <ResponsiveImage
                       baseName="afwerking-steenstrips"
                       dir="/images"
                       preset="serviceCard"
                       alt="Steenstrips baksteenlook op gevelisolatie"
-                      sizes="(max-width: 640px) 100vw, 320px"
-                      className="absolute inset-0 h-full w-full object-cover"
+                      sizes="(max-width: 640px) 100vw, 380px"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent sm:bg-linear-to-r sm:from-transparent sm:to-black/10" />
-                    <span className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
-                      Authentiek metselwerk
-                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-black/20" />
+                    <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/20 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
+                        <SquareStack className="h-3 w-3" />
+                        Authentiek metselwerk
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="flex flex-col gap-4 p-5 sm:p-6">
+                  {/* Content */}
+                  <div className="flex flex-col gap-5 p-6 sm:p-8">
                     <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                      Steenstrips zijn dunne kleikeramische plakjes (4–15 mm) die op de afwerklaag van het ETICS-systeem worden aangebracht voor een authentieke baksteenuitstraling. Doordat steenstrips zwaarder zijn dan pleisterlagen, is extra mechanische verankering nodig — via langere pluggen die door de isolatie heen in de draagmuur gaan.
+                      Steenstrips zijn dunne kleikeramische strips (doorgaans ca. 10–25 mm, afhankelijk van product en systeem) die op de afwerklaag van het ETICS-systeem worden aangebracht voor een authentieke baksteenuitstraling. Doordat steenstrips zwaarder zijn dan pleisterlagen, moet het ETICS-systeem hierop gedimensioneerd zijn — vaak met specifieke of aanvullende mechanische bevestiging, afhankelijk van systeem en ondergrond.
                     </p>
 
+                    {/* Specs grid */}
                     <div className="grid grid-cols-2 gap-3">
                       {[
                         { label: "Levensduur", value: "Tientallen jaren" },
@@ -662,16 +785,17 @@ export default function AfwerkingenPage() {
                         { label: "Uitstraling", value: "Authentiek" },
                         { label: "Budget", value: "€€€" },
                       ].map((spec) => (
-                        <div key={spec.label} className="rounded-lg bg-muted/40 px-3 py-2">
+                        <div key={spec.label} className="rounded-xl bg-secondary/15 px-4 py-3">
                           <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{spec.label}</p>
-                          <p className="text-sm font-semibold text-foreground">{spec.value}</p>
+                          <p className="mt-0.5 text-sm font-semibold text-foreground">{spec.value}</p>
                         </div>
                       ))}
                     </div>
 
+                    {/* Tags */}
                     <div className="flex flex-wrap gap-2 text-xs">
                       {["Keramisch materiaal", "Extra verankering vereist", "Constructieve check nodig"].map((tag) => (
-                        <span key={tag} className="rounded-full border border-border bg-background px-2.5 py-1 text-muted-foreground">{tag}</span>
+                        <span key={tag} className="rounded-full border border-primary/15 bg-primary/[0.04] px-3 py-1.5 font-medium text-foreground/70">{tag}</span>
                       ))}
                     </div>
                   </div>
@@ -695,44 +819,49 @@ export default function AfwerkingenPage() {
               accentWord="oplevering"
               lead="Hoe verloopt een afwerkingsproject bij BM klus BV? In drie stappen van eerste inspectie tot een volledig afgewerkte gevel."
             >
-              <div className="grid gap-5 sm:grid-cols-3">
-                {[
-                  {
-                    icon: <Search className="h-5 w-5" />,
-                    step: "01",
-                    title: "Inspectie op locatie",
-                    body: "Wij komen gratis langs, beoordelen de ondergrond, meten de gevel op en bespreken uw wensen voor de afwerking. U ontvangt een helder advies over welk type het beste past bij uw situatie.",
-                  },
-                  {
-                    icon: <FileText className="h-5 w-5" />,
-                    step: "02",
-                    title: "Advies & offerte",
-                    body: "Op basis van de opname stellen wij een gedetailleerde offerte op: materiaal, afwerkingstype, kleur, planning en totaalprijs. Geen verborgen kosten.",
-                  },
-                  {
-                    icon: <Hammer className="h-5 w-5" />,
-                    step: "03",
-                    title: "Uitvoering & oplevering",
-                    body: "Onze vakmensen brengen de gekozen afwerking aan conform ETICS-normen. Na oplevering loopt u samen met de uitvoerder het resultaat door.",
-                  },
-                ].map((item) => (
-                  <div
-                    key={item.step}
-                    className="relative overflow-hidden rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm"
-                  >
-                    <span className="absolute -right-2 -top-3 text-6xl font-black tabular-nums text-primary/6">
-                      {item.step}
-                    </span>
-                    <span className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary mb-4">
-                      {item.icon}
-                    </span>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-primary/60 mb-1">
-                      Stap {item.step}
-                    </p>
-                    <h3 className="text-sm font-bold text-foreground mb-2">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
-                  </div>
-                ))}
+              {/* 3-column card with dividers */}
+              <div className="overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)]">
+                <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                <div className="grid divide-y divide-border/30 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                  {[
+                    {
+                      icon: <Search className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                      step: "01",
+                      title: "Inspectie op locatie",
+                      body: "Wij komen gratis langs, beoordelen de ondergrond, meten de gevel op en bespreken uw wensen voor de afwerking. U ontvangt een helder advies over welk type het beste past bij uw situatie.",
+                    },
+                    {
+                      icon: <FileText className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                      step: "02",
+                      title: "Advies & offerte",
+                      body: "Op basis van de opname stellen wij een gedetailleerde offerte op: materiaal, afwerkingstype, kleur, planning en totaalprijs. Geen verborgen kosten.",
+                    },
+                    {
+                      icon: <Hammer className="h-5 w-5 text-primary" strokeWidth={1.5} />,
+                      step: "03",
+                      title: "Uitvoering & oplevering",
+                      body: "Onze vakmensen brengen de gekozen afwerking aan conform ETICS-normen. Na oplevering loopt u samen met de uitvoerder het resultaat door.",
+                    },
+                  ].map((item, i) => (
+                    <FadeInOnScroll key={item.step} delay={i * 200}>
+                      <div className="relative p-6 sm:p-7 lg:p-8">
+                        <span className="absolute -right-1 -top-2 text-7xl font-black tabular-nums text-primary/[0.06] select-none">
+                          {item.step}
+                        </span>
+                        <div className="relative">
+                          <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
+                            {item.icon}
+                          </div>
+                          <p className="mb-1.5 text-[10px] font-bold uppercase tracking-widest text-primary/60">
+                            Stap {item.step}
+                          </p>
+                          <h3 className="mb-2 text-base font-bold text-foreground sm:text-lg">{item.title}</h3>
+                          <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                        </div>
+                      </div>
+                    </FadeInOnScroll>
+                  ))}
+                </div>
               </div>
             </Section>
           </div>
@@ -745,18 +874,56 @@ export default function AfwerkingenPage() {
               h2="Onderhoud & levensduur"
               accentWord="levensduur"
             >
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-5 sm:grid-cols-2">
                 {onderhoudItems.map((item) => (
-                  <div key={item.title} className="flex gap-4 rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm">
-                    <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-primary/10 text-primary shrink-0">
-                      {item.icon}
-                    </span>
-                    <div>
-                      <p className="mb-1 text-sm font-semibold text-foreground">{item.title}</p>
-                      <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                  <div
+                    key={item.title}
+                    className="group overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_8px_30px_-8px_rgba(0,0,0,0.10)]"
+                  >
+                    <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                    <div className="flex gap-4 p-6">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20 shrink-0">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <p className="mb-1.5 text-base font-bold text-foreground">{item.title}</p>
+                        <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                      </div>
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Onderhoud op een rij — mini-table */}
+              <div className="mt-6 overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)]">
+                <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                <div className="p-6 sm:p-8">
+                  <p className="mb-4 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Onderhoud op een rij</p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm text-left">
+                      <thead>
+                        <tr className="border-b border-border/40">
+                          {["Afwerking", "Actie", "Indicatie"].map((col) => (
+                            <th key={col} className="pb-3 pr-4 text-[11px] font-bold uppercase tracking-widest text-muted-foreground first:pl-0 last:pr-0">{col}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-border/30">
+                        {[
+                          { finish: "Glad stucwerk", actie: "Schilderen met dampdoorlatende gevelverf", indicatie: "Ca. elke 8–12 jaar" },
+                          { finish: "Sierpleister / crepi", actie: "Reinigen en controleren op aanslag/algen", indicatie: "Periodiek" },
+                          { finish: "Steenstrips", actie: "Voegen nalopen", indicatie: "Op langere termijn" },
+                        ].map((row) => (
+                          <tr key={row.finish}>
+                            <td className="py-3 pr-4 font-semibold text-foreground">{row.finish}</td>
+                            <td className="py-3 pr-4 text-muted-foreground">{row.actie}</td>
+                            <td className="py-3 font-medium text-primary">{row.indicatie}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </Section>
           </div>
@@ -769,36 +936,84 @@ export default function AfwerkingenPage() {
               h2="Afwerking en prijs"
               accentWord="prijs"
             >
-              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                <p>
-                  De keuze voor een afwerking heeft een directe invloed op de totale projectkosten.
-                  Crepi is de meest budgetvriendelijke optie; steenstrips zijn de duurste keuze
-                  vanwege materiaalkosten en extra arbeidsintensiviteit. Sierpleister zit er
-                  comfortabel tussenin.
-                </p>
-                <p>
-                  Houd er rekening mee dat de kleur van de afwerking meeweegt in de prijs: donkere
-                  kleuren vereisen soms meerdere lagen en UV-bestendiger pigmenten. Professionele
-                  detailafwerking rondom kozijnen en bij de plintzone verhoogt de materiaalhoeveelheid,
-                  maar is niet een post die u wilt bezuinigen.
-                </p>
+              {/* Main content: text left + prijsindicatie right */}
+              <div className="overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)]">
+                <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+                <div className="grid gap-0 lg:grid-cols-[1fr_400px]">
+                  {/* Left: text */}
+                  <div className="space-y-4 p-6 text-sm leading-relaxed text-muted-foreground sm:p-8 sm:text-base">
+                    <p>
+                      De keuze voor een afwerking heeft een directe invloed op de totale projectkosten.
+                      Crepi is de meest budgetvriendelijke optie; steenstrips zijn de duurste keuze
+                      vanwege materiaalkosten en extra arbeidsintensiviteit. Sierpleister zit er
+                      comfortabel tussenin.
+                    </p>
+                    <p>
+                      Houd er rekening mee dat de kleur van de afwerking meeweegt in de prijs: donkere
+                      kleuren vereisen soms meerdere lagen en UV-bestendiger pigmenten. Professionele
+                      detailafwerking rondom kozijnen en bij de plintzone verhoogt de materiaalhoeveelheid,
+                      maar is niet een post die u wilt bezuinigen.
+                    </p>
+                  </div>
+
+                  {/* Right: prijsindicatie */}
+                  <div className="border-t border-border/30 bg-secondary/10 p-6 sm:p-8 lg:border-l lg:border-t-0">
+                    <p className="mb-5 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Indicatie meerprijs</p>
+                    <div className="space-y-3">
+                      {[
+                        { finish: "Crepi", indication: "Vaak het voordeligst", level: 1, icon: <Layers className="h-4 w-4" /> },
+                        { finish: "Glad stucwerk", indication: "Vaak iets hoger", level: 2, icon: <Paintbrush className="h-4 w-4" /> },
+                        { finish: "Sierpleister", indication: "Doorgaans in het midden", level: 2, icon: <Layers className="h-4 w-4" /> },
+                        { finish: "Steenstrips", indication: "Duidelijk hogere meerprijs", level: 3, icon: <SquareStack className="h-4 w-4" /> },
+                      ].map((row) => (
+                        <div key={row.finish} className="flex items-center gap-3">
+                          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+                            {row.icon}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-semibold text-foreground leading-tight">{row.finish}</p>
+                            <p className="text-[11px] text-muted-foreground">{row.indication}</p>
+                          </div>
+                          <AnimatedDots level={row.level} />
+                        </div>
+                      ))}
+                    </div>
+                    <p className="mt-5 text-[11px] leading-relaxed text-muted-foreground/70">
+                      Afhankelijk van kleur, detaillering, dagkanten en bereikbaarheid.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <Callout variant="orange" className="mt-6">
-                <p>
-                  Wilt u een volledig kostenoverzicht voor gevelisolatie inclusief afwerking?{" "}
-                  <Link href="/gevelisolatie/kosten/" className="font-semibold underline underline-offset-2 hover:text-primary">
-                    Bekijk onze kostenpagina voor gevelisolatie →
-                  </Link>
-                </p>
-              </Callout>
-              <Callout variant="orange" className="mt-4">
-                <p>
-                  <strong>Gratis vrijblijvende offerte:</strong> wij bezoeken uw woning, meten op en adviseren welke afwerking het beste past bij uw gevelsituatie en budget.{" "}
-                  <Link href="/contact/" className="font-semibold underline underline-offset-2 hover:text-primary">
-                    Offerte aanvragen →
-                  </Link>
-                </p>
-              </Callout>
+
+              {/* CTA strip */}
+              <div className="mt-6 grid gap-px overflow-hidden rounded-2xl border border-border/40 bg-border/30 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.06)] sm:grid-cols-2">
+                <a
+                  href="/gevelisolatie/kosten/"
+                  className="group flex items-center gap-4 bg-card/95 p-5 transition-colors hover:bg-primary/[0.03] sm:p-6"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20 shrink-0">
+                    <Euro className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold text-foreground">Kostenoverzicht</p>
+                    <p className="text-xs text-muted-foreground">Bekijk richtprijzen per m² →</p>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-primary/40 shrink-0 transition-transform group-hover:translate-x-0.5" />
+                </a>
+                <a
+                  href="/contact/"
+                  className="group flex items-center gap-4 bg-card/95 p-5 transition-colors hover:bg-primary/[0.03] sm:p-6"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20 shrink-0">
+                    <FileText className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold text-foreground">Gratis vrijblijvende offerte</p>
+                    <p className="text-xs text-muted-foreground">Wij adviseren op locatie →</p>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-primary/40 shrink-0 transition-transform group-hover:translate-x-0.5" />
+                </a>
+              </div>
             </Section>
           </div>
 
@@ -823,8 +1038,8 @@ export default function AfwerkingenPage() {
               <div className="lg:col-span-5">
                 <div className="lg:sticky lg:top-32">
                   <div className="mb-3 flex items-center gap-3">
-                    <div className="h-px w-10 bg-primary" />
-                    <span className="text-sm font-semibold uppercase tracking-widest text-primary">FAQ</span>
+                    <div className="h-px w-8 bg-primary" />
+                    <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">FAQ</span>
                   </div>
                   <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                     Veelgestelde<br />
@@ -833,10 +1048,11 @@ export default function AfwerkingenPage() {
                   <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground sm:text-base">
                     Heeft u vragen over afwerkingen bij gevelisolatie? Hier vindt u de antwoorden op de meest gestelde vragen.
                   </p>
+
                   <p className="mt-8 text-sm text-muted-foreground">
                     Staat uw vraag er niet tussen?{" "}
-                    <Link href="/contact/" className="font-semibold text-primary hover:underline">
-                      Neem contact op
+                    <Link href="/contact/" className="font-semibold text-primary underline-offset-2 hover:underline">
+                      Neem contact op →
                     </Link>
                   </p>
                 </div>

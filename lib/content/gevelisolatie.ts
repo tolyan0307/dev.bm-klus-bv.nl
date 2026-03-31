@@ -82,7 +82,7 @@ export const watIsEticsContent = {
   futureRoute: "/gevelisolatie/",
   h2: "Wat is buitengevelisolatie (ETICS)?",
   intro:
-    "ETICS staat voor External Thermal Insulation Composite System. Het is een beproefde methode waarbij isolatieplaten aan de buitenzijde van de gevel worden bevestigd en afgewerkt met een beschermende wapeningslaag (mortel + glasvezelweefsel) en een decoratieve afwerklaag. Het resultaat: een geïsoleerde én visueel vernieuwde gevel in één arbeidsgang.",
+    "ETICS staat voor External Thermal Insulation Composite System. Het is een beproefde methode waarbij isolatieplaten aan de buitenzijde van de gevel worden bevestigd en afgewerkt met een beschermende wapeningslaag (mortel + glasvezelweefsel) en een decoratieve afwerklaag. Het resultaat: een geïsoleerde én visueel vernieuwde gevel in één traject.",
   wanneerKiezen: {
     h3: "Wanneer kiest u voor gevelisolatie aan de buitenzijde?",
     bullets: [
@@ -329,14 +329,14 @@ export const afwerkingenContent = {
       {
         afwerking: "Crepi",
         uiterlijk: "Grof, rustiek",
-        onderhoud: "Laag – gemiddeld",
-        budget: "Laag – midden",
+        onderhoud: "Laag",
+        budget: "Laag",
         opmerking: "Kan meer vuil vasthouden",
       },
       {
         afwerking: "Steenstrips",
         uiterlijk: "Baksteen-look",
-        onderhoud: "Laag",
+        onderhoud: "Zeer laag",
         budget: "Hoog",
         opmerking: "Zwaarder; draagkracht controleren",
       },
@@ -424,7 +424,7 @@ export const rcWaardeDikteContent = {
     h3: "Comfort vs. maximale isolatie",
     bullets: [
       "Comfortisolatie: een merkbare verbetering in warmtegevoel en lagere stookkosten, vaak al bij een RC-waarde rond 3,5 m²K/W.",
-      "Maximale isolatie: gericht op het hoogst haalbare rendement, bijvoorbeeld bij een energielabelverbetering of verduurzamingstraject. RC-waarden van 5,0 m²K/W en hoger.",
+      "Maximale isolatie: gericht op het hoogst haalbare rendement, bijvoorbeeld bij een energielabelverbetering of verduurzamingstraject. Hogere renovatiedoelen liggen vaak tussen Rc 5 en 6 m²K/W; de huidige RVO-streefwaarde voor de gevel is Rc 6.",
       "De keuze hangt af van uw budget, de beschikbare ruimte (dikte) en uw persoonlijke wensen.",
     ],
   },
@@ -557,7 +557,7 @@ export const faqContent = {
     {
       vraag: "Kan ik subsidie krijgen?",
       antwoord:
-        "Er bestaan subsidieregelingen voor woningisolatie, waaronder de ISDE (Investeringssubsidie Duurzame Energie en Energiebesparing). Of u in aanmerking komt, hangt af van het type woning, de behaalde RC-waarde en de geldende voorwaarden. Wij helpen u bij het uitzoeken van de mogelijkheden.",
+        "Er bestaan subsidieregelingen voor woningisolatie, waaronder de ISDE (Investeringssubsidie Duurzame Energie en Energiebesparing). Of u in aanmerking komt, hangt af van het type woning, de Rd-waarde van het isolatiemateriaal en de geldende voorwaarden. Wij helpen u bij het uitzoeken van de mogelijkheden.",
     },
     {
       vraag: "Hoe lang duurt het traject gemiddeld?",
@@ -572,7 +572,7 @@ export const faqContent = {
     {
       vraag: "Hoe onderhoud ik de afwerking (stuc/sierpleister/crepi/steenstrips)?",
       antwoord:
-        "Stuc en sierpleister zijn grotendeels onderhoudsvrij; periodiek reinigen is voldoende. Crepi kan door de grovere structuur wat meer vuil ophopen. Steenstrips vragen nauwelijks onderhoud. Bij beschadigingen kunnen wij de afwerking lokaal herstellen.",
+        "Glad stucwerk vraagt eens per 8–12 jaar een dampdoorlatende gevelverf. Sierpleister en crepi zijn grotendeels onderhoudsarm; periodiek reinigen is doorgaans voldoende. Steenstrips vragen nauwelijks onderhoud, alleen controle van de voegen na 15–20 jaar. Bij beschadigingen herstellen wij de afwerking lokaal.",
     },
   ],
 }
