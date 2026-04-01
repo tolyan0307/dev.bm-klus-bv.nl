@@ -61,10 +61,10 @@
     "zod": "^3.24.1"
   },
   "browserslist": [
-    "chrome 93",
-    "edge 93",
-    "firefox 90",
-    "safari 15.4"
+    "chrome 111",
+    "edge 111",
+    "firefox 111",
+    "safari 16.4"
   ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",

@@ -323,8 +323,9 @@ export default function AfwerkingenPage() {
           dir="/images/projects"
           preset="hero"
           alt=""
-          sizes="(max-width: 1920px) 100vw, 1920px"
+          sizes="100vw"
           className="absolute inset-0 h-full w-full object-cover object-center"
+          priority
         />
         <div className="absolute inset-0 bg-[rgba(14,10,6,0.38)]" />
         <div
@@ -462,7 +463,7 @@ export default function AfwerkingenPage() {
                         dir="/images"
                         preset="serviceCard"
                         alt={opt.name}
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        sizes="(max-width: 639px) calc(100vw - 32px), calc(50vw - 36px)"
                         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
@@ -759,7 +760,7 @@ export default function AfwerkingenPage() {
                       dir="/images"
                       preset="serviceCard"
                       alt="Steenstrips baksteenlook op gevelisolatie"
-                      sizes="(max-width: 640px) 100vw, 380px"
+                      sizes="(max-width: 639px) calc(100vw - 32px), 380px"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-black/20" />

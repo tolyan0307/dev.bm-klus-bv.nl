@@ -428,7 +428,7 @@ export default function KostenGevelisolatiePage() {
                         baseName="afwerking-stucwerk-resultaat"
                         preset="serviceCard"
                         alt="Stucwerk afwerking op geïsoleerde gevel — glad en duurzaam resultaat"
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        sizes="(max-width: 639px) calc(100vw - 32px), calc(50vw - 40px)"
                         className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-card/40 to-transparent" />
@@ -467,7 +467,7 @@ export default function KostenGevelisolatiePage() {
                         baseName="afwerking-steenstrips-resultaat"
                         preset="serviceCard"
                         alt="Steenstrips afwerking op buitengevelisolatie — authentieke baksteenlook"
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        sizes="(max-width: 639px) calc(100vw - 32px), calc(50vw - 40px)"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-card/40 to-transparent" />
@@ -616,7 +616,7 @@ export default function KostenGevelisolatiePage() {
                     baseName="projects/vught-gevelisolatie-10cm-voor-6"
                         preset="serviceCard"
                         alt="ETICS gevelisolatie werkproces — stucwerk en steiger in Vught"
-                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        sizes="33vw"
                     className="absolute inset-0 h-full w-full object-cover object-center"
                   />
                 </div>
@@ -646,7 +646,7 @@ export default function KostenGevelisolatiePage() {
                         baseName={scenario.image.baseName}
                         preset="serviceCard"
                         alt={scenario.image.alt}
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(50vw - 36px), calc(33vw - 32px)"
                         className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-card/40 to-transparent" />

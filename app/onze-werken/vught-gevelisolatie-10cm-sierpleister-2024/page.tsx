@@ -154,7 +154,7 @@ export default function VughtGevelisolatieProjectPage() {
     alt=""
     aria-hidden="true"
     className="absolute inset-0 h-full w-full object-cover object-center"
-    sizes="(max-width: 1920px) 100vw, 1920px"
+    sizes="100vw"
     priority
     draggable={false}
   />

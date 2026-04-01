@@ -505,7 +505,7 @@ export default function SubsidieVergunningPage() {
                   dir="/images"
                   preset="serviceCard"
                   alt="Controleren van vergunningsvereisten voor gevelisolatie"
-                  sizes="(max-width: 1024px) 100vw, 380px"
+                  sizes="(max-width: 1023px) calc(100vw - 32px), 380px"
                   className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105 lg:h-full"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
@@ -701,7 +701,7 @@ export default function SubsidieVergunningPage() {
                 baseName="subsidie-resultaat-gevel"
                 preset="serviceCard"
                 alt="Woning met afgewerkte buitengevelisolatie — resultaat na ETICS"
-                sizes="(max-width: 1280px) 100vw, 1280px"
+                sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), calc(100vw - 64px)"
                 className="h-48 w-full object-cover object-bottom transition-transform duration-500 group-hover:scale-105 sm:h-[22rem] sm:object-[center_90%] lg:h-96 lg:object-[center_90%]"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />

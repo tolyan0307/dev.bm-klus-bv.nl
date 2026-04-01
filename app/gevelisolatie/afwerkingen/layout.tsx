@@ -1,12 +1,9 @@
 import type { ReactNode } from "react"
-import { buildPageMetadata } from "@/lib/seo/meta"
 import { buildSrcSet } from "@/lib/responsive-image"
 
-export const metadata = buildPageMetadata("/gevelisolatie/subsidie-vergunning/")
+const heroSrcSet = buildSrcSet("bruinisse-gevelisolatie-6cm-na-04", "/images/projects", "hero")
 
-const heroSrcSet = buildSrcSet("subsidie-vergunning-hero", "/images", "hero")
-
-export default function SubsidieVergunningLayout({
+export default function AfwerkingenLayout({
   children,
 }: {
   children: ReactNode

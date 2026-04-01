@@ -133,7 +133,7 @@ export default function OnzeWerkenPage() {
             dir="/images/projects"
             preset="hero"
             alt="Gevelisolatie project — afgewerkt resultaat in Bruinisse"
-            sizes="(max-width: 1920px) 100vw, 1920px"
+            sizes="100vw"
             className="absolute inset-0 h-full w-full object-cover"
             priority
           />
