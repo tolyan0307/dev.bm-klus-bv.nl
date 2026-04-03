@@ -259,6 +259,9 @@ jobs:
               ln -sfn \"\$UPLOADS_DIR/current/data\" \"\$DOMAIN_DIR/data\"
             fi
 
+            # Google Search Console verification file
+            ln -sfn \"\$UPLOADS_DIR/current/google98322e3800d41b4e.html\" \"\$DOMAIN_DIR/google98322e3800d41b4e.html\"
+
             echo 'Deployed release:' \"\$REL\"
             echo 'current ->' \$(readlink \"\$UPLOADS_DIR/current\")
             echo '_next   ->' \$(readlink \"\$DOMAIN_DIR/_next\") || true
