@@ -1,0 +1,16 @@
+primary_key_events:
+  - Contact_Form_Site
+  - Phone
+  - Whatsapp
+
+secondary_events:
+  - form_start
+  - click
+  - scroll
+  - user_engagement
+
+rules:
+  Contact_Form_Site: "Treat as primary lead event"
+  Phone: "Treat as primary lead intent event"
+  Whatsapp: "Treat as primary lead intent event"
+  form_start: "Use only as micro-conversion, not as final conversion"

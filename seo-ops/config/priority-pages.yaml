@@ -1,0 +1,29 @@
+wave_1:
+  core:
+    - /
+    - /diensten/
+    - /onze-werken/
+    - /over-ons/
+    - /contact/
+
+  money_pages:
+    - /gevelisolatie/
+    - /gevel-schilderen/
+    - /buiten-stucwerk/
+    - /sierpleister/
+    - /muren-stucen/
+
+  gevelisolatie_cluster:
+    - /gevelisolatie/
+    - /gevelisolatie/kosten/
+    - /gevelisolatie/afwerkingen/
+    - /gevelisolatie/materialen/
+    - /gevelisolatie/rc-waarde-dikte/
+    - /gevelisolatie/subsidie-vergunning/
+
+wave_2:
+  geo_pages:
+    - /gevelisolatie/delft/
+    - /gevelisolatie/dordrecht/
+
+  project_pages: []

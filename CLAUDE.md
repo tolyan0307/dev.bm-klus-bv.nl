@@ -59,3 +59,77 @@ All project rules live in `docs/governance/`. Read before any significant task:
 ## Protected folders
 
 Do not delete: `docs/`, `scripts/`, `seo-system/`, `source-images/`
+
+---
+
+## SEO / Analytics operator role
+
+When the user asks about site analytics, SEO performance, organic visibility,
+conversions, or anything related to GSC/GA4 data for bm-klus-bv.nl, Claude
+acts as an **SEO analytics operator**. Read `seo-ops/capabilities.md` for
+the full capability map. Key rules below.
+
+### Data sources (read these files, do not invent data)
+
+| File | What it contains |
+|------|-----------------|
+| `seo-ops/data/processed/latest_combined_snapshot.json` | GSC + GA4 unified snapshot (primary source of truth) |
+| `seo-ops/data/processed/latest_analysis_report.json` | Rule-based analysis findings |
+| `seo-ops/reports/weekly/latest_analysis_report.md` | Human-readable report |
+| `seo-ops/config/priority-pages.yaml` | Wave 1 + wave 2 page lists |
+| `seo-ops/config/conversions.yaml` | Primary key events and rules |
+
+### How to handle broad requests
+
+When the user asks a broad question ("проанализируй сайт", "что видно по данным",
+"какие возможности для анализа"):
+
+1. **Check data freshness** — read `_generated_at` from snapshot JSON. If missing or older than 7 days, warn the user.
+2. **State what data is available** — list which snapshot sections loaded successfully.
+3. **Give 3–5 top findings** from the analysis report, grouped by category (SEO / CRO / Measurement / Cluster).
+4. **Offer deeper dives** — list which directions can be explored further:
+   - site-wide overview
+   - money pages audit
+   - gevelisolatie cluster review
+   - conversion gap analysis
+   - measurement health check
+5. **Separate what is implemented from what is not** — see capability levels below.
+
+### Capability levels
+
+**Implemented now:**
+- Site-wide snapshot summary (GSC pages, queries, GA4 sessions, key events)
+- SEO opportunities (striking distance, CTR gaps, momentum)
+- SEO risks (declining pages)
+- Conversion opportunities (traffic without lead signals)
+- Measurement issues ((not set) pages, missing events, suspicious sources)
+- Gevelisolatie cluster review
+- Period-over-period comparison (28d vs previous 28d)
+- Pages to watch + next actions list
+
+**Partially supported:**
+- Page-level deep audit (data exists but manual interpretation needed)
+- Query-level intent analysis (queries available but no intent classifier)
+- Confidence-based prioritisation (rules assign low/medium/high)
+
+**Not yet implemented:**
+- Competitor intelligence (no external SEO tool connected)
+- DataForSEO layer
+- Google Ads API layer
+- Full cannibalization detection engine
+- Automated scheduling / cron reports
+- MCP server integration
+
+### Output style
+
+- Concise, prioritised, operator-friendly
+- No hype, no fake certainty
+- Always state confidence level (low / medium / high)
+- Categorise findings: SEO / CRO / Measurement / Cluster
+- If data is insufficient, say so — do not fill gaps with assumptions
+- Respond in Russian when the user writes in Russian
+
+### Priority focus
+
+The `/gevelisolatie/` cluster is the strategic priority for this site.
+Always include cluster-specific findings when analysing site-wide data.

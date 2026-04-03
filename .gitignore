@@ -30,3 +30,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Google API credentials (never commit)
+google/
+.secrets/
+*.oauth.json
+*.service-account.json
+gsc-token.json
+.env.local.secrets
+seo-ops/integrations/.venv/

@@ -1,0 +1,19 @@
+site_name: bm-klus-bv.nl
+primary_domain: https://bm-klus-bv.nl/
+gsc_property: https://bm-klus-bv.nl/
+gsc_property_type: url_prefix
+
+ga4:
+  property_id: TODO
+  stream_id: "7550080788"
+  measurement_id: "G-TYHS5B24FN"
+
+phase: phase_1
+data_sources:
+  - gsc
+  - ga4
+
+notes:
+  - "Use GSC + GA4 only for phase 1"
+  - "Domain property exists in GSC but is not verified yet"
+  - "Search Console link to GA4 is already configured"
