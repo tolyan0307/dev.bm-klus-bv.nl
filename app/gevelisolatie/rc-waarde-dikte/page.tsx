@@ -14,12 +14,7 @@ import {
 import GoogleRatingBadge from "@/components/google-rating-badge"
 import RcWaardeDikteCalculator from "@/components/sections/gevelisolatie/rc-waarde-dikte-calculator"
 import FaqAccordion from "@/components/page/FaqAccordion"
-import { buildPageMetadata } from "@/lib/seo/meta"
-import { SITE } from "@/lib/seo/routes"
-import { jsonLdScript, breadcrumbSchema } from "@/lib/seo/schema"
-
-/* ── Metadata ── */
-export const metadata = buildPageMetadata("/gevelisolatie/rc-waarde-dikte/")
+import { jsonLdScript } from "@/lib/seo/schema"
 
 const TrustStrip = dynamic(() => import("@/components/trust-strip"))
 const StickyCTABar = dynamic(
@@ -29,12 +24,14 @@ const QuoteModal = dynamic(() => import("@/components/quote-modal"))
 
 /* ─── TOC ─────────────────────────────────────────────── */
 const toc = [
-  { id: "rc-rd-lambda",      label: "Rc, Rd en lambda" },
-  { id: "typische-ranges",   label: "Typische ranges" },
+  { id: "snel-antwoord",       label: "Snel antwoord" },
+  { id: "rc-rd-lambda",        label: "Rc, Rd en lambda" },
+  { id: "keuzehulp",           label: "Keuzehulp per situatie" },
+  { id: "typische-ranges",     label: "Typische ranges" },
   { id: "dikte-per-materiaal", label: "Dikte per materiaal" },
-  { id: "details-belang",    label: "Waarom details belangrijk zijn" },
-  { id: "opname-checklist",  label: "Wat we checken bij de opname" },
-  { id: "faq",               label: "Veelgestelde vragen" },
+  { id: "details-belang",      label: "Waarom details belangrijk zijn" },
+  { id: "opname-checklist",    label: "Wat we checken bij de opname" },
+  { id: "faq",                 label: "Veelgestelde vragen" },
 ]
 
 /* ─── FAQ data ───────────────────────────────────────── */
@@ -42,7 +39,7 @@ const faqItems = [
   {
     vraag: "Is een Rc-waarde van 3,5 m²K/W voldoende voor mijn woning?",
     antwoord:
-      "Rc 3,5 is de gangbare drempelwaarde voor energiesubsidies (ISDE) en levert doorgaans al een merkbare besparing op stookkosten, afhankelijk van uw woning en verwarmingssysteem. Voor oudere woningen met een slechte beginsituatie is Rc 3,5 een uitstekend startpunt. Wilt u het maximale resultaat of voldoen aan nieuwbouwprestaties, dan adviseren wij Rc 4,5 of hoger. Wij bepalen de optimale waarde tijdens de gratis opname op locatie.",
+      "Niet altijd. Voor ISDE-subsidie bij gevelisolatie geldt een minimale Rd-waarde van 3,5 m²K/W voor het isolatiemateriaal. Bij veel woningen levert dit al een merkbare besparing op stookkosten op. Wilt u het maximale resultaat of een toekomstbestendige oplossing, dan adviseren wij een hogere isolatiewaarde — afhankelijk van uw woning en budget. Wij bepalen de optimale dikte tijdens de gratis opname op locatie.",
   },
   {
     vraag: "Kan de isolatielaag te dik worden?",
@@ -57,7 +54,7 @@ const faqItems = [
   {
     vraag: "Wat is het verschil in dikte tussen EPS en PIR bij dezelfde Rc?",
     antwoord:
-      "PIR heeft een lagere lambda-waarde (≈ 0,026 W/m·K) dan EPS (≈ 0,038 W/m·K), waardoor u bij dezelfde Rc-waarde een dunnere laag nodig heeft. Concreet: voor Rc 3,5 heeft EPS circa 135 mm nodig, PIR circa 95 mm — een verschil van ±40 mm. Dat maakt PIR aantrekkelijk waar de uitsprong beperkt moet blijven, al zijn de materiaalkosten iets hoger.",
+      "PIR heeft een lagere lambda-waarde (≈ 0,026 W/m·K) dan EPS (≈ 0,038 W/m·K), waardoor u bij dezelfde Rc-waarde een dunnere laag nodig heeft. Concreet: voor Rc 3,5 heeft EPS circa 135 mm nodig, PIR circa 90 mm — een verschil van ±45 mm. Dat maakt PIR aantrekkelijk waar de uitsprong beperkt moet blijven, al zijn de materiaalkosten iets hoger.",
   },
   {
     vraag: "Wat is het verschil tussen Rc en Rd?",
@@ -65,9 +62,9 @@ const faqItems = [
       "Rd is de warmteweerstand van het isolatiemateriaal zelf (berekend als dikte gedeeld door lambda). Rc is de totale warmteweerstand van de volledige constructie: isolatie plus de aangrenzende lagen (gevel, pleisterwerk, luchtlagen). In de praktijk gaan we bij offerte en vergunning altijd uit van Rc, omdat dat de werkelijke isolatiekwaliteit van de gevelopbouw weergeeft.",
   },
   {
-    vraag: "Geldt er een subsidie- of vergunningsvereiste voor een minimale Rc?",
+    vraag: "Heb ik een vergunning nodig en welke isolatiewaarde is vereist voor subsidie?",
     antwoord:
-      "Voor subsidies (zoals ISDE) geldt een minimale Rd-waarde van 3,5 m²K/W voor het isolatiepakket. Wij geven bij de offerte aan of uw project in aanmerking komt en welke documentatie vereist is. Voor buitengevelisolatie (ETICS) is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. Spouwmuurisolatie is sinds 2025 in de meeste gevallen vergunningsvrij. Controleer de actuele regels via het Omgevingsloket.",
+      "Voor ISDE-subsidie geldt een minimale Rd-waarde van 3,5 m²K/W voor het isolatiemateriaal. Wij geven bij de offerte aan of uw project in aanmerking komt en welke documentatie vereist is. Of een omgevingsvergunning nodig is, verschilt per situatie: het hangt af van uw gemeente, het geldende omgevingsplan en de mate waarin het uiterlijk van de gevel wijzigt. Bij ETICS is een vergunningcheck vrijwel altijd aan te raden. U kunt dit vooraf controleren via het Omgevingsloket, of wij nemen dit mee in ons advies.",
   },
   {
     vraag: "Waarom varieert de totale opbouwdikte zoveel (10–18 cm)?",
@@ -147,15 +144,7 @@ function BulletList({ items }: { items: string[] }) {
 }
 
 /* ─── Page ───────────────────────────────────────────── */
-const base = SITE.canonicalBase
-
 export default function RcWaardeDiktePage() {
-  const breadcrumbsSchema = breadcrumbSchema([
-    { name: "Home", item: `${base}/` },
-    { name: "Gevelisolatie", item: `${base}/gevelisolatie/` },
-    { name: "Rc-waarde & dikte", item: `${base}/gevelisolatie/rc-waarde-dikte/` },
-  ])
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -168,7 +157,6 @@ export default function RcWaardeDiktePage() {
 
   return (
     <>
-      {jsonLdScript(breadcrumbsSchema)}
       {jsonLdScript(faqSchema)}
 
       {/* ══ HERO ══ */}
@@ -299,6 +287,58 @@ export default function RcWaardeDiktePage() {
 
           <div className="mt-16 space-y-20">
 
+            {/* ══ Snel antwoord ══ */}
+            <section id="snel-antwoord" className="scroll-mt-24">
+              <div className="mb-8">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="h-px w-10 bg-primary" />
+                  <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                    In het kort
+                  </span>
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                  Snel antwoord
+                </h2>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  {
+                    titel: "Subsidiedrempel (ISDE)",
+                    tekst:
+                      "De minimale eis is Rd 3,5 m²K/W — dat is de warmteweerstand van het isolatiemateriaal, niet van de hele gevel.",
+                  },
+                  {
+                    titel: "Gehele gevel vergelijken",
+                    tekst:
+                      "Wilt u de prestatie van de volledige gevelopbouw vergelijken of beoordelen, dan kijkt u naar de Rc-waarde.",
+                  },
+                  {
+                    titel: "Beperkte ruimte",
+                    tekst:
+                      "Is de uitsprong bij kozijnen of dagkanten krap, dan kan een materiaal met een lagere lambda dezelfde isolatiewaarde in minder centimeters bereiken.",
+                  },
+                  {
+                    titel: "Toekomstbestendig",
+                    tekst:
+                      "Overweegt u een warmtepomp of een beter energielabel, dan is het verstandig om hoger te mikken dan alleen de subsidiedrempel.",
+                  },
+                ].map((card) => (
+                  <div
+                    key={card.titel}
+                    className="rounded-xl border border-border/60 bg-card/80 p-5 shadow-sm"
+                  >
+                    <p className="mb-2 text-sm font-bold text-foreground">{card.titel}</p>
+                    <p className="text-sm leading-relaxed text-foreground/70">{card.tekst}</p>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-4 text-xs text-muted-foreground">
+                Exacte waarden zijn afhankelijk van uw woning, doel en detaillering.
+              </p>
+            </section>
+
             {/* ══ 1. Rc, Rd en lambda ══ */}
             <section id="rc-rd-lambda" className="scroll-mt-24">
               <SectionHeader
@@ -315,7 +355,7 @@ export default function RcWaardeDiktePage() {
                     unit: "W/m·K",
                     kleur: "bg-primary/8",
                     tekst:
-                      "De warmtegeleidingscoëfficiënt van het isolatiemateriaal. Hoe lager, hoe slechter het warmte geleidt — dus hoe beter de isolatie. EPS: λ ≈ 0,038 · PIR: λ ≈ 0,026 · Minerale wol: λ ≈ 0,035.",
+                      "De warmtegeleidingscoëfficiënt van het isolatiemateriaal. Hoe lager de lambda-waarde, hoe minder warmte het materiaal doorlaat — en hoe beter het isoleert. EPS: λ ≈ 0,038 · PIR: λ ≈ 0,026 · Minerale wol: λ ≈ 0,035.",
                   },
                   {
                     term: "Rd",
@@ -329,7 +369,7 @@ export default function RcWaardeDiktePage() {
                     unit: "m²K/W",
                     kleur: "bg-primary/5",
                     tekst:
-                      "De totale warmteweerstand van de gehele gevelconstructie: isolatie + gevelmetselwerk + luchtlagen + binnenpleister. Rc is de maatstaf voor vergunningen, subsidies en energieberekeningen. Praktisch: Rc ≈ Rd + 0,20–0,40 voor een standaard WDVS-gevel.",
+                      "De totale warmteweerstand van de gehele gevelconstructie: isolatie + gevelmetselwerk + luchtlagen + binnenpleister. Rc wordt gebruikt bij vergunningen en energieberekeningen. Voor subsidies (ISDE) is de Rd van het isolatiemateriaal de toetswaarde. Praktisch: Rc ≈ Rd + 0,20–0,40 voor een standaard WDVS-gevel.",
                   },
                 ].map((card) => (
                   <div
@@ -348,9 +388,85 @@ export default function RcWaardeDiktePage() {
               <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-5">
                 <p className="text-sm leading-relaxed text-foreground/80">
                   <span className="font-semibold text-primary">Praktijkregel:</span>{" "}
-                  Voor subsidieaanvragen en bouwvergunningen gebruikt u altijd de Rc-waarde van de gehele gevelopbouw, niet de Rd van het isolatiemateriaal afzonderlijk. Wij vermelden beide in onze offerte.
+                  Voor bouwvergunningen en energieberekeningen wordt de Rc-waarde van de gehele gevelopbouw gebruikt. Voor subsidieaanvragen (ISDE) toetst de overheid op de Rd-waarde van het isolatiemateriaal. Wij vermelden beide waarden in onze offerte.
                 </p>
               </div>
+            </section>
+
+            {/* ══ Keuzehulp per situatie ══ */}
+            <section id="keuzehulp" className="scroll-mt-24">
+              <SectionHeader
+                eyebrow="Welke situatie past bij u?"
+                heading="Keuzehulp per"
+                accent="situatie"
+                lead="Uw ideale isolatiewaarde hangt af van uw doel, woning en budget. Hieronder vier veelvoorkomende scenario's als startpunt."
+              />
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    h3: "Subsidie als hoofddoel",
+                    voorWie:
+                      "U wilt de ISDE-subsidie benutten en zoekt de meest kostenefficiënte aanpak.",
+                    logisch:
+                      "Richt op minimaal Rd 3,5 voor het isolatiemateriaal. Welk materiaal en welke dikte daarbij passen, hangt af van de beschikbare ruimte en ondergrond.",
+                    letten:
+                      "Controleer vooraf de actuele ISDE-voorwaarden, het vereiste materiaaltype en de benodigde documentatie — de regeling kan wijzigen.",
+                  },
+                  {
+                    h3: "Weinig ruimte bij dagkanten",
+                    voorWie:
+                      "Uw kozijnen zitten dicht op de erfgrens of dagkanten, waardoor een dik pakket niet past.",
+                    logisch:
+                      "Een materiaal met een lage lambda-waarde bereikt dezelfde isolatiewaarde in minder centimeters.",
+                    letten:
+                      "Dagkanten moeten mee-geïsoleerd worden — een dun vlakpakket met ongeïsoleerde dagkanten levert een koudebrug op.",
+                  },
+                  {
+                    h3: "Comfortverbetering",
+                    voorWie:
+                      "U wilt een merkbaar warmer huis en lagere stookkosten, maar niet het dikst mogelijke pakket.",
+                    logisch:
+                      "Zoek een balans tussen isolatiewaarde, beschikbare dikte en budget. Meer isolatie levert meer op, maar het rendement per extra centimeter neemt af.",
+                    letten:
+                      "De detaillering (plint, hoeken, aansluitingen) bepaalt mede hoeveel van de theoretische waarde u in de praktijk behaalt.",
+                  },
+                  {
+                    h3: "Maximaal toekomstbestendig",
+                    voorWie:
+                      "U combineert gevelisolatie met een warmtepomp, zonnepanelen of een traject naar een hoger energielabel.",
+                    logisch:
+                      "Mik hoger dan alleen de subsidiedrempel — bij een warmtepomp profiteert u extra van een goed geïsoleerde schil.",
+                    letten:
+                      "Boven een bepaald punt neemt de meerwaarde per extra centimeter af. De optimale balans is woningafhankelijk.",
+                  },
+                ].map((card) => (
+                  <div
+                    key={card.h3}
+                    className="rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm"
+                  >
+                    <h3 className="mb-3 text-base font-bold text-foreground">{card.h3}</h3>
+                    <dl className="space-y-2 text-sm">
+                      <div>
+                        <dt className="font-semibold text-foreground/80">Voor wie</dt>
+                        <dd className="leading-relaxed text-foreground/70">{card.voorWie}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-foreground/80">Wat meestal logisch is</dt>
+                        <dd className="leading-relaxed text-foreground/70">{card.logisch}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-foreground/80">Waar op te letten</dt>
+                        <dd className="leading-relaxed text-foreground/70">{card.letten}</dd>
+                      </div>
+                    </dl>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-6 text-sm text-muted-foreground">
+                Gebruik de calculator hieronder om de dikte per materiaal te zien bij uw gewenste Rc-waarde.
+              </p>
             </section>
 
             {/* ══ 2. Typische ranges ══ */}
@@ -399,10 +515,9 @@ export default function RcWaardeDiktePage() {
               {/* Rc milestones */}
               <div className="mt-6 space-y-3">
                 {[
-                  { rc: "Rc 1,3",   kleur: "bg-muted",       label: "Indicatief renovatie minimum (check actuele bouwregelgeving)" },
                   { rc: "Rc 2,5",   kleur: "bg-muted",       label: "Basis verbetering — merkbare besparing, geen subsidie" },
-                  { rc: "Rc 3,5+",  kleur: "bg-primary/10",  label: "Subsidiedrempel ISDE (check actuele voorwaarden)" },
-                  { rc: "Rc 4,7+",  kleur: "bg-primary/20",  label: "Nieuwbouwnorm — hoog comfortniveau" },
+                  { rc: "Rd 3,5+",  kleur: "bg-primary/10",  label: "Subsidiedrempel ISDE (Rd isolatiemateriaal, check actuele voorwaarden)" },
+                  { rc: "Rc 4,7+",  kleur: "bg-primary/20",  label: "Referentie voor nieuwbouw of ingrijpende renovatie" },
                   { rc: "Rc 5,5+",  kleur: "bg-primary/30",  label: "Premium isolatie — optimaal voor bijna-energieneutrale renovatie" },
                 ].map((row) => (
                   <div key={row.rc} className={`flex items-center gap-4 rounded-lg border border-border ${row.kleur} px-5 py-3`}>
@@ -453,7 +568,7 @@ export default function RcWaardeDiktePage() {
                   {
                     h3: "Plint en fundering",
                     tekst:
-                      "De overgang van buitengevelisolatie naar de fundering of begane grondvloer is een klassiek zwakke plek. Vorstbestand plintprofiel en een doorloopschuim tot onderaan de gevel voorkomen dat warmte wegvloeit via de betonnen of gemetselde constructie.",
+                      "De overgang van buitengevelisolatie naar de fundering of begane grondvloer is een klassiek zwakke plek. Een vorstbestendig plintprofiel en een doorlopende isolatielaag tot onderaan de gevel helpen te voorkomen dat warmte wegvloeit via de betonnen of gemetselde constructie.",
                     bullets: [
                       "Vorstbestendige plintprofielen en startprofiel",
                       "Isolatie minimaal 30 cm onder maaiveld doorlopen",

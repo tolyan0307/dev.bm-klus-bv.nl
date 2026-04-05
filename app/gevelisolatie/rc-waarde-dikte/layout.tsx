@@ -4,7 +4,6 @@ import { SITE } from "@/lib/seo/routes"
 import {
   jsonLdScript,
   localBusinessSchema,
-  serviceSchema,
   breadcrumbSchema,
 } from "@/lib/seo/schema"
 
@@ -28,18 +27,10 @@ export default function RcWaardeDikteLayout({
 
   const business = localBusinessSchema()
 
-  const service = serviceSchema({
-    name: "Rc-waarde & isolatiedikte — buitengevelisolatie",
-    description:
-      "Bereken hoeveel buitengevelisolatie u nodig heeft. Rc-waarde, lambda en dikte per materiaal.",
-    url: `${base}/gevelisolatie/rc-waarde-dikte/`,
-  })
-
   return (
     <>
       {jsonLdScript(breadcrumbs)}
       {jsonLdScript(business)}
-      {jsonLdScript(service)}
       {children}
     </>
   )

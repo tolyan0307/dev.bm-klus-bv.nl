@@ -1,49 +1,17 @@
 "use client"
 
 import { useState } from "react"
-
-const lambdaValues: Record<string, number> = {
-  EPS: 0.038,
-  PIR: 0.026,
-  "Minerale wol": 0.035,
-}
-
-const opbouwOpslag: Record<string, number> = {
-  EPS: 3,
-  PIR: 3,
-  "Minerale wol": 4,
-}
-
-const RC_MIN = 1.5
-const RC_MAX = 6.0
-const RC_STEP = 0.5
-const RC_OPTIONS = Array.from(
-  { length: Math.round((RC_MAX - RC_MIN) / RC_STEP) + 1 },
-  (_, i) => +(RC_MIN + i * RC_STEP).toFixed(1),
-)
-const materialen = Object.keys(lambdaValues)
-
-function calcDikte(rc: number, mat: string) {
-  const lambda = lambdaValues[mat] ?? 0.038
-  const mm = rc * lambda * 1000
-  return Math.round(mm / 5) * 5
-}
-
-function rcLabel(rc: number): { label: string; cls: string } {
-  if (rc < 2.5) {
-    return { label: "Renovatie min.", cls: "bg-muted text-muted-foreground" }
-  }
-  if (rc < 3.5) {
-    return { label: "Basis", cls: "bg-muted text-muted-foreground" }
-  }
-  if (rc < 4.7) {
-    return { label: "Subsidie (check)", cls: "bg-primary/10 text-primary" }
-  }
-  if (rc < 5.5) {
-    return { label: "Nieuwbouw ✓", cls: "bg-primary/20 text-primary" }
-  }
-  return { label: "Premium", cls: "bg-primary text-primary-foreground" }
-}
+import {
+  LAMBDA,
+  OPBOUW_OPSLAG,
+  MATERIALEN,
+  RC_MIN,
+  RC_MAX,
+  RC_STEP,
+  RC_OPTIONS,
+  calcDikte,
+  rcLabel,
+} from "@/lib/constants/rc-waarde"
 
 export default function RcWaardeDikteCalculator() {
   const [rc, setRc] = useState(3.5)
@@ -109,9 +77,9 @@ export default function RcWaardeDikteCalculator() {
         </div>
 
         <div className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-          {materialen.map((mat) => {
+          {MATERIALEN.map((mat) => {
             const dikteMm = calcDikte(rc, mat)
-            const opslagCm = opbouwOpslag[mat] ?? 3
+            const opslagCm = OPBOUW_OPSLAG[mat] ?? 3
             const totaalCm = Math.round(dikteMm / 10) + opslagCm
             const barPct = Math.min(100, (dikteMm / 240) * 100)
 
@@ -121,7 +89,7 @@ export default function RcWaardeDikteCalculator() {
                   {mat}
                 </p>
                 <p className="text-[11px] text-muted-foreground/60">
-                  λ = {lambdaValues[mat].toFixed(3)} W/m·K
+                  λ = {LAMBDA[mat].toFixed(3)} W/m·K
                 </p>
                 <div className="relative h-3 w-full overflow-hidden rounded-full bg-border">
                   <div

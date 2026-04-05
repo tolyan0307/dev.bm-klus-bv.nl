@@ -171,7 +171,7 @@ export const PLANNED_ROUTES = [
     path: "/gevelisolatie/rc-waarde-dikte/",
     title: "Rc-waarde & dikte gevelisolatie (buiten)",
     description:
-      "Welke Rc/Rd-waarde en dikte past bij jouw gevel? Uitleg EPS/PIR/wol, typische ranges en aandacht voor details. Gratis opname op locatie.",
+      "Welke Rc/Rd-waarde en dikte past bij uw gevel? Uitleg EPS/PIR/wol, typische ranges en aandacht voor details. Gratis opname op locatie.",
     changefreq: "yearly",
     priority: 0.6,
   },

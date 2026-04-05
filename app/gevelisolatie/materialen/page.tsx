@@ -24,14 +24,7 @@ import GoogleRatingBadge from "@/components/google-rating-badge"
 import { buildSrcSet, getFallbackSrc } from "@/lib/responsive-image"
 import FaqAccordion from "@/components/page/FaqAccordion"
 import MaterialenVergelijking, { type MaterialenItem } from "@/components/sections/gevelisolatie/materialen-vergelijking"
-import { buildPageMetadata } from "@/lib/seo/meta"
-import { SITE } from "@/lib/seo/routes"
-import { jsonLdScript, breadcrumbSchema } from "@/lib/seo/schema"
-
-/* ── Metadata ── */
-export const metadata = buildPageMetadata("/gevelisolatie/materialen/")
-
-const base = SITE.canonicalBase
+import { jsonLdScript } from "@/lib/seo/schema"
 
 const TrustStrip = dynamic(() => import("@/components/trust-strip"))
 const StickyCTABar = dynamic(
@@ -85,12 +78,12 @@ const materialen: MateriaalRij[] = [
     brandklasse: "B-s1,d0",
     brandKey: "B",
     dampopen: "Nee",
-    wanneer: "Hoge isolatiewaarde bij beperkte opbouwdikte nodig; stadswoningen met krappe uitdagingen",
+    wanneer: "Hoge isolatiewaarde bij beperkte opbouwdikte nodig; stadswoningen met beperkte ruimte",
     pluspunt: "Laagste lambdawaarde van de drie: dunste opbouw voor dezelfde RC-waarde",
     aandachtspunt: "Niet dampopen; niet geschikt voor alle geveltypen — vochtcheck vereist",
     baseName: "materiaal-pir",
     beschrijving:
-      "PIR (polyisocyanuraat) is een stijf schuimisolatiemateriaal met de beste thermische prestaties per centimeter dikte. Dat maakt het aantrekkelijk wanneer de beschikbare ruimte voor de isolatieopbouw beperkt is, zoals bij smalle dagkanten of strikte esthetische eisen. PIR is echter volledig dampdicht, waardoor de vochthuishouding van de gevel extra aandacht vraagt.",
+      "PIR (polyisocyanuraat) is een stijf schuimisolatiemateriaal met de beste thermische prestaties per centimeter dikte. Dat maakt het aantrekkelijk wanneer de beschikbare ruimte voor de isolatieopbouw beperkt is, zoals bij smalle dagkanten of strikte esthetische eisen. PIR is echter nagenoeg dampdicht, waardoor de vochthuishouding van de gevel extra aandacht vraagt.",
   },
   {
     materiaal: "Minerale wol",
@@ -103,7 +96,7 @@ const materialen: MateriaalRij[] = [
     aandachtspunt: "Iets hogere lambdawaarde: dikker pakket nodig voor dezelfde RC-waarde",
     baseName: "materiaal-minerale-wol",
     beschrijving:
-      "Minerale wol (steenwol of glaswol in plaatsvorm) is dampopen en brandwerend (klasse A1 — onbrandbaar). Daarmee is het de voorkeursoplossing voor gevels met vochtproblemen, voor panden met hoge brandveiligheidseisen (bijv. VvE-appartementen, utiliteit) en voor constructies waarbij de gevel moet kunnen 'ademen'. De hogere lambdawaarde betekent dat een iets dikkere plaat nodig is om dezelfde RC te bereiken.",
+      "Minerale wol (steenwol of glaswol in plaatsvorm) is dampopen en brandwerend (klasse A1 — onbrandbaar). Daarmee is minerale wol vaak een logische keuze bij gevels waar dampopenheid belangrijk is, voor panden met hoge brandveiligheidseisen (bijv. VvE-appartementen, utiliteit) en voor constructies waarbij de gevel moet kunnen 'ademen'. De hogere lambdawaarde betekent dat een iets dikkere plaat nodig is om dezelfde RC te bereiken.",
   },
 ]
 
@@ -143,12 +136,12 @@ const faqItems: FaqItem[] = [
   {
     vraag: "Wat is het verschil tussen EPS en PIR voor gevelisolatie?",
     antwoord:
-      "EPS (geëxpandeerd polystyreen) heeft een lambdawaarde van circa 0,031–0,038 W/(m·K) en is dampbeperkt. PIR heeft een lagere lambda (0,022–0,028), waardoor bij dezelfde RC-waarde een dunnere plaat volstaat. PIR is volledig dampdicht. EPS is de meest toegepaste en prijstechnisch meest aantrekkelijke keuze; PIR past beter wanneer ruimte schaars is.",
+      "EPS (geëxpandeerd polystyreen) heeft een lambdawaarde van circa 0,031–0,038 W/(m·K) en is dampbeperkt. PIR heeft een lagere lambda (0,022–0,028), waardoor bij dezelfde RC-waarde een dunnere plaat volstaat. PIR is nagenoeg dampdicht. EPS is de meest toegepaste en prijstechnisch meest aantrekkelijke keuze; PIR past beter wanneer ruimte schaars is.",
   },
   {
     vraag: "Wat betekent dampopenheid en waarom is dat belangrijk?",
     antwoord:
-      "Dampopenheid geeft aan in hoeverre waterdamp door het materiaal kan diffunderen. Bij een dampopen gevel (bijvoorbeeld minerale wol) kan vocht dat in de constructie terechtkomt makkelijker naar buiten ontwijken. EPS is beperkt dampopen en PIR is volledig dampdicht. Voor gevels met bestaande vochtproblemen of houtskeletbouw is een dampopen oplossing (minerale wol) vaak de veiligste keuze.",
+      "Dampopenheid geeft aan in hoeverre waterdamp door het materiaal kan diffunderen. Bij een dampopen gevel (bijvoorbeeld minerale wol) kan vocht dat in de constructie terechtkomt makkelijker naar buiten ontwijken. EPS is beperkt dampopen en PIR is nagenoeg dampdicht. Voor gevels met bestaande vochtproblemen of houtskeletbouw is een dampopen oplossing (minerale wol) vaak de veiligste keuze.",
   },
   {
     vraag: "Is minerale wol veiliger bij brand dan EPS of PIR?",
@@ -232,12 +225,6 @@ const WA_URL =
 const DIR = "/images"
 
 export default function MaterialenPage() {
-  const breadcrumbsSchema = breadcrumbSchema([
-    { name: "Home", item: `${base}/` },
-    { name: "Gevelisolatie", item: `${base}/gevelisolatie/` },
-    { name: "Materialen", item: `${base}/gevelisolatie/materialen/` },
-  ])
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -275,7 +262,6 @@ export default function MaterialenPage() {
 
   return (
     <>
-      {jsonLdScript(breadcrumbsSchema)}
       {jsonLdScript(faqSchema)}
 
       {/* ══ HERO ══ */}
@@ -325,7 +311,7 @@ export default function MaterialenPage() {
               </p>
 
               <ul className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2.5">
-                {["Gratis opname op locatie", "Advies op maat per gevel", "Gecertificeerde ETICS-systemen"].map((text) => (
+                {["Objectieve vergelijking van drie materialen", "Advies op maat per gevel", "Gecertificeerde ETICS-systemen"].map((text) => (
                   <li key={text} className="flex items-center gap-2 text-sm text-white/70">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
                     <span>{text}</span>
@@ -410,7 +396,7 @@ export default function MaterialenPage() {
                 overline="Keuzehulp"
                 title="Snelle keuzehulp:"
                 titleAccent="welk materiaal past bij u?"
-                subtitle="Beantwoord drie vragen en u weet al in welke richting u moet zoeken. Wij bevestigen de keuze altijd tijdens de opname op locatie."
+                subtitle="Beantwoord de vragen hieronder en u weet al in welke richting u moet zoeken. Wij bevestigen de keuze altijd tijdens de opname op locatie."
               />
 
               <div className="grid gap-4 sm:grid-cols-3">
@@ -486,7 +472,7 @@ export default function MaterialenPage() {
                   <caption className="sr-only">Vergelijking isolatiematerialen voor ETICS gevelisolatie</caption>
                   <thead>
                     <tr className="border-b border-border bg-muted/40">
-                      {["Materiaal", "Lambda (indicatie)", "Brandklasse (indicatie)", "Dampopen", "Sterkte per cm"].map((col) => (
+                      {["Materiaal", "Lambda (indicatie)", "Brandklasse (indicatie)", "Dampopen", "Sterkte per cm", "Beste bij"].map((col) => (
                         <th key={col} className="px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                           {col}
                         </th>
@@ -498,6 +484,11 @@ export default function MaterialenPage() {
                       const bb = brandBadge[mat.brandKey]
                       const db = dampBadge[mat.dampopen]
                       const sc = lambdaScore[mat.materiaal] ?? 2
+                      const besteBij: Record<string, string> = {
+                        "EPS": "Standaard gevel, goede prijs-kwaliteit",
+                        "PIR": "Beperkte opbouwdikte",
+                        "Minerale wol": "Dampopenheid of brandveiligheid",
+                      }
                       return (
                         <tr key={mat.materiaal} className="bg-card transition-colors hover:bg-primary/5">
                           <td className="px-4 py-3 font-bold text-foreground">{mat.materiaal}</td>
@@ -519,6 +510,7 @@ export default function MaterialenPage() {
                               ))}
                             </div>
                           </td>
+                          <td className="px-4 py-3 text-sm text-foreground/70">{besteBij[mat.materiaal]}</td>
                         </tr>
                       )
                     })}
@@ -546,19 +538,19 @@ export default function MaterialenPage() {
                     title: "RC-waarde & dikte",
                     icon: Ruler,
                     tekst:
-                      "Het RC-doel (comfortisolatie vs. maximale besparing) bepaalt de benodigde dikte. PIR bereikt dezelfde RC met minder centimeters, wat gunstig is bij krappe details. EPS en minerale wol hebben iets meer ruimte nodig.",
+                      "Het RC-doel (comfortisolatie vs. maximale besparing) bepaalt de benodigde dikte. Een materiaal met een lagere lambdawaarde bereikt dezelfde RC met minder centimeters — relevant bij krappe dagkanten of strikte esthetische eisen.",
                   },
                   {
                     title: "Vocht & dampopenheid",
                     icon: Droplets,
                     tekst:
-                      "Een dampopen gevelopbouw laat waterdamp vrijuit ontwijken. Bij een vochtige of capillaire ondergrond, of bij houtskeletbouw, is minerale wol de veiligste keuze. EPS is beperkt dampopen; PIR is volledig dampdicht.",
+                      "Een dampopen gevelopbouw laat waterdamp beter naar buiten toe afvoeren. Bij een vochtige of capillaire ondergrond, of bij houtskeletbouw, is dampopenheid extra belangrijk. De drie materialen verschillen hier sterk: EPS is beperkt dampopen, PIR is nagenoeg dampdicht en minerale wol is zeer dampopen.",
                   },
                   {
                     title: "Brandveiligheid",
                     icon: Flame,
                     tekst:
-                      "Minerale wol (A1) is onbrandbaar en is vaak vereist bij appartementen, utiliteitsgebouwen of panden waarbij de verzekeraar of gemeente hogere brandklassen voorschrijft. EPS en PIR vallen in lagere brandklassen.",
+                      "De brandklasse van het isolatiemateriaal kan doorslaggevend zijn bij appartementen, utiliteitsgebouwen of panden waarvoor hogere eisen gelden. De materialen verschillen hier duidelijk in — controleer daarom altijd de projecteisen en systeemopbouw.",
                   },
                   {
                     title: "Conditie van de gevel",
@@ -570,13 +562,13 @@ export default function MaterialenPage() {
                     title: "Impactbestendigheid",
                     icon: ShieldCheck,
                     tekst:
-                      "Op begane grondniveau, rondom deuren of bij garages is de wapeningslaag aan extra belasting blootgesteld. EPS en minerale wol in hogere dichtheid bieden meer weerstand. In de plintsone wordt soms XPS toegepast.",
+                      "Op begane grondniveau, rondom deuren of bij garages is de wapeningslaag aan extra belasting blootgesteld. EPS en minerale wol in hogere dichtheid bieden meer weerstand. In de plintzone wordt soms XPS toegepast.",
                   },
                   {
                     title: "Afwerking (stuc vs. steenstrips)",
                     icon: Layers,
                     tekst:
-                      "Steenstrips zijn zwaarder dan stuc of sierpleister. Niet alle materiaalcombinaties zijn gecertificeerd voor steenstrips-ETICS. EPS (hoge dichtheid) en minerale wol worden het meest toegepast; PIR is minder gebruikelijk als drager voor steenstrips.",
+                      "Steenstrips zijn zwaarder dan stuc of sierpleister en vereisen een gecertificeerde systeemopbouw. De draagkracht van de isolatieplaat en de bevestiging moeten hierop worden berekend.",
                   },
                 ].map(({ title, icon: Icon, tekst }) => (
                   <div key={title} className="rounded-xl border border-border/60 bg-card/80 p-6 shadow-sm flex flex-col gap-4">

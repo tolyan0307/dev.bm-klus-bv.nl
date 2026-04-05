@@ -60,7 +60,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 transition-all duration-500 ${mobileOpen ? "z-[60]" : "z-50"} ${
           scrolled || mobileOpen
             ? "bg-white/75 shadow-[0_1px_3px_rgba(0,0,0,0.06)] backdrop-blur-2xl backdrop-saturate-[1.6]"
             : "bg-transparent"
@@ -388,7 +388,7 @@ export default function Navbar() {
 
       {/* M4: Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-[55] bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
           mobileOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={closeMobile}

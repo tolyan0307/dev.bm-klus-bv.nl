@@ -83,7 +83,7 @@ export default function SubsidieVergunningSection() {
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
                     <Icon className="h-5 w-5 text-primary" />
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex min-w-0 flex-wrap items-center gap-2">
                     <h3 className="text-base font-bold text-foreground">{block.label}</h3>
                     <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${block.badge.cls}`}>
                       {block.badge.text}
@@ -135,7 +135,7 @@ export default function SubsidieVergunningSection() {
         </p>
         <Link
           href="/gevelisolatie/subsidie-vergunning/"
-          className="inline-flex shrink-0 items-center gap-2 rounded-full border border-primary/30 bg-background px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
+          className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
         >
           Uitgebreide checklist bekijken
           <ArrowRight className="h-4 w-4" />
