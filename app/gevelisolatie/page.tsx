@@ -234,6 +234,36 @@ export default function GevelisolatiePage() {
           </div>
         </div>
 
+        {/* ── Werkgebied / regio: interne links naar locatiepagina's (anti-cannibalisatie) ── */}
+        <div className="below-fold">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav aria-label="Werkgebied" className="rounded-2xl border border-border bg-card px-6 py-8 sm:px-8">
+              <h2 className="text-xl font-bold text-foreground sm:text-2xl">In welke regio&apos;s werken wij?</h2>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                Wij verzorgen buitengevelisolatie in Zuid-Holland en omgeving. Bekijk onze aanpak per stad:
+              </p>
+              <ul className="mt-5 flex flex-wrap gap-3">
+                {[
+                  { slug: "rotterdam", label: "Rotterdam" },
+                  { slug: "den-haag", label: "Den Haag" },
+                  { slug: "leiden", label: "Leiden" },
+                  { slug: "dordrecht", label: "Dordrecht" },
+                  { slug: "breda", label: "Breda" },
+                ].map((c) => (
+                  <li key={c.slug}>
+                    <Link
+                      href={`/gevelisolatie/${c.slug}/`}
+                      className="inline-flex rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+                    >
+                      gevelisolatie in {c.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </div>
+
         <div className="below-fold">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <MeerInformatieSection />
