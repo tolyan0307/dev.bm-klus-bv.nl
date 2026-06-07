@@ -86,6 +86,37 @@ const priceNoteLines = [
   "Dakoverstekken, dagkanten en aansluitdetails kunnen meerwerk geven; exacte prijs volgt na opname.",
 ]
 
+/* Structured price table — herbruikt dezelfde richtprijzen als priceCards (geen nieuwe prijzen) */
+const priceTableRows = [
+  {
+    type: "ETICS + pleisterafwerking",
+    detail: "stuc, sierpleister of crepi",
+    range: "€110 – €200/m²",
+    geschikt: "Meest gekozen; gladde of structuurafwerking met breed kleurenpalet",
+    note: "Onderhoudsarm en snel te verwerken; exacte prijs afhankelijk van RC-waarde, dikte en details.",
+  },
+  {
+    type: "ETICS + steenstrips",
+    detail: "authentieke baksteenlook",
+    range: "€200 – €280/m²",
+    geschikt: "Premium optie waar een authentieke baksteenlook gewenst is",
+    note: "Zwaarder en arbeidsintensiever; prijs sterk situatie-afhankelijk.",
+  },
+]
+
+const inbegrepen = [
+  "Opname en inmeting op locatie",
+  "Arbeid & materiaal (isolatieplaten, wapeningslaag, afwerklaag)",
+  "Detaillering: dagkanten, hoekprofielen en plint",
+  "Eindcontrole en oplevering",
+]
+
+const nietInbegrepen = [
+  "Steigerhuur en -montage",
+  "Uitgebreider herstelwerk aan het bestaande metselwerk",
+  "Complexe detaillering / meerwerk",
+]
+
 const kostenfactoren = [
   { groep: "Materiaal & systeem", items: ["Type isolatiemateriaal (EPS, PIR of minerale wol)", "Isolatiedikte en gewenste RC-waarde"] },
   { groep: "Afwerking",           items: ["Gekozen afwerklaag: stuc, sierpleister, crepi of steenstrips", "Kleur en structuurkeuze"] },
@@ -510,6 +541,65 @@ export default function KostenGevelisolatiePage() {
                       </p>
                     ))}
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ── Prijstabel per m² (structured, additief — zelfde richtprijzen als hierboven) ── */}
+            <div className="mt-8 overflow-hidden rounded-2xl border border-border/50 bg-card shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
+              <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse text-left text-sm">
+                  <caption className="sr-only">
+                    Richtprijzen buitengevelisolatie (ETICS) per m² per afwerkingstype
+                  </caption>
+                  <thead>
+                    <tr className="border-b border-border/50 bg-secondary/20">
+                      <th scope="col" className="px-4 py-3 font-bold text-foreground sm:px-6">Afwerkingstype</th>
+                      <th scope="col" className="px-4 py-3 font-bold text-foreground sm:px-6">Richtprijs per m²</th>
+                      <th scope="col" className="hidden px-4 py-3 font-bold text-foreground sm:table-cell sm:px-6">Wanneer geschikt</th>
+                      <th scope="col" className="hidden px-4 py-3 font-bold text-foreground lg:table-cell lg:px-6">Opmerking</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {priceTableRows.map((row) => (
+                      <tr key={row.type} className="border-b border-border/30 align-top last:border-0">
+                        <th scope="row" className="px-4 py-4 text-left font-normal sm:px-6">
+                          <span className="font-semibold text-foreground">{row.type}</span>
+                          <span className="mt-0.5 block text-xs text-muted-foreground">{row.detail}</span>
+                        </th>
+                        <td className="whitespace-nowrap px-4 py-4 font-black tracking-tight text-primary sm:px-6">{row.range}</td>
+                        <td className="hidden px-4 py-4 leading-snug text-foreground/75 sm:table-cell sm:px-6">{row.geschikt}</td>
+                        <td className="hidden px-4 py-4 text-xs leading-relaxed text-muted-foreground lg:table-cell lg:px-6">{row.note}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Inbegrepen / niet standaard inbegrepen */}
+              <div className="grid gap-px border-t border-border/50 bg-border/40 sm:grid-cols-2">
+                <div className="bg-card p-5 sm:p-6">
+                  <p className="mb-3 text-xs font-bold uppercase tracking-wider text-foreground">Inbegrepen</p>
+                  <ul className="space-y-2">
+                    {inbegrepen.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-foreground/75">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" strokeWidth={3} />
+                        <span className="leading-snug">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-card p-5 sm:p-6">
+                  <p className="mb-3 text-xs font-bold uppercase tracking-wider text-muted-foreground">Niet standaard inbegrepen</p>
+                  <ul className="space-y-2">
+                    {nietInbegrepen.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span aria-hidden="true" className="mt-1.5 h-1.5 w-2 shrink-0 rounded-full bg-muted-foreground/40" />
+                        <span className="leading-snug">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
