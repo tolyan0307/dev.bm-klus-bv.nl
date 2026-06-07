@@ -1,0 +1,362 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 1.0,
+      "costMicros": "2151423",
+      "allConversions": 1.0,
+      "impressions": "10"
+    },
+    "segments": {
+      "hour": 0
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "463161",
+      "allConversions": 0.0,
+      "impressions": "9"
+    },
+    "segments": {
+      "hour": 1
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "segments": {
+      "hour": 2
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "8"
+    },
+    "segments": {
+      "hour": 3
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "920000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "segments": {
+      "hour": 4
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "6070000",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "segments": {
+      "hour": 5
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0.0,
+      "costMicros": "9351842",
+      "allConversions": 0.0,
+      "impressions": "33"
+    },
+    "segments": {
+      "hour": 6
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0.0,
+      "costMicros": "10479391",
+      "allConversions": 0.0,
+      "impressions": "62"
+    },
+    "segments": {
+      "hour": 7
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0.0,
+      "costMicros": "26636757",
+      "allConversions": 3.0,
+      "impressions": "81"
+    },
+    "segments": {
+      "hour": 8
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "10",
+      "conversions": 1.0,
+      "costMicros": "17367713",
+      "allConversions": 2.0,
+      "impressions": "84"
+    },
+    "segments": {
+      "hour": 9
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "17",
+      "conversions": 1.0,
+      "costMicros": "22932156",
+      "allConversions": 3.0,
+      "impressions": "73"
+    },
+    "segments": {
+      "hour": 10
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0.0,
+      "costMicros": "21232210",
+      "allConversions": 0.0,
+      "impressions": "78"
+    },
+    "segments": {
+      "hour": 11
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 0.0,
+      "costMicros": "8483073",
+      "allConversions": 0.0,
+      "impressions": "74"
+    },
+    "segments": {
+      "hour": 12
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0.0,
+      "costMicros": "7740000",
+      "allConversions": 0.0,
+      "impressions": "72"
+    },
+    "segments": {
+      "hour": 13
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 1.0,
+      "costMicros": "27046918",
+      "allConversions": 1.0,
+      "impressions": "103"
+    },
+    "segments": {
+      "hour": 14
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0.0,
+      "costMicros": "6414546",
+      "allConversions": 0.0,
+      "impressions": "58"
+    },
+    "segments": {
+      "hour": 15
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "10",
+      "conversions": 0.0,
+      "costMicros": "13220443",
+      "allConversions": 0.0,
+      "impressions": "83"
+    },
+    "segments": {
+      "hour": 16
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0.0,
+      "costMicros": "9748375",
+      "allConversions": 0.0,
+      "impressions": "107"
+    },
+    "segments": {
+      "hour": 17
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0.0,
+      "costMicros": "10953374",
+      "allConversions": 0.0,
+      "impressions": "58"
+    },
+    "segments": {
+      "hour": 18
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 1.0,
+      "costMicros": "9046170",
+      "allConversions": 1.0,
+      "impressions": "53"
+    },
+    "segments": {
+      "hour": 19
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0.0,
+      "costMicros": "18055929",
+      "allConversions": 0.0,
+      "impressions": "88"
+    },
+    "segments": {
+      "hour": 20
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0.0,
+      "costMicros": "4765003",
+      "allConversions": 0.0,
+      "impressions": "44"
+    },
+    "segments": {
+      "hour": 21
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0.0,
+      "costMicros": "3865022",
+      "allConversions": 0.0,
+      "impressions": "34"
+    },
+    "segments": {
+      "hour": 22
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "574676",
+      "allConversions": 0.0,
+      "impressions": "11"
+    },
+    "segments": {
+      "hour": 23
+    }
+  }
+]

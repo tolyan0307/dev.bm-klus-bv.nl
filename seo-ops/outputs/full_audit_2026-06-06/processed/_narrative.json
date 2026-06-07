@@ -1,0 +1,1395 @@
+{
+  "gsc_windows": {
+    "healthy": {
+      "pages": {
+        "clicks": 49,
+        "impressions": 5182,
+        "rows": 59
+      },
+      "queries_total": 266,
+      "clicks": 49,
+      "impressions": 5182
+    },
+    "bad": {
+      "pages": {
+        "clicks": 14,
+        "impressions": 3218,
+        "rows": 43
+      },
+      "queries_total": 192,
+      "clicks": 14,
+      "impressions": 3218
+    },
+    "recovery": {
+      "pages": {
+        "clicks": 55,
+        "impressions": 4731,
+        "rows": 46
+      },
+      "queries_total": 218,
+      "clicks": 55,
+      "impressions": 4731
+    },
+    "postcutover": {
+      "pages": {
+        "clicks": 205,
+        "impressions": 20539,
+        "rows": 82
+      },
+      "queries_total": 533,
+      "clicks": 205,
+      "impressions": 20539
+    }
+  },
+  "gsc_top_lost_pages_healthy_to_bad": [
+    {
+      "page": "https://bm-klus-bv.nl/",
+      "clicks_a": 24,
+      "clicks_b": 3,
+      "d_clicks": -21,
+      "impr_a": 571,
+      "impr_b": 449,
+      "d_impr": -122
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/kosten/",
+      "clicks_a": 5,
+      "clicks_b": 0,
+      "d_clicks": -5,
+      "impr_a": 344,
+      "impr_b": 201,
+      "d_impr": -143
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/rc-waarde-dikte/",
+      "clicks_a": 2,
+      "clicks_b": 0,
+      "d_clicks": -2,
+      "impr_a": 33,
+      "impr_b": 41,
+      "d_impr": 8
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/bergen-op-zoom/",
+      "clicks_a": 2,
+      "clicks_b": 0,
+      "d_clicks": -2,
+      "impr_a": 18,
+      "impr_b": 2,
+      "d_impr": -16
+    },
+    {
+      "page": "https://bm-klus-bv.nl/onze-werken/",
+      "clicks_a": 3,
+      "clicks_b": 1,
+      "d_clicks": -2,
+      "impr_a": 147,
+      "impr_b": 62,
+      "d_impr": -85
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/",
+      "clicks_a": 6,
+      "clicks_b": 5,
+      "d_clicks": -1,
+      "impr_a": 450,
+      "impr_b": 300,
+      "d_impr": -150
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/",
+      "clicks_a": 1,
+      "clicks_b": 0,
+      "d_clicks": -1,
+      "impr_a": 90,
+      "impr_b": 107,
+      "d_impr": 17
+    },
+    {
+      "page": "https://bm-klus-bv.nl/buiten-stucwerk/",
+      "clicks_a": 1,
+      "clicks_b": 0,
+      "d_clicks": -1,
+      "impr_a": 905,
+      "impr_b": 460,
+      "d_impr": -445
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
+      "clicks_a": 1,
+      "clicks_b": 0,
+      "d_clicks": -1,
+      "impr_a": 23,
+      "impr_b": 0,
+      "d_impr": -23
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/vlaardingen/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 2,
+      "impr_b": 1,
+      "d_impr": -1
+    },
+    {
+      "page": "https://bm-klus-bv.nl/images/projects/vlaardingen-gevelisolatie-10cm-na-01.w1600.webp",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 3,
+      "impr_b": 0,
+      "d_impr": -3
+    },
+    {
+      "page": "https://bm-klus-bv.nl/vlaardingen-gevelisolatie-6cm-sierpleister-15mm/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 0,
+      "impr_b": 2,
+      "d_impr": 2
+    },
+    {
+      "page": "https://bm-klus-bv.nl/images/projects/halsteren-buitenstucwerk-na-01.w828.webp",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 2,
+      "impr_b": 0,
+      "d_impr": -2
+    },
+    {
+      "page": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 19,
+      "impr_b": 23,
+      "d_impr": 4
+    },
+    {
+      "page": "https://bm-klus-bv.nl/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 0,
+      "impr_b": 6,
+      "d_impr": 6
+    }
+  ],
+  "gsc_top_lost_pages_healthy_to_recovery": [
+    {
+      "page": "https://bm-klus-bv.nl/onze-werken/",
+      "clicks_a": 3,
+      "clicks_b": 0,
+      "d_clicks": -3,
+      "impr_a": 147,
+      "impr_b": 129,
+      "d_impr": -18
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/kosten/",
+      "clicks_a": 5,
+      "clicks_b": 3,
+      "d_clicks": -2,
+      "impr_a": 344,
+      "impr_b": 216,
+      "d_impr": -128
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/rc-waarde-dikte/",
+      "clicks_a": 2,
+      "clicks_b": 1,
+      "d_clicks": -1,
+      "impr_a": 33,
+      "impr_b": 91,
+      "d_impr": 58
+    },
+    {
+      "page": "https://bm-klus-bv.nl/over-ons/",
+      "clicks_a": 1,
+      "clicks_b": 0,
+      "d_clicks": -1,
+      "impr_a": 88,
+      "impr_b": 98,
+      "d_impr": 10
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/bergen-op-zoom/",
+      "clicks_a": 2,
+      "clicks_b": 1,
+      "d_clicks": -1,
+      "impr_a": 18,
+      "impr_b": 2,
+      "d_impr": -16
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevel-schilderen/",
+      "clicks_a": 1,
+      "clicks_b": 0,
+      "d_clicks": -1,
+      "impr_a": 220,
+      "impr_b": 375,
+      "d_impr": 155
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
+      "clicks_a": 1,
+      "clicks_b": 0,
+      "d_clicks": -1,
+      "impr_a": 23,
+      "impr_b": 1,
+      "d_impr": -22
+    },
+    {
+      "page": "https://bm-klus-bv.nl/images/projects/vlaardingen-gevelisolatie-10cm-na-01.w1600.webp",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 3,
+      "impr_b": 0,
+      "d_impr": -3
+    },
+    {
+      "page": "https://bm-klus-bv.nl/images/projects/halsteren-buitenstucwerk-na-01.w828.webp",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 2,
+      "impr_b": 0,
+      "d_impr": -2
+    },
+    {
+      "page": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 19,
+      "impr_b": 7,
+      "d_impr": -12
+    },
+    {
+      "page": "https://bm-klus-bv.nl/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 0,
+      "impr_b": 9,
+      "d_impr": 9
+    },
+    {
+      "page": "https://bm-klus-bv.nl/sierpleister/",
+      "clicks_a": 1,
+      "clicks_b": 1,
+      "d_clicks": 0,
+      "impr_a": 201,
+      "impr_b": 182,
+      "d_impr": -19
+    },
+    {
+      "page": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 19,
+      "impr_b": 26,
+      "d_impr": 7
+    },
+    {
+      "page": "https://bm-klus-bv.nl/muren-stucen/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 1010,
+      "impr_b": 1211,
+      "d_impr": 201
+    },
+    {
+      "page": "https://bm-klus-bv.nl/gevelisolatie/dordrecht/",
+      "clicks_a": 0,
+      "clicks_b": 0,
+      "d_clicks": 0,
+      "impr_a": 3,
+      "impr_b": 4,
+      "d_impr": 1
+    }
+  ],
+  "gsc_top_lost_queries_by_impr_healthy_to_recovery": [
+    {
+      "query": "gevelisolatie breda",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 150,
+      "impr_b": 0,
+      "d_impr": -150,
+      "pos_a": 19.1,
+      "pos_b": 0
+    },
+    {
+      "query": "gevelisolatie zoetermeer",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 182,
+      "impr_b": 36,
+      "d_impr": -146,
+      "pos_a": 20.0,
+      "pos_b": 21.8
+    },
+    {
+      "query": "gevelisolatie rotterdam",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 157,
+      "impr_b": 57,
+      "d_impr": -100,
+      "pos_a": 9.7,
+      "pos_b": 17.9
+    },
+    {
+      "query": "buitengevelisolatie",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 84,
+      "impr_b": 23,
+      "d_impr": -61,
+      "pos_a": 38.9,
+      "pos_b": 44.5
+    },
+    {
+      "query": "gevelisolatie almere",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 53,
+      "impr_b": 2,
+      "d_impr": -51,
+      "pos_a": 36.6,
+      "pos_b": 41.5
+    },
+    {
+      "query": "gevelisolatie kosten",
+      "cl_a": 1,
+      "cl_b": 0,
+      "d_clicks": -1,
+      "impr_a": 76,
+      "impr_b": 32,
+      "d_impr": -44,
+      "pos_a": 21.6,
+      "pos_b": 52.9
+    },
+    {
+      "query": "kosten gevelisolatie",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 60,
+      "impr_b": 18,
+      "d_impr": -42,
+      "pos_a": 12.1,
+      "pos_b": 48.8
+    },
+    {
+      "query": "isolatie maassluis",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 39,
+      "impr_b": 0,
+      "d_impr": -39,
+      "pos_a": 23.0,
+      "pos_b": 0
+    },
+    {
+      "query": "gevelisolatie leiden",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 64,
+      "impr_b": 28,
+      "d_impr": -36,
+      "pos_a": 10,
+      "pos_b": 7.1
+    },
+    {
+      "query": "buitenmuur stucen nadelen",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 57,
+      "impr_b": 22,
+      "d_impr": -35,
+      "pos_a": 3.3,
+      "pos_b": 15.1
+    },
+    {
+      "query": "isoleren maassluis",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 35,
+      "impr_b": 0,
+      "d_impr": -35,
+      "pos_a": 36.9,
+      "pos_b": 0
+    },
+    {
+      "query": "buitenstucwerk",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 45,
+      "impr_b": 11,
+      "d_impr": -34,
+      "pos_a": 32.6,
+      "pos_b": 32.8
+    },
+    {
+      "query": "behangklare wanden afwerken",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 30,
+      "impr_b": 0,
+      "d_impr": -30,
+      "pos_a": 64.7,
+      "pos_b": 0
+    },
+    {
+      "query": "buitenmuur stucen",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 41,
+      "impr_b": 11,
+      "d_impr": -30,
+      "pos_a": 7.7,
+      "pos_b": 16
+    },
+    {
+      "query": "sausklaar stucen nieuwbouw",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 63,
+      "impr_b": 33,
+      "d_impr": -30,
+      "pos_a": 26.0,
+      "pos_b": 24.7
+    },
+    {
+      "query": "klussenbedrijf 010 rotterdam vlaardingen",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 32,
+      "impr_b": 4,
+      "d_impr": -28,
+      "pos_a": 35.2,
+      "pos_b": 37
+    },
+    {
+      "query": "buiten stucwerk",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 26,
+      "impr_b": 2,
+      "d_impr": -24,
+      "pos_a": 25.2,
+      "pos_b": 44
+    },
+    {
+      "query": "behangklaar muren",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 29,
+      "impr_b": 7,
+      "d_impr": -22,
+      "pos_a": 69.7,
+      "pos_b": 48.6
+    },
+    {
+      "query": "klussenbedrijf 010 vlaardingen rotterdam",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 22,
+      "impr_b": 0,
+      "d_impr": -22,
+      "pos_a": 33.9,
+      "pos_b": 0
+    },
+    {
+      "query": "gevelisolatie gouda",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 26,
+      "impr_b": 5,
+      "d_impr": -21,
+      "pos_a": 9.1,
+      "pos_b": 17.8
+    },
+    {
+      "query": "schildersbedrijf halsteren",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 24,
+      "impr_b": 4,
+      "d_impr": -20,
+      "pos_a": 28.6,
+      "pos_b": 27.2
+    },
+    {
+      "query": "geluidsisolatie zoetermeer",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 19,
+      "impr_b": 0,
+      "d_impr": -19,
+      "pos_a": 48.3,
+      "pos_b": 0
+    },
+    {
+      "query": "strakke nieuwbouw muren",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 24,
+      "impr_b": 7,
+      "d_impr": -17,
+      "pos_a": 38.9,
+      "pos_b": 43.7
+    },
+    {
+      "query": "specialistisch stucwerk in rotterdam",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 16,
+      "impr_b": 0,
+      "d_impr": -16,
+      "pos_a": 30.4,
+      "pos_b": 0
+    },
+    {
+      "query": "gevel stucen",
+      "cl_a": 0,
+      "cl_b": 2,
+      "d_clicks": 2,
+      "impr_a": 68,
+      "impr_b": 52,
+      "d_impr": -16,
+      "pos_a": 3.4,
+      "pos_b": 3.7
+    }
+  ],
+  "ga4_keyevents_timeline": [
+    {
+      "date": "20260316",
+      "Direct": 1,
+      "Paid Search": 1,
+      "total": 2
+    },
+    {
+      "date": "20260317",
+      "Organic Search": 2,
+      "total": 2
+    },
+    {
+      "date": "20260321",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260325",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260326",
+      "Organic Search": 2,
+      "total": 2
+    },
+    {
+      "date": "20260327",
+      "Organic Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260330",
+      "Direct": 1,
+      "total": 1
+    },
+    {
+      "date": "20260404",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260408",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260409",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260410",
+      "Paid Search": 1,
+      "Unassigned": 1,
+      "total": 2
+    },
+    {
+      "date": "20260414",
+      "Organic Search": 4,
+      "total": 4
+    },
+    {
+      "date": "20260415",
+      "Direct": 1,
+      "total": 1
+    },
+    {
+      "date": "20260416",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260417",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260420",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260423",
+      "Organic Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260505",
+      "Organic Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260510",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260515",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260518",
+      "Direct": 1,
+      "total": 1
+    },
+    {
+      "date": "20260522",
+      "Organic Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260524",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260527",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260601",
+      "Paid Search": 1,
+      "total": 1
+    },
+    {
+      "date": "20260602",
+      "Paid Search": 2,
+      "total": 2
+    }
+  ],
+  "ads_daily_timeline": [
+    {
+      "date": "2026-03-15",
+      "impr": 58,
+      "clicks": 13,
+      "cost": 16.74,
+      "conv": 0.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-03-16",
+      "impr": 77,
+      "clicks": 6,
+      "cost": 7.86,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-17",
+      "impr": 46,
+      "clicks": 4,
+      "cost": 7.77,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-18",
+      "impr": 86,
+      "clicks": 10,
+      "cost": 19.51,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-19",
+      "impr": 34,
+      "clicks": 6,
+      "cost": 22.33,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-20",
+      "impr": 86,
+      "clicks": 7,
+      "cost": 17.5,
+      "conv": 0.0,
+      "all_conv": 7.0
+    },
+    {
+      "date": "2026-03-21",
+      "impr": 51,
+      "clicks": 7,
+      "cost": 8.48,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-03-22",
+      "impr": 126,
+      "clicks": 13,
+      "cost": 15.18,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-23",
+      "impr": 134,
+      "clicks": 13,
+      "cost": 19.68,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-24",
+      "impr": 77,
+      "clicks": 13,
+      "cost": 18.07,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-25",
+      "impr": 33,
+      "clicks": 8,
+      "cost": 16.09,
+      "conv": 0.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-03-26",
+      "impr": 105,
+      "clicks": 14,
+      "cost": 15.49,
+      "conv": 1.0,
+      "all_conv": 10.0
+    },
+    {
+      "date": "2026-03-27",
+      "impr": 51,
+      "clicks": 7,
+      "cost": 15.11,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-28",
+      "impr": 20,
+      "clicks": 5,
+      "cost": 9.64,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-29",
+      "impr": 55,
+      "clicks": 15,
+      "cost": 15.07,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-30",
+      "impr": 25,
+      "clicks": 4,
+      "cost": 2.75,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-03-31",
+      "impr": 38,
+      "clicks": 2,
+      "cost": 1.97,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-01",
+      "impr": 101,
+      "clicks": 7,
+      "cost": 15.4,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-02",
+      "impr": 133,
+      "clicks": 11,
+      "cost": 11.16,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-03",
+      "impr": 47,
+      "clicks": 7,
+      "cost": 12.9,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-04",
+      "impr": 57,
+      "clicks": 11,
+      "cost": 12.47,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-04-05",
+      "impr": 34,
+      "clicks": 6,
+      "cost": 8.92,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-06",
+      "impr": 57,
+      "clicks": 8,
+      "cost": 5.32,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-07",
+      "impr": 94,
+      "clicks": 11,
+      "cost": 16.36,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-08",
+      "impr": 45,
+      "clicks": 7,
+      "cost": 10.86,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-04-09",
+      "impr": 57,
+      "clicks": 12,
+      "cost": 9.77,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-04-10",
+      "impr": 31,
+      "clicks": 6,
+      "cost": 8.58,
+      "conv": 1.0,
+      "all_conv": 3.0
+    },
+    {
+      "date": "2026-04-11",
+      "impr": 21,
+      "clicks": 2,
+      "cost": 2.05,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-12",
+      "impr": 31,
+      "clicks": 6,
+      "cost": 7.24,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-13",
+      "impr": 88,
+      "clicks": 15,
+      "cost": 20.26,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-14",
+      "impr": 54,
+      "clicks": 8,
+      "cost": 6.78,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-15",
+      "impr": 100,
+      "clicks": 8,
+      "cost": 7.86,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-16",
+      "impr": 142,
+      "clicks": 20,
+      "cost": 17.97,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-04-17",
+      "impr": 34,
+      "clicks": 5,
+      "cost": 8.58,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-18",
+      "impr": 35,
+      "clicks": 8,
+      "cost": 8.61,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-19",
+      "impr": 53,
+      "clicks": 8,
+      "cost": 9.45,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-04-20",
+      "impr": 123,
+      "clicks": 15,
+      "cost": 16.22,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-21",
+      "impr": 14,
+      "clicks": 3,
+      "cost": 10.17,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-22",
+      "impr": 88,
+      "clicks": 10,
+      "cost": 7.43,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-23",
+      "impr": 89,
+      "clicks": 9,
+      "cost": 9.85,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-04-24",
+      "impr": 32,
+      "clicks": 7,
+      "cost": 8.51,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-25",
+      "impr": 57,
+      "clicks": 6,
+      "cost": 5.62,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-26",
+      "impr": 79,
+      "clicks": 11,
+      "cost": 10.66,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-27",
+      "impr": 28,
+      "clicks": 5,
+      "cost": 7.67,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-28",
+      "impr": 15,
+      "clicks": 5,
+      "cost": 9.89,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-29",
+      "impr": 77,
+      "clicks": 4,
+      "cost": 4.72,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-04-30",
+      "impr": 70,
+      "clicks": 7,
+      "cost": 10.05,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-01",
+      "impr": 41,
+      "clicks": 5,
+      "cost": 3.16,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-02",
+      "impr": 80,
+      "clicks": 6,
+      "cost": 10.49,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-03",
+      "impr": 76,
+      "clicks": 14,
+      "cost": 19.45,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-04",
+      "impr": 65,
+      "clicks": 13,
+      "cost": 15.95,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-05",
+      "impr": 93,
+      "clicks": 14,
+      "cost": 13.1,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-06",
+      "impr": 47,
+      "clicks": 10,
+      "cost": 15.63,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-07",
+      "impr": 98,
+      "clicks": 8,
+      "cost": 8.62,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-08",
+      "impr": 104,
+      "clicks": 16,
+      "cost": 22.85,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-09",
+      "impr": 42,
+      "clicks": 6,
+      "cost": 14.69,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-10",
+      "impr": 29,
+      "clicks": 4,
+      "cost": 6.03,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-05-11",
+      "impr": 43,
+      "clicks": 4,
+      "cost": 6.28,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-12",
+      "impr": 59,
+      "clicks": 7,
+      "cost": 7.51,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-13",
+      "impr": 100,
+      "clicks": 9,
+      "cost": 10.4,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-14",
+      "impr": 50,
+      "clicks": 7,
+      "cost": 9.2,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-15",
+      "impr": 84,
+      "clicks": 11,
+      "cost": 9.91,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-16",
+      "impr": 40,
+      "clicks": 7,
+      "cost": 6.06,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-17",
+      "impr": 25,
+      "clicks": 3,
+      "cost": 1.88,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-18",
+      "impr": 167,
+      "clicks": 13,
+      "cost": 17.82,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-19",
+      "impr": 62,
+      "clicks": 6,
+      "cost": 13.41,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-20",
+      "impr": 56,
+      "clicks": 9,
+      "cost": 11.32,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-21",
+      "impr": 111,
+      "clicks": 6,
+      "cost": 11.92,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-22",
+      "impr": 30,
+      "clicks": 5,
+      "cost": 13.42,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-23",
+      "impr": 12,
+      "clicks": 3,
+      "cost": 6.68,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-24",
+      "impr": 25,
+      "clicks": 8,
+      "cost": 10.12,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-05-25",
+      "impr": 30,
+      "clicks": 2,
+      "cost": 2.21,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-26",
+      "impr": 36,
+      "clicks": 4,
+      "cost": 4.05,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-27",
+      "impr": 59,
+      "clicks": 12,
+      "cost": 17.31,
+      "conv": 1.0,
+      "all_conv": 1.0
+    },
+    {
+      "date": "2026-05-28",
+      "impr": 10,
+      "clicks": 3,
+      "cost": 9.13,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-29",
+      "impr": 21,
+      "clicks": 4,
+      "cost": 8.8,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-30",
+      "impr": 14,
+      "clicks": 1,
+      "cost": 3.14,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-05-31",
+      "impr": 47,
+      "clicks": 7,
+      "cost": 5.48,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-06-01",
+      "impr": 21,
+      "clicks": 3,
+      "cost": 9.63,
+      "conv": 1.0,
+      "all_conv": 3.0
+    },
+    {
+      "date": "2026-06-02",
+      "impr": 37,
+      "clicks": 5,
+      "cost": 10.11,
+      "conv": 1.0,
+      "all_conv": 2.0
+    },
+    {
+      "date": "2026-06-03",
+      "impr": 19,
+      "clicks": 5,
+      "cost": 9.76,
+      "conv": 0.0,
+      "all_conv": 2.0
+    },
+    {
+      "date": "2026-06-04",
+      "impr": 5,
+      "clicks": 3,
+      "cost": 9.89,
+      "conv": 0.0,
+      "all_conv": 0.0
+    },
+    {
+      "date": "2026-06-05",
+      "impr": 39,
+      "clicks": 5,
+      "cost": 6.03,
+      "conv": 0.0,
+      "all_conv": 0.0
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+# market_terms_nl_v1.yaml
+# Dutch market terminology for BM Klus BV services.
+# PURPOSE: Give the operator domain-specific language understanding
+#          for query classification, content writing, and intent analysis.
+# SOURCE: keyword_master_v3, GSC query data, site content.
+# UPDATE: When new service terms emerge in GSC data or keyword research.
+
+# ── Gevelisolatie cluster ───────────────────────────────────────
+
+gevelisolatie:
+  head_terms:
+    - gevelisolatie                    # 2400 pl.vol — primary
+    - buitengevelisolatie              # 480 pl.vol — strong synonym
+    - buitenmuur isoleren              # 1000 pl.vol — action-oriented
+    - isoleren van buitenmuren         # 1000 pl.vol — passive form
+    - gevelisolatie buitenkant         # variant
+
+  secondary_terms:
+    - gevelisolatie kosten             # commercial intent
+    - kosten gevelisolatie             # reversed word order (common in NL)
+    - gevelisolatie prijs per m2       # specific pricing query
+    - gevelisolatie afwerking          # finish layer
+    - gevelisolatie materialen         # material choice
+    - gevelisolatie rc waarde          # technical spec
+    - gevelisolatie subsidie           # financial incentive
+    - gevelisolatie steenstrips        # specific finish type
+
+  geo_variants:
+    pattern: "gevelisolatie [city]"
+    examples:
+      - gevelisolatie rotterdam        # 1369 impr — highest volume
+      - gevelisolatie almere           # 828 impr
+      - gevelisolatie zoetermeer       # 440 impr
+      - gevelisolatie leiden           # 337 impr
+      - gevelisolatie den haag         # 246 impr
+
+  material_terms:
+    - EPS                              # expanded polystyrene — cheapest
+    - PIR                              # polyisocyanurate — best Rc per cm
+    - minerale wol                     # mineral wool — fire-resistant
+    - resolschuim                      # resol foam — thin, high Rc
+    - steenstrips                      # stone veneer finish
+    - ETICS                            # industry system name (External Thermal Insulation Composite System)
+
+  ambiguous_terms:
+    - gevelisolatie:
+        note: "Can mean interior OR exterior — in BM Klus context always exterior (ETICS)"
+    - isolatie:
+        note: "Too generic — could be floor, roof, wall. Only use with 'gevel' or 'buitenmuur' qualifier"
+    - na-isolatie:
+        note: "Retrofitting insulation to existing building — relevant but not a BM Klus primary term"
+
+# ── Stucwerk cluster ────────────────────────────────────────────
+
+stucwerk:
+  head_terms:
+    - muren stucen                     # interior focus
+    - buiten stucwerk                  # exterior focus
+    - buitenmuur stucen                # action-oriented exterior
+    - gevel stucen                     # exterior synonym
+
+  interior_specific:
+    - sausklaar                        # paint-ready finish (smooth)
+    - behangklaar                      # wallpaper-ready finish
+    - glad stucwerk                    # smooth plasterwork
+    - binnenmuren stucen               # explicitly interior
+    - egaliseren                       # leveling walls
+
+  exterior_specific:
+    - cementpleister                   # cement plaster
+    - betonstuc                        # concrete plaster look
+    - buitenstucwerk                   # compound form
+    - gevelstuc                        # facade plaster
+
+  # CRITICAL: interior/exterior distinction
+  interior_vs_exterior:
+    note: >
+      Dutch users search "muren stucen" for INTERIOR and "buiten stucwerk" or
+      "gevel stucen" for EXTERIOR. The word "stucen" alone is ambiguous.
+      "Sausklaar" and "behangklaar" are always interior.
+      "Cementpleister" and "betonstuc" are always exterior.
+
+# ── Sierpleister cluster ───────────────────────────────────────
+
+sierpleister:
+  head_terms:
+    - sierpleister                     # decorative plaster
+    - spachtelputz                     # German-origin term, widely used in NL
+    - crepi                            # textured render finish
+
+  secondary_terms:
+    - gevelpleister                    # facade plaster (broader)
+    - korrelgrootte                    # grain size (1.5–3mm typical)
+    - sierpleister buiten              # explicit exterior
+
+  often_confused_with:
+    - buiten stucwerk:
+        note: "Sierpleister IS a type of buiten stucwerk, but with decorative texture. Users sometimes search for one meaning the other."
+    - gevel schilderen:
+        note: "Painting and plastering are different. Sierpleister is applied as a paste, not painted."
+
+# ── Gevel schilderen cluster ───────────────────────────────────
+
+gevel_schilderen:
+  head_terms:
+    - gevel schilderen                 # primary
+    - buitenmuur verven                # synonym (painting vs more formal 'schilderen')
+    - gevel verven                     # shorter variant
+
+  secondary_terms:
+    - silicaatverf                     # silicate paint (breathable)
+    - siloxaanverf                     # siloxane paint
+    - dampopen verf                    # vapor-permeable paint
+    - KEIM                             # premium brand, used as generic term
+
+  do_not_over_target:
+    - professioneel schilderen:
+        note: "Very broad — includes interior, furniture, etc. Not specific enough for geo landing page"
+    - schilder rotterdam:
+        note: "Generic painter query — unlikely to convert for facade-specific service"
+
+# ── Cross-service terms ────────────────────────────────────────
+
+cross_service:
+  geo_intent_markers:
+    - "[service] rotterdam"            # primary service area
+    - "[service] regio rotterdam"      # explicit region
+    - "[service] zuid-holland"         # province level (low intent)
+    - "in de buurt"                    # "nearby" — strong local intent
+    - "[city]" as standalone qualifier # only meaningful with service term
+
+  commercial_intent_markers:
+    - kosten                           # cost
+    - prijs                            # price
+    - prijs per m2                     # price per sqm — very high intent
+    - offerte                          # quote — highest intent
+    - tarieven                         # rates
+    - richtprijs                       # guide price
+
+  informational_intent_markers:
+    - wat is                           # what is
+    - hoe werkt                        # how does it work
+    - zelf doen                        # DIY
+    - nadelen                          # disadvantages
+    - voordelen                        # advantages
+    - verschil tussen                  # difference between
+    note: "These queries have low conversion probability but high content potential for cluster pages"
+
+  terms_not_bm_klus_services:
+    - dakisolatie                      # roof insulation — NOT offered
+    - vloerisolatie                    # floor insulation — NOT offered
+    - spouwmuurisolatie                # cavity wall insulation — NOT offered (ETICS is external)
+    - binnenisolatie                   # interior insulation — NOT offered
+    - kozijnen                         # window frames — NOT offered
+    - dakgoot                          # gutters — NOT offered
+    note: "These terms appear in search data but are NOT BM Klus services. Negative keyword candidates for PPC."

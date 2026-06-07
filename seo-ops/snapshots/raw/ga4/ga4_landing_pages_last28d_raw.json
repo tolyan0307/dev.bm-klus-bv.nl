@@ -1,0 +1,485 @@
+{
+  "property_id": "428253147",
+  "date_range": {
+    "start": "2026-03-27",
+    "end": "2026-04-23"
+  },
+  "channel_data": {
+    "property_id": "428253147",
+    "date_range": {
+      "start": "2026-03-27",
+      "end": "2026-04-23"
+    },
+    "dimensions": [
+      "landingPagePlusQueryString",
+      "sessionDefaultChannelGroup"
+    ],
+    "metrics": [
+      "sessions",
+      "engagedSessions",
+      "engagementRate",
+      "averageSessionDuration"
+    ],
+    "total_rows": 51,
+    "rows": [
+      {
+        "landingPagePlusQueryString": "/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "73",
+        "engagedSessions": "42",
+        "engagementRate": "0.57534246575342463",
+        "averageSessionDuration": "311.15887143835613"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/",
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "69",
+        "engagedSessions": "42",
+        "engagementRate": "0.60869565217391308",
+        "averageSessionDuration": "138.74309628985509"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "37",
+        "engagedSessions": "24",
+        "engagementRate": "0.64864864864864868",
+        "averageSessionDuration": "199.56166713513511"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "32",
+        "engagedSessions": "19",
+        "engagementRate": "0.59375",
+        "averageSessionDuration": "739.0398184375"
+      },
+      {
+        "landingPagePlusQueryString": "(not set)",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "30",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/kosten/",
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "16",
+        "engagedSessions": "9",
+        "engagementRate": "0.5625",
+        "averageSessionDuration": "133.6424235625"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/kosten/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "15",
+        "engagedSessions": "8",
+        "engagementRate": "0.53333333333333333",
+        "averageSessionDuration": "192.95610920000001"
+      },
+      {
+        "landingPagePlusQueryString": "/buiten-stucwerk/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "14",
+        "engagedSessions": "3",
+        "engagementRate": "0.21428571428571427",
+        "averageSessionDuration": "8.3955458571428565"
+      },
+      {
+        "landingPagePlusQueryString": "/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "12",
+        "engagedSessions": "12",
+        "engagementRate": "1",
+        "averageSessionDuration": "190.39791424999999"
+      },
+      {
+        "landingPagePlusQueryString": "(not set)",
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "10",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "9",
+        "engagedSessions": "8",
+        "engagementRate": "0.88888888888888884",
+        "averageSessionDuration": "336.39325866666667"
+      },
+      {
+        "landingPagePlusQueryString": "/sierpleister/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "7",
+        "engagedSessions": "2",
+        "engagementRate": "0.2857142857142857",
+        "averageSessionDuration": "26.269577571428574"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/rc-waarde-dikte/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "5",
+        "engagedSessions": "4",
+        "engagementRate": "0.8",
+        "averageSessionDuration": "52.7069938"
+      },
+      {
+        "landingPagePlusQueryString": "/over-ons/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "5",
+        "engagedSessions": "4",
+        "engagementRate": "0.8",
+        "averageSessionDuration": "703.7184596"
+      },
+      {
+        "landingPagePlusQueryString": "/gevel-schilderen/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "4",
+        "engagedSessions": "3",
+        "engagementRate": "0.75",
+        "averageSessionDuration": "795.393181"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/materialen/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "4",
+        "engagedSessions": "2",
+        "engagementRate": "0.5",
+        "averageSessionDuration": "177.12542475"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "3",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "3",
+        "engagedSessions": "2",
+        "engagementRate": "0.66666666666666663",
+        "averageSessionDuration": "694.41402033333327"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/den-haag/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "3",
+        "engagedSessions": "3",
+        "engagementRate": "1",
+        "averageSessionDuration": "226.44829533333333"
+      },
+      {
+        "landingPagePlusQueryString": "(not set)",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "2",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "3.385103"
+      },
+      {
+        "landingPagePlusQueryString": "/",
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "2",
+        "engagedSessions": "2",
+        "engagementRate": "1",
+        "averageSessionDuration": "1252.0006765"
+      },
+      {
+        "landingPagePlusQueryString": "/contact/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "2",
+        "engagedSessions": "1",
+        "engagementRate": "0.5",
+        "averageSessionDuration": "754.8706035"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/subsidie-vergunning/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "2",
+        "engagedSessions": "1",
+        "engagementRate": "0.5",
+        "averageSessionDuration": "4.4567015"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "2",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "2",
+        "engagedSessions": "2",
+        "engagementRate": "1",
+        "averageSessionDuration": "55.0689705"
+      },
+      {
+        "landingPagePlusQueryString": "(not set)",
+        "sessionDefaultChannelGroup": "Unassigned",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/",
+        "sessionDefaultChannelGroup": "Referral",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/",
+        "sessionDefaultChannelGroup": "Unassigned",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "48.265925"
+      },
+      {
+        "landingPagePlusQueryString": "/?gtm_debug=1775230122461",
+        "sessionDefaultChannelGroup": "Referral",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "4.70352"
+      },
+      {
+        "landingPagePlusQueryString": "/?gtm_debug=1775233878924",
+        "sessionDefaultChannelGroup": "Referral",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "1652.632382"
+      },
+      {
+        "landingPagePlusQueryString": "/contact/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0.000857"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "sessionDefaultChannelGroup": "Cross-network",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "175.266165"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "159.801425"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/bergen-op-zoom/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "112.609262"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/dordrecht/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "328.021838"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/gouda/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "175.759834"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/hellevoetsluis/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "9.266125"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/leiden/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "607.888438"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/roosendaal/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "100.065346"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/rotterdam/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "386.47942"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/subsidie-vergunning/",
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "189.772686"
+      },
+      {
+        "landingPagePlusQueryString": "/muren-stucen/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "2.710157"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "40.89733"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "660.123981"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/",
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "42.602304"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "20.611697"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "40.144362"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/",
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/sierpleister/",
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1",
+        "averageSessionDuration": "834.992839"
+      },
+      {
+        "landingPagePlusQueryString": "/sierpleister/",
+        "sessionDefaultChannelGroup": "Organic Social",
+        "sessions": "1",
+        "engagedSessions": "0",
+        "engagementRate": "0",
+        "averageSessionDuration": "0.877294"
+      }
+    ]
+  },
+  "key_events_data": {
+    "property_id": "428253147",
+    "date_range": {
+      "start": "2026-03-27",
+      "end": "2026-04-23"
+    },
+    "key_events_tracked": [
+      "Contact_Form_Site",
+      "Phone",
+      "Whatsapp"
+    ],
+    "total_rows": 7,
+    "rows": [
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/",
+        "eventName": "Contact_Form_Site",
+        "eventCount": "3"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "eventName": "Contact_Form_Site",
+        "eventCount": "2"
+      },
+      {
+        "landingPagePlusQueryString": "/",
+        "eventName": "Phone",
+        "eventCount": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/",
+        "eventName": "Whatsapp",
+        "eventCount": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "eventName": "Whatsapp",
+        "eventCount": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/roosendaal/",
+        "eventName": "Contact_Form_Site",
+        "eventCount": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/",
+        "eventName": "Contact_Form_Site",
+        "eventCount": "1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "https://bm-klus-bv.nl/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-05-08T09:03:39Z",
+    "user_canonical": "https://bm-klus-bv.nl/",
+    "google_canonical": "https://bm-klus-bv.nl/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": [
+      "https://bm-klus-bv.nl/gevelisolatie-woning-klaaswaal-6cm-sierpleister/",
+      "https://bm-klus-bv.nl/diensten/"
+    ],
+    "sitemap": [
+      "https://bm-klus-bv.nl/sitemap.xml"
+    ]
+  },
+  "https://bm-klus-bv.nl/gevelisolatie/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-05-06T21:56:10Z",
+    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/",
+    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": null,
+    "sitemap": null
+  },
+  "https://bm-klus-bv.nl/gevelisolatie/kosten/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-04-30T06:48:24Z",
+    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/kosten/",
+    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/kosten/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": null,
+    "sitemap": null
+  },
+  "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-04-30T06:48:20Z",
+    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/",
+    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": null,
+    "sitemap": null
+  },
+  "https://bm-klus-bv.nl/buiten-stucwerk/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-05-02T23:52:01Z",
+    "user_canonical": "https://bm-klus-bv.nl/buiten-stucwerk/",
+    "google_canonical": "https://bm-klus-bv.nl/buiten-stucwerk/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": [
+      "https://bm-klus-bv.nl/gevelisolatie-woning-katwijk-6cm-sierpleister/",
+      "https://bm-klus-bv.nl/page-sitemap.xml"
+    ],
+    "sitemap": null
+  },
+  "https://bm-klus-bv.nl/gevel-schilderen/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-05-07T11:46:23Z",
+    "user_canonical": "https://bm-klus-bv.nl/gevel-schilderen/",
+    "google_canonical": "https://bm-klus-bv.nl/gevel-schilderen/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": [
+      "https://bm-klus-bv.nl/onze-werken/"
+    ],
+    "sitemap": null
+  },
+  "https://bm-klus-bv.nl/sierpleister/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-05-07T09:55:44Z",
+    "user_canonical": "https://bm-klus-bv.nl/sierpleister/",
+    "google_canonical": "https://bm-klus-bv.nl/sierpleister/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": [
+      "https://bm-klus-bv.nl/gevelisolatie-vrijstaande-woning-nieuw-beijerland-zuidzijdsedijk/"
+    ],
+    "sitemap": null
+  },
+  "https://bm-klus-bv.nl/contact/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-05-06T23:42:13Z",
+    "user_canonical": "https://bm-klus-bv.nl/contact/",
+    "google_canonical": "https://bm-klus-bv.nl/contact/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": [
+      "https://bm-klus-bv.nl/gevelisolatie-woning-klaaswaal-6cm-sierpleister/",
+      "https://bm-klus-bv.nl/gevelisolatie/"
+    ],
+    "sitemap": null
+  },
+  "https://bm-klus-bv.nl/over-ons/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-05-04T00:11:27Z",
+    "user_canonical": "https://bm-klus-bv.nl/over-ons/",
+    "google_canonical": "https://bm-klus-bv.nl/over-ons/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": [
+      "https://bm-klus-bv.nl/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/"
+    ],
+    "sitemap": null
+  },
+  "https://bm-klus-bv.nl/onze-werken/": {
+    "verdict": "PASS",
+    "coverage": "Ingediend en geïndexeerd",
+    "crawled": "2026-05-04T01:44:00Z",
+    "user_canonical": "https://bm-klus-bv.nl/onze-werken/",
+    "google_canonical": "https://bm-klus-bv.nl/onze-werken/",
+    "page_fetch": "SUCCESSFUL",
+    "robots_txt": "ALLOWED",
+    "indexing_state": "INDEXING_ALLOWED",
+    "crawled_as": "MOBILE",
+    "referring_urls": [
+      "https://bm-klus-bv.nl/gevelisolatie-woning-vlaardingen-10cm-sierpleister/",
+      "https://bm-klus-bv.nl/object3/"
+    ],
+    "sitemap": [
+      "https://bm-klus-bv.nl/sitemap.xml"
+    ]
+  }
+}

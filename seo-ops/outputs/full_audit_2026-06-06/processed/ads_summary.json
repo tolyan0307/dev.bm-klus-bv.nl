@@ -1,0 +1,49 @@
+{
+  "healthy": {
+    "clicks": "161",
+    "searchAbsoluteTopImpressionShare": 0.0999,
+    "searchBudgetLostImpressionShare": 0.09989443124835048,
+    "searchImpressionShare": 0.11836896278701504,
+    "searchRankLostImpressionShare": 0.7817366059646345,
+    "searchTopImpressionShare": 0.10130589631974674,
+    "conversionsValue": 0.0,
+    "conversions": 6.0,
+    "costMicros": "183361617",
+    "costPerConversion": 30560269.5,
+    "ctr": 0.13927335640138408,
+    "allConversions": 8.0,
+    "averageCpc": 1138892.0310559007,
+    "impressions": "1156"
+  },
+  "bad": {
+    "clicks": "131",
+    "searchAbsoluteTopImpressionShare": 0.0999,
+    "searchBudgetLostImpressionShare": 0.06695508858673259,
+    "searchImpressionShare": 0.15677791512154923,
+    "searchRankLostImpressionShare": 0.7762669962917181,
+    "searchTopImpressionShare": 0.13244078269824922,
+    "conversionsValue": 0.0,
+    "conversions": 0.0,
+    "costMicros": "166381349",
+    "ctr": 0.13617463617463618,
+    "allConversions": 0.0,
+    "averageCpc": 1270086.6335877862,
+    "impressions": "962"
+  },
+  "recovery": {
+    "clicks": "156",
+    "searchAbsoluteTopImpressionShare": 0.0999,
+    "searchBudgetLostImpressionShare": 0.23174096123130536,
+    "searchImpressionShare": 0.1497023377377668,
+    "searchRankLostImpressionShare": 0.6185567010309279,
+    "searchTopImpressionShare": 0.12489120974760662,
+    "conversionsValue": 0.0,
+    "conversions": 5.0,
+    "costMicros": "237518182",
+    "costPerConversion": 47503636.4,
+    "ctr": 0.12672623883021933,
+    "allConversions": 10.0,
+    "averageCpc": 1522552.4487179487,
+    "impressions": "1231"
+  }
+}

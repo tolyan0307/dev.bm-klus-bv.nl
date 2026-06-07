@@ -1,0 +1,321 @@
+{
+  "windows": {
+    "healthy": {
+      "pages": {
+        "clicks": 49,
+        "impressions": 5182,
+        "rows": 59
+      },
+      "queries_total": 266,
+      "clicks": 49,
+      "impressions": 5182
+    },
+    "bad": {
+      "pages": {
+        "clicks": 14,
+        "impressions": 3218,
+        "rows": 43
+      },
+      "queries_total": 192,
+      "clicks": 14,
+      "impressions": 3218
+    },
+    "recovery": {
+      "pages": {
+        "clicks": 55,
+        "impressions": 4731,
+        "rows": 46
+      },
+      "queries_total": 218,
+      "clicks": 55,
+      "impressions": 4731
+    },
+    "postcutover": {
+      "pages": {
+        "clicks": 205,
+        "impressions": 20539,
+        "rows": 82
+      },
+      "queries_total": 533,
+      "clicks": 205,
+      "impressions": 20539
+    }
+  },
+  "top_lost_queries_by_impr": [
+    {
+      "query": "gevelisolatie breda",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 150,
+      "impr_b": 0,
+      "d_impr": -150,
+      "pos_a": 19.1,
+      "pos_b": 0
+    },
+    {
+      "query": "gevelisolatie zoetermeer",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 182,
+      "impr_b": 36,
+      "d_impr": -146,
+      "pos_a": 20.0,
+      "pos_b": 21.8
+    },
+    {
+      "query": "gevelisolatie rotterdam",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 157,
+      "impr_b": 57,
+      "d_impr": -100,
+      "pos_a": 9.7,
+      "pos_b": 17.9
+    },
+    {
+      "query": "buitengevelisolatie",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 84,
+      "impr_b": 23,
+      "d_impr": -61,
+      "pos_a": 38.9,
+      "pos_b": 44.5
+    },
+    {
+      "query": "gevelisolatie almere",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 53,
+      "impr_b": 2,
+      "d_impr": -51,
+      "pos_a": 36.6,
+      "pos_b": 41.5
+    },
+    {
+      "query": "gevelisolatie kosten",
+      "cl_a": 1,
+      "cl_b": 0,
+      "d_clicks": -1,
+      "impr_a": 76,
+      "impr_b": 32,
+      "d_impr": -44,
+      "pos_a": 21.6,
+      "pos_b": 52.9
+    },
+    {
+      "query": "kosten gevelisolatie",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 60,
+      "impr_b": 18,
+      "d_impr": -42,
+      "pos_a": 12.1,
+      "pos_b": 48.8
+    },
+    {
+      "query": "isolatie maassluis",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 39,
+      "impr_b": 0,
+      "d_impr": -39,
+      "pos_a": 23.0,
+      "pos_b": 0
+    },
+    {
+      "query": "gevelisolatie leiden",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 64,
+      "impr_b": 28,
+      "d_impr": -36,
+      "pos_a": 10,
+      "pos_b": 7.1
+    },
+    {
+      "query": "buitenmuur stucen nadelen",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 57,
+      "impr_b": 22,
+      "d_impr": -35,
+      "pos_a": 3.3,
+      "pos_b": 15.1
+    },
+    {
+      "query": "isoleren maassluis",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 35,
+      "impr_b": 0,
+      "d_impr": -35,
+      "pos_a": 36.9,
+      "pos_b": 0
+    },
+    {
+      "query": "buitenstucwerk",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 45,
+      "impr_b": 11,
+      "d_impr": -34,
+      "pos_a": 32.6,
+      "pos_b": 32.8
+    },
+    {
+      "query": "behangklare wanden afwerken",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 30,
+      "impr_b": 0,
+      "d_impr": -30,
+      "pos_a": 64.7,
+      "pos_b": 0
+    },
+    {
+      "query": "buitenmuur stucen",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 41,
+      "impr_b": 11,
+      "d_impr": -30,
+      "pos_a": 7.7,
+      "pos_b": 16
+    },
+    {
+      "query": "sausklaar stucen nieuwbouw",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 63,
+      "impr_b": 33,
+      "d_impr": -30,
+      "pos_a": 26.0,
+      "pos_b": 24.7
+    },
+    {
+      "query": "klussenbedrijf 010 rotterdam vlaardingen",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 32,
+      "impr_b": 4,
+      "d_impr": -28,
+      "pos_a": 35.2,
+      "pos_b": 37
+    },
+    {
+      "query": "buiten stucwerk",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 26,
+      "impr_b": 2,
+      "d_impr": -24,
+      "pos_a": 25.2,
+      "pos_b": 44
+    },
+    {
+      "query": "behangklaar muren",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 29,
+      "impr_b": 7,
+      "d_impr": -22,
+      "pos_a": 69.7,
+      "pos_b": 48.6
+    },
+    {
+      "query": "klussenbedrijf 010 vlaardingen rotterdam",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 22,
+      "impr_b": 0,
+      "d_impr": -22,
+      "pos_a": 33.9,
+      "pos_b": 0
+    },
+    {
+      "query": "gevelisolatie gouda",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 26,
+      "impr_b": 5,
+      "d_impr": -21,
+      "pos_a": 9.1,
+      "pos_b": 17.8
+    },
+    {
+      "query": "schildersbedrijf halsteren",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 24,
+      "impr_b": 4,
+      "d_impr": -20,
+      "pos_a": 28.6,
+      "pos_b": 27.2
+    },
+    {
+      "query": "geluidsisolatie zoetermeer",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 19,
+      "impr_b": 0,
+      "d_impr": -19,
+      "pos_a": 48.3,
+      "pos_b": 0
+    },
+    {
+      "query": "strakke nieuwbouw muren",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 24,
+      "impr_b": 7,
+      "d_impr": -17,
+      "pos_a": 38.9,
+      "pos_b": 43.7
+    },
+    {
+      "query": "specialistisch stucwerk in rotterdam",
+      "cl_a": 0,
+      "cl_b": 0,
+      "d_clicks": 0,
+      "impr_a": 16,
+      "impr_b": 0,
+      "d_impr": -16,
+      "pos_a": 30.4,
+      "pos_b": 0
+    },
+    {
+      "query": "gevel stucen",
+      "cl_a": 0,
+      "cl_b": 2,
+      "d_clicks": 2,
+      "impr_a": 68,
+      "impr_b": 52,
+      "d_impr": -16,
+      "pos_a": 3.4,
+      "pos_b": 3.7
+    }
+  ]
+}

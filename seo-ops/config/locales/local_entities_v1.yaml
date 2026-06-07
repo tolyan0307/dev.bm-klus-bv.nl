@@ -1,0 +1,77 @@
+# Local Entities v1
+# Purpose: Describe local business entities for GBP / local SEO audit context.
+# This config helps the analyzer describe local context consistently.
+# Does NOT contain secrets, account IDs, or API credentials.
+#
+# Version: 1.0
+# Date: 2026-04-08
+
+version: "1.0"
+
+purpose: >
+  Provide structured local business context for the local_seo_gbp_audit_v1
+  workflow. Used by the analyzer to generate consistent local entity descriptions,
+  service area context, and local intent signal matching.
+
+primary_business_entity:
+  brand_name: "BM Klus BV"
+  legal_name: "BM Klus BV"
+  primary_country: "NL"
+  primary_region: "Zuid-Holland"
+  primary_city: "Rotterdam"
+  service_area_description: >
+    Rotterdam en omgeving (Zuid-Holland). Werkgebied omvat Rotterdam,
+    Den Haag, Dordrecht, Schiedam, Vlaardingen, Capelle aan den IJssel,
+    Ridderkerk, Barendrecht, en omliggende gemeenten.
+  business_type_context: "Bouwbedrijf / aannemer gespecialiseerd in gevelisolatie en renovatie"
+  website: "https://bm-klus-bv.nl"
+  primary_service: "gevelisolatie"
+
+service_region_context:
+  country_code: "NL"
+  language_code: "nl"
+  region_level: "province"
+  region_name: "Zuid-Holland"
+  city_pages_deployed: true
+  city_count: 21
+  notes: >
+    City pages rollout completed (21/21, 2026-03).
+    All city pages target "{service} {city}" patterns.
+
+core_location_terms:
+  - "rotterdam"
+  - "den haag"
+  - "dordrecht"
+  - "schiedam"
+  - "vlaardingen"
+  - "capelle aan den ijssel"
+  - "ridderkerk"
+  - "barendrecht"
+  - "zuid-holland"
+
+local_intent_signals:
+  geo_modifiers:
+    - "in de buurt"
+    - "bij mij in de buurt"
+    - "in {city}"
+    - "regio"
+    - "omgeving"
+  service_modifiers:
+    - "aannemer"
+    - "bedrijf"
+    - "specialist"
+    - "offerte"
+    - "kosten"
+    - "prijzen"
+  gbp_related:
+    - "reviews"
+    - "beoordelingen"
+    - "openingstijden"
+    - "adres"
+    - "contact"
+    - "routebeschrijving"
+
+notes:
+  - "This config is for audit context only — it does not drive page generation"
+  - "City list should stay in sync with lib/content/gevelisolatie-locations.ts"
+  - "Do not add API credentials or GBP account IDs here"

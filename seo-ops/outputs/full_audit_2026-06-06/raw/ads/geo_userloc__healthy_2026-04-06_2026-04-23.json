@@ -1,0 +1,4391 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "649919",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010318",
+      "geoTargetRegion": "geoTargetConstants/20760"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010352",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010363",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010366",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010370",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010373",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010382",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010388",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010393",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010396",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "430000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010470",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010473",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "3830000",
+      "impressions": "12"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010474",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010479",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "1083900",
+      "impressions": "10"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010481",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010483",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010487",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010489",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010494",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010495",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "330000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010496",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010497",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010502",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "785869",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010506",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010507",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "881854",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010510",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1300000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010511",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010513",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "879462",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010515",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "378886",
+      "impressions": "8"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010516",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "245001",
+      "impressions": "10"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010517",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "490000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010521",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010525",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010526",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "550000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010527",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010530",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010532",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010534",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "730000",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010539",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "2110000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010540",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "12"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010542",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "21",
+      "conversions": 0.0,
+      "costMicros": "23637920",
+      "impressions": "130"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010543",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "640000",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010547",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010548",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "620000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010552",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1650000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010554",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1019437",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010555",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010557",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010558",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0.0,
+      "costMicros": "2890000",
+      "impressions": "11"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010561",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "525463",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010562",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "409246",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010565",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010566",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "2134601",
+      "impressions": "9"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010567",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "6120000",
+      "impressions": "6"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010570",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1960000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010574",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010575",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010576",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010580",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010581",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010584",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010585",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "680000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010586",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010589",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010591",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010597",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010625",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010627",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010629",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1640000",
+      "impressions": "6"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010634",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "333997",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010637",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010638",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1150000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010639",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010642",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010644",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010646",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010650",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010651",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 1.0,
+      "costMicros": "1470000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010655",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0.0,
+      "costMicros": "6114077",
+      "impressions": "32"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010659",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010660",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010664",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "3240000",
+      "impressions": "17"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010665",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010667",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "650000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010670",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010673",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1790000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010674",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010685",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "4530000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010686",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "780000",
+      "impressions": "11"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010693",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "2150000",
+      "impressions": "11"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010695",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010697",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010698",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010702",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0.0,
+      "costMicros": "3652119",
+      "impressions": "12"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010704",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "3020000",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010705",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010706",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "724215",
+      "impressions": "8"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010709",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "10"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010714",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "417650",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010715",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010716",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010717",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010722",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "310000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010723",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "849463",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010724",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010725",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010726",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "900000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010731",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010733",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "296831",
+      "impressions": "9"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010734",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1570000",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010737",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010740",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010741",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010742",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010743",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "430000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010744",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010745",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "469771",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010746",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "1091191",
+      "impressions": "10"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010747",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010748",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 1.0,
+      "costMicros": "5096994",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010749",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "480000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010750",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 1.0,
+      "costMicros": "21349285",
+      "impressions": "158"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010751",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0.0,
+      "costMicros": "5888077",
+      "impressions": "68"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010752",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "2600000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010753",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010755",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "1006431",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010757",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010758",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1309387",
+      "impressions": "11"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010762",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "2620000",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010763",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010764",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010765",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "2980000",
+      "impressions": "6"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010766",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "460000",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010768",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "1300000",
+      "impressions": "8"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010769",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "1485341",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1010773",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "460000",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050761",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050778",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050785",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050788",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050809",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050815",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050817",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "3656601",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050819",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050820",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050832",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "489575",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050843",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 1.0,
+      "costMicros": "3029480",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050860",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "529164",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050873",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050880",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050883",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050888",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050898",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050905",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050911",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050922",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050932",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050934",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1390000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050942",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050943",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050970",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "1039036",
+      "impressions": "8"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050976",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1174439",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050988",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050991",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 1.0,
+      "costMicros": "1000000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050992",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9050998",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051004",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051009",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051014",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051021",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1520000",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051024",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051031",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051038",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051044",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051053",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051060",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051066",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051068",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051070",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051071",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051086",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051093",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051096",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051098",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051111",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051113",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051116",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "670000",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051119",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051123",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051124",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051137",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051152",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051157",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051159",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051164",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1240000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051166",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051192",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051193",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051199",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051239",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "3911438",
+      "impressions": "13"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051244",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051245",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051253",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9063427",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "322932",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9063440",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9067997",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068002",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "723082",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068007",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068018",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068044",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068052",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068054",
+      "geoTargetRegion": "geoTargetConstants/20769"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068087",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068865",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068866",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "570000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068871",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9068899",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9189999",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9190987",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "2120000",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9214310",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9214795",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "916158",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9217396",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9221242",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "574613",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9222958",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "3210000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9229051",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9229144",
+      "geoTargetRegion": "geoTargetConstants/20762"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "277414",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9230735",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9240004",
+      "geoTargetRegion": "geoTargetConstants/20770"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "860000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9240117",
+      "geoTargetRegion": "geoTargetConstants/20768"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9256284",
+      "geoTargetRegion": "geoTargetConstants/20766"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9260825",
+      "geoTargetRegion": "geoTargetConstants/20765"
+    },
+    "userLocationView": {
+      "resourceName": "customers/5902256023/userLocationViews/2528~true"
+    }
+  }
+]

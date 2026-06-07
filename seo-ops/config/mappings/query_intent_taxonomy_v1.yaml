@@ -1,0 +1,278 @@
+# Query Intent Taxonomy v1
+#
+# Deterministic classification taxonomy for query intelligence review.
+# Used by: run_query_intelligence_review_v1.py
+# Contract: contracts/query_intelligence_rules_v1.md
+#
+# Version: 1.0
+# Date: 2026-04-08
+# Market: NL (nl-NL)
+
+_meta:
+  version: "1.0"
+  date: "2026-04-08"
+  purpose: "Deterministic query intent classification for BM Klus query intelligence"
+  market: "NL"
+  language: "nl"
+  notes:
+    - "Classification is heuristic — not ground truth"
+    - "Signals are checked in priority order; first match wins"
+    - "Expand modifier lists conservatively as market evidence grows"
+
+# ─── Intent classes ───
+intent_classes:
+
+  transactional_service:
+    description: "User wants to hire a service provider or request a quote"
+    typical_signals:
+      - "offerte"
+      - "kosten"
+      - "prijs"
+      - "tarieven"
+      - "richtprijs"
+      - "prijs per m2"
+      - "laten doen"
+      - "inhuren"
+      - "bedrijf"
+      - "specialist"
+      - "aannemer"
+    bmklus_role: "Direct service demand — core money query"
+    seo_fit: high
+    ppc_fit: high
+    notes: "Strongest commercial signal. Page should have CTA + pricing context."
+
+  local_service:
+    description: "User seeks a service provider in a specific location"
+    typical_signals:
+      - "{service} {city}"
+      - "{service} regio"
+      - "{service} in de buurt"
+      - "{service} zuid-holland"
+      - "in {city}"
+      - "{city} standalone when combined with service context"
+    bmklus_role: "Local demand — city/region money query"
+    seo_fit: high
+    ppc_fit: high
+    notes: "Geo-qualified intent. Maps to city pages or service+city landing pages."
+
+  commercial_comparison:
+    description: "User compares options, materials, methods, or providers"
+    typical_signals:
+      - "verschil tussen"
+      - "vs"
+      - "of"
+      - "vergelijken"
+      - "beste"
+      - "welke"
+      - "voordelen"
+      - "nadelen"
+      - "ervaringen"
+      - "review"
+    bmklus_role: "Comparison/consideration — supports decision toward service"
+    seo_fit: medium
+    ppc_fit: low
+    notes: "User is evaluating. Content should position BM Klus as trusted option."
+
+  informational_support:
+    description: "User seeks knowledge about a topic without immediate purchase intent"
+    typical_signals:
+      - "wat is"
+      - "hoe werkt"
+      - "hoe"
+      - "waarom"
+      - "zelf doen"
+      - "uitleg"
+      - "informatie"
+      - "stappen"
+      - "handleiding"
+      - "gids"
+      - "tips"
+    bmklus_role: "Educational/awareness — supports authority, weak direct conversion"
+    seo_fit: medium
+    ppc_fit: low
+    notes: "Informational queries build topical authority. Low PPC value."
+
+  navigational_brand:
+    description: "User looks for a specific brand or company"
+    typical_signals:
+      - "bm klus"
+      - "bm-klus"
+      - "bmklus"
+      - "bm klus bv"
+    bmklus_role: "Brand navigation — defend, do not over-invest"
+    seo_fit: low
+    ppc_fit: low
+    notes: "Brand queries should resolve to homepage. Low effort needed if ranking."
+
+  unclear_mixed:
+    description: "Intent is ambiguous or query is too generic to classify confidently"
+    typical_signals: []
+    bmklus_role: "Unknown — requires manual review or more context"
+    seo_fit: unknown
+    ppc_fit: unknown
+    notes: "Fallback bucket. Do not act on these without further evidence."
+
+# ─── Signal modifiers (used for rule-based classification) ───
+signal_modifiers:
+
+  local_modifiers:
+    description: "Geo-intent signals (Dutch cities and regions relevant to BM Klus)"
+    terms:
+      - "rotterdam"
+      - "almere"
+      - "zoetermeer"
+      - "leiden"
+      - "den haag"
+      - "delft"
+      - "dordrecht"
+      - "schiedam"
+      - "vlaardingen"
+      - "capelle"
+      - "ridderkerk"
+      - "barendrecht"
+      - "spijkenisse"
+      - "gouda"
+      - "alphen"
+      - "berkel"
+      - "pijnacker"
+      - "maassluis"
+      - "hendrik-ido-ambacht"
+      - "zwijndrecht"
+      - "papendrecht"
+      - "regio rotterdam"
+      - "zuid-holland"
+      - "in de buurt"
+
+  commercial_modifiers:
+    description: "Transactional/commercial intent signals"
+    terms:
+      - "kosten"
+      - "prijs"
+      - "prijs per m2"
+      - "offerte"
+      - "tarieven"
+      - "richtprijs"
+      - "laten doen"
+      - "inhuren"
+      - "bedrijf"
+      - "specialist"
+      - "aannemer"
+      - "subsidie"
+
+  comparison_modifiers:
+    description: "Comparison/evaluation intent signals"
+    terms:
+      - "verschil tussen"
+      - "vs"
+      - "vergelijken"
+      - "beste"
+      - "welke"
+      - "voordelen"
+      - "nadelen"
+      - "ervaringen"
+      - "review"
+
+  informational_modifiers:
+    description: "Informational/educational intent signals"
+    terms:
+      - "wat is"
+      - "hoe werkt"
+      - "hoe"
+      - "waarom"
+      - "zelf doen"
+      - "uitleg"
+      - "informatie"
+      - "tips"
+      - "handleiding"
+
+  brand_modifiers:
+    description: "Brand/navigational intent signals"
+    terms:
+      - "bm klus"
+      - "bm-klus"
+      - "bmklus"
+      - "bm klus bv"
+
+  service_terms:
+    description: "BM Klus core service keywords (from service_taxonomy_v1)"
+    terms:
+      - "gevelisolatie"
+      - "buitengevelisolatie"
+      - "buitenmuur isoleren"
+      - "isoleren van buitenmuren"
+      - "buiten stucwerk"
+      - "buitenstucwerk"
+      - "gevel stucen"
+      - "buitenmuur stucen"
+      - "sierpleister"
+      - "spachtelputz"
+      - "crepi"
+      - "gevelpleister"
+      - "muren stucen"
+      - "binnenmuren stucen"
+      - "glad stucwerk"
+      - "gevel schilderen"
+      - "buitenmuur verven"
+      - "gevel verven"
+
+  noise_terms:
+    description: "Terms that indicate query is NOT a BM Klus service"
+    terms:
+      - "dakisolatie"
+      - "vloerisolatie"
+      - "spouwmuurisolatie"
+      - "binnenisolatie"
+      - "kozijnen"
+      - "dakgoot"
+      - "cv ketel"
+      - "zonnepanelen"
+      - "warmtepomp"
+
+# ─── Classification priority order ───
+classification_priority:
+  description: "Check in this order; first match wins"
+  order:
+    - brand_modifiers      # navigational_brand
+    - noise_terms          # low_fit (exclude early)
+    - local_modifiers      # local_service (if combined with service term)
+    - commercial_modifiers # transactional_service
+    - comparison_modifiers # commercial_comparison
+    - informational_modifiers  # informational_support
+    - service_terms        # transactional_service (default for bare service terms)
+  fallback: "unclear_mixed"
+
+# ─── Action buckets (output categories) ───
+action_buckets:
+
+  core_service_opportunity:
+    description: "High-fit transactional service queries with SEO/PPC potential"
+    intent_match: ["transactional_service"]
+    bmklus_relevance: high
+
+  local_service_opportunity:
+    description: "Geo-qualified service queries for city/region targeting"
+    intent_match: ["local_service"]
+    bmklus_relevance: high
+
+  comparison_support_opportunity:
+    description: "Comparison/evaluation queries that can support conversion funnel"
+    intent_match: ["commercial_comparison"]
+    bmklus_relevance: medium
+
+  page_fit_mismatch:
+    description: "Queries where current ranking page does not match query intent"
+    intent_match: ["any"]
+    bmklus_relevance: high
+    notes: "Detected by comparing query intent vs page role in page_inventory"
+
+  paid_negative_or_containment_candidate:
+    description: "Queries that should be excluded from paid campaigns or contained"
+    intent_match: ["informational_support", "unclear_mixed"]
+    bmklus_relevance: low
+    notes: "Potential PPC negative keywords or low-ROI ad spend"
+
+  low_signal_or_unclear:
+    description: "Queries with insufficient signal for confident classification"
+    intent_match: ["unclear_mixed"]
+    bmklus_relevance: unknown
+    notes: "Manual review recommended before action"

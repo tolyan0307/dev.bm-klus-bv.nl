@@ -1,0 +1,25 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "status": "ENABLED",
+      "advertisingChannelType": "SEARCH",
+      "networkSettings": {
+        "targetGoogleSearch": true,
+        "targetSearchNetwork": false,
+        "targetContentNetwork": false,
+        "targetPartnerSearchNetwork": false
+      },
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "NL | Gevelisolatie | Search",
+      "id": "23271040037",
+      "biddingStrategySystemStatus": "ENABLED"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/5902256023/campaignBudgets/15149562427",
+      "deliveryMethod": "STANDARD",
+      "amountMicros": "9000000",
+      "explicitlyShared": false
+    }
+  }
+]

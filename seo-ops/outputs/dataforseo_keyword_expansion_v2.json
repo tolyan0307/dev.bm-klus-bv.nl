@@ -1,0 +1,455 @@
+{
+  "_meta": {
+    "workflow": "dataforseo_keyword_expansion_v2",
+    "generated": "2026-04-08T21:18:58+00:00",
+    "endpoint": "POST /v3/dataforseo_labs/google/related_keywords/live",
+    "api_cost_reported": 0.08689999999999999,
+    "seeds_count": 8
+  },
+  "service_areas": {
+    "buiten-stucwerk": {
+      "existing_page": "/buiten-stucwerk/",
+      "seeds_used": [
+        "buitenmuur stucen",
+        "gevel stucen"
+      ],
+      "total_returned": 16,
+      "bucket_counts": {
+        "already_tracked": 10,
+        "new_relevant": 2,
+        "new_low_volume": 4
+      },
+      "new_relevant": [
+        {
+          "keyword": "buitenmuur stucen waarmee",
+          "volume": 70,
+          "cpc": 0.2,
+          "intent": "commercial",
+          "seeds": [
+            "buitenmuur stucen"
+          ]
+        },
+        {
+          "keyword": "buitengevel stucen prijs m2",
+          "volume": 70,
+          "cpc": 1.26,
+          "intent": "commercial",
+          "seeds": [
+            "gevel stucen"
+          ]
+        }
+      ],
+      "new_adjacent_high_vol": [],
+      "new_low_volume": [
+        {
+          "keyword": "huis stucen buitenkant vergunning",
+          "volume": 40,
+          "cpc": null,
+          "intent": "commercial"
+        },
+        {
+          "keyword": "buitenmuur stucen betonlook",
+          "volume": 20,
+          "cpc": null,
+          "intent": "commercial"
+        },
+        {
+          "keyword": "buitenmuur stucen wit",
+          "volume": 10,
+          "cpc": 0.3,
+          "intent": "commercial"
+        },
+        {
+          "keyword": "buitengevel stucen materiaal",
+          "volume": 10,
+          "cpc": null,
+          "intent": "commercial"
+        }
+      ],
+      "off_service": [],
+      "already_tracked_count": 10
+    },
+    "sierpleister": {
+      "existing_page": "/sierpleister/",
+      "seeds_used": [
+        "sierpleister",
+        "spachtelputz"
+      ],
+      "total_returned": 18,
+      "bucket_counts": {
+        "new_relevant": 15,
+        "already_tracked": 2,
+        "new_low_volume": 1
+      },
+      "new_relevant": [
+        {
+          "keyword": "spachtelputz",
+          "volume": 6600,
+          "cpc": 0.93,
+          "intent": "commercial",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "spachtelputz verwijderen",
+          "volume": 880,
+          "cpc": 0.81,
+          "intent": "commercial",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "spachtelputz glad maken",
+          "volume": 720,
+          "cpc": 0.79,
+          "intent": "transactional",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "spachtelputz repareren",
+          "volume": 720,
+          "cpc": 0.43,
+          "intent": "commercial",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "spachtelputz verven",
+          "volume": 720,
+          "cpc": 0.42,
+          "intent": "commercial",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "spachtelputz aanbrengen",
+          "volume": 480,
+          "cpc": 2.33,
+          "intent": "commercial",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "spachtelputz gamma",
+          "volume": 210,
+          "cpc": 0.22,
+          "intent": "navigational",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "spachtelputz hornbach",
+          "volume": 140,
+          "cpc": 0.1,
+          "intent": "navigational",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "soorten sierpleister",
+          "volume": 110,
+          "cpc": 2.35,
+          "intent": "transactional",
+          "seeds": [
+            "sierpleister"
+          ]
+        },
+        {
+          "keyword": "sierpleister verwijderen",
+          "volume": 110,
+          "cpc": 0.62,
+          "intent": "transactional",
+          "seeds": [
+            "sierpleister"
+          ]
+        },
+        {
+          "keyword": "granol sierpleister",
+          "volume": 70,
+          "cpc": 0.32,
+          "intent": "navigational",
+          "seeds": [
+            "sierpleister"
+          ]
+        },
+        {
+          "keyword": "spachtelputz praxis",
+          "volume": 70,
+          "cpc": 0.13,
+          "intent": "navigational",
+          "seeds": [
+            "spachtelputz"
+          ]
+        },
+        {
+          "keyword": "sierpleister gamma",
+          "volume": 50,
+          "cpc": 0.17,
+          "intent": "navigational",
+          "seeds": [
+            "sierpleister"
+          ]
+        },
+        {
+          "keyword": "sierpleister aanbrengen met roller",
+          "volume": 50,
+          "cpc": 0.28,
+          "intent": "commercial",
+          "seeds": [
+            "sierpleister"
+          ]
+        },
+        {
+          "keyword": "sierpleister plafond",
+          "volume": 50,
+          "cpc": 0.2,
+          "intent": "transactional",
+          "seeds": [
+            "sierpleister"
+          ]
+        }
+      ],
+      "new_adjacent_high_vol": [],
+      "new_low_volume": [
+        {
+          "keyword": "sierpleister hornbach",
+          "volume": 40,
+          "cpc": 0.11,
+          "intent": "navigational"
+        }
+      ],
+      "off_service": [],
+      "already_tracked_count": 2
+    },
+    "muren-stucen": {
+      "existing_page": "/muren-stucen/",
+      "seeds_used": [
+        "muren stucen",
+        "sausklaar stucwerk"
+      ],
+      "total_returned": 17,
+      "bucket_counts": {
+        "already_tracked": 6,
+        "new_relevant": 8,
+        "new_low_volume": 3
+      },
+      "new_relevant": [
+        {
+          "keyword": "muur stucen zelf",
+          "volume": 720,
+          "cpc": 0.46,
+          "intent": "transactional",
+          "seeds": [
+            "muren stucen"
+          ]
+        },
+        {
+          "keyword": "zelf stucen met fix & finish",
+          "volume": 260,
+          "cpc": 0.33,
+          "intent": "transactional",
+          "seeds": [
+            "muren stucen"
+          ]
+        },
+        {
+          "keyword": "grove muur stucen",
+          "volume": 210,
+          "cpc": 1.24,
+          "intent": "transactional",
+          "seeds": [
+            "muren stucen"
+          ]
+        },
+        {
+          "keyword": "zelf stucen met stucpasta",
+          "volume": 170,
+          "cpc": 0.28,
+          "intent": "commercial",
+          "seeds": [
+            "muren stucen"
+          ]
+        },
+        {
+          "keyword": "muur stucen met roodband",
+          "volume": 140,
+          "cpc": 0.43,
+          "intent": "transactional",
+          "seeds": [
+            "muren stucen"
+          ]
+        },
+        {
+          "keyword": "sausklaar stucen prijs",
+          "volume": 140,
+          "cpc": 4.13,
+          "intent": "commercial",
+          "seeds": [
+            "sausklaar stucwerk"
+          ]
+        },
+        {
+          "keyword": "muur stucen met cement",
+          "volume": 110,
+          "cpc": 1.43,
+          "intent": "transactional",
+          "seeds": [
+            "muren stucen"
+          ]
+        },
+        {
+          "keyword": "wat is sausklaar stucen",
+          "volume": 50,
+          "cpc": 3.96,
+          "intent": "commercial",
+          "seeds": [
+            "sausklaar stucwerk"
+          ]
+        }
+      ],
+      "new_adjacent_high_vol": [],
+      "new_low_volume": [
+        {
+          "keyword": "sausklaar betekenis",
+          "volume": 40,
+          "cpc": 0.09,
+          "intent": "informational"
+        },
+        {
+          "keyword": "sausklaar stucwerk schuren",
+          "volume": 30,
+          "cpc": null,
+          "intent": "commercial"
+        },
+        {
+          "keyword": "muur stucen kant-en klaar",
+          "volume": 10,
+          "cpc": 0.42,
+          "intent": "commercial"
+        }
+      ],
+      "off_service": [],
+      "already_tracked_count": 6
+    },
+    "gevel-schilderen": {
+      "existing_page": "/gevel-schilderen/",
+      "seeds_used": [
+        "gevel schilderen",
+        "silicaatverf"
+      ],
+      "total_returned": 16,
+      "bucket_counts": {
+        "new_relevant": 6,
+        "already_tracked": 3,
+        "new_low_volume": 6,
+        "no_volume": 1
+      },
+      "new_relevant": [
+        {
+          "keyword": "buitenmuur verven ideeën",
+          "volume": 320,
+          "cpc": 0.23,
+          "intent": "informational",
+          "seeds": [
+            "gevel schilderen"
+          ]
+        },
+        {
+          "keyword": "silicaatverf",
+          "volume": 210,
+          "cpc": 0.78,
+          "intent": "commercial",
+          "seeds": [
+            "silicaatverf"
+          ]
+        },
+        {
+          "keyword": "buitenmuur verven kleur",
+          "volume": 170,
+          "cpc": 0.72,
+          "intent": "commercial",
+          "seeds": [
+            "gevel schilderen"
+          ]
+        },
+        {
+          "keyword": "oude buitenmuur schilderen",
+          "volume": 140,
+          "cpc": 4.18,
+          "intent": "commercial",
+          "seeds": [
+            "gevel schilderen"
+          ]
+        },
+        {
+          "keyword": "buitenmuur verven zonder voorstrijk",
+          "volume": 70,
+          "cpc": 0.22,
+          "intent": "transactional",
+          "seeds": [
+            "gevel schilderen"
+          ]
+        },
+        {
+          "keyword": "gevel schilderen prijs per m2",
+          "volume": 50,
+          "cpc": 4.65,
+          "intent": "commercial",
+          "seeds": [
+            "gevel schilderen"
+          ]
+        }
+      ],
+      "new_adjacent_high_vol": [],
+      "new_low_volume": [
+        {
+          "keyword": "silicaatverf buiten",
+          "volume": 40,
+          "cpc": 0.5,
+          "intent": "transactional"
+        },
+        {
+          "keyword": "silicaatverf binnen",
+          "volume": 30,
+          "cpc": 1.02,
+          "intent": "transactional"
+        },
+        {
+          "keyword": "silicaatverf gamma",
+          "volume": 20,
+          "cpc": 0.41,
+          "intent": "transactional"
+        },
+        {
+          "keyword": "wat is silicaatverf",
+          "volume": 20,
+          "cpc": 1.81,
+          "intent": "commercial"
+        },
+        {
+          "keyword": "gevel schilderen nadelen",
+          "volume": 10,
+          "cpc": null,
+          "intent": "informational"
+        },
+        {
+          "keyword": "silicaatverf sikkens",
+          "volume": 10,
+          "cpc": 0.74,
+          "intent": "commercial"
+        }
+      ],
+      "off_service": [],
+      "already_tracked_count": 3
+    }
+  }
+}

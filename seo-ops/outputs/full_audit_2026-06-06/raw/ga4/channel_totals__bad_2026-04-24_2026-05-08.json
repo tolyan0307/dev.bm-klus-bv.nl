@@ -1,0 +1,30 @@
+[
+  {
+    "sessionDefaultChannelGroup": "Paid Search",
+    "sessions": "78",
+    "keyEvents": "0",
+    "engagedSessions": "54",
+    "engagementRate": "0.69230769230769229"
+  },
+  {
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "39",
+    "keyEvents": "1",
+    "engagedSessions": "12",
+    "engagementRate": "0.30769230769230771"
+  },
+  {
+    "sessionDefaultChannelGroup": "Direct",
+    "sessions": "2",
+    "keyEvents": "0",
+    "engagedSessions": "2",
+    "engagementRate": "1"
+  },
+  {
+    "sessionDefaultChannelGroup": "Cross-network",
+    "sessions": "1",
+    "keyEvents": "0",
+    "engagedSessions": "1",
+    "engagementRate": "1"
+  }
+]

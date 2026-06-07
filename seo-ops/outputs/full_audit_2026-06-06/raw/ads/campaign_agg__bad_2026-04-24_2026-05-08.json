@@ -1,0 +1,24 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "name": "NL | Gevelisolatie | Search",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "131",
+      "searchAbsoluteTopImpressionShare": 0.0999,
+      "searchBudgetLostImpressionShare": 0.06695508858673259,
+      "searchImpressionShare": 0.15677791512154923,
+      "searchRankLostImpressionShare": 0.7762669962917181,
+      "searchTopImpressionShare": 0.13244078269824922,
+      "conversionsValue": 0.0,
+      "conversions": 0.0,
+      "costMicros": "166381349",
+      "ctr": 0.13617463617463618,
+      "allConversions": 0.0,
+      "averageCpc": 1270086.6335877862,
+      "impressions": "962"
+    }
+  }
+]

@@ -1,0 +1,53 @@
+---
+description: Behavioral discipline for cautious, simple, surgical, verifiable AI coding.
+alwaysApply: true
+---
+
+# Behavioral discipline
+
+These rules bias toward caution over speed. For trivial edits (typo, obvious one-liner) use judgment.
+
+## 1. Think before coding
+- State assumptions explicitly. If uncertain, ask — do not guess.
+- If multiple interpretations exist, present them; do not silently pick one.
+- If a simpler approach exists, name it before writing the complex one.
+- Push back when warranted. If something is unclear — stop, name what's confusing, ask.
+- Do not hide confusion behind plausible-looking code.
+
+## 2. Simplicity first
+- Minimum code that solves the problem. Nothing speculative.
+- No features beyond what was asked.
+- No new abstractions for single-use code.
+- No "flexibility" or "configurability" that was not requested.
+- No error handling for impossible scenarios.
+- No new dependencies unless the task requires them.
+- If you wrote 200 lines and it could be 50 — rewrite.
+- Sanity check: would a senior engineer say this diff is overcomplicated for what was asked? If yes — simplify.
+
+## 3. Surgical changes
+- Touch only files the task requires. SCOPE LOCK entries in task docs are literal.
+- Do not reformat, restyle, or "improve" adjacent code, comments, or imports.
+- Do not refactor things that are not broken.
+- Match existing style even if you would write it differently.
+- Clean up only orphans your own changes created (unused imports/vars from removed code).
+- Do not delete pre-existing dead code unless asked — mention it instead.
+- Every changed line should trace directly to the user's request.
+
+## 4. Goal-driven execution
+- Restate the task as a verifiable goal before starting. Examples:
+  - "add validation" → "tests cover invalid inputs and pass"
+  - "fix the bug" → "minimal reproduction identified, only the causing line(s) changed, symptom gone"
+  - "refactor X" → "behavior unchanged, `npx tsc --noEmit` passes before and after, diff scoped to X"
+- For multi-step tasks, write a brief plan with a verify step per item:
+  1. [step] → verify: [check]
+  2. [step] → verify: [check]
+- Strong success criteria let you loop independently. Weak criteria ("make it work") cause rework.
+
+## Verification before reporting done
+- `npx tsc --noEmit` passes (do not use `pnpm lint` — ESLint is not installed).
+- Diff scope matches the request — no drive-by reformatting or adjacent edits.
+- No new `"use client"` without justification.
+- No new dependencies without justification.
+- If the task had a SCOPE LOCK doc — only the listed files were touched.
+
+Signals these rules are working: smaller diffs, fewer drive-by edits, clarifying questions asked up front rather than after a wrong implementation.

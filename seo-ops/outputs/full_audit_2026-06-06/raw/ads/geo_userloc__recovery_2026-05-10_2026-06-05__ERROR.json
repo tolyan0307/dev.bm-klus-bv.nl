@@ -1,0 +1,5 @@
+{
+  "errors": [
+    "[query_error: EXPECTED_REFERENCED_FIELD_IN_SELECT_CLAUSE\n] The following field must be present in SELECT clause: 'campaign.id'."
+  ]
+}

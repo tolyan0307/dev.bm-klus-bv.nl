@@ -1,0 +1,27 @@
+[
+  {
+    "eventName": "Contact_Form_Site",
+    "sessionDefaultChannelGroup": "Paid Search",
+    "eventCount": "5"
+  },
+  {
+    "eventName": "Contact_Form_Site",
+    "sessionDefaultChannelGroup": "Direct",
+    "eventCount": "1"
+  },
+  {
+    "eventName": "Email",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "eventCount": "1"
+  },
+  {
+    "eventName": "Phone",
+    "sessionDefaultChannelGroup": "Paid Search",
+    "eventCount": "1"
+  },
+  {
+    "eventName": "Whatsapp",
+    "sessionDefaultChannelGroup": "Paid Search",
+    "eventCount": "1"
+  }
+]

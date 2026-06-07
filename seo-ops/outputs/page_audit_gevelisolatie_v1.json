@@ -1,0 +1,188 @@
+{
+  "generated_at": "2026-04-07 12:13 UTC",
+  "route": "/gevelisolatie/",
+  "page_type": "service",
+  "summary": {
+    "page_role": "service page for gevelisolatie",
+    "evidence": "GSC: 2,914 impr, 7 clicks, 0.2% CTR, pos 35.0. GA4: 190 sessions, 72.0% engagement.",
+    "main_strength": "Strong keyword coverage: 192 keywords mapped to this page. Primary cluster hub.",
+    "main_weakness": "Very low CTR (0.2%) despite 2,914 impressions. Impressions not converting to clicks.",
+    "biggest_opportunity": "13 striking-distance queries. Top: 'gevelisolatie rotterdam' (941 impr, pos 12.3).",
+    "biggest_risk": "15 relevant high-volume keywords with weak/no page mapping. Content coverage may have gaps."
+  },
+  "performance": {
+    "gsc": {
+      "impressions": 2914,
+      "clicks": 7,
+      "ctr": 0.0024,
+      "avg_position": 35.0,
+      "distinct_queries": 67
+    },
+    "ga4": {
+      "sessions": 190,
+      "engaged_sessions": 137,
+      "engagement_rate": 0.72,
+      "avg_duration": 219.9,
+      "key_events": 7
+    },
+    "verdict": "weak"
+  },
+  "strengths": [
+    "Strong keyword coverage: 192 keywords mapped to this page. Primary cluster hub."
+  ],
+  "weaknesses": [
+    "Very low CTR (0.2%) despite 2,914 impressions. Impressions not converting to clicks."
+  ],
+  "top_queries": [
+    "gevelisolatie rotterdam",
+    "buitengevelisolatie",
+    "gevelisolatie zoetermeer",
+    "gevelisolatie leiden",
+    "gevelisolatie afwerking",
+    "buitengevelisolatie rotterdam",
+    "gevelisolatie den haag",
+    "gevelisolatie buitenkant",
+    "etics",
+    "etics systeem"
+  ],
+  "weak_queries": [
+    "gevelisolatie zoetermeer",
+    "gevelisolatie leiden",
+    "gevelisolatie afwerking",
+    "buitengevelisolatie rotterdam",
+    "gevelisolatie den haag",
+    "gevelisolatie buitenkant",
+    "etics",
+    "gevelisolatie met crepi",
+    "gevelisolatie kosten",
+    "gevelisolatie prijs"
+  ],
+  "striking_distance": [
+    "gevelisolatie rotterdam",
+    "gevelisolatie afwerking",
+    "buitengevelisolatie rotterdam",
+    "gevelisolatie buitenkant",
+    "etics",
+    "etics systeem",
+    "etics isolatie",
+    "gevelisolatie prijs",
+    "offerte gevelisolatie",
+    "gevelisolatie buitenkant stucwerk"
+  ],
+  "cluster_fit": {
+    "total_mapped": 192,
+    "theme_breakdown": [
+      {
+        "theme": "core_isolation",
+        "count": 164,
+        "with_gsc": 25,
+        "total_gsc_impr": 2834
+      },
+      {
+        "theme": "stuc_crepi",
+        "count": 11,
+        "with_gsc": 5,
+        "total_gsc_impr": 57
+      },
+      {
+        "theme": "offerte",
+        "count": 6,
+        "with_gsc": 2,
+        "total_gsc_impr": 21
+      },
+      {
+        "theme": "prijs_kosten",
+        "count": 4,
+        "with_gsc": 2,
+        "total_gsc_impr": 14
+      },
+      {
+        "theme": "materialen",
+        "count": 2,
+        "with_gsc": 2,
+        "total_gsc_impr": 5
+      },
+      {
+        "theme": "other",
+        "count": 2,
+        "with_gsc": 2,
+        "total_gsc_impr": 3
+      },
+      {
+        "theme": "subsidie_vergunning",
+        "count": 1,
+        "with_gsc": 1,
+        "total_gsc_impr": 9
+      },
+      {
+        "theme": "technical_rc_dikte",
+        "count": 1,
+        "with_gsc": 1,
+        "total_gsc_impr": 1
+      },
+      {
+        "theme": "steenstrips",
+        "count": 1,
+        "with_gsc": 1,
+        "total_gsc_impr": 1
+      }
+    ],
+    "well_covered": [
+      "core_isolation",
+      "stuc_crepi"
+    ],
+    "weakly_covered": []
+  },
+  "intent_diagnosis": {
+    "page_intent": "commercial",
+    "dominant_query_intent": "commercial_investigative",
+    "too_broad": true,
+    "mismatch_note": ""
+  },
+  "structural_recommendations": [
+    {
+      "area": "title_meta",
+      "recommendation": "Review meta title and description for CTR improvement. Current CTR is 0.2% on 2,914 impressions.",
+      "detail": "Top nonbrand query: 'gevelisolatie rotterdam'. Consider whether the title/description speak directly to this search intent.",
+      "confidence": "medium"
+    },
+    {
+      "area": "internal_linking",
+      "recommendation": "Page lacks a detected internal links section. Consider adding contextual links to cluster pages and related services.",
+      "detail": "Internal linking helps distribute authority and guide users deeper into the topic.",
+      "confidence": "medium"
+    },
+    {
+      "area": "striking_distance",
+      "recommendation": "13 queries in striking distance. Top: 'gevelisolatie rotterdam' (pos 12.3), 'gevelisolatie afwerking' (pos 17.8), 'buitengevelisolatie rotterdam' (pos 4.3).",
+      "detail": "Consider strengthening on-page signals (headings, content depth, internal links) for these queries to push into top positions.",
+      "confidence": "medium"
+    },
+    {
+      "area": "page_scope",
+      "recommendation": "Page attracts queries from 4 themes (core_isolation, offerte, prijs_kosten, stuc_crepi). Consider whether some should be served by dedicated cluster pages instead.",
+      "detail": "A service page covering too many subtopics may dilute relevance for each.",
+      "confidence": "low"
+    },
+    {
+      "area": "keyword_mapping",
+      "recommendation": "14 keywords where GSC shows this page as top result but they're mapped to other routes. Review whether mapping is correct or if content should be consolidated.",
+      "detail": "This may indicate the page is naturally winning for these terms, suggesting content ownership.",
+      "confidence": "low"
+    }
+  ],
+  "internal_linking_recommendations": [
+    {
+      "area": "internal_linking",
+      "recommendation": "Page lacks a detected internal links section. Consider adding contextual links to cluster pages and related services.",
+      "detail": "Internal linking helps distribute authority and guide users deeper into the topic.",
+      "confidence": "medium"
+    }
+  ],
+  "cautions": [
+    "Very low click volume (7 clicks in 90 days). All query-level conclusions are provisional.",
+    "Average position (35.0) is deep in SERPs. Most impressions may come from page 2+ where click probability is very low.",
+    "GSC position data is averaged over 90 days and may not reflect current rankings.",
+    "Theme/intent classification is heuristic-based. Manual SERP verification recommended before acting."
+  ]
+}

@@ -1,0 +1,5159 @@
+[
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0.0,
+      "costMicros": "6980000",
+      "allConversions": 0.0,
+      "impressions": "36"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4",
+      "status": "ADDED",
+      "searchTerm": "buitengevel isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevel isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~15060256595"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0.0,
+      "costMicros": "4794449",
+      "allConversions": 0.0,
+      "impressions": "11"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWwgaXNvbGF0aWUgYnVpdGVuemlqZGU",
+      "status": "ADDED",
+      "searchTerm": "gevel isolatie buitenzijde"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isolatie buitenzijde"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~973000816510"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0.0,
+      "costMicros": "4336767",
+      "allConversions": 0.0,
+      "impressions": "34"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuZ2V2ZWxpc29sYXRpZQ",
+      "status": "ADDED",
+      "searchTerm": "buitengevelisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "4140000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~dm9vcmdldmVsIGlzb2xlcmVuIHZlcmd1bm5pbmc",
+      "status": "NONE",
+      "searchTerm": "voorgevel isoleren vergunning"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "huis aan buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~975613917543"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "3860000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Y3JlcGkgZ2V2ZWxpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "crepi gevelisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "buitenmuur isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299772899210"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0.0,
+      "costMicros": "3835496",
+      "allConversions": 0.0,
+      "impressions": "6"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBzdGVlbnN0cmlwcw",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0.0,
+      "costMicros": "2728018",
+      "allConversions": 0.0,
+      "impressions": "10"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVubXV1ciBpc29sZXJlbiBlbiBzdHVjZW4",
+      "status": "ADDED",
+      "searchTerm": "buitenmuur isoleren en stucen"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitenmuur isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299191152679"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0.0,
+      "costMicros": "2530000",
+      "allConversions": 0.0,
+      "impressions": "20"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVubXV1ciBpc29sZXJlbg",
+      "status": "ADDED",
+      "searchTerm": "buitenmuur isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitenmuur isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~5622321630"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "2050000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGVyZW4gdmFuIGJ1aXRlbmFm",
+      "status": "NONE",
+      "searchTerm": "isoleren van buitenaf"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis aan de buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~863948565962"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1980000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZXBsYXRlbg",
+      "status": "NONE",
+      "searchTerm": "gevelisolatieplaten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1960000",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3R1Y2VuIG9wIGlzb2xhdGllcGxhYXQ",
+      "status": "NONE",
+      "searchTerm": "stucen op isolatieplaat"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "1755430",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gZW4gYmVrbGVkZW4",
+      "status": "NONE",
+      "searchTerm": "buitengevel isoleren en bekleden"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~415492289970"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1750000",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWxpc29sYXRpZSBidWl0ZW5rYW50",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1730000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~d2F0IGtvc3QgZ2V2ZWxpc29sYXRpZSBtZXQgY3JlcGk",
+      "status": "NONE",
+      "searchTerm": "wat kost gevelisolatie met crepi"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "buitenmuur isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299772899210"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1710000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuIG11dXIgaXNvbGVyZW4",
+      "status": "NONE",
+      "searchTerm": "buiten muur isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitenmuur isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~5622321630"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1695061",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3RlZW5zdHJpcCBtZXQgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "steenstrip met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1640000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aHVpcyBpc29sZXJlbiB2YW4gYnVpdGVuYWY",
+      "status": "NONE",
+      "searchTerm": "huis isoleren van buitenaf"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1507231",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~dm9vcmdldmVsIGlzb2xlcmVu",
+      "status": "NONE",
+      "searchTerm": "voorgevel isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0.0,
+      "costMicros": "1465034",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gZW4gYmVrbGVkZW4",
+      "status": "NONE",
+      "searchTerm": "buitengevel isoleren en bekleden"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1293556",
+      "allConversions": 0.0,
+      "impressions": "6"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVubXV1ciBpc29sYXRpZSBtZXQgc3RlZW5zdHJpcHM",
+      "status": "NONE",
+      "searchTerm": "buitenmuur isolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1240000",
+      "allConversions": 0.0,
+      "impressions": "6"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBtZXQgc3RlZW5zdHJpcHM",
+      "status": "ADDED",
+      "searchTerm": "gevelisolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~328949753645"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1239994",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Y3JlcGkgZ2V2ZWwga29zdHByaWpz",
+      "status": "NONE",
+      "searchTerm": "crepi gevel kostprijs"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1100000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuaXNvbGF0aWUgbWV0IHN0ZWVuc3RyaXBz",
+      "status": "NONE",
+      "searchTerm": "buitenisolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1069646",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWwgaXNvbGF0aWUgbWV0IHN0ZWVuc3RyaXBz",
+      "status": "NONE",
+      "searchTerm": "gevel isolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~328949753645"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "1040000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBtZXQgY3JlcGk",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie met crepi"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "buitenmuur isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299772899210"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "930000",
+      "allConversions": 0.0,
+      "impressions": "19"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gZW4gc3R1Y2VuIHByaWpz",
+      "status": "NONE",
+      "searchTerm": "buitengevel isoleren en stucen prijs"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "buitengevel isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299772898450"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "910000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGF0aWUgc3R1Y3dlcmsgYnVpdGVuZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "isolatie stucwerk buitengevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "890000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGVyZW4gYnVpdGVuZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "isoleren buitengevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "880000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~bXV1ciBpc29sYXRpZSBidWl0ZW5rYW50",
+      "status": "NONE",
+      "searchTerm": "muur isolatie buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019882174"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "856338",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWwgYnVpdGVua2FudCBpc29sZXJlbg",
+      "status": "NONE",
+      "searchTerm": "gevel buitenkant isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "849672",
+      "allConversions": 0.0,
+      "impressions": "5"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBidWl0ZW5rYW50IHN0ZWVuc3RyaXBz",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenkant steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "800000",
+      "allConversions": 0.0,
+      "impressions": "5"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWwgaXNvbGVyZW4gZW4gc3R1Y2Vu",
+      "status": "ADDED",
+      "searchTerm": "gevel isoleren en stucen"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~334573738750"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "780000",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuZ2V2ZWwgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "buitengevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "730000",
+      "allConversions": 0.0,
+      "impressions": "6"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWxpc29sYXRpZQ",
+      "status": "ADDED",
+      "searchTerm": "gevelisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019882174"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "730000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGF0aWUgbWV0IHN0ZWVuc3RyaXBz",
+      "status": "NONE",
+      "searchTerm": "buitengevel isolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "710000",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBidWl0ZW56aWpkZQ",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenzijde"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "700000",
+      "allConversions": 0.0,
+      "impressions": "6"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Y3JlcGkgZ2V2ZWxiZWtsZWRpbmc",
+      "status": "NONE",
+      "searchTerm": "crepi gevelbekleding"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "670000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBidWl0ZW5rYW50IGtvc3Rlbg",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenkant kosten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "640000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3RlZW5zdHJpcHMgbWV0IGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "steenstrips met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "620000",
+      "allConversions": 0.0,
+      "impressions": "7"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVubXV1ciBpc29sZXJlbiBidWl0ZW5rYW50",
+      "status": "ADDED",
+      "searchTerm": "buitenmuur isoleren buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitenmuur isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~24624398770"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "620000",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVubXV1ciBpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "buitenmuur isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "608256",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWwgaXNvbGVyZW4gYnVpdGVuemlqZGU",
+      "status": "ADDED",
+      "searchTerm": "gevel isoleren buitenzijde"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren buitenzijde"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~401156286400"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "600000",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~dm9vcnpldGdldmVs",
+      "status": "NONE",
+      "searchTerm": "voorzetgevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "550000",
+      "allConversions": 0.0,
+      "impressions": "6"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Y3JlcGkgZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "crepi gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "526603",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aHVpcyBidWl0ZW4gaXNvbGVyZW4",
+      "status": "NONE",
+      "searchTerm": "huis buiten isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "456343",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWVwbGF0ZW4gYnVpdGVubXV1cg",
+      "status": "NONE",
+      "searchTerm": "isolatieplaten buitenmuur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "huis aan buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~975613917543"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "436534",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aHVpcyBhYW4gYnVpdGVua2FudCBpc29sZXJlbg",
+      "status": "ADDED",
+      "searchTerm": "huis aan buitenkant isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis aan buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~863948565802"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "380000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWxpc29sYXRpZSBidWl0ZW5rYW50IGtvc3Rlbg",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenkant kosten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019875064"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "380000",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWwgaXNvbGVyZW4gZW4gYmVrbGVkZW4",
+      "status": "ADDED",
+      "searchTerm": "gevel isoleren en bekleden"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~415492289970"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "368373",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aHVpcyBidWl0ZW5rYW50IGlzb2xlcmVu",
+      "status": "NONE",
+      "searchTerm": "huis buitenkant isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "365315",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZXRpY3MgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "etics isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "huis aan buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~975613917543"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "300000",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxzdHVjd2VyayBvcCBpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "gevelstucwerk op isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.0,
+      "costMicros": "288909",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZXRpY3MgZ2V2ZWxpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "etics gevelisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019875064"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZXBzIGdldmVsaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "eps gevelisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019875064"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWwgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "gevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019875064"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWwgaXNvbGF0aWUgcGxhdGVu",
+      "status": "NONE",
+      "searchTerm": "gevel isolatie platen"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019875064"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~cHJpanMgZ2V2ZWxpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "prijs gevelisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019875064"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~c3RyaWtvdGhlcm0gZ2V2ZWxpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "strikotherm gevelisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019875064"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWwgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "gevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019882174"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgYnVpdGVubXV1cg",
+      "status": "NONE",
+      "searchTerm": "isolatie buitenmuur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019882174"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgZ2V2ZWxiZWtsZWRpbmc",
+      "status": "NONE",
+      "searchTerm": "isolatie gevelbekleding"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019882174"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGVyZW4gdmFuIGJ1aXRlbmFm",
+      "status": "NONE",
+      "searchTerm": "isoleren van buitenaf"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~2019882174"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVubXVyZW4gaXNvbGVyZW4",
+      "status": "NONE",
+      "searchTerm": "buitenmuren isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitenmuur isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~5622321630"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuIGdldmVsIGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "buiten gevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuIGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "buiten isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuIGlzb2xhdGllIGdldmVs",
+      "status": "NONE",
+      "searchTerm": "buiten isolatie gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuIG11dXIgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "buiten muur isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuaXNvbGF0aWUgZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "buitenisolatie gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVubXV1cmlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "buitenmuurisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWxpc29sYXRpZSBidWl0ZW4",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buiten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgYnVpdGVua2FudCBtdXVy",
+      "status": "NONE",
+      "searchTerm": "isolatie buitenkant muur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgYnVpdGVubXV1cg",
+      "status": "NONE",
+      "searchTerm": "isolatie buitenmuur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~bXV1cmlzb2xhdGllIGJ1aXRlbmthbnQ",
+      "status": "NONE",
+      "searchTerm": "muurisolatie buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~12394465855"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "5"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuZ2V2ZWwgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "buitengevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitengevel"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~299772901130"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gZW4gYmVwbGVpc3RlcmVu",
+      "status": "NONE",
+      "searchTerm": "buitengevel isoleren en bepleisteren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitengevel"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~299772901130"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuZ2V2ZWxpc29sYXRpZSBzdHVjd2Vyaw",
+      "status": "NONE",
+      "searchTerm": "buitengevelisolatie stucwerk"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitengevel"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~299772901130"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZXRpY3Mgc3lzdGVlbQ",
+      "status": "NONE",
+      "searchTerm": "etics systeem"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitengevel"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~299772901130"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2Vpc29sZWVyZGUgZ2V2ZWxiZWtsZWRpbmc",
+      "status": "NONE",
+      "searchTerm": "geisoleerde gevelbekleding"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitengevel"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~299772901130"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgYnVpdGVuZ2V2ZWw",
+      "status": "ADDED",
+      "searchTerm": "isolatie buitengevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitengevel"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~299772901130"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWVwbGF0ZW4gYnVpdGVubXV1ciBwcmlqcw",
+      "status": "NONE",
+      "searchTerm": "isolatieplaten buitenmuur prijs"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitengevel"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~299772901130"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~dm9vcnpldGdldmVs",
+      "status": "NONE",
+      "searchTerm": "voorzetgevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitengevel"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~299772901130"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZXBzIGlzb2xhdGllIGJ1aXRlbm11dXI",
+      "status": "NONE",
+      "searchTerm": "eps isolatie buitenmuur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitenmuren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~301804109653"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~dm9vcnpldHdhbmQgYnVpdGVuZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "voorzetwand buitengevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "isolatie buitenmuren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~301804109653"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuIGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "buiten isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuIGlzb2xhdGllIG11cmVu",
+      "status": "NONE",
+      "searchTerm": "buiten isolatie muren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuaXNvbGF0aWUgZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "buitenisolatie gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuaXNvbGF0aWUgaHVpcw",
+      "status": "ADDED",
+      "searchTerm": "buitenisolatie huis"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVua2FudCBodWlzIGlzb2xlcmVu",
+      "status": "NONE",
+      "searchTerm": "buitenkant huis isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVua2FudCBpc29sZXJlbiBodWlz",
+      "status": "NONE",
+      "searchTerm": "buitenkant isoleren huis"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWxpc29sYXRpZSBidWl0ZW5rYW50",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgYnVpdGVu",
+      "status": "NONE",
+      "searchTerm": "isolatie buiten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgYnVpdGVubXV1cg",
+      "status": "NONE",
+      "searchTerm": "isolatie buitenmuur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGVyZW4gbXV1ciBidWl0ZW56aWpkZQ",
+      "status": "NONE",
+      "searchTerm": "isoleren muur buitenzijde"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~bXVyZW4gaXNvbGVyZW4gbGFuZ3MgYnVpdGVu",
+      "status": "NONE",
+      "searchTerm": "muren isoleren langs buiten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~bXV1ciB2YW4gYnVpdGVuIGlzb2xlcmVu",
+      "status": "NONE",
+      "searchTerm": "muur van buiten isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~bXV1cmlzb2xhdGllIGJ1aXRlbg",
+      "status": "NONE",
+      "searchTerm": "muurisolatie buiten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~bXV1cmlzb2xhdGllIGJ1aXRlbmthbnQ",
+      "status": "NONE",
+      "searchTerm": "muurisolatie buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~dmFuIGJ1aXRlbmFmIGlzb2xlcmVu",
+      "status": "NONE",
+      "searchTerm": "van buitenaf isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis isoleren buitenkant"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~328332781900"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aHVpcyB2YW4gYnVpdGVuIGlzb2xlcmVu",
+      "status": "ADDED",
+      "searchTerm": "huis van buiten isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~412720840693"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWwgdmFuIGJ1aXRlbiBpc29sZXJlbg",
+      "status": "ADDED",
+      "searchTerm": "gevel van buiten isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~836552792857"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuIGlzb2xhdGllIGdldmVs",
+      "status": "NONE",
+      "searchTerm": "buiten isolatie gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis aan de buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~863948565962"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVubXV1ciBpc29sZXJlbiBhYW4gYnVpdGVua2FudA",
+      "status": "NONE",
+      "searchTerm": "buitenmuur isoleren aan buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis aan de buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~863948565962"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aHVpcyBsYW5ncyBidWl0ZW4gaXNvbGVyZW4",
+      "status": "NONE",
+      "searchTerm": "huis langs buiten isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis aan de buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~863948565962"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgYWFuIGJ1aXRlbmthbnQgbXV1cg",
+      "status": "NONE",
+      "searchTerm": "isolatie aan buitenkant muur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis aan de buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~863948565962"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWUgYnVpdGVua2FudCBodWlz",
+      "status": "NONE",
+      "searchTerm": "isolatie buitenkant huis"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis aan de buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~863948565962"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~bXV1cmlzb2xhdGllIGJ1aXRlbmthbnQ",
+      "status": "NONE",
+      "searchTerm": "muurisolatie buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "huis aan de buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~863948565962"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZW5rZWxzdGVlbnMgbXV1ciBpc29sZXJlbiBidWl0ZW5rYW50",
+      "status": "NONE",
+      "searchTerm": "enkelsteens muur isoleren buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "huis aan buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~975613917543"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~dm9vcnpldHdhbmQgYnVpdGVubXV1cg",
+      "status": "NONE",
+      "searchTerm": "voorzetwand buitenmuur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "huis aan buitenkant isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~975613917543"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVuZ2V2ZWxpc29sYXRpZSBiZWRyaWp2ZW4",
+      "status": "NONE",
+      "searchTerm": "buitengevelisolatie bedrijven"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVubXV1ciBpc29sYXRpZXBsYXRlbg",
+      "status": "NONE",
+      "searchTerm": "buitenmuur isolatieplaten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~YnVpdGVubXV1ciBpc29sZXJlbiBwcmlqcyBwZXIgbTI",
+      "status": "NONE",
+      "searchTerm": "buitenmuur isoleren prijs per m2"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZXRpY3MgZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "etics gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZXRpY3MgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "etics isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~ZXRpY3Mgc3lzdGVlbQ",
+      "status": "NONE",
+      "searchTerm": "etics systeem"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWxiZWtsZWRpbmcgbWV0IGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "gevelbekleding met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWxpc29sYXRpZXN5c3RlZW0",
+      "status": "NONE",
+      "searchTerm": "gevelisolatiesysteem"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~Z2V2ZWxwYW5lbGVuIGJ1aXRlbiBtZXQgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "gevelpanelen buiten met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~aXNvbGF0aWVwbGF0ZW4gYnVpdGVuZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "isolatieplaten buitengevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~dm9vcnpldCBnZXZlbA",
+      "status": "NONE",
+      "searchTerm": "voorzet gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953518~dm9vcnpldGdldmVsIGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "voorzetgevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel van buiten isoleren"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953518~1299903936848"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Y3JlcGkgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "crepi isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "buitenmuur isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299772899210"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~a29zdGVuIGJ1aXRlbm11dXIgaXNvbGVyZW4gZW4gc3R1Y2Vu",
+      "status": "NONE",
+      "searchTerm": "kosten buitenmuur isoleren en stucen"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "buitenmuur isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299772899210"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gZW4gYmVwbGVpc3RlcmVu",
+      "status": "NONE",
+      "searchTerm": "buitengevel isoleren en bepleisteren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevel isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299772911450"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "9"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gZW4gc3R1Y2Vu",
+      "status": "ADDED",
+      "searchTerm": "buitengevel isoleren en stucen"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevel isoleren en stucen"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~299772911450"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGF0aWUgc3RlZW5zdHJpcHM",
+      "status": "NONE",
+      "searchTerm": "isolatie steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~328949753645"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3RlZW5zdHJpcCBvcCBpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "steenstrip op isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~328949753645"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3RlZW5zdHJpcHMgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "steenstrips isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~328949753645"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGF0aWUgc3RlZW5zdHJpcHM",
+      "status": "NONE",
+      "searchTerm": "buitengevel isolatie steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~339989211583"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YWxzZWNjbyBuZWRlcmxhbmQ",
+      "status": "NONE",
+      "searchTerm": "alsecco nederland"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuIGdldmVsIGlzb2xlcmVu",
+      "status": "NONE",
+      "searchTerm": "buiten gevel isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuIGlzb2xhdGllIGdldmVs",
+      "status": "NONE",
+      "searchTerm": "buiten isolatie gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "8"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "buitengevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "7"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gZW4gYmVrbGVkZW4",
+      "status": "NONE",
+      "searchTerm": "buitengevel isoleren en bekleden"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gZW4gYmVrbGVkZW4gbWV0IGhvdXQ",
+      "status": "NONE",
+      "searchTerm": "buitengevel isoleren en bekleden met hout"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "buitenisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuaXNvbGF0aWUgZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "buitenisolatie gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuaXNvbGF0aWUgZ2V2ZWwgcHJpanM",
+      "status": "NONE",
+      "searchTerm": "buitenisolatie gevel prijs"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVubXV1ciBidWl0ZW4gaXNvbGVyZW4",
+      "status": "NONE",
+      "searchTerm": "buitenmuur buiten isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVubXV1ciBpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "buitenmuur isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuemlqZGUgZ2V2ZWwgaXNvbGVyZW4",
+      "status": "NONE",
+      "searchTerm": "buitenzijde gevel isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Y3JlcGkgcHJpanM",
+      "status": "NONE",
+      "searchTerm": "crepi prijs"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWwgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "gevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWwgaXNvbGVyZW4gZW4gYmVrbGVkZW4gbWV0IGhvdXQ",
+      "status": "NONE",
+      "searchTerm": "gevel isoleren en bekleden met hout"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxiZWtsZWRpbmcgYnVpdGVuIG1ldCBpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "gevelbekleding buiten met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxiZWtsZWRpbmcgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "gevelbekleding isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxiZWtsZWRpbmcgaXNvbGF0aWUgYnVpdGVu",
+      "status": "NONE",
+      "searchTerm": "gevelbekleding isolatie buiten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxiZWtsZWRpbmcgbWV0IGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "gevelbekleding met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "4"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBidWl0ZW5rYW50",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBidWl0ZW5tdXVy",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenmuur"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBwbGVpc3Rlcg",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie pleister"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxyZW5vdmF0aWUgZW4gaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "gevelrenovatie en isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxyZW5vdmF0aWUgbWV0IGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "gevelrenovatie met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aHVpcyBiZWtsZWRlbiBtZXQgc3RlZW5zdHJpcHM",
+      "status": "NONE",
+      "searchTerm": "huis bekleden met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGF0aWUgYnVpdGVubXV1ciBidWl0ZW5rYW50",
+      "status": "NONE",
+      "searchTerm": "isolatie buitenmuur buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGF0aWUgYnVpdGVuemlqZGUgZ2V2ZWw",
+      "status": "NONE",
+      "searchTerm": "isolatie buitenzijde gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~a29zdGVuIGJ1aXRlbmdldmVsaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "kosten buitengevelisolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~a29zdGVuIGJ1aXRlbm11dXIgaXNvbGVyZW4",
+      "status": "NONE",
+      "searchTerm": "kosten buitenmuur isoleren"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~a29zdGVuIGNyZXBpIHBlciBtMg",
+      "status": "NONE",
+      "searchTerm": "kosten crepi per m2"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~bXV1cmlzb2xhdGllIGJ1aXRlbmthbnQ",
+      "status": "NONE",
+      "searchTerm": "muurisolatie buitenkant"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c2FuZHdpY2hwYW5lbGVuIGdldmVsIHBsYWF0c2Vu",
+      "status": "NONE",
+      "searchTerm": "sandwichpanelen gevel plaatsen"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3RvIGdldmVs",
+      "status": "NONE",
+      "searchTerm": "sto gevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~dm9vcnpldGdldmVs",
+      "status": "NONE",
+      "searchTerm": "voorzetgevel"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~dm9vcnpldGdldmVsIGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "voorzetgevel isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~d2F0IGtvc3QgY3JlcGkgcGVyIG0y",
+      "status": "NONE",
+      "searchTerm": "wat kost crepi per m2"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~371547244529"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~ZXBzIGlzb2xhdGllIGVuIHN0ZWVuc3RyaXBz",
+      "status": "NONE",
+      "searchTerm": "eps isolatie en steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~404354085997"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~ZXBzIGlzb2xhdGllIHN0ZWVuc3RyaXBz",
+      "status": "NONE",
+      "searchTerm": "eps isolatie steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~404354085997"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~cHJlZmFiIGlzb2xhdGllIG1ldCBzdGVlbnN0cmlwcw",
+      "status": "NONE",
+      "searchTerm": "prefab isolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~404354085997"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3RlZW5zdHJpcHMgb3AgaXNvbGF0aWUgcHJlZmFi",
+      "status": "NONE",
+      "searchTerm": "steenstrips op isolatie prefab"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~404354085997"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3RlZW5zdHJpcHMgb3AgcGlyIGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "steenstrips op pir isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "PHRASE",
+          "text": "gevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~404354085997"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWwgaXNvbGVyZW4gc3RlZW5zdHJpcHM",
+      "status": "NONE",
+      "searchTerm": "buitengevel isoleren steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWxpc29sYXRpZSBtZXQgc3RlZW5zdHJpcHM",
+      "status": "ADDED",
+      "searchTerm": "buitengevelisolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVubXV1cmlzb2xhdGllIG1ldCBzdGVlbnN0cmlwcw",
+      "status": "NONE",
+      "searchTerm": "buitenmuurisolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2Vpc29sZWVyZGUgc3RlZW5zdHJpcHM",
+      "status": "NONE",
+      "searchTerm": "geisoleerde steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGF0aWUgbWV0IHN0ZWVuc3RyaXBz",
+      "status": "NONE",
+      "searchTerm": "isolatie met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGF0aWVwbGFhdCBtZXQgc3RlZW5zdHJpcHM",
+      "status": "NONE",
+      "searchTerm": "isolatieplaat met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGF0aWVwbGF0ZW4gbWV0IHN0ZWVuc3RyaXBz",
+      "status": "NONE",
+      "searchTerm": "isolatieplaten met steenstrips"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie met steenstrips"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~411661828506"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVubXV1ciBpc29sZXJlbiBlbiBiZWtsZWRlbg",
+      "status": "NONE",
+      "searchTerm": "buitenmuur isoleren en bekleden"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~415492289970"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxiZWtsZWRpbmcgYnVpdGVuIG1ldCBpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "gevelbekleding buiten met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~415492289970"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxiZWtsZWRpbmcgYnVpdGVubXV1ciBpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "gevelbekleding buitenmuur isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~415492289970"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGVyZW5kZSBnZXZlbGJla2xlZGluZw",
+      "status": "NONE",
+      "searchTerm": "isolerende gevelbekleding"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~415492289970"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~aXNvbGVyZW5kZSBnZXZlbGJla2xlZGluZyBidWl0ZW4",
+      "status": "NONE",
+      "searchTerm": "isolerende gevelbekleding buiten"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevel isoleren en bekleden"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~415492289970"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3R1Y3dlcmsgb3AgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "stucwerk op isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "buitengevelisolatie stuc"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~933237323690"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuIHN0dWN3ZXJrIG9wIGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "buiten stucwerk op isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~YnVpdGVuZ2V2ZWxpc29sYXRpZSBzdHVjd2Vyaw",
+      "status": "NONE",
+      "searchTerm": "buitengevelisolatie stucwerk"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "2"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBidWl0ZW5rYW50IHN0dWN3ZXJr",
+      "status": "NONE",
+      "searchTerm": "gevelisolatie buitenkant stucwerk"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~Z2V2ZWxpc29sYXRpZSBtZXQgc3R1Y3dlcms",
+      "status": "ADDED",
+      "searchTerm": "gevelisolatie met stucwerk"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3R1YyBpc29sYXRpZQ",
+      "status": "NONE",
+      "searchTerm": "stuc isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3R1Y2VuIG9wIGlzb2xhdGll",
+      "status": "NONE",
+      "searchTerm": "stucen op isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "3"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3R1Y3dlcmsgaXNvbGF0aWU",
+      "status": "NONE",
+      "searchTerm": "stucwerk isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "gevelisolatie met stucwerk"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~947022129807"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "5"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~c3RlZW5zdHJpcHMgYnVpdGVuZ2V2ZWwgbWV0IGlzb2xhdGll",
+      "status": "ADDED",
+      "searchTerm": "steenstrips buitengevel met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "steenstrips buitengevel met isolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~1651069781219"
+      }
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/5902256023/searchTermViews/23271040037~189657953758~bmlldXdlIGdldmVsIHBsYWF0c2VuIG1ldCBpc29sYXRpZQ",
+      "status": "ADDED",
+      "searchTerm": "nieuwe gevel plaatsen met isolatie"
+    },
+    "segments": {
+      "keyword": {
+        "info": {
+          "matchType": "EXACT",
+          "text": "nieuwe gevel plaatsen met isolatie"
+        },
+        "adGroupCriterion": "customers/5902256023/adGroupCriteria/189657953758~1676646475659"
+      }
+    }
+  }
+]

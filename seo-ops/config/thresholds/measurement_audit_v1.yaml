@@ -1,0 +1,53 @@
+# Measurement Audit Thresholds v1
+# Conservative thresholds for measurement quality assessment.
+# Aligned with post-cutover reality and low-traffic site context.
+#
+# Version: 1.0
+# Date: 2026-04-08
+
+# --- Session volume thresholds ---
+# Minimum GA4 sessions (28d) for different interpretation levels
+session_thresholds:
+  noise_floor: 5              # 0-5 sessions = noise, no interpretation
+  directional_minimum: 20     # 6-20 = directional only
+  confident_minimum: 50       # 50+ = reasonable for engagement interpretation
+
+# --- Conversion / key event thresholds ---
+conversion_thresholds:
+  low_volume_floor: 3         # <3 key events = insufficient for conversion conclusions
+  directional_minimum: 10     # 3-10 = directional conversion signal only
+  confident_minimum: 20       # 20+ = meaningful conversion interpretation
+
+# --- GSC visibility thresholds ---
+gsc_thresholds:
+  weak_signal_impression_floor: 10   # <10 impressions = weak signal
+  low_click_floor: 5                 # <5 clicks = low click evidence
+  meaningful_query_count: 3          # <3 distinct queries = narrow signal
+
+# --- GSC vs GA4 mismatch detection ---
+mismatch_thresholds:
+  # Ratio = GA4 sessions / GSC clicks. Normal range roughly 0.3-3.0
+  # Outside this range warrants investigation (different counting methods explain some variance)
+  high_mismatch_ratio_upper: 3.0     # GA4 sessions >> GSC clicks
+  high_mismatch_ratio_lower: 0.3     # GA4 sessions << GSC clicks
+  # Minimum volume to even compute mismatch (below this, ratio is meaningless)
+  minimum_clicks_for_mismatch: 5
+  minimum_sessions_for_mismatch: 5
+
+# --- (not set) quality indicators ---
+not_set_thresholds:
+  elevated_pct: 0.05          # >5% (not set) landing pages = elevated
+  warning_pct: 0.10           # >10% = tracking health concern
+  critical_pct: 0.20          # >20% = significant measurement gap
+
+# --- Engagement proxy limits ---
+engagement_proxy_rules:
+  # Engagement metrics are NOT conversion proof.
+  # These thresholds define when engagement metrics are too weak to even cite.
+  minimum_sessions_for_engagement_rate: 20    # Don't cite engagement rate below this N
+  minimum_sessions_for_bounce_rate: 20        # Same for bounce rate
+
+# --- Window and freshness ---
+freshness:
+  max_artifact_age_days: 7         # Warn if GA4/GSC artifact is older
+  cutover_safe_window_days: 90     # Need 90+ days post-cutover for clean window

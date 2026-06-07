@@ -1,0 +1,98 @@
+# project_state_v1.yaml
+# Current-state truth layer for BM Klus BV SEO/PPC operation.
+# PURPOSE: Give the model an accurate snapshot of where the project stands RIGHT NOW.
+# UPDATE: After every meaningful change (redirect deployed, page updated, campaign changed, snapshot refreshed).
+# RULE: If a fact is uncertain, mark it with "# unverified" comment.
+
+# ── Site state ──────────────────────────────────────────────
+site_state:
+  domain: bm-klus-bv.nl
+  platform: next.js_static_export  # Vercel hosting
+  cutover_date: "2026-03-08"
+  days_since_cutover: 31  # as of 2026-04-08
+  phase: 4  # post-launch optimisation
+  indexation_status: partial  # new site still gaining index coverage
+  known_legacy_domain: null  # no old domain, same domain migration (WordPress → Next.js)
+
+# ── SEO state ───────────────────────────────────────────────
+seo_state:
+  gsc_property: sc-domain:bm-klus-bv.nl
+  latest_gsc_snapshot: "2026-04-04"  # gsc_query_page_last90d covers 2026-01-05 → 2026-04-04
+  snapshot_window_days: 90
+  post_cutover_clean_window_days: 27  # only 2026-03-08 → 2026-04-04 is new-site data
+  pre_cutover_noise_in_snapshot: true  # ~63 days of old-site data mixed in
+  total_indexed_pages_approx: 50  # unverified, estimate from page_inventory
+  city_pages_gevelisolatie: 21  # fully rolled out, maintenance mode
+  city_pages_other_services: 0  # no location sub-pages for other services yet
+  known_cannibalization:
+    - query: "stucen rotterdam"
+      competing_pages: 2  # / and /muren-stucen/ — /muren-stucen-2/ redirected as of 2026-04
+      status: monitoring  # redirect deployed, awaiting GSC re-crawl to confirm consolidation
+  keyword_master_version: v3
+  dataforseo_enrichment: partial  # only gevelisolatie cluster enriched
+
+# ── PPC state ───────────────────────────────────────────────
+ppc_state:
+  platform: google_ads
+  daily_budget_eur: 10
+  campaign_restructure_date: "2026-03-15"  # campaign structure materially updated
+  active_campaigns: true  # unverified — last known state
+  latest_ads_export: null  # no fresh export in current snapshot set
+  interpretation_mode: conservative  # low budget = small samples = wide confidence intervals
+  known_issues:
+    - "PPC data before 2026-03-15 reflects old campaign setup"
+
+# ── Measurement state ───────────────────────────────────────
+measurement_state:
+  ga4_property_id: null  # TODO in site.yaml, but data is collected
+  latest_ga4_snapshot: "2026-04-04"
+  key_events_configured:
+    - contact_form_submit
+    - whatsapp_click
+    - phone_click
+  known_measurement_gaps:
+    - "(not set) landing pages in GA4"
+    - "no offline conversion tracking"
+    - "GA4 property_id not recorded in config"
+
+# ── Resolved issues (do NOT re-report these) ───────────────
+resolved_issues:
+  - id: city_pages_rollout
+    description: "21/21 gevelisolatie city pages deployed"
+    resolved_date: "2026-03"
+    status: maintenance_only
+
+# ── Pending actions (known but not yet done) ────────────────
+pending_actions:
+  - id: redirect_muren_stucen_2
+    description: "301 redirect /muren-stucen-2/ → /muren-stucen/"
+    source: legacy_indexation_review_v1
+    priority: medium
+    status: done  # deployed in deploy/apache/root.htaccess
+
+  - id: muren_stucen_title_fix
+    description: "Rewrite title/meta for /muren-stucen/ to include top query terms"
+    source: page_audit_2026-04-07
+    priority: high
+    status: pending
+
+# ── Known legacy noise (ignore in analysis) ─────────────────
+legacy_noise:
+  - pattern: "GSC data before 2026-03-08"
+    treatment: "Exclude or caveat — belongs to old WordPress site"
+  - pattern: "/muren-stucen-2/"
+    treatment: "Legacy duplicate, 301 redirect deployed — monitor GSC de-indexation"
+  - pattern: "Indexed image URLs (/images/*.webp in GSC)"
+    treatment: "Low-risk noise, monitor only"
+
+# ── Active monitoring items ──────────────────────────────────
+monitoring:
+  - item: "Post-cutover indexation progress"
+    check_method: "GSC Coverage report"
+    next_review: "2026-04-15"
+  - item: "CTR recovery after title/meta changes"
+    check_method: "GSC snapshot comparison"
+    next_review: "2026-05-01"
+  - item: "/gevelisolatie/ cluster performance"
+    check_method: "page_audit_v1 + keyword_master"
+    next_review: "2026-04-15"

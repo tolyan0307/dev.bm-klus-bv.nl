@@ -1,0 +1,132 @@
+{
+  "generated": "2026-06-06",
+  "source": "DataForSEO organic live advanced, NL/nl, depth100",
+  "total_cost_usd": 1.0135,
+  "queries_extracted": 74,
+  "timeouts": [
+    {
+      "keyword": "gevel sierpleister",
+      "device": "desktop",
+      "error": "HTTPSConnectionPool(host='api.dataforseo.com', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "keyword": "buitengevelisolatie",
+      "device": "mobile",
+      "error": "HTTPSConnectionPool(host='api.dataforseo.com', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "keyword": "gevel van buiten isoleren",
+      "device": "mobile",
+      "error": "HTTPSConnectionPool(host='api.dataforseo.com', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "keyword": "buitengevelisolatie rotterdam",
+      "device": "mobile",
+      "error": "HTTPSConnectionPool(host='api.dataforseo.com', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "keyword": "buiten stucwerk",
+      "device": "mobile",
+      "error": "HTTPSConnectionPool(host='api.dataforseo.com', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "keyword": "gevel sierpleister",
+      "device": "mobile",
+      "error": "HTTPSConnectionPool(host='api.dataforseo.com', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "keyword": "sierpleister buitengevel",
+      "device": "mobile",
+      "error": "HTTPSConnectionPool(host='api.dataforseo.com', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "keyword": "gevel schilderen",
+      "device": "mobile",
+      "error": "HTTPSConnectionPool(host='api.dataforseo.com', port=443): Read timed out. (read timeout=30)"
+    }
+  ],
+  "bm_presence_top100": [
+    {
+      "keyword": "sausklaar stucen",
+      "device": "desktop",
+      "pos": 27,
+      "url": "https://bm-klus-bv.nl/muren-stucen/"
+    },
+    {
+      "keyword": "behangklaar stucen",
+      "device": "desktop",
+      "pos": 37,
+      "url": "https://bm-klus-bv.nl/muren-stucen/"
+    },
+    {
+      "keyword": "gevel schilderen kosten",
+      "device": "mobile",
+      "pos": 43,
+      "url": "https://bm-klus-bv.nl/gevel-schilderen/"
+    },
+    {
+      "keyword": "behangklaar stucen",
+      "device": "mobile",
+      "pos": 45,
+      "url": "https://bm-klus-bv.nl/muren-stucen/"
+    }
+  ],
+  "bm_absent_count": 70,
+  "serp_feature_frequency": {
+    "people_also_ask": 67,
+    "people_also_search": 52,
+    "images": 50,
+    "ai_overview": 40,
+    "related_searches": 36,
+    "video": 29,
+    "local_pack": 17,
+    "popular_products": 9,
+    "compare_sites": 7,
+    "featured_snippet": 4,
+    "short_videos": 3
+  },
+  "top_competitor_domains_top10": {
+    "www.homedeal.nl": 39,
+    "www.gevelrenovatie-info.nl": 34,
+    "www.stucadoor-expert.nl": 22,
+    "slimster.nl": 18,
+    "www.eigenhuis.nl": 16,
+    "www.takkenkamp.com": 15,
+    "www.gamma.nl": 15,
+    "www.stuc-concurrent.nl": 13,
+    "www.plusisolatie.nl": 13,
+    "www.isolatie-info.nl": 12,
+    "stukadoorsclub.nl": 12,
+    "www.vtwonen.nl": 12,
+    "trustoo.nl": 11,
+    "www.isolatiespecialist.nl": 11,
+    "www.werkspot.nl": 11,
+    "www.040stucadoor.nl": 11,
+    "www.stucwerk-info.nl": 10,
+    "www.hornbach.nl": 10,
+    "www.lsgi.nl": 9,
+    "www.stuc-gigant.nl": 9,
+    "www.nederlandisoleert.nl": 8,
+    "www.kooyisolatie.nl": 8,
+    "www.pluimers.nl": 8,
+    "www.denistukadoor.nl": 8,
+    "www.metsel-gigant.nl": 7
+  },
+  "top_competitor_domains_top3": {
+    "www.homedeal.nl": 10,
+    "www.gamma.nl": 9,
+    "www.eigenhuis.nl": 7,
+    "www.milieucentraal.nl": 4,
+    "www.gevelrenovatie-info.nl": 3,
+    "www.bewi-isobouw.nl": 2,
+    "www.vandersanden.com": 2,
+    "www.doitpro.com": 2,
+    "isolex.nl": 2,
+    "www.stuc-gigant.nl": 2,
+    "www.stucadoor-expert.nl": 2,
+    "vanginkelstukadoors.nl": 2,
+    "www.karwei.nl": 2,
+    "www.casius.nl": 2,
+    "www.verfwinkel.nl": 2
+  }
+}

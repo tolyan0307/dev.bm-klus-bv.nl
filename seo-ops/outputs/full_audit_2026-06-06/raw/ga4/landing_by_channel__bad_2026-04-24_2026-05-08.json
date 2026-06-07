@@ -1,0 +1,107 @@
+[
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+    "sessionDefaultChannelGroup": "Paid Search",
+    "sessions": "39",
+    "keyEvents": "0",
+    "engagedSessions": "29"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/",
+    "sessionDefaultChannelGroup": "Paid Search",
+    "sessions": "31",
+    "keyEvents": "0",
+    "engagedSessions": "21"
+  },
+  {
+    "landingPagePlusQueryString": "/",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "18",
+    "keyEvents": "1",
+    "engagedSessions": "7"
+  },
+  {
+    "landingPagePlusQueryString": "(not set)",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "7",
+    "keyEvents": "0",
+    "engagedSessions": "0"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "4",
+    "keyEvents": "0",
+    "engagedSessions": "1"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/kosten/",
+    "sessionDefaultChannelGroup": "Paid Search",
+    "sessions": "4",
+    "keyEvents": "0",
+    "engagedSessions": "2"
+  },
+  {
+    "landingPagePlusQueryString": "/over-ons/",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "3",
+    "keyEvents": "0",
+    "engagedSessions": "1"
+  },
+  {
+    "landingPagePlusQueryString": "(not set)",
+    "sessionDefaultChannelGroup": "Paid Search",
+    "sessions": "2",
+    "keyEvents": "0",
+    "engagedSessions": "1"
+  },
+  {
+    "landingPagePlusQueryString": "/",
+    "sessionDefaultChannelGroup": "Direct",
+    "sessions": "2",
+    "keyEvents": "0",
+    "engagedSessions": "2"
+  },
+  {
+    "landingPagePlusQueryString": "/buiten-stucwerk/",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "2",
+    "keyEvents": "0",
+    "engagedSessions": "1"
+  },
+  {
+    "landingPagePlusQueryString": "/contact/",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "2",
+    "keyEvents": "0",
+    "engagedSessions": "1"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/subsidie-vergunning/",
+    "sessionDefaultChannelGroup": "Paid Search",
+    "sessions": "2",
+    "keyEvents": "0",
+    "engagedSessions": "1"
+  },
+  {
+    "landingPagePlusQueryString": "/onze-werken/",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "2",
+    "keyEvents": "0",
+    "engagedSessions": "1"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/",
+    "sessionDefaultChannelGroup": "Cross-network",
+    "sessions": "1",
+    "keyEvents": "0",
+    "engagedSessions": "1"
+  },
+  {
+    "landingPagePlusQueryString": "/sierpleister/",
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "1",
+    "keyEvents": "0",
+    "engagedSessions": "0"
+  }
+]

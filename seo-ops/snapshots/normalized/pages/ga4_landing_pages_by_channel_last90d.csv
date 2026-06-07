@@ -1,0 +1,127 @@
+landing_page_raw,normalized_path,session_default_channel_group,sessions,engaged_sessions,engagement_rate,avg_session_duration_seconds,mapped_route_guess,mapped_page_type_guess
+(not set),(not set),Organic Search,60,1,0.0167,27.2,,
+(not set),(not set),Paid Search,17,0,0.0,0.0,,
+(not set),(not set),Referral,14,0,0.0,0.0,,
+(not set),(not set),Direct,3,0,0.0,2.3,,
+(not set),(not set),Unassigned,2,0,0.0,12.0,,
+/,/,Organic Search,223,142,0.6368,579.2,/,home
+/,/,Direct,52,47,0.9038,310.7,/,home
+/,/,Referral,20,10,0.5,1396.8,/,home
+/,/,Paid Search,5,5,1.0,1238.8,/,home
+/,/,Unassigned,2,2,1.0,812.9,/,home
+/,/,Organic Social,1,0,0.0,1.0,/,home
+/,/,Organic Video,1,0,0.0,9.4,/,home
+/?%3F%3F=,/,Direct,1,1,1.0,31.3,/,home
+/?gtm_debug=1772895787448,/,Referral,1,1,1.0,825.5,/,home
+/?gtm_debug=1773388710825,/,Referral,1,1,1.0,1007.9,/,home
+/?gtm_debug=1773611253255,/,Referral,1,1,1.0,530.0,/,home
+/?gtm_debug=1773612414222,/,Referral,1,1,1.0,332.5,/,home
+/?gtm_debug=1775230122461,/,Referral,1,0,0.0,4.7,/,home
+/?gtm_debug=1775233878924,/,Referral,1,1,1.0,1652.6,/,home
+/?ved=2ahUKEwjq4a37qv6SAxWX2AIHHcH7IVYQgU96BQi0ARAO,/,Organic Search,1,0,0.0,6.1,/,home
+//onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,//onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,Organic Search,1,1,1.0,857.4,,
+/buiten-stucwerk/,/buiten-stucwerk/,Organic Search,25,13,0.52,199.3,/buiten-stucwerk/,service
+/buiten-stucwerk/,/buiten-stucwerk/,Paid Search,12,7,0.5833,192.2,/buiten-stucwerk/,service
+/buiten-stucwerk/,/buiten-stucwerk/,Direct,2,1,0.5,620.4,/buiten-stucwerk/,service
+/buitenstucwerk-woning-halsteren-sierpleister-schilderwerk-2025/,/buitenstucwerk-woning-halsteren-sierpleister-schilderwerk-2025/,Organic Search,2,1,0.5,52.2,,
+/buitenstucwerk-woning-halsteren-sierpleister-schilderwerk-2025/,/buitenstucwerk-woning-halsteren-sierpleister-schilderwerk-2025/,Referral,1,0,0.0,0.0,,
+/contact/,/contact/,Organic Search,6,3,0.5,747.6,/contact/,utility
+/contact/,/contact/,Direct,2,1,0.5,258.2,/contact/,utility
+/contact/,/contact/,Paid Search,1,0,0.0,6.4,/contact/,utility
+/contact/,/contact/,Referral,1,1,1.0,572.0,/contact/,utility
+/diensten/,/diensten/,Organic Search,4,4,1.0,595.9,/diensten/,service
+/diensten/,/diensten/,Referral,4,2,0.5,432.6,/diensten/,service
+/diensten/,/diensten/,Paid Search,1,1,1.0,1295.4,/diensten/,service
+/gevel-schilderen/,/gevel-schilderen/,Organic Search,14,7,0.5,246.1,/gevel-schilderen/,service
+/gevel-schilderen/,/gevel-schilderen/,Referral,5,3,0.6,143.6,/gevel-schilderen/,service
+/gevel-schilderen/,/gevel-schilderen/,Direct,2,2,1.0,3257.2,/gevel-schilderen/,service
+/gevelisolatie-woning-klaaswaal-6cm-sierpleister/,/gevelisolatie-woning-klaaswaal-6cm-sierpleister/,Referral,1,1,1.0,1327.8,,
+/gevelisolatie-woning-vlaardingen-10cm-sierpleister/,/gevelisolatie-woning-vlaardingen-10cm-sierpleister/,Direct,1,0,0.0,3.5,,
+/gevelisolatie/,/gevelisolatie/,Paid Search,147,104,0.7075,161.8,/gevelisolatie/,service
+/gevelisolatie/,/gevelisolatie/,Organic Search,53,35,0.6604,536.1,/gevelisolatie/,service
+/gevelisolatie/,/gevelisolatie/,Referral,10,8,0.8,378.4,/gevelisolatie/,service
+/gevelisolatie/,/gevelisolatie/,Direct,8,3,0.375,223.8,/gevelisolatie/,service
+/gevelisolatie/,/gevelisolatie/,Cross-network,2,2,1.0,130.3,/gevelisolatie/,service
+/gevelisolatie/,/gevelisolatie/,Unassigned,2,1,0.5,23.3,/gevelisolatie/,service
+/gevelisolatie/afwerkingen/,/gevelisolatie/afwerkingen/,Paid Search,81,51,0.6296,181.9,/gevelisolatie/afwerkingen/,cluster
+/gevelisolatie/afwerkingen/,/gevelisolatie/afwerkingen/,Organic Search,3,2,0.6667,694.4,/gevelisolatie/afwerkingen/,cluster
+/gevelisolatie/afwerkingen/,/gevelisolatie/afwerkingen/,Direct,2,1,0.5,82.9,/gevelisolatie/afwerkingen/,cluster
+/gevelisolatie/afwerkingen/,/gevelisolatie/afwerkingen/,Cross-network,1,1,1.0,175.3,/gevelisolatie/afwerkingen/,cluster
+/gevelisolatie/bergen-op-zoom/,/gevelisolatie/bergen-op-zoom/,Organic Search,1,1,1.0,112.6,/gevelisolatie/bergen-op-zoom/,city
+/gevelisolatie/delft/,/gevelisolatie/delft/,Organic Search,3,3,1.0,478.5,/gevelisolatie/delft/,city
+/gevelisolatie/den-haag/,/gevelisolatie/den-haag/,Organic Search,3,3,1.0,226.4,/gevelisolatie/den-haag/,city
+/gevelisolatie/dordrecht/,/gevelisolatie/dordrecht/,Organic Search,3,2,0.6667,153.3,/gevelisolatie/dordrecht/,city
+/gevelisolatie/dordrecht/,/gevelisolatie/dordrecht/,Direct,2,2,1.0,169.1,/gevelisolatie/dordrecht/,city
+/gevelisolatie/dordrecht/,/gevelisolatie/dordrecht/,Paid Search,1,1,1.0,466.9,/gevelisolatie/dordrecht/,city
+/gevelisolatie/gouda/,/gevelisolatie/gouda/,Organic Search,1,1,1.0,175.8,/gevelisolatie/gouda/,city
+/gevelisolatie/hellevoetsluis/,/gevelisolatie/hellevoetsluis/,Organic Search,2,2,1.0,48.0,/gevelisolatie/hellevoetsluis/,city
+/gevelisolatie/hellevoetsluis/,/gevelisolatie/hellevoetsluis/,Direct,1,0,0.0,9.3,/gevelisolatie/hellevoetsluis/,city
+/gevelisolatie/hendrik-ido-ambacht/,/gevelisolatie/hendrik-ido-ambacht/,Direct,1,0,0.0,5.8,/gevelisolatie/hendrik-ido-ambacht/,city
+/gevelisolatie/kosten/,/gevelisolatie/kosten/,Paid Search,23,13,0.5652,145.4,/gevelisolatie/kosten/,cluster
+/gevelisolatie/kosten/,/gevelisolatie/kosten/,Organic Search,18,10,0.5556,180.4,/gevelisolatie/kosten/,cluster
+/gevelisolatie/kosten/,/gevelisolatie/kosten/,Referral,1,1,1.0,34.9,/gevelisolatie/kosten/,cluster
+/gevelisolatie/leiden/,/gevelisolatie/leiden/,Organic Search,1,1,1.0,607.9,/gevelisolatie/leiden/,city
+/gevelisolatie/materialen/,/gevelisolatie/materialen/,Organic Search,5,3,0.6,150.4,/gevelisolatie/materialen/,cluster
+/gevelisolatie/materialen/,/gevelisolatie/materialen/,Paid Search,2,1,0.5,504.3,/gevelisolatie/materialen/,cluster
+/gevelisolatie/materialen/,/gevelisolatie/materialen/,Direct,1,0,0.0,5.8,/gevelisolatie/materialen/,cluster
+/gevelisolatie/rc-waarde-dikte/,/gevelisolatie/rc-waarde-dikte/,Organic Search,10,7,0.7,177.4,/gevelisolatie/rc-waarde-dikte/,cluster
+/gevelisolatie/rc-waarde-dikte/,/gevelisolatie/rc-waarde-dikte/,Direct,1,0,0.0,5.5,/gevelisolatie/rc-waarde-dikte/,cluster
+/gevelisolatie/roosendaal/,/gevelisolatie/roosendaal/,Direct,1,1,1.0,29.6,/gevelisolatie/roosendaal/,city
+/gevelisolatie/roosendaal/,/gevelisolatie/roosendaal/,Organic Search,1,1,1.0,100.1,/gevelisolatie/roosendaal/,city
+/gevelisolatie/rotterdam/,/gevelisolatie/rotterdam/,Direct,2,1,0.5,71.1,/gevelisolatie/rotterdam/,city
+/gevelisolatie/rotterdam/,/gevelisolatie/rotterdam/,Organic Search,2,2,1.0,311.4,/gevelisolatie/rotterdam/,city
+/gevelisolatie/schiedam/,/gevelisolatie/schiedam/,Direct,1,1,1.0,52.8,/gevelisolatie/schiedam/,city
+/gevelisolatie/subsidie-vergunning/,/gevelisolatie/subsidie-vergunning/,Organic Search,2,1,0.5,4.5,/gevelisolatie/subsidie-vergunning/,cluster
+/gevelisolatie/subsidie-vergunning/,/gevelisolatie/subsidie-vergunning/,Paid Search,2,1,0.5,95.6,/gevelisolatie/subsidie-vergunning/,cluster
+/gevelisolatie/subsidie-vergunning/,/gevelisolatie/subsidie-vergunning/,Direct,1,1,1.0,15.4,/gevelisolatie/subsidie-vergunning/,cluster
+/gevelisolatie/vlaardingen/,/gevelisolatie/vlaardingen/,Organic Search,1,1,1.0,24.2,/gevelisolatie/vlaardingen/,city
+/muren-stucen-2/,/muren-stucen-2/,Referral,1,0,0.0,0.0,,
+/muren-stucen/,/muren-stucen/,Organic Search,4,2,0.5,658.2,/muren-stucen/,service
+/muren-stucen/,/muren-stucen/,Direct,1,0,0.0,1.6,/muren-stucen/,service
+/object13/,/object13/,Organic Search,6,2,0.3333,118.9,,
+/object9/,/object9/,Organic Search,5,3,0.6,41.5,,
+/onze-werken/,/onze-werken/,Organic Search,30,17,0.5667,275.2,/onze-werken/,archive
+/onze-werken/,/onze-werken/,Referral,10,7,0.7,1381.3,/onze-werken/,archive
+/onze-werken/,/onze-werken/,Direct,3,3,1.0,90.3,/onze-werken/,archive
+/onze-werken/,/onze-werken/,Paid Search,1,1,1.0,213.0,/onze-werken/,archive
+/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2024/,/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2024/,Referral,1,1,1.0,1019.3,,
+/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/,/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/,Direct,1,0,0.0,5.8,/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/,project
+/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/,/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/,Organic Search,1,1,1.0,637.2,/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/,project
+/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/,/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/,Direct,1,1,1.0,40.9,/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/,project
+/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/,/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/,Organic Search,1,1,1.0,28.9,/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/,project
+/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/,/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/,Organic Search,2,1,0.5,617.0,/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/,project
+/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,Organic Search,5,3,0.6,94.0,/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,project
+/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,Direct,1,1,1.0,660.1,/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,project
+/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/,/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/,Organic Search,2,0,0.0,0.0,/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/,project
+/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/,/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/,Unassigned,1,0,0.0,0.0,/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/,project
+/onze-werken/nieuw-/,/onze-werken/nieuw-/,Organic Search,1,1,1.0,2474.2,,
+/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2024/,/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2024/,Organic Search,1,1,1.0,31.8,,
+/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/,/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/,Direct,1,0,0.0,4.0,/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/,project
+/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,Direct,1,1,1.0,18.1,/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,project
+/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,Organic Search,1,0,0.0,0.0,/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,project
+/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,Paid Search,1,1,1.0,42.6,/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/,project
+/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/,/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/,Organic Search,1,1,1.0,20.6,/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/,project
+/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/,/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/,Organic Search,3,3,1.0,401.4,/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/,project
+/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/,/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/,Direct,1,1,1.0,40.1,/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/,project
+/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/,/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/,Direct,1,1,1.0,16.4,/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/,project
+/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/,/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/,Organic Search,1,1,1.0,1116.2,/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/,project
+/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/,/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/,Paid Search,1,0,0.0,0.0,/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/,project
+/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/,/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/,Referral,1,1,1.0,10.4,/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/,project
+/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/,/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/,Direct,1,1,1.0,11.8,/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/,project
+/over-ons/,/over-ons/,Organic Search,8,5,0.625,451.5,/over-ons/,utility
+/over-ons/,/over-ons/,Referral,3,3,1.0,18.6,/over-ons/,utility
+/over-ons/,/over-ons/,Direct,2,2,1.0,1674.2,/over-ons/,utility
+/over-ons/,/over-ons/,Paid Search,1,0,0.0,0.0,/over-ons/,utility
+/over_ons/,/over_ons/,Direct,2,1,0.5,357.9,,
+/over_ons/,/over_ons/,Referral,1,0,0.0,0.0,,
+/privacybeleid/,/privacybeleid/,Referral,2,2,1.0,967.0,/privacybeleid/,legal
+/privacybeleid/,/privacybeleid/,Direct,1,1,1.0,42.1,/privacybeleid/,legal
+/schoonmaak-na-verbouwing/,/schoonmaak-na-verbouwing/,Referral,2,2,1.0,705.0,/schoonmaak-na-verbouwing/,service
+/schoonmaak-na-verbouwing/,/schoonmaak-na-verbouwing/,Organic Search,1,1,1.0,49.8,/schoonmaak-na-verbouwing/,service
+/sierpleister/,/sierpleister/,Organic Search,18,6,0.3333,105.2,/sierpleister/,service
+/sierpleister/,/sierpleister/,Organic Social,3,1,0.3333,27.7,/sierpleister/,service
+/sierpleister/,/sierpleister/,Direct,2,2,1.0,476.7,/sierpleister/,service
+/sierpleister/,/sierpleister/,Referral,2,0,0.0,0.8,/sierpleister/,service
+/sierpleister/,/sierpleister/,Paid Search,1,1,1.0,27.0,/sierpleister/,service
+/✅️,/✅️/,Organic Social,4,1,0.25,6.8,,
+/✅️👍,/✅️👍/,Direct,2,1,0.5,11.7,,

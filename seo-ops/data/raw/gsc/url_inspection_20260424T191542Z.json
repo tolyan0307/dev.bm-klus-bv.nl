@@ -1,0 +1,101 @@
+{
+  "https://bm-klus-bv.nl/gevelisolatie/": {
+    "inspectionResult": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://bm-klus-bv.nl/&id=y6rC3PKwlwFuv9ZMWDAuFw&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Ingediend en geïndexeerd",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-01T04:35:59Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://bm-klus-bv.nl/gevelisolatie/",
+        "userCanonical": "https://bm-klus-bv.nl/gevelisolatie/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      },
+      "richResultsResult": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Broodkruimels",
+            "items": [
+              {
+                "name": "Naamloos item"
+              }
+            ]
+          },
+          {
+            "richResultType": "Veelgestelde vragen",
+            "items": [
+              {
+                "name": "Naamloos item"
+              }
+            ]
+          },
+          {
+            "richResultType": "Reviewfragmenten",
+            "items": [
+              {
+                "name": "BM klus BV"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://bm-klus-bv.nl/gevelisolatie/rotterdam/": {
+    "inspectionResult": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://bm-klus-bv.nl/&id=2d7Ca9RUkKxu9Eb_nYfmLw&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Ingediend en geïndexeerd",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-03-20T12:49:42Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://bm-klus-bv.nl/gevelisolatie/rotterdam/",
+        "userCanonical": "https://bm-klus-bv.nl/gevelisolatie/rotterdam/",
+        "sitemap": [
+          "https://bm-klus-bv.nl/sitemap.xml"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      },
+      "richResultsResult": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Broodkruimels",
+            "items": [
+              {
+                "name": "Naamloos item"
+              }
+            ]
+          },
+          {
+            "richResultType": "Veelgestelde vragen",
+            "items": [
+              {
+                "name": "Naamloos item"
+              }
+            ]
+          },
+          {
+            "richResultType": "Reviewfragmenten",
+            "items": [
+              {
+                "name": "BM klus BV"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

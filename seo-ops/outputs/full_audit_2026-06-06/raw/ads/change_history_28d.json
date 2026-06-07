@@ -1,0 +1,47 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "changeEvent": {
+      "resourceName": "customers/5902256023/changeEvents/1778593885989855~0~0",
+      "changeDateTime": "2026-05-12 15:51:25.989855",
+      "changeResourceType": "CAMPAIGN_BUDGET",
+      "clientType": "GOOGLE_ADS_MOBILE_APP",
+      "userEmail": "bmklusbv@gmail.com",
+      "resourceChangeOperation": "UPDATE",
+      "changedFields": "amountMicros"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "changeEvent": {
+      "resourceName": "customers/5902256023/changeEvents/1778356122183391~0~0",
+      "changeDateTime": "2026-05-09 21:48:42.183391",
+      "changeResourceType": "CAMPAIGN_BUDGET",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "bmklusbv@gmail.com",
+      "resourceChangeOperation": "UPDATE",
+      "changedFields": "amountMicros"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "changeEvent": {
+      "resourceName": "customers/5902256023/changeEvents/1778351535340543~0~0",
+      "changeDateTime": "2026-05-09 20:32:15.340543",
+      "changeResourceType": "CAMPAIGN_BUDGET",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "bmklusbv@gmail.com",
+      "resourceChangeOperation": "UPDATE",
+      "changedFields": "amountMicros"
+    }
+  }
+]

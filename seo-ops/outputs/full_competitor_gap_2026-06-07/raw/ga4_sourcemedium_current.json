@@ -1,0 +1,27 @@
+[
+  {
+    "sessionSourceMedium": "google / cpc",
+    "sessions": "106",
+    "keyEvents": "7"
+  },
+  {
+    "sessionSourceMedium": "google / organic",
+    "sessions": "73",
+    "keyEvents": "1"
+  },
+  {
+    "sessionSourceMedium": "(direct) / (none)",
+    "sessions": "8",
+    "keyEvents": "1"
+  },
+  {
+    "sessionSourceMedium": "(data not available)",
+    "sessions": "1",
+    "keyEvents": "0"
+  },
+  {
+    "sessionSourceMedium": "claude.ai / referral",
+    "sessions": "1",
+    "keyEvents": "0"
+  }
+]

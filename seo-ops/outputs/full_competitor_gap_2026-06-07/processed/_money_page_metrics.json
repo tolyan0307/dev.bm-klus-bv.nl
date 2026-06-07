@@ -1,0 +1,72 @@
+[
+  {
+    "page": "/gevelisolatie/",
+    "impr_prev": 627,
+    "impr_cur": 574,
+    "clicks_prev": 9,
+    "clicks_cur": 9,
+    "pos_prev": 19.29,
+    "pos_cur": 15.49,
+    "ctr_cur": 0.0157
+  },
+  {
+    "page": "/gevelisolatie/kosten/",
+    "impr_prev": 456,
+    "impr_cur": 285,
+    "clicks_prev": 4,
+    "clicks_cur": 3,
+    "pos_prev": 18.53,
+    "pos_cur": 25.45,
+    "ctr_cur": 0.0105
+  },
+  {
+    "page": "/gevelisolatie/afwerkingen/",
+    "impr_prev": 163,
+    "impr_cur": 202,
+    "clicks_prev": 1,
+    "clicks_cur": 2,
+    "pos_prev": 23.45,
+    "pos_cur": 11.11,
+    "ctr_cur": 0.0099
+  },
+  {
+    "page": "/buiten-stucwerk/",
+    "impr_prev": 1078,
+    "impr_cur": 782,
+    "clicks_prev": 1,
+    "clicks_cur": 6,
+    "pos_prev": 12.1,
+    "pos_cur": 13.47,
+    "ctr_cur": 0.0077
+  },
+  {
+    "page": "/sierpleister/",
+    "impr_prev": 306,
+    "impr_cur": 231,
+    "clicks_prev": 2,
+    "clicks_cur": 1,
+    "pos_prev": 24.03,
+    "pos_cur": 21.62,
+    "ctr_cur": 0.0043
+  },
+  {
+    "page": "/muren-stucen/",
+    "impr_prev": 1434,
+    "impr_cur": 1446,
+    "clicks_prev": 0,
+    "clicks_cur": 0,
+    "pos_prev": 38.65,
+    "pos_cur": 35.1,
+    "ctr_cur": 0
+  },
+  {
+    "page": "/gevel-schilderen/",
+    "impr_prev": 407,
+    "impr_cur": 463,
+    "clicks_prev": 2,
+    "clicks_cur": 0,
+    "pos_prev": 34.45,
+    "pos_cur": 37.02,
+    "ctr_cur": 0
+  }
+]

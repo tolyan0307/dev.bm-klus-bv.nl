@@ -1,0 +1,184 @@
+{
+  "property_id": "428253147",
+  "window": {
+    "start": "2026-04-24",
+    "end": "2026-05-08"
+  },
+  "session_source_medium": "google / cpc",
+  "key_events_tracked": [
+    "Contact_Form_Site",
+    "Phone",
+    "Whatsapp"
+  ],
+  "landing_pages": {
+    "dimensions": [
+      "landingPagePlusQueryString"
+    ],
+    "metrics": [
+      "sessions",
+      "engagedSessions",
+      "engagementRate",
+      "userEngagementDuration",
+      "keyEvents"
+    ],
+    "row_count": 5,
+    "rows": [
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "sessions": "39",
+        "engagedSessions": "29",
+        "engagementRate": "0.74358974358974361",
+        "userEngagementDuration": "2993",
+        "keyEvents": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/",
+        "sessions": "31",
+        "engagedSessions": "21",
+        "engagementRate": "0.67741935483870963",
+        "userEngagementDuration": "1417",
+        "keyEvents": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/kosten/",
+        "sessions": "4",
+        "engagedSessions": "2",
+        "engagementRate": "0.5",
+        "userEngagementDuration": "132",
+        "keyEvents": "0"
+      },
+      {
+        "landingPagePlusQueryString": "(not set)",
+        "sessions": "2",
+        "engagedSessions": "1",
+        "engagementRate": "0.5",
+        "userEngagementDuration": "2",
+        "keyEvents": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/subsidie-vergunning/",
+        "sessions": "2",
+        "engagedSessions": "1",
+        "engagementRate": "0.5",
+        "userEngagementDuration": "154",
+        "keyEvents": "0"
+      }
+    ]
+  },
+  "session_campaigns": {
+    "dimensions": [
+      "sessionCampaignName"
+    ],
+    "metrics": [
+      "sessions",
+      "keyEvents"
+    ],
+    "row_count": 1,
+    "rows": [
+      {
+        "sessionCampaignName": "NL | Gevelisolatie | Search",
+        "sessions": "78",
+        "keyEvents": "0"
+      }
+    ]
+  },
+  "key_events_by_landing_page": {
+    "dimensions": [
+      "landingPagePlusQueryString",
+      "eventName"
+    ],
+    "metrics": [
+      "eventCount"
+    ],
+    "filter": "sessionSourceMedium == source_medium AND eventName IN key_events",
+    "row_count": 0,
+    "rows": []
+  },
+  "daily_sessions": {
+    "dimensions": [
+      "date"
+    ],
+    "metrics": [
+      "sessions",
+      "keyEvents"
+    ],
+    "row_count": 15,
+    "rows": [
+      {
+        "date": "20260503",
+        "sessions": "10",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260506",
+        "sessions": "9",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260505",
+        "sessions": "8",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260508",
+        "sessions": "8",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260424",
+        "sessions": "6",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260504",
+        "sessions": "6",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260507",
+        "sessions": "6",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260426",
+        "sessions": "5",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260502",
+        "sessions": "4",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260425",
+        "sessions": "3",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260427",
+        "sessions": "3",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260428",
+        "sessions": "3",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260430",
+        "sessions": "3",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260429",
+        "sessions": "2",
+        "keyEvents": "0"
+      },
+      {
+        "date": "20260501",
+        "sessions": "2",
+        "keyEvents": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "_meta": {
+    "generator": "run_local_seo_gbp_audit_v1.py",
+    "generated_at": "2026-04-24T17:12:42.304340+00:00",
+    "version": "1.0",
+    "contract": "contracts/local_seo_gbp_rules_v1.md",
+    "scope": "combined",
+    "gsc_window_used": 90,
+    "limited_mode": false
+  },
+  "artifact_provenance": {
+    "local_entities": {
+      "path": "config/locales/local_entities_v1.yaml",
+      "status": "loaded",
+      "source_class": "internal_config"
+    },
+    "gbp_performance": {
+      "path": "GBP Performance API",
+      "status": "loaded",
+      "source_class": "gbp_api"
+    },
+    "gbp_reviews": {
+      "path": "GBP Reviews API",
+      "status": "loaded",
+      "source_class": "gbp_api"
+    },
+    "gsc_queries": {
+      "path": "snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv",
+      "status": "loaded, 441 rows",
+      "source_class": "internal_artifact"
+    },
+    "page_inventory": {
+      "path": "snapshots/normalized/pages/page_inventory_v1.csv",
+      "status": "loaded, 54 pages",
+      "source_class": "internal_artifact"
+    }
+  },
+  "outcomes": [
+    "gbp_signal_adequate",
+    "gbp_signal_adequate"
+  ],
+  "profile_diagnosis": {
+    "outcome": "gbp_signal_adequate",
+    "observations": [
+      "GBP data loaded for period: 2026-01-24 → 2026-04-24 (90d)",
+      "  BUSINESS_IMPRESSIONS_DESKTOP_MAPS: 66",
+      "  BUSINESS_IMPRESSIONS_MOBILE_MAPS: 97",
+      "  CALL_CLICKS: 2",
+      "  WEBSITE_CLICKS: 81",
+      "  BUSINESS_DIRECTION_REQUESTS: 114",
+      "  BUSINESS_IMPRESSIONS_MOBILE_SEARCH: 511",
+      "  BUSINESS_IMPRESSIONS_DESKTOP_SEARCH: 151"
+    ],
+    "interpretations": [
+      "GBP profile shows measurable activity: 825 impressions and 197 user actions in the reporting period."
+    ],
+    "hypotheses": [],
+    "recommended_actions": [],
+    "excluded_context": []
+  },
+  "reviews_diagnosis": {
+    "outcome": "gbp_signal_adequate",
+    "observations": [
+      "Total reviews: 18",
+      "Average rating: 4.9",
+      "Recent reviews fetched: 18"
+    ],
+    "interpretations": [
+      "Review signal is adequate: 18 reviews with 4.9 average. This provides reasonable social proof for a local service business."
+    ],
+    "hypotheses": [],
+    "recommended_actions": [],
+    "excluded_context": []
+  },
+  "supporting_context": {
+    "local_queries_count": 31,
+    "local_queries_top10": [
+      {
+        "query": "gevelisolatie rotterdam",
+        "clicks": 2,
+        "impressions": 1369,
+        "matched_signal": "rotterdam"
+      },
+      {
+        "query": "gevelrenovatie met folie in rotterdam",
+        "clicks": 0,
+        "impressions": 461,
+        "matched_signal": "rotterdam"
+      },
+      {
+        "query": "gevelisolatie den haag",
+        "clicks": 0,
+        "impressions": 246,
+        "matched_signal": "den haag"
+      },
+      {
+        "query": "buitengevelisolatie rotterdam",
+        "clicks": 0,
+        "impressions": 135,
+        "matched_signal": "rotterdam"
+      },
+      {
+        "query": "stucen rotterdam",
+        "clicks": 0,
+        "impressions": 47,
+        "matched_signal": "rotterdam"
+      },
+      {
+        "query": "specialistisch stucwerk in rotterdam",
+        "clicks": 0,
+        "impressions": 44,
+        "matched_signal": "rotterdam"
+      },
+      {
+        "query": "klusbedrijf rotterdam",
+        "clicks": 0,
+        "impressions": 41,
+        "matched_signal": "rotterdam"
+      },
+      {
+        "query": "gevel renovatie rotterdam",
+        "clicks": 0,
+        "impressions": 28,
+        "matched_signal": "rotterdam"
+      },
+      {
+        "query": "vochtproblemen rotterdam",
+        "clicks": 0,
+        "impressions": 24,
+        "matched_signal": "rotterdam"
+      },
+      {
+        "query": "wand schilderen zuid-holland",
+        "clicks": 0,
+        "impressions": 12,
+        "matched_signal": "zuid-holland"
+      }
+    ],
+    "location_coverage": {
+      "covered": 8,
+      "total": 9,
+      "coverage_ratio": 0.8888888888888888,
+      "pages": [
+        {
+          "route": "/gevelisolatie/barendrecht/",
+          "matched_term": "barendrecht"
+        },
+        {
+          "route": "/gevelisolatie/capelle-aan-den-ijssel/",
+          "matched_term": "capelle aan den ijssel"
+        },
+        {
+          "route": "/gevelisolatie/den-haag/",
+          "matched_term": "den haag"
+        },
+        {
+          "route": "/gevelisolatie/dordrecht/",
+          "matched_term": "dordrecht"
+        },
+        {
+          "route": "/gevelisolatie/ridderkerk/",
+          "matched_term": "ridderkerk"
+        },
+        {
+          "route": "/gevelisolatie/rotterdam/",
+          "matched_term": "rotterdam"
+        },
+        {
+          "route": "/gevelisolatie/schiedam/",
+          "matched_term": "schiedam"
+        },
+        {
+          "route": "/gevelisolatie/vlaardingen/",
+          "matched_term": "vlaardingen"
+        },
+        {
+          "route": "/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
+          "matched_term": "dordrecht"
+        },
+        {
+          "route": "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
+          "matched_term": "rotterdam"
+        },
+        {
+          "route": "/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
+          "matched_term": "rotterdam"
+        },
+        {
+          "route": "/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/",
+          "matched_term": "vlaardingen"
+        },
+        {
+          "route": "/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/",
+          "matched_term": "vlaardingen"
+        }
+      ]
+    }
+  }
+}

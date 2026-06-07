@@ -1,0 +1,11 @@
+keyword,why_selected,source_bucket,planner_volume,historical_volume,gsc_impressions,ads_clicks,ads_conversions,dataforseo_search_volume,dataforseo_cpc,dataforseo_competition,dataforseo_competition_level,dataforseo_intent,volume_alignment_guess,commercial_alignment_guess,notes
+gevelisolatie rotterdam,"Biggest SEO opportunity: striking distance pos 8.0, 1369 impr",seo_do_now,,,1369,,,,,,,commercial,unavailable,unavailable,Volume comparison unavailable (missing planner or DFS data)
+buitengevelisolatie,"Proven PPC converter (1 conv, 27 clicks) + high GSC impressions (517)",ppc_do_now + seo_monitor,480,480,517,22,1.0,480,3.09,1,HIGH,transactional,agrees,strong,Strong commercial signal confirmed
+buitenmuur isoleren,"Proven PPC converter (1 conv, 9 clicks), high planner vol 1000",ppc_do_now,1000,1000,,6,1.0,1000,2.32,1,HIGH,commercial,agrees,strong,Strong commercial signal confirmed
+gevel van buiten isoleren,"Proven PPC converter (1 conv, 21 clicks), low CPA 18 EUR",ppc_do_now,30,30,,21,1.0,30,0.46,1,HIGH,informational,agrees,strong,Strong commercial signal confirmed
+gevelisolatie kosten,"Striking distance pos 19.3, planner vol 260, kosten intent = high commercial",seo_do_now,260,,69,,0.0,260,4.35,0.64,MEDIUM,transactional,agrees,weak,Weak commercial signal: has CPC or ads data but not both confirmed
+gevelisolatie,"Head term, planner vol 2400, 25 ads clicks, core brand relevance",cross_channel,2400,2400,11,21,0.0,2400,4.61,1,HIGH,transactional,agrees,medium,
+buitenmuur isolatie,"Planner vol 320, no page mapping, potential content gap",unmapped_gap,320,,,,,320,2.11,1,HIGH,transactional,agrees,weak,Weak commercial signal: has CPC or ads data but not both confirmed
+isoleren van buitenmuren,"Planner vol 1000, unmapped, high volume gap candidate",unmapped_gap,1000,1000,,,,1000,2.32,1,HIGH,informational,agrees,weak,Weak commercial signal: has CPC or ads data but not both confirmed
+gevelisolatie buitenkant,"Striking distance pos 19.6, planner vol 590, core isolation theme",seo_do_now,590,590,56,,,590,2.76,1,HIGH,transactional,agrees,weak,Weak commercial signal: has CPC or ads data but not both confirmed
+buitengevel isoleren,"13 ads clicks, planner vol 480, core isolation synonym",ppc_do_now,480,480,,7,0.0,480,2.39,1,HIGH,informational,agrees,medium,

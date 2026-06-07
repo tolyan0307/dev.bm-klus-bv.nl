@@ -1,0 +1,722 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "generated": "2026-04-07",
+    "description": "Registry of all available seo-ops workflows. Source of truth for orchestrator.",
+    "status_legend": {
+      "active": "Tested and producing outputs",
+      "planned": "Defined but not yet implemented",
+      "deprecated": "Superseded by a newer workflow, do not use"
+    },
+    "operational_status_legend": {
+      "primary": "Core workflow, well-tested, use by default",
+      "secondary": "Works but narrower scope or requires external API",
+      "experimental": "Untested or under development",
+      "planned": "Not yet implemented, do not run",
+      "deprecated": "Superseded, do not use"
+    },
+    "flag_legend": {
+      "budget_sensitive": "Results affected by low PPC budget — cap volume-dependent confidence",
+      "legacy_noise_sensitive": "Pre-cutover data may contaminate results",
+      "requires_live_api": "Makes external API calls — requires user confirmation",
+      "enrichment_only": "Standalone enrichment, does not modify internal artifacts",
+      "post_cutover_context": "Designed for post-cutover analysis",
+      "verification_recommended": "Output should be cross-checked before acting",
+      "do_not_use_for_final_decision_alone": "Data is directional, not conclusive"
+    },
+    "analysis_context": {
+      "site_cutover_date": "2026-03-08",
+      "analysis_mode": "post_cutover_preliminary",
+      "ppc_budget_eur_per_day": 10,
+      "legacy_data_policy": "treat_as_noise_unless_legacy_review",
+      "context_file": "seo-ops/config/analysis_context_v1.yaml"
+    }
+  },
+  "workflows": [
+    {
+      "workflow_id": "build_page_inventory_v1",
+      "operational_status": "primary",
+      "type": "source_build",
+      "purpose": "Scan local Next.js routes and extract page metadata into a normalized inventory",
+      "script": "seo-ops/analyzers/pages/build_page_inventory.py",
+      "run_command": "python seo-ops/analyzers/pages/build_page_inventory.py",
+      "inputs": [
+        { "source": "local_filesystem", "path": "app/", "description": "Next.js route tree" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv", "format": "csv" },
+        { "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/pages/page_inventory_summary_v1.md", "format": "markdown" }
+      ],
+      "scope": "All pages in app/ directory",
+      "recommended_use": "Run first when site structure has changed (new pages, removed routes, updated metadata)",
+      "limitations": [
+        "Does not read page body content beyond metadata/headings",
+        "Schema detection is heuristic"
+      ],
+      "freshness_sensitivity": "low — only stale when site structure changes",
+      "execution_order": 1,
+      "dependencies": [],
+      "status": "active",
+      "rows_last_run": 54
+    },
+    {
+      "workflow_id": "build_keyword_master_v1",
+      "operational_status": "deprecated",
+      "type": "source_build",
+      "purpose": "Merge Google Ads Planner keywords, Ads campaign keywords, and search terms into unified keyword master v1",
+      "script": "seo-ops/analyzers/keywords/build_keyword_master.py",
+      "run_command": "python seo-ops/analyzers/keywords/build_keyword_master.py",
+      "inputs": [
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/outputs/keywords_*.csv", "description": "Ads campaign keywords" },
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/outputs/search_terms_*.csv", "description": "Ads search terms" },
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/planner/", "description": "Keyword Planner exports" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v1.csv", "format": "csv" },
+        { "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/keywords/keyword_master_summary_v1.md", "format": "markdown" }
+      ],
+      "scope": "All keyword sources except GSC",
+      "recommended_use": "Deprecated. Previously used for Google Ads keyword merge. Replaced by build_keyword_master_v3.",
+      "limitations": [
+        "Does not include GSC query data (that is v2)",
+        "Theme classification is rule-based"
+      ],
+      "freshness_sensitivity": "medium — depends on Google Ads export freshness",
+      "execution_order": 2,
+      "dependencies": [],
+      "status": "deprecated",
+      "deprecated_note": "Script archived to _archive/. Pipeline replaced by build_keyword_master_v3.",
+      "rows_last_run": 632
+    },
+    {
+      "workflow_id": "build_gsc_query_page_snapshot_v1",
+      "operational_status": "primary",
+      "type": "source_build",
+      "purpose": "Fetch and normalize GSC query+page data for the last 90 days into row-level, query-aggregated, and page-aggregated CSVs",
+      "script": "seo-ops/analyzers/seo/build_gsc_query_page_snapshot.py",
+      "run_command": "python seo-ops/analyzers/seo/build_gsc_query_page_snapshot.py",
+      "inputs": [
+        { "source": "gsc_api", "description": "Google Search Console API (requires credentials)" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv", "format": "csv" },
+        { "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv", "format": "csv" },
+        { "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv", "format": "csv" },
+        { "path": "seo-ops/reports/seo/gsc_query_page_snapshot_last90d.md", "format": "markdown" }
+      ],
+      "scope": "All bm-klus-bv.nl queries and pages in GSC for last 90 days",
+      "recommended_use": "Run weekly or before any SEO analysis workflow",
+      "limitations": [
+        "90-day window only",
+        "Position data is averaged",
+        "API credentials must be configured"
+      ],
+      "freshness_sensitivity": "high — GSC data changes daily, snapshot becomes stale within 7 days",
+      "execution_order": 3,
+      "dependencies": [],
+      "status": "active",
+      "rows_last_run": 528
+    },
+    {
+      "workflow_id": "build_ga4_landing_page_snapshot_v1",
+      "operational_status": "primary",
+      "type": "source_build",
+      "purpose": "Fetch and normalize GA4 landing page data (sessions, engagement, key events, channel split) for the last 90 days",
+      "script": "seo-ops/analyzers/pages/build_ga4_landing_page_snapshot.py",
+      "run_command": "python seo-ops/analyzers/pages/build_ga4_landing_page_snapshot.py",
+      "inputs": [
+        { "source": "ga4_api", "description": "Google Analytics 4 API (requires credentials)" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv", "format": "csv" },
+        { "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last90d.csv", "format": "csv" },
+        { "path": "seo-ops/reports/pages/ga4_landing_pages_last90d.md", "format": "markdown" }
+      ],
+      "scope": "All bm-klus-bv.nl landing pages in GA4 for last 90 days",
+      "recommended_use": "Run weekly or before any analysis that needs engagement/conversion context",
+      "limitations": [
+        "90-day window",
+        "Channel attribution depends on GA4 default channel grouping",
+        "API credentials must be configured"
+      ],
+      "freshness_sensitivity": "high — GA4 data changes daily, snapshot becomes stale within 7 days",
+      "execution_order": 4,
+      "dependencies": [],
+      "status": "active",
+      "rows_last_run": 55
+    },
+    {
+      "workflow_id": "build_keyword_master_v2",
+      "operational_status": "deprecated",
+      "type": "source_build",
+      "purpose": "Enrich keyword_master v1 with GSC query data (impressions, clicks, position, CTR) and add opportunity/overlap classifications",
+      "script": "seo-ops/analyzers/keywords/build_keyword_master_v2.py",
+      "run_command": "python seo-ops/analyzers/keywords/build_keyword_master_v2.py",
+      "inputs": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v1.csv", "description": "keyword_master v1" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv", "description": "GSC query aggregates" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv", "description": "GSC row-level data" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv", "format": "csv" },
+        { "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.json", "format": "json" },
+        { "path": "seo-ops/reports/keywords/keyword_master_v2_summary.md", "format": "markdown" }
+      ],
+      "scope": "All keywords from v1 + all GSC queries not in v1",
+      "recommended_use": "Deprecated. Previously enriched v1 with GSC data. Replaced by build_keyword_master_v3.",
+      "limitations": [
+        "Depends on keyword_master_v1 and GSC snapshot being current",
+        "Theme/intent classification is heuristic"
+      ],
+      "freshness_sensitivity": "medium — depends on upstream artifacts",
+      "execution_order": 5,
+      "dependencies": ["build_keyword_master_v1", "build_gsc_query_page_snapshot_v1"],
+      "status": "deprecated",
+      "deprecated_note": "Script archived to _archive/. Pipeline replaced by build_keyword_master_v3.",
+      "rows_last_run": 1032
+    },
+    {
+      "workflow_id": "ppc_review_v1",
+      "operational_status": "primary",
+      "type": "analysis",
+      "purpose": "Integrated PPC campaign review: performance, keywords, search terms, landing pages, cross-source overlap with SEO",
+      "context_flags": ["budget_sensitive", "legacy_noise_sensitive", "should_warn_if_preliminary_period"],
+      "script": "seo-ops/analyzers/ppc/run_ppc_review_v1.py",
+      "run_command": "python seo-ops/analyzers/ppc/run_ppc_review_v1.py",
+      "inputs": [
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/outputs/campaign_23271040037_last30d.csv" },
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/outputs/keywords_23271040037_last30d.csv" },
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/outputs/keywords_23271040037_last30d_flagged.csv" },
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/outputs/search_terms_23271040037_last30d.csv" },
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/outputs/search_terms_23271040037_last30d_flagged.csv" },
+        { "source": "google_ads_csv", "path": "D:/projects/bmklus/google/outputs/campaign_23271040037_action_candidates_last30d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/reports/ppc/ppc_review_campaign_23271040037_last30d.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/ppc_review_campaign_23271040037_last30d.json", "format": "json" }
+      ],
+      "scope": "Campaign 23271040037 (NL | Gevelisolatie | Search), last 30 days",
+      "recommended_use": "Monthly or after significant campaign changes. Best after fresh keyword_master_v2 and GA4 snapshot.",
+      "limitations": [
+        "Single campaign only (23271040037)",
+        "Google Ads CSVs must be exported manually first",
+        "No ad copy analysis",
+        "No bid/budget recommendations"
+      ],
+      "freshness_sensitivity": "high — Google Ads CSVs must be recent exports",
+      "execution_order": 10,
+      "dependencies": ["build_keyword_master_v2", "build_ga4_landing_page_snapshot_v1", "build_page_inventory_v1"],
+      "status": "active"
+    },
+    {
+      "workflow_id": "seo_page_vs_query_gap_v1",
+      "operational_status": "primary",
+      "type": "analysis",
+      "purpose": "Site-wide SEO gap analysis: query opportunities, page performance, page-vs-query mismatches, cannibalization, GA4 engagement context",
+      "context_flags": ["legacy_noise_sensitive", "should_warn_if_preliminary_period"],
+      "script": "seo-ops/analyzers/seo/run_page_vs_query_gap_v1.py",
+      "run_command": "python seo-ops/analyzers/seo/run_page_vs_query_gap_v1.py",
+      "inputs": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last90d.csv" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/reports/seo/page_vs_query_gap_v1.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/page_vs_query_gap_v1.json", "format": "json" }
+      ],
+      "scope": "All pages and queries in GSC + keyword_master + GA4",
+      "recommended_use": "Weekly or bi-weekly for ongoing SEO monitoring. Best after fresh GSC + GA4 snapshots.",
+      "limitations": [
+        "Theme taxonomy mismatch between keyword_master (core_isolation) and page_inventory (gevelisolatie)",
+        "No competitor SERP analysis",
+        "Cannibalization detection is heuristic (3+ pages threshold)"
+      ],
+      "freshness_sensitivity": "high — depends on GSC and GA4 snapshots being current",
+      "execution_order": 11,
+      "dependencies": ["build_gsc_query_page_snapshot_v1", "build_keyword_master_v2", "build_ga4_landing_page_snapshot_v1", "build_page_inventory_v1"],
+      "status": "active"
+    },
+    {
+      "workflow_id": "page_audit_v1",
+      "operational_status": "primary",
+      "type": "analysis",
+      "purpose": "Single-page deep audit: performance verdict, query fit, cluster fit, intent diagnosis, structural recommendations",
+      "context_flags": ["legacy_noise_sensitive", "should_warn_if_preliminary_period"],
+      "script": "seo-ops/analyzers/pages/run_page_audit_v1.py",
+      "run_command": "MSYS_NO_PATHCONV=1 python seo-ops/analyzers/pages/run_page_audit_v1.py {route}",
+      "arguments": [
+        { "name": "route", "required": false, "default": "/gevelisolatie/", "description": "Target page route (e.g. /gevelisolatie/, /sierpleister/)" }
+      ],
+      "inputs": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last90d.csv" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/reports/pages/page_audit_{slug}_v1.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/page_audit_{slug}_v1.json", "format": "json" }
+      ],
+      "scope": "Single page specified by route argument",
+      "recommended_use": "On-demand when investigating a specific page. Best after fresh snapshots.",
+      "limitations": [
+        "Single page only — does not assess competitor landscape",
+        "Low click volume makes conclusions provisional",
+        "MSYS_NO_PATHCONV=1 required in Git Bash on Windows"
+      ],
+      "freshness_sensitivity": "high — depends on all upstream snapshots",
+      "execution_order": 12,
+      "dependencies": ["build_gsc_query_page_snapshot_v1", "build_keyword_master_v2", "build_ga4_landing_page_snapshot_v1", "build_page_inventory_v1"],
+      "status": "active"
+    },
+    {
+      "workflow_id": "keyword_intelligence_review_v1",
+      "operational_status": "deprecated",
+      "type": "analysis",
+      "purpose": "Cross-source keyword intelligence review: source overlap, SEO/PPC opportunities, mapping quality, priority buckets",
+      "context_flags": ["budget_sensitive", "legacy_noise_sensitive", "should_warn_if_preliminary_period"],
+      "script": "seo-ops/analyzers/keywords/run_keyword_intelligence_review_v1.py",
+      "run_command": "python seo-ops/analyzers/keywords/run_keyword_intelligence_review_v1.py",
+      "inputs": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/reports/keywords/keyword_intelligence_review_v1.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/keyword_intelligence_review_v1.json", "format": "json" }
+      ],
+      "scope": "All 1032 keywords in keyword_master v2",
+      "recommended_use": "After refreshing keyword_master_v2. Provides keyword-level decision intelligence for SEO and PPC planning.",
+      "limitations": [
+        "No SERP analysis — cannot assess competitive difficulty",
+        "Theme taxonomy mismatch between keyword_master and page_inventory",
+        "Low conversion volume makes PPC ROI conclusions unreliable",
+        "Planner-only keywords need SERP verification before acting"
+      ],
+      "freshness_sensitivity": "medium — depends on keyword_master_v2 and GSC snapshot",
+      "execution_order": 13,
+      "dependencies": ["build_keyword_master_v2", "build_page_inventory_v1"],
+      "status": "deprecated",
+      "deprecated_note": "Script archived to _archive/. Replaced by run_keyword_intelligence_review_v2.py."
+    },
+    {
+      "workflow_id": "legacy_indexation_review_v1",
+      "operational_status": "secondary",
+      "type": "analysis",
+      "purpose": "Legacy/indexation cleanup review: identifies legacy, disabled, unmapped, and suspicious URLs still receiving impressions or sessions",
+      "context_flags": ["depends_on_post_cutover_context"],
+      "script": "seo-ops/analyzers/seo/run_legacy_indexation_review_v1.py",
+      "run_command": "python seo-ops/analyzers/seo/run_legacy_indexation_review_v1.py",
+      "inputs": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last90d.csv" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/reports/seo/legacy_indexation_review_v1.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/legacy_indexation_review_v1.json", "format": "json" },
+        { "path": "seo-ops/outputs/legacy_indexation_candidates_v1.csv", "format": "csv" }
+      ],
+      "scope": "All URLs across page_inventory, GSC pages, and GA4 landing pages",
+      "recommended_use": "Monthly or after site restructuring. Identifies redirect/cleanup opportunities.",
+      "limitations": [
+        "Only covers URLs seen in GSC/GA4 last 90 days",
+        "Cannot detect URLs indexed but never receiving impressions",
+        "Does not check actual HTTP status codes or server responses",
+        "Does not analyze robots.txt, sitemap.xml, or canonical tags",
+        "Backlink data not available"
+      ],
+      "freshness_sensitivity": "medium — depends on GSC and GA4 snapshots",
+      "execution_order": 14,
+      "dependencies": ["build_page_inventory_v1", "build_gsc_query_page_snapshot_v1", "build_ga4_landing_page_snapshot_v1"],
+      "status": "active"
+    },
+    {
+      "workflow_id": "dataforseo_serp_snapshot_v1",
+      "operational_status": "secondary",
+      "type": "external_enrichment",
+      "purpose": "Live SERP snapshot for a small shortlist of priority queries (NL/nl, top 10 organic)",
+      "context_flags": ["budget_sensitive", "post_cutover_preliminary", "enrichment_only"],
+      "script": "seo-ops/analyzers/seo/run_dataforseo_serp_snapshot_v1.py",
+      "run_command": "integrations/.venv/Scripts/python analyzers/seo/run_dataforseo_serp_snapshot_v1.py",
+      "arguments": [
+        { "name": "--dry-run", "required": false, "description": "Print plan without making API calls" },
+        { "name": "--keywords", "required": false, "description": "Comma-separated keywords (default: built-in shortlist of 5)" },
+        { "name": "--limit", "required": false, "default": 5, "description": "Max keywords to process (hard limit: 10)" }
+      ],
+      "inputs": [
+        { "source": "dataforseo_api", "description": "SERP organic/live/advanced endpoint" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/raw/dataforseo/dataforseo_serp_snapshot_v1.json", "format": "json" },
+        { "path": "seo-ops/snapshots/normalized/dataforseo/serp_snapshot_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/dataforseo/serp_snapshot_v1.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/dataforseo_serp_snapshot_v1.json", "format": "json" }
+      ],
+      "scope": "Small shortlist of priority queries (default 5, max 10)",
+      "recommended_use": "On-demand SERP position check for priority keywords. Run before/after SEO changes.",
+      "limitations": [
+        "Point-in-time snapshot; positions change daily",
+        "Desktop only (no mobile SERP)",
+        "Top 10 organic results only",
+        "No historical comparison"
+      ],
+      "freshness_sensitivity": "high — SERP is real-time",
+      "estimated_cost_usd": "~$0.01 for 5 keywords",
+      "execution_order": 20,
+      "dependencies": [],
+      "status": "active"
+    },
+    {
+      "workflow_id": "dataforseo_ranked_keywords_gap_v1",
+      "operational_status": "experimental",
+      "type": "external_enrichment",
+      "purpose": "Keyword gap analysis: compare own domain vs 2-3 competitors using keywords_for_site endpoint",
+      "context_flags": ["budget_sensitive", "post_cutover_preliminary", "enrichment_only"],
+      "script": "seo-ops/analyzers/keywords/run_dataforseo_ranked_keywords_gap_v1.py",
+      "run_command": "integrations/.venv/Scripts/python analyzers/keywords/run_dataforseo_ranked_keywords_gap_v1.py",
+      "arguments": [
+        { "name": "--dry-run", "required": false, "description": "Print plan without making API calls" },
+        { "name": "--competitors", "required": false, "description": "Comma-separated competitor domains (default: isolatie-info.nl, verbouwkosten.com)" },
+        { "name": "--limit", "required": false, "default": 100, "description": "Max keywords per domain (hard limit: 100)" }
+      ],
+      "inputs": [
+        { "source": "dataforseo_api", "description": "keywords_for_site/live endpoint" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v3.csv", "description": "keyword_master v3 for overlap check" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/raw/dataforseo/dataforseo_ranked_keywords_gap_v1.json", "format": "json" },
+        { "path": "seo-ops/snapshots/normalized/dataforseo/ranked_keywords_gap_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/dataforseo/ranked_keywords_gap_v1.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/dataforseo_ranked_keywords_gap_v1.json", "format": "json" }
+      ],
+      "scope": "Own domain + 2-3 competitors (max 100 kw each)",
+      "recommended_use": "On-demand competitor keyword gap check. Standalone enrichment.",
+      "limitations": [
+        "Estimated rankings, not live SERP positions",
+        "100 kw/domain cap may miss long-tail",
+        "Competitor selection is heuristic",
+        "No page-level comparison"
+      ],
+      "freshness_sensitivity": "medium — rankings change over weeks",
+      "estimated_cost_usd": "~$0.225 for 3 domains",
+      "execution_order": 21,
+      "dependencies": [],
+      "status": "active"
+    },
+    {
+      "workflow_id": "dataforseo_question_suggestions_v1",
+      "operational_status": "experimental",
+      "type": "external_enrichment",
+      "purpose": "Collect question/suggestion keywords for content watchlist enrichment using keyword_suggestions endpoint",
+      "context_flags": ["budget_sensitive", "post_cutover_preliminary", "enrichment_only"],
+      "script": "seo-ops/analyzers/keywords/run_dataforseo_question_suggestions_v1.py",
+      "run_command": "integrations/.venv/Scripts/python analyzers/keywords/run_dataforseo_question_suggestions_v1.py",
+      "arguments": [
+        { "name": "--dry-run", "required": false, "description": "Print plan without making API calls" },
+        { "name": "--seeds", "required": false, "description": "Comma-separated seed keywords (default: gevelisolatie, buitenmuur isoleren, gevelisolatie kosten)" },
+        { "name": "--limit", "required": false, "default": 50, "description": "Max suggestions per seed (hard limit: 50)" }
+      ],
+      "inputs": [
+        { "source": "dataforseo_api", "description": "keyword_suggestions/live endpoint" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v3.csv", "description": "keyword_master v3 for novelty check" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/raw/dataforseo/dataforseo_question_suggestions_v1.json", "format": "json" },
+        { "path": "seo-ops/snapshots/normalized/dataforseo/question_suggestions_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/dataforseo/question_suggestions_v1.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/dataforseo_question_suggestions_v1.json", "format": "json" }
+      ],
+      "scope": "3-5 seed keywords, up to 50 suggestions each",
+      "recommended_use": "On-demand content research. Use results for FAQ/blog topic ideas.",
+      "limitations": [
+        "Question detection is heuristic (Dutch prefix matching)",
+        "Volume data is estimated",
+        "No intent classification beyond question/non-question",
+        "Small seed list"
+      ],
+      "freshness_sensitivity": "low — suggestions are relatively stable",
+      "estimated_cost_usd": "~$0.225 for 3 seeds",
+      "execution_order": 22,
+      "dependencies": [],
+      "status": "active"
+    },
+    {
+      "workflow_id": "page_ownership_audit_v1",
+      "operational_status": "primary",
+      "type": "manual_audit",
+      "purpose": "Query ownership and cannibalization audit: identify which page ranks for a target query, detect internal competition, recommend consolidation",
+      "template": "page_ownership_audit",
+      "requires_live_api": false,
+      "required_artifacts": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv", "description": "GSC row-level query+page data" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv", "description": "Page inventory for ownership mapping" }
+      ],
+      "recommended_artifacts": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv", "description": "Query-level aggregates for volume context" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv", "description": "Keyword master for theme/intent context" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/reports/combined/{query_slug}_ownership_audit_{date}.md", "format": "markdown" }
+      ],
+      "default_report_mode": "preliminary",
+      "context_flags": ["legacy_noise_sensitive", "verification_recommended"],
+      "scope": "Single target query or small query group",
+      "recommended_use": "When investigating which page should rank for a specific query, or when suspecting cannibalization between pages.",
+      "limitations": [
+        "Manual workflow — no executable script, operator reads artifacts and fills template",
+        "GSC position data is averaged, not real-time",
+        "Cannot detect SERP features or competitor landscape without DataForSEO enrichment"
+      ],
+      "freshness_sensitivity": "high — depends on GSC snapshot being current",
+      "execution_order": null,
+      "dependencies": ["build_gsc_query_page_snapshot_v1", "build_page_inventory_v1"],
+      "status": "active"
+    },
+    {
+      "workflow_id": "verification_audit_v1",
+      "operational_status": "primary",
+      "type": "manual_audit",
+      "purpose": "Verify numeric claims and findings from a prior report against source artifacts. Ensures provenance accuracy and catches report drift.",
+      "template": "verification_audit",
+      "requires_live_api": false,
+      "required_artifacts": [],
+      "required_artifacts_note": "Depends on what is being verified — operator must identify source artifacts for each claim under review",
+      "recommended_artifacts": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/", "description": "All normalized snapshots — primary verification sources" },
+        { "source": "artifact", "path": "seo-ops/outputs/", "description": "JSON workflow outputs — structured verification sources" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/reports/combined/{topic}_verification_audit_{date}.md", "format": "markdown" }
+      ],
+      "default_report_mode": "verified",
+      "context_flags": ["verification_recommended"],
+      "verification_source_priority": [
+        "1. Machine-readable artifacts (JSON / CSV in snapshots/normalized/ and outputs/)",
+        "2. Direct workflow outputs (outputs/*.json)",
+        "3. Markdown reports only as secondary human-readable support — never as sole verification source"
+      ],
+      "scope": "Claims from a specific prior report or external document",
+      "recommended_use": "After any analysis report, especially those with medium/low confidence findings. Also use when user questions a specific claim.",
+      "limitations": [
+        "Manual workflow — no executable script, operator reads artifacts and compares to claims",
+        "Can only verify against artifacts that exist — if source data was not captured, verification is impossible",
+        "Does not generate new data, only cross-checks existing claims"
+      ],
+      "freshness_sensitivity": "depends on what is being verified",
+      "execution_order": null,
+      "dependencies": [],
+      "status": "active"
+    },
+    {
+      "workflow_id": "build_url_inspection_snapshot_v1",
+      "operational_status": "secondary",
+      "type": "source_build",
+      "purpose": "Fetch URL Inspection data from GSC API for one or more URLs, save raw and normalized snapshots",
+      "context_flags": ["requires_live_api"],
+      "script": "seo-ops/analyzers/seo/build_url_inspection_snapshot.py",
+      "run_command": "python seo-ops/analyzers/seo/build_url_inspection_snapshot.py --url {url}",
+      "arguments": [
+        { "name": "--url", "required": false, "description": "Single URL to inspect" },
+        { "name": "--urls-file", "required": false, "description": "Path to file with one URL per line" },
+        { "name": "--site-url", "required": false, "description": "GSC property URL override" },
+        { "name": "--label", "required": false, "description": "Short label for output naming" }
+      ],
+      "inputs": [
+        { "source": "gsc_api", "description": "GSC URL Inspection API (requires credentials)" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/raw/gsc/url_inspection_{label}_{date}_raw.json", "format": "json" },
+        { "path": "seo-ops/snapshots/normalized/seo/url_inspection_{label}_{date}_normalized.json", "format": "json" }
+      ],
+      "scope": "One or more specific URLs provided via --url or --urls-file",
+      "recommended_use": "Before running indexation_debug_v1. Collect inspection evidence for target URLs.",
+      "limitations": [
+        "One API call per URL — no bulk endpoint",
+        "Requires GSC property access with URL Inspection permission",
+        "Point-in-time snapshot — not historical",
+        "1-second delay between API calls for rate limiting"
+      ],
+      "freshness_sensitivity": "high — inspection state can change at any time",
+      "execution_order": 5,
+      "dependencies": [],
+      "status": "active"
+    },
+    {
+      "workflow_id": "indexation_debug_v1",
+      "operational_status": "secondary",
+      "type": "analysis",
+      "purpose": "Diagnose indexation state per URL using URL Inspection evidence + optional GSC visibility data. Conservative classification into outcome buckets.",
+      "context_flags": ["should_warn_if_preliminary_period"],
+      "script": "seo-ops/analyzers/seo/run_indexation_debug_v1.py",
+      "run_command": "python seo-ops/analyzers/seo/run_indexation_debug_v1.py",
+      "arguments": [
+        { "name": "--input", "required": false, "description": "Path to normalized url inspection artifact" },
+        { "name": "--label", "required": false, "description": "Label for output naming" },
+        { "name": "--prefer-window", "required": false, "default": 28, "description": "Preferred GSC data window: 28 or 90 (default: 28)" }
+      ],
+      "inputs": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/url_inspection_*_normalized.json", "description": "Normalized URL Inspection snapshot (required)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last{N}d.csv", "description": "GSC page aggregates (optional, for visibility context)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_last{N}d.csv", "description": "GSC row-level data (optional, for query context)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv", "description": "Page inventory (optional, for local page status)" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/outputs/indexation_debug_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/seo/indexation_debug_{label}_{date}.md", "format": "markdown" }
+      ],
+      "scope": "URLs present in the input inspection artifact",
+      "recommended_use": "After build_url_inspection_snapshot_v1. Diagnose indexation issues for specific pages.",
+      "limitations": [
+        "Cannot determine cause of non-indexation — only confirms state and generates hypotheses",
+        "Runs in limited mode if GSC page/query data is absent",
+        "Does not check HTTP status, server logs, robots.txt, or sitemap directly",
+        "Conservative — prefers 'insufficient evidence' over overclaiming"
+      ],
+      "freshness_sensitivity": "high — depends on inspection artifact freshness",
+      "execution_order": 15,
+      "dependencies": ["build_url_inspection_snapshot_v1"],
+      "status": "active"
+    },
+    {
+      "workflow_id": "measurement_audit_v1",
+      "operational_status": "secondary",
+      "type": "analysis",
+      "purpose": "Measurement integrity audit: assess quality, completeness, and reliability of GA4/GSC measurement evidence per page or site-wide. Determines whether available data supports performance conclusions.",
+      "context_flags": ["should_warn_if_preliminary_period"],
+      "script": "seo-ops/analyzers/pages/run_measurement_audit_v1.py",
+      "run_command": "python seo-ops/analyzers/pages/run_measurement_audit_v1.py --scope site",
+      "arguments": [
+        { "name": "--scope", "required": true, "description": "Audit scope: site, page, or pages" },
+        { "name": "--page", "required": false, "description": "Page path for single-page audit (e.g. /gevelisolatie/)" },
+        { "name": "--pages-file", "required": false, "description": "File with page paths for multi-page audit" },
+        { "name": "--prefer-window", "required": false, "default": 28, "description": "Preferred data window: 28 or 90 (default: 28)" },
+        { "name": "--label", "required": false, "description": "Optional label for output naming" }
+      ],
+      "inputs": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last{N}d.csv", "description": "GA4 landing page data (primary)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last{N}d.csv", "description": "GA4 channel breakdown (primary)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last{N}d.csv", "description": "GSC page aggregates (supporting)" },
+        { "source": "config", "path": "seo-ops/config/conversions.yaml", "description": "Key event definitions" },
+        { "source": "config", "path": "seo-ops/config/thresholds/measurement_audit_v1.yaml", "description": "Classification thresholds" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/outputs/measurement_audit_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/audits/measurement_audit_{scope}_{date}.md", "format": "markdown" }
+      ],
+      "scope": "Site-wide or per-page measurement quality assessment",
+      "recommended_use": "When questioning data reliability before drawing performance conclusions. Use before page_audit_v1 when measurement trust is in doubt.",
+      "limitations": [
+        "Artifact-based only — cannot diagnose GTM/tag-level issues",
+        "Cannot determine if tracking code is missing on a page",
+        "Post-cutover: measurement baselines not established",
+        "Low site volume limits confident assessment across all pages"
+      ],
+      "freshness_sensitivity": "medium — depends on GA4 and GSC snapshot freshness",
+      "execution_order": 16,
+      "dependencies": ["build_ga4_landing_page_snapshot_v1"],
+      "status": "active"
+    },
+    {
+      "workflow_id": "query_intelligence_review_v1",
+      "operational_status": "secondary",
+      "type": "analysis",
+      "purpose": "Structured query intelligence review: classify queries by intent and commercial role, identify page-query fit mismatches, SEO opportunities, and PPC containment candidates using deterministic taxonomy",
+      "context_flags": ["legacy_noise_sensitive", "should_warn_if_preliminary_period"],
+      "script": "seo-ops/analyzers/keywords/run_query_intelligence_review_v1.py",
+      "run_command": "python seo-ops/analyzers/keywords/run_query_intelligence_review_v1.py --scope site",
+      "arguments": [
+        { "name": "--scope", "required": true, "description": "Analysis scope: site, page, or query-set" },
+        { "name": "--page", "required": false, "description": "Target page path for page scope (e.g. /gevelisolatie/)" },
+        { "name": "--queries-file", "required": false, "description": "Path to file with queries for query-set scope" },
+        { "name": "--prefer-window", "required": false, "default": 28, "description": "Preferred GSC data window: 28 or 90 (default: 28)" },
+        { "name": "--label", "required": false, "description": "Optional label for output naming" }
+      ],
+      "inputs": [
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/keyword_master/keyword_master_v3.csv", "description": "keyword_master v3 (primary, fallback to v2)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_last28d.csv", "description": "GSC query-page data (28d preferred)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last28d.csv", "description": "GSC aggregated queries (28d preferred)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv", "description": "Page inventory for fit assessment" },
+        { "source": "config", "path": "seo-ops/config/mappings/query_intent_taxonomy_v1.yaml", "description": "Intent classification taxonomy" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/outputs/query_intelligence_review_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/keywords/query_intelligence_review_v1_{label}_{date}.md", "format": "markdown" }
+      ],
+      "scope": "Site-wide, single page, or custom query set — depending on --scope argument",
+      "recommended_use": "When classifying query landscape by intent, identifying SEO/PPC opportunities, detecting page-query mismatches. Complements keyword_intelligence_review_v2 with intent-focused analysis.",
+      "contract": "contracts/query_intelligence_rules_v1.md",
+      "limitations": [
+        "Intent classification is heuristic — based on keyword signal matching, not confirmed user intent",
+        "No conversion data — intent does not prove business value",
+        "No competitor SERP analysis",
+        "Page-query fit assessment requires page_inventory",
+        "Low-volume queries have reduced classification confidence"
+      ],
+      "freshness_sensitivity": "medium — depends on keyword_master and GSC snapshot freshness",
+      "execution_order": 17,
+      "dependencies": ["build_keyword_master_v3", "build_gsc_query_page_snapshot_v1", "build_page_inventory_v1"],
+      "allow_limited_mode": true,
+      "status": "active"
+    },
+    {
+      "workflow_id": "local_seo_gbp_audit_v1",
+      "operational_status": "secondary",
+      "type": "analysis",
+      "purpose": "Local SEO / GBP audit: assess Google Business Profile visibility, review signals, and supporting site/search local context. Runs in limited mode when GBP API access is not configured.",
+      "context_flags": ["should_warn_if_preliminary_period"],
+      "script": "seo-ops/analyzers/seo/run_local_seo_gbp_audit_v1.py",
+      "run_command": "python seo-ops/analyzers/seo/run_local_seo_gbp_audit_v1.py --scope combined",
+      "arguments": [
+        { "name": "--scope", "required": false, "default": "combined", "description": "Audit scope: profile, reviews, or combined" },
+        { "name": "--prefer-window", "required": false, "default": 28, "description": "Preferred GSC data window for supporting context: 28 or 90" },
+        { "name": "--label", "required": false, "description": "Optional label for output naming" },
+        { "name": "--output-json", "required": false, "description": "Override JSON output path" },
+        { "name": "--output-report", "required": false, "description": "Override markdown report path" }
+      ],
+      "inputs": [
+        { "source": "gbp_api", "description": "GBP Performance API (optional — runs in limited mode without)" },
+        { "source": "gbp_api", "description": "GBP Reviews API (optional — runs in limited mode without)" },
+        { "source": "config", "path": "seo-ops/config/locales/local_entities_v1.yaml", "description": "Local business entity context" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last{N}d.csv", "description": "GSC queries for local intent analysis (optional)" },
+        { "source": "artifact", "path": "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv", "description": "Page inventory for location coverage (optional)" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/outputs/local_seo_gbp_audit_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/seo/local_seo_gbp_audit_v1_{label}_{date}.md", "format": "markdown" }
+      ],
+      "scope": "GBP profile + reviews + supporting local search context",
+      "recommended_use": "When investigating local SEO health, GBP visibility, review signals, or separating site-side vs GBP-side local presence issues.",
+      "contract": "contracts/local_seo_gbp_rules_v1.md",
+      "limitations": [
+        "GBP API access may not be configured — runs in limited mode without it",
+        "No local pack ranking data available via GBP API",
+        "No competitor GBP data available",
+        "Review analysis is quantitative only — no sentiment modeling",
+        "Does not check NAP consistency across directories"
+      ],
+      "freshness_sensitivity": "medium — GBP data is near-real-time when available, supporting artifacts follow standard freshness",
+      "execution_order": 18,
+      "dependencies": [],
+      "allow_limited_mode": true,
+      "status": "active"
+    }
+  ]
+}

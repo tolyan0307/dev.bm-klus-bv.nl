@@ -1,0 +1,152 @@
+# Official Sources Manifest v1
+# Purpose: Curated registry of authoritative / official sources for seo-ops analysis.
+# Policy: These sources form the policy/reference layer. They do NOT override
+#         internal performance data from GSC/GA4/Ads artifacts. Google official docs
+#         explain how systems and constraints work — they do not guarantee rankings or results.
+
+version: "1.0"
+date: "2026-04-08"
+
+policy:
+  summary: >
+    Official documentation sources are the reference layer for platform definitions,
+    metric semantics, system constraints, and crawling/indexing rules. They inform
+    how to interpret data — they do not replace actual account/site performance data.
+  rules:
+    - Official docs explain systems and constraints, not guaranteed outcomes.
+    - Internal artifacts (GSC/GA4/Ads snapshots) remain primary truth for BM Klus performance.
+    - Official docs must not be cited as proof of BM Klus-specific causality.
+    - When official docs and observed behavior diverge, report both — do not suppress either.
+
+sources:
+  - source_id: google_search_central
+    label: Google Search Central
+    authority_class: google_official
+    owner: Google
+    domain: developers.google.com/search
+    scope: >
+      Crawling, indexing, ranking systems, structured data requirements,
+      Core Web Vitals, URL management, sitemaps, robots.txt, Search Console documentation.
+    allowed_use_cases:
+      - Explaining crawling/indexing behavior
+      - Citing structured data requirements
+      - Referencing official ranking system descriptions
+      - Defining canonical URL rules
+      - Clarifying metric definitions in Search Console
+    forbidden_use_cases:
+      - Predicting exact ranking outcomes for BM Klus pages
+      - Claiming "Google says this page will rank higher if X"
+    citation_required: true
+    priority_rank: 1
+    notes: Primary policy source for organic search behavior.
+
+  - source_id: search_console_api
+    label: Google Search Console API
+    authority_class: google_official
+    owner: Google
+    domain: developers.google.com/webmaster-tools
+    scope: >
+      API reference, query/page data model, dimension definitions, data freshness rules,
+      aggregation methods, sampling behavior, row limits.
+    allowed_use_cases:
+      - Defining what GSC metrics mean (impressions, clicks, position, CTR)
+      - Explaining data aggregation and sampling
+      - Clarifying API response structure and limits
+    forbidden_use_cases:
+      - Substituting API documentation for actual GSC data
+    citation_required: true
+    priority_rank: 2
+    notes: Reference for interpreting GSC artifact data correctly.
+
+  - source_id: ga4_data_api
+    label: Google Analytics 4 Data API
+    authority_class: google_official
+    owner: Google
+    domain: developers.google.com/analytics
+    scope: >
+      API reference, dimension/metric definitions, session model, event model,
+      data thresholds, sampling, consent mode effects.
+    allowed_use_cases:
+      - Defining what GA4 metrics mean (sessions, engagement rate, key events)
+      - Explaining session vs event model
+      - Clarifying data thresholds and sampling
+    forbidden_use_cases:
+      - Substituting API documentation for actual GA4 data
+    citation_required: true
+    priority_rank: 2
+    notes: Reference for interpreting GA4 artifact data correctly.
+
+  - source_id: google_ads_api
+    label: Google Ads API
+    authority_class: google_official
+    owner: Google
+    domain: developers.google.com/google-ads/api
+    scope: >
+      API reference, campaign/ad group/keyword data model, match type definitions,
+      bidding strategy descriptions, quality score components.
+    allowed_use_cases:
+      - Defining match type behavior
+      - Explaining quality score components
+      - Clarifying bidding strategy mechanics
+      - Referencing reporting field definitions
+    forbidden_use_cases:
+      - Predicting exact CPC or conversion rates for BM Klus
+    citation_required: true
+    priority_rank: 2
+    notes: Reference for interpreting Google Ads artifact data correctly.
+
+  - source_id: google_ads_help
+    label: Google Ads Help Center
+    authority_class: google_official
+    owner: Google
+    domain: support.google.com/google-ads
+    scope: >
+      Campaign setup guidance, optimization recommendations, policy rules,
+      match type behavior, Smart Bidding explanations, ad format requirements.
+    allowed_use_cases:
+      - Explaining Ads platform rules and policies
+      - Referencing official optimization concepts
+      - Clarifying campaign type capabilities
+    forbidden_use_cases:
+      - Treating Google Ads recommendations as mandatory for BM Klus
+      - Citing "recommended budget" as evidence to increase spend
+    citation_required: true
+    priority_rank: 3
+    notes: Useful for PPC methodology context; does not override budget constraints.
+
+  - source_id: google_business_profile_api
+    label: Google Business Profile API
+    authority_class: google_official
+    owner: Google
+    domain: developers.google.com/my-business
+    scope: >
+      API reference, listing management, review handling, local search features.
+    allowed_use_cases:
+      - Explaining local search features
+      - Referencing GBP data model
+    forbidden_use_cases:
+      - Predicting local pack rankings for BM Klus
+    citation_required: true
+    priority_rank: 4
+    notes: Not yet integrated into seo-ops workflows. Reference only.
+
+  - source_id: dataforseo_official
+    label: DataForSEO Official Documentation
+    authority_class: vendor_official
+    owner: DataForSEO
+    domain: docs.dataforseo.com
+    scope: >
+      API reference, endpoint behavior, data freshness, cost model, rate limits,
+      response structure, data sourcing methodology.
+    allowed_use_cases:
+      - Explaining DataForSEO API behavior and limits
+      - Understanding data sourcing and freshness of DataForSEO outputs
+      - Referencing cost model for budget estimation
+    forbidden_use_cases:
+      - Treating DataForSEO docs as authority on Google search behavior
+      - Using DataForSEO methodology claims to override GSC/GA4 data
+    citation_required: true
+    priority_rank: 5
+    notes: >
+      Authoritative only about DataForSEO's own system.
+      Not authoritative about Google search behavior or BM Klus performance.

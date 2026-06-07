@@ -1,0 +1,23 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "metrics": {
+      "clicks": "158",
+      "searchAbsoluteTopImpressionShare": 0.0999,
+      "searchBudgetLostImpressionShare": 0.22673675237959937,
+      "searchImpressionShare": 0.14803239096462567,
+      "searchRankLostImpressionShare": 0.6252308566557749,
+      "searchTopImpressionShare": 0.12319046267385751,
+      "conversions": 5.0,
+      "costMicros": "240336968",
+      "costPerConversion": 48067393.6,
+      "ctr": 0.12569610182975338,
+      "allConversions": 12.0,
+      "averageCpc": 1521120.0506329115,
+      "impressions": "1257"
+    }
+  }
+]

@@ -1,0 +1,187 @@
+keyword,match_type,ad_group,status,healthy_impr,healthy_clicks,healthy_cost,healthy_conv,bad_impr,bad_clicks,bad_cost,bad_conv,recovery_impr,recovery_clicks,recovery_cost,recovery_conv
+buitengevel isoleren,EXACT,Gevelisolatie - Core,ENABLED,41,4,3.36,0.0,37,6,8.55,0.0,31,5,5.03,0.0
+buitengevel isoleren,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevel isoleren en stucen,EXACT,Gevelisolatie - Afwerking,ENABLED,32,5,6.47,0.0,20,1,0.43,0.0,17,2,5.92,0.0
+buitengevel isoleren en stucen,PHRASE,Gevelisolatie - Afwerking,ENABLED,18,2,2.03,0.0,31,2,0.93,0.0,23,5,3.56,0.0
+buitengevel isoleren vergunning,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevel isoleren vergunning,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie,EXACT,Gevelisolatie - Core,ENABLED,71,8,17.78,1.0,65,6,7.76,0.0,97,11,15.05,1.0
+buitengevelisolatie,PHRASE,Gevelisolatie - Core,ENABLED,8,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie bedrijven,EXACT,Gevelisolatie - Offerte,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie bedrijven,PHRASE,Gevelisolatie - Offerte,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie crepi,EXACT,Gevelisolatie - Afwerking,ENABLED,5,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie crepi,PHRASE,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie details,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie details,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie kosten,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie kosten,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie met steenstrips,EXACT,Gevelisolatie - Afwerking,ENABLED,52,6,8.95,0.0,58,14,14.83,0.0,59,11,16.02,1.0
+buitengevelisolatie met steenstrips,PHRASE,Gevelisolatie - Afwerking,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie offerte,EXACT,Gevelisolatie - Offerte,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie offerte,PHRASE,Gevelisolatie - Offerte,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie prijs,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie prijs,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie prijs per m2,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie prijs per m2,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie sierpleister,EXACT,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie sierpleister,PHRASE,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie steenstrips,EXACT,Gevelisolatie - Afwerking,ENABLED,2,0,0.0,0.0,2,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie steenstrips,PHRASE,Gevelisolatie - Afwerking,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie stuc,EXACT,Gevelisolatie - Afwerking,ENABLED,12,1,0.41,0.0,21,4,3.41,0.0,33,4,9.57,0.0
+buitengevelisolatie stuc,PHRASE,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie subsidie,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie subsidie,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie systemen,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitengevelisolatie systemen,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenisolatie huis,EXACT,Gevelisolatie - Core,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenisolatie huis,PHRASE,Gevelisolatie - Core,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isolatie aanbrengen,EXACT,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isolatie aanbrengen,PHRASE,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren,EXACT,Gevelisolatie - Core,ENABLED,29,9,6.33,0.0,24,5,4.24,0.0,33,4,7.52,0.0
+buitenmuur isoleren,PHRASE,Gevelisolatie - Core,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren aan buitenkant,EXACT,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren aan buitenkant,PHRASE,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren buitenkant,EXACT,Gevelisolatie - Core,ENABLED,8,1,5.1,1.0,7,1,0.62,0.0,11,2,1.47,0.0
+buitenmuur isoleren buitenkant,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren en stucen,EXACT,Gevelisolatie - Afwerking,ENABLED,2,1,0.74,0.0,10,3,2.73,0.0,10,3,1.91,0.0
+buitenmuur isoleren en stucen,PHRASE,Gevelisolatie - Afwerking,ENABLED,29,13,9.99,0.0,64,9,10.27,0.0,85,13,23.47,0.0
+buitenmuur isoleren kosten,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren kosten,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren offerte,EXACT,Gevelisolatie - Offerte,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren offerte,PHRASE,Gevelisolatie - Offerte,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren prijs,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren prijs,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren prijs per m2,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuur isoleren prijs per m2,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuurisolatie langs de buitengevel,EXACT,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+buitenmuurisolatie langs de buitengevel,PHRASE,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+dikte gevelisolatie,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+dikte gevelisolatie,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+dunne buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+dunne buitengevelisolatie,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+dunne buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+dunne buitengevelisolatie,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+eps buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+eps buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+etics gevelisolatie,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+etics gevelisolatie,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isolatie buitenzijde,EXACT,Gevelisolatie - Core,ENABLED,1,1,0.63,0.0,11,3,4.79,0.0,16,2,1.7,0.0
+gevel isolatie buitenzijde,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,3,1,2.08,0.0
+gevel isoleren buitenkant,EXACT,Gevelisolatie - Core,ENABLED,1,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isoleren buitenkant,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isoleren buitenzijde,EXACT,Gevelisolatie - Core,ENABLED,7,1,1.1,0.0,4,1,0.61,0.0,14,2,2.05,0.0
+gevel isoleren buitenzijde,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isoleren en bekleden,EXACT,Gevelisolatie - Afwerking,ENABLED,4,0,0.0,0.0,20,4,3.44,0.0,23,4,5.8,0.0
+gevel isoleren en bekleden,PHRASE,Gevelisolatie - Afwerking,ENABLED,156,16,20.93,1.0,214,23,40.63,0.0,263,24,47.75,2.0
+gevel isoleren en bekleden met steenstrips,EXACT,Gevelisolatie - Afwerking,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,2,2,8.56,0.0
+gevel isoleren en bekleden met steenstrips,PHRASE,Gevelisolatie - Afwerking,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isoleren en stucen,EXACT,Gevelisolatie - Afwerking,ENABLED,10,2,2.42,0.0,6,1,0.8,0.0,1,0,0.0,0.0
+gevel isoleren en stucen,PHRASE,Gevelisolatie - Afwerking,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isoleren offerte,EXACT,Gevelisolatie - Offerte,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isoleren offerte,PHRASE,Gevelisolatie - Offerte,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isoleren vergunning,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel isoleren vergunning,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevel van buiten isoleren,EXACT,Gevelisolatie - Core,ENABLED,8,0,0.0,0.0,2,0,0.0,0.0,0,0,0.0,0.0
+gevel van buiten isoleren,PHRASE,Gevelisolatie - Core,ENABLED,184,29,26.96,0.0,102,14,20.42,0.0,134,17,18.33,0.0
+gevelisolatie,EXACT,Gevelisolatie - Core,ENABLED,28,3,2.71,0.0,16,2,1.61,0.0,23,4,8.47,0.0
+gevelisolatie,PHRASE,Gevelisolatie - Core,ENABLED,70,9,11.1,0.0,26,4,1.63,0.0,56,6,8.77,1.0
+gevelisolatie dikte,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie dikte,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie kosten,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie kosten,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie kosten per m2,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie kosten per m2,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie met steenstrips,EXACT,Gevelisolatie - Afwerking,ENABLED,8,4,7.64,0.0,18,2,2.31,0.0,14,3,3.05,0.0
+gevelisolatie met steenstrips,PHRASE,Gevelisolatie - Afwerking,ENABLED,30,4,7.3,2.0,23,0,0.0,0.0,34,3,4.81,0.0
+gevelisolatie met stucwerk,EXACT,Gevelisolatie - Afwerking,ENABLED,52,7,9.24,1.0,60,8,14.31,0.0,48,6,9.0,0.0
+gevelisolatie met stucwerk,PHRASE,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie offerte,EXACT,Gevelisolatie - Offerte,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie offerte,PHRASE,Gevelisolatie - Offerte,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie platen,EXACT,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie platen,PHRASE,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie prijs per m2,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie prijs per m2,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie rc waarde,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie rc waarde,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie specialist,EXACT,Gevelisolatie - Offerte,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie specialist,PHRASE,Gevelisolatie - Offerte,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie stucwerk,EXACT,Gevelisolatie - Afwerking,ENABLED,3,0,0.0,0.0,0,0,0.0,0.0,11,1,1.02,0.0
+gevelisolatie stucwerk,PHRASE,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie subsidie,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie subsidie,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie vergunning,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+gevelisolatie vergunning,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+hoeveel kost buitengevelisolatie,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+hoeveel kost buitengevelisolatie,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+huis aan buitenkant isoleren,EXACT,Gevelisolatie - Core,ENABLED,1,0,0.0,0.0,1,1,0.44,0.0,1,0,0.0,0.0
+huis aan buitenkant isoleren,PHRASE,Gevelisolatie - Core,ENABLED,60,6,4.77,0.0,24,8,10.04,0.0,33,6,3.48,0.0
+huis aan de buitenkant isoleren,EXACT,Gevelisolatie - Core,ENABLED,13,1,1.03,0.0,14,2,3.76,0.0,26,2,1.76,0.0
+huis aan de buitenkant isoleren,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+huis isolatie buitenkant,EXACT,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+huis isolatie buitenkant,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+huis isoleren buitenkant,EXACT,Gevelisolatie - Core,ENABLED,100,16,12.66,0.0,32,3,2.63,0.0,42,4,9.94,0.0
+huis isoleren buitenkant,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,2,0,0.0,0.0,0,0,0.0,0.0
+huis van buiten isoleren,EXACT,Gevelisolatie - Core,ENABLED,4,3,1.98,0.0,1,0,0.0,0.0,6,0,0.0,0.0
+huis van buiten isoleren,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatie buitengevel,EXACT,Gevelisolatie - Core,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatie buitengevel,PHRASE,Gevelisolatie - Core,ENABLED,78,8,11.23,0.0,31,4,5.2,0.0,67,6,8.68,0.0
+isolatie buitenmuren,EXACT,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatie buitenmuren,PHRASE,Gevelisolatie - Core,ENABLED,19,0,0.0,0.0,10,0,0.0,0.0,6,1,0.51,0.0
+isolatie huis buitenkant,EXACT,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatie huis buitenkant,PHRASE,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatie voorgevel,EXACT,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatie voorgevel,PHRASE,Gevelisolatie - Core,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatiebedrijf rotterdam,EXACT,Gevelisolatie - Offerte,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatiebedrijf rotterdam,PHRASE,Gevelisolatie - Offerte,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatiebedrijf rotterdam offerte,EXACT,Gevelisolatie - Offerte,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isolatiebedrijf rotterdam offerte,PHRASE,Gevelisolatie - Offerte,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isoleren gevel buitenzijde,EXACT,Gevelisolatie - Core,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+isoleren gevel buitenzijde,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,1,0,0.0,0.0
+kingspan buitengevelisolatie,EXACT,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+kingspan buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+kosten buitengevelisolatie,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+kosten buitengevelisolatie,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+kosten buitenmuur isoleren,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+kosten buitenmuur isoleren,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+kosten gevelisolatie,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+kosten gevelisolatie,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+koudebrug gevel oplossen,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+koudebrug gevel oplossen,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+minerale wol buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+minerale wol buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muur aan buitenkant isoleren,EXACT,Gevelisolatie - Core,ENABLED,1,0,0.0,0.0,0,0,0.0,0.0,1,0,0.0,0.0
+muur aan buitenkant isoleren,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie,EXACT,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie,PHRASE,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenmuur,EXACT,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenmuur,EXACT,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenmuur,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenmuur,PHRASE,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenzijde,EXACT,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenzijde,EXACT,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenzijde,PHRASE,Gevelisolatie - Core,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenzijde,PHRASE,Gevelisolatie - Materialen,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenzijde details,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+muurisolatie buitenzijde details,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+nieuwe gevel plaatsen met isolatie,EXACT,Gevelisolatie - Afwerking,ENABLED,4,0,0.0,0.0,1,0,0.0,0.0,0,0,0.0,0.0
+nieuwe gevel plaatsen met isolatie,PHRASE,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+pir buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+pir buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+pir gevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+pir gevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+polystuc buitengevelisolatie,EXACT,Gevelisolatie - Afwerking,ENABLED,4,1,0.5,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+polystuc buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+polystuc buitengevelisolatie,PHRASE,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+polystuc buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+rc waarde gevelisolatie,EXACT,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+rc waarde gevelisolatie,PHRASE,Gevelisolatie - Technisch,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+steenstrips buitengevel met isolatie,EXACT,Gevelisolatie - Afwerking,ENABLED,1,0,0.0,0.0,5,0,0.0,0.0,7,2,2.24,0.0
+steenstrips buitengevel met isolatie,PHRASE,Gevelisolatie - Afwerking,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+subsidie buitengevelisolatie,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+subsidie buitengevelisolatie,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+subsidie gevel isoleren,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+subsidie gevel isoleren,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+subsidie isolatie buitenmuur,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+subsidie isolatie buitenmuur,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+wat kost buitengevelisolatie,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0
+wat kost buitengevelisolatie,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0,0,0.0,0.0,0,0,0.0,0.0,0,0,0.0,0.0

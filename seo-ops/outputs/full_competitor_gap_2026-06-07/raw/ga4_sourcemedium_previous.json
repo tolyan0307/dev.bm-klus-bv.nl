@@ -1,0 +1,37 @@
+[
+  {
+    "sessionSourceMedium": "google / cpc",
+    "sessions": "137",
+    "keyEvents": "6"
+  },
+  {
+    "sessionSourceMedium": "google / organic",
+    "sessions": "129",
+    "keyEvents": "6"
+  },
+  {
+    "sessionSourceMedium": "(direct) / (none)",
+    "sessions": "14",
+    "keyEvents": "1"
+  },
+  {
+    "sessionSourceMedium": "(data not available)",
+    "sessions": "2",
+    "keyEvents": "0"
+  },
+  {
+    "sessionSourceMedium": "search.google.com / referral",
+    "sessions": "2",
+    "keyEvents": "0"
+  },
+  {
+    "sessionSourceMedium": "chatgpt.com / (not set)",
+    "sessions": "1",
+    "keyEvents": "1"
+  },
+  {
+    "sessionSourceMedium": "tagassistant.google.com / referral",
+    "sessions": "1",
+    "keyEvents": "0"
+  }
+]

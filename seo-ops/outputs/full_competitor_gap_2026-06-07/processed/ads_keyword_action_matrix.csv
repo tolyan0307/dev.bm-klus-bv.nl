@@ -1,0 +1,179 @@
+keyword,match_type,ad_group,status,cost_prev,cost_cur,clicks_prev,clicks_cur,conv_prev,conv_cur,action
+gevel isoleren en bekleden,PHRASE,Gevelisolatie - Afwerking,ENABLED,42.43,64.48,32,30,1.0,2.0,keep_protect
+gevel van buiten isoleren,PHRASE,Gevelisolatie - Core,ENABLED,37.52,20.57,37,17,0.0,0.0,lower_bid_monitor
+buitengevelisolatie,EXACT,Gevelisolatie - Core,ENABLED,23.86,21.13,12,14,1.0,1.0,keep_protect
+buitenmuur isoleren en stucen,PHRASE,Gevelisolatie - Afwerking,ENABLED,17.39,24.53,19,12,0.0,0.0,lower_bid_monitor
+buitengevelisolatie met steenstrips,EXACT,Gevelisolatie - Afwerking,ENABLED,19.21,16.46,15,15,0.0,1.0,keep_protect
+gevelisolatie met stucwerk,EXACT,Gevelisolatie - Afwerking,ENABLED,13.02,16.7,8,11,1.0,0.0,keep_protect
+huis isoleren buitenkant,EXACT,Gevelisolatie - Core,ENABLED,14.14,10.56,17,5,0.0,0.0,pause_candidate
+isolatie buitengevel,PHRASE,Gevelisolatie - Core,ENABLED,15.74,8.68,11,6,0.0,0.0,pause_candidate
+gevelisolatie,PHRASE,Gevelisolatie - Core,ENABLED,11.83,9.68,11,8,0.0,1.0,keep_protect
+huis aan buitenkant isoleren,PHRASE,Gevelisolatie - Core,ENABLED,14.26,3.48,13,6,0.0,0.0,pause_candidate
+buitengevel isoleren,EXACT,Gevelisolatie - Core,ENABLED,8.72,6.85,8,6,0.0,0.0,pause_candidate
+gevelisolatie met steenstrips,EXACT,Gevelisolatie - Afwerking,ENABLED,8.88,4.87,5,5,0.0,0.0,needs_data
+buitengevelisolatie stuc,EXACT,Gevelisolatie - Afwerking,ENABLED,3.82,9.57,5,4,0.0,0.0,needs_data
+buitengevel isoleren en stucen,EXACT,Gevelisolatie - Afwerking,ENABLED,6.6,5.92,5,2,0.0,0.0,needs_data
+gevelisolatie met steenstrips,PHRASE,Gevelisolatie - Afwerking,ENABLED,7.3,4.81,4,3,2.0,0.0,keep_protect
+buitenmuur isoleren,EXACT,Gevelisolatie - Core,ENABLED,8.67,2.33,11,3,0.0,0.0,needs_data
+gevel isoleren en bekleden met steenstrips,EXACT,Gevelisolatie - Afwerking,ENABLED,0.0,8.56,0,2,0.0,0.0,needs_data
+gevel isoleren en bekleden,EXACT,Gevelisolatie - Afwerking,ENABLED,0.38,7.91,1,6,0.0,0.0,needs_data
+buitenmuur isoleren buitenkant,EXACT,Gevelisolatie - Core,ENABLED,5.1,2.09,1,3,1.0,0.0,keep_protect
+gevel isolatie buitenzijde,EXACT,Gevelisolatie - Core,ENABLED,2.15,4.98,3,3,0.0,0.0,needs_data
+huis aan de buitenkant isoleren,EXACT,Gevelisolatie - Core,ENABLED,4.79,1.76,3,2,0.0,0.0,needs_data
+buitengevel isoleren en stucen,PHRASE,Gevelisolatie - Afwerking,ENABLED,2.96,3.56,4,5,0.0,0.0,needs_data
+gevelisolatie,EXACT,Gevelisolatie - Core,ENABLED,2.86,3.25,3,3,0.0,0.0,needs_data
+buitenmuur isoleren en stucen,EXACT,Gevelisolatie - Afwerking,ENABLED,2.35,3.02,3,4,0.0,0.0,needs_data
+gevel isoleren buitenzijde,EXACT,Gevelisolatie - Core,ENABLED,1.1,3.03,1,4,0.0,0.0,needs_data
+gevel isoleren en stucen,EXACT,Gevelisolatie - Afwerking,ENABLED,3.22,0.0,3,0,0.0,0.0,needs_data
+steenstrips buitengevel met isolatie,EXACT,Gevelisolatie - Afwerking,ENABLED,0.0,2.24,0,2,0.0,0.0,needs_data
+gevel isolatie buitenzijde,PHRASE,Gevelisolatie - Core,ENABLED,0.0,2.08,0,1,0.0,0.0,needs_data
+huis van buiten isoleren,EXACT,Gevelisolatie - Core,ENABLED,1.72,0.0,2,0,0.0,0.0,needs_data
+isolatie buitenmuren,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.51,0,1,0.0,0.0,needs_data
+huis aan buitenkant isoleren,EXACT,Gevelisolatie - Core,ENABLED,0.44,0.0,1,0,0.0,0.0,needs_data
+buitenmuur isoleren prijs per m2,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenmuur isoleren offerte,EXACT,Gevelisolatie - Offerte,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+rc waarde gevelisolatie,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie stucwerk,PHRASE,Gevelisolatie - Afwerking,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevel isoleren,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+subsidie buitengevelisolatie,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+isolatiebedrijf rotterdam offerte,PHRASE,Gevelisolatie - Offerte,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie prijs,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie offerte,PHRASE,Gevelisolatie - Offerte,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitenmuurisolatie langs de buitengevel,PHRASE,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie kosten,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie details,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie subsidie,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+dikte gevelisolatie,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+kosten buitengevelisolatie,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie crepi,PHRASE,Gevelisolatie - Afwerking,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevel isoleren vergunning,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie stuc,PHRASE,Gevelisolatie - Afwerking,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie platen,EXACT,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+dunne buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie systemen,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+kosten buitenmuur isoleren,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevel isoleren vergunning,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+nieuwe gevel plaatsen met isolatie,EXACT,Gevelisolatie - Afwerking,ENABLED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenmuur isolatie aanbrengen,PHRASE,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+hoeveel kost buitengevelisolatie,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie prijs per m2,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie offerte,EXACT,Gevelisolatie - Offerte,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitenmuurisolatie langs de buitengevel,EXACT,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie offerte,EXACT,Gevelisolatie - Offerte,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+pir buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie bedrijven,PHRASE,Gevelisolatie - Offerte,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+huis isolatie buitenkant,EXACT,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+huis van buiten isoleren,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie subsidie,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevel isoleren vergunning,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+subsidie isolatie buitenmuur,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+kosten gevelisolatie,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+isolatiebedrijf rotterdam,PHRASE,Gevelisolatie - Offerte,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie kosten,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+muurisolatie buitenzijde,EXACT,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie rc waarde,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie kosten per m2,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie met stucwerk,PHRASE,Gevelisolatie - Afwerking,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenisolatie huis,EXACT,Gevelisolatie - Core,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+muur aan buitenkant isoleren,EXACT,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevel isoleren offerte,EXACT,Gevelisolatie - Offerte,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+pir gevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+muurisolatie buitenzijde details,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevel isoleren en bekleden met steenstrips,PHRASE,Gevelisolatie - Afwerking,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+minerale wol buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitenmuur isoleren aan buitenkant,PHRASE,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie specialist,EXACT,Gevelisolatie - Offerte,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+koudebrug gevel oplossen,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+wat kost buitengevelisolatie,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+isolatie buitenmuren,EXACT,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+polystuc buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie steenstrips,EXACT,Gevelisolatie - Afwerking,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie kosten,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+muurisolatie,EXACT,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+subsidie gevel isoleren,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie prijs per m2,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevel isoleren buitenkant,EXACT,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie sierpleister,PHRASE,Gevelisolatie - Afwerking,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+kingspan buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenmuur isoleren prijs,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+muurisolatie buitenzijde details,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie vergunning,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+eps buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+isolatie huis buitenkant,PHRASE,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie dikte,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+isoleren gevel buitenzijde,EXACT,Gevelisolatie - Core,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+isolatie voorgevel,PHRASE,Gevelisolatie - Core,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+muurisolatie buitenmuur,PHRASE,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenmuur isoleren kosten,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenmuur isoleren prijs per m2,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+rc waarde gevelisolatie,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitenmuur isoleren offerte,PHRASE,Gevelisolatie - Offerte,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie stucwerk,EXACT,Gevelisolatie - Afwerking,ENABLED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevel isoleren buitenzijde,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+subsidie buitengevelisolatie,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+isolatiebedrijf rotterdam offerte,EXACT,Gevelisolatie - Offerte,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie prijs,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie subsidie,EXACT,Gevelisolatie - Subsidie & Vergunning,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie details,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie kosten,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+kosten buitengevelisolatie,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie crepi,EXACT,Gevelisolatie - Afwerking,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+dikte gevelisolatie,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevel van buiten isoleren,EXACT,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+isolatie huis buitenkant,EXACT,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie platen,PHRASE,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie systemen,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+dunne buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevel isoleren en stucen,PHRASE,Gevelisolatie - Afwerking,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+kosten buitenmuur isoleren,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+nieuwe gevel plaatsen met isolatie,PHRASE,Gevelisolatie - Afwerking,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenmuur isolatie aanbrengen,EXACT,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+hoeveel kost buitengevelisolatie,EXACT,Gevelisolatie - Kosten & Prijs,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie prijs per m2,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+pir buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie offerte,PHRASE,Gevelisolatie - Offerte,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie bedrijven,EXACT,Gevelisolatie - Offerte,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+huis isolatie buitenkant,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie subsidie,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+subsidie isolatie buitenmuur,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+kosten gevelisolatie,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+isolatiebedrijf rotterdam,EXACT,Gevelisolatie - Offerte,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+isolatie buitengevel,EXACT,Gevelisolatie - Core,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie rc waarde,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+muurisolatie buitenzijde,PHRASE,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie kosten per m2,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+etics gevelisolatie,PHRASE,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+huis isoleren buitenkant,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitenisolatie huis,PHRASE,Gevelisolatie - Core,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+muur aan buitenkant isoleren,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevel isoleren offerte,PHRASE,Gevelisolatie - Offerte,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+pir gevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+minerale wol buitengevelisolatie,EXACT,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitenmuur isoleren aan buitenkant,EXACT,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+koudebrug gevel oplossen,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie specialist,PHRASE,Gevelisolatie - Offerte,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+wat kost buitengevelisolatie,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+polystuc buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie steenstrips,PHRASE,Gevelisolatie - Afwerking,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitenmuur isoleren buitenkant,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitenmuur isoleren,PHRASE,Gevelisolatie - Core,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+muurisolatie,PHRASE,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+huis aan de buitenkant isoleren,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+buitengevelisolatie met steenstrips,PHRASE,Gevelisolatie - Afwerking,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+etics gevelisolatie,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+subsidie gevel isoleren,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie prijs per m2,EXACT,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevel isoleren buitenkant,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+steenstrips buitengevel met isolatie,PHRASE,Gevelisolatie - Afwerking,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevelisolatie sierpleister,EXACT,Gevelisolatie - Afwerking,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+kingspan buitengevelisolatie,EXACT,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenmuur isoleren prijs,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+gevelisolatie vergunning,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+eps buitengevelisolatie,PHRASE,Gevelisolatie - Materialen,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+gevelisolatie dikte,EXACT,Gevelisolatie - Technisch,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+muurisolatie buitenmuur,EXACT,Gevelisolatie - Materialen,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+isolatie voorgevel,EXACT,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,zero_impr_cleanup
+isoleren gevel buitenzijde,PHRASE,Gevelisolatie - Core,ENABLED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitengevel isoleren vergunning,PHRASE,Gevelisolatie - Subsidie & Vergunning,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data
+buitenmuur isoleren kosten,PHRASE,Gevelisolatie - Kosten & Prijs,PAUSED,0.0,0.0,0,0,0.0,0.0,needs_data

@@ -1,0 +1,44 @@
+[
+  {
+    "sessionDefaultChannelGroup": "Organic Search",
+    "sessions": "112",
+    "keyEvents": "5",
+    "engagedSessions": "42",
+    "engagementRate": "0.375"
+  },
+  {
+    "sessionDefaultChannelGroup": "Paid Search",
+    "sessions": "95",
+    "keyEvents": "6",
+    "engagedSessions": "53",
+    "engagementRate": "0.55789473684210522"
+  },
+  {
+    "sessionDefaultChannelGroup": "Direct",
+    "sessions": "12",
+    "keyEvents": "1",
+    "engagedSessions": "8",
+    "engagementRate": "0.66666666666666663"
+  },
+  {
+    "sessionDefaultChannelGroup": "Unassigned",
+    "sessions": "2",
+    "keyEvents": "1",
+    "engagedSessions": "1",
+    "engagementRate": "0.5"
+  },
+  {
+    "sessionDefaultChannelGroup": "Cross-network",
+    "sessions": "1",
+    "keyEvents": "0",
+    "engagedSessions": "1",
+    "engagementRate": "1"
+  },
+  {
+    "sessionDefaultChannelGroup": "Referral",
+    "sessions": "1",
+    "keyEvents": "0",
+    "engagedSessions": "0",
+    "engagementRate": "0"
+  }
+]

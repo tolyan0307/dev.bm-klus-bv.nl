@@ -1,0 +1,7 @@
+date,area,object,issue,action_taken,expected_effect,review_after,status,notes
+2026-03-08,site,whole_site,WordPress → Next.js migration,Cutover completed,New site live; old URLs preserved,2026-04-08,done,Phase 4 begins
+2026-03,seo,/gevelisolatie/[city],City pages needed for geo coverage,21 city pages deployed,Geo queries captured per city,2026-04-15,done,Maintenance only going forward
+2026-04-07,seo,/muren-stucen/,0% CTR despite 822 impressions; title misses top queries,Recommended title/meta rewrite,CTR improvement from existing impressions,2026-05-15,pending,Title should include sausklaar/behangklaar + geo
+2026-04-07,seo,/muren-stucen-2/,Legacy duplicate leaking 32 impressions,301 redirect deployed in root.htaccess,Impression consolidation,2026-05-01,done,Deployed; monitor GSC de-indexation
+2026-04-07,seo,/muren-stucen/,stucen rotterdam query on 3→2 competing pages (redirect reduced),Identified cannibalization; owner page TBD (/ vs /muren-stucen/),Single owner page should rank,2026-05-01,pending,Redirect removed /muren-stucen-2/; still need to resolve / vs /muren-stucen/ ownership
+2026-04-07,seo,keyword_intelligence,No DataForSEO enrichment for stucen keywords,Recommended enrichment run for stucen cluster,Real search volumes + competitive density,2026-04-30,pending,Currently only gevelisolatie cluster enriched

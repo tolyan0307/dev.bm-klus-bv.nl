@@ -1,0 +1,150 @@
+# service_taxonomy_v1.yaml
+# Domain-specific service structure for BM Klus BV.
+# PURPOSE: Give the operator accurate understanding of service boundaries,
+#          page ownership, and what should NOT be conflated.
+# SOURCE: Derived from site content, priority-pages.yaml, and keyword_master_v3.
+# UPDATE: When services are added, removed, or restructured on the site.
+
+# ── Service clusters ────────────────────────────────────────────
+
+service_clusters:
+
+  gevelisolatie:
+    display_name_nl: "Gevelisolatie (buitenkant / ETICS)"
+    money_page: /gevelisolatie/
+    cluster_pages:
+      - /gevelisolatie/kosten/
+      - /gevelisolatie/afwerkingen/
+      - /gevelisolatie/materialen/
+      - /gevelisolatie/rc-waarde-dikte/
+      - /gevelisolatie/subsidie-vergunning/
+    city_pages: 21  # full list in lib/content/gevelisolatie-locations.ts
+    city_page_pattern: /gevelisolatie/[city]/
+    status: primary_focus  # strategic priority cluster
+    seo_priority: highest
+    ppc_active: true
+    notes: "Main revenue driver. Cluster fully deployed. City pages in maintenance mode."
+
+  buiten_stucwerk:
+    display_name_nl: "Buiten stucwerk (gevel stucen)"
+    money_page: /buiten-stucwerk/
+    cluster_pages: []
+    city_pages: 0
+    status: active
+    seo_priority: medium
+    ppc_active: false  # not separately targeted in Ads
+    notes: "Exterior plastering. Overlaps with sierpleister in some queries."
+
+  sierpleister:
+    display_name_nl: "Sierpleister (spachtelputz / crepi)"
+    money_page: /sierpleister/
+    cluster_pages: []
+    city_pages: 0
+    status: active
+    seo_priority: medium
+    ppc_active: false
+    notes: "Decorative exterior finish. Subset of buiten stucwerk but distinct enough for own page."
+
+  muren_stucen:
+    display_name_nl: "Muren stucen (binnen)"
+    money_page: /muren-stucen/
+    cluster_pages: []
+    city_pages: 0
+    status: active
+    seo_priority: medium
+    ppc_active: false
+    notes: "Interior plastering only. Must not compete with buiten-stucwerk for exterior terms."
+
+  gevel_schilderen:
+    display_name_nl: "Gevel schilderen (buitenmuur verven)"
+    money_page: /gevel-schilderen/
+    cluster_pages: []
+    city_pages: 0
+    status: active
+    seo_priority: medium
+    ppc_active: false
+    notes: "Exterior painting. Distinct from stucwerk — different materials, different process."
+
+# ── Support pages (not service-specific) ────────────────────────
+
+support_pages:
+  - path: /
+    role: homepage
+    owns_queries: "brand, generic 'aannemer rotterdam'"
+    notes: "Should NOT dominate specific service queries"
+
+  - path: /diensten/
+    role: service_index
+    owns_queries: "diensten, overzicht diensten"
+    notes: "Navigation hub — not a ranking target for specific services"
+
+  - path: /onze-werken/
+    role: portfolio_index
+    owns_queries: "onze werken, projecten"
+    notes: "Portfolio hub"
+
+  - path: /over-ons/
+    role: about
+    owns_queries: "over bm klus, wie zijn wij"
+
+  - path: /contact/
+    role: contact
+    owns_queries: "contact bm klus"
+
+# ── Project pages ───────────────────────────────────────────────
+
+project_pages:
+  pattern: /onze-werken/[project-slug]/
+  role: portfolio_detail
+  owns_queries: "long-tail project-specific queries"
+  notes: "Should NOT compete with money pages for service head terms"
+
+# ── Service boundary rules ──────────────────────────────────────
+# These rules prevent incorrect query-to-page mapping.
+
+service_boundaries:
+
+  - rule: "Interior vs exterior stucwerk"
+    description: >
+      /muren-stucen/ = interior only (behangklaar, sausklaar).
+      /buiten-stucwerk/ = exterior only (cementpleister, betonstuc).
+      Never assign exterior queries to muren-stucen or vice versa.
+
+  - rule: "Sierpleister is a subset of buiten stucwerk"
+    description: >
+      Sierpleister (spachtelputz/crepi) is a specific decorative exterior finish.
+      It overlaps with buiten-stucwerk in some queries but has its own page.
+      If query is specifically about decorative texture → sierpleister page.
+      If query is generic exterior plastering → buiten-stucwerk page.
+
+  - rule: "Gevel schilderen is NOT stucwerk"
+    description: >
+      Painting (verven) and plastering (stucen) are different trades.
+      Do not conflate gevel-schilderen with buiten-stucwerk.
+      Paint goes ON TOP of stucwerk or directly on substrate.
+
+  - rule: "Gevelisolatie includes finish layer"
+    description: >
+      BM Klus does ETICS systems that include the insulation AND the
+      finish layer (stuc, sierpleister, steenstrips).
+      Query "gevelisolatie afwerking" → /gevelisolatie/afwerkingen/, NOT /sierpleister/.
+
+  - rule: "City pages only for gevelisolatie"
+    description: >
+      Currently only /gevelisolatie/[city]/ exists.
+      Do not assume city pages for other services exist.
+      Do not recommend city page expansion until post-cutover baselines stabilize.
+
+# ── Anti-cannibalization notes ──────────────────────────────────
+
+known_cannibalization_risks:
+
+  - query_pattern: "stucen rotterdam"
+    competing_pages: [/, /muren-stucen/]
+    status: monitoring  # /muren-stucen-2/ redirected, reduced from 3 to 2
+    notes: "Homepage naturally ranks for brand+service geo terms — may resolve naturally"
+
+  - query_pattern: "buiten stucwerk" / "gevel stucen"
+    competing_pages: [/buiten-stucwerk/, /sierpleister/]
+    status: potential  # not confirmed in GSC data
+    notes: "Watch for overlap as these pages gain indexation"

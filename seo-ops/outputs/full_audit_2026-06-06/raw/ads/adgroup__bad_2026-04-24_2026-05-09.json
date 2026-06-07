@@ -1,0 +1,104 @@
+[
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953518",
+      "status": "ENABLED",
+      "name": "Gevelisolatie - Core"
+    },
+    "metrics": {
+      "clicks": "62",
+      "conversions": 0.0,
+      "costMicros": "77079684",
+      "ctr": 0.14588235294117646,
+      "allConversions": 0.0,
+      "averageCpc": 1243220.7096774194,
+      "impressions": "425"
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953678",
+      "status": "PAUSED",
+      "name": "Gevelisolatie - Kosten & Prijs"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "0"
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953718",
+      "status": "PAUSED",
+      "name": "Gevelisolatie - Offerte"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "0"
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953758",
+      "status": "ENABLED",
+      "name": "Gevelisolatie - Afwerking"
+    },
+    "metrics": {
+      "clicks": "75",
+      "conversions": 0.0,
+      "costMicros": "103989629",
+      "ctr": 0.12953367875647667,
+      "allConversions": 0.0,
+      "averageCpc": 1386528.3866666667,
+      "impressions": "579"
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953918",
+      "status": "PAUSED",
+      "name": "Gevelisolatie - Technisch"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "0"
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953958",
+      "status": "PAUSED",
+      "name": "Gevelisolatie - Subsidie & Vergunning"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "0"
+    }
+  },
+  {
+    "adGroup": {
+      "resourceName": "customers/5902256023/adGroups/189657953998",
+      "status": "PAUSED",
+      "name": "Gevelisolatie - Materialen"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0.0,
+      "costMicros": "0",
+      "allConversions": 0.0,
+      "impressions": "0"
+    }
+  }
+]

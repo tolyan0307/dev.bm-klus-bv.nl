@@ -1,0 +1,357 @@
+query,normalized_query,total_clicks,total_impressions,weighted_ctr,best_position_guess,distinct_pages_count,possible_cannibalization_guess,query_intent_guess,query_theme_guess
+bm klus bv,bm klus bv,25,214,0.116822,1.09,18,True,navigational,other
+etics gevelisolatie,etics gevelisolatie,2,13,0.153846,5.23,1,False,commercial_investigative,core_isolation
+gevelisolatie rotterdam,gevelisolatie rotterdam,2,413,0.004843,8,5,True,commercial_investigative,core_isolation
+boris mitov,boris mitov,1,1,1.0,2,1,False,commercial_investigative,other
+buitenmuur stucen nadelen,buitenmuur stucen nadelen,1,129,0.007752,4.93,1,False,informational,stuc_crepi
+etics isolatie,etics isolatie,1,34,0.029412,5.18,1,False,commercial_investigative,core_isolation
+etics systeem,etics systeem,1,40,0.025,7.9,1,False,commercial_investigative,core_isolation
+gevel stucen,gevel stucen,1,75,0.013333,3.89,1,False,commercial_investigative,stuc_crepi
+gevelisolatie leiden,gevelisolatie leiden,1,201,0.004975,6.31,1,False,commercial_investigative,core_isolation
+gevelisolatie steenstrips prijs,gevelisolatie steenstrips prijs,1,10,0.1,7.8,1,False,commercial,prijs_kosten
+gevelisolatie stucwerk,gevelisolatie stucwerk,1,5,0.2,4,2,False,commercial_investigative,stuc_crepi
+aannemer archipelbuurt,aannemer archipelbuurt,0,1,0.0,104,1,False,commercial_investigative,other
+aannemer klussen,aannemer klussen,0,2,0.0,1,1,False,commercial_investigative,other
+afbouw aannemer,afbouw aannemer,0,1,0.0,8,1,False,commercial_investigative,other
+afgebladderde buitenmuur verven,afgebladderde buitenmuur verven,0,2,0.0,42.5,1,False,commercial_investigative,other
+afwerkingen en renovaties rotterdam,afwerkingen en renovaties rotterdam,0,1,0.0,1,1,False,commercial_investigative,other
+b m,b m,0,4,0.0,1.75,1,False,commercial_investigative,other
+b&m,b&m,0,2,0.0,2,2,False,commercial_investigative,other
+b+m,b+m,0,1,0.0,3,1,False,commercial_investigative,other
+b.m,b.m,0,1,0.0,2,1,False,commercial_investigative,other
+bakstenen muur stucen,bakstenen muur stucen,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+bakstenen muur stucen buiten,bakstenen muur stucen buiten,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+beamix cementgebonden stucmortel,beamix cementgebonden stucmortel,0,1,0.0,4,1,False,commercial_investigative,stuc_crepi
+behangklaar en sausklaar,behangklaar en sausklaar,0,13,0.0,25.38,1,False,commercial_investigative,other
+behangklaar muren,behangklaar muren,0,5,0.0,58.2,1,False,commercial_investigative,other
+behangklaar muur nieuwbouw,behangklaar muur nieuwbouw,0,1,0.0,59,1,False,commercial_investigative,other
+behangklaar naar sausklaar,behangklaar naar sausklaar,0,4,0.0,24.25,1,False,commercial_investigative,other
+behangklaar of sausklaar,behangklaar of sausklaar,0,17,0.0,32.18,1,False,commercial_investigative,other
+behangklaar sausklaar maken,behangklaar sausklaar maken,0,3,0.0,31.33,1,False,commercial_investigative,other
+behangklaar stucen,behangklaar stucen,0,114,0.0,35.61,1,False,commercial_investigative,stuc_crepi
+behangklaar stucwerk,behangklaar stucwerk,0,67,0.0,38.06,1,False,commercial_investigative,stuc_crepi
+behangklaar stuken,behangklaar stuken,0,2,0.0,29,1,False,commercial_investigative,other
+behangklaar stuukwerk,behangklaar stuukwerk,0,3,0.0,34,1,False,commercial_investigative,other
+behangklaar wanden,behangklaar wanden,0,18,0.0,51.72,1,False,commercial_investigative,other
+behangklare muren,behangklare muren,0,1,0.0,88,1,False,commercial_investigative,other
+behangklare muren sausklaar maken,behangklare muren sausklaar maken,0,1,0.0,42,1,False,commercial_investigative,other
+behangklare wanden afwerken,behangklare wanden afwerken,0,15,0.0,56.8,1,False,commercial_investigative,other
+betonlook stucwerk,betonlook stucwerk,0,1,0.0,1,1,False,commercial_investigative,stuc_crepi
+betonstuc buiten,betonstuc buiten,0,28,0.0,21.11,1,False,commercial_investigative,stuc_crepi
+betonstuc buitengevel,betonstuc buitengevel,0,3,0.0,17.33,1,False,commercial_investigative,stuc_crepi
+betonstuc buitenmuur,betonstuc buitenmuur,0,4,0.0,22,1,False,commercial_investigative,stuc_crepi
+binnen stucwerk,binnen stucwerk,0,2,0.0,40,1,False,commercial_investigative,stuc_crepi
+bloembak buiten stucen,bloembak buiten stucen,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+bm,bm,0,81,0.0,3.98,1,False,commercial_investigative,other
+bm afbouw,bm afbouw,0,7,0.0,9,1,False,commercial_investigative,other
+bm bouw,bm bouw,0,1,0.0,6,1,False,commercial_investigative,other
+bm bv,bm bv,0,6,0.0,3.17,1,False,commercial_investigative,other
+bm holland,bm holland,0,3,0.0,40,2,False,commercial_investigative,other
+bm services,bm services,0,1,0.0,6,1,False,commercial_investigative,other
+"bm,","bm,",0,1,0.0,5,1,False,commercial_investigative,other
+bm.,bm.,0,1,0.0,7,1,False,commercial_investigative,other
+bml,bml,0,1,0.0,1,1,False,commercial_investigative,other
+bmm afbouw,bmm afbouw,0,3,0.0,5,1,False,commercial_investigative,other
+bostik w140 buiten,bostik w140 buiten,0,1,0.0,5,1,False,commercial_investigative,other
+bouwbedrijf,bouwbedrijf,0,1,0.0,5,1,False,commercial_investigative,other
+bouwbedrijf zuid limburg,bouwbedrijf zuid limburg,0,1,0.0,7,1,False,commercial_investigative,other
+buiten muur stucen,buiten muur stucen,0,4,0.0,10,1,False,commercial_investigative,stuc_crepi
+buiten sierpleister,buiten sierpleister,0,2,0.0,18.5,1,False,commercial_investigative,stuc_crepi
+buiten spachtelputz,buiten spachtelputz,0,1,0.0,69,1,False,commercial_investigative,stuc_crepi
+buiten stuc,buiten stuc,0,1,0.0,12,1,False,commercial_investigative,stuc_crepi
+buiten stucen,buiten stucen,0,2,0.0,26.5,1,False,commercial_investigative,stuc_crepi
+buiten stucmortel,buiten stucmortel,0,4,0.0,20.25,1,False,commercial_investigative,stuc_crepi
+buiten stucwerk,buiten stucwerk,0,107,0.0,32.77,1,False,commercial_investigative,stuc_crepi
+buiten stucwerk kosten,buiten stucwerk kosten,0,64,0.0,20.09,1,False,commercial,prijs_kosten
+buiten stucwerk materiaal,buiten stucwerk materiaal,0,40,0.0,1.3,1,False,commercial_investigative,materialen
+buiten stucwerk op isolatie,buiten stucwerk op isolatie,0,1,0.0,1,1,False,commercial_investigative,stuc_crepi
+buiten stucwerk op kleur,buiten stucwerk op kleur,0,1,0.0,32,1,False,commercial_investigative,stuc_crepi
+buiten stucwerk prijs,buiten stucwerk prijs,0,53,0.0,17.28,1,False,commercial,prijs_kosten
+buiten stucwerk repareren,buiten stucwerk repareren,0,1,0.0,34,1,False,commercial_investigative,stuc_crepi
+buiten stucwerk subsidie,buiten stucwerk subsidie,0,2,0.0,8,1,False,commercial_investigative,subsidie_vergunning
+buiten stukadoor,buiten stukadoor,0,1,0.0,3,1,False,commercial_investigative,other
+buitengevel isolatiesysteem,buitengevel isolatiesysteem,0,1,0.0,28,1,False,commercial_investigative,core_isolation
+buitengevel isoleren en stucen,buitengevel isoleren en stucen,0,9,0.0,34.22,1,False,commercial_investigative,stuc_crepi
+buitengevel isoleren en stucen prijs,buitengevel isoleren en stucen prijs,0,20,0.0,13.45,1,False,commercial,prijs_kosten
+buitengevel schilderen prijs,buitengevel schilderen prijs,0,1,0.0,26,1,False,commercial,prijs_kosten
+buitengevel stucen,buitengevel stucen,0,2,0.0,26,1,False,commercial_investigative,stuc_crepi
+buitengevel stucen kosten,buitengevel stucen kosten,0,3,0.0,3,1,False,commercial,prijs_kosten
+buitengevel stucwerk,buitengevel stucwerk,0,15,0.0,44.33,1,False,commercial_investigative,stuc_crepi
+buitengevel.nl,buitengevel.nl,0,1,0.0,96,1,False,commercial_investigative,core_isolation
+buitengevelisolatie,buitengevelisolatie,0,169,0.0,43.05,1,False,commercial_investigative,core_isolation
+buitengevelisolatie kosten,buitengevelisolatie kosten,0,2,0.0,14,1,False,commercial,prijs_kosten
+buitengevelisolatie prijs,buitengevelisolatie prijs,0,1,0.0,11,1,False,commercial,prijs_kosten
+buitengevelisolatie rotterdam,buitengevelisolatie rotterdam,0,45,0.0,5.78,3,True,commercial_investigative,core_isolation
+buitenkant huis stucen,buitenkant huis stucen,0,2,0.0,3,1,False,commercial_investigative,stuc_crepi
+buitenmuren stucen,buitenmuren stucen,0,3,0.0,22.67,1,False,commercial_investigative,stuc_crepi
+buitenmuur aansmeren,buitenmuur aansmeren,0,1,0.0,2,1,False,commercial_investigative,other
+buitenmuur isoleren en stucen,buitenmuur isoleren en stucen,0,4,0.0,24,1,False,commercial_investigative,stuc_crepi
+buitenmuur laten schilderen,buitenmuur laten schilderen,0,1,0.0,9,1,False,commercial_investigative,stuc_crepi
+buitenmuur laten stucen,buitenmuur laten stucen,0,3,0.0,3,1,False,commercial_investigative,stuc_crepi
+buitenmuur pleisteren,buitenmuur pleisteren,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+buitenmuur stuc,buitenmuur stuc,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+buitenmuur stuccen,buitenmuur stuccen,0,1,0.0,5,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucen,buitenmuur stucen,0,135,0.0,17.35,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucen cement,buitenmuur stucen cement,0,3,0.0,19.33,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucen en isoleren,buitenmuur stucen en isoleren,0,2,0.0,44.5,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucen hornbach,buitenmuur stucen hornbach,0,2,0.0,2,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucen knauf,buitenmuur stucen knauf,0,2,0.0,2,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucen kosten,buitenmuur stucen kosten,0,81,0.0,20.31,1,False,commercial,prijs_kosten
+buitenmuur stucen met cement,buitenmuur stucen met cement,0,2,0.0,3,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucen met isolatie,buitenmuur stucen met isolatie,0,2,0.0,2,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucen prijs per m2,buitenmuur stucen prijs per m2,0,6,0.0,27,1,False,commercial,prijs_kosten
+buitenmuur stucen zelf doen,buitenmuur stucen zelf doen,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+buitenmuur stucwerk,buitenmuur stucwerk,0,3,0.0,28.67,1,False,commercial_investigative,stuc_crepi
+buitenmuur verven kosten,buitenmuur verven kosten,0,2,0.0,17,1,False,commercial,prijs_kosten
+buitenmuur zelf stucen,buitenmuur zelf stucen,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+buitenmuurtje stucen,buitenmuurtje stucen,0,1,0.0,20,1,False,commercial_investigative,stuc_crepi
+buitenstuc,buitenstuc,0,4,0.0,3.5,1,False,commercial_investigative,stuc_crepi
+buitenstuc kant en klaar,buitenstuc kant en klaar,0,3,0.0,3.33,1,False,commercial_investigative,stuc_crepi
+buitenstucwerk,buitenstucwerk,0,73,0.0,38.12,1,False,commercial_investigative,stuc_crepi
+buitenstucwerk prijs,buitenstucwerk prijs,0,72,0.0,15.53,1,False,commercial,prijs_kosten
+capelle aan den ijssel,capelle aan den ijssel,0,1,0.0,10,1,False,commercial_investigative,other
+cement stucen buitenmuur,cement stucen buitenmuur,0,6,0.0,16.33,1,False,commercial_investigative,stuc_crepi
+cementgebonden stucwerk prijzen,cementgebonden stucwerk prijzen,0,2,0.0,29.5,1,False,commercial_investigative,stuc_crepi
+cementstuc buiten,cementstuc buiten,0,41,0.0,22.9,1,False,commercial_investigative,stuc_crepi
+crepi afwerking,crepi afwerking,0,10,0.0,18.7,1,False,commercial_investigative,stuc_crepi
+crepi stucwerk,crepi stucwerk,0,1,0.0,14,1,False,commercial_investigative,stuc_crepi
+de gevel schilder,de gevel schilder,0,1,0.0,42,1,False,commercial_investigative,stuc_crepi
+decoratieve buitenstuc,decoratieve buitenstuc,0,1,0.0,5,1,False,commercial_investigative,stuc_crepi
+dikte gevelisolatie,dikte gevelisolatie,0,1,0.0,13,1,False,commercial_investigative,technical_rc_dikte
+dunne gevelisolatie,dunne gevelisolatie,0,1,0.0,31,1,False,commercial_investigative,core_isolation
+een buitenmuur stucen,een buitenmuur stucen,0,2,0.0,17.5,1,False,commercial_investigative,stuc_crepi
+eps etics,eps etics,0,1,0.0,10,1,False,commercial_investigative,materialen
+etics,etics,0,44,0.0,6.75,1,False,commercial_investigative,core_isolation
+etics betekenis,etics betekenis,0,9,0.0,3.33,1,False,informational,core_isolation
+etics details,etics details,0,2,0.0,10,1,False,commercial_investigative,core_isolation
+etics gevel,etics gevel,0,6,0.0,2,1,False,commercial_investigative,core_isolation
+etics-systeem,etics-systeem,0,4,0.0,10,1,False,commercial_investigative,core_isolation
+etivs,etivs,0,1,0.0,6,1,False,commercial_investigative,other
+facade repair,facade repair,0,1,0.0,3,1,False,commercial_investigative,other
+fotos,fotos,0,2,0.0,2,2,False,commercial_investigative,other
+gestuct huis,gestuct huis,0,1,0.0,13,1,False,commercial_investigative,stuc_crepi
+gestucte buitenmuur schoonmaken,gestucte buitenmuur schoonmaken,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+gestucte buitenmuur verven,gestucte buitenmuur verven,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+gestucte tuinmuur,gestucte tuinmuur,0,2,0.0,2,1,False,commercial_investigative,stuc_crepi
+gestucte tuinmuur maken,gestucte tuinmuur maken,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+gevel coating rotterdam,gevel coating rotterdam,0,1,0.0,16,1,False,commercial_investigative,other
+gevel isolatie kosten,gevel isolatie kosten,0,1,0.0,15,1,False,commercial,prijs_kosten
+gevel isolatie prijs,gevel isolatie prijs,0,1,0.0,14,1,False,commercial,prijs_kosten
+gevel isoleren en stucen,gevel isoleren en stucen,0,1,0.0,50,1,False,commercial_investigative,stuc_crepi
+gevel keimen of schilderen,gevel keimen of schilderen,0,4,0.0,62.75,1,False,commercial_investigative,stuc_crepi
+gevel laten schilderen,gevel laten schilderen,0,7,0.0,28.43,1,False,commercial_investigative,stuc_crepi
+gevel laten stucen,gevel laten stucen,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+gevel laten verven,gevel laten verven,0,2,0.0,12.5,1,False,commercial_investigative,other
+gevel renovatie rotterdam,gevel renovatie rotterdam,0,1,0.0,7,1,False,commercial_investigative,other
+gevel schilder,gevel schilder,0,2,0.0,19,1,False,commercial_investigative,stuc_crepi
+gevel schilderen,gevel schilderen,0,10,0.0,47.4,1,False,commercial_investigative,stuc_crepi
+gevel schilderen de zilk,gevel schilderen de zilk,0,18,0.0,16.17,1,False,commercial_investigative,stuc_crepi
+gevel schilderen en beschermen tegen weersinvloeden,gevel schilderen en beschermen tegen weersinvloeden,0,3,0.0,31.33,1,False,commercial_investigative,stuc_crepi
+gevel schilderen katwijk,gevel schilderen katwijk,0,10,0.0,48,1,False,commercial_investigative,stuc_crepi
+gevel schilderen kosten,gevel schilderen kosten,0,9,0.0,27.33,1,False,commercial,prijs_kosten
+gevel schilderen noordwijk,gevel schilderen noordwijk,0,33,0.0,48.48,1,False,commercial_investigative,stuc_crepi
+gevel schilderen noordwijkerhout,gevel schilderen noordwijkerhout,0,9,0.0,47.33,1,False,commercial_investigative,stuc_crepi
+gevel schilderen oegstgeest,gevel schilderen oegstgeest,0,3,0.0,41.33,1,False,commercial_investigative,stuc_crepi
+gevel schilderen prijs,gevel schilderen prijs,0,10,0.0,12.3,1,False,commercial,prijs_kosten
+gevel schilderen rijnsburg,gevel schilderen rijnsburg,0,12,0.0,24.25,1,False,commercial_investigative,stuc_crepi
+gevel schilderen vergunning,gevel schilderen vergunning,0,1,0.0,46,1,False,commercial_investigative,subsidie_vergunning
+gevel sierpleister,gevel sierpleister,0,28,0.0,14.86,1,False,commercial_investigative,stuc_crepi
+gevel stuc,gevel stuc,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+gevel stucen kosten,gevel stucen kosten,0,2,0.0,7,1,False,commercial,prijs_kosten
+gevel stucwerk,gevel stucwerk,0,47,0.0,32.98,1,False,commercial_investigative,stuc_crepi
+gevelafwerking,gevelafwerking,0,1,0.0,3,1,False,commercial_investigative,other
+gevelbekleding stucwerk,gevelbekleding stucwerk,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+gevelisolatie,gevelisolatie,0,1,0.0,49,1,False,commercial_investigative,core_isolation
+gevelisolatie 's-gravenhage,gevelisolatie 's-gravenhage,0,32,0.0,11.59,1,False,commercial_investigative,core_isolation
+gevelisolatie afwerking,gevelisolatie afwerking,0,21,0.0,16.86,1,False,commercial_investigative,core_isolation
+gevelisolatie almere,gevelisolatie almere,0,90,0.0,13.89,1,False,commercial_investigative,core_isolation
+gevelisolatie alphen aan den rijn,gevelisolatie alphen aan den rijn,0,2,0.0,11,1,False,commercial_investigative,core_isolation
+gevelisolatie breda,gevelisolatie breda,0,18,0.0,15.56,1,False,commercial_investigative,core_isolation
+gevelisolatie buitenkant,gevelisolatie buitenkant,0,54,0.0,19.34,2,False,commercial_investigative,core_isolation
+gevelisolatie buitenkant kosten,gevelisolatie buitenkant kosten,0,4,0.0,11,2,False,commercial,prijs_kosten
+gevelisolatie buitenkant stucwerk,gevelisolatie buitenkant stucwerk,0,14,0.0,11.5,1,False,commercial_investigative,stuc_crepi
+gevelisolatie buitenzijde,gevelisolatie buitenzijde,0,1,0.0,20,1,False,commercial_investigative,core_isolation
+gevelisolatie buitenzijde kosten,gevelisolatie buitenzijde kosten,0,12,0.0,18.08,1,False,commercial,prijs_kosten
+gevelisolatie den haag,gevelisolatie den haag,0,151,0.0,9.31,2,False,commercial_investigative,core_isolation
+gevelisolatie dikte,gevelisolatie dikte,0,3,0.0,6,1,False,commercial_investigative,technical_rc_dikte
+gevelisolatie gouda,gevelisolatie gouda,0,2,0.0,6.5,1,False,commercial_investigative,core_isolation
+gevelisolatie kosten,gevelisolatie kosten,0,64,0.0,18.71,2,False,commercial,prijs_kosten
+gevelisolatie offerte,gevelisolatie offerte,0,2,0.0,16,2,False,commercial,offerte
+gevelisolatie prijs,gevelisolatie prijs,0,13,0.0,15,2,False,commercial,prijs_kosten
+gevelisolatie rc waarde,gevelisolatie rc waarde,0,1,0.0,22,1,False,commercial_investigative,technical_rc_dikte
+gevelisolatie vergelijken,gevelisolatie vergelijken,0,1,0.0,91,1,False,commercial,core_isolation
+gevelisolatie zoetermeer,gevelisolatie zoetermeer,0,18,0.0,95.06,1,False,commercial_investigative,core_isolation
+gevelpleisters,gevelpleisters,0,1,0.0,92,1,False,commercial_investigative,stuc_crepi
+gevelrenovatie met folie in rotterdam,gevelrenovatie met folie in rotterdam,0,136,0.0,23.11,1,False,commercial_investigative,other
+gevelrenovatie vlaardingen,gevelrenovatie vlaardingen,0,1,0.0,59,1,False,commercial_investigative,other
+gevels schilderen,gevels schilderen,0,1,0.0,32,1,False,commercial_investigative,stuc_crepi
+gevelschilderwerken,gevelschilderwerken,0,3,0.0,7.67,1,False,commercial_investigative,stuc_crepi
+gevelstuc,gevelstuc,0,1,0.0,4,1,False,commercial_investigative,stuc_crepi
+gevelstucwerk,gevelstucwerk,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+grof stucwerk,grof stucwerk,0,1,0.0,98,1,False,commercial_investigative,stuc_crepi
+grof stucwerk buitenmuur,grof stucwerk buitenmuur,0,1,0.0,15,1,False,commercial_investigative,stuc_crepi
+hoe dik isolatie buitenmuur,hoe dik isolatie buitenmuur,0,1,0.0,3,1,False,informational,other
+hoeveel kost gevelisolatie,hoeveel kost gevelisolatie,0,1,0.0,1,1,False,commercial,prijs_kosten
+huis buitenmuur stucen,huis buitenmuur stucen,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+huis schoonmaken na verbouwing,huis schoonmaken na verbouwing,0,29,0.0,66.03,1,False,commercial_investigative,other
+huis stucen buitenkant,huis stucen buitenkant,0,2,0.0,3,1,False,commercial_investigative,stuc_crepi
+isolatie rc waarde,isolatie rc waarde,0,1,0.0,87,1,False,commercial_investigative,technical_rc_dikte
+isolatie stucwerk buitengevel,isolatie stucwerk buitengevel,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+isolatie vlaardingen,isolatie vlaardingen,0,2,0.0,22,1,False,commercial_investigative,other
+kalkstuc buitengevel,kalkstuc buitengevel,0,1,0.0,43,1,False,commercial_investigative,stuc_crepi
+kant en klare stuc voor buiten,kant en klare stuc voor buiten,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+keimwerk schoonmaken,keimwerk schoonmaken,0,1,0.0,52,1,False,commercial_investigative,other
+klus,klus,0,21,0.0,9.1,1,False,commercial_investigative,other
+klus bedrijven,klus bedrijven,0,1,0.0,1,1,False,commercial_investigative,other
+klusbedrijf rotterdam,klusbedrijf rotterdam,0,1,0.0,2,1,False,commercial_investigative,other
+klussen rotterdam,klussen rotterdam,0,1,0.0,25,1,False,commercial_investigative,other
+klussenbedrijf 010 rotterdam,klussenbedrijf 010 rotterdam,0,2,0.0,46,1,False,commercial_investigative,other
+knauf sm 700 pro,knauf sm 700 pro,0,2,0.0,4.5,1,False,commercial_investigative,other
+kosten behangklaar stucen,kosten behangklaar stucen,0,1,0.0,70,1,False,commercial,prijs_kosten
+kosten buiten stucwerk,kosten buiten stucwerk,0,38,0.0,30.03,1,False,commercial,prijs_kosten
+kosten buitenmuur stucen,kosten buitenmuur stucen,0,33,0.0,25.97,1,False,commercial,prijs_kosten
+kosten buitenstucwerk,kosten buitenstucwerk,0,38,0.0,15.29,1,False,commercial,prijs_kosten
+kosten gevelisolatie,kosten gevelisolatie,0,37,0.0,17.97,2,False,commercial,prijs_kosten
+kosten gevelisolatie buitenzijde,kosten gevelisolatie buitenzijde,0,2,0.0,16.5,1,False,commercial,prijs_kosten
+kosten gevelonderhoud,kosten gevelonderhoud,0,4,0.0,3,4,True,commercial,prijs_kosten
+kosten keimen gevel,kosten keimen gevel,0,17,0.0,20,1,False,commercial,prijs_kosten
+kosten stucen buitenmuur,kosten stucen buitenmuur,0,1,0.0,61,1,False,commercial,prijs_kosten
+minerale sierpleister,minerale sierpleister,0,1,0.0,19,1,False,commercial_investigative,stuc_crepi
+"mkz klussenbedrijf, hogenbanweg, , rotterdam netherlands","mkz klussenbedrijf, hogenbanweg, , rotterdam netherlands",0,4,0.0,8,1,False,commercial_investigative,other
+muren stucen,muren stucen,0,3,0.0,19.33,1,False,commercial_investigative,stuc_crepi
+muur stucen buiten,muur stucen buiten,0,1,0.0,12,1,False,commercial_investigative,stuc_crepi
+natuurkalk stucwerk gevel,natuurkalk stucwerk gevel,0,1,0.0,48,1,False,commercial_investigative,stuc_crepi
+nieuw-beijerland,nieuw-beijerland,0,2,0.0,40,1,False,commercial_investigative,other
+offerte gevelisolatie,offerte gevelisolatie,0,2,0.0,15,1,False,commercial,offerte
+onderhoud buitenstucwerk,onderhoud buitenstucwerk,0,7,0.0,39.71,1,False,commercial_investigative,stuc_crepi
+pleister buitenmuur,pleister buitenmuur,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+pleisterwerk buitenmuur,pleisterwerk buitenmuur,0,6,0.0,5.33,1,False,commercial_investigative,stuc_crepi
+pleisterwerk gevel,pleisterwerk gevel,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+poetsen na verbouwing,poetsen na verbouwing,0,17,0.0,71.18,1,False,commercial_investigative,other
+populaire stucwerk stijlen 2025,populaire stucwerk stijlen 2025,0,1,0.0,22,1,False,commercial_investigative,stuc_crepi
+prijs buitenstucwerk,prijs buitenstucwerk,0,64,0.0,16.16,2,False,commercial,prijs_kosten
+prijs gevel schilderen,prijs gevel schilderen,0,3,0.0,9,1,False,commercial,prijs_kosten
+prijs gevelisolatie,prijs gevelisolatie,0,2,0.0,12.5,1,False,commercial,prijs_kosten
+prijs spachtelputz,prijs spachtelputz,0,38,0.0,40.95,1,False,commercial,prijs_kosten
+prijs steenstrips met isolatie,prijs steenstrips met isolatie,0,1,0.0,11,1,False,commercial,prijs_kosten
+professioneel schilderen,professioneel schilderen,0,13,0.0,15.85,1,False,commercial_investigative,stuc_crepi
+professionele schoonmaak na verbouwing,professionele schoonmaak na verbouwing,0,53,0.0,65.49,1,False,commercial_investigative,other
+rc bereken,rc bereken,0,20,0.0,80.5,1,False,commercial_investigative,other
+rc berekenen,rc berekenen,0,18,0.0,76.17,1,False,commercial_investigative,other
+rc berekening,rc berekening,0,19,0.0,68.79,1,False,commercial_investigative,other
+rc check,rc check,0,1,0.0,4,1,False,commercial_investigative,other
+rc wa,rc wa,0,1,0.0,10,1,False,commercial_investigative,other
+rc waarde 2020,rc waarde 2020,0,1,0.0,19,1,False,commercial_investigative,technical_rc_dikte
+rc waarde berekenen,rc waarde berekenen,0,9,0.0,70.78,1,False,commercial_investigative,technical_rc_dikte
+rc waarde berekenen formule,rc waarde berekenen formule,0,1,0.0,70,1,False,commercial_investigative,technical_rc_dikte
+rc waarde beton,rc waarde beton,0,22,0.0,62.91,1,False,commercial_investigative,technical_rc_dikte
+rc waarde eps,rc waarde eps,0,5,0.0,40.4,1,False,commercial_investigative,materialen
+rc waarde gevel,rc waarde gevel,0,14,0.0,48.64,1,False,commercial_investigative,technical_rc_dikte
+rc waarde isolatie,rc waarde isolatie,0,1,0.0,83,1,False,commercial_investigative,technical_rc_dikte
+rc waarde verhogen,rc waarde verhogen,0,1,0.0,49,1,False,commercial_investigative,technical_rc_dikte
+renovatie buitenschil rotterdam,renovatie buitenschil rotterdam,0,6,0.0,5.67,1,False,commercial_investigative,other
+sausklaar,sausklaar,0,4,0.0,15,1,False,commercial_investigative,other
+sausklaar maken muren,sausklaar maken muren,0,7,0.0,28.14,1,False,commercial_investigative,other
+sausklaar maken nieuwbouw,sausklaar maken nieuwbouw,0,2,0.0,49,1,False,commercial_investigative,other
+sausklaar maken wanden,sausklaar maken wanden,0,1,0.0,18,1,False,commercial_investigative,other
+sausklaar nieuwbouw,sausklaar nieuwbouw,0,6,0.0,23.83,1,False,commercial_investigative,other
+sausklaar of behangklaar,sausklaar of behangklaar,0,3,0.0,42.33,1,False,commercial_investigative,other
+sausklaar stucen,sausklaar stucen,0,230,0.0,25.3,1,False,commercial_investigative,stuc_crepi
+sausklaar stucen nieuwbouw,sausklaar stucen nieuwbouw,0,54,0.0,28.44,1,False,commercial_investigative,stuc_crepi
+sausklaar stucwerk,sausklaar stucwerk,0,79,0.0,47.61,1,False,commercial_investigative,stuc_crepi
+sausklaar stucwerk schilderen,sausklaar stucwerk schilderen,0,2,0.0,33.5,1,False,commercial_investigative,stuc_crepi
+sausklaar stucwerk voorstrijken,sausklaar stucwerk voorstrijken,0,6,0.0,28.17,1,False,commercial_investigative,stuc_crepi
+sausklaar stuukwerk,sausklaar stuukwerk,0,1,0.0,48,1,False,commercial_investigative,other
+sausklare wanden,sausklare wanden,0,3,0.0,59,1,False,commercial_investigative,other
+sauzklaar stucwerk,sauzklaar stucwerk,0,1,0.0,47,1,False,commercial_investigative,stuc_crepi
+schilderwerken gevel,schilderwerken gevel,0,3,0.0,33.67,1,False,commercial_investigative,stuc_crepi
+schoonmaak na renovatie,schoonmaak na renovatie,0,2,0.0,29.5,1,False,commercial_investigative,other
+schoonmaak na verbouwing,schoonmaak na verbouwing,0,142,0.0,21.51,1,False,commercial_investigative,other
+schoonmaak na verbouwing horst,schoonmaak na verbouwing horst,0,1,0.0,17,1,False,commercial_investigative,other
+schoonmaken na verbouwing,schoonmaken na verbouwing,0,20,0.0,20.95,1,False,commercial_investigative,other
+schuur stucen,schuur stucen,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+sierpleister,sierpleister,0,46,0.0,15,2,False,commercial_investigative,stuc_crepi
+sierpleister buiten,sierpleister buiten,0,4,0.0,42,2,False,commercial_investigative,stuc_crepi
+sierpleister buiten doe het zelf,sierpleister buiten doe het zelf,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+sierpleister buitengevel,sierpleister buitengevel,0,23,0.0,18.17,2,False,commercial_investigative,stuc_crepi
+sierpleister gevel,sierpleister gevel,0,1,0.0,17,1,False,commercial_investigative,stuc_crepi
+sierpleister korrel,sierpleister korrel,0,1,0.0,17,1,False,commercial_investigative,stuc_crepi
+sierpleister kosten,sierpleister kosten,0,20,0.0,25,1,False,commercial,prijs_kosten
+sierpleister prijs,sierpleister prijs,0,13,0.0,36.75,2,False,commercial,prijs_kosten
+sierpleister repareren,sierpleister repareren,0,27,0.0,41.78,1,False,commercial_investigative,stuc_crepi
+sierpleister spachtelputz,sierpleister spachtelputz,0,3,0.0,4.67,1,False,commercial_investigative,stuc_crepi
+sierpleister voor buiten,sierpleister voor buiten,0,7,0.0,12,3,True,commercial_investigative,stuc_crepi
+soorten stucwerk buiten,soorten stucwerk buiten,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+spachtelputz 3mm,spachtelputz 3mm,0,6,0.0,12.17,1,False,commercial_investigative,stuc_crepi
+spachtelputz buiten,spachtelputz buiten,0,15,0.0,77.07,1,False,commercial_investigative,stuc_crepi
+spachtelputz buitengevel,spachtelputz buitengevel,0,6,0.0,2,2,False,commercial_investigative,stuc_crepi
+spachtelputz gevel,spachtelputz gevel,0,1,0.0,1,1,False,commercial_investigative,stuc_crepi
+spachtelputz korrelgrootte,spachtelputz korrelgrootte,0,1,0.0,20,1,False,commercial_investigative,stuc_crepi
+spachtelputz prijs,spachtelputz prijs,0,4,0.0,44.25,1,False,commercial,prijs_kosten
+spachtelputz prijzen,spachtelputz prijzen,0,16,0.0,55.62,1,False,commercial_investigative,stuc_crepi
+spachtelputz voor buiten,spachtelputz voor buiten,0,1,0.0,52,1,False,commercial_investigative,stuc_crepi
+specialistisch stucwerk in rotterdam,specialistisch stucwerk in rotterdam,0,11,0.0,29,1,False,commercial_investigative,stuc_crepi
+stapelblokken tuin stucen,stapelblokken tuin stucen,0,1,0.0,14,1,False,commercial_investigative,stuc_crepi
+steenstrips buitengevel,steenstrips buitengevel,0,1,0.0,2,1,False,commercial_investigative,steenstrips
+steenstrips stucen,steenstrips stucen,0,6,0.0,1,1,False,commercial_investigative,steenstrips
+stof verwijderen na verbouwing,stof verwijderen na verbouwing,0,3,0.0,38.33,1,False,commercial_investigative,other
+strakke nieuwbouw muren,strakke nieuwbouw muren,0,27,0.0,26.59,1,False,commercial_investigative,other
+stuc buiten,stuc buiten,0,3,0.0,21.67,1,False,commercial_investigative,stuc_crepi
+stuc buitenmuur,stuc buitenmuur,0,2,0.0,3.5,1,False,commercial_investigative,stuc_crepi
+stuc voor buiten,stuc voor buiten,0,6,0.0,26.67,1,False,commercial_investigative,stuc_crepi
+stuc voor buitenmuur,stuc voor buitenmuur,0,2,0.0,2.5,1,False,commercial_investigative,stuc_crepi
+stucen behangklaar,stucen behangklaar,0,28,0.0,25.43,1,False,commercial_investigative,stuc_crepi
+stucen buitengevel,stucen buitengevel,0,3,0.0,18.33,1,False,commercial_investigative,stuc_crepi
+stucen buitenmuur,stucen buitenmuur,0,12,0.0,14.25,1,False,commercial_investigative,stuc_crepi
+stucen buitenmuur kosten,stucen buitenmuur kosten,0,2,0.0,10,1,False,commercial,prijs_kosten
+stucen gevel,stucen gevel,0,37,0.0,9.57,1,False,commercial_investigative,stuc_crepi
+stucen rotterdam,stucen rotterdam,0,20,0.0,19.9,1,False,commercial_investigative,stuc_crepi
+stuck werk,stuck werk,0,1,0.0,11,1,False,commercial_investigative,stuc_crepi
+stucmortel,stucmortel,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+stucmortel buiten,stucmortel buiten,0,3,0.0,16.33,1,False,commercial_investigative,stuc_crepi
+stucmortel voor buiten,stucmortel voor buiten,0,2,0.0,12.5,1,False,commercial_investigative,stuc_crepi
+stucplaat buitengevel,stucplaat buitengevel,0,2,0.0,2,1,False,commercial_investigative,stuc_crepi
+stucplaten buitengevel,stucplaten buitengevel,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+stucplaten voor buiten,stucplaten voor buiten,0,1,0.0,2,1,False,commercial_investigative,stuc_crepi
+stucwerk behangklaar,stucwerk behangklaar,0,1,0.0,40,1,False,commercial_investigative,stuc_crepi
+stucwerk binnen,stucwerk binnen,0,1,0.0,11,1,False,commercial_investigative,stuc_crepi
+stucwerk buiten,stucwerk buiten,0,26,0.0,39.23,1,False,commercial_investigative,stuc_crepi
+stucwerk buiten repareren,stucwerk buiten repareren,0,1,0.0,40,1,False,commercial_investigative,stuc_crepi
+stucwerk buitenmuur,stucwerk buitenmuur,0,4,0.0,15.5,1,False,commercial_investigative,stuc_crepi
+stucwerk buitenmuur repareren,stucwerk buitenmuur repareren,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+stucwerk gevel,stucwerk gevel,0,2,0.0,12.5,1,False,commercial_investigative,stuc_crepi
+stucwerk gevels,stucwerk gevels,0,2,0.0,18.5,1,False,commercial_investigative,stuc_crepi
+stucwerk op isolatie detail,stucwerk op isolatie detail,0,10,0.0,4.1,1,False,commercial_investigative,stuc_crepi
+stucwerk rotterdam,stucwerk rotterdam,0,1,0.0,23,1,False,commercial_investigative,stuc_crepi
+stucwerk sausklaar,stucwerk sausklaar,0,31,0.0,43.19,1,False,commercial_investigative,stuc_crepi
+stucwerk verwijderen baksteen,stucwerk verwijderen baksteen,0,1,0.0,3,1,False,commercial_investigative,stuc_crepi
+stucwerk voor buiten,stucwerk voor buiten,0,2,0.0,26,1,False,commercial_investigative,stuc_crepi
+stukadoor buitengevel,stukadoor buitengevel,0,2,0.0,2.5,1,False,commercial_investigative,core_isolation
+stukadoors rotterdam,stukadoors rotterdam,0,1,0.0,4,1,False,commercial_investigative,other
+stukadoorsbedrijf rotterdam,stukadoorsbedrijf rotterdam,0,1,0.0,8,1,False,commercial_investigative,other
+tuinmuur stucen,tuinmuur stucen,0,3,0.0,2.33,1,False,commercial_investigative,stuc_crepi
+tuinmuurtje stucen,tuinmuurtje stucen,0,1,0.0,4,1,False,commercial_investigative,stuc_crepi
+van behangklaar naar sausklaar,van behangklaar naar sausklaar,0,3,0.0,24.33,1,False,commercial_investigative,other
+van behangklaar naar sausklaar kosten,van behangklaar naar sausklaar kosten,0,17,0.0,14.76,1,False,commercial,prijs_kosten
+verbouw schoonmaak,verbouw schoonmaak,0,18,0.0,20.83,1,False,commercial_investigative,other
+verbouwing schoonmaak,verbouwing schoonmaak,0,35,0.0,30.11,1,False,commercial_investigative,other
+vergunning gevelisolatie,vergunning gevelisolatie,0,1,0.0,1,1,False,commercial_investigative,subsidie_vergunning
+verschil behangklaar en sausklaar,verschil behangklaar en sausklaar,0,9,0.0,19.78,1,False,informational,other
+vochtproblemen rotterdam,vochtproblemen rotterdam,0,2,0.0,28,1,False,commercial_investigative,other
+wanden behangklaar,wanden behangklaar,0,10,0.0,63.2,1,False,commercial_investigative,other
+wanden sausklaar maken,wanden sausklaar maken,0,6,0.0,31.33,1,False,commercial_investigative,other
+wanden stucen,wanden stucen,0,1,0.0,45,1,False,commercial_investigative,stuc_crepi
+wapeningsmat,wapeningsmat,0,1,0.0,61,1,False,commercial_investigative,other
+wat betekent sausklaar,wat betekent sausklaar,0,3,0.0,3,1,False,commercial_investigative,other
+wat betekent sausklaar opleveren,wat betekent sausklaar opleveren,0,3,0.0,1,1,False,commercial_investigative,other
+wat is etics,wat is etics,0,3,0.0,6.67,1,False,informational,core_isolation
+wat is sausklaar,wat is sausklaar,0,1,0.0,3,1,False,informational,other
+wat is sausklaar opleveren,wat is sausklaar opleveren,0,1,0.0,1,1,False,informational,other
+wat kost buitenmuur stucen,wat kost buitenmuur stucen,0,37,0.0,19.95,1,False,commercial,prijs_kosten
+wat kost gevel isolatie,wat kost gevel isolatie,0,5,0.0,11.6,1,False,commercial,prijs_kosten
+wat kost gevelisolatie,wat kost gevelisolatie,0,5,0.0,19,1,False,commercial,prijs_kosten
+waterdichte sierpleister,waterdichte sierpleister,0,1,0.0,18,1,False,commercial_investigative,stuc_crepi
+weber buitenstuc,weber buitenstuc,0,1,0.0,5,1,False,commercial_investigative,stuc_crepi
+welke kleur is dit,welke kleur is dit,0,1,0.0,1,1,False,commercial_investigative,other
+welke soorten stucwerk zijn geschikt voor moderne interieurstijlen?,welke soorten stucwerk zijn geschikt voor moderne interieurstijlen?,0,2,0.0,12,2,False,commercial_investigative,stuc_crepi
+zelf buitenmuur stucen,zelf buitenmuur stucen,0,2,0.0,4,1,False,commercial_investigative,stuc_crepi

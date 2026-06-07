@@ -1,0 +1,62 @@
+# Analysis Context v1 — BM klus BV
+# This file encodes project-level facts that all analysis workflows
+# should account for when interpreting data and generating recommendations.
+#
+# READ by operator (Claude) and referenced in orchestrator rules.
+# Not consumed directly by Python scripts — serves as documented SSoT
+# for analysis interpretation guidelines.
+
+# --- Site timeline ---
+site_cutover_date: "2026-03-08"           # Rebuilt Next.js site went live
+old_site_platform: wordpress              # Previous CMS
+cutover_notes:
+  - "All GSC/GA4 data before 2026-03-08 reflects the old WordPress site"
+  - "URL structure changed at cutover — old slugs may persist in index"
+  - "Indexed page count is still growing; GSC coverage is incomplete"
+
+# --- Analysis mode ---
+analysis_mode: post_cutover_preliminary
+analysis_mode_notes:
+  - "Site is <6 months post-cutover as of 2026-04-07"
+  - "GSC indexation is still stabilizing — not all pages are indexed"
+  - "Position/CTR baselines are not yet established"
+  - "Transition to 'stable_production' when: 6+ months of clean data, indexation complete, baselines established"
+
+# --- PPC context ---
+ppc:
+  budget_eur_per_day: 10
+  budget_eur_per_month_approx: 300
+  budget_tier: low
+  campaign_restructure_date: "2026-03-15"  # Google Ads campaign structure materially updated
+  active_campaigns:
+    - campaign_id: "23271040037"
+      name: "NL | Gevelisolatie | Search"
+  budget_notes:
+    - "At 10 EUR/day, conversion volume will be low — statistical significance is hard to reach"
+    - "Do not recommend budget increases without explicit user request"
+    - "Avoid aggressive keyword expansion recommendations — budget cannot support it"
+    - "CPA conclusions require 20+ conversions to be meaningful; current volume is much lower"
+    - "Google Ads campaign structure was materially changed on 2026-03-15 — do not mix pre/post data without caveat"
+    - "PPC data before 2026-03-15 reflects old campaign setup and should not be used to evaluate current performance"
+
+# --- Legacy data policy ---
+legacy_data_policy:
+  default: treat_as_noise
+  description: "Pre-cutover GSC/GA4 data reflects the old WordPress site and should not be used to evaluate new-site performance"
+  exceptions:
+    - "legacy_indexation_review: intentionally inspects old-site URL tails"
+    - "Trend analysis that explicitly compares old vs new site performance"
+  signals_to_discount:
+    - "GSC impressions/clicks on old WordPress URLs (wp-content, old slugs)"
+    - "GA4 sessions on URLs that no longer exist in the current site"
+    - "Position data from before 2026-03-08"
+    - "Historical keyword_master entries based solely on old-site GSC data"
+
+# --- Interpretation guardrails ---
+guardrails:
+  - "Do not treat low click/impression volumes as definitive failures — the site is young"
+  - "Do not compare current metrics to pre-cutover benchmarks as if they are like-for-like"
+  - "Flag when a finding may be distorted by cutover transition effects"
+  - "Explicitly state when conversion volume is too low for confident PPC conclusions"
+  - "Note that indexed page count is still incomplete when discussing SEO coverage"
+  - "Avoid recommending aggressive scaling actions during preliminary period"

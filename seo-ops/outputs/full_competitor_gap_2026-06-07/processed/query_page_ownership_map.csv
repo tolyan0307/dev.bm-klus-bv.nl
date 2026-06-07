@@ -1,0 +1,242 @@
+query,n_pages,actual_owner,owner_impr,owner_pos,expected_page,wrong_owner
+sausklaar stucen,1,/muren-stucen/,277,21.29,/muren-stucen/,no
+sausklaar stucwerk,1,/muren-stucen/,233,41.55,/muren-stucen/,no
+behangklaar stucen,1,/muren-stucen/,172,38.56,/muren-stucen/,no
+gevelrenovatie met folie in rotterdam,1,/,144,20.76,/gevelisolatie/rotterdam/ (city),yes
+behangklaar stucwerk,1,/muren-stucen/,141,42.77,/muren-stucen/,no
+gevelisolatie rotterdam,2,/,101,16.62,/gevelisolatie/rotterdam/ (city),yes
+behangklaar wanden,1,/muren-stucen/,98,49.82,?,no
+gevel schilder,1,/gevel-schilderen/,90,34.76,/gevel-schilderen/,no
+bm,1,/,86,6.02,?,no
+gevelisolatie zoetermeer,1,/gevelisolatie/zoetermeer/,74,22.22,/gevelisolatie/zoetermeer/ (city),no
+stucwerk sausklaar,1,/muren-stucen/,72,43.94,/muren-stucen/,no
+gevel stucen,1,/buiten-stucwerk/,63,3.84,/buiten-stucwerk/,no
+gevelisolatie kosten,1,/gevelisolatie/kosten/,56,52.68,/gevelisolatie/kosten/,no
+etics systeem,1,/gevelisolatie/,46,5.28,?,no
+sausklaar stucen nieuwbouw,1,/muren-stucen/,46,24.76,/muren-stucen/,no
+wanden behangklaar,1,/muren-stucen/,42,53.79,?,no
+buitengevel isoleren en stucen prijs,2,/buiten-stucwerk/,41,11.54,/buiten-stucwerk/ or /muren-stucen/,no
+etics,2,/gevelisolatie/kosten/,39,1.33,?,no
+stucen behangklaar,1,/muren-stucen/,36,32.25,/muren-stucen/,no
+crepi afwerking,1,/gevelisolatie/afwerkingen/,35,16.31,/gevelisolatie/afwerkingen/,no
+prijs spachtelputz,1,/sierpleister/,31,46.68,/sierpleister/,no
+sausklaar maken muren,1,/muren-stucen/,31,23.61,?,no
+buitengevelisolatie,1,/gevelisolatie/,30,43.37,/gevelisolatie/,no
+kosten gevelisolatie,1,/gevelisolatie/kosten/,30,51.8,/gevelisolatie/kosten/,no
+gevel schilderen rijnsburg,1,/gevel-schilderen/,29,44.28,/gevel-schilderen/,no
+buitenmuur stucen nadelen,1,/buiten-stucwerk/,28,14.61,/buiten-stucwerk/,no
+gevelisolatie leiden,1,/gevelisolatie/leiden/,28,7.11,/gevelisolatie/leiden/ (city),no
+gevel laten schilderen,1,/gevel-schilderen/,27,41.81,/gevel-schilderen/,no
+gevel schilderen en beschermen tegen weersinvloeden,1,/gevel-schilderen/,27,47.26,/gevel-schilderen/,no
+gevel sierpleister,2,/sierpleister/,27,24.93,/sierpleister/,no
+keimen gevel kosten,1,/gevel-schilderen/,27,15.63,/gevel-schilderen/,no
+kosten keimen gevel,1,/gevel-schilderen/,27,20.3,/gevel-schilderen/,no
+gevel schilderen noordwijk,1,/gevel-schilderen/,26,62.96,/gevel-schilderen/,no
+bm klus bv,11,/,25,1,?,no
+gevel schilderen noordwijkerhout,1,/gevel-schilderen/,25,36.72,/gevel-schilderen/,no
+stucen gevel,1,/buiten-stucwerk/,25,12.44,/buiten-stucwerk/,no
+buitenstucwerk,1,/buiten-stucwerk/,23,33.78,/buiten-stucwerk/,no
+gevel schilderen katwijk,1,/gevel-schilderen/,23,49.35,/gevel-schilderen/,no
+behangklaar of sausklaar,1,/muren-stucen/,22,29.55,?,no
+etics isolatie,2,/gevelisolatie/,22,7.32,/gevelisolatie/,no
+sausklaar maken van nieuwbouw,1,/muren-stucen/,21,27.43,?,no
+wat kost buitenmuur stucen,1,/buiten-stucwerk/,21,20.86,/buiten-stucwerk/ or /muren-stucen/,no
+klus,1,/,19,6.95,?,no
+buiten stucwerk kosten,1,/buiten-stucwerk/,18,19.94,/buiten-stucwerk/ or /muren-stucen/,no
+gevelrenovatie etten-leur,1,/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/,18,21.5,?,no
+vliesgevel prijs per m2,1,/gevelisolatie/kosten/,17,34.47,/gevelisolatie/kosten/,no
+gevel schilderen de zilk,1,/gevel-schilderen/,15,54.47,/gevel-schilderen/,no
+renovatie buitenschil rotterdam,2,/over-ons/,15,16.27,/gevelisolatie/rotterdam/ (city),yes
+etics gevelisolatie,1,/gevelisolatie/,14,5.86,/gevelisolatie/,no
+keimen kosten,1,/gevel-schilderen/,14,17.57,/gevel-schilderen/,no
+sausklaar stucwerk voorstrijken,1,/muren-stucen/,14,37.29,/muren-stucen/,no
+sierpleister kosten,1,/sierpleister/,14,32.86,/sierpleister/,no
+strakke nieuwbouw muren,1,/muren-stucen/,14,45.07,?,no
+binnen stucwerk,1,/muren-stucen/,13,38.23,/muren-stucen/,no
+gevel schilderen oegstgeest,1,/gevel-schilderen/,13,65.46,/gevel-schilderen/,no
+gevelisolatie buitenkant,1,/gevelisolatie/,13,87.77,/gevelisolatie/,no
+buitenmuur stucen,1,/buiten-stucwerk/,12,15.83,/buiten-stucwerk/,no
+sausklaar,1,/muren-stucen/,11,22,?,no
+bm kluswerk,3,/,10,2.5,?,no
+buitengevel isoleren en stucen,1,/buiten-stucwerk/,10,41.4,/buiten-stucwerk/,no
+buitenmuur isoleren en stucen,1,/buiten-stucwerk/,10,42.1,/buiten-stucwerk/,no
+buitenstucwerk vught,2,/onze-werken/,10,17.1,/buiten-stucwerk/,yes
+gevelisolatie almere,1,/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/,10,33.9,/gevelisolatie/,yes
+behangklare wanden,1,/muren-stucen/,9,61.67,?,no
+gevel schilderen kosten,1,/gevel-schilderen/,9,20.89,/gevel-schilderen/,no
+gevelisolatie gouda,1,/gevelisolatie/gouda/,9,16.11,/gevelisolatie/gouda/ (city),no
+sausklaar maken wanden,1,/muren-stucen/,9,27.56,?,no
+sausklare wanden,1,/muren-stucen/,9,31.33,?,no
+strakke wanden,1,/muren-stucen/,9,50.56,?,no
+klusbedrijf rotterdam,1,/,8,7.5,/gevelisolatie/rotterdam/ (city),yes
+gevelisolatie alphen aan den rijn,1,/gevelisolatie/alphen-aan-den-rijn/,8,15.12,/gevelisolatie/alphen/ (city),no
+gevelisolatie kosten per m2,2,/gevelisolatie/kosten/,8,48.25,/gevelisolatie/kosten/,no
+sierpleister buiten,1,/sierpleister/,8,54.5,/sierpleister/,no
+stucwerk behangklaar,1,/muren-stucen/,8,40.12,/muren-stucen/,no
+stucwerk binnen,1,/muren-stucen/,8,32.75,/muren-stucen/,no
+wat kost gevelisolatie,1,/gevelisolatie/kosten/,8,56.38,/gevelisolatie/kosten/,no
+behangklaar muren,1,/muren-stucen/,7,48.57,?,no
+bm klusjes,1,/,7,8.29,?,no
+gevel isoleren en stucen,1,/buiten-stucwerk/,7,38.14,/buiten-stucwerk/,no
+gevel schilderen voor en na,1,/gevel-schilderen/,7,45.14,/gevel-schilderen/,no
+kosten buitenmuur stucen,1,/buiten-stucwerk/,7,44.57,/buiten-stucwerk/ or /muren-stucen/,no
+stucwerk gevels,1,/buiten-stucwerk/,7,18.86,/buiten-stucwerk/,no
+behangklaar naar sausklaar,1,/muren-stucen/,6,29.33,?,no
+gevel stucwerk,1,/buiten-stucwerk/,6,37.17,/buiten-stucwerk/,no
+gevelrenovatie vught,1,/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/,6,16.67,?,no
+grof stucwerk buiten,1,/buiten-stucwerk/,6,11.5,/buiten-stucwerk/,no
+onderhoud buitenstucwerk,1,/buiten-stucwerk/,6,61.67,/buiten-stucwerk/,no
+scheurherstel vught,1,/onze-werken/,6,16.67,?,no
+van behangklaar naar sausklaar kosten,1,/muren-stucen/,6,20.67,/gevelisolatie/kosten/,yes
+behangklaar stuken,1,/muren-stucen/,5,41.6,?,no
+buiten stucwerk subsidie,1,/gevelisolatie/subsidie-vergunning/,5,17.4,/buiten-stucwerk/,yes
+buitengevelisolatie rotterdam,2,/gevelisolatie/,5,37,/gevelisolatie/rotterdam/ (city),yes
+buitenmuur stucen kosten,1,/buiten-stucwerk/,5,28.8,/buiten-stucwerk/ or /muren-stucen/,no
+gevel keimen of schilderen,1,/gevel-schilderen/,5,69.2,/gevel-schilderen/,no
+gevelbekleding vergunning nodig,1,/gevelisolatie/subsidie-vergunning/,5,39,?,no
+klussen rotterdam,1,/,5,35.8,/gevelisolatie/rotterdam/ (city),yes
+muren behangklaar,1,/muren-stucen/,5,53.2,?,no
+renovatiediensten,1,/,5,7.8,?,no
+wanden sausklaar maken,1,/muren-stucen/,5,30,?,no
+b m,1,/,4,4.75,?,no
+behangklaar,1,/muren-stucen/,4,68.25,?,no
+buiten sierpleister,2,/gevelisolatie/afwerkingen/,4,35.25,/sierpleister/,yes
+gevel schilderen voorhout,1,/gevel-schilderen/,4,52.75,/gevel-schilderen/,no
+pand schilderen vlaardingen,1,/gevel-schilderen/,4,84,/gevelisolatie/vlaardingen/ (city),yes
+sausklaar stuukwerk,1,/muren-stucen/,4,38.75,?,no
+sauzklaar stucwerk,1,/muren-stucen/,4,30.25,/muren-stucen/,no
+schilderen van gevels breda,1,/gevel-schilderen/,4,40,/gevelisolatie/breda/ (city),yes
+schilderklaar stucwerk,1,/muren-stucen/,4,44.75,/gevel-schilderen/,yes
+schildersbedrijf halsteren,1,/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,4,27.25,/gevel-schilderen/,yes
+schilderwerken gevel,1,/gevel-schilderen/,4,40.25,/gevel-schilderen/,no
+sierpleister korrel,1,/sierpleister/,4,35.75,/sierpleister/,no
+etics-systeem,1,/gevelisolatie/,3,9.33,?,no
+bm bv,1,/,3,5,?,no
+bm holland,1,/,3,20.67,?,no
+gevel schilderen,1,/gevel-schilderen/,3,50,/gevel-schilderen/,no
+gevel schilderen lisse,1,/gevel-schilderen/,3,70.33,/gevel-schilderen/,no
+gevels schilderen,1,/gevel-schilderen/,3,49.33,/gevel-schilderen/,no
+spachtelputz prijzen,1,/sierpleister/,3,50.33,/sierpleister/,no
+stucmortel buiten,1,/buiten-stucwerk/,3,38.33,/buiten-stucwerk/,no
+wat is etics,1,/gevelisolatie/,3,6.67,?,no
+wat is sausklaar stucen,1,/muren-stucen/,3,36,/muren-stucen/,no
+b.m,1,/,2,6.5,?,no
+behangklare muur afwerken,1,/muren-stucen/,2,51,/gevelisolatie/afwerkingen/,yes
+bouw- en renovatiediensten zuid-holland,1,/,2,26,?,no
+buiten stucmortel,1,/buiten-stucwerk/,2,33,/buiten-stucwerk/,no
+buiten stucwerk,1,/buiten-stucwerk/,2,44,/buiten-stucwerk/,no
+buitengevelisolatie kosten,1,/gevelisolatie/kosten/,2,27.5,/gevelisolatie/kosten/,no
+buitenmuur laten schilderen,1,/gevel-schilderen/,2,77.5,/gevel-schilderen/,no
+buitenmuur stucen prijs per m2,1,/buiten-stucwerk/,2,42.5,/buiten-stucwerk/ or /muren-stucen/,no
+etics gevel,1,/gevelisolatie/,2,9.5,?,no
+etics system,1,/gevelisolatie/,2,11,?,no
+gevel impregneren subsidie,1,/gevelisolatie/subsidie-vergunning/,2,67.5,?,no
+gevelbeplating rotterdam,1,/,2,20.5,/gevelisolatie/rotterdam/ (city),yes
+gevelisolatie stucwerk,2,/gevelisolatie/,2,70.5,/buiten-stucwerk/,yes
+gevelrenovatie etten leur,1,/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/,2,27,?,no
+huis renoveren,1,/,2,6,?,no
+klus bedrijf,1,/,2,1,?,no
+klussenbedrijf 010 rotterdam vlaardingen,2,/onze-werken/,2,39.5,/gevelisolatie/rotterdam/ (city),yes
+kosten buiten stucwerk,1,/buiten-stucwerk/,2,11.5,/buiten-stucwerk/ or /muren-stucen/,no
+pleisterwerk rotterdam,1,/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/,2,15.5,/gevelisolatie/rotterdam/ (city),yes
+prijs buitenstucwerk,1,/buiten-stucwerk/,2,18,/buiten-stucwerk/ or /muren-stucen/,no
+reparatie stucwerk buiten,1,/buiten-stucwerk/,2,10,/buiten-stucwerk/,no
+sausklaar of behangklaar,1,/muren-stucen/,2,35.5,?,no
+sausklaar stucen prijs,1,/muren-stucen/,2,50,/buiten-stucwerk/ or /muren-stucen/,yes
+sierpleister buitengevel,2,/gevelisolatie/,2,35.5,/sierpleister/,yes
+sierpleister gevel,2,/sierpleister/,2,6,/sierpleister/,no
+sierpleister prijs,1,/sierpleister/,2,61.5,/sierpleister/,no
+sierpleister spachtelputz,1,/sierpleister/,2,1,/sierpleister/,no
+sierpleister voor buiten,1,/sierpleister/,2,20,/sierpleister/,no
+stucwerk reiniging bergen aan zee,2,/diensten/,2,34,/muren-stucen/,yes
+stucwerk rijnmond,1,/,2,35,/muren-stucen/,yes
+stucwerk voor buiten,1,/buiten-stucwerk/,2,15.5,/buiten-stucwerk/,no
+tuinmeubelen coating rotterdam,1,/,2,21.5,/gevelisolatie/rotterdam/ (city),yes
+wat kost buiten stucwerk,1,/buiten-stucwerk/,2,16,/buiten-stucwerk/ or /muren-stucen/,no
+wat kost gevelisolatie per m2,1,/gevelisolatie/kosten/,2,62.5,/gevelisolatie/kosten/,no
+aannemer,1,/,1,10,?,no
+afgebladderde buitenmuur verven,1,/gevel-schilderen/,1,45,?,no
+b.m.,1,/,1,3,?,no
+behangklaar sausklaar maken,1,/muren-stucen/,1,34,?,no
+behangklaar stuukwerk,1,/muren-stucen/,1,37,?,no
+behangklare muren sausklaar maken,1,/muren-stucen/,1,44,?,no
+behangklare muur sausklaar maken,1,/muren-stucen/,1,49,?,no
+best bm,1,/,1,7,?,no
+betonstuc buitenmuur,1,/buiten-stucwerk/,1,22,/buiten-stucwerk/,no
+bm nl,1,/,1,3,?,no
+bm schilderwerken,1,/gevel-schilderen/,1,11,/gevel-schilderen/,no
+bm services,1,/,1,8,?,no
+bokjes klussen,1,/,1,9,?,no
+buiten gevel stucen,1,/buiten-stucwerk/,1,29,/buiten-stucwerk/,no
+buiten stucwerk bladel,1,/buiten-stucwerk/,1,52,/buiten-stucwerk/,no
+buiten stucwerk prijs,1,/buiten-stucwerk/,1,15,/buiten-stucwerk/ or /muren-stucen/,no
+buitengevel,1,/,1,7,?,no
+buitengevel stucen,1,/buiten-stucwerk/,1,10,/buiten-stucwerk/,no
+buitengevel stucen kosten,1,/buiten-stucwerk/,1,21,/buiten-stucwerk/ or /muren-stucen/,no
+buitengevelisolatiesystemen,1,/gevelisolatie/,1,40,/gevelisolatie/,no
+buitenkant huis stucen kosten,1,/buiten-stucwerk/,1,22,/buiten-stucwerk/ or /muren-stucen/,no
+buitenmuur stuccen,1,/buiten-stucwerk/,1,8,/buiten-stucwerk/,no
+buitenmuur stucen en isoleren,1,/buiten-stucwerk/,1,23,/buiten-stucwerk/,no
+buitenmuur stucwerk,1,/buiten-stucwerk/,1,23,/buiten-stucwerk/,no
+buitenstucwerk prijs,1,/buiten-stucwerk/,1,24,/buiten-stucwerk/ or /muren-stucen/,no
+cementpleister buiten,1,/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/,1,11,?,no
+crepi buitenmuur,1,/gevelisolatie/afwerkingen/,1,48,/gevelisolatie/afwerkingen/,no
+crepi stucwerk,1,/gevelisolatie/afwerkingen/,1,11,/gevelisolatie/afwerkingen/,no
+de gevel schilder,1,/gevel-schilderen/,1,62,/gevel-schilderen/,no
+detail stucwerk buitengevel,1,/buiten-stucwerk/,1,29,/buiten-stucwerk/,no
+eps hendrik ido ambacht,1,/gevelisolatie/,1,75,/gevelisolatie/hendrik/ (city),yes
+eps isolatie stucen,1,/gevelisolatie/,1,42,/muren-stucen/,yes
+general contractor,1,/,1,11,?,no
+gevel schilderen prijs,1,/gevel-schilderen/,1,24,/gevel-schilderen/,no
+gevel stucen kosten,1,/buiten-stucwerk/,1,19,/buiten-stucwerk/ or /muren-stucen/,no
+gevel verven,1,/gevel-schilderen/,1,61,?,no
+gevelafwerking buiten,1,/gevelisolatie/,1,32,/gevelisolatie/afwerkingen/,yes
+gevelisolatie buitenkant kosten,1,/gevelisolatie/,1,52,/gevelisolatie/kosten/,yes
+gevelisolatie buitenzijde kosten,1,/gevelisolatie/,1,53,/gevelisolatie/kosten/,yes
+gevelisolatie prijs per m2,1,/gevelisolatie/kosten/,1,34,/gevelisolatie/kosten/,no
+gevelrenovatie spijkenisse,1,/,1,98,/gevelisolatie/spijkenisse/ (city),yes
+gevelschilderwerk,1,/gevel-schilderen/,1,36,/gevel-schilderen/,no
+gevelspecialist gorinchem,1,/,1,83,?,no
+gevelspecialist vught,1,/onze-werken/,1,25,?,no
+grof stucwerk buitenmuur,1,/buiten-stucwerk/,1,22,/buiten-stucwerk/,no
+grove stuc,1,/gevelisolatie/afwerkingen/,1,73,/muren-stucen/,yes
+heb je ook foto's,2,/buiten-stucwerk/,1,21,?,no
+klus bedrijven,1,/,1,8,?,no
+klusjesman spijkenisse,1,/,1,78,/gevelisolatie/spijkenisse/ (city),yes
+klussenbedrijf 010 vlaardingen,1,/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/,1,39,/gevelisolatie/vlaardingen/ (city),yes
+klussenbedrijf rotterdam,1,/,1,39,/gevelisolatie/rotterdam/ (city),yes
+kluswebsite,1,/,1,4,?,no
+kosten gevel schilderen,1,/gevel-schilderen/,1,26,/gevel-schilderen/,no
+kosten gevelisolatie buitenzijde,1,/gevelisolatie/,1,51,/gevelisolatie/kosten/,yes
+kozijn schilderen in gouda,1,/gevel-schilderen/,1,86,/gevelisolatie/gouda/ (city),yes
+muren stucen,1,/muren-stucen/,1,43,/muren-stucen/,no
+muur sausklaar maken,1,/muren-stucen/,1,37,?,no
+prijs gevel schilderen,1,/gevel-schilderen/,1,12,/gevel-schilderen/,no
+renovatie woning,1,/,1,1,?,no
+sausklaar opgeleverd,1,/muren-stucen/,1,24,?,no
+sausklaar stucwerk schuren,1,/muren-stucen/,1,57,/muren-stucen/,no
+sausklaar stucwerk voorstrijken;7;2;-5;90;156;66;3.46;1.72,1,/muren-stucen/,1,35,/muren-stucen/,no
+schilder halsteren,1,/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/,1,27,/gevel-schilderen/,yes
+schilderen gevels,1,/gevel-schilderen/,1,62,/gevel-schilderen/,no
+sierpleister,1,/,1,14,/sierpleister/,yes
+sierpleister fijne korrel,1,/sierpleister/,1,18,/sierpleister/,no
+sierpleister herstellen,1,/sierpleister/,1,38,/sierpleister/,no
+spachtelputz 0.5 mm,1,/sierpleister/,1,48,/sierpleister/,no
+spachtelputz gevel,1,/sierpleister/,1,1,/sierpleister/,no
+spachtelputz kleuren voorbeelden,1,/sierpleister/,1,66,/sierpleister/,no
+spachtelputz voor buiten,1,/sierpleister/,1,65,/sierpleister/,no
+stucen buitenmuur,1,/buiten-stucwerk/,1,13,/buiten-stucwerk/,no
+stucen buitenmuur kosten,1,/buiten-stucwerk/,1,23,/buiten-stucwerk/ or /muren-stucen/,no
+stucen op kleur,1,/muren-stucen/,1,75,/muren-stucen/,no
+stucen rotterdam,1,/muren-stucen/,1,24,/gevelisolatie/rotterdam/ (city),yes
+stucmortel voor buiten,1,/buiten-stucwerk/,1,55,/buiten-stucwerk/,no
+stucwerk gevel detail,1,/buiten-stucwerk/,1,37,/buiten-stucwerk/,no
+stucwerk op isolatie detail,1,/buiten-stucwerk/,1,32,/muren-stucen/,yes
+subsidie gevelreiniging,1,/gevelisolatie/subsidie-vergunning/,1,34,?,no
+test analyse klus,1,/,1,37,?,no
+verschil behangklaar en sausklaar,1,/muren-stucen/,1,52,?,no
+verschil sausklaar en behangklaar,1,/muren-stucen/,1,48,?,no
+wat betekent sausklaar,1,/muren-stucen/,1,68,?,no
+wat is behangklaar,1,/muren-stucen/,1,80,?,no
+wat is sausklaar,1,/muren-stucen/,1,33,?,no
+wat kost gevel isolatie,1,/gevelisolatie/kosten/,1,40,/gevelisolatie/kosten/,no

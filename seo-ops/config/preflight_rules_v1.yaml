@@ -1,0 +1,413 @@
+# Preflight Rules v1
+# Purpose: Deterministic checks before running any analysis workflow.
+# A weaker model should evaluate these rules mechanically, not reason about them.
+#
+# Version: 1.1
+# Date: 2026-04-07
+
+# ─── Report mode definitions ───
+report_modes:
+  preliminary:
+    description: "Data is <30 days post-cutover OR key artifacts are stale (>7d)"
+    confidence_cap: "medium"
+    mandatory_disclosure: "This report uses preliminary data. Confidence is capped at medium."
+  verified:
+    description: "All artifacts fresh (<7d), site >30d post-cutover, sufficient volume"
+    confidence_cap: "high"
+    mandatory_disclosure: null
+  enrichment_only:
+    description: "Report based on external enrichment data (DataForSEO etc), not primary GSC/GA4"
+    confidence_cap: "medium"
+    mandatory_disclosure: "This report uses enrichment data only. Cross-reference with primary sources before acting."
+
+# ─── Artifact freshness rules ───
+artifact_freshness:
+  gsc_snapshot:
+    paths:
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv"
+    stale_after_days: 7
+    warning: "GSC snapshot is older than 7 days. Rebuild with build_gsc_query_page_snapshot_v1 before analysis."
+    blocking: false  # warn but allow if user confirms
+
+  ga4_snapshot:
+    paths:
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv"
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last90d.csv"
+    stale_after_days: 7
+    warning: "GA4 snapshot is older than 7 days. Rebuild with build_ga4_landing_page_snapshot_v1 before analysis."
+    blocking: false
+
+  # ─── Recent-window (28d) snapshots for page diagnostics ───
+  gsc_snapshot_28d:
+    paths:
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last28d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last28d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last28d.csv"
+    stale_after_days: 7
+    warning: "GSC 28d snapshot is older than 7 days. Rebuild with: python seo-ops/analyzers/seo/build_gsc_query_page_snapshot.py --days 28"
+    blocking: false
+
+  ga4_snapshot_28d:
+    paths:
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last28d.csv"
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last28d.csv"
+    stale_after_days: 7
+    warning: "GA4 28d snapshot is older than 7 days. Rebuild with: python seo-ops/analyzers/pages/build_ga4_landing_page_snapshot.py --days 28"
+    blocking: false
+
+  keyword_master_v2:
+    paths:
+      - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv"
+    stale_after_days: 14
+    warning: "keyword_master_v2 is older than 14 days. Consider rebuilding if upstream sources changed."
+    blocking: false
+
+  page_inventory:
+    paths:
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+    stale_after_days: 30
+    warning: "page_inventory is older than 30 days. Rebuild if site structure changed."
+    blocking: false
+
+  google_ads_csvs:
+    paths:
+      - "D:/projects/bmklus/google/outputs/campaign_23271040037_last30d.csv"
+      - "D:/projects/bmklus/google/outputs/keywords_23271040037_last30d.csv"
+      - "D:/projects/bmklus/google/outputs/search_terms_23271040037_last30d.csv"
+    stale_after_days: 30
+    warning: "Google Ads CSVs are older than 30 days. Export fresh data from Google Ads."
+    blocking: true  # PPC review cannot proceed with stale Ads data
+
+# ─── Workflow preflight checks ───
+# Each workflow lists what must be true before it can run.
+workflow_preflight:
+
+  # ── Source builds ──
+  build_page_inventory_v1:
+    required_artifacts: []
+    required_credentials: []
+    requires_live_api: false
+    warnings: []
+
+  # DEPRECATED: build_keyword_master_v1 archived → use build_keyword_master_v3
+  # build_keyword_master_v1:
+  #   required_artifacts:
+  #     - "D:/projects/bmklus/google/outputs/keywords_*.csv"
+  #   required_credentials: []
+  #   requires_live_api: false
+  #   warnings:
+  #     - "Requires manually exported Google Ads CSVs"
+
+  build_keyword_master_v3:
+    required_artifacts:
+      - "D:/projects/bmklus/google/outputs/keywords_*.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv"
+    required_credentials: []
+    requires_live_api: false
+    warnings:
+      - "Requires manually exported Google Ads CSVs + fresh GSC snapshot"
+
+  build_gsc_query_page_snapshot_v1:
+    required_artifacts: []
+    required_credentials:
+      - "seo-ops/integrations/google_clients/ (GSC service account)"
+    requires_live_api: true
+    warnings:
+      - "Will make live GSC API calls"
+
+  build_ga4_landing_page_snapshot_v1:
+    required_artifacts: []
+    required_credentials:
+      - "seo-ops/integrations/google_clients/ (GA4 service account)"
+    requires_live_api: true
+    warnings:
+      - "Will make live GA4 API calls"
+
+  # DEPRECATED: build_keyword_master_v2 archived → use build_keyword_master_v3
+  # build_keyword_master_v2:
+  #   required_artifacts:
+  #     - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v1.csv"
+  #     - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv"
+  #     - "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv"
+  #   required_credentials: []
+  #   requires_live_api: false
+  #   warnings: []
+
+  # ── Analysis workflows ──
+  ppc_review_v1:
+    required_artifacts:
+      - "D:/projects/bmklus/google/outputs/campaign_23271040037_last30d.csv"
+      - "D:/projects/bmklus/google/outputs/keywords_23271040037_last30d.csv"
+      - "D:/projects/bmklus/google/outputs/search_terms_23271040037_last30d.csv"
+      - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv"
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv"
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "google_ads_csvs"
+      - "keyword_master_v2"
+      - "ga4_snapshot"
+    warnings:
+      - "Budget is 10 EUR/day — cap PPC confidence at low for volume-dependent conclusions"
+
+  seo_page_vs_query_gap_v1:
+    required_artifacts:
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv"
+      - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv"
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv"
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "gsc_snapshot"
+      - "keyword_master_v2"
+      - "ga4_snapshot"
+    warnings: []
+
+  page_audit_v1:
+    required_artifacts:
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv"
+      - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv"
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv"
+    # Recent-window artifacts preferred for page diagnosis when user asks "last 28/30 days".
+    # These are optional — if missing, fallback to 90d with mismatch disclosure.
+    preferred_recent_artifacts:
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last28d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last28d.csv"
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last28d.csv"
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "gsc_snapshot"
+      - "keyword_master_v2"
+      - "ga4_snapshot"
+      - "page_inventory"
+    preferred_recent_freshness_checks:
+      - "gsc_snapshot_28d"
+      - "ga4_snapshot_28d"
+    warnings:
+      - "MSYS_NO_PATHCONV=1 required on Windows for route argument"
+
+  # DEPRECATED: keyword_intelligence_review_v1 archived → use keyword_intelligence_review_v2
+  # keyword_intelligence_review_v1:
+  #   required_artifacts:
+  #     - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv"
+  #     - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+  #   required_credentials: []
+  #   requires_live_api: false
+  #   freshness_checks:
+  #     - "keyword_master_v2"
+  #   warnings: []
+
+  keyword_intelligence_review_v2:
+    required_artifacts:
+      - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv"
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "keyword_master_v2"
+    warnings: []
+
+  legacy_indexation_review_v1:
+    required_artifacts:
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv"
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv"
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "gsc_snapshot"
+      - "ga4_snapshot"
+    warnings:
+      - "This workflow intentionally inspects legacy/old-site URLs"
+
+  # ── DataForSEO enrichment ──
+  dataforseo_serp_snapshot_v1:
+    required_artifacts: []
+    required_credentials:
+      - "seo-ops/integrations/.env.local (DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD)"
+    requires_live_api: true
+    freshness_checks: []
+    warnings:
+      - "Will make LIVE DataForSEO API calls"
+      - "Estimated cost: ~$0.002 per keyword"
+      - "Always run --dry-run first"
+    budget_sensitive: true
+
+  dataforseo_ranked_keywords_gap_v1:
+    required_artifacts: []
+    required_credentials:
+      - "seo-ops/integrations/.env.local (DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD)"
+    requires_live_api: true
+    freshness_checks: []
+    warnings:
+      - "Will make LIVE DataForSEO API calls"
+      - "Estimated cost: ~$0.075 per domain"
+      - "Always run --dry-run first"
+    budget_sensitive: true
+
+  # ── Manual audit workflows ──
+  page_ownership_audit_v1:
+    required_artifacts:
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv"
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "gsc_snapshot"
+      - "page_inventory"
+    warnings:
+      - "Manual workflow — operator reads artifacts and fills template, no script to run"
+
+  verification_audit_v1:
+    required_artifacts: []
+    required_artifacts_note: "Dynamic — depends on which report is being verified. Operator must identify relevant source artifacts."
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks: []
+    warnings:
+      - "Manual workflow — operator reads source artifacts and compares to report claims"
+      - "Prefer machine-readable artifacts (JSON/CSV) over markdown reports as verification sources"
+
+  # ── Indexation diagnostics ──
+  build_url_inspection_snapshot_v1:
+    required_artifacts: []
+    required_credentials:
+      - "seo-ops/integrations/google_clients/ (GSC OAuth with URL Inspection permission)"
+    requires_live_api: true
+    freshness_checks: []
+    warnings:
+      - "Will make LIVE GSC URL Inspection API calls (1 per URL)"
+      - "Requires GSC property verification and URL Inspection permission"
+
+  indexation_debug_v1:
+    required_artifacts:
+      - "seo-ops/snapshots/normalized/seo/url_inspection_*_normalized.json"
+    required_artifacts_note: "At least one normalized URL Inspection artifact must exist. Run build_url_inspection_snapshot_v1 first."
+    optional_supporting_artifacts:
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last28d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last28d.csv"
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+    optional_supporting_note: "GSC and page inventory artifacts are optional. Without them, analyzer runs in limited mode (indexation state only, no visibility assessment)."
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "gsc_snapshot_28d"
+    warnings:
+      - "Runs in limited mode if GSC page/query data is absent — visibility assessment not possible"
+      - "Conservative: prefers 'insufficient evidence' over overclaiming"
+
+  measurement_audit_v1:
+    required_artifacts:
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_last90d.csv"
+    required_artifacts_note: "At least one GA4 landing page snapshot must exist (28d or 90d). If 28d is preferred but missing, falls back to 90d automatically."
+    optional_supporting_artifacts:
+      - "seo-ops/snapshots/normalized/pages/ga4_landing_pages_by_channel_last28d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last28d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv"
+    optional_supporting_note: "GA4 channel breakdown and GSC page data are optional. Without them, mismatch analysis and channel isolation are not possible."
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "ga4_snapshot"
+    warnings:
+      - "Runs in limited mode if only partial GA4 data is available"
+      - "GSC data is optional — without it, visibility comparison is skipped"
+      - "MSYS_NO_PATHCONV=1 required on Windows for --page argument"
+    allow_limited_mode: true
+
+  query_intelligence_review_v1:
+    required_artifacts: []
+    required_artifacts_note: "At least one query source must exist: keyword_master (v3 or v2) OR GSC aggregated queries. For query-set scope, only --queries-file is required."
+    optional_supporting_artifacts:
+      - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v3.csv"
+      - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last28d.csv"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_last28d.csv"
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+    optional_supporting_note: "keyword_master and GSC snapshots are the primary query sources. page_inventory is needed for page-fit assessment. If both keyword_master and GSC are missing, site/page scope cannot run."
+    scope_specific_checks:
+      page:
+        required: ["--page argument", "GSC query-page snapshot (for page-level queries)"]
+        note: "MSYS_NO_PATHCONV=1 required on Windows for --page argument"
+      query_set:
+        required: ["--queries-file argument (file must exist)"]
+    required_credentials: []
+    requires_live_api: false
+    freshness_checks:
+      - "keyword_master_v2"
+    warnings:
+      - "Runs in limited mode if only partial query sources available"
+      - "Page-fit assessment requires page_inventory — skipped if absent"
+      - "Intent classification is heuristic — see contracts/query_intelligence_rules_v1.md"
+    allow_limited_mode: true
+
+  dataforseo_question_suggestions_v1:
+    required_artifacts: []
+    required_credentials:
+      - "seo-ops/integrations/.env.local (DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD)"
+    requires_live_api: true
+    freshness_checks: []
+    warnings:
+      - "Will make LIVE DataForSEO API calls"
+      - "Estimated cost: ~$0.075 per seed"
+      - "Always run --dry-run first"
+    budget_sensitive: true
+
+  # ── Local SEO / GBP audit ──
+  local_seo_gbp_audit_v1:
+    required_artifacts: []
+    required_artifacts_note: >
+      No hard-required artifacts. All inputs are optional — workflow degrades gracefully.
+      local_entities_v1.yaml is recommended for local context but not blocking.
+    optional_supporting_artifacts:
+      - "seo-ops/config/locales/local_entities_v1.yaml"
+      - "seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last28d.csv"
+      - "seo-ops/snapshots/normalized/pages/page_inventory_v1.csv"
+    optional_supporting_note: >
+      GBP API access is the primary data source but is optional.
+      Without it, the workflow runs in limited mode (site-side signals only).
+      GSC queries and page inventory provide supporting local context.
+    gbp_access_check:
+      env_keys:
+        - "GBP_ACCOUNT_ID"
+        - "GBP_LOCATION_ID"
+      env_file: "seo-ops/integrations/.env.local"
+      blocking: false
+      limited_mode_if_missing: true
+      warning: "GBP API credentials not configured. Workflow will run in limited mode (site-side context only)."
+    required_credentials: []
+    requires_live_api: false
+    requires_live_api_note: "GBP API calls are optional. When GBP access is configured, live API calls are made but no confirmation is required (read-only)."
+    freshness_checks: []
+    warnings:
+      - "GBP API access may not be configured — limited mode is the default until setup"
+      - "No local pack ranking data available via GBP API"
+    allow_limited_mode: true
+
+# ─── Global preflight rules ───
+global_rules:
+  - id: "post_cutover_check"
+    description: "If site is <6 months post-cutover, set report_mode to preliminary"
+    cutover_date: "2026-03-08"
+    months_until_stable: 6
+    action: "Set report_mode: preliminary. Cap confidence at medium."
+
+  - id: "no_live_api_without_confirmation"
+    description: "Any workflow with requires_live_api: true must get explicit user confirmation"
+    action: "Show warning and wait for user OK before proceeding."
+
+  - id: "stale_all_artifacts"
+    description: "If ALL required artifacts are >30 days old, refuse to run analysis"
+    max_age_days: 30
+    action: "Stop. Tell user to rebuild snapshots first."
+
+  - id: "dataforseo_dry_run_first"
+    description: "All DataForSEO workflows must be run with --dry-run first"
+    action: "Run --dry-run, show plan and cost estimate, wait for user confirmation."

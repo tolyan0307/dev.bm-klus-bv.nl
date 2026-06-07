@@ -1,0 +1,1424 @@
+{
+  "_meta": {
+    "workflow": "keyword_intelligence_review_v1",
+    "generated": "2026-04-07T12:34:14.543546+00:00",
+    "primary_source": "keyword_master_v2"
+  },
+  "summary": {
+    "total_keywords": 1032,
+    "nonbrand_keywords": 1029,
+    "with_gsc": 441,
+    "with_ads": 271,
+    "with_planner": 454,
+    "total_planner_volume": 25160,
+    "total_gsc_impressions": 12149,
+    "total_gsc_clicks": 65,
+    "distinct_themes": 10,
+    "main_strength": "18 keywords with evidence across all 3 sources (planner + GSC + Ads)",
+    "main_weakness": "245 nonbrand keywords without page mapping",
+    "biggest_seo_opportunity": "'gevelisolatie rotterdam' — striking distance (pos 8.0, 1369 impr)",
+    "biggest_ppc_opportunity": "'buitengevelisolatie' — proven: 1 conv, 27 clicks, 44.03 EUR",
+    "biggest_mapping_risk": "/gevelisolatie/ carries 192 keywords across 9 themes"
+  },
+  "source_overlap": {
+    "planner_gsc_ads": 18,
+    "planner_gsc": 7,
+    "planner_ads": 75,
+    "gsc_ads": 16,
+    "gsc_only": 400,
+    "ads_only": 162,
+    "planner_only": 354
+  },
+  "strengths": [
+    "18 keywords with evidence across all 3 sources (planner + GSC + Ads)"
+  ],
+  "weaknesses": [
+    "245 nonbrand keywords without page mapping"
+  ],
+  "seo_do_now": [
+    {
+      "keyword": "gevelisolatie rotterdam",
+      "theme": "core_isolation",
+      "reason": "striking distance (pos 8.0, 1369 impr)",
+      "gsc_impr": 1369,
+      "gsc_pos": 8.0,
+      "mapped_route": "/gevelisolatie/"
+    },
+    {
+      "keyword": "gevelisolatie almere",
+      "theme": "core_isolation",
+      "reason": "striking distance (pos 13.3, 828 impr)",
+      "gsc_impr": 828,
+      "gsc_pos": 13.3,
+      "mapped_route": "/gevelisolatie-woning-almere-35m2-sierpleister/"
+    },
+    {
+      "keyword": "gevelisolatie leiden",
+      "theme": "core_isolation",
+      "reason": "striking distance (pos 6.4, 337 impr)",
+      "gsc_impr": 337,
+      "gsc_pos": 6.36,
+      "mapped_route": "/gevelisolatie/leiden/"
+    },
+    {
+      "keyword": "gevelisolatie den haag",
+      "theme": "core_isolation",
+      "reason": "striking distance (pos 9.2, 246 impr)",
+      "gsc_impr": 246,
+      "gsc_pos": 9.25,
+      "mapped_route": "/gevelisolatie/den-haag/"
+    },
+    {
+      "keyword": "buitengevelisolatie rotterdam",
+      "theme": "core_isolation",
+      "reason": "striking distance (pos 4.3, 135 impr)",
+      "gsc_impr": 135,
+      "gsc_pos": 4.29,
+      "mapped_route": "/gevelisolatie/"
+    },
+    {
+      "keyword": "buitenmuur stucen",
+      "theme": "stuc_crepi",
+      "reason": "striking distance (pos 17.6, 131 impr)",
+      "gsc_impr": 131,
+      "gsc_pos": 17.58,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "buitenmuur stucen nadelen",
+      "theme": "stuc_crepi",
+      "reason": "striking distance (pos 5.3, 129 impr)",
+      "gsc_impr": 129,
+      "gsc_pos": 5.26,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "gevelisolatie afwerking",
+      "theme": "core_isolation",
+      "reason": "striking distance (pos 17.8, 123 impr)",
+      "gsc_impr": 123,
+      "gsc_pos": 17.82,
+      "mapped_route": "/gevelisolatie/"
+    },
+    {
+      "keyword": "bouwbedrijf klus",
+      "theme": "other",
+      "reason": "striking distance (pos 10.7, 83 impr)",
+      "gsc_impr": 83,
+      "gsc_pos": 10.69,
+      "mapped_route": "/"
+    },
+    {
+      "keyword": "gevel stucen",
+      "theme": "stuc_crepi",
+      "reason": "striking distance (pos 4.1, 74 impr)",
+      "gsc_impr": 74,
+      "gsc_pos": 4.14,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "gevelisolatie kosten",
+      "theme": "prijs_kosten",
+      "reason": "striking distance (pos 19.3, 69 impr)",
+      "gsc_impr": 69,
+      "gsc_pos": 19.3,
+      "mapped_route": "/gevelisolatie/kosten/"
+    },
+    {
+      "keyword": "schoonmaken na verbouwing",
+      "theme": "other",
+      "reason": "striking distance (pos 16.0, 63 impr)",
+      "gsc_impr": 63,
+      "gsc_pos": 16.02,
+      "mapped_route": "/schoonmaak-na-verbouwing/"
+    },
+    {
+      "keyword": "bm afbouw",
+      "theme": "other",
+      "reason": "striking distance (pos 7.3, 60 impr)",
+      "gsc_impr": 60,
+      "gsc_pos": 7.33,
+      "mapped_route": "/over_ons/"
+    },
+    {
+      "keyword": "verbouw schoonmaak",
+      "theme": "other",
+      "reason": "striking distance (pos 19.4, 59 impr)",
+      "gsc_impr": 59,
+      "gsc_pos": 19.37,
+      "mapped_route": "/schoonmaak-na-verbouwing/"
+    },
+    {
+      "keyword": "gevelisolatie buitenkant",
+      "theme": "core_isolation",
+      "reason": "striking distance (pos 19.6, 56 impr)",
+      "gsc_impr": 56,
+      "gsc_pos": 19.6,
+      "mapped_route": "/gevelisolatie/"
+    },
+    {
+      "keyword": "professioneel schilderen",
+      "theme": "stuc_crepi",
+      "reason": "striking distance (pos 14.6, 52 impr)",
+      "gsc_impr": 52,
+      "gsc_pos": 14.56,
+      "mapped_route": "/gevel-schilderen/"
+    },
+    {
+      "keyword": "sierpleister",
+      "theme": "stuc_crepi",
+      "reason": "striking distance (pos 15.0, 49 impr)",
+      "gsc_impr": 49,
+      "gsc_pos": 15.0,
+      "mapped_route": "/sierpleister/"
+    },
+    {
+      "keyword": "stucen rotterdam",
+      "theme": "stuc_crepi",
+      "reason": "striking distance (pos 19.9, 47 impr)",
+      "gsc_impr": 47,
+      "gsc_pos": 19.9,
+      "mapped_route": "/muren-stucen/"
+    },
+    {
+      "keyword": "etics",
+      "theme": "core_isolation",
+      "reason": "striking distance (pos 6.7, 45 impr)",
+      "gsc_impr": 45,
+      "gsc_pos": 6.67,
+      "mapped_route": "/gevelisolatie/"
+    },
+    {
+      "keyword": "klus",
+      "theme": "other",
+      "reason": "striking distance (pos 10.4, 42 impr)",
+      "gsc_impr": 42,
+      "gsc_pos": 10.4,
+      "mapped_route": "/"
+    },
+    {
+      "keyword": "isoleren van buitenmuren",
+      "theme": "other",
+      "reason": "unmapped, planner vol 1000",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "enkel steen muur isoleren",
+      "theme": "other",
+      "reason": "unmapped, planner vol 590",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "enkelsteens muur isoleren",
+      "theme": "other",
+      "reason": "unmapped, planner vol 590",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "enkelsteens muur isoleren binnenkant",
+      "theme": "other",
+      "reason": "unmapped, planner vol 480",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "buitenmuren isoleren",
+      "theme": "other",
+      "reason": "unmapped, planner vol 390",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "isolatie buitenmuur",
+      "theme": "other",
+      "reason": "unmapped, planner vol 390",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "binnenkant muur isoleren",
+      "theme": "other",
+      "reason": "unmapped, planner vol 320",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "buitenmuur isolatie",
+      "theme": "core_isolation",
+      "reason": "unmapped, planner vol 320",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "gevel buitenzijde isoleren",
+      "theme": "other",
+      "reason": "unmapped, planner vol 320",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    },
+    {
+      "keyword": "isobouw slimfort",
+      "theme": "other",
+      "reason": "unmapped, planner vol 320",
+      "gsc_impr": 0,
+      "gsc_pos": 0.0,
+      "mapped_route": ""
+    }
+  ],
+  "seo_monitor": [
+    {
+      "keyword": "schoonmaak na verbouwing",
+      "theme": "other",
+      "reason": "low CTR (0.0%) on 579 impr",
+      "gsc_impr": 579,
+      "gsc_pos": 23.38,
+      "mapped_route": "/schoonmaak-na-verbouwing/"
+    },
+    {
+      "keyword": "buitengevelisolatie",
+      "theme": "core_isolation",
+      "reason": "low CTR (0.2%) on 517 impr",
+      "gsc_impr": 517,
+      "gsc_pos": 28.66,
+      "mapped_route": "/gevelisolatie/"
+    },
+    {
+      "keyword": "gevelrenovatie met folie in rotterdam",
+      "theme": "other",
+      "reason": "low CTR (0.0%) on 461 impr",
+      "gsc_impr": 461,
+      "gsc_pos": 23.73,
+      "mapped_route": "/"
+    },
+    {
+      "keyword": "gevelisolatie zoetermeer",
+      "theme": "core_isolation",
+      "reason": "low CTR (0.0%) on 440 impr",
+      "gsc_impr": 440,
+      "gsc_pos": 87.87,
+      "mapped_route": "/gevelisolatie/"
+    },
+    {
+      "keyword": "bm",
+      "theme": "other",
+      "reason": "low CTR (0.0%) on 275 impr",
+      "gsc_impr": 275,
+      "gsc_pos": 3.99,
+      "mapped_route": "/"
+    },
+    {
+      "keyword": "sausklaar stucen",
+      "theme": "stuc_crepi",
+      "reason": "low CTR (0.0%) on 230 impr",
+      "gsc_impr": 230,
+      "gsc_pos": 25.28,
+      "mapped_route": "/muren-stucen/"
+    },
+    {
+      "keyword": "prijs buitenstucwerk",
+      "theme": "prijs_kosten",
+      "reason": "low CTR (0.0%) on 221 impr",
+      "gsc_impr": 221,
+      "gsc_pos": 30.75,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "buiten stucwerk",
+      "theme": "stuc_crepi",
+      "reason": "low CTR (0.0%) on 216 impr",
+      "gsc_impr": 216,
+      "gsc_pos": 37.81,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "kosten buitenstucwerk",
+      "theme": "prijs_kosten",
+      "reason": "low CTR (0.0%) on 186 impr",
+      "gsc_impr": 186,
+      "gsc_pos": 33.09,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "buitenstucwerk prijs",
+      "theme": "prijs_kosten",
+      "reason": "low CTR (0.0%) on 182 impr",
+      "gsc_impr": 182,
+      "gsc_pos": 36.62,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "buiten stucwerk kosten",
+      "theme": "prijs_kosten",
+      "reason": "low CTR (0.0%) on 164 impr",
+      "gsc_impr": 164,
+      "gsc_pos": 32.95,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "buitenstucwerk",
+      "theme": "stuc_crepi",
+      "reason": "low CTR (0.0%) on 145 impr",
+      "gsc_impr": 145,
+      "gsc_pos": 58.8,
+      "mapped_route": "/buiten-stucwerk/"
+    },
+    {
+      "keyword": "buitenmuur stucen kosten",
+      "theme": "prijs_kosten",
+      "reason": "low CTR (0.0%) on 135 impr",
+      "gsc_impr": 135,
+      "gsc_pos": 28.78,
+      "mapped_route": "/buiten-stucwerk/"
+    }
+  ],
+  "ppc_do_now": [
+    {
+      "keyword": "buitengevelisolatie",
+      "theme": "core_isolation",
+      "reason": "proven: 1 conv, 27 clicks, 44.03 EUR",
+      "ads_clicks": 27,
+      "ads_cost": 44.03,
+      "ads_conv": 1.0
+    },
+    {
+      "keyword": "gevel van buiten isoleren",
+      "theme": "other",
+      "reason": "proven: 1 conv, 21 clicks, 18.02 EUR",
+      "ads_clicks": 21,
+      "ads_cost": 18.02,
+      "ads_conv": 1.0
+    },
+    {
+      "keyword": "buitenmuur isoleren",
+      "theme": "core_isolation",
+      "reason": "proven: 1 conv, 9 clicks, 6.90 EUR",
+      "ads_clicks": 9,
+      "ads_cost": 6.9,
+      "ads_conv": 1.0
+    },
+    {
+      "keyword": "voorgevel isolatie",
+      "theme": "core_isolation",
+      "reason": "proven: 1 conv, 1 clicks, 1.29 EUR",
+      "ads_clicks": 1,
+      "ads_cost": 1.29,
+      "ads_conv": 1.0
+    },
+    {
+      "keyword": "gevel isoleren en bekleden",
+      "theme": "bekleden",
+      "reason": "proven: 31 clicks, 51.44 EUR",
+      "ads_clicks": 31,
+      "ads_cost": 51.44,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "buitengevel isoleren en stucen",
+      "theme": "stuc_crepi",
+      "reason": "proven: 27 clicks, 40.90 EUR",
+      "ads_clicks": 27,
+      "ads_cost": 40.9,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "buitenmuur isoleren en stucen",
+      "theme": "stuc_crepi",
+      "reason": "proven: 26 clicks, 41.66 EUR",
+      "ads_clicks": 26,
+      "ads_cost": 41.66,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "gevelisolatie",
+      "theme": "core_isolation",
+      "reason": "proven: 25 clicks, 57.06 EUR",
+      "ads_clicks": 25,
+      "ads_cost": 57.06,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "buitengevelisolatie met steenstrips",
+      "theme": "steenstrips",
+      "reason": "proven: 21 clicks, 27.71 EUR",
+      "ads_clicks": 21,
+      "ads_cost": 27.71,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "buitengevel isoleren",
+      "theme": "core_isolation",
+      "reason": "proven: 13 clicks, 21.09 EUR",
+      "ads_clicks": 13,
+      "ads_cost": 21.09,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "gevelisolatie met steenstrips",
+      "theme": "steenstrips",
+      "reason": "proven: 11 clicks, 28.81 EUR",
+      "ads_clicks": 11,
+      "ads_cost": 28.810000000000002,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "buitengevel isoleren en stucen prijs",
+      "theme": "prijs_kosten",
+      "reason": "proven: 10 clicks, 10.32 EUR",
+      "ads_clicks": 10,
+      "ads_cost": 10.32,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "gevelisolatie buitenkant",
+      "theme": "core_isolation",
+      "reason": "proven: 10 clicks, 21.07 EUR",
+      "ads_clicks": 10,
+      "ads_cost": 21.07,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "gevel isoleren en stucen",
+      "theme": "stuc_crepi",
+      "reason": "proven: 8 clicks, 9.85 EUR",
+      "ads_clicks": 8,
+      "ads_cost": 9.85,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "huis isoleren buitenkant",
+      "theme": "core_isolation",
+      "reason": "proven: 8 clicks, 5.86 EUR",
+      "ads_clicks": 8,
+      "ads_cost": 5.859999999999999,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "isolatie buitengevel",
+      "theme": "core_isolation",
+      "reason": "proven: 7 clicks, 15.55 EUR",
+      "ads_clicks": 7,
+      "ads_cost": 15.55,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "buitenmuur isoleren buitenkant",
+      "theme": "core_isolation",
+      "reason": "proven: 6 clicks, 4.12 EUR",
+      "ads_clicks": 6,
+      "ads_cost": 4.12,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "etics systeem",
+      "theme": "core_isolation",
+      "reason": "proven: 4 clicks, 1.53 EUR",
+      "ads_clicks": 4,
+      "ads_cost": 1.53,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "gevelisolatie buitenkant steenstrips",
+      "theme": "steenstrips",
+      "reason": "proven: 4 clicks, 3.50 EUR",
+      "ads_clicks": 4,
+      "ads_cost": 3.5,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "gevelisolatie met stucwerk",
+      "theme": "stuc_crepi",
+      "reason": "proven: 4 clicks, 4.50 EUR",
+      "ads_clicks": 4,
+      "ads_cost": 4.5,
+      "ads_conv": 0.0
+    },
+    {
+      "keyword": "isoleren van buitenmuren",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 1000, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "enkel steen muur isoleren",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 590, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "enkelsteens muur isoleren",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 590, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "buiten gevelisolatie",
+      "theme": "core_isolation",
+      "reason": "expansion candidate, planner vol 480, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "enkelsteens muur isoleren binnenkant",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 480, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "binnenkant muur isoleren",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 320, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "gevel buitenzijde isoleren",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 320, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "isobouw slimfort",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 320, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "isoleren buitenzijde gevel",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 320, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    },
+    {
+      "keyword": "muur isoleren binnenkant",
+      "theme": "other",
+      "reason": "expansion candidate, planner vol 320, intent=commercial_investigative",
+      "ads_clicks": 0,
+      "ads_cost": 0,
+      "ads_conv": 0
+    }
+  ],
+  "ppc_monitor": [
+    {
+      "keyword": "huis aan buitenkant isoleren",
+      "theme": "other",
+      "reason": "low signal (40 impr, 2 clicks, 0 conv)",
+      "ads_impr": 40
+    },
+    {
+      "keyword": "gevelisolatie subsidie",
+      "theme": "subsidie_vergunning",
+      "reason": "low signal (32 impr, 1 clicks, 0 conv)",
+      "ads_impr": 32
+    },
+    {
+      "keyword": "gevel isoleren buitenzijde",
+      "theme": "core_isolation",
+      "reason": "low signal (29 impr, 0 clicks, 0 conv)",
+      "ads_impr": 29
+    },
+    {
+      "keyword": "buitengevelisolatie stuc",
+      "theme": "stuc_crepi",
+      "reason": "low signal (28 impr, 2 clicks, 0 conv)",
+      "ads_impr": 28
+    },
+    {
+      "keyword": "huis aan de buitenkant isoleren",
+      "theme": "other",
+      "reason": "low signal (24 impr, 2 clicks, 0 conv)",
+      "ads_impr": 24
+    },
+    {
+      "keyword": "buitengevel isolatie",
+      "theme": "core_isolation",
+      "reason": "low signal (23 impr, 1 clicks, 0 conv)",
+      "ads_impr": 23
+    },
+    {
+      "keyword": "buitengevel isoleren en bekleden",
+      "theme": "bekleden",
+      "reason": "low signal (22 impr, 2 clicks, 0 conv)",
+      "ads_impr": 22
+    },
+    {
+      "keyword": "buitenisolatie gevel",
+      "theme": "core_isolation",
+      "reason": "low signal (16 impr, 2 clicks, 0 conv)",
+      "ads_impr": 16
+    },
+    {
+      "keyword": "isolatie buitenmuren",
+      "theme": "other",
+      "reason": "low signal (16 impr, 2 clicks, 0 conv)",
+      "ads_impr": 16
+    },
+    {
+      "keyword": "isolatie huis buitenkant",
+      "theme": "other",
+      "reason": "low signal (16 impr, 1 clicks, 0 conv)",
+      "ads_impr": 16
+    },
+    {
+      "keyword": "gevel isolatie buitenzijde",
+      "theme": "core_isolation",
+      "reason": "low signal (14 impr, 0 clicks, 0 conv)",
+      "ads_impr": 14
+    },
+    {
+      "keyword": "crepi gevelbekleding",
+      "theme": "stuc_crepi",
+      "reason": "low signal (10 impr, 2 clicks, 0 conv)",
+      "ads_impr": 10
+    },
+    {
+      "keyword": "gevel isolatie",
+      "theme": "core_isolation",
+      "reason": "low signal (10 impr, 2 clicks, 0 conv)",
+      "ads_impr": 10
+    },
+    {
+      "keyword": "polystuc buitengevelisolatie",
+      "theme": "stuc_crepi",
+      "reason": "low signal (10 impr, 0 clicks, 0 conv)",
+      "ads_impr": 10
+    },
+    {
+      "keyword": "steenstrips buitengevel met isolatie",
+      "theme": "steenstrips",
+      "reason": "low signal (10 impr, 2 clicks, 0 conv)",
+      "ads_impr": 10
+    }
+  ],
+  "cross_channel_opportunities": [
+    {
+      "keyword": "buitengevelisolatie",
+      "theme": "core_isolation",
+      "gsc_impr": 517,
+      "gsc_pos": 28.66,
+      "ads_impr": 161,
+      "ads_clicks": 27,
+      "ads_cost": 44.03,
+      "reason": "both channels active, combined 678 impr"
+    },
+    {
+      "keyword": "gevelisolatie",
+      "theme": "core_isolation",
+      "gsc_impr": 11,
+      "gsc_pos": 49.0,
+      "ads_impr": 187,
+      "ads_clicks": 25,
+      "ads_cost": 57.06,
+      "reason": "both channels active, combined 198 impr"
+    },
+    {
+      "keyword": "buitenmuur isoleren en stucen",
+      "theme": "stuc_crepi",
+      "gsc_impr": 4,
+      "gsc_pos": 24.0,
+      "ads_impr": 154,
+      "ads_clicks": 26,
+      "ads_cost": 41.66,
+      "reason": "both channels active, combined 158 impr"
+    },
+    {
+      "keyword": "buitengevel isoleren en stucen",
+      "theme": "stuc_crepi",
+      "gsc_impr": 6,
+      "gsc_pos": 28.33,
+      "ads_impr": 120,
+      "ads_clicks": 27,
+      "ads_cost": 40.9,
+      "reason": "both channels active, combined 126 impr"
+    },
+    {
+      "keyword": "gevelisolatie buitenkant",
+      "theme": "core_isolation",
+      "gsc_impr": 56,
+      "gsc_pos": 19.6,
+      "ads_impr": 41,
+      "ads_clicks": 10,
+      "ads_cost": 21.07,
+      "reason": "both channels active, combined 97 impr"
+    },
+    {
+      "keyword": "gevelisolatie kosten",
+      "theme": "prijs_kosten",
+      "gsc_impr": 69,
+      "gsc_pos": 19.3,
+      "ads_impr": 0,
+      "ads_clicks": 0,
+      "ads_cost": 0.0,
+      "reason": "both channels active, combined 69 impr"
+    },
+    {
+      "keyword": "buitengevel isoleren en stucen prijs",
+      "theme": "prijs_kosten",
+      "gsc_impr": 19,
+      "gsc_pos": 13.47,
+      "ads_impr": 38,
+      "ads_clicks": 10,
+      "ads_cost": 10.32,
+      "reason": "both channels active, combined 57 impr"
+    },
+    {
+      "keyword": "etics systeem",
+      "theme": "core_isolation",
+      "gsc_impr": 37,
+      "gsc_pos": 8.03,
+      "ads_impr": 12,
+      "ads_clicks": 4,
+      "ads_cost": 1.53,
+      "reason": "both channels active, combined 49 impr"
+    },
+    {
+      "keyword": "etics",
+      "theme": "core_isolation",
+      "gsc_impr": 45,
+      "gsc_pos": 6.67,
+      "ads_impr": 1,
+      "ads_clicks": 1,
+      "ads_cost": 1.5,
+      "reason": "both channels active, combined 46 impr"
+    },
+    {
+      "keyword": "etics isolatie",
+      "theme": "core_isolation",
+      "gsc_impr": 34,
+      "gsc_pos": 5.18,
+      "ads_impr": 7,
+      "ads_clicks": 2,
+      "ads_cost": 1.81,
+      "reason": "both channels active, combined 41 impr"
+    },
+    {
+      "keyword": "gevelisolatie met crepi",
+      "theme": "stuc_crepi",
+      "gsc_impr": 36,
+      "gsc_pos": 80.64,
+      "ads_impr": 3,
+      "ads_clicks": 1,
+      "ads_cost": 1.54,
+      "reason": "both channels active, combined 39 impr"
+    },
+    {
+      "keyword": "kosten gevelisolatie",
+      "theme": "prijs_kosten",
+      "gsc_impr": 37,
+      "gsc_pos": 18.15,
+      "ads_impr": 2,
+      "ads_clicks": 0,
+      "ads_cost": 0.0,
+      "reason": "both channels active, combined 39 impr"
+    },
+    {
+      "keyword": "gevel isoleren en stucen",
+      "theme": "stuc_crepi",
+      "gsc_impr": 2,
+      "gsc_pos": 50.0,
+      "ads_impr": 28,
+      "ads_clicks": 8,
+      "ads_cost": 9.85,
+      "reason": "both channels active, combined 30 impr"
+    },
+    {
+      "keyword": "sierpleister buitengevel",
+      "theme": "stuc_crepi",
+      "gsc_impr": 25,
+      "gsc_pos": 19.9,
+      "ads_impr": 2,
+      "ads_clicks": 0,
+      "ads_cost": 0.0,
+      "reason": "both channels active, combined 27 impr"
+    },
+    {
+      "keyword": "etics gevelisolatie",
+      "theme": "core_isolation",
+      "gsc_impr": 14,
+      "gsc_pos": 5.64,
+      "ads_impr": 12,
+      "ads_clicks": 3,
+      "ads_cost": 2.08,
+      "reason": "both channels active, combined 26 impr"
+    },
+    {
+      "keyword": "gevelisolatie buitenkant stucwerk",
+      "theme": "stuc_crepi",
+      "gsc_impr": 15,
+      "gsc_pos": 11.67,
+      "ads_impr": 7,
+      "ads_clicks": 1,
+      "ads_cost": 2.08,
+      "reason": "both channels active, combined 22 impr"
+    }
+  ],
+  "mapping_risks": {
+    "overloaded_routes": [
+      {
+        "route": "/gevelisolatie/",
+        "keywords": 192,
+        "themes": [
+          "core_isolation",
+          "materialen",
+          "offerte",
+          "other",
+          "prijs_kosten",
+          "steenstrips",
+          "stuc_crepi",
+          "subsidie_vergunning",
+          "technical_rc_dikte"
+        ],
+        "planner_vol": 9040,
+        "gsc_impr": 2945,
+        "page_type": "service"
+      },
+      {
+        "route": "/buiten-stucwerk/",
+        "keywords": 149,
+        "themes": [
+          "core_isolation",
+          "materialen",
+          "other",
+          "prijs_kosten",
+          "steenstrips",
+          "stuc_crepi"
+        ],
+        "planner_vol": 230,
+        "gsc_impr": 2615,
+        "page_type": "service"
+      },
+      {
+        "route": "/gevelisolatie/kosten/",
+        "keywords": 85,
+        "themes": [
+          "prijs_kosten"
+        ],
+        "planner_vol": 1610,
+        "gsc_impr": 218,
+        "page_type": "cluster"
+      },
+      {
+        "route": "/",
+        "keywords": 68,
+        "themes": [
+          "bekleden",
+          "other",
+          "stuc_crepi"
+        ],
+        "planner_vol": 0,
+        "gsc_impr": 1196,
+        "page_type": "home"
+      },
+      {
+        "route": "/gevelisolatie/afwerkingen/",
+        "keywords": 58,
+        "themes": [
+          "bekleden",
+          "materialen",
+          "other",
+          "steenstrips",
+          "stuc_crepi"
+        ],
+        "planner_vol": 370,
+        "gsc_impr": 11,
+        "page_type": "cluster"
+      },
+      {
+        "route": "/gevel-schilderen/",
+        "keywords": 36,
+        "themes": [
+          "other",
+          "prijs_kosten",
+          "stuc_crepi",
+          "subsidie_vergunning"
+        ],
+        "planner_vol": 0,
+        "gsc_impr": 576,
+        "page_type": "service"
+      }
+    ],
+    "weak_mappings": [
+      {
+        "keyword": "buitenmuur isoleren",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 1000,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buiten gevelisolatie",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 480,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buitengevel isoleren",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 480,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "gevel isoleren",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 390,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buitenzijde gevel isoleren",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 320,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "gevel isoleren buitenzijde",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 320,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buitenmuur isoleren aan binnenkant",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 140,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buitenmuur isoleren binnenkant",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 140,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buitenmuur isoleren buitenkant",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 140,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buitenmuur isoleren van binnenuit",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 140,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buitenisolatie gevel",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 110,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "enkelsteens buitenmuur isoleren",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 70,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "sto gevelisolatie",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 70,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "buiten gevel isoleren",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 50,
+        "gsc_impr": 0
+      },
+      {
+        "keyword": "gevel isoleren buitenkant",
+        "theme": "core_isolation",
+        "mapped_route": "/gevelisolatie/",
+        "mapping_conf": "low",
+        "planner_vol": 50,
+        "gsc_impr": 0
+      }
+    ]
+  },
+  "dataforseo_watchlist": [
+    {
+      "keyword": "isoleren van buitenmuren",
+      "theme": "other",
+      "planner_vol": 1000,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "enkel steen muur isoleren",
+      "theme": "other",
+      "planner_vol": 590,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "enkelsteens muur isoleren",
+      "theme": "other",
+      "planner_vol": 590,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "buiten gevelisolatie",
+      "theme": "core_isolation",
+      "planner_vol": 480,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "enkelsteens muur isoleren binnenkant",
+      "theme": "other",
+      "planner_vol": 480,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "buitenmuren isoleren",
+      "theme": "other",
+      "planner_vol": 390,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "gevel isoleren",
+      "theme": "core_isolation",
+      "planner_vol": 390,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "isolatie buitenmuur",
+      "theme": "other",
+      "planner_vol": 390,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "binnenkant muur isoleren",
+      "theme": "other",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "buitenmuur isolatie",
+      "theme": "core_isolation",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "buitenzijde gevel isoleren",
+      "theme": "core_isolation",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "gevel buitenzijde isoleren",
+      "theme": "other",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "isobouw slimfort",
+      "theme": "other",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "isoleren buitenzijde gevel",
+      "theme": "other",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "isoleren gevel buitenzijde",
+      "theme": "other",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "muur isoleren binnenkant",
+      "theme": "other",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "subsidies gevelisolatie",
+      "theme": "subsidie_vergunning",
+      "planner_vol": 320,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "halfsteens muur isoleren",
+      "theme": "other",
+      "planner_vol": 210,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "halfsteense muur isoleren",
+      "theme": "other",
+      "planner_vol": 210,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    },
+    {
+      "keyword": "isolatie buitenkant muur",
+      "theme": "other",
+      "planner_vol": 210,
+      "reason": "high planner demand, weak/no organic+ads evidence — needs SERP analysis"
+    }
+  ],
+  "theme_demand": [
+    {
+      "theme": "core_isolation",
+      "keywords": 215,
+      "planner_vol": 10330,
+      "gsc_impr": 4309,
+      "gsc_clicks": 8,
+      "mapped_count": 174,
+      "unmapped_count": 41,
+      "coverage_pct": 80.9
+    },
+    {
+      "theme": "other",
+      "keywords": 328,
+      "planner_vol": 10700,
+      "gsc_impr": 2618,
+      "gsc_clicks": 3,
+      "mapped_count": 140,
+      "unmapped_count": 188,
+      "coverage_pct": 42.7
+    },
+    {
+      "theme": "stuc_crepi",
+      "keywords": 223,
+      "planner_vol": 320,
+      "gsc_impr": 2943,
+      "gsc_clicks": 3,
+      "mapped_count": 220,
+      "unmapped_count": 3,
+      "coverage_pct": 98.7
+    },
+    {
+      "theme": "prijs_kosten",
+      "keywords": 118,
+      "planner_vol": 1610,
+      "gsc_impr": 1606,
+      "gsc_clicks": 1,
+      "mapped_count": 118,
+      "unmapped_count": 0,
+      "coverage_pct": 100.0
+    },
+    {
+      "theme": "materialen",
+      "keywords": 48,
+      "planner_vol": 1380,
+      "gsc_impr": 48,
+      "gsc_clicks": 0,
+      "mapped_count": 36,
+      "unmapped_count": 12,
+      "coverage_pct": 75.0
+    },
+    {
+      "theme": "subsidie_vergunning",
+      "keywords": 19,
+      "planner_vol": 370,
+      "gsc_impr": 11,
+      "gsc_clicks": 0,
+      "mapped_count": 19,
+      "unmapped_count": 0,
+      "coverage_pct": 100.0
+    },
+    {
+      "theme": "steenstrips",
+      "keywords": 39,
+      "planner_vol": 340,
+      "gsc_impr": 7,
+      "gsc_clicks": 0,
+      "mapped_count": 39,
+      "unmapped_count": 0,
+      "coverage_pct": 100.0
+    },
+    {
+      "theme": "technical_rc_dikte",
+      "keywords": 20,
+      "planner_vol": 60,
+      "gsc_impr": 51,
+      "gsc_clicks": 0,
+      "mapped_count": 20,
+      "unmapped_count": 0,
+      "coverage_pct": 100.0
+    },
+    {
+      "theme": "offerte",
+      "keywords": 7,
+      "planner_vol": 20,
+      "gsc_impr": 21,
+      "gsc_clicks": 0,
+      "mapped_count": 6,
+      "unmapped_count": 1,
+      "coverage_pct": 85.7
+    },
+    {
+      "theme": "bekleden",
+      "keywords": 12,
+      "planner_vol": 30,
+      "gsc_impr": 2,
+      "gsc_clicks": 0,
+      "mapped_count": 12,
+      "unmapped_count": 0,
+      "coverage_pct": 100.0
+    }
+  ],
+  "theme_coverage": [
+    {
+      "theme": "core_isolation",
+      "total": 215,
+      "mapped": 174,
+      "high_conf": 35,
+      "planner_vol": 10330,
+      "gsc_impr": 4309,
+      "distinct_routes": 9,
+      "coverage_pct": 80.9
+    },
+    {
+      "theme": "other",
+      "total": 328,
+      "mapped": 140,
+      "high_conf": 140,
+      "planner_vol": 10700,
+      "gsc_impr": 2618,
+      "distinct_routes": 17,
+      "coverage_pct": 42.7
+    },
+    {
+      "theme": "stuc_crepi",
+      "total": 223,
+      "mapped": 220,
+      "high_conf": 214,
+      "planner_vol": 320,
+      "gsc_impr": 2943,
+      "distinct_routes": 10,
+      "coverage_pct": 98.7
+    },
+    {
+      "theme": "prijs_kosten",
+      "total": 118,
+      "mapped": 118,
+      "high_conf": 116,
+      "planner_vol": 1610,
+      "gsc_impr": 1606,
+      "distinct_routes": 7,
+      "coverage_pct": 100.0
+    },
+    {
+      "theme": "materialen",
+      "total": 48,
+      "mapped": 36,
+      "high_conf": 36,
+      "planner_vol": 1380,
+      "gsc_impr": 48,
+      "distinct_routes": 5,
+      "coverage_pct": 75.0
+    },
+    {
+      "theme": "subsidie_vergunning",
+      "total": 19,
+      "mapped": 19,
+      "high_conf": 19,
+      "planner_vol": 370,
+      "gsc_impr": 11,
+      "distinct_routes": 3,
+      "coverage_pct": 100.0
+    },
+    {
+      "theme": "steenstrips",
+      "total": 39,
+      "mapped": 39,
+      "high_conf": 39,
+      "planner_vol": 340,
+      "gsc_impr": 7,
+      "distinct_routes": 3,
+      "coverage_pct": 100.0
+    },
+    {
+      "theme": "technical_rc_dikte",
+      "total": 20,
+      "mapped": 20,
+      "high_conf": 20,
+      "planner_vol": 60,
+      "gsc_impr": 51,
+      "distinct_routes": 2,
+      "coverage_pct": 100.0
+    },
+    {
+      "theme": "offerte",
+      "total": 7,
+      "mapped": 6,
+      "high_conf": 2,
+      "planner_vol": 20,
+      "gsc_impr": 21,
+      "distinct_routes": 1,
+      "coverage_pct": 85.7
+    },
+    {
+      "theme": "bekleden",
+      "total": 12,
+      "mapped": 12,
+      "high_conf": 12,
+      "planner_vol": 30,
+      "gsc_impr": 2,
+      "distinct_routes": 2,
+      "coverage_pct": 100.0
+    }
+  ],
+  "limitations": [
+    "No SERP analysis — cannot assess competitive difficulty",
+    "No ad copy analysis — PPC findings are keyword-level only",
+    "No content-level analysis — page audit needed",
+    "Low conversion volume makes ROI conclusions unreliable",
+    "Theme classification is heuristic",
+    "Theme taxonomy mismatch: keyword_master (core_isolation) vs page_inventory (gevelisolatie)"
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "mobile",
+    "sessions": "28",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "mobile",
+    "sessions": "21",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "desktop",
+    "sessions": "11",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "desktop",
+    "sessions": "9",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/kosten/",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "mobile",
+    "sessions": "4",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "(not set)",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "desktop",
+    "sessions": "1",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "(not set)",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "mobile",
+    "sessions": "1",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "tablet",
+    "sessions": "1",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/subsidie-vergunning/",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "desktop",
+    "sessions": "1",
+    "keyEvents": "0"
+  },
+  {
+    "landingPagePlusQueryString": "/gevelisolatie/subsidie-vergunning/",
+    "sessionCampaignName": "NL | Gevelisolatie | Search",
+    "deviceCategory": "mobile",
+    "sessions": "1",
+    "keyEvents": "0"
+  }
+]

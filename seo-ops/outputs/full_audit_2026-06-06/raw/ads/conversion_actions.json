@@ -1,0 +1,197 @@
+[
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6769425725",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6769425725",
+      "name": "Отправка формы для потенциальных клиентов",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6770921236",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6770921236",
+      "name": "Отправка данных клиента с контактной формы сайта на почту",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6773170963",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_PURCHASE",
+      "category": "PURCHASE",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6773170963",
+      "name": "bm-klus-bv.nl (web) purchase",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6773170966",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "CONTACT",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6773170966",
+      "name": "bm-klus-bv.nl (web) Contact_Form_Site",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6773170969",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "CONTACT",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6773170969",
+      "name": "bm-klus-bv.nl (web) Email",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6773171242",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "PHONE_CALL_LEAD",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6773171242",
+      "name": "bm-klus-bv.nl (web) Phone",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6774243106",
+      "status": "ENABLED",
+      "type": "LEAD_FORM_SUBMIT",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6774243106",
+      "name": "Форма для потенциального клиента – отправка",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6790076058",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6790076058",
+      "name": "Отправка контактной формы с сайта",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6794416029",
+      "status": "ENABLED",
+      "type": "GOOGLE_HOSTED",
+      "category": "GET_DIRECTIONS",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6794416029",
+      "name": "Местные действия: маршруты",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6794430677",
+      "status": "ENABLED",
+      "type": "GOOGLE_HOSTED",
+      "category": "PAGE_VIEW",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6794430677",
+      "name": "Местные действия: посещения сайта",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6794442469",
+      "status": "ENABLED",
+      "type": "GOOGLE_HOSTED",
+      "category": "ENGAGEMENT",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6794442469",
+      "name": "Местные действия: другие взаимодействия",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6802607216",
+      "status": "ENABLED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "CONTACT",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6802607216",
+      "name": "bm-klus-bv.nl (web) Whatsapp",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6822504478",
+      "status": "ENABLED",
+      "type": "GOOGLE_HOSTED",
+      "category": "CONTACT",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6822504478",
+      "name": "Clicks to call",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/6910162315",
+      "status": "ENABLED",
+      "type": "UNKNOWN",
+      "category": "ENGAGEMENT",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6910162315",
+      "name": "YouTube channel subscriptions",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/5902256023/conversionActions/7458677442",
+      "status": "ENABLED",
+      "type": "UNKNOWN",
+      "category": "YOUTUBE_FOLLOW_ON_VIEWS",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7458677442",
+      "name": "Последующие просмотры на YouTube",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 1,
+  "tasks": [
+    {
+      "id": "06070043-1591-0351-0000-69c747e8530d",
+      "status_code": 40204,
+      "status_message": "Access denied. Visit Plans and Subscriptions to activate your subscription and get access to this API: https://app.dataforseo.com/backlinks-subscription .",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 0,
+      "path": [
+        "v3",
+        "backlinks",
+        "bulk_referring_domains",
+        "live"
+      ],
+      "data": {
+        "api": "backlinks",
+        "function": "bulk_referring_domains",
+        "targets": [
+          "bm-klus-bv.nl",
+          "gevelrenovatie-info.nl",
+          "isolatie-info.nl",
+          "takkenkamp.com",
+          "plusisolatie.nl",
+          "stucadoor-expert.nl",
+          "isolatiespecialist.nl",
+          "kooyisolatie.nl",
+          "stuc-concurrent.nl",
+          "pluimers.nl",
+          "metsel-gigant.nl",
+          "lsgi.nl",
+          "040stucadoor.nl",
+          "stukadoorsclub.nl",
+          "eigenhuis.nl"
+        ]
+      },
+      "result": null
+    }
+  ]
+}

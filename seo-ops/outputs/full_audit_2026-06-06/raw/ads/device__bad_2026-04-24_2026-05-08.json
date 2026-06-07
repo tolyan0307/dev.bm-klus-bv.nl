@@ -1,0 +1,50 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "29",
+      "conversions": 0.0,
+      "costMicros": "42069940",
+      "ctr": 0.11462450592885376,
+      "allConversions": 0.0,
+      "impressions": "253"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "100",
+      "conversions": 0.0,
+      "costMicros": "118241409",
+      "ctr": 0.14836795252225518,
+      "allConversions": 0.0,
+      "impressions": "674"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0.0,
+      "costMicros": "6070000",
+      "ctr": 0.05714285714285714,
+      "allConversions": 0.0,
+      "impressions": "35"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  }
+]

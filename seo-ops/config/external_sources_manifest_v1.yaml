@@ -1,0 +1,96 @@
+# External Sources Manifest v1
+# Purpose: Registry of non-primary external enrichment sources used in seo-ops.
+# Policy: These sources provide context and enrichment. They are NOT primary truth
+#         for BM Klus account/site performance and NOT policy sources for Google systems.
+
+version: "1.0"
+date: "2026-04-08"
+
+policy:
+  summary: >
+    External enrichment sources supplement internal artifacts and official documentation.
+    They must never replace GSC/GA4/Ads data for BM Klus performance conclusions, and
+    must never replace Google official docs for platform behavior claims.
+  rules:
+    - Enrichment data is context, not primary evidence.
+    - No ranking-cause claims based solely on third-party sources.
+    - Conflicting enrichment data does not override internal artifacts.
+    - Source class must be disclosed in any report using enrichment data.
+
+sources:
+  - source_id: dataforseo_enrichment
+    label: DataForSEO API outputs
+    source_class: enrichment_vendor
+    role: >
+      SERP snapshots, keyword gap analysis, question/suggestion discovery,
+      competitor keyword intelligence.
+    allowed_use_cases:
+      - Competitor keyword gap analysis
+      - SERP feature detection
+      - Keyword volume estimation (directional)
+      - Content opportunity discovery (questions, related terms)
+      - Market landscape observation
+    disallowed_use_cases:
+      - Primary truth for BM Klus organic/paid performance
+      - Replacing GSC position data with DataForSEO position data
+      - Drawing definitive conclusions about BM Klus ranking causes
+      - Budget allocation decisions based solely on DataForSEO volume estimates
+    reliability_notes: >
+      DataForSEO keyword volumes and positions are estimates from third-party methodology.
+      GSC and Google Ads are the authoritative sources for actual BM Klus performance.
+      DataForSEO SERP snapshots are point-in-time; positions fluctuate.
+    priority_rank: 3
+
+  - source_id: third_party_seo_blogs
+    label: Third-party SEO blogs and publications
+    source_class: community_knowledge
+    role: >
+      Background reading, methodology ideas, industry trends.
+    allowed_use_cases:
+      - Background context for methodology decisions
+      - Awareness of industry trends or common patterns
+    disallowed_use_cases:
+      - Policy source for Google system behavior (use Google official docs instead)
+      - Evidence for BM Klus-specific performance claims
+      - Justification for ranking-cause claims
+      - Overriding internal artifact data
+    reliability_notes: >
+      Quality varies widely. May contain outdated, speculative, or commercially biased claims.
+      Never treat as authoritative on how Google systems work — use Google Search Central instead.
+    priority_rank: 5
+
+  - source_id: competitor_websites
+    label: Competitor websites (direct observation)
+    source_class: market_observation
+    role: >
+      Commercial positioning, content strategy patterns, service scope comparison.
+    allowed_use_cases:
+      - Observing competitor service offerings and positioning
+      - Identifying content gaps vs competitor pages
+      - Market terminology research (Dutch construction terms)
+    disallowed_use_cases:
+      - Truth about Google ranking algorithms
+      - Assuming competitor tactics cause their rankings
+      - Copying competitor content or structure without strategic rationale
+    reliability_notes: >
+      Competitor observation reveals what competitors do, not why it works.
+      Correlation between competitor content and rankings is not causation.
+    priority_rank: 4
+
+  - source_id: manual_serp_observation
+    label: Manual SERP checks (browser-based)
+    source_class: market_observation
+    role: >
+      Spot-checking SERP features, verifying indexation, observing local pack presence.
+    allowed_use_cases:
+      - Verifying indexation status of specific URLs
+      - Observing SERP features (local pack, featured snippets, PAA)
+      - Quick sanity checks on ranking visibility
+    disallowed_use_cases:
+      - Systematic position tracking (use GSC or DataForSEO instead)
+      - Drawing statistical conclusions from single observations
+      - Replacing GSC data for performance reporting
+    reliability_notes: >
+      SERP results are personalized, localized, and volatile.
+      Single observations are anecdotal — useful for verification, not measurement.
+    priority_rank: 4

@@ -1,0 +1,624 @@
+{
+  "_meta": {
+    "generated": "2026-04-07T16:49:42+00:00",
+    "generator": "run_dataforseo_ranked_keywords_gap_v1.py (reprocessed)",
+    "own_domain": "bm-klus-bv.nl",
+    "competitor_domains": [
+      "isolatie-info.nl",
+      "verbouwkosten.com"
+    ],
+    "dry_run": false
+  },
+  "summary": {
+    "own_ranked_keywords": 100,
+    "competitor_unique_keywords": 200,
+    "gap_keywords_count": 200,
+    "overlap_keywords_count": 0,
+    "new_to_keyword_master_count": 200
+  },
+  "gap_keywords_top30": [
+    {
+      "keyword": "wand panelen",
+      "search_volume": 49500,
+      "cpc": 1.1,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "akoestische panelen",
+      "search_volume": 27100,
+      "cpc": 1.74,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "gips platen",
+      "search_volume": 18100,
+      "cpc": 0.51,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "isoleren",
+      "search_volume": 8100,
+      "cpc": 4.25,
+      "intent": "informational",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "polycarbonaat platen",
+      "search_volume": 8100,
+      "cpc": 1.79,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "isolatiemateriaal",
+      "search_volume": 6600,
+      "cpc": 1.73,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "geluidsisolatie",
+      "search_volume": 6600,
+      "cpc": 0.9,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "vloer isolatie",
+      "search_volume": 6600,
+      "cpc": 4.93,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "subsidieaanvraag isolatie",
+      "search_volume": 5400,
+      "cpc": 2.19,
+      "intent": "informational",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "pir isolatie",
+      "search_volume": 4400,
+      "cpc": 2.21,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "subsidies isoleren",
+      "search_volume": 4400,
+      "cpc": 1.59,
+      "intent": "informational",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "subsidie isoleren",
+      "search_volume": 4400,
+      "cpc": 1.59,
+      "intent": "informational",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "kruipruimte isoleren",
+      "search_volume": 3600,
+      "cpc": 5.51,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "lambrisering panelen",
+      "search_volume": 3600,
+      "cpc": 0.43,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "kruipruimte isolatie",
+      "search_volume": 3600,
+      "cpc": 5.51,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "prijzen waterontharder",
+      "search_volume": 2900,
+      "cpc": 4.51,
+      "intent": "transactional",
+      "competitor_domains": [
+        "verbouwkosten.com"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "waterontharder prijs",
+      "search_volume": 2900,
+      "cpc": 4.51,
+      "intent": "transactional",
+      "competitor_domains": [
+        "verbouwkosten.com"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "pluimers isolatie",
+      "search_volume": 2400,
+      "cpc": 3.78,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "steenwol isolatie",
+      "search_volume": 2400,
+      "cpc": 1.49,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "pir isolatieplaten",
+      "search_volume": 2400,
+      "cpc": 1.87,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "pif isolatie",
+      "search_volume": 2400,
+      "cpc": 0.95,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "stuc platen",
+      "search_volume": 2400,
+      "cpc": 0.51,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "pir isolatie platen",
+      "search_volume": 2400,
+      "cpc": 1.87,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "glaswol isolatie",
+      "search_volume": 1900,
+      "cpc": 1.04,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "eps isolatie",
+      "search_volume": 1900,
+      "cpc": 1.61,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "isolatie folie",
+      "search_volume": 1900,
+      "cpc": 1.01,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "eps isolatiemateriaal",
+      "search_volume": 1900,
+      "cpc": 1.61,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "isoleren van zolderdak",
+      "search_volume": 1900,
+      "cpc": 2.99,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "eps isolatieplaat",
+      "search_volume": 1900,
+      "cpc": 1.61,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "wat is een goede luchtvochtigheid in huis",
+      "search_volume": 1900,
+      "cpc": 0.3,
+      "intent": "transactional",
+      "competitor_domains": [
+        "verbouwkosten.com"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    }
+  ],
+  "new_to_keyword_master": [
+    {
+      "keyword": "wand panelen",
+      "search_volume": 49500,
+      "cpc": 1.1,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "akoestische panelen",
+      "search_volume": 27100,
+      "cpc": 1.74,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "gips platen",
+      "search_volume": 18100,
+      "cpc": 0.51,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "isoleren",
+      "search_volume": 8100,
+      "cpc": 4.25,
+      "intent": "informational",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "polycarbonaat platen",
+      "search_volume": 8100,
+      "cpc": 1.79,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "isolatiemateriaal",
+      "search_volume": 6600,
+      "cpc": 1.73,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "geluidsisolatie",
+      "search_volume": 6600,
+      "cpc": 0.9,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "vloer isolatie",
+      "search_volume": 6600,
+      "cpc": 4.93,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "subsidieaanvraag isolatie",
+      "search_volume": 5400,
+      "cpc": 2.19,
+      "intent": "informational",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "pir isolatie",
+      "search_volume": 4400,
+      "cpc": 2.21,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "subsidies isoleren",
+      "search_volume": 4400,
+      "cpc": 1.59,
+      "intent": "informational",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "subsidie isoleren",
+      "search_volume": 4400,
+      "cpc": 1.59,
+      "intent": "informational",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "kruipruimte isoleren",
+      "search_volume": 3600,
+      "cpc": 5.51,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "lambrisering panelen",
+      "search_volume": 3600,
+      "cpc": 0.43,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "kruipruimte isolatie",
+      "search_volume": 3600,
+      "cpc": 5.51,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "prijzen waterontharder",
+      "search_volume": 2900,
+      "cpc": 4.51,
+      "intent": "transactional",
+      "competitor_domains": [
+        "verbouwkosten.com"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "waterontharder prijs",
+      "search_volume": 2900,
+      "cpc": 4.51,
+      "intent": "transactional",
+      "competitor_domains": [
+        "verbouwkosten.com"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "pluimers isolatie",
+      "search_volume": 2400,
+      "cpc": 3.78,
+      "intent": "commercial",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "steenwol isolatie",
+      "search_volume": 2400,
+      "cpc": 1.49,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    },
+    {
+      "keyword": "pir isolatieplaten",
+      "search_volume": 2400,
+      "cpc": 1.87,
+      "intent": "transactional",
+      "competitor_domains": [
+        "isolatie-info.nl"
+      ],
+      "in_own_rankings": false,
+      "in_keyword_master": false,
+      "competitor_count": 1
+    }
+  ],
+  "overlap_keywords_top20": []
+}

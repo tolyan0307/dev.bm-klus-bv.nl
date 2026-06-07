@@ -1,0 +1,134 @@
+{
+  "healthy": {
+    "by_channel": [
+      {
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "112",
+        "keyEvents": "5",
+        "engagedSessions": "42"
+      },
+      {
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "95",
+        "keyEvents": "6",
+        "engagedSessions": "53"
+      },
+      {
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "12",
+        "keyEvents": "1",
+        "engagedSessions": "8"
+      },
+      {
+        "sessionDefaultChannelGroup": "Unassigned",
+        "sessions": "2",
+        "keyEvents": "1",
+        "engagedSessions": "1"
+      },
+      {
+        "sessionDefaultChannelGroup": "Cross-network",
+        "sessions": "1",
+        "keyEvents": "0",
+        "engagedSessions": "1"
+      },
+      {
+        "sessionDefaultChannelGroup": "Referral",
+        "sessions": "1",
+        "keyEvents": "0",
+        "engagedSessions": "0"
+      }
+    ],
+    "by_event": [
+      {
+        "eventName": "Contact_Form_Site",
+        "eventCount": "5",
+        "eventCountPerUser": "1"
+      },
+      {
+        "eventName": "Whatsapp",
+        "eventCount": "2",
+        "eventCountPerUser": "1"
+      },
+      {
+        "eventName": "Phone",
+        "eventCount": "1",
+        "eventCountPerUser": "1"
+      }
+    ],
+    "daily_evt": [
+      {
+        "date": "20260408",
+        "eventCount": "1"
+      },
+      {
+        "date": "20260409",
+        "eventCount": "1"
+      },
+      {
+        "date": "20260410",
+        "eventCount": "1"
+      },
+      {
+        "date": "20260414",
+        "eventCount": "1"
+      },
+      {
+        "date": "20260415",
+        "eventCount": "1"
+      },
+      {
+        "date": "20260416",
+        "eventCount": "1"
+      },
+      {
+        "date": "20260420",
+        "eventCount": "1"
+      },
+      {
+        "date": "20260423",
+        "eventCount": "1"
+      }
+    ]
+  },
+  "bad": {
+    "by_channel": [
+      {
+        "sessionDefaultChannelGroup": "Paid Search",
+        "sessions": "78",
+        "keyEvents": "0",
+        "engagedSessions": "54"
+      },
+      {
+        "sessionDefaultChannelGroup": "Organic Search",
+        "sessions": "39",
+        "keyEvents": "1",
+        "engagedSessions": "12"
+      },
+      {
+        "sessionDefaultChannelGroup": "Direct",
+        "sessions": "2",
+        "keyEvents": "0",
+        "engagedSessions": "2"
+      },
+      {
+        "sessionDefaultChannelGroup": "Cross-network",
+        "sessions": "1",
+        "keyEvents": "0",
+        "engagedSessions": "1"
+      }
+    ],
+    "by_event": [
+      {
+        "eventName": "Contact_Form_Site",
+        "eventCount": "1",
+        "eventCountPerUser": "1"
+      }
+    ],
+    "daily_evt": [
+      {
+        "date": "20260505",
+        "eventCount": "1"
+      }
+    ]
+  }
+}

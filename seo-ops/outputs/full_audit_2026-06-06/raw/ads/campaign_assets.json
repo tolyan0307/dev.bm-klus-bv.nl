@@ -1,0 +1,264 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309546439727",
+      "type": "STRUCTURED_SNIPPET",
+      "structuredSnippetAsset": {
+        "header": "Services"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309546439727~STRUCTURED_SNIPPET",
+      "fieldType": "STRUCTURED_SNIPPET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309657466146",
+      "type": "SITELINK",
+      "sitelinkAsset": {
+        "linkText": "Gevelisolatie kosten"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309657466146~SITELINK",
+      "fieldType": "SITELINK"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309657466149",
+      "type": "SITELINK",
+      "sitelinkAsset": {
+        "linkText": "Offerte aanvragen"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309657466149~SITELINK",
+      "fieldType": "SITELINK"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309657466152",
+      "type": "SITELINK",
+      "sitelinkAsset": {
+        "linkText": "Afwerkingen bekijken"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309657466152~SITELINK",
+      "fieldType": "SITELINK"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309657466155",
+      "type": "SITELINK",
+      "sitelinkAsset": {
+        "linkText": "FAQ gevelisolatie"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309657466155~SITELINK",
+      "fieldType": "SITELINK"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/338386676929",
+      "type": "SITELINK",
+      "sitelinkAsset": {
+        "linkText": "Materialen vergelijken"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~338386676929~SITELINK",
+      "fieldType": "SITELINK"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/338429120952",
+      "type": "SITELINK",
+      "sitelinkAsset": {
+        "linkText": "Subsidie & vergunning"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~338429120952~SITELINK",
+      "fieldType": "SITELINK"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309636479050",
+      "type": "CALLOUT",
+      "calloutAsset": {
+        "calloutText": "Gratis opname"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309636479050~CALLOUT",
+      "fieldType": "CALLOUT"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309636479053",
+      "type": "CALLOUT",
+      "calloutAsset": {
+        "calloutText": "Snelle offerte"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309636479053~CALLOUT",
+      "fieldType": "CALLOUT"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309636479056",
+      "type": "CALLOUT",
+      "calloutAsset": {
+        "calloutText": "Gecertificeerde ETICS"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309636479056~CALLOUT",
+      "fieldType": "CALLOUT"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/309636479059",
+      "type": "CALLOUT",
+      "calloutAsset": {
+        "calloutText": "Strakke afwerking"
+      }
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~309636479059~CALLOUT",
+      "fieldType": "CALLOUT"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/177260203664",
+      "type": "IMAGE",
+      "name": "bouwer-installeert-het-schuim_1.jpg"
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~177260203664~AD_IMAGE",
+      "fieldType": "AD_IMAGE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/177260209913",
+      "type": "IMAGE",
+      "name": "Isolatie-op-een-bakstenen-muur_1:1.jpg"
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~177260209913~AD_IMAGE",
+      "fieldType": "AD_IMAGE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/177262280969",
+      "type": "IMAGE",
+      "name": "fasad_800x800.jpg"
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~177262280969~AD_IMAGE",
+      "fieldType": "AD_IMAGE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/177286630755",
+      "type": "IMAGE",
+      "name": "Stukadoor_1.jpg"
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~177286630755~AD_IMAGE",
+      "fieldType": "AD_IMAGE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/5902256023/campaigns/23271040037",
+      "id": "23271040037"
+    },
+    "asset": {
+      "resourceName": "customers/5902256023/assets/177293595553",
+      "type": "IMAGE",
+      "name": "bouwer-installeert-het-schuim_1.9108.jpg"
+    },
+    "campaignAsset": {
+      "resourceName": "customers/5902256023/campaignAssets/23271040037~177293595553~AD_IMAGE",
+      "fieldType": "AD_IMAGE"
+    }
+  }
+]

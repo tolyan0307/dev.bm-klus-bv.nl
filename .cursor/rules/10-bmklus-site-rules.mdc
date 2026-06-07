@@ -1,0 +1,51 @@
+---
+description: bm-klus-bv.nl site-wide guardrails — content, SEO, architecture, integrations.
+alwaysApply: true
+---
+
+# bm-klus-bv.nl — site-wide rules
+
+Project-specific guardrails that always apply. Full governance in `docs/governance/`.
+For the deeper canonical lists see also `00-always.mdc` and `CLAUDE.md`.
+
+## Content & language
+- Public-facing content is **Dutch (nl-NL) only**. No Russian or English on public pages.
+- Do not create empty or placeholder pages.
+- Do not make unconfirmed claims.
+- Never invent reviews, guarantees, savings percentages, exact lead times, subsidies, certifications, or legal facts.
+- For uncertainty use flags: `[CLAIM_NEEDS_CONFIRMATION]`, `[MISSING_BUSINESS_INPUT]`, `[UNCERTAIN_TERM]`.
+- Energy-savings wording stays conditional: "kan leiden tot", never "leidt tot".
+
+## SEO limits (hard)
+- meta title ≤ 60 characters
+- meta description ≤ 160 characters
+- slug ≤ 75 characters
+- All URLs use a trailing slash.
+
+## Project pages
+- Keep a factual case-description tone. No generic sales copy.
+- `relatedLinks` point only to service pages.
+- Preserve existing content/schema/router helpers — only narrow, requested changes.
+
+## Architecture
+- Preserve the static-first Next.js architecture (App Router, `output: 'export'`, static export to `out/`).
+- Prefer Server / static components. Do not add `"use client"` without a real interactive need.
+- Do not add heavy dependencies casually.
+- Do not assume Node/npm exists on Antagonist hosting at request time.
+- Do not rebuild deployment architecture.
+- Do not change the WordPress MU-plugin backend unless the task is explicitly about backend / contact / stats endpoints.
+
+## Integrations — do not casually change
+- Consent Mode v2
+- CookieScript
+- GTM
+- GA4
+- Google Search Console wiring
+- Google Ads
+- Cloudflare Turnstile (and contact-form honeypot, WP REST endpoint, `wp_mail` flow)
+
+Touch any of the above only when the task explicitly requests it.
+
+## Tooling
+- Package manager is **pnpm** only (not npm, not yarn).
+- `pnpm lint` will fail (ESLint not installed). Use `npx tsc --noEmit` for verification.
