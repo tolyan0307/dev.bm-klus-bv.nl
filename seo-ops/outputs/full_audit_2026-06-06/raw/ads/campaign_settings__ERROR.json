@@ -1,5 +1,0 @@
-{
-  "errors": [
-    "[query_error: UNRECOGNIZED_FIELD\n] Unrecognized fields in the query: 'campaign.geo_target_type.negative_geo_target_type', 'campaign.geo_target_type.positive_geo_target_type'."
-  ]
-}

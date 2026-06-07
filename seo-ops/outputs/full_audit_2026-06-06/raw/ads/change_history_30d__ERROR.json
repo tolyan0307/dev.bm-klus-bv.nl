@@ -1,5 +1,0 @@
-{
-  "errors": [
-    "[change_event_error: START_DATE_TOO_OLD\n] The requested start date is too old. It cannot be older than 30 days."
-  ]
-}

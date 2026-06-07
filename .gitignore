@@ -39,3 +39,17 @@ google/
 gsc-token.json
 .env.local.secrets
 seo-ops/integrations/.venv/
+
+# Local IDE / agent state (not for production repo)
+.claude/
+
+# Generated SEO audit artifacts (data dumps, snapshots — not for production repo)
+seo-ops/outputs/
+seo-ops/snapshots/
+seo-ops/data/raw/
+seo-ops/_archive/
+seo-ops/tools/.tmp_*
+
+# Python caches
+__pycache__/
+*.pyc
