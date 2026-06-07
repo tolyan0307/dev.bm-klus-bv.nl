@@ -601,19 +601,6 @@ export default function RotterdamJulianastraatProjectPage() {
           </div>
         </div>
       </aside>
-
-      {/* ── Contextual city link ── */}
-      <div className="container-default py-6">
-        <p className="text-sm text-muted-foreground">
-          Meer over gevelisolatie in Rotterdam?{" "}
-          <Link
-            href="/gevelisolatie/rotterdam/"
-            className="font-semibold text-primary underline-offset-4 transition-colors hover:underline"
-          >
-            Bekijk onze pagina over gevelisolatie in Rotterdam
-          </Link>
-        </p>
-      </div>
       </div>{/* end below-fold */}
 
     </div>
