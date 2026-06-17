@@ -1,0 +1,539 @@
+From 71b2dfab0d54de4127de65e521062f4416d208c7 Mon Sep 17 00:00:00 2001
+From: Anatoliy <tolyan0307@gmail.com>
+Date: Sun, 10 May 2026 01:30:13 +0300
+Subject: [PATCH] SEO Rescue v1: additive content-hardening for
+ /gevelisolatie/kosten/ and /buiten-stucwerk/
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Adds new content blocks targeting SERP gaps identified in 2026-05-10 DataForSEO audit (BM absent from top 100 on 13/16 commercial queries). All changes are additive — no existing sections modified, no URL/canonical/redirect/noindex changes, no schema removals.
+
+/gevelisolatie/kosten/page.tsx:
+- Vergelijkingstabel afwerking (stuc / sierpleister / crepi / steenstrips × prijsrange + voor + let op)
+- Binnen vs buiten isolatie callout (covers related search "Kosten gevelisolatie binnenzijde")
+- Niet standaard inbegrepen list (companion to existing "Wat zit er in de prijs")
+- Subsidies & fiscale voordelen 2026 section (cross-link to /gevelisolatie/subsidie-vergunning/)
+- 2 new TOC entries
+
+/buiten-stucwerk/ (lib/content + page.tsx):
+- watIs.wanneerNiet sub-block (when buitenmuur stucen is less suitable)
+- kosten.rekenvoorbeeld (40 m² rijwoning numerical breakdown)
+- nadelen.inlineList (static <ul> at top of nadelen section, snippet-friendly; existing NadelenSwitcher untouched)
+- onderhoud section (periodieke reiniging + schilderbeurt-cyclus + kleine reparaties)
+- alternatieven section (cementeren / gevelbekleding / ETICS / reinigen+voegwerk)
+- 2 new FAQ items (levensduur, cementeren-vs-stucen)
+- 2 new TOC entries
+
+Verification: npx tsc --noEmit passes. No new dependencies. No new "use client" directives. No image-manifest changes.
+---
+ app/buiten-stucwerk/page.tsx      | 113 +++++++++++++++++++++++
+ app/gevelisolatie/kosten/page.tsx | 145 ++++++++++++++++++++++++++++++
+ lib/content/buiten-stucwerk.ts    | 105 ++++++++++++++++++++++
+ 3 files changed, 363 insertions(+)
+
+diff --git a/app/buiten-stucwerk/page.tsx b/app/buiten-stucwerk/page.tsx
+index 0d24abb..f8fe05d 100644
+--- a/app/buiten-stucwerk/page.tsx
++++ b/app/buiten-stucwerk/page.tsx
+@@ -36,8 +36,10 @@ import {
+   materialen,
+   ondergronden,
+   nadelen,
++  onderhoud,
+   reparatie,
+   isolatie,
++  alternatieven,
+   faq,
+   internalLinks,
+ } from "@/lib/content/buiten-stucwerk"
+@@ -299,6 +301,17 @@ export default function BuitenStucwerkPage() {
+                   <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-primary/70">{watIs.buitenVsBinnen.h3}</p>
+                   <p className="text-sm leading-relaxed text-muted-foreground">{watIs.buitenVsBinnen.body}</p>
+                 </div>
++                <div className="mt-4 rounded-xl border border-amber-500/20 bg-amber-50/40 px-5 py-4 dark:bg-amber-900/10">
++                  <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-amber-700/80 dark:text-amber-300/80">{watIs.wanneerNiet.h3}</p>
++                  <ul className="space-y-1.5">
++                    {watIs.wanneerNiet.bullets.map((b) => (
++                      <li key={b} className="flex items-start gap-2.5">
++                        <div className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-amber-600/60" />
++                        <span className="text-sm leading-snug text-muted-foreground">{b}</span>
++                      </li>
++                    ))}
++                  </ul>
++                </div>
+               </div>
+               <div className="relative h-52 w-full lg:h-auto">
+                 <ResponsiveImage baseName="wat-is-buitenmuur-stucen" dir="/images" preset="serviceCard" alt="Stukadoor brengt cementpleister aan op de buitenmuur" className="absolute inset-0 h-full w-full object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+@@ -414,6 +427,35 @@ export default function BuitenStucwerkPage() {
+                 </div>
+               </div>
+             </div>
++
++            {/* ── REKENVOORBEELD (additive) ── */}
++            <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card">
++              <div className="border-b border-border bg-secondary/30 px-6 py-4 sm:px-7">
++                <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">{kosten.rekenvoorbeeld.h3}</p>
++                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{kosten.rekenvoorbeeld.intro}</p>
++              </div>
++              <div className="divide-y divide-border">
++                {kosten.rekenvoorbeeld.rows.map((row, i) => {
++                  const isTotal = i === kosten.rekenvoorbeeld.rows.length - 1
++                  return (
++                    <div
++                      key={row.label}
++                      className={`flex items-center justify-between gap-4 px-6 py-3 sm:px-7 ${isTotal ? "bg-primary/5" : ""}`}
++                    >
++                      <span className={`text-sm leading-snug ${isTotal ? "font-bold text-foreground" : "text-muted-foreground"}`}>
++                        {row.label}
++                      </span>
++                      <span className={`shrink-0 text-sm tabular-nums ${isTotal ? "font-bold text-primary" : "font-medium text-foreground"}`}>
++                        {row.value}
++                      </span>
++                    </div>
++                  )
++                })}
++              </div>
++              <div className="border-t border-border bg-secondary/20 px-6 py-3 sm:px-7">
++                <p className="text-[11px] leading-relaxed text-muted-foreground">{kosten.rekenvoorbeeld.note}</p>
++              </div>
++            </div>
+           </div>
+         </section>
+         </div>
+@@ -534,6 +576,22 @@ export default function BuitenStucwerkPage() {
+               Nadelen en hoe u <span className="text-primary">problemen voorkomt</span>
+             </h2>
+             <p className="mb-8 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{nadelen.intro}</p>
++
++            {/* Inline nadelen list (additive — for AI Overview / featured snippet) */}
++            <div className="mb-8 overflow-hidden rounded-2xl border border-border bg-card">
++              <div className="border-b border-border bg-secondary/30 px-6 py-4 sm:px-7">
++                <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">{nadelen.inlineList.h3}</p>
++              </div>
++              <ul className="divide-y divide-border">
++                {nadelen.inlineList.bullets.map((b) => (
++                  <li key={b} className="flex items-start gap-3 px-6 py-3 sm:px-7">
++                    <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
++                    <span className="text-sm leading-snug text-muted-foreground">{b}</span>
++                  </li>
++                ))}
++              </ul>
++            </div>
++
+             <NadelenSwitcher />
+           </div>
+         </section>
+@@ -579,6 +637,31 @@ export default function BuitenStucwerkPage() {
+         </section>
+         </div>
+ 
++        <div className="below-fold">
++        {/* ── ONDERHOUD & LEVENSDUUR (additive) ── */}
++        <section id={onderhoud.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
++          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
++            <SectionTagline>Onderhoud</SectionTagline>
++            <h2 className="mt-2 mb-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl text-balance">
++              Onderhoud en <span className="text-primary">levensduur</span>
++            </h2>
++            <p className="mb-8 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{onderhoud.intro}</p>
++            <div className="grid gap-3 sm:grid-cols-3">
++              {onderhoud.items.map((item) => (
++                <div key={item.title} className="rounded-xl border border-border bg-card px-5 py-5">
++                  <p className="mb-2 text-sm font-semibold leading-snug text-foreground">{item.title}</p>
++                  <p className="text-xs leading-relaxed text-muted-foreground">{item.body}</p>
++                </div>
++              ))}
++            </div>
++            <div className="mt-6 flex gap-3 rounded-xl border border-primary/20 bg-primary/5 px-5 py-4">
++              <div className="mt-1 w-[3px] shrink-0 self-stretch rounded-full bg-primary/40" />
++              <p className="text-sm leading-relaxed text-muted-foreground">{onderhoud.callout}</p>
++            </div>
++          </div>
++        </section>
++        </div>
++
+         <div className="below-fold">
+         {/* ── ISOLATIE (cross-sell) ── */}
+         <section id={isolatie.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+@@ -614,6 +697,36 @@ export default function BuitenStucwerkPage() {
+         </section>
+         </div>
+ 
++        <div className="below-fold">
++        {/* ── ALTERNATIEVEN (additive) ── */}
++        <section id={alternatieven.id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative before:absolute before:inset-y-0 before:-inset-x-[50vw] before:-z-10 before:bg-secondary/40">
++          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
++            <SectionTagline>Alternatieven</SectionTagline>
++            <h2 className="mt-2 mb-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl text-balance">
++              Alternatieven voor <span className="text-primary">buitenmuur stucen</span>
++            </h2>
++            <p className="mb-8 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{alternatieven.intro}</p>
++            <div className="grid gap-3 sm:grid-cols-2">
++              {alternatieven.cards.map((card) => (
++                <div key={card.title} className="rounded-xl border border-border bg-card px-6 py-5">
++                  <p className="mb-2 text-sm font-semibold leading-snug text-foreground">{card.title}</p>
++                  <p className="text-xs leading-relaxed text-muted-foreground">{card.body}</p>
++                  {card.linkLabel && card.linkHref && (
++                    <Link href={card.linkHref} className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline underline-offset-2">
++                      {card.linkLabel} <ArrowRight size={11} />
++                    </Link>
++                  )}
++                </div>
++              ))}
++            </div>
++            <div className="mt-6 flex gap-3 rounded-xl border border-primary/20 bg-primary/5 px-5 py-4">
++              <div className="mt-1 w-[3px] shrink-0 self-stretch rounded-full bg-primary/40" />
++              <p className="text-sm leading-relaxed text-muted-foreground">{alternatieven.callout}</p>
++            </div>
++          </div>
++        </section>
++        </div>
++
+         <div className="below-fold">
+         {/* ── REVIEWS ── */}
+         <ReviewsSection />
+diff --git a/app/gevelisolatie/kosten/page.tsx b/app/gevelisolatie/kosten/page.tsx
+index 6c7c325..04b916e 100644
+--- a/app/gevelisolatie/kosten/page.tsx
++++ b/app/gevelisolatie/kosten/page.tsx
+@@ -60,10 +60,12 @@ const heroBreadcrumbs = [
+ 
+ const toc = [
+   { id: "richtprijzen",       label: "Richtprijzen per m²" },
++  { id: "afwerking-vergelijking", label: "Afwerking vergelijken" },
+   { id: "kostenfactoren",     label: "Welke factoren bepalen de prijs?" },
+   { id: "wat-zit-erin",       label: "Wat zit er in de prijs?" },
+   { id: "voorbeeldscenarios", label: "Voorbeeldscenario's" },
+   { id: "besparen",           label: "Besparen zonder kwaliteitsverlies" },
++  { id: "subsidies",          label: "Subsidies en fiscale voordelen" },
+   { id: "faq",                label: "Veelgestelde vragen" },
+ ]
+ 
+@@ -247,6 +249,65 @@ const kostenfactorenIcons: Record<string, LucideIcon> = {
+   "Detaillering": Ruler,
+ }
+ 
++/* ── Additive content (SEO Rescue v1) ── */
++
++const vergelijkingsRows: ReadonlyArray<{
++  afwerking: string
++  prijsRange: string
++  voor: string
++  let_op: string
++}> = [
++  {
++    afwerking: "Stuc / cementpleister",
++    prijsRange: "€110 – €160/m²",
++    voor: "Strakke, moderne uitstraling. Onderhoudsarm. Brede kleurkeuze.",
++    let_op: "Vlakke ondergrond en strakke detaillering bepalen het eindbeeld.",
++  },
++  {
++    afwerking: "Sierpleister",
++    prijsRange: "€115 – €180/m²",
++    voor: "Structuur (korrel) verbergt kleine oneffenheden in de ondergrond.",
++    let_op: "Korrelgrootte en kleur bepalen de uitstraling — kies bewust.",
++  },
++  {
++    afwerking: "Crepi",
++    prijsRange: "€120 – €200/m²",
++    voor: "Robuuste, tijdloze gevelafwerking. Geschikt voor grotere vlakken.",
++    let_op: "Grof gestructureerd — periodieke reiniging tegen vervuiling/algen.",
++  },
++  {
++    afwerking: "Steenstrips",
++    prijsRange: "€200 – €280/m²",
++    voor: "Authentieke baksteenuitstraling. Maximaal duurzaam, kleurvast.",
++    let_op: "Zwaarder en arbeidsintensiever — onderliggende constructie controleren.",
++  },
++]
++
++const binnenBuitenInfo = {
++  h3: "Buitenisolatie versus binnenisolatie",
++  body:
++    "Buitengevelisolatie (ETICS) is de techniek op deze pagina: het isolatiepakket wordt aan de buitenzijde van de gevel aangebracht en afgewerkt met stuc, sierpleister, crepi of steenstrips. Het bewaart de bewoonbare oppervlakte binnen, lost koudebruggen op en geeft een nieuwe gevel in één werkgang. Binnenisolatie is een andere techniek met andere bouwfysische eisen (dampremming, koudebrugrisico) en valt buiten de scope van deze pagina.",
++}
++
++const nietInbegrepen: ReadonlyArray<string> = [
++  "Steigerhuur en -montage (afhankelijk van bouwhoogte en bereikbaarheid)",
++  "Uitgebreid herstelwerk aan een aangetaste of vochtige ondergrond",
++  "Asbest- of saneringswerkzaamheden indien aangetroffen tijdens de opname",
++  "Vergunningskosten (indien van toepassing — afstemming met gemeente)",
++  "Schilderbeurt op de afwerklaag in een latere onderhoudscyclus",
++  "Nutsvoorzieningen, ventilatieroosters of gevelbevestigingen die opnieuw gemonteerd moeten worden",
++]
++
++const subsidiesContent = {
++  h3: "Subsidies en fiscale voordelen 2026",
++  paragraphs: [
++    "Voor buitengevelisolatie zijn er afhankelijk van uw situatie subsidies of fiscale voordelen beschikbaar — denk aan de ISDE-regeling van RVO of gemeentelijke regelingen. De voorwaarden, bedragen en aanvraagprocedures wijzigen periodiek; controleer daarom de actuele situatie via RVO.nl of bij uw gemeente vóórdat u opdracht geeft.",
++    "Voorwaarden hebben vaak betrekking op de minimale RC-waarde van het isolatiepakket, het oppervlak dat geïsoleerd wordt en het feit dat u eigenaar-bewoner bent. Tijdens de opname kunnen wij u algemene informatie geven; de definitieve aanvraag doet u zelf bij de bevoegde instantie.",
++  ],
++  linkLabel: "Meer over subsidie & vergunning",
++  linkHref: "/gevelisolatie/subsidie-vergunning/",
++}
++
+ /* ── Page Component ── */
+ export default function KostenGevelisolatiePage() {
+   const breadcrumbsSchema = breadcrumbSchema(
+@@ -519,6 +580,49 @@ export default function KostenGevelisolatiePage() {
+                 <strong>Exacte prijs na opname op locatie:</strong> na een bezoek ter plaatse ontvangt u een heldere offerte met de specifieke RC-waarde, isolatiedikte en gekozen afwerking — zodat u precies weet wat de investering inhoudt.
+               </p>
+             </Callout>
++
++            {/* ── Binnen vs buiten callout (additive) ── */}
++            <div className="mt-6 rounded-2xl border border-border bg-card px-6 py-5 sm:px-8">
++              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary/70">{binnenBuitenInfo.h3}</p>
++              <p className="text-sm leading-relaxed text-muted-foreground">{binnenBuitenInfo.body}</p>
++            </div>
++          </Section>
++        </div>
++
++        {/* ── 1b. Vergelijkingstabel afwerking (additive) ── */}
++        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
++          <Section
++            id="afwerking-vergelijking"
++            eyebrow="Vergelijking"
++            h2="Afwerking vergelijken: stuc, sierpleister, crepi of steenstrips"
++            accentWord="vergelijken"
++            lead="Vier veelgekozen afwerkingen op een ETICS-isolatiepakket. De prijsranges hieronder zijn indicatief en hangen af van isolatiedikte (RC-waarde), oppervlakte en detaillering."
++          >
++            <div className="overflow-x-auto rounded-2xl border border-border bg-card">
++              <table className="w-full text-sm border-collapse">
++                <thead>
++                  <tr className="border-b border-primary/20 bg-primary/8">
++                    <th className="px-5 py-3 text-left font-semibold text-primary">Afwerking</th>
++                    <th className="px-5 py-3 text-left font-semibold text-primary whitespace-nowrap">Prijs/m²</th>
++                    <th className="px-5 py-3 text-left font-semibold text-primary">Geschikt voor</th>
++                    <th className="px-5 py-3 text-left font-semibold text-primary">Let op</th>
++                  </tr>
++                </thead>
++                <tbody className="text-muted-foreground">
++                  {vergelijkingsRows.map((row) => (
++                    <tr key={row.afwerking} className="border-b border-border last:border-0">
++                      <td className="px-5 py-3 leading-relaxed font-medium text-foreground whitespace-nowrap">{row.afwerking}</td>
++                      <td className="px-5 py-3 leading-relaxed font-semibold text-primary tabular-nums whitespace-nowrap">{row.prijsRange}</td>
++                      <td className="px-5 py-3 leading-relaxed">{row.voor}</td>
++                      <td className="px-5 py-3 leading-relaxed">{row.let_op}</td>
++                    </tr>
++                  ))}
++                </tbody>
++              </table>
++            </div>
++            <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
++              Richtprijzen incl. arbeid &amp; materiaal, excl. steiger, herstelwerk en complexe detaillering. Steenstrips: zwaarder en arbeidsintensiever — de onderliggende constructie moet hierop berekend zijn.
++            </p>
+           </Section>
+         </div>
+ 
+@@ -610,6 +714,22 @@ export default function KostenGevelisolatiePage() {
+                       Steigerhuur en -montage, alsmede uitgebreider herstelwerk aan de ondergrond, worden altijd afzonderlijk in de offerte vermeld.
+                     </p>
+                   </div>
++
++                  {/* ── Niet standaard inbegrepen (additive) ── */}
++                  <div className="mt-6 rounded-xl border border-amber-500/20 bg-amber-50/40 px-5 py-4 dark:bg-amber-900/10">
++                    <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-amber-700/80 dark:text-amber-300/80">Niet standaard inbegrepen</p>
++                    <ul className="space-y-1.5">
++                      {nietInbegrepen.map((b) => (
++                        <li key={b} className="flex items-start gap-2.5">
++                          <div className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-amber-600/60" />
++                          <span className="text-sm leading-snug text-muted-foreground">{b}</span>
++                        </li>
++                      ))}
++                    </ul>
++                    <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
++                      Deze posten worden — indien aan de orde — afzonderlijk in de offerte vermeld, met aparte prijsopgave.
++                    </p>
++                  </div>
+                 </div>
+                 <div className="relative hidden lg:col-span-2 lg:block">
+                   <ResponsiveImage
+@@ -724,6 +844,31 @@ export default function KostenGevelisolatiePage() {
+           </Section>
+         </div>
+ 
++        {/* ── 5b. Subsidies (additive) ── */}
++        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
++          <Section
++            id="subsidies"
++            eyebrow="Subsidie"
++            h2="Subsidies en fiscale voordelen voor buitengevelisolatie"
++            accentWord="fiscale voordelen"
++            lead="Buitengevelisolatie kan in 2026 in aanmerking komen voor subsidie of fiscale ondersteuning. Voorwaarden wijzigen periodiek — controleer de actuele situatie vóór opdracht."
++          >
++            <div className="overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card via-card to-secondary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
++              <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
++              <div className="space-y-4 p-6 sm:p-8">
++                {subsidiesContent.paragraphs.map((p, i) => (
++                  <p key={i} className="text-sm leading-relaxed text-muted-foreground sm:text-base">{p}</p>
++                ))}
++                <div className="pt-2">
++                  <Link href={subsidiesContent.linkHref} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline underline-offset-2">
++                    {subsidiesContent.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
++                  </Link>
++                </div>
++              </div>
++            </div>
++          </Section>
++        </div>
++
+         {/* ── 6. FAQ ── */}
+         <div className="bg-secondary/30">
+           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+diff --git a/lib/content/buiten-stucwerk.ts b/lib/content/buiten-stucwerk.ts
+index 4f40cff..7affb36 100644
+--- a/lib/content/buiten-stucwerk.ts
++++ b/lib/content/buiten-stucwerk.ts
+@@ -41,8 +41,10 @@ export const toc = [
+   { id: "keuzehulp", label: "Afwerking keuzehulp" },
+   { id: "ondergronden-techniek", label: "Ondergronden & techniek" },
+   { id: "nadelen-risicos", label: "Nadelen & risico's" },
++  { id: "onderhoud-levensduur", label: "Onderhoud & levensduur" },
+   { id: "reparatie-herstel", label: "Reparatie & herstel" },
+   { id: "stucen-met-isolatie", label: "Stucen met isolatie" },
++  { id: "alternatieven", label: "Alternatieven" },
+   { id: "faq", label: "Veelgestelde vragen" },
+ ];
+ 
+@@ -64,6 +66,15 @@ export const watIs = {
+     h3: "Gevel stucen buiten vs. binnen stucen",
+     body: "Buiten stucwerk stelt andere eisen dan binnenwerk: het systeem moet bestand zijn tegen weersinvloeden, dampdoorlatend zijn en correct worden gedetailleerd op kwetsbare plekken zoals de plintzone en hoeken. Binnenstucwerk is een andere discipline waarbij weerbestendigheid geen rol speelt.",
+   },
++  wanneerNiet: {
++    h3: "Wanneer is buitenmuur stucen minder geschikt?",
++    bullets: [
++      "Gevels met aanhoudende vochtbelasting zonder oplossing voor de vochtbron — onderliggende oorzaak eerst aanpakken",
++      "Sterk werkende of bewegende ondergronden zonder mogelijkheid om wapening en dilatatie correct te detailleren",
++      "Monumentale of historisch beschermde gevels waarbij stucwerk niet past in de erfgoedrichtlijnen — vooraf afstemmen met gemeente of monumentenadviseur",
++      "Bij voorkeur voor zichtbaar metselwerk of authentieke baksteenuitstraling — overweeg dan reiniging of voegwerkrenovatie in plaats van stucwerk",
++    ],
++  },
+ };
+ 
+ export const voordelen = {
+@@ -140,6 +151,20 @@ export const kosten = {
+   },
+   callout:
+     "Prijs is afhankelijk van ondergrond, voorbereiding en afwerking. Na opname op locatie ontvangt u een offerte met duidelijke scope en prijs per m².",
++  rekenvoorbeeld: {
++    h3: "Rekenvoorbeeld (indicatief)",
++    intro:
++      "Een rijwoning met circa 40 m² voorgevel in cementpleister, in een eenvoudige situatie zonder uitgebreid herstelwerk:",
++    rows: [
++      { label: "Cementpleister 40 m² × €65/m²", value: "€2.600" },
++      { label: "Voorbereiding & reiniging (incl.)", value: "in m²-prijs" },
++      { label: "Steigerwerk (begane grond + 1 verdieping)", value: "+ €400 – €600" },
++      { label: "Hoek- en stucprofielen, plintdetail", value: "+ €150 – €250" },
++      { label: "Indicatief totaal", value: "€3.150 – €3.450" },
++    ],
++    note:
++      "Dit is een eenvoudig voorbeeld ter oriëntatie. Een hoekwoning met meer m² gevel, extra herstelwerk of hogere bereikbaarheidskosten zal in een ander prijsbereik uitkomen — daarom geldt: na opname op locatie volgt de exacte offerte.",
++  },
+ };
+ 
+ export const werkwijze = {
+@@ -238,6 +263,18 @@ export const nadelen = {
+   h2: "Buitenmuur stucen: nadelen en hoe u problemen voorkomt",
+   intro:
+     "Wie zoekt naar buitenmuur stucen nadelen, vindt terecht dat onjuist uitgevoerd stucwerk kan leiden tot vocht- en hechting­problemen — maar met de juiste aanpak zijn deze risico's goed te beheersen.",
++  inlineList: {
++    h3: "De belangrijkste nadelen op een rij",
++    bullets: [
++      "Vochtopsluiting bij gebruik van een niet-dampopen systeem op een vochtige ondergrond",
++      "Scheurvorming op kritieke zones (hoeken, overgangen) wanneer wapening met glasvezelnet ontbreekt",
++      "Loslaten van het stucwerk door onvoldoende hechting bij slechte voorbereiding van de ondergrond",
++      "Plintschade door spatwater wanneer geen weerbestendig plintprofiel wordt toegepast",
++      "Vervuiling en algvorming op grof gestructureerde afwerking (zoals crepi) — vraagt periodieke reiniging",
++      "Hogere kosten dan binnenstucwerk door weerbestendige systemen, steigerwerk en complexere detaillering",
++      "Beperkte geschiktheid op monumentale of beschermde gevels — vooraf afstemmen met gemeente of monumentenadviseur",
++    ],
++  },
+   items: [
+     {
+       risico: "Vocht opgesloten",
+@@ -276,6 +313,64 @@ export const reparatie = {
+   ],
+ };
+ 
++export const onderhoud = {
++  id: "onderhoud-levensduur",
++  h2: "Onderhoud en levensduur van buiten stucwerk",
++  intro:
++    "Goed uitgevoerd buitenstucwerk gaat — afhankelijk van systeem, ligging en blootstelling — vele jaren mee. De feitelijke levensduur en het onderhoudsritme verschillen per afwerking.",
++  items: [
++    {
++      title: "Periodieke reiniging",
++      body: "Met name op noord- en oostgevels en op grof gestructureerde afwerkingen (crepi, sierpleister) kan zich algvorming en vervuiling ophopen. Een periodieke reiniging — afhankelijk van de situatie iedere paar jaar — houdt de gevel fris en voorkomt aantasting van de afwerklaag.",
++    },
++    {
++      title: "Schilderbeurt-cyclus",
++      body: "Een verfsysteem op buitenstucwerk wordt afhankelijk van het verfsysteem en de blootstelling doorgaans iedere 8 tot 12 jaar opnieuw beoordeeld. Tijdig opnieuw schilderen voorkomt dat het stucwerk zelf wordt aangetast door vocht.",
++    },
++    {
++      title: "Kleine reparaties",
++      body: "Kleine scheuren of beschadigingen — bijvoorbeeld door stoten of zetting — laten zich lokaal herstellen mits de onderliggende laag intact is. Vroegtijdig ingrijpen voorkomt grotere schade.",
++    },
++  ],
++  callout:
++    "De levensduur is geen vaste garantie: ondergrond, systeemkeuze, detaillering en weersbelasting bepalen samen hoe lang het stucwerk in goede staat blijft. Bij twijfel: een korte gevelinspectie geeft inzicht in de actuele staat.",
++};
++
++export const alternatieven = {
++  id: "alternatieven",
++  h2: "Alternatieven voor buitenmuur stucen",
++  intro:
++    "Buitenmuur stucen is niet de enige manier om een gevel te beschermen of te vernieuwen. Afhankelijk van het doel, de ondergrond en het budget zijn er andere routes die mogelijk beter passen.",
++  cards: [
++    {
++      title: "Cementeren",
++      body: "Een verwante techniek waarbij een cementgebonden laag wordt aangebracht. In de praktijk is het verschil met cementpleister-stucen vaak meer een kwestie van laagdikte en eindafwerking dan van wezenlijk andere techniek.",
++      linkLabel: "Meer over stucwerk-systemen",
++      linkHref: "/buiten-stucwerk/#materialen-afwerkingen",
++    },
++    {
++      title: "Gevelbekleding (steenstrips, hout, plaat)",
++      body: "Bij gevelbekleding wordt een nieuwe afwerklaag van steenstrips, houtdelen of gevelplaten aangebracht — vaak gecombineerd met isolatie. Geschikt wanneer u een fundamenteel andere uitstraling wilt of de bestaande gevel ingrijpend moet worden vernieuwd.",
++      linkLabel: "Meer over steenstrips bij gevelisolatie",
++      linkHref: "/gevelisolatie/afwerkingen/",
++    },
++    {
++      title: "Buitengevelisolatie + stucwerk (ETICS)",
++      body: "Wanneer ook de thermische prestaties van de gevel beter moeten, kan stucwerk worden gecombineerd met buitenisolatie in één geïntegreerd systeem. Hogere investering, maar één werkgang voor twee doelen.",
++      linkLabel: "Meer over buitengevelisolatie (ETICS)",
++      linkHref: "/gevelisolatie/",
++    },
++    {
++      title: "Gevel reinigen + voegwerk",
++      body: "Wanneer de bestaande baksteenuitstraling behouden moet blijven en het probleem voornamelijk vervuiling en aangetast voegwerk is, is reiniging gecombineerd met voegwerkrenovatie vaak een minder ingrijpend en goedkoper alternatief.",
++      linkLabel: "Bekijk alle diensten",
++      linkHref: "/diensten/",
++    },
++  ],
++  callout:
++    "Twijfelt u welke route past bij uw situatie? Tijdens de opname op locatie wegen wij eerlijk welk systeem of welke combinatie het beste resultaat geeft — ook wanneer dat geen stucwerk is.",
++};
++
+ export const isolatie = {
+   id: "stucen-met-isolatie",
+   h2: "Buitenmuur isoleren en stucen (ETICS)",
+@@ -338,6 +433,16 @@ export const faq = {
+       answer:
+         "Ja. Bij een ETICS-systeem (buitengevelisolatie) is het stucwerk onderdeel van een meerlaags systeem: isolatieplaten, een wapeningslaag met glasvezelnet en een afwerklaag. Dit is een erkende methode waarbij stucwerk en isolatie in één werkgang worden gerealiseerd. De laagopbouw en materiaalkeuze zijn gebonden aan systeemvereisten en mogen niet willekeurig worden gemengd.",
+     },
++    {
++      question: "Hoe lang gaat buitenmuur stucwerk mee?",
++      answer:
++        "Goed uitgevoerd buitenstucwerk kan vele jaren in goede staat blijven, maar de feitelijke levensduur is geen vaste garantie. Ondergrond, systeemkeuze, detaillering en weersbelasting bepalen samen het resultaat. Periodieke reiniging en — bij geverfde gevels — een schilderbeurt-cyclus van doorgaans 8 tot 12 jaar dragen bij aan een lange levensduur.",
++    },
++    {
++      question: "Wat is het verschil tussen cementeren en buitenmuur stucen?",
++      answer:
++        "Cementeren en cementpleister-stucen zijn verwante technieken: bij beide wordt een cementgebonden laag op de gevel aangebracht. Het verschil zit vooral in laagdikte en gewenste eindafwerking. In de praktijk gebruiken stukadoors de term 'stucen' meestal voor een verwerkte, fijnere afwerking en 'cementeren' voor een ruwere of dikkere basislaag. Beide methoden vragen weerbestendige systemen en zorgvuldige detaillering.",
++    },
+   ],
+ };
+ 
+-- 
+2.39.1.windows.1
+

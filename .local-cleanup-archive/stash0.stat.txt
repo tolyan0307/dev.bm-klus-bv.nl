@@ -1,0 +1,16 @@
+ .gitignore                                         |    1 +
+ CLAUDE.md                                          |   96 ++
+ app/gevelisolatie/page.tsx                         |    2 +-
+ .../gevelisolatie/waarom-bm-klus-section.tsx       |    2 +-
+ lib/content/gevelisolatie-locations.ts             |    6 +-
+ seo-ops/README.md                                  |   88 +-
+ .../__pycache__/report_builder.cpython-314.pyc     |  Bin 7704 -> 0 bytes
+ seo-ops/analysis/__pycache__/rules.cpython-314.pyc |  Bin 13313 -> 0 bytes
+ .../__pycache__/snapshot_loader.cpython-314.pyc    |  Bin 2995 -> 0 bytes
+ seo-ops/config/site.yaml                           |   15 +-
+ seo-ops/data/processed/.gitkeep                    |    0
+ .../data/processed/latest_combined_snapshot.json   | 1228 +++++++++++---------
+ seo-ops/integrations/.env.example                  |    8 +
+ seo-ops/reports/weekly/.gitkeep                    |    0
+ tsconfig.tsbuildinfo                               |    2 +-
+ 15 files changed, 869 insertions(+), 579 deletions(-)

@@ -2401,6 +2401,376 @@
       1920
     ]
   },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-01": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      576,
+      745,
+      768,
+      800,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-02": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-03": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-04": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-05": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-06": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-07": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      972
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-08": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-09": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-10": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-11": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-12": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-13": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-14": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-15": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-16": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-01": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-02": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      432,
+      583,
+      875
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-03": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      432,
+      583,
+      875
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-04": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      288,
+      389,
+      583,
+      875
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-05": {
+    "originalWidth": 955,
+    "originalHeight": 2048,
+    "aspectRatio": 0.466,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-06": {
+    "originalWidth": 955,
+    "originalHeight": 2048,
+    "aspectRatio": 0.466,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-07": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      432,
+      583,
+      875
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-08": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972,
+      1166
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-09": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-10": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-11": {
+    "originalWidth": 1824,
+    "originalHeight": 1026,
+    "aspectRatio": 1.778,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
   "projects/katwijk-gevelisolatie-6cm-na-01": {
     "originalWidth": 1600,
     "originalHeight": 1200,

@@ -286,6 +286,31 @@ export const projects: ProjectCard[] = [
     },
   },
   {
+    slug: "hendrik-ido-ambacht-gevelrenovatie-2024",
+    serviceType: "Buiten-stucwerk",
+    serviceTypes: ["Buiten-stucwerk", "Gevel schilderen"],
+    title: "Hendrik-Ido-Ambacht – gevelrenovatie, buitenstucwerk & schilderwerk (2024)",
+    subtitle: "Complete gevelrenovatie van een woning in Hendrik-Ido-Ambacht met voorbereidende grond- en plintwerken, buitenstucwerk, schilderafwerking, scheurherstel en renovatie van houten geveldelen.",
+    meta: {
+      city: "Hendrik-Ido-Ambacht",
+      objectType: "Woning",
+      highlight:
+        "Gevelrenovatie met plintherstel, buitenstucwerk, schilderwerk, scheurbehandeling, vochtbescherming met bitumen en renovatie van houten geveldelen.",
+      year: 2024,
+    },
+    projectUrl: "/onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/",
+    cardAlt:
+      "Hendrik-Ido-Ambacht gevelrenovatie – woning na de werken (2024)",
+    coverImage: {
+      src: "/images/projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-01.webp",
+      alt: "Hendrik-Ido-Ambacht gevelrenovatie – na de werken foto 01 (2024)",
+    },
+    beforeThumb: {
+      src: "/images/projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-voor-01.webp",
+      alt: "Hendrik-Ido-Ambacht gevelrenovatie – voor de werken foto 01 (2024)",
+    },
+  },
+  {
     slug: "vlaardingen-gevelisolatie-6cm-sierpleister-2024",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],
