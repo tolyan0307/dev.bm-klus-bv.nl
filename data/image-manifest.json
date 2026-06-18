@@ -4121,6 +4121,171 @@
       1296
     ]
   },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-na-01": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      745,
+      768,
+      800,
+      1200,
+      1280,
+      1600,
+      1920
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-na-02": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-na-03": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-na-04": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-na-05": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-voor-01": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-voor-02": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-voor-03": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-voor-04": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-voor-05": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-voor-06": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-voor-07": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      648,
+      875
+    ]
+  },
   "projects/vlaardingen-gevelisolatie-10cm-na-01": {
     "originalWidth": 1861,
     "originalHeight": 1500,

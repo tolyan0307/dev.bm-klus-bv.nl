@@ -286,6 +286,32 @@ export const projects: ProjectCard[] = [
     },
   },
   {
+    slug: "spijkenisse-malledijk-stucwerk-schilderwerk-2024",
+    serviceType: "Muren stucen",
+    serviceTypes: ["Muren stucen"],
+    title: "Spijkenisse Malledijk – stucwerk & schilderwerk binnenwanden (2024)",
+    subtitle: "Renovatie van binnenwanden in een woning in Spijkenisse met voorbereidende sloop- en beschermingswerken, stukwerk, extra plamuur en schilderafwerking in RAL 9001.",
+    meta: {
+      city: "Spijkenisse (Malledijk)",
+      objectType: "Woning",
+      highlight:
+        "Binnenwanden opnieuw opgebouwd en strak afgewerkt met stoplaag, extra plamuur en schilderwerk in RAL 9001, inclusief profielafwerking rond ramen, deuren en wandhoeken.",
+      year: 2024,
+    },
+    projectUrl:
+      "/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/",
+    cardAlt:
+      "Spijkenisse Malledijk stucwerk en schilderwerk – woning na de werken (2024)",
+    coverImage: {
+      src: "/images/projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-na-01.webp",
+      alt: "Spijkenisse Malledijk stucwerk en schilderwerk – na de werken foto 01 (2024)",
+    },
+    beforeThumb: {
+      src: "/images/projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-voor-01.webp",
+      alt: "Spijkenisse Malledijk stucwerk en schilderwerk – voor de werken foto 01 (2024)",
+    },
+  },
+  {
     slug: "hendrik-ido-ambacht-gevelrenovatie-2024",
     serviceType: "Buiten-stucwerk",
     serviceTypes: ["Buiten-stucwerk", "Gevel schilderen"],
