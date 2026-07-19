@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react"
 import { usePathname } from "next/navigation"
-import { Menu, X, Phone, ArrowRight, ChevronDown } from "lucide-react"
+import { Menu, X, MessageCircle, ArrowRight, ChevronDown } from "lucide-react"
 import Link from "next/link"
 
 const dienstenSubs = [
@@ -216,18 +216,20 @@ export default function Navbar() {
               })}
             </div>
 
-            {/* Right side: phone + CTA */}
+            {/* Right side: WhatsApp + CTA */}
             <div className="hidden items-center gap-5 md:flex">
               <a
-                href="tel:+31612079808"
+                href="https://wa.me/31612079808?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen."
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`flex items-center gap-2 text-sm font-medium transition-colors duration-500 ${
                   scrolled
                     ? "text-foreground/70 hover:text-primary"
                     : "text-white/70 hover:text-white"
                 }`}
               >
-                <Phone className="h-4 w-4" />
-                <span className="hidden lg:inline">+31 6 1207 9808</span>
+                <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                <span className="hidden lg:inline">WhatsApp</span>
               </a>
 
               <Link
@@ -351,9 +353,11 @@ export default function Navbar() {
               Contact
             </p>
 
-            {/* M6: Phone + CTA */}
+            {/* M6: WhatsApp + CTA */}
             <a
-              href="tel:+31612079808"
+              href="https://wa.me/31612079808?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen."
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-foreground/70 transition-colors hover:bg-secondary/80 hover:text-foreground"
               style={{
                 transitionDelay: mobileOpen ? `${navLinks.length * 60 + 30}ms` : "0ms",
@@ -361,10 +365,10 @@ export default function Navbar() {
                 transform: mobileOpen ? "translateX(0)" : "translateX(-12px)",
               }}
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
-                <Phone className="h-4 w-4 text-primary" />
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366]/10">
+                <MessageCircle className="h-4 w-4 text-[#25D366]" />
               </span>
-              +31 6 1207 9808
+              WhatsApp ons
             </a>
 
             {/* M6: CTA with shine effect */}

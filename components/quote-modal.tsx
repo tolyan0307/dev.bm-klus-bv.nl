@@ -215,7 +215,7 @@ export default function QuoteModal({
       } else {
         setServerError(
           data?.message ||
-            "Er is iets misgegaan. Probeer het opnieuw of bel ons.",
+            "Er is iets misgegaan. Probeer het opnieuw of stuur ons een bericht via WhatsApp.",
         )
         resetTurnstile()
       }

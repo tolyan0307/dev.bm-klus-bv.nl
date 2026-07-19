@@ -4,7 +4,7 @@ import { Phone, ArrowRight, X, MessageCircle } from "lucide-react"
 import { useState, useEffect } from "react"
 
 const WA_URL =
-  "https://wa.me/31612079808?text=Hallo%2C%20ik%20heb%20interesse%20in%20gevelisolatie.%20Kunt%20u%20mij%20meer%20informatie%20geven%3F"
+  "https://wa.me/31612079808?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen."
 
 export default function StickyCTABar() {
   const [visible, setVisible] = useState(false)
@@ -88,21 +88,21 @@ export default function StickyCTABar() {
         <div className="border-t border-border/15 bg-background/70 backdrop-blur-xl">
           <div className="mx-auto flex max-w-7xl items-center justify-end gap-3 px-8 py-3">
             <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+            >
+              <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" strokeWidth={1.5} />
+              WhatsApp ons
+            </a>
+            <span className="h-4 w-px bg-border/30" />
+            <a
               href="tel:+31612079808"
               className="flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm text-foreground/45 transition-colors hover:text-foreground/70"
             >
               <Phone className="h-3.5 w-3.5" />
               +31 6 12 07 98 08
-            </a>
-            <span className="h-4 w-px bg-border/30" />
-            <a
-              href={WA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm text-foreground/45 transition-colors hover:text-foreground/70"
-            >
-              <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" strokeWidth={1.5} />
-              WhatsApp
             </a>
             <span className="h-4 w-px bg-border/30" />
             <a

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { GtmProvider } from '@/components/gtm-provider'
+import { CtaClickTracker } from '@/components/cta-click-tracker'
 import { getSiteUrl, isProductionHost } from '@/data/sitemap-plan'
 import { Suspense } from 'react'
 import PageviewBeacon from '@/components/pageview-beacon'
@@ -63,6 +64,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <GtmProvider />
+        <CtaClickTracker />
         <Suspense fallback={null}><PageviewBeacon /></Suspense>
         <Suspense fallback={null}><GoogleAggregateRatingJsonLd /></Suspense>
       </body>

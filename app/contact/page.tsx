@@ -183,6 +183,22 @@ export default function ContactPage() {
                 {/* Contact rows */}
                 <div className="bg-card divide-y divide-border">
                   <a
+                    href="https://wa.me/31612079808"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-4 px-5 py-4 transition-colors hover:bg-secondary/60"
+                  >
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#25D366]/10 text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all duration-200">
+                      <MessageCircle className="w-4 h-4" />
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground mb-0.5">WhatsApp · snelste reactie</p>
+                      <p className="text-sm font-bold text-foreground">+31 6 12 07 98 08</p>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-border group-hover:text-[#25D366] group-hover:translate-x-0.5 transition-all shrink-0" />
+                  </a>
+
+                  <a
                     href="tel:+31612079808"
                     className="group flex items-center gap-4 px-5 py-4 transition-colors hover:bg-secondary/60"
                   >
@@ -194,22 +210,6 @@ export default function ContactPage() {
                       <p className="text-sm font-bold text-foreground">+31 6 12 07 98 08</p>
                     </div>
                     <ArrowRight className="w-4 h-4 text-border group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0" />
-                  </a>
-
-                  <a
-                    href="https://wa.me/31612079808"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-4 px-5 py-4 transition-colors hover:bg-secondary/60"
-                  >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#25D366]/10 text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all duration-200">
-                      <MessageCircle className="w-4 h-4" />
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground mb-0.5">WhatsApp</p>
-                      <p className="text-sm font-bold text-foreground">+31 6 12 07 98 08</p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-border group-hover:text-[#25D366] group-hover:translate-x-0.5 transition-all shrink-0" />
                   </a>
 
                   <a

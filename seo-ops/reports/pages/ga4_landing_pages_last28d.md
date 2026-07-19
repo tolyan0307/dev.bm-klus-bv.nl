@@ -1,7 +1,7 @@
 # GA4 Landing Page Snapshot (last 90 days)
 
-**Generated:** 2026-04-24 18:05 UTC
-**Date range:** 2026-03-27 to 2026-04-23
+**Generated:** 2026-07-19 16:24 UTC
+**Date range:** 2026-06-21 to 2026-07-18
 **Property:** 428253147
 
 ---
@@ -10,12 +10,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total landing pages | 30 |
-| Mapped to page_inventory | 29 |
-| Unmapped | 1 |
+| Total landing pages | 15 |
+| Mapped to page_inventory | 13 |
+| Unmapped | 2 |
 | (not set) pages | 1 |
-| Total sessions | 389 |
-| Total key events | 10 |
+| Total sessions | 238 |
+| Total key events | 4 |
 
 ---
 
@@ -23,13 +23,11 @@
 
 | Channel | Sessions |
 |---------|----------|
-| Organic Search | 220 |
-| Paid Search | 137 |
-| Direct | 25 |
-| Referral | 3 |
-| Unassigned | 2 |
-| Cross-network | 1 |
-| Organic Social | 1 |
+| Organic Search | 110 |
+| Paid Search | 101 |
+| Direct | 24 |
+| Cross-network | 2 |
+| Unassigned | 1 |
 
 ---
 
@@ -37,70 +35,62 @@
 
 | Page | Sessions | Engaged | Eng Rate | Avg Dur (s) | Key Events | Type |
 |------|----------|---------|----------|-------------|------------|------|
-| /gevelisolatie/ | 104 | 61 | 0.59 | 319 | 3 | service |
-| / | 91 | 58 | 0.64 | 321 | 2 | home |
-| (not set) | 43 | 0 | 0.00 | 0 | 0 |  |
-| /gevelisolatie/afwerkingen/ | 42 | 28 | 0.67 | 233 | 3 | cluster |
-| /gevelisolatie/kosten/ | 31 | 17 | 0.55 | 162 | 0 | cluster |
-| /buiten-stucwerk/ | 14 | 3 | 0.21 | 8 | 0 | service |
-| /onze-werken/ | 9 | 8 | 0.89 | 336 | 1 | archive |
-| /sierpleister/ | 9 | 3 | 0.33 | 113 | 0 | service |
-| /gevelisolatie/rc-waarde-dikte/ | 5 | 4 | 0.80 | 53 | 0 | cluster |
-| /over-ons/ | 5 | 4 | 0.80 | 704 | 0 | utility |
-| /gevel-schilderen/ | 4 | 3 | 0.75 | 795 | 0 | service |
-| /gevelisolatie/materialen/ | 4 | 2 | 0.50 | 177 | 0 | cluster |
-| /gevelisolatie/den-haag/ | 3 | 3 | 1.00 | 226 | 0 | city |
-| /contact/ | 3 | 1 | 0.33 | 503 | 0 | utility |
-| /gevelisolatie/subsidie-vergunning/ | 3 | 2 | 0.67 | 66 | 0 | cluster |
-| /onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/ | 3 | 3 | 1.00 | 50 | 0 | project |
-| /onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/ | 2 | 0 | 0.00 | 0 | 0 | project |
-| /onze-werken/rottekade-gevelisolatie-schilderwerk-2024/ | 2 | 1 | 0.50 | 21 | 0 | project |
-| /gevelisolatie/bergen-op-zoom/ | 1 | 1 | 1.00 | 113 | 0 | city |
-| /gevelisolatie/dordrecht/ | 1 | 1 | 1.00 | 328 | 0 | city |
+| / | 94 | 70 | 0.74 | 312 | 3 | home |
+| /gevelisolatie/afwerkingen/ | 52 | 33 | 0.63 | 108 | 0 | cluster |
+| /gevelisolatie/ | 36 | 25 | 0.69 | 228 | 1 | service |
+| (not set) | 18 | 1 | 0.06 | 0 | 0 |  |
+| /gevelisolatie/kosten/ | 11 | 6 | 0.55 | 198 | 0 | cluster |
+| /over-ons/ | 6 | 3 | 0.50 | 132 | 0 | utility |
+| /onze-werken/ | 4 | 3 | 0.75 | 155 | 0 | archive |
+| /buiten-stucwerk/ | 3 | 3 | 1.00 | 184 | 0 | service |
+| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 3 | 1 | 0.33 | 16 | 0 | project |
+| /onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/ | 3 | 1 | 0.33 | 248 | 0 |  |
+| /sierpleister/ | 3 | 0 | 0.00 | 1 | 0 | service |
+| /onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/ | 2 | 1 | 0.50 | 46 | 0 | project |
+| /contact/ | 1 | 1 | 1.00 | 44 | 0 | utility |
+| /muren-stucen/ | 1 | 0 | 0.00 | 0 | 0 | service |
+| /onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/ | 1 | 1 | 1.00 | 236 | 0 | project |
 
 ## Top paid landing pages
 
 | Page | Paid Sessions |
 |------|--------------|
-| /gevelisolatie/ | 69 |
-| /gevelisolatie/afwerkingen/ | 37 |
-| /gevelisolatie/kosten/ | 16 |
-| (not set) | 10 |
-| / | 2 |
-| /gevelisolatie/subsidie-vergunning/ | 1 |
-| /onze-werken/rottekade-gevelisolatie-schilderwerk-2024/ | 1 |
-| /onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/ | 1 |
+| /gevelisolatie/afwerkingen/ | 48 |
+| /gevelisolatie/ | 31 |
+| / | 10 |
+| /gevelisolatie/kosten/ | 9 |
+| (not set) | 3 |
 
 ## Top organic search landing pages
 
 | Page | Organic Sessions |
 |------|-----------------|
-| / | 73 |
-| /gevelisolatie/ | 32 |
-| (not set) | 30 |
-| /gevelisolatie/kosten/ | 15 |
-| /buiten-stucwerk/ | 14 |
-| /onze-werken/ | 9 |
-| /sierpleister/ | 7 |
-| /gevelisolatie/rc-waarde-dikte/ | 5 |
+| / | 66 |
+| (not set) | 13 |
 | /over-ons/ | 5 |
-| /gevel-schilderen/ | 4 |
-| /gevelisolatie/materialen/ | 4 |
+| /onze-werken/ | 4 |
+| /buiten-stucwerk/ | 3 |
+| /gevelisolatie/ | 3 |
 | /gevelisolatie/afwerkingen/ | 3 |
-| /gevelisolatie/den-haag/ | 3 |
-| /contact/ | 2 |
-| /gevelisolatie/subsidie-vergunning/ | 2 |
+| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 3 |
+| /sierpleister/ | 3 |
+| /gevelisolatie/kosten/ | 2 |
+| /onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/ | 2 |
+| /contact/ | 1 |
+| /muren-stucen/ | 1 |
+| /onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/ | 1 |
 
 ---
 
-## Weak engagement pages (1 pages with sessions >= 5, engagement < 30%)
+## Weak engagement pages (0 pages with sessions >= 5, engagement < 30%)
 
-| Page | Sessions | Eng Rate | Avg Dur (s) | Type | Notes |
-|------|----------|----------|-------------|------|-------|
-| /buiten-stucwerk/ | 14 | 0.21 | 8 | service |  |
+No weak-engagement pages detected.
 
-## Unmapped / legacy landing pages (0 pages with sessions > 0)
+## Unmapped / legacy landing pages (1 pages with sessions > 0)
 
+| Page | Sessions | Eng Rate | Notes |
+|------|----------|----------|-------|
+| /onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/ | 3 | 0.33 | unmapped: not in page_inventory |
 
 ---
 

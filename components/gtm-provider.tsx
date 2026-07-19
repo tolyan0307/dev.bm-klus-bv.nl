@@ -70,7 +70,9 @@ declare global {
 }
 
 export function trackEvent(event: string, params?: Record<string, unknown>) {
-  if (typeof window !== "undefined" && "dataLayer" in window) {
-    window.dataLayer.push({ event, ...params })
-  }
+  if (typeof window === "undefined") return
+  // Queue events even before gtm.js loads (lazy load) — GTM replays the
+  // dataLayer on initialization, so early clicks are not lost.
+  window.dataLayer = window.dataLayer || []
+  window.dataLayer.push({ event, ...params })
 }

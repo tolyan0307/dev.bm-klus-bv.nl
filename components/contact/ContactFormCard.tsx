@@ -223,7 +223,7 @@ export default function ContactFormCard() {
       } else {
         setServerError(
           data?.message ||
-            "Er is iets misgegaan. Probeer het opnieuw of neem telefonisch contact op.",
+            "Er is iets misgegaan. Probeer het opnieuw of stuur ons een bericht via WhatsApp.",
         )
         resetTurnstile()
       }

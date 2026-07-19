@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, Star, CheckCircle2 } from "lucide-react"
+import { ArrowRight, Phone, Star, CheckCircle2, MessageCircle } from "lucide-react"
 import Link from "next/link"
 import GoogleRatingBadge from "@/components/google-rating-badge"
 import ResponsiveImage from "@/components/responsive-image"
@@ -104,6 +104,15 @@ export default function HeroSection() {
                 Offerte aanvragen
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
+              <a
+                href="https://wa.me/31612079808?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/80 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
+              >
+                <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                WhatsApp
+              </a>
               <Link
                 href="/diensten/"
                 className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/80 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
