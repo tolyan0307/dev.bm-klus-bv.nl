@@ -4,6 +4,14 @@ import ResponsiveImage from "@/components/responsive-image"
 
 const projects = [
   {
+    id: "etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026",
+    baseName: "etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-na-01",
+    city: "Etten-Leur",
+    service: "Gevelisolatie, sierpleister & dakrenovatie",
+    highlight: "Witte sierpleister + natuurstenen plint + nieuw pannendak",
+    href: "/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/",
+  },
+  {
     id: "rotterdam-julianastraat-aanbouw-isolatie-4cm-2026",
     baseName: "rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01",
     city: "Rotterdam",
@@ -26,14 +34,6 @@ const projects = [
     service: "Gevelisolatie 10 cm & RAL 9010",
     highlight: "Volledige gevelisolatie + schilderwerk",
     href: "/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
-  },
-  {
-    id: "halsteren-buitenstucwerk-2025",
-    baseName: "halsteren-buitenstucwerk-na-01",
-    city: "Halsteren",
-    service: "Buitenstucwerk & sierpleister",
-    highlight: "Volledige gevelrenovatie",
-    href: "/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
   },
 ]
 

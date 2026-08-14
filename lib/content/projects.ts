@@ -4,6 +4,32 @@ import type { ProjectCard } from "@/lib/types/projects"
 // 7 Klaaswaal, 8 Rotterdam, 9 Vlaardingen 10cm, 10 Almere, 11 Vlaardingen 6cm, 12 Rottekade, 13 Vught, 14 Katwijk
 export const projects: ProjectCard[] = [
   {
+    slug: "etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026",
+    serviceType: "Gevelisolatie",
+    serviceTypes: ["Gevelisolatie", "Sierpleister"],
+    title: "Etten-Leur Bankenstraat – gevelisolatie, sierpleister & dakrenovatie (2026)",
+    subtitle: "Renovatie van een woning in Etten-Leur met gevelisolatie, witte sierpleister 1,5 mm, donker gezoete natuurstenen plint en raamdorpels, een vernieuwd pannendak en afgewerkte Trespa-delen.",
+    meta: {
+      city: "Etten-Leur (Bankenstraat)",
+      objectType: "Woning",
+      highlight:
+        "Woning vernieuwd met gevelisolatie en witte sierpleister, donker gezoete natuurstenen details, een nieuw zwart pannendak en afgewerkte Trespa-delen.",
+      year: 2026,
+    },
+    projectUrl:
+      "/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/",
+    cardAlt:
+      "Etten-Leur Bankenstraat gevelisolatie en dakrenovatie – woning na de werken (2026)",
+    coverImage: {
+      src: "/images/projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-na-01.webp",
+      alt: "Etten-Leur Bankenstraat gevelisolatie en dakrenovatie – na de werken foto 01 (2026)",
+    },
+    beforeThumb: {
+      src: "/images/projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-01.webp",
+      alt: "Etten-Leur Bankenstraat gevelisolatie en dakrenovatie – voor de werken foto 01 (2026)",
+    },
+  },
+  {
     slug: "rotterdam-julianastraat-aanbouw-isolatie-4cm-2026",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],

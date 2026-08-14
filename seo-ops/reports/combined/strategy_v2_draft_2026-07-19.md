@@ -120,6 +120,32 @@
 
 ---
 
+## 4a. Журнал выполнения (обновлено 2026-07-20)
+
+### Выполнено
+- **Этап 0 — код (2026-07-19, закоммичено владельцем):** WhatsApp-first CTA (navbar, sticky-бар, /contact/, hero главной, тексты ошибок форм), делегированный трекер `components/cta-click-tracker.tsx` (события `bm_whatsapp_click`/`bm_phone_click`/`bm_email_click` + placement), фикс очереди `trackEvent`, удалён мёртвый inline-quote-form. Проверено: tsc чисто, build 59 страниц, dev-сервер отдаёт WhatsApp-ссылки.
+- **Этап 1 — Ads (2026-07-20, внесено владельцем, сверено API — 0 расхождений):** +3 группы (Buiten Stucwerk 16 ключей, Gevel Schilderen 9, Stukadoor Regio 9), 26 новых негативов (всего 103), паузы инфо-групп и 8 сливающих ключей, бюджет €13/день, RSA + доп. заголовки (Ad Strength поднят), быстрые ссылки на уровне групп (+2 новых актива: Onze werken, Buiten stucwerk). Владелец дополнительно паузнул группы Kosten&Prijs и Offerte — принято.
+- **Этап 2, шаг 1 — данные ($0.015):** матрица город×услуга (`outputs/city_service_matrix_2026-07-20.json`): «gevelisolatie {stad}» — микрообъёмы (спрос виден только в GSC-показах), «stukadoor {stad}» — единственный паттерн с объёмом (~3 500/мес по зоне: Rotterdam/Den Haag/Almere 480, Breda 320, Dordrecht/Leiden 260).
+
+### Осталось (ожидает владельца)
+- GTM: 3 триггера Custom Event `bm_whatsapp_click`/`bm_phone_click`/`bm_email_click` → GA4-теги Whatsapp/Phone/Email.
+- Ads: Whatsapp-конверсию (GA4) добавить как secondary; проверить, что primary — только форма 6790076058.
+- GBP: верификация аккаунта (API: UNVERIFIED).
+- Sitelinks, мелочи: добавить «Gevel schilderen» в группы Buiten Stucwerk и Stukadoor Regio, «Sierpleister» в Afwerking; отвязать «Subsidie & vergunning» от Gevel Schilderen и Stukadoor Regio.
+
+### Следующий шаг — волна 1 этапа 2 (план предложен 2026-07-20, ждёт подтверждения владельца)
+1. CTR-фикс title/meta striking distance: ETICS-запросы (поз. 6–8), /gevelisolatie/leiden/ (7.1), /gevelisolatie/rotterdam/.
+2. Каннибализация Rotterdam: усилить /gevelisolatie/rotterdam/ (сейчас вместо неё ранжируется главная, №12) — роттердамские проекты, внутренние ссылки, schema.
+3. Пересобрать 5 city-страниц (Rotterdam, Zoetermeer, Leiden, Delft, Dordrecht — по GSC-показам): локальные проекты, отзывы, субсидии муниципалитета, FAQ+schema, секция «Stukadoor buitenwerk in {stad}».
+4. GBP-конвейер: 4 первых поста + шаблоны ответов на отзывы (я готовлю, владелец публикует).
+5. Первая статья «Buitenmuur stucen: nadelen & oplossingen»; вопрос о разделе /kennisbank/ — открыт.
+
+### Контрольные точки
+- **2026-08-17 — чекпойнт Ads (4 недели после реструктуризации):** цель blended CPA < €60; решения по tCPA ~€45 и «gevel isoleren en bekleden [EXACT]»; ревизия search terms новых групп (мусор → негативы). Еженедельно до этого: расход/CPA/search terms.
+- Данные обновлены 2026-07-19 (GSC, GA4, Ads, GBP, DataForSEO); combined snapshot регенерировать перед следующим анализом, если старше 7 дней.
+
+---
+
 ## 5. Зафиксированные решения владельца (2026-07-19)
 
 1. **Зона обслуживания: радиус 80–100 км от Роттердама.** Города берём ярусами, каждый подтверждаем объёмом (DataForSEO) и реальными проектами:
