@@ -30,15 +30,15 @@ jobs:
 
     steps:
       - name: Checkout (only scripts needed)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           sparse-checkout: scripts
           sparse-checkout-cone-mode: true
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Fetch Google Place data (1 API call)
         shell: bash
