@@ -1540,6 +1540,32 @@
       1200
     ]
   },
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-na-15": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-na-16": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-01": {
     "originalWidth": 2000,
     "originalHeight": 1500,
@@ -1569,19 +1595,6 @@
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-03": {
-    "originalWidth": 1500,
-    "originalHeight": 2000,
-    "aspectRatio": 0.75,
-    "variants": [
-      160,
-      240,
-      320,
-      480,
-      800,
-      1200
-    ]
-  },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-04": {
     "originalWidth": 945,
     "originalHeight": 945,
     "aspectRatio": 1,
@@ -1591,6 +1604,20 @@
       320,
       480,
       800
+    ]
+  },
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-04": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-05": {
@@ -1645,25 +1672,11 @@
       320,
       480,
       800,
-      1200,
-      1600
-    ]
-  },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-09": {
-    "originalWidth": 2000,
-    "originalHeight": 1500,
-    "aspectRatio": 1.333,
-    "variants": [
-      160,
-      240,
-      320,
-      480,
-      800,
       1080,
       1440
     ]
   },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-10": {
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-09": {
     "originalWidth": 2000,
     "originalHeight": 1500,
     "aspectRatio": 1.333,
@@ -1677,7 +1690,7 @@
       1166
     ]
   },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-11": {
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-10": {
     "originalWidth": 2000,
     "originalHeight": 1500,
     "aspectRatio": 1.333,
@@ -1691,7 +1704,7 @@
       1296
     ]
   },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-12": {
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-11": {
     "originalWidth": 2000,
     "originalHeight": 1500,
     "aspectRatio": 1.333,
@@ -1705,7 +1718,7 @@
       1166
     ]
   },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-13": {
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-12": {
     "originalWidth": 1500,
     "originalHeight": 2000,
     "aspectRatio": 0.75,
@@ -1718,7 +1731,7 @@
       1200
     ]
   },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-14": {
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-13": {
     "originalWidth": 2000,
     "originalHeight": 1500,
     "aspectRatio": 1.333,
@@ -1732,7 +1745,7 @@
       1296
     ]
   },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-15": {
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-14": {
     "originalWidth": 1500,
     "originalHeight": 2000,
     "aspectRatio": 0.75,
@@ -1743,6 +1756,20 @@
       480,
       800,
       1200
+    ]
+  },
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-15": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080,
+      1440
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-16": {
@@ -1769,8 +1796,8 @@
       320,
       480,
       800,
-      1080,
-      1440
+      1200,
+      1600
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-18": {
@@ -1797,8 +1824,8 @@
       320,
       480,
       800,
-      1200,
-      1600
+      1080,
+      1440
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-20": {
@@ -1825,8 +1852,8 @@
       320,
       480,
       800,
-      1080,
-      1440
+      1200,
+      1600
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-22": {
@@ -1886,17 +1913,16 @@
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-26": {
-    "originalWidth": 2000,
-    "originalHeight": 1500,
-    "aspectRatio": 1.333,
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
     "variants": [
       160,
       240,
       320,
       480,
       800,
-      1200,
-      1600
+      1200
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-27": {
@@ -1921,24 +1947,11 @@
       240,
       320,
       480,
-      800,
-      1200
-    ]
-  },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-29": {
-    "originalWidth": 1500,
-    "originalHeight": 2000,
-    "aspectRatio": 0.75,
-    "variants": [
-      160,
-      240,
-      320,
-      480,
       648,
       875
     ]
   },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-30": {
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-29": {
     "originalWidth": 2000,
     "originalHeight": 1500,
     "aspectRatio": 1.333,
@@ -1950,6 +1963,19 @@
       720,
       972,
       1166
+    ]
+  },
+  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-30": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-31": {
@@ -1966,19 +1992,6 @@
     ]
   },
   "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-32": {
-    "originalWidth": 1500,
-    "originalHeight": 2000,
-    "aspectRatio": 0.75,
-    "variants": [
-      160,
-      240,
-      320,
-      480,
-      800,
-      1200
-    ]
-  },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-33": {
     "originalWidth": 2000,
     "originalHeight": 1500,
     "aspectRatio": 1.333,
@@ -1990,33 +2003,6 @@
       800,
       1200,
       1600
-    ]
-  },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-34": {
-    "originalWidth": 2000,
-    "originalHeight": 1500,
-    "aspectRatio": 1.333,
-    "variants": [
-      160,
-      240,
-      320,
-      480,
-      800,
-      1200,
-      1600
-    ]
-  },
-  "projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-voor-35": {
-    "originalWidth": 1500,
-    "originalHeight": 2000,
-    "aspectRatio": 0.75,
-    "variants": [
-      160,
-      240,
-      320,
-      480,
-      800,
-      1200
     ]
   },
   "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-01": {
