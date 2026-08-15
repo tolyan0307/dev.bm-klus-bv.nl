@@ -1,4 +1,69 @@
-competitors: []
+# competitors.yaml
+# Filled 2026-08-15 from DataForSEO SERP (NL national + Rotterdam), Labs serp_competitors,
+# and Backlinks bulk data. See reports/combined/final_seo_improvement_plan_2026-08-15.md
+# Metrics are DataForSEO index values (referring_domains, Labs ETV) — comparative only.
+
+updated: 2026-08-15
+
+# Direct contractors competing on winnable local/commercial queries
+contractors_local_rotterdam:
+  - {domain: stucadoorsbedrijfdevries.nl, type: stukadoor, ref_domains: 313, labs_etv: 621, note: "#1 organic stukadoor rotterdam; actief sinds 2000"}
+  - {domain: rotterdamse-stukadoor.nl, type: stukadoor, ref_domains: 119, labs_etv: 51, note: "#3 organic stukadoor rotterdam"}
+  - {domain: vanklassestukadoors.nl, type: stukadoor+schilder, ref_domains: 20, labs_etv: 111, note: "LP3 local pack 4.8/191"}
+  - {domain: batouz.nl, type: stukadoor, ref_domains: 9, labs_etv: 79, note: "LP 5/207 reviews"}
+  - {domain: stukadoor-ddziko.nl, type: stukadoor, ref_domains: 0, labs_etv: 13}
+  - {domain: cpgroenendijk.nl, type: stukadoor, ref_domains: 184, labs_etv: 63}
+  - {domain: stukadoor-at.nl, type: stukadoor, note: "LP + organic, sierpleister rotterdam #2"}
+  - {domain: rotterdam-stukadoor.nl, type: stukadoor, note: "#1 sierpleister rotterdam, #2 buitenmuur stucen rotterdam"}
+  - {domain: prostukadoors.nl, type: stukadoor}
+  - {domain: kh-gevelrenovatie.nl, type: gevelrenovatie, note: "LP1 gevelrenovatie rotterdam 4.8/76"}
+  - {domain: gevelspecialisatierotterdam.nl, type: gevelrenovatie, note: "#1 organic gevelrenovatie rotterdam"}
+
+# Insulation companies (win 'gevelisolatie rotterdam' / 'isolatiebedrijf rotterdam')
+contractors_isolatie:
+  - {domain: plusisolatie.nl, ref_domains: 1243, labs_etv: 5359, note: "#1 isolatiebedrijf rotterdam; 9.5/2274 reviews on page"}
+  - {domain: takkenkamp.com, ref_domains: 726, labs_etv: 5140}
+  - {domain: si-isolatie.nl, ref_domains: 122, labs_etv: 2968}
+  - {domain: isolatiespecialist.nl, ref_domains: 3297, labs_etv: 12102}
+  - {domain: pluimers.nl, ref_domains: 1095, labs_etv: 5475}
+  - {domain: jandeisolatieman.nl, ref_domains: 813, labs_etv: 24554}
+  - {domain: isolatiebedrijfrotterdam.net, note: "keyword-named GBP + #3 organic"}
+
+# National contractors on generic buiten stucwerk / gevelisolatie
+contractors_national:
+  - {domain: munnekestukadoors.nl, ref_domains: 29, labs_etv: 399}
+  - {domain: vanginkelstukadoors.nl, ref_domains: 61, labs_etv: 591}
+  - {domain: metsel-gigant.nl, ref_domains: 359, labs_etv: 7261}
+  - {domain: stuc-gigant.nl, ref_domains: 249, labs_etv: 1887}
+  - {domain: stucadoor-expert.nl, labs_etv: 1465}
+  - {domain: stuc-concurrent.nl}
+  - {domain: wandgrimeurs.nl}
+  - {domain: keim-specialist.nl, note: "keimen niche"}
+
+# Platforms / directories / info sites — not beatable, but link/listing targets
+platforms_and_directories:
+  - homedeal.nl
+  - slimster.nl
+  - werkspot.nl
+  - trustoo.nl
+  - stukadoorsclub.nl
+  - zoofy.nl
+  - casius.nl
+  - bobex.nl
+  - vakmanvinden.nl
+  - stukadoorinhuren.nl
+  - stukadoor-offerte.nl
+  - gevelrenovatie-info.nl
+  - stucwerk-info.nl
+  - isolatie-info.nl
+  - eigenhuis.nl
+  - milieucentraal.nl
+  - consumentenbond.nl
+  - nederlandisoleert.nl
+  - gamma.nl
+  - hornbach.nl
+  - vtwonen.nl
+
 notes:
-  - "To be filled later"
-  - "Start phase 1 without competitor tooling"
+  - "bm-klus-bv.nl baseline 2026-08-15: DFS rank 23, referring_domains 1, Labs ETV ~6, 9 ranked keywords"
+  - "Rotterdam local pack: own listing absent on all 8 pack-triggering queries; GBP primary category = Aannemer"
