@@ -67,12 +67,28 @@ Claude может интерпретировать intent вручную на о
 
 ## Что пока не реализовано
 
-- **Competitor intelligence** — нет подключения к внешним SEO-инструментам
-- **DataForSEO** — не подключён
 - **Google Ads API** — не подключён
 - **Полный движок каннибализации** — есть базовые проверки, но не полный анализ
 - **Автоматическое расписание** — нет cron, нет автозапуска отчётов
-- **MCP server** — не реализован (будет следующим шагом)
+
+## MCP-слой (подключено 2026-08-15, local scope Claude Code)
+
+| Сервер | Что даёт | Auth |
+|--------|----------|------|
+| `dataforseo` (официальный, v3, `--mode stdio`) | Live SERP, keyword data, Labs, backlinks, on-page — через `api_request` + встроенную документацию (`docs_search`) | `DATAFORSEO_LOGIN`/`PASSWORD` из `.env.local` |
+| `google-analytics` (официальный Google) | GA4 отчёты в диалоге: run_report, funnel, realtime, custom dimensions | GA4 service account |
+| `gsc` (`mcp-server-gsc`) | Search analytics запросы в диалоге | Тот же service account — **требуется добавить его email как пользователя в GSC property** |
+
+Скрипты `integrations/` и анализаторы остаются основным воспроизводимым слоем;
+MCP — интерактивный слой для ad-hoc анализа. Правила source hierarchy действуют без изменений
+(DataForSEO = enrichment only).
+
+Проектные слэш-команды (`.claude/skills/`, добавлены 2026-08-15): `/seo-refresh` (полный
+рефреш снапшотов + сводка), `/serp-check` (живая выдача NL + конкуренты), `/page-diagnosis`
+(диагноз одной страницы по контракту). Обёртки над существующими анализаторами, read-only.
+
+- **DataForSEO** — подключён: скриптовый слой (`analyzers/seo/run_dataforseo_serp_snapshot_v1.py`, enrichment кластера gevelisolatie) + MCP
+- **Competitor intelligence** — частично: live SERP через DataForSEO; нет backlink-профилей конкурентов в регулярном процессе
 
 ---
 

@@ -1,70 +1,30 @@
 {
-  "generated_at": "2026-07-19T16:07:26.583224+00:00",
+  "generated_at": "2026-08-15T07:53:06.566096+00:00",
   "site": "https://bm-klus-bv.nl/",
-  "snapshot_generated_at": "2026-07-19T16:07:21.926149Z",
+  "snapshot_generated_at": "2026-08-15T07:53:01.246057Z",
   "executive_summary": {
-    "total_findings": 29,
+    "total_findings": 31,
     "breakdown": {
-      "seo_opportunities": 10,
-      "seo_risks": 0,
-      "measurement_issues": 1,
+      "seo_opportunities": 9,
+      "seo_risks": 1,
+      "measurement_issues": 2,
       "conversion_opportunities": 2,
-      "gevelisolatie_cluster_notes": 16
+      "gevelisolatie_cluster_notes": 17
     },
-    "pages_to_watch_count": 10,
-    "next_actions_count": 5
+    "pages_to_watch_count": 6,
+    "next_actions_count": 4
   },
   "top_seo_opportunities": [
     {
-      "signal": "Position 11.7 with CTR 1.9% (362 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
-      "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
-      "category": "SEO",
-      "page": "/gevelisolatie/"
-    },
-    {
-      "signal": "Position 4.1 with CTR 1.6% (193 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
-      "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
-      "category": "SEO",
-      "page": "/over-ons/"
-    },
-    {
-      "signal": "Position 7.5 with CTR 0.1% (718 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
-      "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
-      "category": "SEO",
-      "page": "/buiten-stucwerk/"
-    },
-    {
-      "signal": "Position 4.4 with CTR 0.7% (136 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
-      "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
-      "category": "SEO",
-      "page": "/diensten/"
-    },
-    {
-      "signal": "Position 13.5 with CTR 1.0% (97 impr)",
+      "signal": "Position 10.3 with CTR 2.0% (99 impr)",
       "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
       "confidence": "low",
       "recommended_action": "Review title tag and meta description for query-intent alignment",
       "category": "SEO",
-      "page": "/gevelisolatie/afwerkingen/"
+      "page": "/gevelisolatie/den-haag/"
     },
     {
-      "signal": "Position 7.0 with CTR 0.4% (228 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
-      "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
-      "category": "SEO",
-      "page": "/onze-werken/"
-    },
-    {
-      "signal": "Position 13.9 with CTR 0.8% (124 impr)",
+      "signal": "Position 14.6 with CTR 1.3% (158 impr)",
       "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
       "confidence": "medium",
       "recommended_action": "Review title tag and meta description for query-intent alignment",
@@ -72,7 +32,47 @@
       "page": "/sierpleister/"
     },
     {
-      "signal": "129 impressions but CTR 0.0%",
+      "signal": "Position 8.4 with CTR 0.2% (580 impr)",
+      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "confidence": "medium",
+      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "category": "SEO",
+      "page": "/buiten-stucwerk/"
+    },
+    {
+      "signal": "Position 6.2 with CTR 1.2% (80 impr)",
+      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "confidence": "low",
+      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "category": "SEO",
+      "page": "/diensten/"
+    },
+    {
+      "signal": "Position 9.2 with CTR 1.2% (84 impr)",
+      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "confidence": "low",
+      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "category": "SEO",
+      "page": "/gevelisolatie/leiden/"
+    },
+    {
+      "signal": "Position 6.0 with CTR 0.0% (108 impr)",
+      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "confidence": "medium",
+      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "category": "SEO",
+      "page": "/contact/"
+    },
+    {
+      "signal": "Position 13.8 with CTR 0.0% (87 impr)",
+      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "confidence": "low",
+      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "category": "SEO",
+      "page": "/gevelisolatie/afwerkingen/"
+    },
+    {
+      "signal": "97 impressions but CTR 0.0%",
       "why_it_matters": "High visibility query not converting to clicks — possible SERP snippet mismatch",
       "confidence": "low",
       "recommended_action": "Check which page ranks for this query; review title/description fit",
@@ -80,59 +80,75 @@
       "query": "behangklaar stucen"
     },
     {
-      "signal": "132 impressions but CTR 0.0%",
+      "signal": "124 impressions but CTR 0.0%",
       "why_it_matters": "High visibility query not converting to clicks — possible SERP snippet mismatch",
       "confidence": "low",
       "recommended_action": "Check which page ranks for this query; review title/description fit",
       "category": "SEO",
       "query": "behangklaar stucwerk"
-    },
+    }
+  ],
+  "seo_risks": [
     {
-      "signal": "Clicks +39, impressions +48 vs previous period",
-      "why_it_matters": "Page gaining momentum — opportunity to accelerate with content or internal links",
+      "signal": "Clicks -40, impressions -166 vs previous period",
+      "why_it_matters": "Page losing organic visibility — may indicate ranking drop or seasonal shift",
       "confidence": "medium",
-      "recommended_action": "Review page content freshness; strengthen internal linking to this page",
+      "recommended_action": "Check GSC for position changes; review if content is still relevant",
       "category": "SEO",
       "page": "/"
     }
   ],
-  "seo_risks": [],
   "top_conversion_opportunities": [
     {
-      "signal": "52 sessions but 0 key events",
-      "why_it_matters": "Traffic exists but no lead signal — possible CTA gap or intent mismatch",
-      "confidence": "medium",
-      "recommended_action": "Check CTA visibility and relevance on this page; verify event tracking",
-      "category": "CRO",
-      "page": "/gevelisolatie/afwerkingen/"
-    },
-    {
-      "signal": "11 sessions but 0 key events",
+      "signal": "14 sessions but 0 key events",
       "why_it_matters": "Traffic exists but no lead signal — possible CTA gap or intent mismatch",
       "confidence": "low",
       "recommended_action": "Check CTA visibility and relevance on this page; verify event tracking",
       "category": "CRO",
-      "page": "/gevelisolatie/kosten/"
+      "page": "/gevel-schilderen/"
+    },
+    {
+      "signal": "10 sessions but 0 key events",
+      "why_it_matters": "Traffic exists but no lead signal — possible CTA gap or intent mismatch",
+      "confidence": "low",
+      "recommended_action": "Check CTA visibility and relevance on this page; verify event tracking",
+      "category": "CRO",
+      "page": "/onze-werken/"
     }
   ],
   "measurement_issues": [
     {
-      "signal": "18 sessions with landing page = (not set)",
+      "signal": "11 sessions with landing page = (not set)",
       "why_it_matters": "GA4 cannot determine the entry page — may distort landing page analysis",
       "confidence": "high",
       "recommended_action": "Check GA4 data stream configuration; may be internal/app traffic",
       "category": "Measurement",
       "page": "(not set)"
+    },
+    {
+      "signal": "Source '(not set)': 12 sessions, engagement 0%",
+      "why_it_matters": "Very low engagement may indicate bot traffic or misconfigured referrer",
+      "confidence": "low",
+      "recommended_action": "Investigate source in GA4; consider excluding if confirmed noise",
+      "category": "Measurement"
     }
   ],
   "gevelisolatie_cluster_review": [
     {
-      "signal": "26 cluster pages found in GSC comparison data",
+      "signal": "25 cluster pages found in GSC comparison data",
       "why_it_matters": "Cluster tracking summary",
       "confidence": "high",
       "recommended_action": "Review individual cluster page findings below",
       "category": "Cluster",
       "page": "/gevelisolatie/*"
+    },
+    {
+      "signal": "Cluster page with < 10 impressions in current period",
+      "why_it_matters": "Strategic cluster page has very weak visibility",
+      "confidence": "low",
+      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
+      "category": "Cluster",
+      "page": "/gevelisolatie/maassluis/"
     },
     {
       "signal": "Cluster page with < 10 impressions in current period",
@@ -172,14 +188,6 @@
       "confidence": "low",
       "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
       "category": "Cluster",
-      "page": "/gevelisolatie/dordrecht/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
       "page": "/gevelisolatie/gouda/"
     },
     {
@@ -188,7 +196,7 @@
       "confidence": "low",
       "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
       "category": "Cluster",
-      "page": "/gevelisolatie/hellevoetsluis/"
+      "page": "/gevelisolatie/hendrik-ido-ambacht/"
     },
     {
       "signal": "Cluster page with < 10 impressions in current period",
@@ -196,7 +204,7 @@
       "confidence": "low",
       "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
       "category": "Cluster",
-      "page": "/gevelisolatie/maassluis/"
+      "page": "/gevelisolatie/materialen/"
     },
     {
       "signal": "Cluster page with < 10 impressions in current period",
@@ -221,6 +229,14 @@
       "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
       "category": "Cluster",
       "page": "/gevelisolatie/roosendaal/"
+    },
+    {
+      "signal": "Cluster page with < 10 impressions in current period",
+      "why_it_matters": "Strategic cluster page has very weak visibility",
+      "confidence": "low",
+      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
+      "category": "Cluster",
+      "page": "/gevelisolatie/rotterdam/"
     },
     {
       "signal": "Cluster page with < 10 impressions in current period",
@@ -259,23 +275,19 @@
     "(not set)",
     "/",
     "/buiten-stucwerk/",
-    "/diensten/",
-    "/gevelisolatie/",
+    "/contact/",
     "/gevelisolatie/*",
-    "/gevelisolatie/afwerkingen/",
-    "/onze-werken/",
-    "/over-ons/",
     "/sierpleister/"
   ],
   "next_actions_7_14_days": [
     {
       "action": "Review title tag and meta description for query-intent alignment",
       "category": "SEO",
-      "related_page": "/gevelisolatie/",
+      "related_page": "/sierpleister/",
       "related_query": null
     },
     {
-      "action": "Review page content freshness; strengthen internal linking to this page",
+      "action": "Check GSC for position changes; review if content is still relevant",
       "category": "SEO",
       "related_page": "/",
       "related_query": null
@@ -284,12 +296,6 @@
       "action": "Check GA4 data stream configuration; may be internal/app traffic",
       "category": "Measurement",
       "related_page": "(not set)",
-      "related_query": null
-    },
-    {
-      "action": "Check CTA visibility and relevance on this page; verify event tracking",
-      "category": "CRO",
-      "related_page": "/gevelisolatie/afwerkingen/",
       "related_query": null
     },
     {

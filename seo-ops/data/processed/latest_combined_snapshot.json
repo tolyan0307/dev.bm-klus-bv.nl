@@ -3,8 +3,8 @@
   "ga4_property": "428253147",
   "gsc_top_pages": {
     "date_range": {
-      "start": "2026-06-21",
-      "end": "2026-07-18"
+      "start": "2026-07-18",
+      "end": "2026-08-14"
     },
     "row_count": 20,
     "rows": [
@@ -12,136 +12,154 @@
         "keys": [
           "https://bm-klus-bv.nl/"
         ],
-        "clicks": 81,
-        "impressions": 731,
-        "ctr": 0.1108,
-        "position": 8.7
+        "clicks": 42,
+        "impressions": 572,
+        "ctr": 0.0734,
+        "position": 8.0
       },
       {
         "keys": [
           "https://bm-klus-bv.nl/gevelisolatie/"
         ],
-        "clicks": 7,
-        "impressions": 362,
-        "ctr": 0.0193,
-        "position": 11.7
-      },
-      {
-        "keys": [
-          "https://bm-klus-bv.nl/contact/"
-        ],
-        "clicks": 4,
-        "impressions": 167,
-        "ctr": 0.024,
-        "position": 2.7
-      },
-      {
-        "keys": [
-          "https://bm-klus-bv.nl/over-ons/"
-        ],
         "clicks": 3,
-        "impressions": 193,
-        "ctr": 0.0155,
-        "position": 4.1
+        "impressions": 327,
+        "ctr": 0.0092,
+        "position": 17.2
       },
       {
         "keys": [
-          "https://bm-klus-bv.nl/gevelisolatie/kosten/"
+          "https://bm-klus-bv.nl/gevelisolatie/den-haag/"
         ],
         "clicks": 2,
-        "impressions": 279,
-        "ctr": 0.0072,
-        "position": 25.3
+        "impressions": 99,
+        "ctr": 0.0202,
+        "position": 10.3
+      },
+      {
+        "keys": [
+          "https://bm-klus-bv.nl/sierpleister/"
+        ],
+        "clicks": 2,
+        "impressions": 158,
+        "ctr": 0.0127,
+        "position": 14.6
       },
       {
         "keys": [
           "https://bm-klus-bv.nl/buiten-stucwerk/"
         ],
         "clicks": 1,
-        "impressions": 718,
-        "ctr": 0.0014,
-        "position": 7.5
+        "impressions": 580,
+        "ctr": 0.0017,
+        "position": 8.4
       },
       {
         "keys": [
           "https://bm-klus-bv.nl/diensten/"
         ],
         "clicks": 1,
-        "impressions": 136,
-        "ctr": 0.0074,
-        "position": 4.4
+        "impressions": 80,
+        "ctr": 0.0125,
+        "position": 6.2
       },
       {
         "keys": [
           "https://bm-klus-bv.nl/gevel-schilderen/"
         ],
         "clicks": 1,
-        "impressions": 1018,
-        "ctr": 0.001,
-        "position": 37.7
+        "impressions": 1560,
+        "ctr": 0.0006,
+        "position": 36.8
       },
       {
         "keys": [
-          "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/"
+          "https://bm-klus-bv.nl/gevelisolatie/delft/"
         ],
         "clicks": 1,
-        "impressions": 97,
-        "ctr": 0.0103,
-        "position": 13.5
+        "impressions": 192,
+        "ctr": 0.0052,
+        "position": 33.5
       },
       {
         "keys": [
-          "https://bm-klus-bv.nl/muren-stucen/"
+          "https://bm-klus-bv.nl/gevelisolatie/leiden/"
         ],
         "clicks": 1,
-        "impressions": 1295,
-        "ctr": 0.0008,
-        "position": 28.8
+        "impressions": 84,
+        "ctr": 0.0119,
+        "position": 9.2
       },
       {
         "keys": [
-          "https://bm-klus-bv.nl/onze-werken/"
+          "https://bm-klus-bv.nl/gevelisolatie/maassluis/"
         ],
         "clicks": 1,
-        "impressions": 228,
-        "ctr": 0.0044,
-        "position": 7.0
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 3
+      },
+      {
+        "keys": [
+          "https://bm-klus-bv.nl/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/"
+        ],
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 28.2
       },
       {
         "keys": [
           "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/"
         ],
         "clicks": 1,
-        "impressions": 12,
-        "ctr": 0.0833,
-        "position": 8.2
+        "impressions": 27,
+        "ctr": 0.037,
+        "position": 6.8
       },
       {
         "keys": [
-          "https://bm-klus-bv.nl/sierpleister/"
+          "https://bm-klus-bv.nl/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/"
         ],
         "clicks": 1,
-        "impressions": 124,
-        "ctr": 0.0081,
-        "position": 13.9
+        "impressions": 15,
+        "ctr": 0.0667,
+        "position": 7
+      },
+      {
+        "keys": [
+          "https://bm-klus-bv.nl/contact/"
+        ],
+        "clicks": 0,
+        "impressions": 108,
+        "ctr": 0,
+        "position": 6.0
+      },
+      {
+        "keys": [
+          "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/"
+        ],
+        "clicks": 0,
+        "impressions": 87,
+        "ctr": 0,
+        "position": 13.8
       },
       {
         "keys": [
           "https://bm-klus-bv.nl/gevelisolatie/alphen-aan-den-rijn/"
         ],
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 36,
         "ctr": 0,
-        "position": 28.7
+        "position": 23.4
       },
       {
         "keys": [
           "https://bm-klus-bv.nl/gevelisolatie/barendrecht/"
         ],
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 4,
         "ctr": 0,
-        "position": 3.5
+        "position": 5.5
       },
       {
         "keys": [
@@ -150,16 +168,16 @@
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 8
+        "position": 7
       },
       {
         "keys": [
           "https://bm-klus-bv.nl/gevelisolatie/breda/"
         ],
         "clicks": 0,
-        "impressions": 8,
+        "impressions": 4,
         "ctr": 0,
-        "position": 7.2
+        "position": 2.5
       },
       {
         "keys": [
@@ -168,32 +186,14 @@
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 4
-      },
-      {
-        "keys": [
-          "https://bm-klus-bv.nl/gevelisolatie/delft/"
-        ],
-        "clicks": 0,
-        "impressions": 101,
-        "ctr": 0,
-        "position": 35.2
-      },
-      {
-        "keys": [
-          "https://bm-klus-bv.nl/gevelisolatie/den-haag/"
-        ],
-        "clicks": 0,
-        "impressions": 12,
-        "ctr": 0,
-        "position": 8.9
+        "position": 1
       }
     ]
   },
   "gsc_top_queries": {
     "date_range": {
-      "start": "2026-06-21",
-      "end": "2026-07-18"
+      "start": "2026-07-18",
+      "end": "2026-08-14"
     },
     "row_count": 20,
     "rows": [
@@ -201,9 +201,18 @@
         "keys": [
           "bm klus bv"
         ],
-        "clicks": 18,
-        "impressions": 31,
-        "ctr": 0.5806,
+        "clicks": 12,
+        "impressions": 33,
+        "ctr": 0.3636,
+        "position": 1
+      },
+      {
+        "keys": [
+          "bm klus b.v."
+        ],
+        "clicks": 7,
+        "impressions": 12,
+        "ctr": 0.5833,
         "position": 1
       },
       {
@@ -211,426 +220,345 @@
           "bm klus bv reviews"
         ],
         "clicks": 2,
-        "impressions": 9,
-        "ctr": 0.2222,
+        "impressions": 13,
+        "ctr": 0.1538,
         "position": 1.2
       },
       {
         "keys": [
-          "bm klus b.v."
+          "buiten stucwerk"
+        ],
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 10.8
+      },
+      {
+        "keys": [
+          "etics"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.1429,
+        "position": 9.6
+      },
+      {
+        "keys": [
+          "klusbedrijf rotterdam"
         ],
         "clicks": 1,
         "impressions": 2,
         "ctr": 0.5,
-        "position": 1
+        "position": 16
       },
       {
         "keys": [
-          "etics systeem"
-        ],
-        "clicks": 1,
-        "impressions": 28,
-        "ctr": 0.0357,
-        "position": 10.9
-      },
-      {
-        "keys": [
-          "etics-systeem"
-        ],
-        "clicks": 1,
-        "impressions": 6,
-        "ctr": 0.1667,
-        "position": 10.5
-      },
-      {
-        "keys": [
-          "gevelisolatie met stucwerk"
-        ],
-        "clicks": 1,
-        "impressions": 1,
-        "ctr": 1,
-        "position": 2
-      },
-      {
-        "keys": [
-          "aannemer klusbedrijf"
+          "aannemer isolatiewerken denhaag"
         ],
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 2
-      },
-      {
-        "keys": [
-          "afbeelding"
-        ],
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 22
-      },
-      {
-        "keys": [
-          "b m"
-        ],
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 2
-      },
-      {
-        "keys": [
-          "b m."
-        ],
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 1.5
+        "position": 31
       },
       {
         "keys": [
           "b+m"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 1,
         "ctr": 0,
-        "position": 2.3
+        "position": 1
       },
       {
         "keys": [
           "b.m"
         ],
         "clicks": 0,
-        "impressions": 3,
-        "ctr": 0,
-        "position": 1.7
-      },
-      {
-        "keys": [
-          "banos klusbedrijf"
-        ],
-        "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 38
+        "position": 10
       },
       {
         "keys": [
           "behangklaar"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 4,
         "ctr": 0,
-        "position": 70
+        "position": 71.2
+      },
+      {
+        "keys": [
+          "behangklaar en sausklaar"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 24.3
       },
       {
         "keys": [
           "behangklaar muren"
         ],
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 3,
         "ctr": 0,
-        "position": 49.8
+        "position": 50
       },
       {
         "keys": [
           "behangklaar naar sausklaar"
         ],
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 8,
         "ctr": 0,
-        "position": 21.8
+        "position": 19.2
       },
       {
         "keys": [
           "behangklaar of sausklaar"
         ],
         "clicks": 0,
-        "impressions": 34,
+        "impressions": 27,
         "ctr": 0,
-        "position": 24.6
+        "position": 27.2
       },
       {
         "keys": [
           "behangklaar sausklaar maken"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 4,
         "ctr": 0,
-        "position": 35
+        "position": 31.5
       },
       {
         "keys": [
           "behangklaar stucen"
         ],
         "clicks": 0,
-        "impressions": 129,
+        "impressions": 97,
         "ctr": 0,
-        "position": 32.8
+        "position": 31.5
       },
       {
         "keys": [
           "behangklaar stucwerk"
         ],
         "clicks": 0,
-        "impressions": 132,
+        "impressions": 124,
         "ctr": 0,
-        "position": 36.3
+        "position": 35.9
+      },
+      {
+        "keys": [
+          "behangklaar stucwerk schilderen"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "keys": [
+          "behangklaar stuken"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 26.5
+      },
+      {
+        "keys": [
+          "behangklaar stuukwerk"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 38
       }
     ]
   },
   "gsc_page_comparison": {
     "current_range": {
-      "start": "2026-06-21",
-      "end": "2026-07-18"
+      "start": "2026-07-18",
+      "end": "2026-08-14"
     },
     "previous_range": {
-      "start": "2026-05-24",
-      "end": "2026-06-20"
+      "start": "2026-06-20",
+      "end": "2026-07-17"
     },
-    "row_count": 48,
+    "row_count": 47,
     "rows": [
       {
         "page": "https://bm-klus-bv.nl/",
         "current": {
-          "clicks": 81,
-          "impressions": 731,
-          "ctr": 0.1108,
-          "position": 8.7
+          "clicks": 42,
+          "impressions": 572,
+          "ctr": 0.0734,
+          "position": 8.0
         },
         "previous": {
-          "clicks": 42,
-          "impressions": 683,
-          "ctr": 0.0615,
-          "position": 10.3
+          "clicks": 82,
+          "impressions": 738,
+          "ctr": 0.1111,
+          "position": 8.7
         },
-        "delta_clicks": 39,
-        "delta_impressions": 48,
-        "delta_position": -1.6
+        "delta_clicks": -40,
+        "delta_impressions": -166,
+        "delta_position": -0.7
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/",
         "current": {
-          "clicks": 7,
-          "impressions": 362,
-          "ctr": 0.0193,
-          "position": 11.7
-        },
-        "previous": {
-          "clicks": 8,
-          "impressions": 465,
-          "ctr": 0.0172,
-          "position": 8.4
-        },
-        "delta_clicks": -1,
-        "delta_impressions": -103,
-        "delta_position": 3.3
-      },
-      {
-        "page": "https://bm-klus-bv.nl/contact/",
-        "current": {
-          "clicks": 4,
-          "impressions": 167,
-          "ctr": 0.024,
-          "position": 2.7
-        },
-        "previous": {
-          "clicks": 4,
-          "impressions": 123,
-          "ctr": 0.0325,
-          "position": 3.7
-        },
-        "delta_clicks": 0,
-        "delta_impressions": 44,
-        "delta_position": -1.0
-      },
-      {
-        "page": "https://bm-klus-bv.nl/over-ons/",
-        "current": {
           "clicks": 3,
-          "impressions": 193,
-          "ctr": 0.0155,
-          "position": 4.1
+          "impressions": 327,
+          "ctr": 0.0092,
+          "position": 17.2
         },
         "previous": {
-          "clicks": 1,
-          "impressions": 103,
-          "ctr": 0.0097,
-          "position": 13.3
+          "clicks": 7,
+          "impressions": 368,
+          "ctr": 0.019,
+          "position": 11.6
         },
-        "delta_clicks": 2,
-        "delta_impressions": 90,
-        "delta_position": -9.2
+        "delta_clicks": -4,
+        "delta_impressions": -41,
+        "delta_position": 5.6
       },
       {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/kosten/",
+        "page": "https://bm-klus-bv.nl/gevelisolatie/den-haag/",
         "current": {
           "clicks": 2,
-          "impressions": 279,
-          "ctr": 0.0072,
-          "position": 25.3
+          "impressions": 99,
+          "ctr": 0.0202,
+          "position": 10.3
         },
         "previous": {
-          "clicks": 3,
-          "impressions": 161,
-          "ctr": 0.0186,
-          "position": 11.0
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 8.9
         },
-        "delta_clicks": -1,
-        "delta_impressions": 118,
-        "delta_position": 14.3
+        "delta_clicks": 2,
+        "delta_impressions": 87,
+        "delta_position": 1.4
+      },
+      {
+        "page": "https://bm-klus-bv.nl/sierpleister/",
+        "current": {
+          "clicks": 2,
+          "impressions": 158,
+          "ctr": 0.0127,
+          "position": 14.6
+        },
+        "previous": {
+          "clicks": 2,
+          "impressions": 126,
+          "ctr": 0.0159,
+          "position": 13.8
+        },
+        "delta_clicks": 0,
+        "delta_impressions": 32,
+        "delta_position": 0.8
       },
       {
         "page": "https://bm-klus-bv.nl/buiten-stucwerk/",
         "current": {
           "clicks": 1,
-          "impressions": 718,
-          "ctr": 0.0014,
-          "position": 7.5
+          "impressions": 580,
+          "ctr": 0.0017,
+          "position": 8.4
         },
         "previous": {
-          "clicks": 3,
-          "impressions": 716,
-          "ctr": 0.0042,
-          "position": 8.7
+          "clicks": 1,
+          "impressions": 734,
+          "ctr": 0.0014,
+          "position": 7.4
         },
-        "delta_clicks": -2,
-        "delta_impressions": 2,
-        "delta_position": -1.2
+        "delta_clicks": 0,
+        "delta_impressions": -154,
+        "delta_position": 1.0
       },
       {
         "page": "https://bm-klus-bv.nl/diensten/",
         "current": {
           "clicks": 1,
-          "impressions": 136,
-          "ctr": 0.0074,
-          "position": 4.4
+          "impressions": 80,
+          "ctr": 0.0125,
+          "position": 6.2
         },
         "previous": {
-          "clicks": 0,
-          "impressions": 78,
-          "ctr": 0,
-          "position": 7.2
+          "clicks": 1,
+          "impressions": 137,
+          "ctr": 0.0073,
+          "position": 4.4
         },
-        "delta_clicks": 1,
-        "delta_impressions": 58,
-        "delta_position": -2.8
+        "delta_clicks": 0,
+        "delta_impressions": -57,
+        "delta_position": 1.8
       },
       {
         "page": "https://bm-klus-bv.nl/gevel-schilderen/",
         "current": {
           "clicks": 1,
-          "impressions": 1018,
+          "impressions": 1560,
+          "ctr": 0.0006,
+          "position": 36.8
+        },
+        "previous": {
+          "clicks": 1,
+          "impressions": 1036,
           "ctr": 0.001,
           "position": 37.7
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 491,
-          "ctr": 0,
-          "position": 37.6
-        },
-        "delta_clicks": 1,
-        "delta_impressions": 527,
-        "delta_position": 0.1
-      },
-      {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/",
-        "current": {
-          "clicks": 1,
-          "impressions": 97,
-          "ctr": 0.0103,
-          "position": 13.5
-        },
-        "previous": {
-          "clicks": 1,
-          "impressions": 175,
-          "ctr": 0.0057,
-          "position": 11.4
-        },
         "delta_clicks": 0,
-        "delta_impressions": -78,
-        "delta_position": 2.1
+        "delta_impressions": 524,
+        "delta_position": -0.9
       },
       {
-        "page": "https://bm-klus-bv.nl/muren-stucen/",
+        "page": "https://bm-klus-bv.nl/gevelisolatie/delft/",
         "current": {
           "clicks": 1,
-          "impressions": 1295,
-          "ctr": 0.0008,
-          "position": 28.8
+          "impressions": 192,
+          "ctr": 0.0052,
+          "position": 33.5
         },
         "previous": {
           "clicks": 0,
-          "impressions": 1380,
+          "impressions": 101,
           "ctr": 0,
-          "position": 31.9
+          "position": 35.2
         },
         "delta_clicks": 1,
-        "delta_impressions": -85,
-        "delta_position": -3.1
+        "delta_impressions": 91,
+        "delta_position": -1.7
       },
       {
-        "page": "https://bm-klus-bv.nl/onze-werken/",
+        "page": "https://bm-klus-bv.nl/gevelisolatie/leiden/",
         "current": {
           "clicks": 1,
-          "impressions": 228,
-          "ctr": 0.0044,
-          "position": 7.0
+          "impressions": 84,
+          "ctr": 0.0119,
+          "position": 9.2
         },
         "previous": {
-          "clicks": 1,
-          "impressions": 151,
-          "ctr": 0.0066,
-          "position": 6.5
-        },
-        "delta_clicks": 0,
-        "delta_impressions": 77,
-        "delta_position": 0.5
-      },
-      {
-        "page": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
-        "current": {
-          "clicks": 1,
-          "impressions": 12,
-          "ctr": 0.0833,
-          "position": 8.2
-        },
-        "previous": {
-          "clicks": 0,
-          "impressions": 31,
-          "ctr": 0,
-          "position": 8.8
-        },
-        "delta_clicks": 1,
-        "delta_impressions": -19,
-        "delta_position": -0.6
-      },
-      {
-        "page": "https://bm-klus-bv.nl/sierpleister/",
-        "current": {
-          "clicks": 1,
-          "impressions": 124,
-          "ctr": 0.0081,
-          "position": 13.9
-        },
-        "previous": {
-          "clicks": 4,
-          "impressions": 160,
-          "ctr": 0.025,
-          "position": 14.5
-        },
-        "delta_clicks": -3,
-        "delta_impressions": -36,
-        "delta_position": -0.6
-      },
-      {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/alphen-aan-den-rijn/",
-        "current": {
           "clicks": 0,
           "impressions": 11,
           "ctr": 0,
-          "position": 28.7
+          "position": 11
+        },
+        "delta_clicks": 1,
+        "delta_impressions": 73,
+        "delta_position": -1.8
+      },
+      {
+        "page": "https://bm-klus-bv.nl/gevelisolatie/maassluis/",
+        "current": {
+          "clicks": 1,
+          "impressions": 2,
+          "ctr": 0.5,
+          "position": 3
         },
         "previous": {
           "clicks": 0,
@@ -638,27 +566,135 @@
           "ctr": 0,
           "position": 0
         },
+        "delta_clicks": 1,
+        "delta_impressions": 2,
+        "delta_position": 3
+      },
+      {
+        "page": "https://bm-klus-bv.nl/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/",
+        "current": {
+          "clicks": 1,
+          "impressions": 5,
+          "ctr": 0.2,
+          "position": 28.2
+        },
+        "previous": {
+          "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        },
+        "delta_clicks": 1,
+        "delta_impressions": 5,
+        "delta_position": 28.2
+      },
+      {
+        "page": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
+        "current": {
+          "clicks": 1,
+          "impressions": 27,
+          "ctr": 0.037,
+          "position": 6.8
+        },
+        "previous": {
+          "clicks": 1,
+          "impressions": 13,
+          "ctr": 0.0769,
+          "position": 8.6
+        },
         "delta_clicks": 0,
-        "delta_impressions": 11,
-        "delta_position": 28.7
+        "delta_impressions": 14,
+        "delta_position": -1.8
+      },
+      {
+        "page": "https://bm-klus-bv.nl/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
+        "current": {
+          "clicks": 1,
+          "impressions": 15,
+          "ctr": 0.0667,
+          "position": 7
+        },
+        "previous": {
+          "clicks": 0,
+          "impressions": 19,
+          "ctr": 0,
+          "position": 8.5
+        },
+        "delta_clicks": 1,
+        "delta_impressions": -4,
+        "delta_position": -1.5
+      },
+      {
+        "page": "https://bm-klus-bv.nl/contact/",
+        "current": {
+          "clicks": 0,
+          "impressions": 108,
+          "ctr": 0,
+          "position": 6.0
+        },
+        "previous": {
+          "clicks": 4,
+          "impressions": 169,
+          "ctr": 0.0237,
+          "position": 2.7
+        },
+        "delta_clicks": -4,
+        "delta_impressions": -61,
+        "delta_position": 3.3
+      },
+      {
+        "page": "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/",
+        "current": {
+          "clicks": 0,
+          "impressions": 87,
+          "ctr": 0,
+          "position": 13.8
+        },
+        "previous": {
+          "clicks": 1,
+          "impressions": 102,
+          "ctr": 0.0098,
+          "position": 13.2
+        },
+        "delta_clicks": -1,
+        "delta_impressions": -15,
+        "delta_position": 0.6
+      },
+      {
+        "page": "https://bm-klus-bv.nl/gevelisolatie/alphen-aan-den-rijn/",
+        "current": {
+          "clicks": 0,
+          "impressions": 36,
+          "ctr": 0,
+          "position": 23.4
+        },
+        "previous": {
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 28.7
+        },
+        "delta_clicks": 0,
+        "delta_impressions": 25,
+        "delta_position": -5.3
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/barendrecht/",
         "current": {
           "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 5.5
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 2,
           "ctr": 0,
           "position": 3.5
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 6,
-          "ctr": 0,
-          "position": 7.5
-        },
         "delta_clicks": 0,
-        "delta_impressions": -4,
-        "delta_position": -4.0
+        "delta_impressions": 2,
+        "delta_position": 2.0
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/bergen-op-zoom/",
@@ -666,35 +702,35 @@
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 8
+          "position": 7
         },
         "previous": {
-          "clicks": 1,
-          "impressions": 4,
-          "ctr": 0.25,
-          "position": 5
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 8
         },
-        "delta_clicks": -1,
-        "delta_impressions": -3,
-        "delta_position": 3
+        "delta_clicks": 0,
+        "delta_impressions": 0,
+        "delta_position": -1
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/breda/",
         "current": {
           "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 2.5
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 8,
           "ctr": 0,
           "position": 7.2
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 6,
-          "ctr": 0,
-          "position": 4
-        },
         "delta_clicks": 0,
-        "delta_impressions": 2,
-        "delta_position": 3.2
+        "delta_impressions": -4,
+        "delta_position": -4.7
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/capelle-aan-den-ijssel/",
@@ -702,71 +738,17 @@
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 4
-        },
-        "previous": {
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 10.5
-        },
-        "delta_clicks": 0,
-        "delta_impressions": -1,
-        "delta_position": -6.5
-      },
-      {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/delft/",
-        "current": {
-          "clicks": 0,
-          "impressions": 101,
-          "ctr": 0,
-          "position": 35.2
-        },
-        "previous": {
-          "clicks": 0,
-          "impressions": 0,
-          "ctr": 0,
-          "position": 0
-        },
-        "delta_clicks": 0,
-        "delta_impressions": 101,
-        "delta_position": 35.2
-      },
-      {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/den-haag/",
-        "current": {
-          "clicks": 0,
-          "impressions": 12,
-          "ctr": 0,
-          "position": 8.9
+          "position": 1
         },
         "previous": {
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 8
+          "position": 4
         },
         "delta_clicks": 0,
-        "delta_impressions": 11,
-        "delta_position": 0.9
-      },
-      {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/dordrecht/",
-        "current": {
-          "clicks": 0,
-          "impressions": 0,
-          "ctr": 0,
-          "position": 0
-        },
-        "previous": {
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 18.5
-        },
-        "delta_clicks": 0,
-        "delta_impressions": -2,
-        "delta_position": -18.5
+        "delta_impressions": 0,
+        "delta_position": -3
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/gouda/",
@@ -774,107 +756,89 @@
           "clicks": 0,
           "impressions": 3,
           "ctr": 0,
-          "position": 13.3
+          "position": 10.3
         },
         "previous": {
           "clicks": 0,
-          "impressions": 1,
+          "impressions": 3,
           "ctr": 0,
-          "position": 11
+          "position": 13.3
         },
         "delta_clicks": 0,
-        "delta_impressions": 2,
-        "delta_position": 2.3
+        "delta_impressions": 0,
+        "delta_position": -3.0
       },
       {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/hellevoetsluis/",
+        "page": "https://bm-klus-bv.nl/gevelisolatie/hendrik-ido-ambacht/",
         "current": {
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 4
+        },
+        "previous": {
           "clicks": 0,
           "impressions": 0,
           "ctr": 0,
           "position": 0
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 1
-        },
         "delta_clicks": 0,
-        "delta_impressions": -1,
-        "delta_position": -1
+        "delta_impressions": 2,
+        "delta_position": 4
       },
       {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/leiden/",
+        "page": "https://bm-klus-bv.nl/gevelisolatie/kosten/",
         "current": {
           "clicks": 0,
-          "impressions": 11,
+          "impressions": 165,
           "ctr": 0,
-          "position": 11
+          "position": 18.1
         },
         "previous": {
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 8.5
+          "clicks": 2,
+          "impressions": 282,
+          "ctr": 0.0071,
+          "position": 25.2
         },
-        "delta_clicks": 0,
-        "delta_impressions": 9,
-        "delta_position": 2.5
+        "delta_clicks": -2,
+        "delta_impressions": -117,
+        "delta_position": -7.1
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/leidschendam-voorburg/",
         "current": {
           "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 16.5
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 22,
           "ctr": 0,
           "position": 16.2
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 6,
-          "ctr": 0,
-          "position": 11.7
-        },
         "delta_clicks": 0,
-        "delta_impressions": 16,
-        "delta_position": 4.5
-      },
-      {
-        "page": "https://bm-klus-bv.nl/gevelisolatie/maassluis/",
-        "current": {
-          "clicks": 0,
-          "impressions": 0,
-          "ctr": 0,
-          "position": 0
-        },
-        "previous": {
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 6
-        },
-        "delta_clicks": 0,
-        "delta_impressions": -1,
-        "delta_position": -6
+        "delta_impressions": -12,
+        "delta_position": 0.3
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/materialen/",
         "current": {
           "clicks": 0,
-          "impressions": 11,
-          "ctr": 0,
-          "position": 34.5
-        },
-        "previous": {
-          "clicks": 0,
           "impressions": 0,
           "ctr": 0,
           "position": 0
         },
+        "previous": {
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 34.5
+        },
         "delta_clicks": 0,
-        "delta_impressions": 11,
-        "delta_position": 34.5
+        "delta_impressions": -11,
+        "delta_position": -34.5
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/rc-waarde-dikte/",
@@ -886,31 +850,31 @@
         },
         "previous": {
           "clicks": 0,
-          "impressions": 95,
+          "impressions": 1,
           "ctr": 0,
-          "position": 7.6
+          "position": 80
         },
         "delta_clicks": 0,
-        "delta_impressions": -95,
-        "delta_position": -7.6
+        "delta_impressions": -1,
+        "delta_position": -80
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/ridderkerk/",
         "current": {
           "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 1,
           "ctr": 0,
           "position": 7
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 8
-        },
         "delta_clicks": 0,
         "delta_impressions": -1,
-        "delta_position": -1
+        "delta_position": -7
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
@@ -918,205 +882,259 @@
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 1
+          "position": 6
         },
         "previous": {
           "clicks": 0,
-          "impressions": 2,
+          "impressions": 1,
           "ctr": 0,
-          "position": 9
+          "position": 1
         },
         "delta_clicks": 0,
-        "delta_impressions": -1,
-        "delta_position": -8
+        "delta_impressions": 0,
+        "delta_position": 5
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/rotterdam/",
         "current": {
           "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 1.8
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 13,
           "ctr": 0,
           "position": 3.6
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 0,
-          "ctr": 0,
-          "position": 0
-        },
         "delta_clicks": 0,
-        "delta_impressions": 13,
-        "delta_position": 3.6
+        "delta_impressions": -9,
+        "delta_position": -1.8
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/schiedam/",
         "current": {
           "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 28
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 5,
           "ctr": 0,
           "position": 12.6
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 0,
-          "ctr": 0,
-          "position": 0
-        },
         "delta_clicks": 0,
-        "delta_impressions": 5,
-        "delta_position": 12.6
+        "delta_impressions": -1,
+        "delta_position": 15.4
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/spijkenisse/",
         "current": {
           "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 10
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 2,
           "ctr": 0,
           "position": 4.5
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 0,
-          "ctr": 0,
-          "position": 0
-        },
         "delta_clicks": 0,
-        "delta_impressions": 2,
-        "delta_position": 4.5
+        "delta_impressions": -1,
+        "delta_position": 5.5
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/subsidie-vergunning/",
         "current": {
           "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 10.2
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 24,
           "ctr": 0,
           "position": 7.9
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 50,
-          "ctr": 0,
-          "position": 8.8
-        },
         "delta_clicks": 0,
-        "delta_impressions": -26,
-        "delta_position": -0.9
+        "delta_impressions": -10,
+        "delta_position": 2.3
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/vlaardingen/",
         "current": {
           "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 3
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 3,
           "ctr": 0,
           "position": 25.3
         },
-        "previous": {
-          "clicks": 1,
-          "impressions": 3,
-          "ctr": 0.3333,
-          "position": 21
-        },
-        "delta_clicks": -1,
-        "delta_impressions": 0,
-        "delta_position": 4.3
+        "delta_clicks": 0,
+        "delta_impressions": -2,
+        "delta_position": -22.3
       },
       {
         "page": "https://bm-klus-bv.nl/gevelisolatie/zoetermeer/",
         "current": {
           "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 3
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 3,
           "ctr": 0,
           "position": 5
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 0,
-          "ctr": 0,
-          "position": 0
-        },
         "delta_clicks": 0,
-        "delta_impressions": 3,
-        "delta_position": 5
+        "delta_impressions": -2,
+        "delta_position": -2
+      },
+      {
+        "page": "https://bm-klus-bv.nl/muren-stucen/",
+        "current": {
+          "clicks": 0,
+          "impressions": 1244,
+          "ctr": 0,
+          "position": 26.0
+        },
+        "previous": {
+          "clicks": 1,
+          "impressions": 1340,
+          "ctr": 0.0007,
+          "position": 28.9
+        },
+        "delta_clicks": -1,
+        "delta_impressions": -96,
+        "delta_position": -2.9
+      },
+      {
+        "page": "https://bm-klus-bv.nl/onze-werken/",
+        "current": {
+          "clicks": 0,
+          "impressions": 140,
+          "ctr": 0,
+          "position": 6.9
+        },
+        "previous": {
+          "clicks": 1,
+          "impressions": 231,
+          "ctr": 0.0043,
+          "position": 7.0
+        },
+        "delta_clicks": -1,
+        "delta_impressions": -91,
+        "delta_position": -0.1
       },
       {
         "page": "https://bm-klus-bv.nl/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
         "current": {
           "clicks": 0,
-          "impressions": 1,
+          "impressions": 0,
           "ctr": 0,
-          "position": 2
+          "position": 0
         },
         "previous": {
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 56
+          "position": 2
         },
         "delta_clicks": 0,
-        "delta_impressions": 0,
-        "delta_position": -54
+        "delta_impressions": -1,
+        "delta_position": -2
       },
       {
         "page": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
         "current": {
           "clicks": 0,
-          "impressions": 16,
+          "impressions": 14,
           "ctr": 0,
-          "position": 10.1
+          "position": 7.5
         },
         "previous": {
           "clicks": 0,
           "impressions": 19,
           "ctr": 0,
-          "position": 9.2
+          "position": 9.1
         },
         "delta_clicks": 0,
-        "delta_impressions": -3,
-        "delta_position": 0.9
+        "delta_impressions": -5,
+        "delta_position": -1.6
       },
       {
         "page": "https://bm-klus-bv.nl/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
         "current": {
           "clicks": 0,
-          "impressions": 51,
+          "impressions": 47,
           "ctr": 0,
-          "position": 17.5
+          "position": 9.3
         },
         "previous": {
           "clicks": 0,
-          "impressions": 61,
+          "impressions": 54,
           "ctr": 0,
-          "position": 14.8
+          "position": 17.0
         },
         "delta_clicks": 0,
-        "delta_impressions": -10,
-        "delta_position": 2.7
+        "delta_impressions": -7,
+        "delta_position": -7.7
       },
       {
         "page": "https://bm-klus-bv.nl/onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/",
         "current": {
           "clicks": 0,
-          "impressions": 10,
-          "ctr": 0,
-          "position": 6
-        },
-        "previous": {
-          "clicks": 0,
           "impressions": 0,
           "ctr": 0,
           "position": 0
         },
+        "previous": {
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 6
+        },
         "delta_clicks": 0,
-        "delta_impressions": 10,
-        "delta_position": 6
+        "delta_impressions": -10,
+        "delta_position": -6
       },
       {
         "page": "https://bm-klus-bv.nl/onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/",
         "current": {
           "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 1,
           "ctr": 0,
           "position": 9
+        },
+        "delta_clicks": 0,
+        "delta_impressions": -1,
+        "delta_position": -9
+      },
+      {
+        "page": "https://bm-klus-bv.nl/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
+        "current": {
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 10
         },
         "previous": {
           "clicks": 0,
@@ -1126,217 +1144,193 @@
         },
         "delta_clicks": 0,
         "delta_impressions": 1,
-        "delta_position": 9
-      },
-      {
-        "page": "https://bm-klus-bv.nl/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/",
-        "current": {
-          "clicks": 0,
-          "impressions": 0,
-          "ctr": 0,
-          "position": 0
-        },
-        "previous": {
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 16
-        },
-        "delta_clicks": 0,
-        "delta_impressions": -1,
-        "delta_position": -16
-      },
-      {
-        "page": "https://bm-klus-bv.nl/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
-        "current": {
-          "clicks": 0,
-          "impressions": 19,
-          "ctr": 0,
-          "position": 8.5
-        },
-        "previous": {
-          "clicks": 0,
-          "impressions": 10,
-          "ctr": 0,
-          "position": 9.8
-        },
-        "delta_clicks": 0,
-        "delta_impressions": 9,
-        "delta_position": -1.3
+        "delta_position": 10
       },
       {
         "page": "https://bm-klus-bv.nl/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/",
         "current": {
           "clicks": 0,
-          "impressions": 4,
-          "ctr": 0,
-          "position": 8.5
-        },
-        "previous": {
-          "clicks": 0,
           "impressions": 0,
           "ctr": 0,
           "position": 0
         },
+        "previous": {
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 8.5
+        },
         "delta_clicks": 0,
-        "delta_impressions": 4,
-        "delta_position": 8.5
+        "delta_impressions": -4,
+        "delta_position": -8.5
       },
       {
         "page": "https://bm-klus-bv.nl/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/",
         "current": {
           "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 5
-        },
-        "previous": {
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 31
-        },
-        "delta_clicks": 0,
-        "delta_impressions": 1,
-        "delta_position": -26
-      },
-      {
-        "page": "https://bm-klus-bv.nl/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/",
-        "current": {
-          "clicks": 0,
           "impressions": 0,
           "ctr": 0,
           "position": 0
         },
         "previous": {
           "clicks": 0,
-          "impressions": 1,
+          "impressions": 2,
           "ctr": 0,
-          "position": 49
+          "position": 5
         },
         "delta_clicks": 0,
-        "delta_impressions": -1,
-        "delta_position": -49
+        "delta_impressions": -2,
+        "delta_position": -5
       },
       {
         "page": "https://bm-klus-bv.nl/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/",
         "current": {
           "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 9.8
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 2,
           "ctr": 0,
           "position": 16
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 14.3
-        },
         "delta_clicks": 0,
-        "delta_impressions": -1,
-        "delta_position": 1.7
+        "delta_impressions": 2,
+        "delta_position": -6.2
+      },
+      {
+        "page": "https://bm-klus-bv.nl/over-ons/",
+        "current": {
+          "clicks": 0,
+          "impressions": 124,
+          "ctr": 0,
+          "position": 8.8
+        },
+        "previous": {
+          "clicks": 4,
+          "impressions": 196,
+          "ctr": 0.0204,
+          "position": 4.4
+        },
+        "delta_clicks": -4,
+        "delta_impressions": -72,
+        "delta_position": 4.4
       },
       {
         "page": "https://bm-klus-bv.nl/privacybeleid/",
         "current": {
           "clicks": 0,
+          "impressions": 17,
+          "ctr": 0,
+          "position": 17.9
+        },
+        "previous": {
+          "clicks": 0,
           "impressions": 22,
           "ctr": 0,
           "position": 6.6
         },
-        "previous": {
-          "clicks": 0,
-          "impressions": 27,
-          "ctr": 0,
-          "position": 6.8
-        },
         "delta_clicks": 0,
         "delta_impressions": -5,
-        "delta_position": -0.2
+        "delta_position": 11.3
       }
     ]
   },
   "ga4_landing_pages": {
     "date_range": {
-      "start": "2026-06-21",
-      "end": "2026-07-18"
+      "start": "2026-07-18",
+      "end": "2026-08-14"
     },
-    "row_count": 15,
+    "row_count": 19,
     "rows": [
       {
         "landingPagePlusQueryString": "/",
-        "sessions": "94",
-        "engagedSessions": "70",
-        "engagementRate": "0.74468085106382975"
-      },
-      {
-        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
-        "sessions": "52",
-        "engagedSessions": "33",
-        "engagementRate": "0.63461538461538458"
-      },
-      {
-        "landingPagePlusQueryString": "/gevelisolatie/",
-        "sessions": "36",
-        "engagedSessions": "25",
-        "engagementRate": "0.69444444444444442"
-      },
-      {
-        "landingPagePlusQueryString": "(not set)",
-        "sessions": "18",
-        "engagedSessions": "1",
-        "engagementRate": "0.055555555555555552"
-      },
-      {
-        "landingPagePlusQueryString": "/gevelisolatie/kosten/",
-        "sessions": "11",
-        "engagedSessions": "6",
-        "engagementRate": "0.54545454545454541"
-      },
-      {
-        "landingPagePlusQueryString": "/over-ons/",
-        "sessions": "6",
-        "engagedSessions": "3",
-        "engagementRate": "0.5"
-      },
-      {
-        "landingPagePlusQueryString": "/onze-werken/",
-        "sessions": "4",
-        "engagedSessions": "3",
-        "engagementRate": "0.75"
+        "sessions": "48",
+        "engagedSessions": "37",
+        "engagementRate": "0.77083333333333337"
       },
       {
         "landingPagePlusQueryString": "/buiten-stucwerk/",
-        "sessions": "3",
+        "sessions": "44",
+        "engagedSessions": "29",
+        "engagementRate": "0.65909090909090906"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "sessions": "26",
+        "engagedSessions": "14",
+        "engagementRate": "0.53846153846153844"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/",
+        "sessions": "21",
+        "engagedSessions": "17",
+        "engagementRate": "0.80952380952380953"
+      },
+      {
+        "landingPagePlusQueryString": "/gevel-schilderen/",
+        "sessions": "14",
         "engagedSessions": "3",
-        "engagementRate": "1"
+        "engagementRate": "0.21428571428571427"
       },
       {
-        "landingPagePlusQueryString": "/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
-        "sessions": "3",
-        "engagedSessions": "1",
-        "engagementRate": "0.33333333333333331"
+        "landingPagePlusQueryString": "(not set)",
+        "sessions": "11",
+        "engagedSessions": "2",
+        "engagementRate": "0.18181818181818182"
       },
       {
-        "landingPagePlusQueryString": "/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/",
-        "sessions": "3",
-        "engagedSessions": "1",
-        "engagementRate": "0.33333333333333331"
+        "landingPagePlusQueryString": "/onze-werken/",
+        "sessions": "10",
+        "engagedSessions": "4",
+        "engagementRate": "0.4"
       },
       {
-        "landingPagePlusQueryString": "/sierpleister/",
+        "landingPagePlusQueryString": "",
+        "sessions": "7",
+        "engagedSessions": "0",
+        "engagementRate": "0"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/",
         "sessions": "3",
         "engagedSessions": "0",
         "engagementRate": "0"
       },
       {
-        "landingPagePlusQueryString": "/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/",
+        "landingPagePlusQueryString": "/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
+        "sessions": "3",
+        "engagedSessions": "2",
+        "engagementRate": "0.66666666666666663"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/kosten/",
+        "sessions": "2",
+        "engagedSessions": "2",
+        "engagementRate": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/leiden/",
+        "sessions": "2",
+        "engagedSessions": "2",
+        "engagementRate": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/sierpleister/",
         "sessions": "2",
         "engagedSessions": "1",
         "engagementRate": "0.5"
       },
       {
-        "landingPagePlusQueryString": "/contact/",
+        "landingPagePlusQueryString": "/diensten/",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/maassluis/",
         "sessions": "1",
         "engagedSessions": "1",
         "engagementRate": "1"
@@ -1344,33 +1338,75 @@
       {
         "landingPagePlusQueryString": "/muren-stucen/",
         "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/",
+        "sessions": "1",
+        "engagedSessions": "1",
+        "engagementRate": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/",
+        "sessions": "1",
         "engagedSessions": "0",
         "engagementRate": "0"
       },
       {
-        "landingPagePlusQueryString": "/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
+        "landingPagePlusQueryString": "/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/",
         "sessions": "1",
-        "engagedSessions": "1",
-        "engagementRate": "1"
+        "engagedSessions": "0",
+        "engagementRate": "0"
       }
     ]
   },
   "ga4_key_events_by_page": {
     "date_range": {
-      "start": "2026-06-21",
-      "end": "2026-07-18"
+      "start": "2026-07-18",
+      "end": "2026-08-14"
     },
     "key_events_tracked": [
       "Contact_Form_Site",
       "Phone",
       "Whatsapp"
     ],
-    "row_count": 3,
+    "row_count": 11,
     "rows": [
       {
-        "landingPagePlusQueryString": "/",
+        "landingPagePlusQueryString": "/buiten-stucwerk/",
+        "eventName": "Contact_Form_Site",
+        "eventCount": "3"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/",
+        "eventName": "Contact_Form_Site",
+        "eventCount": "3"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/",
         "eventName": "Whatsapp",
+        "eventCount": "3"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "eventName": "Contact_Form_Site",
         "eventCount": "2"
+      },
+      {
+        "landingPagePlusQueryString": "/gevelisolatie/afwerkingen/",
+        "eventName": "Phone",
+        "eventCount": "2"
+      },
+      {
+        "landingPagePlusQueryString": "(not set)",
+        "eventName": "Contact_Form_Site",
+        "eventCount": "1"
+      },
+      {
+        "landingPagePlusQueryString": "(not set)",
+        "eventName": "Whatsapp",
+        "eventCount": "1"
       },
       {
         "landingPagePlusQueryString": "/",
@@ -1378,42 +1414,58 @@
         "eventCount": "1"
       },
       {
-        "landingPagePlusQueryString": "/gevelisolatie/",
+        "landingPagePlusQueryString": "/",
+        "eventName": "Phone",
+        "eventCount": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/",
         "eventName": "Whatsapp",
+        "eventCount": "1"
+      },
+      {
+        "landingPagePlusQueryString": "/muren-stucen/",
+        "eventName": "Contact_Form_Site",
         "eventCount": "1"
       }
     ]
   },
   "ga4_traffic_acquisition": {
     "date_range": {
-      "start": "2026-06-21",
-      "end": "2026-07-18"
+      "start": "2026-07-18",
+      "end": "2026-08-14"
     },
-    "row_count": 6,
+    "row_count": 8,
     "rows": [
       {
-        "sessionSourceMedium": "google / organic",
-        "sessions": "103",
-        "engagedSessions": "69",
-        "engagementRate": "0.66990291262135926"
+        "sessionSourceMedium": "google / cpc",
+        "sessions": "89",
+        "engagedSessions": "55",
+        "engagementRate": "0.6179775280898876"
       },
       {
-        "sessionSourceMedium": "google / cpc",
-        "sessions": "101",
-        "engagedSessions": "60",
-        "engagementRate": "0.594059405940594"
+        "sessionSourceMedium": "google / organic",
+        "sessions": "65",
+        "engagedSessions": "45",
+        "engagementRate": "0.69230769230769229"
       },
       {
         "sessionSourceMedium": "(direct) / (none)",
         "sessions": "24",
-        "engagedSessions": "15",
-        "engagementRate": "0.625"
+        "engagedSessions": "11",
+        "engagementRate": "0.45833333333333331"
       },
       {
-        "sessionSourceMedium": "bing / organic",
-        "sessions": "7",
-        "engagedSessions": "4",
-        "engagementRate": "0.5714285714285714"
+        "sessionSourceMedium": "(not set)",
+        "sessions": "12",
+        "engagedSessions": "0",
+        "engagementRate": "0"
+      },
+      {
+        "sessionSourceMedium": "duckduckgo / organic",
+        "sessions": "4",
+        "engagedSessions": "3",
+        "engagementRate": "0.75"
       },
       {
         "sessionSourceMedium": "(data not available)",
@@ -1422,133 +1474,139 @@
         "engagementRate": "0.5"
       },
       {
-        "sessionSourceMedium": "(not set)",
+        "sessionSourceMedium": "bing / organic",
+        "sessions": "2",
+        "engagedSessions": "1",
+        "engagementRate": "0.5"
+      },
+      {
+        "sessionSourceMedium": "chatgpt.com / ai-assistant",
         "sessions": "1",
-        "engagedSessions": "0",
-        "engagementRate": "0"
+        "engagedSessions": "1",
+        "engagementRate": "1"
       }
     ]
   },
   "ga4_daily_sessions": {
     "date_range": {
-      "start": "2026-06-21",
-      "end": "2026-07-18"
+      "start": "2026-07-18",
+      "end": "2026-08-14"
     },
     "row_count": 28,
     "rows": [
       {
-        "date": "20260624",
-        "sessions": "18"
-      },
-      {
-        "date": "20260708",
-        "sessions": "16"
-      },
-      {
-        "date": "20260706",
+        "date": "20260727",
         "sessions": "14"
       },
       {
-        "date": "20260625",
+        "date": "20260728",
+        "sessions": "14"
+      },
+      {
+        "date": "20260814",
+        "sessions": "14"
+      },
+      {
+        "date": "20260719",
         "sessions": "12"
       },
       {
-        "date": "20260704",
-        "sessions": "12"
-      },
-      {
-        "date": "20260709",
+        "date": "20260803",
         "sessions": "11"
       },
       {
-        "date": "20260716",
-        "sessions": "11"
-      },
-      {
-        "date": "20260707",
+        "date": "20260724",
         "sessions": "10"
       },
       {
-        "date": "20260702",
-        "sessions": "9"
-      },
-      {
-        "date": "20260712",
-        "sessions": "9"
-      },
-      {
-        "date": "20260714",
-        "sessions": "9"
-      },
-      {
-        "date": "20260715",
-        "sessions": "9"
-      },
-      {
-        "date": "20260623",
+        "date": "20260720",
         "sessions": "8"
       },
       {
-        "date": "20260710",
+        "date": "20260723",
         "sessions": "8"
       },
       {
-        "date": "20260713",
+        "date": "20260729",
         "sessions": "8"
       },
       {
-        "date": "20260621",
+        "date": "20260804",
+        "sessions": "8"
+      },
+      {
+        "date": "20260725",
         "sessions": "7"
       },
       {
-        "date": "20260626",
+        "date": "20260807",
         "sessions": "7"
       },
       {
-        "date": "20260628",
+        "date": "20260810",
         "sessions": "7"
       },
       {
-        "date": "20260629",
-        "sessions": "7"
-      },
-      {
-        "date": "20260703",
-        "sessions": "7"
-      },
-      {
-        "date": "20260711",
-        "sessions": "7"
-      },
-      {
-        "date": "20260630",
+        "date": "20260721",
         "sessions": "6"
       },
       {
-        "date": "20260701",
+        "date": "20260730",
+        "sessions": "6"
+      },
+      {
+        "date": "20260805",
+        "sessions": "6"
+      },
+      {
+        "date": "20260811",
+        "sessions": "6"
+      },
+      {
+        "date": "20260726",
         "sessions": "5"
       },
       {
-        "date": "20260705",
+        "date": "20260731",
         "sessions": "5"
       },
       {
-        "date": "20260622",
-        "sessions": "4"
+        "date": "20260806",
+        "sessions": "5"
       },
       {
-        "date": "20260627",
-        "sessions": "4"
+        "date": "20260808",
+        "sessions": "5"
       },
       {
-        "date": "20260717",
-        "sessions": "4"
+        "date": "20260813",
+        "sessions": "5"
       },
       {
         "date": "20260718",
         "sessions": "4"
+      },
+      {
+        "date": "20260722",
+        "sessions": "4"
+      },
+      {
+        "date": "20260801",
+        "sessions": "4"
+      },
+      {
+        "date": "20260812",
+        "sessions": "2"
+      },
+      {
+        "date": "20260802",
+        "sessions": "1"
+      },
+      {
+        "date": "20260809",
+        "sessions": "1"
       }
     ]
   },
-  "_generated_at": "2026-07-19T16:07:21.926149Z"
+  "_generated_at": "2026-08-15T07:53:01.246057Z"
 }
