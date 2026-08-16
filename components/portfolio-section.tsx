@@ -4,6 +4,14 @@ import ResponsiveImage from "@/components/responsive-image"
 
 const projects = [
   {
+    id: "delft-willemstraat-gevelrenovatie-schilderwerk-2026",
+    baseName: "delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-01",
+    city: "Delft",
+    service: "Gevelherstel, schilderwerk & Keralit",
+    highlight: "Dubbele wapening + RAL 9001 + nieuwe Keralit geveldelen",
+    href: "/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/",
+  },
+  {
     id: "etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026",
     baseName: "etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-na-01",
     city: "Etten-Leur",
@@ -26,14 +34,6 @@ const projects = [
     service: "Gevelisolatie 6 cm & sierpleister",
     highlight: "Strikolith isolatie + profielafwerking",
     href: "/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
-  },
-  {
-    id: "etten-leur-gevelisolatie-10cm-2025",
-    baseName: "etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-01",
-    city: "Etten-Leur",
-    service: "Gevelisolatie 10 cm & RAL 9010",
-    highlight: "Volledige gevelisolatie + schilderwerk",
-    href: "/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
   },
 ]
 

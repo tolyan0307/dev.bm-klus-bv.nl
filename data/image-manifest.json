@@ -1091,6 +1091,307 @@
       1920
     ]
   },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-01": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      640,
+      768,
+      800,
+      828,
+      1200,
+      1280
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-02": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-03": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-04": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-05": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-06": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-07": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-01": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-02": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-03": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-04": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-05": {
+    "originalWidth": 1080,
+    "originalHeight": 1920,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      216,
+      259,
+      350,
+      583
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-06": {
+    "originalWidth": 1080,
+    "originalHeight": 1920,
+    "aspectRatio": 0.563,
+    "variants": [
+      160,
+      240,
+      288,
+      350,
+      583
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-07": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      432,
+      583,
+      875
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-08": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-09": {
+    "originalWidth": 1200,
+    "originalHeight": 1600,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-10": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-11": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-12": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-13": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-14": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-15": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-16": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
   "projects/dordrecht-gevelisolatie-10cm-na-01": {
     "originalWidth": 2000,
     "originalHeight": 1500,

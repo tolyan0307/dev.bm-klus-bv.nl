@@ -4,6 +4,32 @@ import type { ProjectCard } from "@/lib/types/projects"
 // 7 Klaaswaal, 8 Rotterdam, 9 Vlaardingen 10cm, 10 Almere, 11 Vlaardingen 6cm, 12 Rottekade, 13 Vught, 14 Katwijk
 export const projects: ProjectCard[] = [
   {
+    slug: "delft-willemstraat-gevelrenovatie-schilderwerk-2026",
+    serviceType: "Buiten-stucwerk",
+    serviceTypes: ["Buiten-stucwerk", "Gevel schilderen"],
+    title: "Delft Willemstraat – gevelherstel, schilderwerk & Keralit (2026)",
+    subtitle: "Renovatie van de zij- en achtergevel van een woning in Delft met lokaal pleisterherstel, dubbele wapening, schilderwerk in RAL 9001, vernieuwde raamdorpels, lood en donkere Keralit gevelbekleding.",
+    meta: {
+      city: "Delft (Willemstraat)",
+      objectType: "Woning",
+      highlight:
+        "Zij- en achtergevel hersteld, dubbel gewapend en geschilderd in RAL 9001, met vernieuwde raamdorpels, lood en Keralit geveldelen.",
+      year: 2026,
+    },
+    projectUrl:
+      "/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/",
+    cardAlt:
+      "Delft Willemstraat gevelrenovatie – woning na pleisterherstel en schilderwerk in RAL 9001 (2026)",
+    coverImage: {
+      src: "/images/projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-01.webp",
+      alt: "Delft Willemstraat gevelherstel en schilderwerk – na de werken foto 01 (2026)",
+    },
+    beforeThumb: {
+      src: "/images/projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-voor-01.webp",
+      alt: "Delft Willemstraat gevelherstel en schilderwerk – voor de werken foto 01 (2026)",
+    },
+  },
+  {
     slug: "etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],
