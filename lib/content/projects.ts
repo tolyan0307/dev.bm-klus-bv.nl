@@ -4,6 +4,32 @@ import type { ProjectCard } from "@/lib/types/projects"
 // 7 Klaaswaal, 8 Rotterdam, 9 Vlaardingen 10cm, 10 Almere, 11 Vlaardingen 6cm, 12 Rottekade, 13 Vught, 14 Katwijk
 export const projects: ProjectCard[] = [
   {
+    slug: "strijen-schenkeldijk-gevelisolatie-sierpleister-2026",
+    serviceType: "Gevelisolatie",
+    serviceTypes: ["Gevelisolatie", "Sierpleister", "Buiten-stucwerk"],
+    title: "Strijen Schenkeldijk – gevelisolatie, sierpleister & dakrandafwerking (2026)",
+    subtitle: "Renovatie van een woning aan de Schenkeldijk met 6 cm gevelisolatie, cementgebonden GW-Plus mortel, wapeningsnet, witte sierpleister 1,5 mm, vernieuwde raamdorpels en afgewerkte dakrandplanken.",
+    meta: {
+      city: "Strijen (Schenkeldijk)",
+      objectType: "Woning",
+      highlight:
+        "Woning vernieuwd met 6 cm gevelisolatie, cementgebonden gevelherstel, witte sierpleister en afgewerkte dakranden en raamdorpels.",
+      year: 2026,
+    },
+    projectUrl:
+      "/onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/",
+    cardAlt:
+      "Strijen Schenkeldijk gevelisolatie en witte sierpleister – woning na de werken (2026)",
+    coverImage: {
+      src: "/images/projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-01.webp",
+      alt: "Strijen Schenkeldijk gevelisolatie en sierpleister – na de werken foto 01 (2026)",
+    },
+    beforeThumb: {
+      src: "/images/projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-01.webp",
+      alt: "Strijen Schenkeldijk gevelisolatie en sierpleister – voor de werken foto 01 (2026)",
+    },
+  },
+  {
     slug: "delft-willemstraat-gevelrenovatie-schilderwerk-2026",
     serviceType: "Buiten-stucwerk",
     serviceTypes: ["Buiten-stucwerk", "Gevel schilderen"],

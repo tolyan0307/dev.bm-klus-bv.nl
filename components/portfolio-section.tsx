@@ -4,6 +4,14 @@ import ResponsiveImage from "@/components/responsive-image"
 
 const projects = [
   {
+    id: "strijen-schenkeldijk-gevelisolatie-sierpleister-2026",
+    baseName: "strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-01",
+    city: "Strijen",
+    service: "Gevelisolatie 6 cm, sierpleister & dakrandafwerking",
+    highlight: "GW-Plus gevelherstel + witte sierpleister 1,5 mm + nieuwe raamdorpels",
+    href: "/onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/",
+  },
+  {
     id: "delft-willemstraat-gevelrenovatie-schilderwerk-2026",
     baseName: "delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-01",
     city: "Delft",
@@ -26,14 +34,6 @@ const projects = [
     service: "Aanbouw isolatie 4 cm & sierpleister",
     highlight: "Isolatie + sierpleister 1,5 mm + plint antraciet",
     href: "/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
-  },
-  {
-    id: "etten-leur-gevelisolatie-6cm-2025",
-    baseName: "etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-01",
-    city: "Etten-Leur",
-    service: "Gevelisolatie 6 cm & sierpleister",
-    highlight: "Strikolith isolatie + profielafwerking",
-    href: "/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
   },
 ]
 

@@ -5246,6 +5246,304 @@
       875
     ]
   },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-01": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      432,
+      466,
+      480,
+      604,
+      691,
+      800,
+      1200,
+      1280
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-02": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-03": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-04": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      1080
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-05": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-06": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-07": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-08": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-09": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-10": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-11": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-12": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-13": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-14": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-01": {
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "aspectRatio": 1.778,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-02": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-03": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      720,
+      972
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-04": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-05": {
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "aspectRatio": 1.778,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-06": {
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "aspectRatio": 1.778,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-07": {
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "aspectRatio": 1.778,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-voor-08": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
   "projects/vlaardingen-gevelisolatie-10cm-na-01": {
     "originalWidth": 1861,
     "originalHeight": 1500,
