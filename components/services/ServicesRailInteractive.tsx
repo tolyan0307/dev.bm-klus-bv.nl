@@ -22,6 +22,8 @@ export interface ServiceItem {
   previewText: string
   keuzehulpText: string
   contactOnly?: boolean
+  /** Descriptive link text (SEO anchor); falls back to "Meer info" */
+  linkLabel?: string
 }
 
 interface Outcome {
@@ -235,7 +237,7 @@ export default function ServicesRailInteractive({ services }: { services: Servic
                           : "text-muted-foreground/70 group-hover:text-primary/70"
                       }`}
                     >
-                      {service.contactOnly ? "Contact opnemen" : "Meer info"}{" "}
+                      {service.contactOnly ? "Contact opnemen" : (service.linkLabel ?? "Meer info")}{" "}
                       <ArrowRight size={11} />
                     </Link>
                   </div>
@@ -314,7 +316,7 @@ export default function ServicesRailInteractive({ services }: { services: Servic
                     href={active.href}
                     className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-[#d46218]"
                   >
-                    {active.contactOnly ? "Contact opnemen" : "Meer info"}
+                    {active.contactOnly ? "Contact opnemen" : (active.linkLabel ?? "Meer info")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   {!active.contactOnly && (

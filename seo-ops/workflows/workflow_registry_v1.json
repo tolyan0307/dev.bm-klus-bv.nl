@@ -677,6 +677,84 @@
       "status": "active"
     },
     {
+      "workflow_id": "internal_link_audit_v1",
+      "operational_status": "experimental",
+      "type": "analysis",
+      "purpose": "Internal linking + broken link audit: live crawl of all sitemap pages, link graph with template/contextual separation, orphan pages, dead ends, weak anchors, broken/redirected internal links, dead external links",
+      "context_flags": ["verification_recommended"],
+      "script": "seo-ops/analyzers/seo/run_internal_link_audit_v1.py",
+      "run_command": "python seo-ops/analyzers/seo/run_internal_link_audit_v1.py",
+      "arguments": [
+        { "name": "--skip-external", "required": false, "description": "Skip external link status checks" },
+        { "name": "--max-external", "required": false, "default": 50, "description": "Max unique external URLs to check" }
+      ],
+      "inputs": [
+        { "source": "live_crawl", "description": "Read-only HTTP crawl of https://bm-klus-bv.nl (sitemap.xml pages + linked targets)" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/raw/crawl/internal_link_audit_v1_raw.json", "format": "json" },
+        { "path": "seo-ops/snapshots/normalized/seo/internal_link_graph_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/seo/internal_link_audit_v1_{date}.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/internal_link_audit_v1.json", "format": "json" }
+      ],
+      "scope": "All sitemap pages on the live site + every internal/external link target found on them",
+      "recommended_use": "Monthly, or after adding/removing pages, or before internal-linking content changes. Free (no API).",
+      "limitations": [
+        "Template vs contextual link separation is heuristic (>=80% page-share threshold)",
+        "Regex HTML parsing; JS-injected links not seen (static export site, low impact)",
+        "Crawls the deployed live site, not the local working tree",
+        "External checks capped per run"
+      ],
+      "freshness_sensitivity": "low — structure changes only when pages/links change",
+      "estimated_cost_usd": "free",
+      "execution_order": 19,
+      "dependencies": [],
+      "status": "active",
+      "rows_last_run": 56
+    },
+    {
+      "workflow_id": "ai_visibility_audit_v1",
+      "operational_status": "experimental",
+      "type": "external_enrichment",
+      "purpose": "AI visibility (GEO/AEO) audit: submit realistic Dutch consumer prompts to LLMs via DataForSEO AI Optimization API (LLM Responses live), detect brand mentions/citations, list domains and companies recommended instead",
+      "context_flags": ["budget_sensitive", "enrichment_only", "requires_live_api", "do_not_use_for_final_decision_alone"],
+      "script": "seo-ops/analyzers/seo/run_ai_visibility_audit_v1.py",
+      "run_command": "integrations/.venv/Scripts/python analyzers/seo/run_ai_visibility_audit_v1.py",
+      "arguments": [
+        { "name": "--dry-run", "required": false, "description": "Print plan without API calls" },
+        { "name": "--provider", "required": false, "default": "chat_gpt", "description": "chat_gpt | perplexity | gemini | claude" },
+        { "name": "--model", "required": false, "description": "Override model_name (see --list-models)" },
+        { "name": "--prompts-file", "required": false, "description": "File with one prompt per line (default: built-in 5 Dutch prompts)" },
+        { "name": "--limit", "required": false, "default": 5, "description": "Max prompts (hard limit: 8)" },
+        { "name": "--no-web-search", "required": false, "description": "Training-data-only mode (no live retrieval)" },
+        { "name": "--list-models", "required": false, "description": "List available models for provider and exit" }
+      ],
+      "inputs": [
+        { "source": "dataforseo_api", "description": "ai_optimization/{provider}/llm_responses/live endpoint" }
+      ],
+      "outputs": [
+        { "path": "seo-ops/snapshots/raw/dataforseo/ai_visibility_audit_v1_raw.json", "format": "json" },
+        { "path": "seo-ops/snapshots/normalized/dataforseo/ai_visibility_v1.json", "format": "json" },
+        { "path": "seo-ops/reports/dataforseo/ai_visibility_audit_v1_{date}.md", "format": "markdown" },
+        { "path": "seo-ops/outputs/ai_visibility_audit_v1.json", "format": "json" }
+      ],
+      "scope": "Small prompt set (default 5, max 8) against one LLM provider per run",
+      "recommended_use": "Monthly trend check, or after publishing brand-visibility content. LLM answers are stochastic — compare across runs, not within one.",
+      "limitations": [
+        "Stochastic LLM output — single run is a sample, not a measurement",
+        "One provider per run; cross-provider view needs separate runs",
+        "Company-name extraction is heuristic (B.V. pattern + cited domains)",
+        "No sentiment scoring in v1",
+        "Costs real money per prompt — respect hard limit"
+      ],
+      "freshness_sensitivity": "low — LLM answer behavior shifts over weeks/months",
+      "estimated_cost_usd": "~$0.15 for 5 prompts (gpt-4.1-mini + web search, observed 2026-09-03)",
+      "execution_order": 23,
+      "dependencies": [],
+      "status": "active",
+      "rows_last_run": 5
+    },
+    {
       "workflow_id": "local_seo_gbp_audit_v1",
       "operational_status": "secondary",
       "type": "analysis",

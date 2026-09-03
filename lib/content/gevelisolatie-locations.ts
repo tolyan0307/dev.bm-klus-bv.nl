@@ -66,7 +66,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Rotterdam biedt het Energietransitiefonds (ETF) en advies via Duurzaam 010. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In beschermde stadsgezichten (bijv. Delfshaven, Kralingen-Midden, Tuindorp Vreewijk) en bij monumenten gelden aanvullende eisen. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Veel naoorlogse woningen in Rotterdam hebben een energielabel D–F. Buitengevelisolatie kan het label met 1–3 stappen verbeteren.",
-    gemeenteWebsite: "https://www.rotterdam.nl/wonen-leven/energiebesparing/",
+    gemeenteWebsite: "https://www.rotterdam.nl/duurzaam",
     nearbyLocations: ["schiedam", "vlaardingen", "barendrecht", "ridderkerk", "capelle-aan-den-ijssel"],
   },
   {
@@ -116,7 +116,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Den Haag biedt de Energiebespaarlening (via Warmtefonds) en een gratis energie- en duurzaamheidsscan. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. Den Haag telt 21 beschermde stadsgezichten (11 rijks, 10 gemeentelijk), waaronder het Willemspark, Statenkwartier, Archipelbuurt en Benoordenhout. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Den Haag ligt aan de kust en woningen zijn hier meer blootgesteld aan wind. Goede buitengevelisolatie kan merkbaar bijdragen aan comfort en tochtklachten verminderen.",
-    gemeenteWebsite: "https://www.denhaag.nl/nl/wonen-en-bouwen/duurzaam-wonen.htm",
+    gemeenteWebsite: "https://www.denhaag.nl/nl/natuur-en-milieu/duurzaamheid/",
     nearbyLocations: ["delft", "zoetermeer", "leidschendam-voorburg", "leiden"],
   },
   {
@@ -165,7 +165,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Delft biedt de Duurzaamheidslening en gratis energieadvies voor woningeigenaren. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. Delft heeft vier beschermde stadsgezichten (Binnenstad, Nieuwe Plantage, Agnetapark en TU-Noord). Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De jaren '70-woningen in Voorhof en Buitenhof zijn gebouwd met minimale gevelisolatie. Buitengevelisolatie brengt de isolatiewaarde naar het huidige niveau — dat is direct merkbaar in wooncomfort en lagere stookkosten.",
-    gemeenteWebsite: "https://www.delft.nl/duurzaamheid",
+    gemeenteWebsite: "https://www.delft.nl/energie",
     nearbyLocations: ["den-haag", "schiedam", "zoetermeer", "leidschendam-voorburg"],
   },
   {
@@ -214,7 +214,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Dordrecht biedt de Duurzaamheidslening en het Energieloket Drechtsteden. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De historische binnenstad (eiland van Dordrecht) heeft beschermd stadsgezicht met aanvullende eisen. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Bij woningen nabij water besteden wij extra aandacht aan de onderkant van de gevel en de vochtafvoer. Wij kiezen voor een opbouw die vocht uit de muur kan laten ontsnappen, zodat de isolatie jarenlang goed blijft functioneren.",
-    gemeenteWebsite: "https://www.dordrecht.nl/duurzaamheid",
+    gemeenteWebsite: "https://cms.dordrecht.nl/Inwoners/Overzicht_Inwoners/Natuur_en_milieu/Duurzaam/Energie_in_Dordrecht",
     nearbyLocations: ["ridderkerk", "hendrik-ido-ambacht", "barendrecht", "spijkenisse"],
   },
   {
@@ -392,7 +392,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Gouda biedt de Duurzaamheidslening en het Energieloket Midden-Holland. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De binnenstad van Gouda is rijksbeschermd stadsgezicht (sinds 1978). Daarnaast is de Tuindorp Josephbuurt gemeentelijk beschermd. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De rijtjeshuizen in Goverwelle en Bloemendaal zijn gebouwd met minimale gevelisolatie. Na ETICS merkt u het verschil direct: een warmer huis in de winter en lagere stookkosten.",
-    gemeenteWebsite: "https://www.gouda.nl/duurzaamheid",
+    gemeenteWebsite: "https://maakgoudaduurzaam.nl/",
     nearbyLocations: ["zoetermeer", "alphen-aan-den-rijn", "rotterdam"],
   },
   {
@@ -441,7 +441,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Zoetermeer biedt het Zoetermeers Duurzaamheidsfonds en de Energiecoach aan huis. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In de meeste woonwijken van Zoetermeer spelen beschermde stadsgezichten geen rol, wat het vergunningsproces doorgaans eenvoudiger maakt. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Bij systeembouwwoningen letten wij op punten die typisch zijn voor dit bouwtype: koudebruggen bij balkons en galerijen, naden tussen bouwdelen en de hechting van de isolatie op de bestaande gevel. Een grondige opname vooraf voorkomt verrassingen bij de uitvoering.",
-    gemeenteWebsite: "https://www.zoetermeer.nl/duurzaamheid",
+    gemeenteWebsite: "https://www.zoetermeer.nl/duurzaam-en-groen",
     nearbyLocations: ["den-haag", "delft", "gouda", "leidschendam-voorburg", "leiden"],
   },
   {
@@ -485,7 +485,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Capelle aan den IJssel biedt een Duurzaamheidslening en werkt samen met het Energieloket. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig, omdat het uiterlijk van de gevel verandert. In de woonwijken van Capelle aan den IJssel spelen beschermde stadsgezichten geen rol, wat het vergunningsproces doorgaans eenvoudiger maakt. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Bij de grotere flatcomplexen in Capelle kan een VvE-project meerdere weken duren. Door vooraf een duidelijke planning en communicatie op te stellen zorgen wij dat de overlast voor bewoners beperkt blijft en het project soepel verloopt.",
-    gemeenteWebsite: "https://www.capelleaandenijssel.nl/duurzaamheid",
+    gemeenteWebsite: "https://www.duurzaamcapelle.nl/",
     nearbyLocations: ["rotterdam", "ridderkerk", "hendrik-ido-ambacht"],
   },
   {
@@ -769,7 +769,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Voorne aan Zee biedt advies via het Energieloket Voorne-Putten. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. De Vesting van Hellevoetsluis is sinds 1985 beschermd dorpsgezicht (68,9 ha), hier gelden aanvullende eisen. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "De rijtjeshuizen uit de jaren '70–'90 in Nieuw-Helvoet en Zuiderpark hebben doorgaans weinig tot geen gevelisolatie. Na buitengevelisolatie kan het verschil merkbaar zijn: minder tocht en een gelijkmatigere temperatuur, ook bij harde wind vanuit zee.",
-    gemeenteWebsite: "https://www.voornenaanzee.nl/duurzaamheid",
+    gemeenteWebsite: "https://www.voorneaanzee.nl/duurzaam",
     nearbyLocations: ["spijkenisse", "maassluis", "rotterdam"],
   },
   {
@@ -956,7 +956,7 @@ export const locations: LocationData[] = [
     subsidieInfo: "Gemeente Leidschendam-Voorburg biedt de Duurzaamheidslening en het Energieloket Haaglanden. Daarnaast kunt u mogelijk ISDE-subsidie aanvragen — de hoogte is afhankelijk van het aantal maatregelen en de Rd-waarde van het isolatiemateriaal. Raadpleeg rvo.nl voor actuele bedragen en voorwaarden.",
     vergunningTip: "Voor buitengevelisolatie is doorgaans een omgevingsvergunning nodig. In Voorburg zijn historische panden waarvoor aanvullende welstandseisen kunnen gelden. Controleer de actuele regels via het Omgevingsloket.",
     energieTip: "Bij de portiekflats in Leidschendam-Noord zit het warmteverlies vooral in de buitengevels — de binnenwanden tussen woningen zijn minder bepalend. Buitengevelisolatie pakt daarmee een groot deel van het energieverlies aan.",
-    gemeenteWebsite: "https://www.lv.nl/duurzaam-wonen-en-leven",
+    gemeenteWebsite: "https://www.lv.nl/duurzame-keuzes-maken",
     nearbyLocations: ["den-haag", "delft", "zoetermeer"],
   },
   {

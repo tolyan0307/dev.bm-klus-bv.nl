@@ -114,12 +114,27 @@ All Google Ads scripts write to `D:\projects\bmklus\google\outputs\`.
 | `analyzers/seo/run_dataforseo_serp_snapshot_v1.py` | Live SERP snapshot for priority queries | Enrichment | Working |
 | `analyzers/keywords/run_dataforseo_ranked_keywords_gap_v1.py` | Keyword gap: own domain vs competitors | Enrichment | Working |
 | `analyzers/keywords/run_dataforseo_question_suggestions_v1.py` | Question/suggestion keywords for content watchlist | Enrichment | Working |
+| `analyzers/seo/run_ai_visibility_audit_v1.py` | AI visibility (GEO/AEO): Dutch consumer prompts to LLMs via AI Optimization API, brand mention/citation detection | Enrichment | Working (2026-09-03, ~$0.03/prompt) |
 
 ### Integration notes
 
 - All DataForSEO workflows are **standalone enrichment**; they do not modify keyword_master or any internal pipeline artifacts.
 - Budget-sensitive: each workflow has hard limits on API calls and --dry-run support.
 - Credentials loaded from `seo-ops/integrations/.env.local`.
+
+---
+
+## Internal link audit (internal, free)
+
+**Location:** `seo-ops/analyzers/seo/run_internal_link_audit_v1.py`
+**Status:** Working (v1, first run 2026-09-03: 56 pages)
+**Runtime:** stdlib-only Python (no venv required)
+
+| Script | Purpose | Type | Status |
+|--------|---------|------|--------|
+| `analyzers/seo/run_internal_link_audit_v1.py` | Live crawl of sitemap pages: link graph (template vs contextual), orphans, dead ends, weak anchors, broken/redirected internal links, dead external links | Analyzer | Working |
+
+Registered in `workflows/workflow_registry_v1.json` as `internal_link_audit_v1` (free) and `ai_visibility_audit_v1` (budget-sensitive, requires_live_api).
 
 ---
 
