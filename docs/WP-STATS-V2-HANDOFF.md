@@ -137,6 +137,11 @@ REST GET (X-BM-Token из wp-config): /bm-stats/v1/leads, /pageviews, /summary
 
 ---
 
+### Ответы владельца (2026-09-04)
+
+- **П. 6, окружение wp-json:** WordPress не вынесен на отдельный домен, работает на том же хосте, что и публичный сайт: PROD `bm-klus-bv.nl`, DEV `dev.bm-klus-bv.nl`. Стандартные пути `/wp-admin/` и `/wp-json/` на этих же доменах. На PROD Basic Auth нет; на DEV есть как защита dev-среды. Отдельного IP-ограничения для `/wp-json/` нет; whitelist IP у Antagonist относится к SSH, не к REST API. Публичный `POST /wp-json/bm-stats/v1/pageview` на PROD должен оставаться доступным анонимным пользователям. Следствие для v2: защита эндпоинта только программная (host-check, trackable path, bot filter, rate limit по IP через transients); GET-эндпоинты для seo-ops закрываются токеном в заголовке, не сетью.
+- **П. 1–5:** ответить в новом чате перед проектированием схемы.
+
 ## 8. Две линии деплоя, не путать
 
 | Что меняется | Куда деплоить |
