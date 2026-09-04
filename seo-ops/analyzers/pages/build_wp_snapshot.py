@@ -176,12 +176,17 @@ def build_pv_daily(pv_day: dict) -> list[dict]:
     return rows
 
 
-def build_pv_path(pv_path: dict, route_map: dict) -> list[dict]:
+def build_pv_path(pv_path: dict, route_map: dict, mixed_window: bool = False) -> list[dict]:
+    """mixed_window=True when the window starts before EVENTS_SINCE: lead events cover the whole
+    window but views only part of it, so a conversion rate would be meaningless and is left empty."""
     rows = []
     for r in pv_path.get("rows", []):
         route, ptype = map_route(r["path"], route_map)
         views = r.get("views", 0)
         leads = r.get("leads", 0)
+        notes = [] if route else ["unmapped: not in page_inventory"]
+        if mixed_window:
+            notes.append(f"views only since {EVENTS_SINCE}, lead events whole window")
         rows.append({
             "path": r["path"],
             "mapped_route_guess": route,
@@ -189,8 +194,8 @@ def build_pv_path(pv_path: dict, route_map: dict) -> list[dict]:
             "views": views,
             "cta_clicks": r.get("cta", 0),
             "lead_events": leads,
-            "conversion_rate": round(leads / views, 4) if views else 0.0,
-            "notes": "" if route else "unmapped: not in page_inventory",
+            "conversion_rate": "" if mixed_window else (round(leads / views, 4) if views else 0.0),
+            "notes": "; ".join(notes),
         })
     rows.sort(key=lambda x: -x["views"])
     return rows
@@ -286,13 +291,14 @@ def write_summary(raw: dict, leads_table: list[dict], pv_daily: list[dict], pv_p
         f"| CTA clicks | {cta_total} |",
         f"| Days with events | {len(event_days)} |",
         "",
-        "### Top pages by views",
+        "### Top pages by views" + (" (conversion shown as — : views start later than lead events in this window)" if dr["start"] < EVENTS_SINCE else ""),
         "",
         "| Page | Views | CTA | Lead events | Conv. | Type |",
         "|------|-------|-----|-------------|-------|------|",
     ]
     for r in pv_path[:20]:
-        lines.append(f"| {r['path']} | {r['views']} | {r['cta_clicks']} | {r['lead_events']} | {r['conversion_rate']:.2%} | {r['mapped_page_type_guess']} |")
+        conv = f"{r['conversion_rate']:.2%}" if r['conversion_rate'] != "" else "—"
+        lines.append(f"| {r['path']} | {r['views']} | {r['cta_clicks']} | {r['lead_events']} | {conv} | {r['mapped_page_type_guess']} |")
 
     lines += ["", "### Traffic by source", "", "| Source | Views | CTA | Lead events |", "|--------|-------|-----|-------------|"]
     for r in sources:
@@ -372,7 +378,7 @@ def main() -> None:
     pv_daily = build_pv_daily(raw["pageviews_day"])
     write_csv_file(pv_daily, paths["pv_daily"], fieldnames=["date", "views", "cta_clicks", "lead_events", "events_available"])
 
-    pv_path = build_pv_path(raw["pageviews_path"], route_map)
+    pv_path = build_pv_path(raw["pageviews_path"], route_map, mixed_window=dr["start"] < EVENTS_SINCE)
     write_csv_file(pv_path, paths["pv_path"], fieldnames=["path", "mapped_route_guess", "mapped_page_type_guess", "views", "cta_clicks", "lead_events", "conversion_rate", "notes"])
 
     sources = build_sources(raw["pageviews_source"])
