@@ -147,6 +147,46 @@ def pull_key_events_by_landing_page(days: int = 90) -> dict:
     }
 
 
+def pull_key_events_by_date(days: int = 90, event_names: list[str] | None = None) -> dict:
+    """
+    Pull key events per day (for reconciliation with the WP lead log).
+    Dimensions: date, eventName. Metric: eventCount.
+    Rows: {date: 'YYYY-MM-DD', eventName, eventCount}.
+    """
+    cfg = load_ga4_config()
+    client = _get_client(cfg)
+    dr, dr_info = _date_range(days)
+    names = event_names or KEY_EVENT_NAMES
+
+    event_filter = FilterExpression(
+        filter=Filter(
+            field_name="eventName",
+            in_list_filter=Filter.InListFilter(values=names),
+        )
+    )
+    rows = _run_report(
+        client,
+        cfg.property_id,
+        dimensions=["date", "eventName"],
+        metrics=["eventCount"],
+        date_range=dr,
+        limit=10000,
+        dimension_filter=event_filter,
+    )
+    for r in rows:
+        d = r.get("date", "")
+        if len(d) == 8 and d.isdigit():
+            r["date"] = f"{d[:4]}-{d[4:6]}-{d[6:]}"
+
+    return {
+        "property_id": cfg.property_id,
+        "date_range": dr_info,
+        "event_names": names,
+        "total_rows": len(rows),
+        "rows": rows,
+    }
+
+
 if __name__ == "__main__":
     result = pull_landing_pages_by_channel(days=90)
     print(f"Pulled {result['total_rows']} landing-page+channel rows")

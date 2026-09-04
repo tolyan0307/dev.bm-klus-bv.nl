@@ -1,7 +1,7 @@
 # GSC Query/Page Snapshot Summary (last 90 days)
 
-**Generated:** 2026-08-15 08:06 UTC
-**Date range:** 2026-05-15 to 2026-08-12
+**Generated:** 2026-09-04 15:50 UTC
+**Date range:** 2026-06-04 to 2026-09-01
 **Site:** https://bm-klus-bv.nl/
 
 ---
@@ -10,11 +10,11 @@
 
 | Metric | Count |
 |--------|-------|
-| Total query-page rows | 407 |
-| Unique queries | 351 |
+| Total query-page rows | 425 |
+| Unique queries | 370 |
 | Unique pages | 28 |
-| Total clicks (all rows) | 62 |
-| Total impressions (all rows) | 10659 |
+| Total clicks (all rows) | 73 |
+| Total impressions (all rows) | 12388 |
 
 ---
 
@@ -22,51 +22,51 @@
 
 | Query | Clicks | Impressions | CTR | Best Pos | Pages |
 |-------|--------|-------------|-----|----------|-------|
-| bm klus bv | 39 | 498 | 0.0783 | 1.0 | 16 |
-| bm klus b.v. | 8 | 71 | 0.1127 | 1.0 | 9 |
-| bm klus bv reviews | 4 | 102 | 0.0392 | 1.3 | 10 |
-| gevel stucen | 2 | 186 | 0.0108 | 3.0 | 1 |
-| bm kluswerk | 1 | 23 | 0.0435 | 2.6 | 4 |
-| buiten stucwerk | 1 | 12 | 0.0833 | 25.5 | 1 |
-| etics | 1 | 39 | 0.0256 | 1.5 | 2 |
-| etics gevelisolatie | 1 | 46 | 0.0217 | 7.2 | 2 |
-| etics systeem | 1 | 100 | 0.0100 | 7.6 | 1 |
-| etics-systeem | 1 | 12 | 0.0833 | 10.4 | 1 |
-| gevelisolatie met stucwerk | 1 | 3 | 0.3333 | 13.0 | 1 |
-| klusbedrijf rotterdam | 1 | 4 | 0.2500 | 18.0 | 1 |
-| prijs gevelisolatie met steenstrips | 1 | 1 | 1.0000 | 15.0 | 1 |
-| aannemer | 0 | 2 | 0.0000 | 10.0 | 1 |
+| bm klus bv | 51 | 613 | 0.0832 | 1.1 | 14 |
+| bm klus b.v. | 9 | 94 | 0.0957 | 1.0 | 10 |
+| bm klus bv reviews | 5 | 129 | 0.0388 | 1.3 | 11 |
+| buiten stucwerk | 1 | 10 | 0.1000 | 21.8 | 1 |
+| buiten stucwerk op isolatie | 1 | 2 | 0.5000 | 1.0 | 1 |
+| buitengevel isoleren en stucen prijs | 1 | 151 | 0.0066 | 10.7 | 2 |
+| etics | 1 | 18 | 0.0556 | 1.0 | 2 |
+| etics systeem | 1 | 89 | 0.0112 | 9.2 | 1 |
+| etics-systeem | 1 | 15 | 0.0667 | 9.8 | 1 |
+| gevelisolatie met stucwerk | 1 | 4 | 0.2500 | 10.2 | 1 |
+| klusbedrijf rotterdam | 1 | 7 | 0.1429 | 17.6 | 1 |
+| aannemer | 0 | 1 | 0.0000 | 10.0 | 1 |
 | aannemer isolatiewerken denhaag | 0 | 1 | 0.0000 | 31.0 | 1 |
 | aannemer klusbedrijf | 0 | 1 | 0.0000 | 2.0 | 1 |
 | afbeelding | 0 | 1 | 0.0000 | 22.0 | 1 |
-| b m | 0 | 6 | 0.0000 | 3.8 | 1 |
+| b m | 0 | 4 | 0.0000 | 4.5 | 1 |
 | b m. | 0 | 2 | 0.0000 | 1.5 | 1 |
-| b+m | 0 | 4 | 0.0000 | 2.0 | 1 |
+| b+m | 0 | 5 | 0.0000 | 2.0 | 1 |
+| b. m. | 0 | 1 | 0.0000 | 1.0 | 1 |
+| b.m | 0 | 5 | 0.0000 | 3.4 | 1 |
 
 ## Top queries by impressions
 
 | Query | Impressions | Clicks | CTR | Best Pos |
 |-------|-------------|--------|-----|----------|
-| sausklaar stucen | 813 | 0 | 0.0000 | 19.6 |
-| sausklaar stucwerk | 708 | 0 | 0.0000 | 29.2 |
-| bm klus bv | 498 | 39 | 0.0783 | 1.0 |
-| behangklaar stucen | 435 | 0 | 0.0000 | 32.9 |
-| behangklaar stucwerk | 432 | 0 | 0.0000 | 37.3 |
-| gevelrenovatie met folie in rotterdam | 376 | 0 | 0.0000 | 20.9 |
-| gevel schilder | 308 | 0 | 0.0000 | 42.4 |
-| bm | 302 | 0 | 0.0000 | 4.2 |
-| stucwerk sausklaar | 232 | 0 | 0.0000 | 34.1 |
-| gevelrenovatie met folie in delft | 219 | 0 | 0.0000 | 36.6 |
-| gevel stucen | 186 | 2 | 0.0108 | 3.0 |
-| behangklaar wanden | 181 | 0 | 0.0000 | 49.7 |
-| sausklaar maken muren | 173 | 0 | 0.0000 | 22.5 |
-| gevel schilderen | 168 | 0 | 0.0000 | 42.6 |
-| stucen behangklaar | 160 | 0 | 0.0000 | 26.4 |
-| buitengevelisolatie | 149 | 0 | 0.0000 | 46.5 |
-| buitengevel isoleren en stucen prijs | 132 | 0 | 0.0000 | 11.0 |
-| gevel sierpleister | 124 | 0 | 0.0000 | 19.9 |
-| keimen kosten | 124 | 0 | 0.0000 | 31.5 |
-| wanden behangklaar | 124 | 0 | 0.0000 | 54.5 |
+| sausklaar stucen | 781 | 0 | 0.0000 | 19.1 |
+| sausklaar stucwerk | 774 | 0 | 0.0000 | 26.5 |
+| bm klus bv | 613 | 51 | 0.0832 | 1.1 |
+| behangklaar stucwerk | 440 | 0 | 0.0000 | 37.5 |
+| behangklaar stucen | 409 | 0 | 0.0000 | 31.9 |
+| gevelrenovatie met folie in rotterdam | 363 | 0 | 0.0000 | 20.3 |
+| gevelrenovatie met folie in delft | 333 | 0 | 0.0000 | 38.3 |
+| gevel schilderen | 301 | 0 | 0.0000 | 41.9 |
+| gevel schilder | 299 | 0 | 0.0000 | 47.1 |
+| bm | 293 | 0 | 0.0000 | 3.9 |
+| stucwerk sausklaar | 237 | 0 | 0.0000 | 32.8 |
+| keimen gevel kosten | 190 | 0 | 0.0000 | 28.1 |
+| keimen kosten | 190 | 0 | 0.0000 | 29.4 |
+| kosten keimen per m2 | 190 | 0 | 0.0000 | 31.7 |
+| sausklaar maken muren | 186 | 0 | 0.0000 | 22.5 |
+| keimwerk prijs m2 | 185 | 0 | 0.0000 | 35.7 |
+| kosten keimen gevel | 183 | 0 | 0.0000 | 24.9 |
+| stucen behangklaar | 179 | 0 | 0.0000 | 25.7 |
+| keimen prijs per m2 | 178 | 0 | 0.0000 | 41.1 |
+| prijs keimen per m2 | 178 | 0 | 0.0000 | 40.8 |
 
 ---
 
@@ -74,81 +74,79 @@
 
 | Page | Clicks | Impressions | CTR | Avg Pos | Queries | Type |
 |------|--------|-------------|-----|---------|---------|------|
-| / | 49 | 1073 | 0.0457 | 13.1 | 66 | home |
-| /gevelisolatie/ | 4 | 437 | 0.0092 | 22.1 | 20 | service |
-| /buiten-stucwerk/ | 3 | 617 | 0.0049 | 10.7 | 53 | service |
-| /over-ons/ | 2 | 146 | 0.0137 | 14.4 | 5 | utility |
-| /gevelisolatie/kosten/ | 2 | 318 | 0.0063 | 30.1 | 33 | cluster |
-| /contact/ | 1 | 100 | 0.0100 | 1.5 | 3 | utility |
-| /diensten/ | 1 | 96 | 0.0104 | 6.0 | 6 | service |
-| /gevelisolatie/den-haag/ | 0 | 71 | 0.0000 | 12.1 | 5 | city |
+| / | 57 | 1063 | 0.0536 | 12.9 | 64 | home |
+| /over-ons/ | 5 | 167 | 0.0299 | 12.1 | 4 | utility |
+| /buiten-stucwerk/ | 3 | 670 | 0.0045 | 10.3 | 57 | service |
+| /gevelisolatie/ | 3 | 431 | 0.0070 | 23.0 | 19 | service |
+| /contact/ | 2 | 129 | 0.0155 | 1.6 | 4 | utility |
+| /diensten/ | 1 | 111 | 0.0090 | 4.8 | 6 | service |
+| /onze-werken/ | 1 | 236 | 0.0042 | 9.0 | 14 | archive |
+| /gevelisolatie/kosten/ | 1 | 297 | 0.0034 | 30.8 | 34 | cluster |
+| /gevelisolatie/den-haag/ | 0 | 131 | 0.0000 | 11.9 | 6 | city |
 | /onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/ | 0 | 1 | 0.0000 | 22.0 | 1 | project |
-| /muren-stucen/ | 0 | 4044 | 0.0000 | 30.3 | 70 | service |
-| /sierpleister/ | 0 | 171 | 0.0000 | 24.8 | 17 | service |
+| /muren-stucen/ | 0 | 4100 | 0.0000 | 29.0 | 69 | service |
+| /gevelisolatie/afwerkingen/ | 0 | 141 | 0.0000 | 23.4 | 24 | cluster |
+| /sierpleister/ | 0 | 235 | 0.0000 | 28.6 | 19 | service |
 | /gevelisolatie/alphen-aan-den-rijn/ | 0 | 42 | 0.0000 | 25.8 | 3 | city |
-| /gevelisolatie/leiden/ | 0 | 62 | 0.0000 | 11.8 | 8 | city |
+| /gevelisolatie/leiden/ | 0 | 91 | 0.0000 | 9.1 | 8 | city |
 | /gevelisolatie/rotterdam/ | 0 | 8 | 0.0000 | 3.5 | 3 | city |
 | /gevelisolatie/spijkenisse/ | 0 | 1 | 0.0000 | 1.0 | 1 | city |
-| /onze-werken/ | 0 | 192 | 0.0000 | 9.2 | 13 | archive |
-| /gevel-schilderen/ | 0 | 2800 | 0.0000 | 39.7 | 55 | service |
-| /gevelisolatie/afwerkingen/ | 0 | 139 | 0.0000 | 20.9 | 15 | cluster |
-| /gevelisolatie/delft/ | 0 | 260 | 0.0000 | 35.6 | 7 | city |
-| /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/ | 0 | 31 | 0.0000 | 22.6 | 7 | project |
+| /gevel-schilderen/ | 0 | 4048 | 0.0000 | 38.3 | 62 | service |
+| /gevelisolatie/delft/ | 0 | 394 | 0.0000 | 36.9 | 9 | city |
+| /gevelisolatie/materialen/ | 0 | 5 | 0.0000 | 53.4 | 3 | cluster |
 
 ## Top pages by impressions
 
 | Page | Impressions | Clicks | CTR | Avg Pos | Queries |
 |------|-------------|--------|-----|---------|---------|
-| /muren-stucen/ | 4044 | 0 | 0.0000 | 30.3 | 70 |
-| /gevel-schilderen/ | 2800 | 0 | 0.0000 | 39.7 | 55 |
-| / | 1073 | 49 | 0.0457 | 13.1 | 66 |
-| /buiten-stucwerk/ | 617 | 3 | 0.0049 | 10.7 | 53 |
-| /gevelisolatie/ | 437 | 4 | 0.0092 | 22.1 | 20 |
-| /gevelisolatie/kosten/ | 318 | 2 | 0.0063 | 30.1 | 33 |
-| /gevelisolatie/delft/ | 260 | 0 | 0.0000 | 35.6 | 7 |
-| /onze-werken/ | 192 | 0 | 0.0000 | 9.2 | 13 |
-| /sierpleister/ | 171 | 0 | 0.0000 | 24.8 | 17 |
-| /over-ons/ | 146 | 2 | 0.0137 | 14.4 | 5 |
-| /gevelisolatie/afwerkingen/ | 139 | 0 | 0.0000 | 20.9 | 15 |
-| /contact/ | 100 | 1 | 0.0100 | 1.5 | 3 |
-| /diensten/ | 96 | 1 | 0.0104 | 6.0 | 6 |
-| /gevelisolatie/den-haag/ | 71 | 0 | 0.0000 | 12.1 | 5 |
-| /gevelisolatie/leiden/ | 62 | 0 | 0.0000 | 11.8 | 8 |
+| /muren-stucen/ | 4100 | 0 | 0.0000 | 29.0 | 69 |
+| /gevel-schilderen/ | 4048 | 0 | 0.0000 | 38.3 | 62 |
+| / | 1063 | 57 | 0.0536 | 12.9 | 64 |
+| /buiten-stucwerk/ | 670 | 3 | 0.0045 | 10.3 | 57 |
+| /gevelisolatie/ | 431 | 3 | 0.0070 | 23.0 | 19 |
+| /gevelisolatie/delft/ | 394 | 0 | 0.0000 | 36.9 | 9 |
+| /gevelisolatie/kosten/ | 297 | 1 | 0.0034 | 30.8 | 34 |
+| /onze-werken/ | 236 | 1 | 0.0042 | 9.0 | 14 |
+| /sierpleister/ | 235 | 0 | 0.0000 | 28.6 | 19 |
+| /over-ons/ | 167 | 5 | 0.0299 | 12.1 | 4 |
+| /gevelisolatie/afwerkingen/ | 141 | 0 | 0.0000 | 23.4 | 24 |
+| /gevelisolatie/den-haag/ | 131 | 0 | 0.0000 | 11.9 | 6 |
+| /contact/ | 129 | 2 | 0.0155 | 1.6 | 4 |
+| /diensten/ | 111 | 1 | 0.0090 | 4.8 | 6 |
+| /gevelisolatie/leiden/ | 91 | 0 | 0.0000 | 9.1 | 8 |
 | /gevelisolatie/alphen-aan-den-rijn/ | 42 | 0 | 0.0000 | 25.8 | 3 |
-| /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/ | 31 | 0 | 0.0000 | 22.6 | 7 |
-| /gevelisolatie/subsidie-vergunning/ | 18 | 0 | 0.0000 | 20.6 | 4 |
+| /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/ | 27 | 0 | 0.0000 | 23.9 | 5 |
+| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 23 | 0 | 0.0000 | 18.5 | 1 |
 | /gevelisolatie/leidschendam-voorburg/ | 15 | 0 | 0.0000 | 23.9 | 3 |
-| /gevelisolatie/rotterdam/ | 8 | 0 | 0.0000 | 3.5 | 3 |
+| /gevelisolatie/subsidie-vergunning/ | 13 | 0 | 0.0000 | 11.6 | 1 |
 
 ---
 
-## Likely cannibalization candidates (6 queries on 3+ pages)
+## Likely cannibalization candidates (5 queries on 3+ pages)
 
 | Query | Impressions | Clicks | Pages |
 |-------|-------------|--------|-------|
-| bm klus bv | 498 | 39 | 16 |
-| bm klus bv reviews | 102 | 4 | 10 |
-| renovatie buitenschil rotterdam | 74 | 0 | 3 |
-| bm klus b.v. | 71 | 8 | 9 |
-| bm kluswerk | 23 | 1 | 4 |
-| buitengevelisolatie rotterdam | 10 | 0 | 3 |
+| bm klus bv | 613 | 51 | 14 |
+| bm klus bv reviews | 129 | 5 | 11 |
+| bm klus b.v. | 94 | 9 | 10 |
+| buitengevelisolatie rotterdam | 14 | 0 | 3 |
+| bm kluswerk | 10 | 0 | 3 |
 
-## Low-CTR / high-impression opportunities (10 queries)
+## Low-CTR / high-impression opportunities (9 queries)
 
 Queries in striking distance (position 4-15) with CTR < 5% and 20+ impressions.
 
 | Query | Impressions | Clicks | CTR | Best Pos | Theme |
 |-------|-------------|--------|-----|----------|-------|
-| bm | 302 | 0 | 0.0000 | 4.2 | other |
-| buitengevel isoleren en stucen prijs | 132 | 0 | 0.0000 | 11.0 | prijs_kosten |
-| etics systeem | 100 | 1 | 0.0100 | 7.6 | core_isolation |
-| etics isolatie | 75 | 0 | 0.0000 | 6.0 | core_isolation |
-| gevelisolatie den haag | 65 | 0 | 0.0000 | 9.7 | core_isolation |
-| klus | 55 | 0 | 0.0000 | 8.0 | other |
-| etics gevelisolatie | 46 | 1 | 0.0217 | 7.2 | core_isolation |
-| buitenmuur stucen | 38 | 0 | 0.0000 | 10.4 | stuc_crepi |
-| buitenstucwerk vught | 35 | 0 | 0.0000 | 9.9 | stuc_crepi |
-| buitenmuur stucen nadelen | 24 | 0 | 0.0000 | 11.5 | stuc_crepi |
+| buitengevel isoleren en stucen prijs | 151 | 1 | 0.0066 | 10.7 | prijs_kosten |
+| gevelisolatie den haag | 117 | 0 | 0.0000 | 8.7 | core_isolation |
+| etics systeem | 89 | 1 | 0.0112 | 9.2 | core_isolation |
+| etics isolatie | 80 | 0 | 0.0000 | 7.3 | core_isolation |
+| klus | 54 | 0 | 0.0000 | 8.2 | other |
+| buitenstucwerk vught | 38 | 0 | 0.0000 | 9.7 | stuc_crepi |
+| etics gevelisolatie | 36 | 0 | 0.0000 | 7.7 | core_isolation |
+| gevel stucwerk | 29 | 0 | 0.0000 | 14.0 | stuc_crepi |
+| buitenmuur stucen | 28 | 0 | 0.0000 | 8.8 | stuc_crepi |
 
 ---
 
@@ -156,21 +154,21 @@ Queries in striking distance (position 4-15) with CTR < 5% and 20+ impressions.
 
 | Theme | Queries |
 |-------|---------|
-| other | 135 |
-| stuc_crepi | 116 |
-| prijs_kosten | 69 |
-| core_isolation | 19 |
-| materialen | 5 |
-| subsidie_vergunning | 4 |
+| other | 140 |
+| stuc_crepi | 132 |
+| prijs_kosten | 70 |
+| core_isolation | 20 |
+| materialen | 4 |
 | technical_rc_dikte | 2 |
+| subsidie_vergunning | 1 |
 | bekleden | 1 |
 
 ## Query intent distribution
 
 | Intent | Queries |
 |--------|---------|
-| commercial_investigative | 269 |
-| commercial | 70 |
+| commercial_investigative | 287 |
+| commercial | 71 |
 | informational | 6 |
 | navigational | 5 |
 | mixed | 1 |

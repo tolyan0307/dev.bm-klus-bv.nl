@@ -1,6 +1,6 @@
 # Link prospects — bm-klus-bv.nl (plan item A1)
 
-**Collected:** 2026-09-04T10:46:30.117059+00:00 · **DataForSEO cost:** $0.6385 · **Aborted on budget:** False
+**Collected:** 2026-09-04T15:58:36.716775+00:00 · **DataForSEO cost:** $0.6385 · **Aborted on budget:** False
 
 Source: DataForSEO Backlinks `referring_domains/live`, status `live`, limit 1000/domain, ordered by rank. Index counts are DataForSEO's, not Google's. Category is a name-based heuristic; `editorial_or_partner` = unmatched, needs a human look.
 
@@ -15,8 +15,8 @@ Source: DataForSEO Backlinks `referring_domains/live`, status `live`, limit 1000
 | metsel-gigant.nl | 260 | 260 |
 | stucadoorsbedrijfdevries.nl | 223 | 223 |
 | rotterdamse-stukadoor.nl | 45 | 45 |
-| si-isolatie.nl | 121 | 121 |
-| pluimers.nl | 504 | 504 |
+| si-isolatie.nl | 120 | 120 |
+| pluimers.nl | 505 | 505 |
 | jandeisolatieman.nl | 719 | 719 |
 | stuc-gigant.nl | 197 | 197 |
 | vanklassestukadoors.nl | 22 | 22 |
@@ -192,4 +192,4 @@ Unique donor domains across competitors: **3211**; actionable (tier A+B+C): **12
 
 ## Provenance
 
-Generated 2026-09-04T10:48:18.888465+00:00 by `run_dataforseo_final_audit_collect_2026_08` stage `link_prospects`. Raw: `snapshots/raw/dataforseo/final_audit_2026-08/link_prospects.json`. Normalized: `snapshots/normalized/dataforseo/link_prospects_latest.json`.
+Generated 2026-09-04T15:58:50.105212+00:00 by `run_dataforseo_final_audit_collect_2026_08` stage `link_prospects`. Raw: `snapshots/raw/dataforseo/final_audit_2026-08/link_prospects.json`. Normalized: `snapshots/normalized/dataforseo/link_prospects_latest.json`.

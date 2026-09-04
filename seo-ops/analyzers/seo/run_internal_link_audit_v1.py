@@ -51,7 +51,7 @@ SITE = "https://bm-klus-bv.nl"
 OWN_HOSTS = ("bm-klus-bv.nl", "www.bm-klus-bv.nl")
 UA = {"User-Agent": "Mozilla/5.0 (audit read-only) bmklus-seo-ops internal-link-audit"}
 
-CRAWL_DELAY_S = 0.25
+CRAWL_DELAY_S = 1.0  # 0.25 triggered a hosting anti-bot IP block on 2026-09-03; keep >= 1s
 TEMPLATE_SHARE = 0.8   # (target, anchor) on >= 80% of pages => template link
 OVERLINK_THRESHOLD = 100
 WEAK_ANCHORS = {
