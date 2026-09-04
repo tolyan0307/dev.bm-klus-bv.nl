@@ -75,7 +75,7 @@ Claude может интерпретировать intent вручную на о
 
 ## Что пока не реализовано
 
-- **Google Ads API** — не подключён
+- **Google Ads API как MCP** — нет; через SDK (`google-ads`, конфиг `google/google-ads.yaml`) подключён и используется: `integrations/google_ads/campaign_daily_loader.py`, утилиты в `D:/projects/bmklus/google/`
 - **Полный движок каннибализации** — есть базовые проверки, но не полный анализ
 - **Автоматическое расписание** — нет cron, нет автозапуска отчётов
 

@@ -1,6 +1,6 @@
 # Lead reconciliation: WP lead log vs GA4 vs Google Ads (2026-08-08 .. 2026-09-04)
 
-**Generated:** 2026-09-04 22:37 UTC
+**Generated:** 2026-09-04 23:06 UTC
 **Report mode:** verified
 **Workflow:** lead_reconciliation_v1
 **Confidence cap:** high for WP counts, medium for cross-source ratios
@@ -9,7 +9,7 @@
 - WP lead log, BM Stats v2 plugin, server-side, every form submission with owner-set status → `[WP, 28d, lead-level]`
 - WP server-side pageviews and CTA clicks, beacon, no consent gate, from 2026-09-04 → `[WP, since 2026-09-04, event-level]`
 - GA4 events by date: `Contact_Form_Site` (GTM trigger CE bm_lead_form_success), `Phone` / `Whatsapp` / `Email` (GTM link-click triggers tel: / wa.me / mailto:) → `[GA4, 28d, event-level]`
-- Google Ads campaign conversions by date from the last CSV export → `[Ads CSV, n/a]`
+- Google Ads conversions by date, live Google Ads API (read-only), summed over all campaigns → `[Ads API, 2026-08-08..2026-09-04, all campaigns, daily]`
 
 ---
 
@@ -30,19 +30,20 @@
 | GA4 `bm_*` dataLayer events (not tagged in GTM, expected 0) | 0 | [GA4, 28d, event-level] |
 | WP CTA clicks (WhatsApp / phone / e-mail) | 2 | [WP, since 2026-09-04, event-level] |
 | GA4 `Phone` + `Whatsapp` + `Email` in the same days | 1 | [GA4, 28d, event-level] |
-| Ads conversions | not available: CSV missing or outside window | [Ads CSV, n/a] |
+| Ads conversions in the window | 8.0 | [Ads API, 2026-08-08..2026-09-04, all campaigns, daily] |
+| WP leads with first-touch `ads` in the same coverage | 5 | [WP, 28d, lead-level] |
 
 ### Weekly table
 
-All counts per ISO week (Mon–Sun). WP columns: [WP, 28d, lead-level]; views/CTA: [WP, since 2026-09-04, event-level]; GA4 columns: [GA4, 28d, event-level]; Ads: [Ads CSV, n/a].
+All counts per ISO week (Mon–Sun). WP columns: [WP, 28d, lead-level]; views/CTA: [WP, since 2026-09-04, event-level]; GA4 columns: [GA4, 28d, event-level]; Ads: [Ads API, 2026-08-08..2026-09-04, all campaigns, daily].
 
 | Week | WP total | WP non-spam | WP triaged | WP ads | WP direct | GA4 form | GA4 form % | GA4 phone | GA4 whatsapp | GA4 email | WP views | WP CTA | Ads conv |
 |------|---------:|------------:|-----------:|-------:|----------:|---------:|-----------:|----------:|-------------:|----------:|---------:|-------:|---------:|
-| 2026-08-03 | 2 | 2 | 0 | 0 | 2 | 0 | 0.0 | 0 | 0 | 0 | — | — | — |
-| 2026-08-10 | 2 | 2 | 0 | 1 | 1 | 2 | 100.0 | 0 | 0 | 0 | — | — | — |
-| 2026-08-17 | 1 | 1 | 0 | 1 | 0 | 0 | 0.0 | 0 | 4 | 0 | — | — | — |
-| 2026-08-24 | 1 | 1 | 0 | 1 | 0 | 1 | 100.0 | 0 | 0 | 1 | — | — | — |
-| 2026-08-31 | 2 | 2 | 0 | 2 | 0 | 2 | 100.0 | 0 | 1 | 0 | 5 | 2 | — |
+| 2026-08-03 | 2 | 2 | 0 | 0 | 2 | 0 | 0.0 | 0 | 0 | 0 | — | — | 0.0 |
+| 2026-08-10 | 2 | 2 | 0 | 1 | 1 | 2 | 100.0 | 0 | 0 | 0 | — | — | 3.0 |
+| 2026-08-17 | 1 | 1 | 0 | 1 | 0 | 0 | 0.0 | 0 | 4 | 0 | — | — | 1.0 |
+| 2026-08-24 | 1 | 1 | 0 | 1 | 0 | 1 | 100.0 | 0 | 0 | 1 | — | — | 2.0 |
+| 2026-08-31 | 2 | 2 | 0 | 2 | 0 | 2 | 100.0 | 0 | 1 | 0 | 5 | 2 | 2.0 |
 
 ---
 
@@ -51,6 +52,7 @@ All counts per ISO week (Mon–Sun). WP columns: [WP, 28d, lead-level]; views/CT
 - GA4 sees roughly 62.5% of real form submissions ([GA4, 28d, event-level] ÷ [WP, 28d, lead-level]). The gap is consistent with consent-gated tagging: visitors who decline analytics cookies still submit forms, but GA4 never records them. Confidence: **high** on the direction, **medium** on the exact factor (small volumes).
 - 62% of submissions carry a first-touch ads signal (gclid or paid UTM) ([WP, 28d, lead-level]). This is the ceiling for Ads-attributable leads regardless of what Ads reports. Confidence: **high** for post-2026-09-04 leads, **medium** for backfilled ones (source from form-page URL only).
 - Contact clicks are measured twice by design: GA4 `Phone`/`Whatsapp`/`Email` via GTM link-click triggers (consent-gated) and WP `cta_click` via beacon (no consent gate). The `bm_*` dataLayer events are intentionally not tagged in GTM; tagging them would double-count. From 2026-09-04 the WP/GA4 click ratio becomes the second undercount estimate. Confidence: **high** on the setup, ratio needs 4+ weeks.
+- Ads reports 8.0 conversions ([Ads API, 2026-08-08..2026-09-04, all campaigns, daily]) vs 5 site submissions with an ads first touch in the same days ([WP, 28d, lead-level]). Ads conversions come from GA4 imports, so they inherit the GA4 undercount; do not read them as lead counts. Confidence: **medium**.
 
 ---
 
@@ -76,19 +78,19 @@ All counts per ISO week (Mon–Sun). WP columns: [WP, 28d, lead-level]; views/CT
 
 - WP pageviews and CTA clicks before 2026-09-04 do not exist (v1 counters were discarded by owner decision); those weeks show '—'.
 - Backfilled leads (before 2026-09-04) have no first-touch referrer and unknown form variant; their source is derived from the form-page URL only.
-- Ads conversions come from a manual CSV export; if the file is older than the window, the Ads column is empty rather than estimated.
+- Ads conversions are read live from the Google Ads API (all campaigns of the customer); a CSV export is used only if the API is unreachable, and the Ads column stays empty rather than estimated.
 - Pre-cutover data (before 2026-03-08) is not included in any source.
 
 ---
 
 ## Provenance
 
-- **Generated:** 2026-09-04 22:37 UTC
+- **Generated:** 2026-09-04 23:06 UTC
 - **Report mode:** verified
 - **Generator:** analyzers/pages/run_lead_reconciliation_v1.py
 - **Primary truth:** WP lead log (BM Stats v2 API, `/wp-json/bm-stats/v1/leads`, `/pageviews`, `/events`), internal_artifact
-- **Supporting data:** GA4 Data API key events by date (`Contact_Form_Site`, `Phone`, `Whatsapp`, `bm_*`), internal_artifact; Google Ads CSV export (optional), internal_artifact
-- **Live API calls:** yes — WP stats API and GA4 Data API were called at generation time for the window 2026-08-08..2026-09-04; Ads read from local CSV only
+- **Supporting data:** GA4 Data API key events by date (`Contact_Form_Site`, `Phone`, `Whatsapp`, `Email`), internal_artifact; Google Ads API daily campaign metrics (CSV fallback), internal_artifact
+- **Live API calls:** yes — WP stats API, GA4 Data API and Google Ads API were called at generation time for the window 2026-08-08..2026-09-04
 - **Window:** 28 days ending yesterday (site local date, Europe/Amsterdam)
 - **Enrichment sources:** none
 

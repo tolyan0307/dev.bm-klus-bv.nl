@@ -8,7 +8,8 @@ GA4 and Ads are consent- and tag-dependent.
 Inputs:
   - WP:  live pull via integrations/wp/stats_loader.py (leads with status/source, daily views/cta)
   - GA4: live pull of key events by date (Contact_Form_Site, Phone, Whatsapp + bm_* click events)
-  - Ads: optional CSV D:/projects/bmklus/google/outputs/campaign_23271040037_last30d.csv (date, conversions)
+  - Ads: live pull via integrations/google_ads/campaign_daily_loader.py (all campaigns, conversions by day);
+         fallback: CSV D:/projects/bmklus/google/outputs/campaign_23271040037_last30d.csv
 
 Outputs:
   snapshots/normalized/wp/lead_reconciliation_weekly_last{N}d.csv
@@ -33,6 +34,7 @@ sys.path.insert(0, str(SEO_OPS_ROOT))
 
 from integrations.wp.stats_loader import pull_wp_window  # noqa: E402
 from integrations.ga4.landing_page_loader import pull_key_events_by_date  # noqa: E402
+from integrations.google_ads.campaign_daily_loader import pull_campaign_daily, AdsLoaderError  # noqa: E402
 
 ADS_CSV = Path("D:/projects/bmklus/google/outputs/campaign_23271040037_last30d.csv")
 NORM_DIR = SEO_OPS_ROOT / "snapshots" / "normalized" / "wp"
@@ -52,9 +54,15 @@ def parse_date(s: str) -> date:
     return datetime.fromisoformat(s[:10]).date()
 
 
-def load_ads_daily() -> dict[date, float]:
+def load_ads_daily(start: date, end: date) -> tuple[dict[date, float], str]:
+    """Conversions per day. Live API first (all campaigns), CSV fallback. Returns (rows, source_label)."""
+    try:
+        rows = pull_campaign_daily(start.isoformat(), end.isoformat())
+        return {parse_date(r["date"]): float(r["conversions"]) for r in rows}, "api"
+    except AdsLoaderError as e:
+        print(f"  Ads API unavailable ({e}); falling back to CSV")
     if not ADS_CSV.exists():
-        return {}
+        return {}, "none"
     out: dict[date, float] = {}
     with open(ADS_CSV, encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
@@ -62,7 +70,7 @@ def load_ads_daily() -> dict[date, float]:
                 out[parse_date(row["date"])] = float(row.get("conversions") or 0)
             except (KeyError, ValueError):
                 continue
-    return out
+    return out, "csv"
 
 
 def main() -> None:
@@ -81,10 +89,10 @@ def main() -> None:
     ga4 = pull_key_events_by_date(days=days, event_names=[GA4_FORM_EVENT] + GA4_CTA_EVENTS + GA4_NEW_EVENTS)
     print(f"  GA4: {ga4['total_rows']} date×event rows, window {ga4['date_range']['start']}..{ga4['date_range']['end']}")
 
-    ads = load_ads_daily()
+    ads, ads_src = load_ads_daily(start, end)
     ads_in_window = {d: v for d, v in ads.items() if start <= d <= end}
     ads_cov = (min(ads_in_window), max(ads_in_window)) if ads_in_window else None
-    print(f"  Ads CSV: {'present, ' + str(len(ads_in_window)) + ' days in window' if ads_in_window else 'absent or outside window'}")
+    print(f"  Ads ({ads_src}): {str(len(ads_in_window)) + ' days in window' if ads_in_window else 'no data in window'}")
 
     # ── Weekly aggregation ──
     weeks: dict[date, dict] = defaultdict(lambda: defaultdict(float))
@@ -197,7 +205,8 @@ def main() -> None:
     L_WP = f"[WP, {days}d, lead-level]"
     L_WPE = f"[WP, since {EVENTS_SINCE.isoformat()}, event-level]"
     L_GA4 = f"[GA4, {days}d, event-level]"
-    L_ADS = f"[Ads CSV, {ads_cov[0]}..{ads_cov[1]}, campaign]" if ads_cov else "[Ads CSV, n/a]"
+    ads_tag = "Ads API" if ads_src == "api" else "Ads CSV"
+    L_ADS = f"[{ads_tag}, {ads_cov[0]}..{ads_cov[1]}, all campaigns, daily]" if ads_cov else "[Ads, n/a]"
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     today = date.today().isoformat()
 
@@ -213,7 +222,7 @@ def main() -> None:
         f"- WP lead log, BM Stats v2 plugin, server-side, every form submission with owner-set status → `{L_WP}`",
         f"- WP server-side pageviews and CTA clicks, beacon, no consent gate, from {EVENTS_SINCE.isoformat()} → `{L_WPE}`",
         f"- GA4 events by date: `{GA4_FORM_EVENT}` (GTM trigger CE bm_lead_form_success), `Phone` / `Whatsapp` / `Email` (GTM link-click triggers tel: / wa.me / mailto:) → `{L_GA4}`",
-        f"- Google Ads campaign conversions by date from the last CSV export → `{L_ADS}`",
+        f"- Google Ads conversions by date, {'live Google Ads API (read-only), summed over all campaigns' if ads_src == 'api' else 'last CSV export (API unavailable)'} → `{L_ADS}`",
         "",
         "---",
         "",
@@ -236,10 +245,10 @@ def main() -> None:
         f"| GA4 `Phone` + `Whatsapp` + `Email` in the same days | {ga4_cta_since} | {L_GA4} |",
     ]
     if ads_cmp:
-        lines.append(f"| Ads conversions in CSV coverage | {ads_cmp[1]} | {L_ADS} |")
+        lines.append(f"| Ads conversions in the window | {ads_cmp[1]} | {L_ADS} |")
         lines.append(f"| WP leads with first-touch `ads` in the same coverage | {ads_cmp[2]} | {L_WP} |")
     else:
-        lines.append(f"| Ads conversions | not available: CSV missing or outside window | {L_ADS} |")
+        lines.append(f"| Ads conversions | not available: API unreachable and CSV missing or outside window | {L_ADS} |")
 
     lines += [
         "",
@@ -300,7 +309,7 @@ def main() -> None:
         "",
         f"- WP pageviews and CTA clicks before {EVENTS_SINCE.isoformat()} do not exist (v1 counters were discarded by owner decision); those weeks show '—'.",
         "- Backfilled leads (before 2026-09-04) have no first-touch referrer and unknown form variant; their source is derived from the form-page URL only.",
-        "- Ads conversions come from a manual CSV export; if the file is older than the window, the Ads column is empty rather than estimated.",
+        "- Ads conversions are read live from the Google Ads API (all campaigns of the customer); a CSV export is used only if the API is unreachable, and the Ads column stays empty rather than estimated.",
         "- Pre-cutover data (before 2026-03-08) is not included in any source.",
         "",
         "---",
@@ -311,8 +320,8 @@ def main() -> None:
         "- **Report mode:** verified",
         "- **Generator:** analyzers/pages/run_lead_reconciliation_v1.py",
         "- **Primary truth:** WP lead log (BM Stats v2 API, `/wp-json/bm-stats/v1/leads`, `/pageviews`, `/events`), internal_artifact",
-        "- **Supporting data:** GA4 Data API key events by date (`Contact_Form_Site`, `Phone`, `Whatsapp`, `bm_*`), internal_artifact; Google Ads CSV export (optional), internal_artifact",
-        f"- **Live API calls:** yes — WP stats API and GA4 Data API were called at generation time for the window {dr['start']}..{dr['end']}; Ads read from local CSV only",
+        "- **Supporting data:** GA4 Data API key events by date (`Contact_Form_Site`, `Phone`, `Whatsapp`, `Email`), internal_artifact; Google Ads API daily campaign metrics (CSV fallback), internal_artifact",
+        f"- **Live API calls:** yes — WP stats API, GA4 Data API{' and Google Ads API' if ads_src == 'api' else ''} were called at generation time for the window {dr['start']}..{dr['end']}{'; Ads read from local CSV' if ads_src == 'csv' else ''}",
         f"- **Window:** {days} days ending yesterday (site local date, Europe/Amsterdam)",
         "- **Enrichment sources:** none",
         "",
