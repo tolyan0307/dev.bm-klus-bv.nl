@@ -1,0 +1,109 @@
+# Brief: /gevel-schilderen/keimen/ — cluster page under /gevel-schilderen/ (keimen kosten deep-dive)
+# Created 2026-09-04 from final SEO plan 2026-08-15, item B1.
+# Evidence: GSC 90d (to 2026-08-12): 14 keimen queries, 1239 impressions, 0 clicks, all landing on
+# /gevel-schilderen/ at position 27–47; 12 of 14 queries ask for kosten/prijs per m².
+# Google Ads volume (NL): keimen 590, keimwerk 260, gevel keimen 110, keimverf 90 per month.
+
+page:
+  slug: "gevel-schilderen/keimen"
+  url: "/gevel-schilderen/keimen/"
+  pageType: "cluster"
+  taskType: "create"
+  currentFile: "app/gevel-schilderen/keimen/page.tsx"
+  contentFile: "inline (no separate lib/content file, same pattern as /gevelisolatie/kosten/)"
+
+seo:
+  primaryKeyword: "keimen kosten"
+  secondaryKeywords:
+    - "gevel keimen kosten"
+    - "keimwerk prijs m2"
+    - "keimen prijs per m2"
+    - "wat kost keimen"
+    - "gevel keimen of schilderen"
+    - "huis keimen kosten"
+    - "keimen of kaleien"
+  searchIntent: "informational-commercial (price research before hiring)"
+  pageGoal: "Rank top-20 on the keimen kosten family within 8 weeks and convert price researchers into opname requests"
+
+cannibalization:
+  siblingPages:
+    - "/gevel-schilderen/"
+    - "/buiten-stucwerk/"
+    - "/gevelisolatie/afwerkingen/"
+  doNotCoverDeeply:
+    - "verfsoorten overview, voorbereiding & primer, techniek per ondergrond, onderhoud (→ /gevel-schilderen/)"
+    - "buitenmuur stucen prijzen (→ /buiten-stucwerk/)"
+  differentiator: "Only page on the site about keimen as a topic: keimwerk price per m², keimen vs schilderen vs kaleien, suitability of the substrate, keimen-specific cost factors"
+
+content:
+  pageRoleSummary: "Answer every price and suitability question about gevel keimen and route the visitor to an opname"
+  userQuestionsToAnswer:
+    - "Wat kost gevel keimen per m²?"
+    - "Wat kost een heel huis keimen?"
+    - "Keimen of schilderen: wat kies ik?"
+    - "Kan ik keimen over een eerder geschilderde gevel?"
+    - "Hoe lang gaat keimwerk mee?"
+    - "Wat is het verschil tussen keimen en kaleien?"
+    - "Uit hoeveel lagen bestaat keimwerk?"
+    - "Is de steiger inbegrepen?"
+  requiredSections:
+    - "Hero + H1 + price teaser + CTA"
+    - "Richtprijzen per m² (PriceCards) + voorbeeld voorgevel"
+    - "Wat is keimen: keimen / schilderen / kaleien"
+    - "Wanneer keimen wél / niet (ondergrond)"
+    - "Kostenfactoren"
+    - "Werkwijze"
+    - "FAQ"
+    - "Related links + internal links"
+  ctaType: "offerte"
+
+links:
+  requiredOutgoing:
+    - url: "/gevel-schilderen/"
+      anchorIntent: "terug naar pillar (verfsoorten, voorbereiding, techniek)"
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+  requiredIncoming:
+    - from: "/gevel-schilderen/"
+      where: "verfsoorten section, after 'Keimen of schilderen (en kaleien)' block + internalLinks footer"
+    - from: "/gevelisolatie/afwerkingen/"
+      where: "relatedLinks"
+  suggestedContextual:
+    - url: "/buiten-stucwerk/"
+      anchorIntent: "buitenmuur stucen als ondergrond"
+    - url: "/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/"
+      anchorIntent: "project met gevelherstel en schilderwerk"
+
+serp:
+  # DataForSEO SERP, Google NL desktop, 2026-09-04, keyword "keimen kosten"
+  topResultFormats:
+    - "AI Overview on top"
+    - "price per m² stated in the first sentence of the snippet"
+    - "cost factors list"
+    - "keimen vs verven / kaleien explainer"
+    - "FAQ"
+  featuredSnippetType: "paragraph (price sentence)"
+  peopleAlsoAsk:
+    - "Wat kost keim per m2?"
+    - "Wat is het verschil tussen keimen en verven?"
+    - "Hoe lang gaat keim mee?"
+    - "Wat is het verschil tussen kaleien en keimen?"
+  topDomains:
+    - "slimster.nl (aggregator, €20–40/m²)"
+    - "specialistenmetkeim.nl (contractor, ~€25/m² single layer)"
+    - "perfectgevel.nl (contractor)"
+    - "gevelrenovatie-info.nl (aggregator, €15–35/m²)"
+    - "stukadoorsbedrijfvanderloop.nl (contractor, €25–45/m²)"
+    - "uwschilderservice.nl (contractor, €40–60/m²)"
+    - "keim-specialist.nl, bobex.nl (€25–55), verbouwkosten.com (€15–35)"
+  contentGaps:
+    - "Competitors state a lifespan in years; we deliberately do not (no owner-confirmed figure)"
+    - "Competitors state number of layers; page says grondlaag + afwerklaag(en) without a number"
+
+# ── Uncertainty flags (owner to confirm; page ships with published site ranges only) ───────────
+uncertainty:
+  - "[CLAIM_NEEDS_CONFIRMATION] Keimen price per m²: page reuses the published gevel-schilderen ranges (€25–€40 basis, €30–€50 standaard, lib/content/gevel-schilderen.ts). If BM klus prices keimwerk differently (KEIM material cost), update priceCards, hero teaser, FAQ 1–2 and serviceSchema lowPrice/highPrice."
+  - "[CLAIM_NEEDS_CONFIRMATION] Voorbeeld voorgevel €750–€2.500 is arithmetic (30–50 m² × €25–€50) — confirm it matches real quotes."
+  - "[CLAIM_NEEDS_CONFIRMATION] Lagenopbouw 'grondlaag + één of meer afwerklagen' — confirm BM klus' standard (e.g. 2 lagen) so the FAQ can state it."
+  - "[MISSING_BUSINESS_INPUT] Does BM klus use KEIM brand products specifically? If yes, 'KEIM' can be named as the system on this page; if not, keep 'silicaatverf (keimen)'."
+  - "[MISSING_BUSINESS_INPUT] A real keimen project with photos would replace the Delft Willemstraat (schilderwerk) images; none is on the site today."

@@ -94,9 +94,9 @@ export const PLANNED_ROUTES = [
   // ── Money pages (services) ────────────────────────────────────────────────
   {
     path: "/gevelisolatie/",
-    title: "Gevelisolatie buitenkant (ETICS) – prijs per m²",
+    title: "Buitengevelisolatie (ETICS) – prijs per m²",
     description:
-      "Gevelisolatie aan de buitenkant (ETICS) met afwerking: stuc, sierpleister/crepi of steenstrips. Heldere prijs per m² na gratis opname op locatie.",
+      "Gevelisolatie buitenkant (buitengevelisolatie, ETICS) met afwerking: stuc, sierpleister/crepi of steenstrips. Heldere prijs per m² na gratis opname op locatie.",
     changefreq: "monthly",
     priority: 0.9,
   },
@@ -109,10 +109,19 @@ export const PLANNED_ROUTES = [
     priority: 0.8,
   },
   {
-    path: "/buiten-stucwerk/",
-    title: "Buitenmuur stucen (gevel stucen) – prijs per m²",
+    // Cluster child of /gevel-schilderen/ (added 2026-09-04, SEO plan item B1)
+    path: "/gevel-schilderen/keimen/",
+    title: "Gevel keimen: kosten per m² & keimwerk prijs",
     description:
-      "Buitenmuur stucen / gevel stucen in regio Rotterdam. Cementpleister, betonstuc, spachtelputz, crepi. Kosten per m² na gratis opname.",
+      "Wat kost gevel keimen per m²? Richtprijzen voor keimwerk (silicaatverf), kostenfactoren, keimen of schilderen en wanneer keimen past. Opname in regio Rotterdam.",
+    changefreq: "yearly",
+    priority: 0.6,
+  },
+  {
+    path: "/buiten-stucwerk/",
+    title: "Buitenmuur stucen: kosten per m² & betonstuc",
+    description:
+      "Buitenmuur stucen / gevel stucen (buiten stucwerk) in regio Rotterdam. Cementpleister, betonstuc, spachtelputz, crepi. Kosten per m² na gratis opname.",
     changefreq: "monthly",
     priority: 0.8,
   },
@@ -131,6 +140,15 @@ export const PLANNED_ROUTES = [
       "Binnenmuren stucen: behangklaar of sausklaar. Richtprijzen per m², werkwijze, voorbereiding en droogtijd. Regio Rotterdam (±80–100 km).",
     changefreq: "monthly",
     priority: 0.8,
+  },
+  {
+    // Cluster child of /muren-stucen/ (added 2026-09-04, SEO plan item B2)
+    path: "/muren-stucen/sausklaar-behangklaar/",
+    title: "Sausklaar of behangklaar stucen – prijs per m²",
+    description:
+      "Sausklaar stucwerk €15–€30/m², behangklaar €10–€22/m². Het verschil, wanneer u welk niveau kiest, voorstrijken, schuren en droogtijd. Opname in regio Rotterdam.",
+    changefreq: "yearly",
+    priority: 0.6,
   },
   {
     path: "/schoonmaak-na-verbouwing/",

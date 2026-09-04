@@ -18,6 +18,7 @@ import {
 } from "lucide-react"
 
 import { trackEvent } from "@/components/gtm-provider"
+import { getAttribution } from "@/lib/attribution"
 
 interface TurnstileInstance {
   render: (
@@ -206,6 +207,8 @@ export default function ContactFormCard() {
           message: form.bericht.trim(),
           consent: form.consent,
           sourceUrl: window.location.href,
+          referrer: document.referrer,
+          attribution: getAttribution(),
           company,
           turnstileToken,
         }),

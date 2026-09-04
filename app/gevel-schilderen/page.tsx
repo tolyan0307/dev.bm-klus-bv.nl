@@ -793,6 +793,15 @@ export default function GevelSchilderenPage() {
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
                     {verfsoorten.subsections[2].body}
                   </p>
+                  <p className="mt-4 text-sm">
+                    <Link
+                      href="/gevel-schilderen/keimen/"
+                      className="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline underline-offset-4"
+                    >
+                      Bekijk de kosten van gevel keimen per m²
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </p>
                 </div>
               </div>
             </div>

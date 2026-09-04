@@ -1,0 +1,109 @@
+# Brief: /muren-stucen/sausklaar-behangklaar/ — cluster page under /muren-stucen/
+# Created 2026-09-04 from final SEO plan 2026-08-15, item B2.
+# Evidence: GSC 90d (to 2026-08-12): 52 queries in the sausklaar/behangklaar family, 4019 impressions,
+# 0 clicks, all landing on /muren-stucen/. Best: "sausklaar stucen" 813 impr pos 19.6,
+# "sausklaar stucwerk" 708 pos 29.2, "behangklaar stucen" 435 pos 32.9, "behangklaar stucwerk" 432 pos 37.3.
+# Google Ads volume (NL): behangklaar 320, sausklaar stucen 260, sausklaar stucwerk 170, sausklaar 140,
+# behangklaar stucen 140, behangklaar stucwerk 90 per month (≈1,100 total).
+
+page:
+  slug: "muren-stucen/sausklaar-behangklaar"
+  url: "/muren-stucen/sausklaar-behangklaar/"
+  pageType: "cluster"
+  taskType: "create"
+  currentFile: "app/muren-stucen/sausklaar-behangklaar/page.tsx"
+  contentFile: "inline (no separate lib/content file, same pattern as /gevelisolatie/kosten/)"
+
+seo:
+  primaryKeyword: "sausklaar stucen"
+  secondaryKeywords:
+    - "behangklaar stucen"
+    - "sausklaar stucwerk"
+    - "behangklaar stucwerk"
+    - "behangklaar of sausklaar"
+    - "verschil sausklaar en behangklaar"
+    - "sausklaar stucen prijs"
+    - "sausklaar stucwerk voorstrijken"
+    - "sausklaar stucen nieuwbouw"
+  searchIntent: "mixed: definition/comparison + price (pre-purchase)"
+  pageGoal: "Rank top-20 on sausklaar/behangklaar family within 8 weeks (from 20–37), ≥20 clicks/90d by 2026-11-15, route to opname"
+
+cannibalization:
+  siblingPages:
+    - "/muren-stucen/"
+    - "/buiten-stucwerk/"
+  doNotCoverDeeply:
+    - "muren stucen overview, voordelen, full werkwijze stepper, spackspuitwerk/raapwerk detail (→ /muren-stucen/)"
+    - "buitenmuur stucen (→ /buiten-stucwerk/)"
+  differentiator: "Only page about the two finish levels: definition, side-by-side difference, price per level, choice helper by end finish, voorstrijken/schuren/droogtijd for sausklaar, NOA note on the term"
+  parentAdjustment: "Parent keeps head 'muren stucen (kosten)'; parent links to child above the fold (hero) and from the afwerking section; parent FAQ items on the difference stay (short) — child holds the depth"
+
+content:
+  pageRoleSummary: "Explain sausklaar vs behangklaar, give the price per level, and let the visitor pick the right level before requesting an opname"
+  userQuestionsToAnswer:
+    - "Wat betekent sausklaar stucen?"
+    - "Wat is het verschil tussen behangklaar en sausklaar?"
+    - "Wat kost sausklaar / behangklaar per m²?"
+    - "Kan een stukadoor sausklaar stucen?"
+    - "Moet ik sausklaar stucwerk nog schuren?"
+    - "Kan behangklaar later sausklaar worden?"
+    - "Moet nieuwbouw worden voorgestreken?"
+    - "Wat is het verschil tussen stucen en sauzen?"
+  requiredSections:
+    - "Hero + H1 + two price teasers + CTA"
+    - "Prijs per m² (PriceCards) + rekenvoorbeeld 10 m²"
+    - "Het verschil (two cards) + NOA callout"
+    - "Keuzehulp: schilderen / behangen / renovatie / nieuwbouw"
+    - "Voorstrijken, schuren, droogtijd"
+    - "Werkwijze"
+    - "FAQ"
+    - "Related links + internal links"
+  ctaType: "offerte"
+
+links:
+  requiredOutgoing:
+    - url: "/muren-stucen/"
+      anchorIntent: "terug naar pillar (alle afwerkingsniveaus)"
+    - url: "/contact/"
+      anchorIntent: "offerte aanvragen"
+  requiredIncoming:
+    - from: "/muren-stucen/"
+      where: "hero (under price teaser, above the fold) + afwerking section closeLine + internalLinks footer"
+  suggestedContextual:
+    - url: "/buiten-stucwerk/"
+      anchorIntent: "term confusion binnen vs buiten"
+    - url: "/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/"
+      anchorIntent: "real interior stucwerk project"
+
+serp:
+  # DataForSEO SERP, Google NL desktop, 2026-09-04, keyword "sausklaar stucen"
+  topResultFormats:
+    - "AI Overview on top (definition + difference + price €10–20/m² wanden, €15–25 plafonds, cites homedeal/stucadoor-expert)"
+    - "industry article (NOA: 'stop met gebruik van term sausklaar')"
+    - "price page (homedeal €10–25/m²)"
+    - "forum thread (klusidee: schuren/gronden hoort bij schilderen)"
+    - "difference explainers (wandenplafondspuiten, stucadoor-expert, vakmanvinden)"
+    - "contractor pages (slegers, stuc-concurrent, kinneging)"
+  featuredSnippetType: "AI Overview"
+  peopleAlsoAsk:
+    - "Wat betekent sausklaar stucen?"
+    - "Kan een stukadoor sausklaar stucen?"
+    - "Wat kost sausklaar stucen?"
+    - "Wat is het verschil tussen stucen en sauzen?"
+  relatedSearches:
+    - "Sausklaar stucen prijs"
+    - "Sausklaar stucwerk voorstrijken"
+    - "Behangklaar of sausklaar stucen"
+    - "Moet je sausklaar stucwerk schuren"
+    - "Behangklaar stucen prijs"
+    - "Sausklaar vs behangklaar"
+  contentGaps:
+    - "AI Overview quotes plafond prices; our page only covers wanden (plafonds is 'op aanvraag' on the parent)"
+
+# ── Uncertainty flags (owner to confirm) ────────────────────────────────────────
+uncertainty:
+  - "[CLAIM_NEEDS_CONFIRMATION] 'Een behangklare wand kan later alsnog sausklaar worden gemaakt met een extra dunne afwerklaag' — standard practice per SERP sources, but confirm BM klus offers this as a service."
+  - "[CLAIM_NEEDS_CONFIRMATION] Rekenvoorbeeld 10 m² (€100–€220 / €150–€300) is arithmetic on the published ranges — confirm it matches real quotes incl. any starttarief."
+  - "[MISSING_BUSINESS_INPUT] Prijs per m² for plafonds sausklaar (competitors and AI Overview quote it; parent says 'op aanvraag'). If BM klus has a range, add a plafond row."
+  - "[CHECK_LOCAL_WORDING] NOA callout wording: 'brancheorganisatie voor stukadoors (NOA)' — NOA = Nederlandse Ondernemersvereniging voor Afbouwbedrijven; confirm the short description is acceptable."
+  - "Design pass pending for both new cluster pages (owner request 2026-09-04): make them visually attractive; not a content change."

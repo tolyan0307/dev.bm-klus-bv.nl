@@ -305,6 +305,7 @@ export const faq = {
 };
 
 export const internalLinks = [
+  { label: "Gevel keimen: kosten", href: "/gevel-schilderen/keimen/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
   { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
   { label: "Sierpleister", href: "/sierpleister/" },

@@ -294,6 +294,7 @@ export const faq = {
 };
 
 export const internalLinks = [
+  { label: "Sausklaar of behangklaar", href: "/muren-stucen/sausklaar-behangklaar/" },
   { label: "Gevelisolatie", href: "/gevelisolatie/" },
   { label: "Buiten stucwerk", href: "/buiten-stucwerk/" },
   { label: "Sierpleister", href: "/sierpleister/" },

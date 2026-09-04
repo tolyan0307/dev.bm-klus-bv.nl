@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react"
 import { usePathname, useSearchParams } from "next/navigation"
 
+import { captureAttribution } from "@/lib/attribution"
+
 const API_BASE =
   process.env.NEXT_PUBLIC_CONTACT_API_BASE?.replace(/\/+$/, "") ?? ""
 const ENDPOINT = `${API_BASE}/wp-json/bm-stats/v1/pageview`
@@ -33,6 +35,7 @@ export default function PageviewBeacon() {
     if (url === lastUrl.current) return
     lastUrl.current = url
 
+    captureAttribution()
     send(url, document.referrer)
   }, [pathname, searchParams])
 

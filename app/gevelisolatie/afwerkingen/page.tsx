@@ -282,6 +282,11 @@ const relatedLinks: RelatedLinkItem[] = [
     description: "Verflaag als bescherming en opfrisbeurt voor de gevel.",
     href: "/gevel-schilderen/",
   },
+  {
+    label: "Gevel keimen: kosten",
+    description: "Silicaatverf op minerale gevels: richtprijzen per m² en wanneer keimen past.",
+    href: "/gevel-schilderen/keimen/",
+  },
 ]
 
 /* ── Page Component ── */

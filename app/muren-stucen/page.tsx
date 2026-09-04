@@ -200,6 +200,13 @@ export default function MurenStucenPage() {
                   incl. arbeid & materiaal · prijs na opname
                 </span>
               </div>
+              <Link
+                href="/muren-stucen/sausklaar-behangklaar/"
+                className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-white/85 underline-offset-4 transition-colors hover:text-white hover:underline"
+              >
+                Sausklaar of behangklaar? Bekijk het verschil en de prijs per m²
+                <ArrowRight size={14} className="text-[#EA6C20]" />
+              </Link>
 
               {/* Trust bullets */}
               <div className="flex flex-col gap-2">
@@ -498,6 +505,15 @@ export default function MurenStucenPage() {
               </div>
               <p className="mt-5 text-sm italic text-muted-foreground">
                 {afwerking.closeLine}
+              </p>
+              <p className="mt-3 text-sm">
+                <Link
+                  href="/muren-stucen/sausklaar-behangklaar/"
+                  className="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline underline-offset-4"
+                >
+                  Uitgebreid: sausklaar of behangklaar, het verschil en de prijs per m²
+                  <ArrowRight size={14} />
+                </Link>
               </p>
             </div>
           </section>

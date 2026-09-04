@@ -18,6 +18,7 @@ import {
   X,
 } from "lucide-react"
 import { trackEvent } from "@/components/gtm-provider"
+import { getAttribution } from "@/lib/attribution"
 
 interface TurnstileInstance {
   render: (
@@ -199,6 +200,8 @@ export default function QuoteModal({
           consent,
           sourceUrl:
             typeof window !== "undefined" ? window.location.href : "",
+          referrer: typeof document !== "undefined" ? document.referrer : "",
+          attribution: getAttribution(),
           company,
           turnstileToken,
         }),
