@@ -2,11 +2,14 @@
 
 import { useEffect } from "react"
 import { trackEvent } from "@/components/gtm-provider"
+import { sendStatsEvent, type StatsCta } from "@/lib/stats-beacon"
 
-function resolveChannel(href: string): string | null {
-  if (href.includes("wa.me/") || href.includes("api.whatsapp.com")) return "bm_whatsapp_click"
-  if (href.startsWith("tel:")) return "bm_phone_click"
-  if (href.startsWith("mailto:")) return "bm_email_click"
+function resolveChannel(href: string): { event: string; cta: StatsCta } | null {
+  if (href.includes("wa.me/") || href.includes("api.whatsapp.com")) {
+    return { event: "bm_whatsapp_click", cta: "whatsapp" }
+  }
+  if (href.startsWith("tel:")) return { event: "bm_phone_click", cta: "phone" }
+  if (href.startsWith("mailto:")) return { event: "bm_email_click", cta: "email" }
   return null
 }
 
@@ -30,12 +33,13 @@ export function CtaClickTracker() {
       const target = e.target as HTMLElement | null
       const link = target?.closest<HTMLAnchorElement>("a[href]")
       if (!link) return
-      const event = resolveChannel(link.getAttribute("href") ?? "")
-      if (!event) return
-      trackEvent(event, {
+      const channel = resolveChannel(link.getAttribute("href") ?? "")
+      if (!channel) return
+      trackEvent(channel.event, {
         placement: resolvePlacement(link),
         page_path: window.location.pathname,
       })
+      sendStatsEvent("cta_click", channel.cta)
     }
     document.addEventListener("click", onClick, { capture: true, passive: true })
     return () => document.removeEventListener("click", onClick, { capture: true })

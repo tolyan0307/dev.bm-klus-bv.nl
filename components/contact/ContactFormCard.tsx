@@ -209,6 +209,7 @@ export default function ContactFormCard() {
           sourceUrl: window.location.href,
           referrer: document.referrer,
           attribution: getAttribution(),
+          formVariant: "contact_form",
           company,
           turnstileToken,
         }),

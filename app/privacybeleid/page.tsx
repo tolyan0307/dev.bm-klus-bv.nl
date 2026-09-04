@@ -218,6 +218,11 @@ export default function PrivacybeleidPage() {
               We gebruiken Google Ads om de effectiviteit van campagnes te meten en, indien u toestemming geeft, relevantere advertenties te tonen. Hiervoor kunnen marketingcookies of vergelijkbare technologie worden gebruikt.
             </p>
 
+            <h3 className="text-base font-semibold text-foreground mb-2">Websitestatistieken zonder cookies</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              Om te begrijpen welke pagina&apos;s en campagnes tot aanvragen leiden, houden wij op onze eigen server bij welke pagina&apos;s worden bekeken, via welke bron bezoekers binnenkomen en op welke contactknoppen wordt geklikt. Hiervoor plaatsen wij geen cookies en slaan wij niets op uw apparaat op. Wij bewaren hierbij geen IP-adres en geen individueel bezoekersprofiel; deze gegevens worden na 13 maanden verwijderd. Bij het versturen van een aanvraag bewaren wij, naast de door u ingevulde gegevens, de pagina en de campagne via welke u ons heeft gevonden, zodat wij uw aanvraag goed kunnen opvolgen. Grondslag: gerechtvaardigd belang (artikel 6 lid 1 sub f AVG).
+            </p>
+
             <h3 className="text-base font-semibold text-foreground mb-2">Cookievoorkeuren aanpassen</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               U kunt uw voorkeuren op elk moment wijzigen via de cookiebanner en/of de cookie-instellingen (indien beschikbaar).

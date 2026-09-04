@@ -1,11 +1,15 @@
 /**
  * First-touch attribution for lead forms.
  *
- * Captures, once per browser session, the landing URL, referrer and any
- * utm_* / gclid parameters of the first page view, and exposes them so the
- * contact form and quote modal can send them along with the lead.
- * Stored in sessionStorage (no cookies, no PII). Every access is guarded:
- * if storage is unavailable the functions fall back to the current location.
+ * Captures the landing URL, referrer and any utm_* / gclid parameters of the
+ * first page view of this tab and exposes them so the contact form and quote
+ * modal can send them along with the lead.
+ *
+ * Kept in a module-level variable only: nothing is written to cookies,
+ * localStorage or sessionStorage. Next.js App Router navigates client-side
+ * after the first load, so the value survives internal navigation and is
+ * reset on a hard reload or in a new tab (then the current page becomes the
+ * first touch).
  */
 
 export interface Attribution {
@@ -20,8 +24,9 @@ export interface Attribution {
   first_seen_at: string
 }
 
-const STORAGE_KEY = "bm_attr_v1"
 const PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid"] as const
+
+let firstTouch: Attribution | null = null
 
 function readParams(url: string): Record<(typeof PARAMS)[number], string | null> {
   const out = {} as Record<(typeof PARAMS)[number], string | null>
@@ -50,38 +55,20 @@ function fromLocation(): Attribution {
   }
 }
 
-function load(): Attribution | null {
-  try {
-    const raw = window.sessionStorage.getItem(STORAGE_KEY)
-    return raw ? (JSON.parse(raw) as Attribution) : null
-  } catch {
-    return null
-  }
-}
-
-function save(a: Attribution): void {
-  try {
-    window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(a))
-  } catch {
-    /* storage unavailable: nothing to persist */
-  }
-}
-
 /**
- * Call on every route change. Stores the first page view of the session;
+ * Call on every route change. Remembers the first page view of this tab;
  * if a later page view carries campaign parameters while the stored one has
- * none (e.g. a same-session return via an ad), the campaign fields are updated.
+ * none (e.g. a same-tab return via an ad), the campaign fields are updated.
  */
 export function captureAttribution(): void {
   if (typeof window === "undefined") return
   const current = fromLocation()
-  const stored = load()
-  if (!stored) {
-    save(current)
+  if (!firstTouch) {
+    firstTouch = current
     return
   }
-  if (!hasCampaignParams(stored) && hasCampaignParams(current)) {
-    save({ ...stored, ...readParams(current.landing_url) })
+  if (!hasCampaignParams(firstTouch) && hasCampaignParams(current)) {
+    firstTouch = { ...firstTouch, ...readParams(current.landing_url) }
   }
 }
 
@@ -100,5 +87,5 @@ export function getAttribution(): Attribution {
       first_seen_at: "",
     }
   }
-  return load() ?? fromLocation()
+  return firstTouch ?? fromLocation()
 }

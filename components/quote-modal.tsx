@@ -202,6 +202,7 @@ export default function QuoteModal({
             typeof window !== "undefined" ? window.location.href : "",
           referrer: typeof document !== "undefined" ? document.referrer : "",
           attribution: getAttribution(),
+          formVariant: "quote_modal",
           company,
           turnstileToken,
         }),
