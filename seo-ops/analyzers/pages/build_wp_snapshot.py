@@ -47,7 +47,7 @@ REPORT_DIR = SEO_OPS_ROOT / "reports" / "pages"
 EVENTS_SINCE = "2026-09-04"   # first day with pageview / cta events on PROD
 LEADS_SINCE = "2026-03-11"    # earliest lead record in WP
 
-STATUSES = ["new", "qualified", "won", "lost", "spam"]
+STATUSES = ["new", "qualified", "won", "lost", "spam", "archive"]  # archive = backfilled lead, outcome unknown, counts as real
 SOURCES = ["ads", "campaign", "organic", "referral", "direct"]
 
 
@@ -325,7 +325,7 @@ def write_summary(raw: dict, leads_table: list[dict], pv_daily: list[dict], pv_p
         "2. Leads before 2026-09-04 were backfilled: source comes from the form page URL only (utm/gclid), no first-touch referrer, form variant unknown.",
         "3. Lead source is classified from first-touch UTM/gclid/referrer, not from GA4 channel grouping; the two are not expected to match 1:1.",
         "4. No cookies, no visitor identifier: unique visitors are not available (visitor hash disabled by owner decision).",
-        "5. Statuses are set manually by the owner; `new` means not yet triaged, not necessarily a real lead.",
+        "5. Statuses are set manually by the owner; `new` means not yet triaged, `archive` means a real pre-2026-09-05 lead whose outcome is unknown (excluded from qualified/won ratios).",
         "",
         "## Output files",
         "",

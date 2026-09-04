@@ -186,6 +186,7 @@ def main() -> None:
     ga4_cta_since = sum(int(r["ga4_phone"]) + int(r["ga4_whatsapp"]) + int(r["ga4_email"]) for r in rows if parse_date(r["week_end"]) >= EVENTS_SINCE)
     undercount = round(ga4_form_total / wp_total * 100, 1) if wp_total else None
     untriaged = sum(1 for l in wp["leads"].get("leads", []) if (l.get("status") or "new") == "new")
+    archived = sum(1 for l in wp["leads"].get("leads", []) if l.get("status") == "archive")
 
     # Ads-window comparison: WP ads-sourced leads in Ads CSV coverage
     ads_cmp = None
@@ -223,6 +224,7 @@ def main() -> None:
         f"| Form submissions received by the site | {wp_total} | {L_WP} |",
         f"| … excluding status `spam` | {wp_real} | {L_WP} |",
         f"| … triaged (qualified + won + lost) | {wp_q} | {L_WP} |",
+        f"| … `archive` (real, outcome unknown, pre-2026-09-05) | {archived} | {L_WP} |",
         f"| … still status `new` (not triaged) | {untriaged} | {L_WP} |",
         f"| … first-touch source ads / direct / organic / other | {wp_ads} / {wp_direct} / {wp_organic} / {wp_total - wp_ads - wp_direct - wp_organic} | {L_WP} |",
         f"| … with gclid | {wp_gclid} | {L_WP} |",
@@ -287,7 +289,7 @@ def main() -> None:
         "",
         "## 4. Recommended actions (manual)",
         "",
-        "1. Triage every `new` lead in WP → BM Stats → Заявки (status qualified / won / lost / spam). Without this the reconciliation stays at 'submissions', not 'leads'.",
+        "1. Triage every `new` lead in WP → BM Stats → Заявки (status qualified / won / lost / spam). Leads from before 2026-09-05 with unknown outcome stay `archive`; only obvious spam among them should be re-marked. Without this the reconciliation stays at 'submissions', not 'leads'.",
         "2. Measurement setup needs no change: GTM link-click triggers feed GA4 `Phone`/`Whatsapp`/`Email`, all four events are key events in GA4 (verified 2026-09-05). Keep it as is; do not add `bm_*` tags.",
         "3. Use the WP lead count as the denominator in every conversion-rate claim; treat GA4 key events as a consent-limited sample. Record the undercount factor in `config/analysis_context_v1.yaml` once 4 weeks of data exist.",
         "4. After one month of triaged data: plan the offline conversion import to Google Ads by gclid for `qualified`/`won` leads (spec §1, later phase).",
