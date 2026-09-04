@@ -31,7 +31,6 @@ import TrustStrip from "@/components/trust-strip"
 import TableOfContents from "@/components/page/TableOfContents"
 import Section from "@/components/page/Section"
 import Callout from "@/components/page/Callout"
-import PriceCards from "@/components/page/PriceCards"
 import FaqAccordion from "@/components/page/FaqAccordion"
 import RelatedLinks from "@/components/page/RelatedLinks"
 import type { RelatedLinkItem } from "@/components/page/RelatedLinks"
@@ -64,31 +63,11 @@ const heroBreadcrumbs = [
 ]
 
 const toc = [
-  { id: "richtprijzen",  label: "Prijs per m²" },
   { id: "verschil",      label: "Het verschil" },
   { id: "welk-niveau",   label: "Welk niveau kiest u?" },
   { id: "voorstrijken",  label: "Voorstrijken, schuren & droogtijd" },
   { id: "werkwijze",     label: "Werkwijze" },
   { id: "faq",           label: "Veelgestelde vragen" },
-]
-
-const priceCards = [
-  {
-    title: "Behangklaar stucwerk",
-    range: "€10 – €22/m²",
-    note: "Egale ondergrond, lichte textuur toegestaan. Basis voor behang.",
-  },
-  {
-    title: "Sausklaar stucwerk",
-    range: "€15 – €30/m²",
-    note: "Volledig glad, geen zichtbare structuur. Direct te sauzen of te schilderen.",
-    highlighted: true,
-  },
-]
-
-const priceNoteLines = [
-  "Richtprijzen (indicatie) incl. arbeid & standaardmaterialen. Kleine oppervlakken kunnen een starttarief hebben; exacte prijs volgt na opname.",
-  "Ruwe of ongelijke wanden vragen eerst raapwerk (€15 – €30/m²). Spackspuitwerk (€8 – €15/m²) is het alternatief bij renovatie van bestaand stucwerk.",
 ]
 
 const verschilCards = [
@@ -186,12 +165,12 @@ const faqItems = [
   {
     vraag: "Wat kost sausklaar stucen per m²?",
     antwoord:
-      "Als richtprijs rekent u op €15 tot €30 per m² voor sausklaar stucwerk, inclusief arbeid en standaardmaterialen. Ruwe wanden vragen eerst raapwerk (€15 tot €30 per m²). Kleine oppervlakken kunnen een starttarief hebben. De exacte prijs wordt na opname op locatie vastgesteld.",
+      "De prijs per m² voor sausklaar stucwerk hangt af van de staat van de wand, het aantal lagen en het oppervlak; sausklaar vraagt meer arbeid dan behangklaar en is daardoor duurder per m². Ruwe of ongelijke wanden vragen eerst raapwerk, dat apart in de offerte staat. Kleine oppervlakken kunnen een starttarief hebben. De exacte prijs wordt na een gratis opname op locatie vastgesteld.",
   },
   {
     vraag: "Wat kost behangklaar stucen per m²?",
     antwoord:
-      "Behangklaar stucwerk kost als richtprijs €10 tot €22 per m², inclusief arbeid en standaardmaterialen. Het is voordeliger dan sausklaar omdat een lichte textuur is toegestaan en de afwerking minder arbeid vraagt. Ook hier geldt: exacte prijs na opname.",
+      "Behangklaar stucwerk is voordeliger dan sausklaar omdat een lichte textuur is toegestaan en de afwerking minder arbeid vraagt. De prijs per m² hangt verder af van de staat van de ondergrond en het oppervlak. Ook hier geldt: exacte prijs na een gratis opname op locatie.",
   },
   {
     vraag: "Kan een stukadoor sausklaar stucen?",
@@ -260,12 +239,10 @@ export default function SausklaarBehangklaarPage() {
   const business = localBusinessSchema()
 
   const service = serviceSchema({
-    name: "Sausklaar of behangklaar stucen – prijs per m²",
+    name: "Sausklaar of behangklaar stucen",
     description:
-      "Sausklaar stucwerk €15–€30/m², behangklaar €10–€22/m². Het verschil, wanneer u welk niveau kiest, voorstrijken, schuren en droogtijd. Opname in regio Rotterdam.",
+      "Sausklaar of behangklaar stucen: het verschil, wanneer u welk niveau kiest, wat de prijs bepaalt, voorstrijken, schuren en droogtijd. Opname in regio Rotterdam.",
     url: `${base}/muren-stucen/sausklaar-behangklaar/`,
-    lowPrice: "10",
-    highPrice: "30",
   })
 
   const faqSchema = {
@@ -336,19 +313,16 @@ export default function SausklaarBehangklaarPage() {
 
               <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
                 Gaat u schilderen, dan heeft u sausklaar nodig; gaat u behangen, dan volstaat
-                behangklaar. Hier leest u wat beide niveaus inhouden, wat ze kosten en hoe u
+                behangklaar. Hier leest u wat beide niveaus inhouden, wat de prijs bepaalt en hoe u
                 de juiste keuze maakt vóór de stukadoor begint.
               </p>
 
               <div className="flex flex-wrap items-center gap-3">
                 <span className="rounded-lg bg-primary/15 px-3 py-1.5 text-sm font-bold text-primary ring-1 ring-primary/25">
-                  Behangklaar €10 – €22/m²
-                </span>
-                <span className="rounded-lg bg-primary/15 px-3 py-1.5 text-sm font-bold text-primary ring-1 ring-primary/25">
-                  Sausklaar €15 – €30/m²
+                  Gratis opname & offerte
                 </span>
                 <span className="text-xs text-white/50">
-                  incl. arbeid &amp; materiaal · prijs na opname
+                  prijs na opname op locatie
                 </span>
               </div>
 
@@ -411,34 +385,6 @@ export default function SausklaarBehangklaarPage() {
           <TableOfContents items={toc} className="mb-2" />
         </div>
 
-        {/* ── 1. Richtprijzen ── */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Section
-            id="richtprijzen"
-            eyebrow="Prijsoverzicht"
-            h2="Sausklaar en behangklaar stucen: prijs per m²"
-            accentWord="prijs per m²"
-            lead="Het afwerkingsniveau is de grootste prijsfactor bij binnenstucwerk. Sausklaar vraagt meer arbeid dan behangklaar en kost daarom meer per vierkante meter."
-          >
-            <PriceCards cards={priceCards} noteLines={priceNoteLines} />
-
-            <div className="mt-8 grid gap-6 lg:grid-cols-2">
-              <Callout variant="orange" title="Rekenvoorbeeld: één wand van 10 m²">
-                <p>
-                  Behangklaar komt bij €10 tot €22 per m² uit op ongeveer <strong>€100 tot €220</strong>;
-                  sausklaar bij €15 tot €30 per m² op ongeveer <strong>€150 tot €300</strong>. Bij kleine
-                  oppervlakken kan een starttarief gelden.
-                </p>
-              </Callout>
-              <Callout variant="info" title="Exacte prijs na opname op locatie">
-                <p>
-                  Wij beoordelen de ondergrond, meten het oppervlak en leggen het afwerkingsniveau vast.
-                  U ontvangt een offerte waarin staat wat wel en niet is inbegrepen.
-                </p>
-              </Callout>
-            </div>
-          </Section>
-        </div>
 
         {/* ── 2. Het verschil (warm bg) ── */}
         <div className="bg-secondary/30">

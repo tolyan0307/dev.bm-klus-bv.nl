@@ -76,8 +76,6 @@ function PageJsonLd() {
     name: "Buiten stucwerk (gevel stucen)",
     description: "Buitenmuur stucen in regio Rotterdam. Cementpleister, betonstuc, spachtelputz, crepi. Prijs per m² na opname op locatie.",
     url: `${base}/buiten-stucwerk/`,
-    lowPrice: "35",
-    highPrice: "110",
   })
 
   const faqSchema = {
@@ -173,13 +171,13 @@ export default function BuitenStucwerkPage() {
                 {hero.lead[0]}
               </p>
 
-              {/* Price teaser */}
+              {/* Offerte teaser */}
               <div className="flex items-center gap-3">
                 <span className="rounded-lg bg-[#EA6C20]/15 px-3 py-1.5 text-sm font-bold text-[#EA6C20] ring-1 ring-[#EA6C20]/25">
-                  Vanaf €35/m²
+                  Gratis opname & offerte
                 </span>
                 <span className="text-xs text-white/50">
-                  incl. arbeid & materiaal · excl. steiger
+                  prijs na opname op locatie
                 </span>
               </div>
 
@@ -363,7 +361,7 @@ export default function BuitenStucwerkPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTagline>Kosten</SectionTagline>
             <h2 className="mt-2 mb-8 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl text-balance">
-              Kosten buitenmuur stucen <span className="text-primary">(prijs per m²)</span>
+              Kosten buitenmuur stucen <span className="text-primary">(wat bepaalt de prijs?)</span>
             </h2>
 
             <div className="mb-6 rounded-2xl border border-border bg-card overflow-hidden">
@@ -371,10 +369,10 @@ export default function BuitenStucwerkPage() {
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{kosten.intro}</p>
               </div>
               <div className="grid grid-cols-2 divide-x divide-border border-t border-border bg-secondary/40 sm:grid-cols-4">
-                {kosten.prices.map(({ label, value }) => (
+                {kosten.opties.map(({ label, note }) => (
                   <div key={label} className="flex flex-col items-center py-4 px-3 text-center">
-                    <span className="text-base font-bold text-primary sm:text-lg">{value}</span>
-                    <span className="mt-0.5 text-[11px] text-muted-foreground">{label}</span>
+                    <span className="text-sm font-bold text-primary sm:text-base">{label}</span>
+                    <span className="mt-1 text-[11px] leading-snug text-muted-foreground">{note}</span>
                   </div>
                 ))}
               </div>

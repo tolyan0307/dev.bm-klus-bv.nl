@@ -24,7 +24,7 @@
 
 **Pattern for each service page:**
 - Server Component with dynamic imports (ServicesRail, ReviewsSection, StickyCTABar, QuoteModal)
-- Hero: Image background, price teaser, CTAs (#offerte + WhatsApp), Google stars, phone
+- Hero: Image background, offerte teaser (no prices), CTAs (#offerte + WhatsApp), Google stars, phone
 - TrustStrip after Hero
 - Content sections with unique service data
 - WaaromBmKlusSection (shared component with per-page `subtitle` prop)

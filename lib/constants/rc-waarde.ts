@@ -3,7 +3,7 @@
  *
  * Gebruikt door:
  *   - components/sections/gevelisolatie/rc-waarde-dikte-section.tsx  (pillar teaser)
- *   - components/sections/gevelisolatie/rc-waarde-dikte-calculator.tsx (cluster calculator)
+ *   - components/sections/gevelisolatie/rc-waarde-dikte-table.tsx      (cluster diktetabel)
  *
  * Lambda-waarden zijn interne conservatieve rekenwaarden voor consistentie
  * op de website. Exacte lambda en totale opbouw variëren per fabrikant en
@@ -27,16 +27,6 @@ export const OPBOUW_OPSLAG: Record<string, number> = {
 
 // ── Materiaallijst (volgorde = weergavevolgorde) ──────────────────────────
 export const MATERIALEN = Object.keys(LAMBDA)
-
-// ── Slider range ──────────────────────────────────────────────────────────
-export const RC_MIN  = 1.5
-export const RC_MAX  = 6.0
-export const RC_STEP = 0.5
-
-export const RC_OPTIONS = Array.from(
-  { length: Math.round((RC_MAX - RC_MIN) / RC_STEP) + 1 },
-  (_, i) => +(RC_MIN + i * RC_STEP).toFixed(1),
-)
 
 // ── Richtwaarden (indicatief, geen normatieve minima) ─────────────────────
 export const THRESHOLDS = {

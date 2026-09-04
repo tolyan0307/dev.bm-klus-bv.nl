@@ -58,13 +58,13 @@ export default function GevelisolatieHero({
               Energiebesparend, duurzaam en direct zichtbaar resultaat.
             </p>
 
-            {/* Price teaser */}
+            {/* Offerte teaser */}
             <div className="flex items-center gap-3">
               <span className="rounded-lg bg-[#EA6C20]/15 px-3 py-1.5 text-sm font-bold text-[#EA6C20] ring-1 ring-[#EA6C20]/25">
-                Vanaf €110/m²
+                Gratis opname & offerte
               </span>
               <span className="text-xs text-white/50">
-                incl. arbeid & materiaal · excl. steiger
+                prijs na opname op locatie
               </span>
             </div>
 

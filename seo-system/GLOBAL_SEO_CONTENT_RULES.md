@@ -89,7 +89,7 @@ These pages have overlapping topics. When editing one, check the listed siblings
 | `/sierpleister/` | Decorative facade plaster (spachtelputz/crepi) | `/buiten-stucwerk/`, `/gevelisolatie/afwerkingen/` |
 | `/gevel-schilderen/` | Facade painting | `/buiten-stucwerk/` (voorbereiding overlap) |
 | `/muren-stucen/` | Interior plastering | `/buiten-stucwerk/` (term confusion binnenmuur vs buitenmuur) |
-| `/gevelisolatie/kosten/` | ETICS pricing deep-dive | `/gevelisolatie/` kosten section |
+| `/gevelisolatie/kosten/` | ETICS cost-factors deep-dive (no numeric prices) | `/gevelisolatie/` kosten section |
 | `/gevelisolatie/afwerkingen/` | Finish options after ETICS | `/buiten-stucwerk/`, `/sierpleister/` |
 | `/gevelisolatie/materialen/` | Insulation materials (EPS/PIR/wol) | `/gevelisolatie/rc-waarde-dikte/` |
 | `/gevelisolatie/subsidie-vergunning/` | ISDE subsidy + permits | — |
@@ -210,23 +210,10 @@ When editing content:
 
 ---
 
-## 10. Hardcoded prices in content files (reference)
+## 10. Prices in content files (owner decision 2026-09)
 
-These prices appear in `lib/content/*.ts` and page files. Flag any change requests with `[CLAIM_NEEDS_CONFIRMATION]`:
+Numeric prices were removed from all public pages on 2026-09-05 (owner request). `lib/content/*.ts` and page files contain only qualitative price-level wording. **Do not reintroduce `€`-amounts, ranges, "Vanaf €" teasers, calculators or `AggregateOffer` schema.** Keep the kosten topic (H2, kostenfactoren, prijsopbouw, FAQ questions) — answers describe factors, not numbers. See `docs/governance/60-decisions-and-bans.md §Prices on public pages`.
 
-| Service | Range | Source file |
-|---------|-------|-------------|
-| ETICS + pleister | €110–€200/m² | gevelisolatie.ts |
-| ETICS + steenstrips | €200–€280/m² | gevelisolatie.ts |
-| Gevel schilderen basis | €25–€40/m² | gevel-schilderen.ts |
-| Gevel schilderen standaard | €30–€50/m² | gevel-schilderen.ts |
-| Cementpleister | €50–€80/m² | buiten-stucwerk.ts |
-| Spachtelputz | €35–€80/m² | buiten-stucwerk.ts, sierpleister.ts (€50–€95) |
-| Crepi | €60–€95/m² | buiten-stucwerk.ts, sierpleister.ts (€55–€105) |
-| Betonstuc | €80–€110/m² | buiten-stucwerk.ts |
-| Spackspuitwerk | €8–€15/m² | muren-stucen.ts |
-| Behangklaar | €10–€22/m² | muren-stucen.ts |
-| Sausklaar | €15–€30/m² | muren-stucen.ts |
 
 ---
 

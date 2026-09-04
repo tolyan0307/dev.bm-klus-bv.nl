@@ -31,7 +31,6 @@ import TrustStrip from "@/components/trust-strip"
 import TableOfContents from "@/components/page/TableOfContents"
 import Section from "@/components/page/Section"
 import Callout from "@/components/page/Callout"
-import PriceCards from "@/components/page/PriceCards"
 import FaqAccordion from "@/components/page/FaqAccordion"
 import RelatedLinks from "@/components/page/RelatedLinks"
 import type { RelatedLinkItem } from "@/components/page/RelatedLinks"
@@ -63,31 +62,11 @@ const heroBreadcrumbs = [
 ]
 
 const toc = [
-  { id: "richtprijzen",   label: "Richtprijzen per m²" },
   { id: "wat-is-keimen",  label: "Wat is keimen?" },
   { id: "wanneer-keimen", label: "Wanneer keimen (en wanneer niet)" },
   { id: "kostenfactoren", label: "Wat bepaalt de prijs?" },
   { id: "werkwijze",      label: "Werkwijze" },
   { id: "faq",            label: "Veelgestelde vragen" },
-]
-
-const priceCards = [
-  {
-    title: "Basis: stabiele minerale ondergrond, lichte reiniging",
-    range: "€25 – €40/m²",
-    note: "Onbehandeld metselwerk of pleister in goede staat, zonder herstelwerk.",
-  },
-  {
-    title: "Standaard: reiniging + voorstrijk/primer",
-    range: "€30 – €50/m²",
-    note: "Meest voorkomende situatie: grondlaag afgestemd op silicaat, daarna de keimlagen.",
-    highlighted: true,
-  },
-]
-
-const priceNoteLines = [
-  "Richtprijzen (indicatie), incl. arbeid & standaardmaterialen. Excl. steiger/hoogwerker, herstelwerk aan voegen of scheuren en intensieve reiniging.",
-  "Dezelfde bandbreedtes gelden voor ons gevelschilderwerk in het algemeen; het verfsysteem (silicaat of siloxaan) bepalen wij na beoordeling van de ondergrond.",
 ]
 
 const begrippen = [
@@ -154,12 +133,12 @@ const faqItems = [
   {
     vraag: "Wat kost gevel keimen per m²?",
     antwoord:
-      "Als richtprijs rekent u op €25 tot €40 per m² bij een stabiele minerale ondergrond met lichte reiniging, en op €30 tot €50 per m² voor de standaardsituatie met reiniging en een voorstrijk of primer. Dit is inclusief arbeid en standaardmaterialen, exclusief steiger, herstelwerk en intensieve reiniging. Na een opname op locatie ontvangt u een offerte met een duidelijke scope.",
+      "De prijs per m² hangt vooral af van de staat van de ondergrond en de benodigde voorbereiding: een stabiele minerale ondergrond met lichte reiniging is voordeliger dan een gevel die eerst gereinigd en voorgestreken moet worden. De prijs is inclusief arbeid en standaardmaterialen, exclusief steiger, herstelwerk en intensieve reiniging. Na een gratis opname op locatie ontvangt u een offerte met een duidelijke scope en prijs per m².",
   },
   {
     vraag: "Wat kost het keimen van een heel huis?",
     antwoord:
-      "Dat hangt af van het geveloppervlak en de staat van de ondergrond. Ter indicatie: de voorgevel van een rijwoning is doorgaans circa 30 tot 50 m²; bij €25 tot €50 per m² komt dat neer op ongeveer €750 tot €2.500. Meerdere gevels rekenen naar rato, waarbij hoekprofielen, steigerhoogte en herstelwerk de eindprijs bepalen. Een exacte prijs volgt na de opname.",
+      "Dat hangt af van het totale geveloppervlak, het aantal gevels en de staat van de ondergrond. Meerdere gevels rekenen naar rato, waarbij hoekprofielen, steigerhoogte en herstelwerk de eindprijs bepalen. Tijdens de opname meten wij het oppervlak in en beoordelen wij de ondergrond; daarna ontvangt u een totaalprijs voor de hele woning.",
   },
   {
     vraag: "Keimen of schilderen: wat kies ik wanneer?",
@@ -189,7 +168,7 @@ const faqItems = [
   {
     vraag: "Is de steiger inbegrepen in de prijs?",
     antwoord:
-      "Steigerhuur en -montage zijn niet inbegrepen in de m²-richtprijs, omdat hoogte en opstelruimte per woning sterk verschillen. Wij vermelden steiger of hoogwerker altijd afzonderlijk in de offerte, zodat u precies weet wat wel en niet is inbegrepen.",
+      "Steigerhuur en -montage zijn niet inbegrepen in de prijs per m², omdat hoogte en opstelruimte per woning sterk verschillen. Wij vermelden steiger of hoogwerker altijd afzonderlijk in de offerte, zodat u precies weet wat wel en niet is inbegrepen.",
   },
   {
     vraag: "In welk gebied keimen jullie gevels?",
@@ -238,12 +217,10 @@ export default function GevelKeimenPage() {
   const business = localBusinessSchema()
 
   const service = serviceSchema({
-    name: "Gevel keimen (silicaatverf) – kosten per m²",
+    name: "Gevel keimen (silicaatverf)",
     description:
-      "Wat kost gevel keimen per m²? Richtprijzen voor keimwerk, kostenfactoren, keimen of schilderen en wanneer keimen past. Opname op locatie in regio Rotterdam.",
+      "Gevel keimen met silicaatverf: kostenfactoren, keimen of schilderen en wanneer keimen past. Opname op locatie in regio Rotterdam.",
     url: `${base}/gevel-schilderen/keimen/`,
-    lowPrice: "25",
-    highPrice: "50",
   })
 
   const faqSchema = {
@@ -314,16 +291,16 @@ export default function GevelKeimenPage() {
 
               <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
                 Keimen met silicaatverf is de dampopen keuze voor minerale gevels.
-                Hier vindt u richtprijzen per m², de kostenfactoren en wanneer keimen
+                Hier leest u welke factoren de prijs bepalen en wanneer keimen
                 wél of juist niet geschikt is voor uw gevel.
               </p>
 
               <div className="flex items-center gap-3">
                 <span className="rounded-lg bg-primary/15 px-3 py-1.5 text-sm font-bold text-primary ring-1 ring-primary/25">
-                  Richtprijs €25 – €50/m²
+                  Gratis opname & offerte
                 </span>
                 <span className="text-xs text-white/50">
-                  incl. arbeid &amp; materiaal · excl. steiger
+                  prijs na opname op locatie
                 </span>
               </div>
 
@@ -386,34 +363,6 @@ export default function GevelKeimenPage() {
           <TableOfContents items={toc} className="mb-2" />
         </div>
 
-        {/* ── 1. Richtprijzen ── */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Section
-            id="richtprijzen"
-            eyebrow="Prijsoverzicht"
-            h2="Richtprijzen gevel keimen per m²"
-            accentWord="per m²"
-            lead="Keimwerk wordt per vierkante meter gevel berekend. De bandbreedte hangt vooral af van de staat van de ondergrond en de benodigde voorbereiding."
-          >
-            <PriceCards cards={priceCards} noteLines={priceNoteLines} />
-
-            <div className="mt-8 grid gap-6 lg:grid-cols-2">
-              <Callout variant="orange" title="Voorbeeld: voorgevel rijwoning">
-                <p>
-                  Een voorgevel van circa 30 tot 50 m² komt bij €25 tot €50 per m² uit op
-                  ongeveer <strong>€750 tot €2.500</strong>. Meerdere gevels rekenen naar rato;
-                  steigerhoogte en herstelwerk bepalen de eindprijs.
-                </p>
-              </Callout>
-              <Callout variant="info" title="Exacte prijs na opname op locatie">
-                <p>
-                  Na een bezoek ter plaatse ontvangt u een offerte met verfsysteem, lagenopbouw,
-                  voorbereiding en alles wat wel en niet is inbegrepen.
-                </p>
-              </Callout>
-            </div>
-          </Section>
-        </div>
 
         {/* ── 2. Wat is keimen (warm bg) ── */}
         <div className="bg-secondary/30">

@@ -30,7 +30,6 @@ import TrustStrip from "@/components/trust-strip"
 import TableOfContents from "@/components/page/TableOfContents"
 import Section from "@/components/page/Section"
 import Callout from "@/components/page/Callout"
-import PriceCards from "@/components/page/PriceCards"
 import FaqAccordion from "@/components/page/FaqAccordion"
 import RelatedLinks from "@/components/page/RelatedLinks"
 import type { RelatedLinkItem } from "@/components/page/RelatedLinks"
@@ -59,7 +58,7 @@ const heroBreadcrumbs = [
 ]
 
 const toc = [
-  { id: "richtprijzen",       label: "Richtprijzen per m²" },
+  { id: "prijsopbouw",        label: "Hoe komt de prijs per m² tot stand?" },
   { id: "kostenfactoren",     label: "Welke factoren bepalen de prijs?" },
   { id: "wat-zit-erin",       label: "Wat zit er in de prijs?" },
   { id: "voorbeeldscenarios", label: "Voorbeeldscenario's" },
@@ -70,19 +69,19 @@ const toc = [
 const priceCards = [
   {
     title: "ETICS + pleisterafwerking (stuc, sierpleister of crepi)",
-    range: "€110 – €200/m²",
+    positie: "Voordeligste afwerking per m²",
     note: "Meest gekozen afwerking; exacte prijs afhankelijk van RC-waarde, dikte en details.",
   },
   {
     title: "ETICS + steenstrips",
-    range: "€200 – €280/m²",
+    positie: "Hoger prijsniveau per m²",
     note: "Zwaarder en arbeidsintensiever; prijs sterk situatie-afhankelijk.",
     highlighted: true,
   },
 ]
 
 const priceNoteLines = [
-  "Richtprijzen (indicatie), incl. arbeid & materiaal. Excl. steiger, eventueel herstelwerk en complexe detaillering.",
+  "Prijs per m² incl. arbeid & materiaal. Excl. steiger, eventueel herstelwerk en complexe detaillering.",
   "Dakoverstekken, dagkanten en aansluitdetails kunnen meerwerk geven; exacte prijs volgt na opname.",
 ]
 
@@ -109,8 +108,8 @@ const scenarios = [
     title: "Rijwoning – voorgevel",
     oppervlak: "ca. 30–50 m²",
     afwerking: "Stuc of sierpleister (ETICS)",
-    indicatie: "€3.500 – €10.000",
-    opmerking: "Brede bandbreedte door variaties in detaillering (dagkanten, plint) en steigerhoogte.",
+    prijsfactor: "Detaillering & steigerhoogte",
+    opmerking: "Dagkanten, plint en steigerhoogte bepalen bij een enkele gevel het grootste deel van de prijs.",
     image: { baseName: "scenario-rijwoning-stucwerk", alt: "Rijwoning met stucwerk afwerking na gevelisolatie" },
     badge: "Rijwoning",
   },
@@ -118,7 +117,7 @@ const scenarios = [
     title: "Hoekwoning – meerdere gevels",
     oppervlak: "ca. 80–130 m²",
     afwerking: "Stuc of sierpleister (ETICS)",
-    indicatie: "€9.000 – €26.000",
+    prijsfactor: "Hoekprofielen & aansluitpunten",
     opmerking: "Meer hoekprofielen en aansluitpunten; exact oppervlak en bereikbaarheid bepalen de eindprijs.",
     image: { baseName: "scenario-hoekwoning-sierpleister", alt: "Hoekwoning met sierpleister afwerking op twee gevels" },
     badge: "Hoekwoning",
@@ -127,7 +126,7 @@ const scenarios = [
     title: "Twee-onder-één-kapwoning – voorgevel + zijgevel",
     oppervlak: "ca. 60–90 m²",
     afwerking: "ETICS + steenstrips",
-    indicatie: "€12.000 – €25.000",
+    prijsfactor: "Striptype & detaillering",
     opmerking: "Steenstrips vragen meer arbeid; exacte prijs sterk afhankelijk van striptype en detaillering.",
     image: { baseName: "scenario-tweekap-steenstrips", alt: "Twee-onder-één-kapwoning met steenstrips afwerking" },
     badge: "Twee-onder-één-kap",
@@ -157,7 +156,7 @@ const faqItems = [
   {
     vraag: "Wat kost gevelisolatie aan de buitenkant per m²?",
     antwoord:
-      "De richtprijzen liggen tussen €110 en €200 per m² voor ETICS met een pleisterafwerking (stuc, sierpleister of crepi), en tussen €200 en €280 per m² voor ETICS met steenstrips. Dit zijn indicaties inclusief arbeid en materiaal, exclusief steiger, eventueel herstelwerk en complexe detaillering. Na een opname op locatie ontvangt u een exacte prijs.",
+      "De prijs per m² hangt af van de RC-waarde en isolatiedikte, de gekozen afwerking en de detaillering. ETICS met een pleisterafwerking (stuc, sierpleister of crepi) is de voordeligste variant; ETICS met steenstrips ligt door het gewicht en de extra arbeid op een hoger prijsniveau. De prijs is inclusief arbeid en materiaal, exclusief steiger, eventueel herstelwerk en complexe detaillering. Na een gratis opname op locatie ontvangt u een exacte prijs per m².",
   },
   {
     vraag: "Waarom zijn steenstrips duurder dan stuc of sierpleister?",
@@ -261,10 +260,8 @@ export default function KostenGevelisolatiePage() {
   const service = serviceSchema({
     name: "Buitengevelisolatie (ETICS) – kosten",
     description:
-      "Wat kost buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips) en voorbeeldranges. Opname op locatie in regio Rotterdam.",
+      "Wat bepaalt de kosten van buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips), prijsopbouw en voorbeelden. Opname in regio Rotterdam.",
     url: `${base}/gevelisolatie/kosten/`,
-    lowPrice: "110",
-    highPrice: "280",
   })
 
   const faqSchema = {
@@ -322,7 +319,7 @@ export default function KostenGevelisolatiePage() {
               <div className="flex items-center gap-3">
                 <span className="h-px w-12 bg-primary" />
                 <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-                  Kosten &amp; prijzen · Regio Rotterdam
+                  Kosten &amp; offerte · Regio Rotterdam
                 </span>
               </div>
 
@@ -332,17 +329,17 @@ export default function KostenGevelisolatiePage() {
               </h1>
 
               <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
-                Eerlijke richtprijzen per m², de belangrijkste kostenfactoren en
-                handige voorbeeldscenario&apos;s. Na een opname op locatie ontvangt u een
+                De belangrijkste kostenfactoren, wat er in de prijs zit en
+                voorbeeldscenario&apos;s per woningtype. Na een opname op locatie ontvangt u een
                 heldere offerte met prijs per m² en RC-waarde.
               </p>
 
               <div className="flex items-center gap-3">
                 <span className="rounded-lg bg-primary/15 px-3 py-1.5 text-sm font-bold text-primary ring-1 ring-primary/25">
-                  Vanaf €110/m²
+                  Gratis opname & offerte
                 </span>
                 <span className="text-xs text-white/50">
-                  incl. arbeid &amp; materiaal · excl. steiger
+                  prijs na opname op locatie
                 </span>
               </div>
 
@@ -408,13 +405,14 @@ export default function KostenGevelisolatiePage() {
           <TableOfContents items={toc} className="mb-2" />
         </div>
 
-        {/* ── 1. Richtprijzen ── */}
+        {/* ── 1. Prijsopbouw per afwerking ── */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Section
-            id="richtprijzen"
-            eyebrow="Prijsoverzicht"
-            h2="Richtprijzen per m²"
+            id="prijsopbouw"
+            eyebrow="Prijsopbouw"
+            h2="Hoe komt de prijs per m² tot stand?"
             accentWord="per m²"
+            lead="De afwerking is de grootste keuze die het prijsniveau bepaalt. Daarbovenop wegen RC-waarde, isolatiedikte, steiger en detaillering mee."
           >
             <div className="overflow-hidden rounded-2xl border border-border/50 bg-linear-to-br from-card via-card to-secondary/30 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]">
               <div className="h-[3px] bg-linear-to-r from-primary/70 via-primary/25 to-transparent" />
@@ -443,8 +441,8 @@ export default function KostenGevelisolatiePage() {
                       <p className="mb-3 text-sm font-semibold leading-snug text-foreground">
                         {priceCards[0].title}
                       </p>
-                      <p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">
-                        {priceCards[0].range}
+                      <p className="text-xl font-black tracking-tight text-primary sm:text-2xl">
+                        {priceCards[0].positie}
                       </p>
                       <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                       {priceCards[0].note}
@@ -482,8 +480,8 @@ export default function KostenGevelisolatiePage() {
                       <p className="mb-3 text-sm font-semibold leading-snug text-foreground">
                         {priceCards[1].title}
                       </p>
-                      <p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">
-                        {priceCards[1].range}
+                      <p className="text-xl font-black tracking-tight text-primary sm:text-2xl">
+                        {priceCards[1].positie}
                       </p>
                       <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                       {priceCards[1].note}
@@ -633,7 +631,7 @@ export default function KostenGevelisolatiePage() {
               eyebrow="Voorbeelden"
               h2="Voorbeeldscenario's"
               accentWord="Voorbeeldscenario's"
-              lead="Onderstaande scenario's geven een indicatief beeld. De brede bandbreedtes weerspiegelen de invloed van detaillering, steigerhoogte en afwerking op de eindprijs."
+              lead="Onderstaande scenario's laten per woningtype zien welke factoren het zwaarst wegen in de prijs. Oppervlak, afwerking en detaillering bepalen samen de eindprijs."
             >
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {scenarios.map((scenario) => (
@@ -670,8 +668,8 @@ export default function KostenGevelisolatiePage() {
                         </div>
                       </dl>
                       <div className="mt-4 rounded-lg bg-primary/5 px-4 py-3 text-center">
-                        <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Indicatie totaal</p>
-                        <p className="mt-1 text-2xl font-black tracking-tight text-primary">{scenario.indicatie}</p>
+                        <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Bepalend voor de prijs</p>
+                        <p className="mt-1 text-lg font-black tracking-tight text-primary">{scenario.prijsfactor}</p>
                       </div>
                       <div className="mt-3 flex items-start gap-2">
                         <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground/50" strokeWidth={1.5} />
@@ -683,9 +681,9 @@ export default function KostenGevelisolatiePage() {
                   </div>
                 ))}
               </div>
-              <Callout variant="warning" className="mt-8" title="Let op: indicaties, geen vaste prijzen">
+              <Callout variant="warning" className="mt-8" title="Elke woning is maatwerk">
                 <p>
-                  Bovenstaande bedragen zijn brede bandbreedtes ter oriëntatie. De exacte prijs is altijd maatwerk en volgt na de opname op locatie.
+                  Bovenstaande scenario's zijn ter oriëntatie. De exacte prijs volgt altijd na een gratis opname op locatie, waarbij wij het oppervlak inmeten en de ondergrond beoordelen.
                 </p>
               </Callout>
             </Section>

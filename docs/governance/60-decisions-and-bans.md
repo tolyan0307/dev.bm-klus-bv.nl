@@ -67,22 +67,12 @@
 
 ---
 
-## Hardcoded prices (require owner confirmation to change)
+## Prices on public pages (owner decision 2026-09 — BAN)
 
-All prices are in `lib/content/*.ts`. Flag any change request with `[CLAIM_NEEDS_CONFIRMATION]`.
+The owner asked to remove all prices, price ranges and calculators from public pages (2026-09-04). Since 2026-09-05 no page carries numeric prices; `lib/content/*.ts` hold only qualitative price-level descriptions ("voordeligst", "hoger prijsniveau").
 
-| Service | Range | Source file |
-|---------|-------|-------------|
-| ETICS + pleister | €110–€200/m² | `lib/content/gevelisolatie.ts` |
-| ETICS + steenstrips | €200–€280/m² | `lib/content/gevelisolatie.ts` |
-| Gevel schilderen basis | €25–€40/m² | `lib/content/gevel-schilderen.ts` |
-| Gevel schilderen standaard | €30–€50/m² | `lib/content/gevel-schilderen.ts` |
-| Cementpleister | €50–€80/m² | `lib/content/buiten-stucwerk.ts` |
-| Spachtelputz | €35–€80/m² | `lib/content/buiten-stucwerk.ts` |
-| Crepi (buiten-stucwerk) | €60–€95/m² | `lib/content/buiten-stucwerk.ts` |
-| Sierpleister spachtelputz | €50–€95/m² | `lib/content/sierpleister.ts` |
-| Sierpleister crepi | €55–€105/m² | `lib/content/sierpleister.ts` |
-| Betonstuc | €80–€110/m² | `lib/content/buiten-stucwerk.ts` |
-| Spackspuitwerk | €8–€15/m² | `lib/content/muren-stucen.ts` |
-| Behangklaar | €10–€22/m² | `lib/content/muren-stucen.ts` |
-| Sausklaar | €15–€30/m² | `lib/content/muren-stucen.ts` |
+- Do **not** add `€`-amounts, `Vanaf €`, richtprijzen tables, price calculators or `AggregateOffer` schema to any page.
+- The `kosten` topic stays (H2, kostenfactoren, prijsopbouw, FAQ "Wat kost…?" with qualitative answers) — only numbers are banned.
+- Exceptions: `LocalBusiness.priceRange: "€€"` (non-numeric) and `gemiddeldBesparing` on city pages (energy savings per year — Milieu Centraal figures with source date; re-verify yearly against milieucentraal.nl «Buitenmuur isoleren aan de buitenkant», last synced June 2026: tussenwoning €320, hoekwoning/2-onder-1-kap €750, vrijstaand €1.100 at €1,37/m³).
+- Analysis and rollout: `seo-ops/reports/seo/price_removal_impact_2026-09-04.md`, `price_removal_roadmap_2026-09-05.md`.
+

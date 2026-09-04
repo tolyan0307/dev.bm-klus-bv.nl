@@ -259,7 +259,7 @@ const relatedLinks: RelatedLinkItem[] = [
   },
   {
     label: "Kosten gevelisolatie",
-    description: "Richtprijzen per m², kostenfactoren en voorbeeldscenario's.",
+    description: "Kostenfactoren, prijsopbouw en voorbeeldscenario's.",
     href: "/gevelisolatie/kosten/",
   },
   {
@@ -284,7 +284,7 @@ const relatedLinks: RelatedLinkItem[] = [
   },
   {
     label: "Gevel keimen: kosten",
-    description: "Silicaatverf op minerale gevels: richtprijzen per m² en wanneer keimen past.",
+    description: "Silicaatverf op minerale gevels: kostenfactoren en wanneer keimen past.",
     href: "/gevel-schilderen/keimen/",
   },
 ]
@@ -1002,7 +1002,7 @@ export default function AfwerkingenPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-bold text-foreground">Kostenoverzicht</p>
-                    <p className="text-xs text-muted-foreground">Bekijk richtprijzen per m² →</p>
+                    <p className="text-xs text-muted-foreground">Wat bepaalt de prijs per m²? →</p>
                   </div>
                   <ArrowRight className="h-4 w-4 text-primary/40 shrink-0 transition-transform group-hover:translate-x-0.5" />
                 </a>

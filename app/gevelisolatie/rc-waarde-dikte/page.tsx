@@ -12,7 +12,7 @@ import {
 } from "lucide-react"
 
 import GoogleRatingBadge from "@/components/google-rating-badge"
-import RcWaardeDikteCalculator from "@/components/sections/gevelisolatie/rc-waarde-dikte-calculator"
+import RcWaardeDikteTable from "@/components/sections/gevelisolatie/rc-waarde-dikte-table"
 import FaqAccordion from "@/components/page/FaqAccordion"
 import { jsonLdScript } from "@/lib/seo/schema"
 
@@ -81,7 +81,7 @@ const faqItems = [
 /* ─── Related links ──────────────────────────────────── */
 const relatedLinks = [
   { label: "Gevelisolatie",          href: "/gevelisolatie/",                  description: "Alles over buitengevelisolatie (ETICS)" },
-  { label: "Kosten gevelisolatie",   href: "/gevelisolatie/kosten/",           description: "Prijzen, factoren en voorbeeldberekeningen" },
+  { label: "Kosten gevelisolatie",   href: "/gevelisolatie/kosten/",           description: "Kostenfactoren, prijsopbouw en voorbeeldscenario's" },
   { label: "Materialen",             href: "/gevelisolatie/materialen/",      description: "EPS, PIR en minerale wol vergeleken" },
   { label: "Afwerkingen",            href: "/gevelisolatie/afwerkingen/",     description: "Sierpleister, crepi, steenstrips en meer" },
   { label: "Subsidie & vergunning",  href: "/gevelisolatie/subsidie-vergunning/", description: "ISDE-subsidie en omgevingsvergunning" },
@@ -465,7 +465,7 @@ export default function RcWaardeDiktePage() {
               </div>
 
               <p className="mt-6 text-sm text-muted-foreground">
-                Gebruik de calculator hieronder om de dikte per materiaal te zien bij uw gewenste Rc-waarde.
+                In de tabel hieronder ziet u de dikte per materiaal bij elke Rc-richtwaarde.
               </p>
             </section>
 
@@ -532,16 +532,16 @@ export default function RcWaardeDiktePage() {
               </p>
             </section>
 
-            {/* ══ 3. Interactieve calculator ══ */}
+            {/* ══ 3. Dikte per materiaal (statische richtwaarden) ══ */}
             <section id="dikte-per-materiaal" className="scroll-mt-24">
               <SectionHeader
-                eyebrow="Rekentool"
+                eyebrow="Richtwaarden"
                 heading="Dikte per materiaal"
                 accent="(indicatief)"
-                lead="Schuif de gewenste Rc-waarde en zie direct hoeveel millimeter isolatie elk materiaal nodig heeft. Exacte diktes worden bepaald tijdens de opname."
+                lead="Onderstaande tabel laat per Rc-waarde zien hoeveel millimeter isolatie EPS, PIR en minerale wol ongeveer nodig hebben. Exacte diktes worden bepaald tijdens de opname."
               />
 
-              <RcWaardeDikteCalculator />
+              <RcWaardeDikteTable />
             </section>
 
             {/* ══ 4. Waarom details belangrijk zijn ══ */}

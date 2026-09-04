@@ -451,8 +451,7 @@ _Документ создан 27.02.2026 с максимальной внима
 **Компоненты:**
 - Breadcrumbs
 - Hero
-- Content sections (pricing information)
-- Calculators or pricing tables
+- Content sections (kostenfactoren, prijsopbouw, voorbeeldscenario's — no numeric prices since 2026-09)
 - FAQ
 - StickyCTABar
 

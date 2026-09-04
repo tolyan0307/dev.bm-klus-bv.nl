@@ -142,30 +142,11 @@ export const voordelenContent = {
 export const kostenContent = {
   id: "kosten-prijs-per-m2",
   futureRoute: "/gevelisolatie/kosten/",
-  h2: "Kosten van buitengevelisolatie (prijs per m²)",
+  h2: "Kosten van buitengevelisolatie (wat bepaalt de prijs?)",
   paragraphs: [
-    "De gevelisolatie kosten worden bepaald door de RC-waarde, de isolatiedikte en de afwerking. De prijs per m² verschilt per situatie; onderstaande richtprijzen geven een eerlijk marktrealistisch beeld.",
+    "De gevelisolatie kosten worden bepaald door de RC-waarde, de isolatiedikte en de afwerking. De prijs per m² verschilt daarom per situatie: een pleisterafwerking (stuc, sierpleister of crepi) is doorgaans voordeliger dan steenstrips, die zwaarder en arbeidsintensiever zijn.",
     "Details zoals dagkanten, kozijnaansluitingen, plintprofielen en de bereikbaarheid van de gevel (steigerhoogte) beïnvloeden de eindprijs eveneens. Daarom geven wij een prijs na een opname op locatie, zodat u een goed beeld heeft van de investering.",
   ],
-  richtprijzen: {
-    label: "Richtprijzen (indicatie)",
-    cards: [
-      {
-        title: "ETICS + pleisterafwerking (stuc, sierpleister of crepi)",
-        range: "€110–€200/m²",
-        note: "Meest gekozen afwerking; exact hangt af van RC/dikte en details.",
-      },
-      {
-        title: "ETICS + steenstrips",
-        range: "€200–€280/m²",
-        note: "Zwaarder en arbeidsintensiever; prijs is sterk situatie-afhankelijk.",
-      },
-    ],
-    noteLines: [
-      "Richtprijzen (indicatie), incl. arbeid & materiaal. Excl. steiger, herstel en complexe detaillering.",
-      "Dakoverstekken, dagkanten en aansluitdetails kunnen meerwerk geven; exacte prijs volgt na opname.",
-    ],
-  },
   kostenfactoren: {
     h3: "Belangrijkste kostenfactoren",
     bullets: [
@@ -517,7 +498,7 @@ export const faqContent = {
     {
       vraag: "Wat kost buitengevelisolatie per m²?",
       antwoord:
-        "ETICS + pleisterafwerking (stuc/sierpleister/crepi) kost indicatief €110–€200/m²; ETICS + steenstrips €200–€280/m². Beide prijzen zijn inclusief arbeid en materiaal, exclusief steiger, herstelwerk en complexe detaillering. Na een gratis opname stellen wij een offerte op met RC-waarde, dikte en afwerking.",
+        "De prijs per m² hangt af van de RC-waarde en isolatiedikte, de gekozen afwerking en de detaillering. ETICS met een pleisterafwerking (stuc, sierpleister of crepi) is doorgaans voordeliger dan ETICS met steenstrips, dat zwaarder en arbeidsintensiever is. De prijs is inclusief arbeid en materiaal, exclusief steiger, herstelwerk en complexe detaillering. Na een gratis opname stellen wij een offerte op met RC-waarde, dikte, afwerking en prijs per m².",
     },
     {
       vraag: "Welke RC-waarde en dikte heb ik nodig?",

@@ -4,7 +4,7 @@
 export const meta = {
   title: "Muren stucen (binnen) – sausklaar stucwerk | BM klus BV",
   description:
-    "Binnenmuren stucen: behangklaar of sausklaar. Richtprijzen per m², werkwijze, voorbereiding en droogtijd. Regio Rotterdam (±80–100 km).",
+    "Binnenmuren stucen: behangklaar of sausklaar. Wat bepaalt de prijs per m², werkwijze, voorbereiding en droogtijd. Regio Rotterdam (±80–100 km).",
   slug: "muren-stucen",
 };
 
@@ -128,17 +128,17 @@ export const voordelen = {
 
 export const kosten = {
   id: "kosten-prijs-per-m2",
-  h2: "Kosten muren stucen (prijs per m\u00b2)",
+  h2: "Kosten muren stucen (wat bepaalt de prijs?)",
   intro:
-    "De kosten voor muren stucen hangen af van het afwerkingsniveau, de staat van de ondergrond en de ruimte. De richtprijs per m\u00b2 hieronder is een indicatie; de exacte prijs wordt na opname op locatie vastgesteld.",
-  prices: [
-    { label: "Spackspuitwerk",          value: "\u20ac8\u2013\u20ac15/m\u00b2" },
-    { label: "Behangklaar stucwerk",    value: "\u20ac10\u2013\u20ac22/m\u00b2" },
-    { label: "Sausklaar stucwerk",      value: "\u20ac15\u2013\u20ac30/m\u00b2" },
-    { label: "Raapwerk (egaliseren)",   value: "\u20ac15\u2013\u20ac30/m\u00b2", note: "Basislaag om wanden vlak te maken; daarna volgt behangklaar of sausklaar." },
+    "De kosten voor muren stucen hangen af van het afwerkingsniveau, de staat van de ondergrond en de ruimte. Hieronder ziet u per afwerking wat de prijs per m\u00b2 bepaalt; de exacte prijs wordt na een gratis opname op locatie vastgesteld.",
+  opties: [
+    { label: "Spackspuitwerk",          note: "Voordeligste afwerking; renovatie van bestaand stucwerk" },
+    { label: "Behangklaar stucwerk",    note: "Egaal, lichte textuur toegestaan; minder arbeid dan sausklaar" },
+    { label: "Sausklaar stucwerk",      note: "Volledig glad; hoogste eisen aan vlakheid, meer arbeid" },
+    { label: "Raapwerk (egaliseren)",   note: "Basislaag om wanden vlak te maken; daarna volgt behangklaar of sausklaar" },
   ],
   disclaimer: [
-    "Richtprijzen (indicatie) incl. arbeid & standaardmaterialen.",
+    "Prijs per m\u00b2 incl. arbeid & standaardmaterialen.",
     "Kleine oppervlakken kunnen een starttarief hebben; exacte prijs volgt na opname.",
   ],
   priceFactors: {
@@ -243,7 +243,7 @@ export const faq = {
     {
       question: "Wat kost muren stucen per m\u00b2?",
       answer:
-        "Als richtprijs (indicatie): spackspuitwerk \u20ac8\u2013\u20ac15/m\u00b2, behangklaar stucwerk \u20ac10\u2013\u20ac22/m\u00b2, sausklaar stucwerk \u20ac15\u2013\u20ac30/m\u00b2 en raapwerk \u20ac15\u2013\u20ac30/m\u00b2 (incl. arbeid & standaardmaterialen). Kleine oppervlakken kunnen een starttarief hebben. De exacte prijs wordt na opname vastgesteld.",
+        "De prijs per m\u00b2 hangt af van het afwerkingsniveau, de staat van de ondergrond en het oppervlak. Spackspuitwerk is de voordeligste optie, behangklaar stucwerk ligt daar iets boven en sausklaar stucwerk is door de hogere eisen aan vlakheid het meest arbeidsintensief. Ruwe wanden vragen eerst raapwerk. Kleine oppervlakken kunnen een starttarief hebben. De exacte prijs wordt na een gratis opname op locatie vastgesteld.",
     },
     {
       question: "Wat is het verschil tussen behangklaar en sausklaar?",

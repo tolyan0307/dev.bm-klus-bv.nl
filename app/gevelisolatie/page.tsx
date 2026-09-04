@@ -54,8 +54,6 @@ function PageJsonLd() {
     description:
       "Gevelisolatie aan de buitenkant (ETICS) met afwerking in stuc, sierpleister, crepi of steenstrips. Energiebesparend, duurzaam en direct zichtbaar resultaat.",
     url: `${base}/gevelisolatie/`,
-    lowPrice: "110",
-    highPrice: "280",
   })
 
   const faq = {

@@ -85,8 +85,6 @@ function PageJsonLd() {
     description:
       "Gevel sierpleister aanbrengen in regio Rotterdam. Spachtelputz, crepi, korrel 1,5–3 mm. Prijs per m² na opname op locatie.",
     url: `${base}/sierpleister/`,
-    lowPrice: "50",
-    highPrice: "105",
   })
 
   const faqSchema = {
@@ -215,13 +213,13 @@ export default function SierpleisterPage() {
                 {hero.lead[1]}
               </p>
 
-              {/* Price teaser */}
+              {/* Offerte teaser */}
               <div className="flex items-center gap-3">
                 <span className="rounded-lg bg-[#EA6C20]/15 px-3 py-1.5 text-sm font-bold text-[#EA6C20] ring-1 ring-[#EA6C20]/25">
-                  Vanaf €50/m²
+                  Gratis opname & offerte
                 </span>
                 <span className="text-xs text-white/50">
-                  incl. arbeid & materiaal · excl. steiger
+                  prijs na opname op locatie
                 </span>
               </div>
 
@@ -597,7 +595,7 @@ export default function SierpleisterPage() {
             <h2 className="mt-2 mb-3 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               Kosten gevel sierpleister{" "}
               <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
-                (prijs per m²)
+                (wat bepaalt de prijs?)
               </span>
             </h2>
             <p className="mb-10 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -605,11 +603,11 @@ export default function SierpleisterPage() {
             </p>
 
             <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-              {/* Left: price cards + disclaimer + prijsfactoren */}
+              {/* Left: systeem cards + disclaimer + prijsfactoren */}
               <div className="flex flex-col gap-5">
-                {/* Price cards */}
+                {/* Systeem cards */}
                 <div className="grid gap-3 sm:grid-cols-3">
-                  {kosten.priceCards.map(({ label, value }, i) => (
+                  {kosten.opties.map(({ label, note }, i) => (
                     <div
                       key={label}
                       className={`relative overflow-hidden rounded-2xl border px-6 py-7 transition-colors ${
@@ -624,11 +622,11 @@ export default function SierpleisterPage() {
                         </span>
                       )}
                       <div className="absolute left-0 top-5 bottom-5 w-[3px] rounded-full bg-primary/30" />
-                      <p className="text-2xl font-black text-foreground sm:text-3xl">
-                        {value}
-                      </p>
-                      <p className="mt-1.5 pr-14 text-xs leading-snug text-muted-foreground">
+                      <p className="pr-14 text-lg font-black leading-tight text-foreground sm:text-xl">
                         {label}
+                      </p>
+                      <p className="mt-1.5 text-xs leading-snug text-muted-foreground">
+                        {note}
                       </p>
                     </div>
                   ))}

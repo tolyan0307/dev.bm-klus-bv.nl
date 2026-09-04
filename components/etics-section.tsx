@@ -68,7 +68,7 @@ export default function EticsSection() {
               </Link>
               <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
                 <Link href="/gevelisolatie/kosten/" className="text-xs font-medium text-muted-foreground hover:text-primary hover:underline">
-                  Kosten & prijzen
+                  Kosten & offerte
                 </Link>
                 <Link href="/gevelisolatie/subsidie-vergunning/" className="text-xs font-medium text-muted-foreground hover:text-primary hover:underline">
                   Subsidie & vergunning

@@ -23,7 +23,7 @@
 ### Hero section
 - [ ] Photo background (not gradient-only)
 - [ ] Short H1 with primary keyword
-- [ ] Price teaser (range, not exact — no fabrication)
+- [ ] Offerte teaser in hero ("Gratis opname & offerte") — no prices, ranges or calculators (owner decision 2026-09)
 - [ ] Primary CTA: `#offerte` (not `/contact/`)
 - [ ] WhatsApp button (frosted glass style on dark background)
 - [ ] Google stars badge

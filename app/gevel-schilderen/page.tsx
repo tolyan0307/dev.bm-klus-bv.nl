@@ -82,8 +82,6 @@ function PageJsonLd() {
     description:
       "Gevel schilderen in regio Rotterdam. Silicaatverf (KEIM), siloxaan, acryl. Dampopen systemen, voorbereiding, prijs per m² na opname op locatie.",
     url: `${base}/gevel-schilderen/`,
-    lowPrice: "25",
-    highPrice: "50",
   })
 
   const faqSchema = {
@@ -209,13 +207,13 @@ export default function GevelSchilderenPage() {
                 {hero.lead[0]}
               </p>
 
-              {/* Price teaser */}
+              {/* Offerte teaser */}
               <div className="flex items-center gap-3">
                 <span className="rounded-lg bg-[#EA6C20]/15 px-3 py-1.5 text-sm font-bold text-[#EA6C20] ring-1 ring-[#EA6C20]/25">
-                  Vanaf €25/m²
+                  Gratis opname & offerte
                 </span>
                 <span className="text-xs text-white/50">
-                  incl. arbeid & materiaal · excl. steiger
+                  prijs na opname op locatie
                 </span>
               </div>
 
@@ -405,7 +403,7 @@ export default function GevelSchilderenPage() {
             <SectionTagline>Kosten</SectionTagline>
             <SectionHeading
               plain="Kosten gevel schilderen"
-              accent="(prijs per m²)"
+              accent="(wat bepaalt de prijs?)"
             />
             <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               {kosten.paragraphs[0]}
@@ -416,23 +414,23 @@ export default function GevelSchilderenPage() {
               {[
                 {
                   label: "Basis",
-                  price: "€25–40",
+                  niveau: "Voordeligst",
                   desc: "Lichte reiniging, directe verfbaarheid — geen herstelwerk vereist.",
                   highlight: false,
                 },
                 {
                   label: "Standaard",
-                  price: "€30–50",
+                  niveau: "Gemiddeld prijsniveau",
                   desc: "Reiniging + primer/voorstrijk — de meest gevraagde situatie.",
                   highlight: true,
                 },
                 {
                   label: "Intensief",
-                  price: "Op aanvraag",
+                  niveau: "Maatwerk",
                   desc: "Herstel van voegwerk of scheuren + volledige voorbereiding.",
                   highlight: false,
                 },
-              ].map(({ label, price, desc, highlight }) => (
+              ].map(({ label, niveau, desc, highlight }) => (
                 <div
                   key={label}
                   className={`relative flex flex-col overflow-hidden rounded-2xl border bg-card p-6 transition-shadow hover:shadow-md ${
@@ -451,13 +449,8 @@ export default function GevelSchilderenPage() {
                   >
                     {label}
                   </p>
-                  <p className="mt-1 text-2xl font-black tracking-tight text-foreground">
-                    {price}
-                    {price !== "Op aanvraag" && (
-                      <span className="ml-1 text-sm font-semibold text-muted-foreground">
-                        /m²
-                      </span>
-                    )}
+                  <p className="mt-1 text-xl font-black tracking-tight text-foreground">
+                    {niveau}
                   </p>
                   <p className="mt-3 flex-1 text-xs leading-relaxed text-muted-foreground">
                     {desc}
@@ -466,7 +459,7 @@ export default function GevelSchilderenPage() {
               ))}
             </div>
             <p className="mt-3 whitespace-pre-line text-xs text-muted-foreground">
-              {kosten.table.note}
+              {kosten.note}
             </p>
 
             {/* Price factors */}

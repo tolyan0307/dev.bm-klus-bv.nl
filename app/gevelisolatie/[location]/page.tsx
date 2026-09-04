@@ -41,9 +41,6 @@ import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
 import GoogleRatingBadge from "@/components/google-rating-badge"
 
-const KostenCalculator = dynamic(
-  () => import("@/components/sections/gevelisolatie/kosten-calculator"),
-)
 const ReviewsSection = dynamic(
   () => import("@/components/reviews-section"),
 )
@@ -160,8 +157,6 @@ export default async function GevelisolatieLocationPage({
     name: `Buitengevelisolatie (ETICS) ${data.city}`,
     description: data.description,
     url: `${base}/gevelisolatie/${slug}/`,
-    lowPrice: "110",
-    highPrice: "280",
   })
 
   const faqSchema = {
@@ -483,7 +478,7 @@ export default async function GevelisolatieLocationPage({
 
         <div className="below-fold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* ── Kosten calculator ── */}
+          {/* ── Kosten ── */}
           <section className="scroll-mt-24 py-16 sm:py-20">
             <div className="mb-4 flex items-center gap-3">
               <div className="h-px w-10 bg-primary" />
@@ -496,41 +491,41 @@ export default async function GevelisolatieLocationPage({
               <span className="text-primary">{data.city}?</span>
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              De kosten zijn afhankelijk van het woningtype, de oppervlakte en de
-              gekozen afwerking. Gebruik de calculator voor een globale
-              indicatie.
+              De kosten zijn afhankelijk van het woningtype, de oppervlakte, de
+              gekozen afwerking en de staat van de ondergrond. Daarom geven wij
+              een prijs na een gratis opname op locatie.
             </p>
 
-            {slug === "dordrecht" && (
-              <>
-                <div className="mt-8 flex max-w-2xl flex-col gap-5 sm:flex-row sm:items-end sm:gap-10">
-                  <div>
-                    <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground/60">
-                      ETICS + sierpleister of crepi
-                    </p>
-                    <p className="mt-1 text-xl font-bold tracking-tight text-foreground">
-                      €&thinsp;110–€&thinsp;200{" "}
-                      <span className="text-sm font-normal text-muted-foreground">per m²</span>
-                    </p>
-                  </div>
-                  <div className="hidden h-10 w-px bg-border/40 sm:block" />
-                  <div>
-                    <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground/60">
-                      ETICS + steenstrips
-                    </p>
-                    <p className="mt-1 text-xl font-bold tracking-tight text-foreground">
-                      €&thinsp;200–€&thinsp;280{" "}
-                      <span className="text-sm font-normal text-muted-foreground">per m²</span>
-                    </p>
-                  </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {[
+                { label: "Oppervlakte", desc: "Aantal m² gevel dat geïsoleerd wordt" },
+                { label: "Afwerking", desc: "Stuc, sierpleister, crepi of steenstrips" },
+                { label: "Detaillering", desc: "Dagkanten, plint, steiger en herstelwerk" },
+              ].map((f) => (
+                <div key={f.label} className="rounded-xl border border-border bg-card p-5">
+                  <p className="text-[11px] font-bold uppercase tracking-widest text-primary">
+                    {f.label}
+                  </p>
+                  <p className="mt-1.5 text-sm text-muted-foreground">{f.desc}</p>
                 </div>
-                <p className="mt-3 text-xs text-muted-foreground/50">
-                  Incl. arbeid &amp; materiaal, excl. steiger, herstel en complexe detaillering.
-                </p>
-              </>
-            )}
+              ))}
+            </div>
 
-            <KostenCalculator />
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#offerte"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Gratis opname aanvragen
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <Link
+                href="/gevelisolatie/kosten/"
+                className="text-sm font-semibold text-primary underline-offset-2 hover:underline"
+              >
+                Alle kostenfactoren bekijken →
+              </Link>
+            </div>
           </section>
         </div>
         </div>
@@ -846,8 +841,8 @@ export default async function GevelisolatieLocationPage({
                   <div className="flex-1 divide-y divide-border/25">
                     {[
                       {
-                        label: "Kosten & prijs per m²",
-                        desc: "Richtprijzen en kostenfactoren",
+                        label: "Kosten & offerte",
+                        desc: "Kostenfactoren en prijsopbouw",
                         href: "/gevelisolatie/kosten/",
                         icon: Euro,
                       },

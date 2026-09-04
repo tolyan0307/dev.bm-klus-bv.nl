@@ -756,7 +756,7 @@ export default function MaterialenPage() {
                     href="/gevelisolatie/kosten/"
                     className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
                   >
-                    Meer over kosten & richtprijzen
+                    Meer over kosten & prijsopbouw
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -814,7 +814,7 @@ export default function MaterialenPage() {
                   },
                   {
                     label: "Kosten gevelisolatie",
-                    description: "Richtprijzen per m², kostenfactoren en prijsopbouw",
+                    description: "Kostenfactoren, prijsopbouw en voorbeeldscenario's",
                     href: "/gevelisolatie/kosten/",
                   },
                   {

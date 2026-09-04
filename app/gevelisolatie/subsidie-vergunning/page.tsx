@@ -199,7 +199,7 @@ const relatedLinks = [
   {
     label: "Kosten per m²",
     href: "/gevelisolatie/kosten/",
-    description: "Richtprijzen en kostenfactoren op een rij",
+    description: "Kostenfactoren en prijsopbouw op een rij",
   },
   {
     label: "Materialen",

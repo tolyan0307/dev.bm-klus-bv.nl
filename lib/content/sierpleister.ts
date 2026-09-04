@@ -4,7 +4,7 @@
 export const meta = {
   title: "Gevel sierpleister (spachtelputz/crepi) – prijs | BM klus BV",
   description:
-    "Gevel sierpleister: spachtelputz of crepi met korrel 1,5–3 mm. Richtprijzen per m², werkwijze, details (plint/dagkanten) en onderhoud. Regio Rotterdam.",
+    "Gevel sierpleister: spachtelputz of crepi met korrel 1,5–3 mm. Wat bepaalt de prijs per m², werkwijze, details (plint/dagkanten) en onderhoud. Regio Rotterdam.",
   slug: "sierpleister",
 };
 
@@ -149,27 +149,27 @@ export const voordelen = {
 export const kosten = {
   id: "kosten-prijs-per-m2",
   tagline: "Kosten",
-  h2: "Kosten gevel sierpleister (prijs per m\u00b2)",
+  h2: "Kosten gevel sierpleister (wat bepaalt de prijs?)",
   intro:
-    "De kosten voor gevelsierpleister hangen af van het type systeem, de staat van de ondergrond en de complexiteit van de gevel. Onderstaande richtprijzen per m\u00b2 zijn indicatief; de exacte prijs volgt na een opname op locatie.",
+    "De kosten voor gevelsierpleister hangen af van het type systeem, de staat van de ondergrond en de complexiteit van de gevel. Hieronder ziet u per systeem wat de prijs per m\u00b2 bepaalt; de exacte prijs volgt na een gratis opname op locatie.",
   eticsNote:
     "Afwerking op ETICS kan afwijken door de systeemopbouw; dit specificeren we in de offerte.",
-  priceCards: [
+  opties: [
     {
       label: "Spachtelputz (gevel)",
-      value: "€50–€95/m²",
+      note: "Korrelgrootte en kleur bepalen arbeid en materiaal",
     },
     {
       label: "Crepi (gevelpleister)",
-      value: "€55–€105/m²",
+      note: "Iets arbeidsintensiever door structuur en detaillering",
     },
     {
       label: "Herstel & lokale reparatie",
-      value: "Op aanvraag",
+      note: "Op maat, afhankelijk van omvang en schade",
     },
   ],
   disclaimer: [
-    "Richtprijzen (indicatie) incl. arbeid & standaardmaterialen.",
+    "Prijs per m² incl. arbeid & standaardmaterialen.",
     "Excl. steiger/hoogwerker, herstelwerk en complexe detaillering; exacte prijs volgt na opname.",
   ],
   priceFactors: {
@@ -387,7 +387,7 @@ export const faq = {
     {
       question: "Wat kost gevel sierpleister per m\u00b2?",
       answer:
-        "Als richtprijs (indicatie): spachtelputz buiten circa \u20ac50\u2013\u20ac95 per m\u00b2; crepi circa \u20ac55\u2013\u20ac105 per m\u00b2 (inclusief arbeid en standaardmaterialen, exclusief steiger/hoogwerker en complex herstelwerk). Na een opname op locatie stellen wij een heldere offerte op met exacte prijs.",
+        "De prijs per m\u00b2 hangt af van het type systeem (spachtelputz of crepi), de korrelgrootte, de staat van de ondergrond en de detaillering rond plint, hoeken en dagkanten. De prijs is inclusief arbeid en standaardmaterialen, exclusief steiger/hoogwerker en complex herstelwerk. Na een gratis opname op locatie stellen wij een heldere offerte op met exacte prijs per m\u00b2.",
     },
     {
       question: "Spachtelputz of crepi: wat is beter?",

@@ -1,4 +1,4 @@
-import { Star, Award, CheckCircle2, Calculator, type LucideIcon } from "lucide-react"
+import { Star, Award, CheckCircle2, ClipboardCheck, type LucideIcon } from "lucide-react"
 import GoogleRatingBadge from "@/components/google-rating-badge"
 import type { ReactNode } from "react"
 
@@ -6,7 +6,7 @@ const trustItems: { key: string; icon: LucideIcon; text: ReactNode }[] = [
   { key: "reviews", icon: Star, text: <GoogleRatingBadge format="trust" /> },
   { key: "kvk", icon: Award, text: "KVK geregistreerd" },
   { key: "vca", icon: CheckCircle2, text: "VCA gecertificeerd" },
-  { key: "prijs", icon: Calculator, text: "Prijs per m²" },
+  { key: "opname", icon: ClipboardCheck, text: "Gratis opname" },
 ]
 
 export default function TrustStrip() {

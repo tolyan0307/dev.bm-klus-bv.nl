@@ -78,8 +78,6 @@ function PageJsonLd() {
     description:
       "Binnenmuren stucen in regio Rotterdam. Behangklaar, sausklaar, spackspuitwerk en raapwerk. Prijs per m² na opname op locatie.",
     url: `${base}/muren-stucen/`,
-    lowPrice: "8",
-    highPrice: "30",
   })
 
   const faqSchema = {
@@ -191,13 +189,13 @@ export default function MurenStucenPage() {
                 {hero.lead[0]}
               </p>
 
-              {/* Price teaser */}
+              {/* Offerte teaser */}
               <div className="flex items-center gap-3">
                 <span className="rounded-lg bg-[#EA6C20]/15 px-3 py-1.5 text-sm font-bold text-[#EA6C20] ring-1 ring-[#EA6C20]/25">
-                  Vanaf €8/m²
+                  Gratis opname & offerte
                 </span>
                 <span className="text-xs text-white/50">
-                  incl. arbeid & materiaal · prijs na opname
+                  prijs na opname op locatie
                 </span>
               </div>
               <Link
@@ -606,7 +604,7 @@ export default function MurenStucenPage() {
               <SectionTagline>Kosten</SectionTagline>
               <h2 className="mt-2 mb-8 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                 Kosten muren stucen{" "}
-                <span className="text-primary">(prijs per m²)</span>
+                <span className="text-primary">(wat bepaalt de prijs?)</span>
               </h2>
 
               <div className="mb-6 overflow-hidden rounded-2xl border border-border bg-card">
@@ -616,22 +614,17 @@ export default function MurenStucenPage() {
                   </p>
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-border border-t border-border bg-secondary/40 sm:grid-cols-4">
-                  {kosten.prices.map(({ label, value, note }) => (
+                  {kosten.opties.map(({ label, note }) => (
                     <div
                       key={label}
                       className="flex flex-col items-center px-3 py-4 text-center"
                     >
-                      <span className="text-base font-bold text-primary sm:text-lg">
-                        {value}
-                      </span>
-                      <span className="mt-0.5 text-[11px] text-muted-foreground">
+                      <span className="text-sm font-bold text-primary sm:text-base">
                         {label}
                       </span>
-                      {note && (
-                        <span className="mt-1 text-[10px] italic leading-snug text-muted-foreground/70">
-                          {note}
-                        </span>
-                      )}
+                      <span className="mt-1 text-[11px] leading-snug text-muted-foreground">
+                        {note}
+                      </span>
                     </div>
                   ))}
                 </div>

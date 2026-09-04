@@ -5,8 +5,8 @@ import ResponsiveImage from "@/components/responsive-image"
 const cards = [
   {
     icon: Euro,
-    title: "Kosten & prijs per m²",
-    description: "Richtprijzen, kostenfactoren en wat de offerte bepaalt.",
+    title: "Kosten & offerte",
+    description: "Kostenfactoren, prijsopbouw en wat de offerte bepaalt.",
     href: "/gevelisolatie/kosten/",
   },
   {

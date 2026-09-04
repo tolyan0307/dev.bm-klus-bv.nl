@@ -94,26 +94,26 @@ export const voordelen = {
   ],
   note: "Het resultaat hangt af van ondergrond, systeemkeuze en detaillering.",
   disclaimer: [
-    "Richtprijzen (indicatie) incl. arbeid & materiaal. Excl. steiger, herstel en complexe detaillering.",
-    "Extra voorbehandeling kan circa €10–€20 per m² toevoegen; steigerwerk circa €10–€15 per m² (afhankelijk van hoogte en situatie).",
+    "Prijs per m² incl. arbeid & materiaal. Excl. steiger, herstel en complexe detaillering.",
+    "Extra voorbehandeling en steigerwerk (afhankelijk van hoogte en situatie) worden afzonderlijk in de offerte vermeld.",
     "Let op: bij stucwerk op isolatie (ETICS) is de laagopbouw systeemgebonden; de prijs kan afwijken.",
   ],
 };
 
 export const kosten = {
   id: "kosten-prijs-per-m2",
-  h2: "Kosten buitenmuur stucen (prijs per m²)",
+  h2: "Kosten buitenmuur stucen (wat bepaalt de prijs?)",
   intro:
-    "De buitenmuur stucen kosten hangen af van de ondergrond, de voorbereiding en de gekozen afwerking. De richtprijs per m² is een indicatie; de exacte prijs wordt na opname op locatie vastgesteld.",
-  prices: [
-    { label: "Cementpleister",               value: "€50–€80/m²"   },
-    { label: "Spachtelputz",                  value: "€50–€95/m²"   },
-    { label: "Crepi / sierpleister",          value: "€55–€105/m²"  },
-    { label: "Betonlook / betonstuc (buiten)", value: "€80–€110/m²" },
+    "De buitenmuur stucen kosten hangen af van de ondergrond, de voorbereiding en de gekozen afwerking. Elk systeem heeft een eigen prijsniveau per m²; de exacte prijs wordt na een gratis opname op locatie vastgesteld.",
+  opties: [
+    { label: "Cementpleister",                note: "Basissysteem; prijs vooral bepaald door ondergrond en laagdikte" },
+    { label: "Spachtelputz",                  note: "Structuur en korrel bepalen arbeid en materiaal" },
+    { label: "Crepi / sierpleister",          note: "Kleur, korrel en detaillering wegen mee" },
+    { label: "Betonlook / betonstuc (buiten)", note: "Arbeidsintensiefste afwerking; hoogste prijsniveau" },
   ],
   disclaimer: [
-    "Richtprijzen (indicatie) incl. arbeid & materiaal. Excl. steiger, herstel en complexe detaillering.",
-    "Extra voorbehandeling kan circa €10–€20 per m² toevoegen; steigerwerk circa €10–€15 per m² (afhankelijk van hoogte en situatie).",
+    "Prijs per m² incl. arbeid & materiaal. Excl. steiger, herstel en complexe detaillering.",
+    "Extra voorbehandeling en steigerwerk (afhankelijk van hoogte en situatie) worden afzonderlijk in de offerte vermeld.",
     "Let op: bij stucwerk op isolatie (ETICS) is de laagopbouw systeemgebonden; de prijs kan afwijken.",
   ],
   priceFactors: {
@@ -291,7 +291,7 @@ export const faq = {
     {
       question: "Wat kost buitenmuur stucen per m²?",
       answer:
-        "De prijs is afhankelijk van de ondergrond, het te verwerken systeem en de benodigde voorbereiding. Als richtprijs (indicatie): cementpleister €50–€80/m², spachtelputz €50–€95/m², crepi €55–€105/m², betonstuc €80–€110/m² (incl. arbeid & materiaal). Steiger, herstel en complexe detaillering kunnen de prijs verhogen. Na opname ontvangt u een offerte met duidelijke scope en prijs per m².",
+        "De prijs per m² is afhankelijk van de ondergrond, het te verwerken systeem en de benodigde voorbereiding. Cementpleister is doorgaans het voordeligste systeem; spachtelputz en crepi liggen daar iets boven en betonstuc is door de arbeidsintensieve afwerking het duurst. Steiger, herstel en complexe detaillering kunnen de prijs verhogen. Na een gratis opname ontvangt u een offerte met duidelijke scope en prijs per m².",
     },
     {
       question: "Wat is het verschil tussen cementpleister en betonstuc?",

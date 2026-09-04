@@ -72,20 +72,12 @@ export const core = {
 
 export const kosten = {
   id: "kosten",
-  h2: "Kosten gevel schilderen (prijs per m²)",
+  h2: "Kosten gevel schilderen (wat bepaalt de prijs?)",
   paragraphs: [
-    "De prijs voor gevel schilderen (buitenmuur verven) varieert afhankelijk van de ondergrond, voorbereiding en verfsysteem. Hier vindt u realistische richtprijzen.",
+    "De prijs per m² voor gevel schilderen (buitenmuur verven) varieert afhankelijk van de ondergrond, de voorbereiding en het verfsysteem. Hieronder ziet u de drie situaties die het prijsniveau bepalen.",
     "Exacte prijs na opname op locatie.",
   ],
-  table: {
-    headers: ["Situatie", "Indicatieve prijs"],
-    rows: [
-      ["Basis: lichte reiniging, stabiele ondergrond — geen herstelwerk vereist", "€25–€40 per m²"],
-      ["Standaard: reiniging + primer/voorstrijk — meest voorkomende situatie", "€30–€50 per m²"],
-      ["Intensief: herstel, afbladdering/losse lagen + steiger/hoogwerker + voorbereiding", "Op aanvraag"],
-    ],
-    note: "Richtprijzen (indicatie) incl. arbeid & standaardmaterialen.\nExcl. steiger/hoogwerker, herstelwerk en intensieve reiniging; exacte prijs volgt na opname.",
-  },
+  note: "Prijs per m² incl. arbeid & standaardmaterialen.\nExcl. steiger/hoogwerker, herstelwerk en intensieve reiniging; exacte prijs volgt na een gratis opname op locatie.",
   priceFactors: {
     label: "Belangrijkste prijsfactoren:",
     items: [
@@ -254,7 +246,7 @@ export const faq = {
     {
       question: "Wat kost gevel schilderen per m²?",
       answer:
-        "Als richtprijs (indicatie) ligt gevel schilderen rond €25–€40/m² voor basische situaties met lichte reiniging en stabiele ondergrond. Voor standaard voorbereiding (reiniging + primer/voorstrijk) doorgaans €30–€50/m². Intensievere herstelwerkzaamheden (afbladdering, scheuren, steiger/hoogwerker) worden op aanvraag berekend. Factoren die de prijs beïnvloeden: bereikbaarheid, reiniging, herstelwerk aan voegwerk en scheuren, verfsoort, aantal lagen en afplakwerk. Steiger/hoogwerker, intensieve reiniging en herstelwerk zijn niet altijd in het basisinterval begrepen en kunnen de prijs verhogen. Na opname op locatie stellen wij een offerte op met duidelijke scope.",
+        "De prijs per m² hangt af van de situatie: een stabiele ondergrond met lichte reiniging is het voordeligst, de standaardsituatie met reiniging en primer of voorstrijk ligt daar iets boven, en intensief herstelwerk (afbladdering, scheuren, steiger of hoogwerker) wordt op maat berekend. Factoren die de prijs beïnvloeden: bereikbaarheid, reiniging, herstelwerk aan voegwerk en scheuren, verfsoort, aantal lagen en afplakwerk. Steiger/hoogwerker, intensieve reiniging en herstelwerk worden afzonderlijk in de offerte vermeld. Na een gratis opname op locatie stellen wij een offerte op met duidelijke scope en prijs per m².",
     },
     {
       question: "Welke verf is geschikt voor mijn gevel?",

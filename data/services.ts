@@ -16,7 +16,6 @@ export interface Service {
   fullDescription?: string
   icon?: string
   image?: string
-  priceRange?: string
   duration?: string
   featured?: boolean
   features: string[]
@@ -35,7 +34,6 @@ export const services: Service[] = [
       "Het ETICS-systeem (External Thermal Insulation Composite System) is de meest effectieve methode voor na-isolatie van buitengevels. Isolatieplaten worden aan de gevel bevestigd en afgewerkt met een wapening en sierpleister of steenstrips. Dit verlaagt uw energieverbruik aanzienlijk en verhoogt het wooncomfort.",
     icon: "shield",
     image: "/images/dienst-isolatie.webp",
-    priceRange: "€110 – €280 / m²",
     duration: "2 – 4 weken",
     featured: true,
     features: ["Energielabel verbetering", "Vochtwerend", "Geluidsisolatie", "Onderhoudsarm"],

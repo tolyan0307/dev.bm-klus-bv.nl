@@ -111,9 +111,9 @@ export const PLANNED_ROUTES = [
   {
     // Cluster child of /gevel-schilderen/ (added 2026-09-04, SEO plan item B1)
     path: "/gevel-schilderen/keimen/",
-    title: "Gevel keimen: kosten per m² & keimwerk prijs",
+    title: "Gevel keimen: kosten & wanneer het past",
     description:
-      "Wat kost gevel keimen per m²? Richtprijzen voor keimwerk (silicaatverf), kostenfactoren, keimen of schilderen en wanneer keimen past. Opname in regio Rotterdam.",
+      "Wat bepaalt de prijs van gevel keimen? Kostenfactoren voor keimwerk (silicaatverf), keimen of schilderen en wanneer keimen past. Opname in regio Rotterdam.",
     changefreq: "yearly",
     priority: 0.6,
   },
@@ -129,7 +129,7 @@ export const PLANNED_ROUTES = [
     path: "/sierpleister/",
     title: "Gevel sierpleister (spachtelputz/crepi) – prijs",
     description:
-      "Gevel sierpleister: spachtelputz of crepi met korrel 1,5–3 mm. Richtprijzen per m², werkwijze, details (plint/dagkanten) en onderhoud. Regio Rotterdam.",
+      "Gevel sierpleister: spachtelputz of crepi met korrel 1,5–3 mm. Wat bepaalt de prijs per m², werkwijze, details (plint/dagkanten) en onderhoud. Regio Rotterdam.",
     changefreq: "monthly",
     priority: 0.8,
   },
@@ -137,16 +137,16 @@ export const PLANNED_ROUTES = [
     path: "/muren-stucen/",
     title: "Muren stucen (binnen) – sausklaar stucwerk",
     description:
-      "Binnenmuren stucen: behangklaar of sausklaar. Richtprijzen per m², werkwijze, voorbereiding en droogtijd. Regio Rotterdam (±80–100 km).",
+      "Binnenmuren stucen: behangklaar of sausklaar. Wat bepaalt de prijs per m², werkwijze, voorbereiding en droogtijd. Regio Rotterdam (±80–100 km).",
     changefreq: "monthly",
     priority: 0.8,
   },
   {
     // Cluster child of /muren-stucen/ (added 2026-09-04, SEO plan item B2)
     path: "/muren-stucen/sausklaar-behangklaar/",
-    title: "Sausklaar of behangklaar stucen – prijs per m²",
+    title: "Sausklaar of behangklaar stucen: het verschil",
     description:
-      "Sausklaar stucwerk €15–€30/m², behangklaar €10–€22/m². Het verschil, wanneer u welk niveau kiest, voorstrijken, schuren en droogtijd. Opname in regio Rotterdam.",
+      "Sausklaar of behangklaar stucen: het verschil, wanneer u welk niveau kiest, wat de prijs bepaalt, voorstrijken, schuren en droogtijd. Opname in regio Rotterdam.",
     changefreq: "yearly",
     priority: 0.6,
   },
@@ -163,9 +163,9 @@ export const PLANNED_ROUTES = [
   // ── Gevelisolatie cluster ─────────────────────────────────────────────────
   {
     path: "/gevelisolatie/kosten/",
-    title: "Kosten gevelisolatie buiten – prijs per m²",
+    title: "Gevelisolatie kosten: wat bepaalt de prijs?",
     description:
-      "Wat kost buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips) en voorbeeldranges. Opname op locatie in regio Rotterdam (±80–100 km).",
+      "Wat bepaalt de kosten van buitengevelisolatie per m²? Kostenfactoren, afwerking (stuc/steenstrips), prijsopbouw en voorbeelden. Opname in regio Rotterdam.",
     changefreq: "yearly",
     priority: 0.6,
   },

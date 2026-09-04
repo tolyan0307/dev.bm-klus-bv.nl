@@ -108,10 +108,10 @@ export default function RcWaardeDikteSection() {
       >
         <div className="flex-1">
           <p className="text-sm font-bold text-foreground">
-            Wilt u de exacte dikte voor uw woning berekenen?
+            Wilt u weten welke dikte bij uw woning past?
           </p>
           <p className="mt-0.5 text-xs leading-snug text-muted-foreground">
-            Interactieve Rc-calculator, uitleg per materiaal en details over subsidiedrempels
+            Diktetabel per Rc-waarde, uitleg per materiaal en details over subsidiedrempels
           </p>
         </div>
         <ArrowRight className="h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />

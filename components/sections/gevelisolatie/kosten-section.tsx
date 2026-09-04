@@ -3,7 +3,6 @@ import Link from "next/link"
 import ResponsiveImage from "@/components/responsive-image"
 import { kostenContent } from "@/lib/content/gevelisolatie"
 import { Check, ArrowRight } from "lucide-react"
-import KostenCalculator from "@/components/sections/gevelisolatie/kosten-calculator"
 
 export default function KostenSection() {
   const data = kostenContent
@@ -23,7 +22,7 @@ export default function KostenSection() {
         <span className="text-primary decoration-primary/40 underline decoration-[3px] underline-offset-4">
           buitengevelisolatie
         </span>{" "}
-        <span className="text-foreground">(prijs per m²)</span>
+        <span className="text-foreground">(wat bepaalt de prijs?)</span>
       </h2>
 
       {/* ── Photo banner ── */}
@@ -48,7 +47,7 @@ export default function KostenSection() {
             </div>
           </div>
 
-          {/* Intro paragraphs + richtprijzen */}
+          {/* Intro paragraphs */}
           <div className="flex flex-col justify-center gap-3 p-6 lg:p-8">
             <span className="hidden text-[11px] font-bold uppercase tracking-widest text-primary lg:block">
               Opname & offertes
@@ -59,38 +58,6 @@ export default function KostenSection() {
               </p>
             ))}
 
-            {/* Richtprijzen */}
-            {data.richtprijzen && (
-              <div className="mt-2">
-                <p className="mb-2.5 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                  {data.richtprijzen.label}
-                </p>
-                <div className="flex flex-col gap-2 sm:flex-row">
-                  {data.richtprijzen.cards.map((card) => (
-                    <div
-                      key={card.title}
-                      className="flex flex-1 items-center justify-between gap-3 rounded-lg border border-border bg-muted/40 px-4 py-3"
-                    >
-                      <span className="text-xs leading-snug text-foreground/70">{card.title}</span>
-                      <span className="shrink-0 text-sm font-black text-primary">{card.range}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-2 space-y-1">
-                  {data.richtprijzen.noteLines.map((line) => (
-                    <p key={line} className="text-[11px] leading-relaxed text-muted-foreground/70">
-                      {line}
-                    </p>
-                  ))}
-                  <p className="text-[11px] leading-relaxed text-muted-foreground/70">
-                    De prijs wordt ook beïnvloed door de gekozen afwerking.{" "}
-                    <Link href="/gevelisolatie/afwerkingen/" className="font-semibold text-primary underline-offset-2 hover:underline">
-                      Afwerkingen vergelijken →
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>
@@ -141,7 +108,7 @@ export default function KostenSection() {
               {data.callout}
             </p>
             <p className="mt-2 text-xs text-muted-foreground">
-              Gebruik de calculator hieronder voor een indicatie, of{" "}
+              Vraag een gratis opname aan voor een prijs op maat, of{" "}
               <Link href="/gevelisolatie/kosten/" className="font-semibold text-primary underline-offset-2 hover:underline">
                 bekijk alle kostenfactoren →
               </Link>
@@ -150,9 +117,6 @@ export default function KostenSection() {
 
         </div>
       </div>
-
-      {/* ── Interactive price calculator ── */}
-      <KostenCalculator />
     </section>
   )
 }
