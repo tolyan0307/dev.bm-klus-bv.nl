@@ -1,6 +1,6 @@
 # Lead reconciliation: WP lead log vs GA4 vs Google Ads (2026-06-07 .. 2026-09-04)
 
-**Generated:** 2026-09-04 23:05 UTC
+**Generated:** 2026-09-04 23:06 UTC
 **Report mode:** verified
 **Workflow:** lead_reconciliation_v1
 **Confidence cap:** high for WP counts, medium for cross-source ratios
@@ -61,7 +61,7 @@ All counts per ISO week (Mon–Sun). WP columns: [WP, 90d, lead-level]; views/CT
 - GA4 records 81.8% of real form submissions ([GA4, 90d, event-level] ÷ [WP, 90d, lead-level]); undercount is moderate. Confidence: **medium**.
 - 50% of submissions carry a first-touch ads signal (gclid or paid UTM) ([WP, 90d, lead-level]). This is the ceiling for Ads-attributable leads regardless of what Ads reports. Confidence: **high** for post-2026-09-04 leads, **medium** for backfilled ones (source from form-page URL only).
 - Contact clicks are measured twice by design: GA4 `Phone`/`Whatsapp`/`Email` via GTM link-click triggers (consent-gated) and WP `cta_click` via beacon (no consent gate). The `bm_*` dataLayer events are intentionally not tagged in GTM; tagging them would double-count. From 2026-09-04 the WP/GA4 click ratio becomes the second undercount estimate. Confidence: **high** on the setup, ratio needs 4+ weeks.
-- Ads reports 18.0 conversions ([Ads API, 2026-06-07..2026-09-04, all campaigns, daily]) vs 11 site submissions with an ads first touch in the same days ([WP, 90d, lead-level]). Ads conversions come from GA4 imports, so they inherit the GA4 undercount; do not read them as lead counts. Confidence: **medium**.
+- Ads reports 18.0 conversions ([Ads API, 2026-06-07..2026-09-04, all campaigns, daily]) vs 11 site submissions with an ads first touch in the same days ([WP, 90d, lead-level]). The WP figure is a floor for backfilled leads: their source comes from the form-page URL only, so an ad click followed by internal navigation to /contact/ shows as `direct`. Ads counts the conversion tag fired on form success (GTM, consent-gated) with 30-day click attribution, which catches those. Expect the two to converge for leads after 2026-09-04, when first touch is recorded. Confidence: **medium**.
 
 ---
 
@@ -94,7 +94,7 @@ All counts per ISO week (Mon–Sun). WP columns: [WP, 90d, lead-level]; views/CT
 
 ## Provenance
 
-- **Generated:** 2026-09-04 23:05 UTC
+- **Generated:** 2026-09-04 23:06 UTC
 - **Report mode:** verified
 - **Generator:** analyzers/pages/run_lead_reconciliation_v1.py
 - **Primary truth:** WP lead log (BM Stats v2 API, `/wp-json/bm-stats/v1/leads`, `/pageviews`, `/events`), internal_artifact

@@ -280,7 +280,10 @@ def main() -> None:
     if ga4_cta_total:
         interp.append(f"- Contact clicks are measured twice by design: GA4 `Phone`/`Whatsapp`/`Email` via GTM link-click triggers (consent-gated) and WP `cta_click` via beacon (no consent gate). The `bm_*` dataLayer events are intentionally not tagged in GTM; tagging them would double-count. From {EVENTS_SINCE.isoformat()} the WP/GA4 click ratio becomes the second undercount estimate. Confidence: **high** on the setup, ratio needs 4+ weeks.")
     if ads_cmp and ads_cmp[1] is not None:
-        interp.append(f"- Ads reports {ads_cmp[1]} conversions ({L_ADS}) vs {ads_cmp[2]} site submissions with an ads first touch in the same days ({L_WP}). Ads conversions come from GA4 imports, so they inherit the GA4 undercount; do not read them as lead counts. Confidence: **medium**.")
+        if ads_cmp[1] > ads_cmp[2]:
+            interp.append(f"- Ads reports {ads_cmp[1]} conversions ({L_ADS}) vs {ads_cmp[2]} site submissions with an ads first touch in the same days ({L_WP}). The WP figure is a floor for backfilled leads: their source comes from the form-page URL only, so an ad click followed by internal navigation to /contact/ shows as `direct`. Ads counts the conversion tag fired on form success (GTM, consent-gated) with 30-day click attribution, which catches those. Expect the two to converge for leads after {EVENTS_SINCE.isoformat()}, when first touch is recorded. Confidence: **medium**.")
+        else:
+            interp.append(f"- Ads reports {ads_cmp[1]} conversions ({L_ADS}) vs {ads_cmp[2]} site submissions with an ads first touch in the same days ({L_WP}). The Ads conversion tag fires on form success through GTM and is consent-gated, so Ads under-reports like GA4; WP is the ceiling. Confidence: **medium**.")
     lines += ["", "---", "", "## 2. Interpretations", ""] + (interp or ["- Not enough data for interpretations in this window."])
 
     lines += [
