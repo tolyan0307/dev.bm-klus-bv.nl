@@ -308,7 +308,7 @@ export default function SausklaarBehangklaarPage() {
               <h1 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Sausklaar of behangklaar stucen:{" "}
                 <span className="text-primary">het verschil</span>{" "}
-                en de prijs per m²
+                en wat de prijs bepaalt
               </h1>
 
               <p className="max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">

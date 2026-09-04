@@ -241,10 +241,13 @@ export default async function GevelisolatieLocationPage({
                 {data.intro}
               </p>
 
-              {/* Price teaser */}
+              {/* Offerte teaser */}
               <div className="flex items-center gap-3">
                 <span className="rounded-lg bg-[#EA6C20]/15 px-3 py-1.5 text-sm font-bold text-[#EA6C20] ring-1 ring-[#EA6C20]/25">
-                  Prijsindicatie: zie kostenpagina
+                  Gratis opname & offerte
+                </span>
+                <span className="text-xs text-white/50">
+                  prijs na opname op locatie
                 </span>
               </div>
 

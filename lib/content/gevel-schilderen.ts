@@ -2,9 +2,9 @@
 // Single source of truth for all copy on /gevel-schilderen/
 
 export const meta = {
-  title: "Gevel schilderen: kosten per m² & offerte | BM klus BV",
+  title: "Gevel schilderen & keimen: kosten & offerte | BM klus BV",
   description:
-    "Gevel schilderen (buitenmuur verven) in regio Rotterdam. Dampopen systemen (silicaat/KEIM of siloxaan), voorbereiding, kosten per m², onderhoud & FAQ.",
+    "Gevel schilderen of keimen (buitenmuur verven) in regio Rotterdam. Dampopen systemen (silicaat/KEIM, siloxaan), voorbereiding, kostenfactoren, onderhoud & FAQ.",
   slug: "gevel-schilderen",
 };
 

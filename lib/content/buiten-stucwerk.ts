@@ -2,7 +2,7 @@
 // Single source of truth for all copy on /buiten-stucwerk/
 
 export const meta = {
-  title: "Buitenmuur stucen (gevel stucen) – prijs per m² | BM klus BV",
+  title: "Buitenmuur stucen: kosten, betonstuc & crepi | BM klus BV",
   description:
     "Buitenmuur stucen / gevel stucen in regio Rotterdam. Cementpleister, betonstuc, spachtelputz, crepi. Kosten per m² na gratis opname.",
   slug: "buiten-stucwerk",

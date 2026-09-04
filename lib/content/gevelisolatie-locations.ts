@@ -24,7 +24,7 @@ export const locations: LocationData[] = [
     slug: "rotterdam",
     city: "Rotterdam",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Rotterdam – ETICS prijs per m²",
+    title: "Gevelisolatie Rotterdam – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Rotterdam. Stuc, sierpleister, crepi of steenstrips. Opname op locatie en offerte per m². VCA-gecertificeerd.",
     h1: "Gevelisolatie in Rotterdam",
@@ -73,7 +73,7 @@ export const locations: LocationData[] = [
     slug: "den-haag",
     city: "Den Haag",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Den Haag – ETICS prijs per m²",
+    title: "Gevelisolatie Den Haag – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Den Haag en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist uit Rotterdam.",
     h1: "Gevelisolatie in Den Haag",
@@ -123,7 +123,7 @@ export const locations: LocationData[] = [
     slug: "delft",
     city: "Delft",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Delft – ETICS prijs per m²",
+    title: "Gevelisolatie Delft – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Delft. Sierpleister, stucwerk of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Delft",
@@ -172,7 +172,7 @@ export const locations: LocationData[] = [
     slug: "dordrecht",
     city: "Dordrecht",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Dordrecht – ETICS prijs per m²",
+    title: "Gevelisolatie Dordrecht – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Dordrecht en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Dordrecht",
@@ -221,7 +221,7 @@ export const locations: LocationData[] = [
     slug: "schiedam",
     city: "Schiedam",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Schiedam – ETICS prijs per m²",
+    title: "Gevelisolatie Schiedam – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Schiedam. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist uit Rotterdam.",
     h1: "Gevelisolatie in Schiedam",
@@ -266,7 +266,7 @@ export const locations: LocationData[] = [
     slug: "vlaardingen",
     city: "Vlaardingen",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Vlaardingen – ETICS prijs per m²",
+    title: "Gevelisolatie Vlaardingen – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Vlaardingen. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Vlaardingen",
@@ -310,7 +310,7 @@ export const locations: LocationData[] = [
     slug: "leiden",
     city: "Leiden",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Leiden – ETICS prijs per m²",
+    title: "Gevelisolatie Leiden – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Leiden en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Leiden",
@@ -355,7 +355,7 @@ export const locations: LocationData[] = [
     slug: "gouda",
     city: "Gouda",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Gouda – ETICS prijs per m²",
+    title: "Gevelisolatie Gouda – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Gouda en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Gouda",
@@ -399,7 +399,7 @@ export const locations: LocationData[] = [
     slug: "zoetermeer",
     city: "Zoetermeer",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Zoetermeer – ETICS prijs per m²",
+    title: "Gevelisolatie Zoetermeer – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Zoetermeer. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Zoetermeer",
@@ -448,7 +448,7 @@ export const locations: LocationData[] = [
     slug: "capelle-aan-den-ijssel",
     city: "Capelle aan den IJssel",
     region: "Zuid-Holland",
-    title: "Gevelisolatie prijs Capelle aan den IJssel",
+    title: "Gevelisolatie Capelle aan den IJssel (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Capelle aan den IJssel. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Direct naast Rotterdam.",
     h1: "Gevelisolatie in Capelle aan den IJssel",
@@ -492,7 +492,7 @@ export const locations: LocationData[] = [
     slug: "spijkenisse",
     city: "Spijkenisse",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Spijkenisse – ETICS prijs per m²",
+    title: "Gevelisolatie Spijkenisse – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Spijkenisse (Nissewaard). Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Spijkenisse",
@@ -536,7 +536,7 @@ export const locations: LocationData[] = [
     slug: "barendrecht",
     city: "Barendrecht",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Barendrecht – ETICS prijs per m²",
+    title: "Gevelisolatie Barendrecht – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Barendrecht. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist direct naast Rotterdam.",
     h1: "Gevelisolatie in Barendrecht",
@@ -585,7 +585,7 @@ export const locations: LocationData[] = [
     slug: "ridderkerk",
     city: "Ridderkerk",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Ridderkerk – ETICS prijs per m²",
+    title: "Gevelisolatie Ridderkerk – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Ridderkerk. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Ridderkerk",
@@ -634,7 +634,7 @@ export const locations: LocationData[] = [
     slug: "alphen-aan-den-rijn",
     city: "Alphen aan den Rijn",
     region: "Zuid-Holland",
-    title: "Gevelisolatie prijs Alphen aan den Rijn",
+    title: "Gevelisolatie Alphen aan den Rijn (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Alphen aan den Rijn. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Alphen aan den Rijn",
@@ -683,7 +683,7 @@ export const locations: LocationData[] = [
     slug: "maassluis",
     city: "Maassluis",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Maassluis – ETICS prijs per m²",
+    title: "Gevelisolatie Maassluis – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Maassluis. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Maassluis",
@@ -727,7 +727,7 @@ export const locations: LocationData[] = [
     slug: "hellevoetsluis",
     city: "Hellevoetsluis",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Hellevoetsluis – prijs per m²",
+    title: "Gevelisolatie Hellevoetsluis (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Hellevoetsluis. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Hellevoetsluis",
@@ -776,7 +776,7 @@ export const locations: LocationData[] = [
     slug: "breda",
     city: "Breda",
     region: "Noord-Brabant",
-    title: "Gevelisolatie Breda – ETICS prijs per m²",
+    title: "Gevelisolatie Breda – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Breda en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Breda",
@@ -826,7 +826,7 @@ export const locations: LocationData[] = [
     slug: "bergen-op-zoom",
     city: "Bergen op Zoom",
     region: "Noord-Brabant",
-    title: "Gevelisolatie Bergen op Zoom – prijs per m²",
+    title: "Gevelisolatie Bergen op Zoom (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Bergen op Zoom en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Bergen op Zoom",
@@ -870,7 +870,7 @@ export const locations: LocationData[] = [
     slug: "roosendaal",
     city: "Roosendaal",
     region: "Noord-Brabant",
-    title: "Gevelisolatie Roosendaal – ETICS prijs per m²",
+    title: "Gevelisolatie Roosendaal – buitenkant (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Roosendaal. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Roosendaal",
@@ -914,7 +914,7 @@ export const locations: LocationData[] = [
     slug: "leidschendam-voorburg",
     city: "Leidschendam-Voorburg",
     region: "Zuid-Holland",
-    title: "Gevelisolatie prijs Leidschendam-Voorburg",
+    title: "Gevelisolatie Leidschendam-Voorburg (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Leidschendam-Voorburg. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Leidschendam-Voorburg",
@@ -963,7 +963,7 @@ export const locations: LocationData[] = [
     slug: "hendrik-ido-ambacht",
     city: "Hendrik-Ido-Ambacht",
     region: "Zuid-Holland",
-    title: "Gevelisolatie prijs Hendrik-Ido-Ambacht",
+    title: "Gevelisolatie Hendrik-Ido-Ambacht (ETICS)",
     description:
       "Buitengevelisolatie (ETICS) in Hendrik-Ido-Ambacht. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
     h1: "Gevelisolatie in Hendrik-Ido-Ambacht",

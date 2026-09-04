@@ -94,7 +94,7 @@ export const PLANNED_ROUTES = [
   // ── Money pages (services) ────────────────────────────────────────────────
   {
     path: "/gevelisolatie/",
-    title: "Buitengevelisolatie (ETICS) – prijs per m²",
+    title: "Buitengevelisolatie (ETICS) – kosten & offerte",
     description:
       "Gevelisolatie buitenkant (buitengevelisolatie, ETICS) met afwerking: stuc, sierpleister/crepi of steenstrips. Heldere prijs per m² na gratis opname op locatie.",
     changefreq: "monthly",
@@ -102,9 +102,9 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/gevel-schilderen/",
-    title: "Gevel schilderen: kosten per m² & offerte",
+    title: "Gevel schilderen & keimen: kosten & offerte",
     description:
-      "Gevel schilderen (buitenmuur verven) in regio Rotterdam. Dampopen systemen (silicaat/KEIM of siloxaan), voorbereiding, kosten per m², onderhoud & FAQ.",
+      "Gevel schilderen of keimen (buitenmuur verven) in regio Rotterdam. Dampopen systemen (silicaat/KEIM, siloxaan), voorbereiding, kostenfactoren, onderhoud & FAQ.",
     changefreq: "monthly",
     priority: 0.8,
   },
@@ -119,7 +119,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/buiten-stucwerk/",
-    title: "Buitenmuur stucen: kosten per m² & betonstuc",
+    title: "Buitenmuur stucen: kosten, betonstuc & crepi",
     description:
       "Buitenmuur stucen / gevel stucen (buiten stucwerk) in regio Rotterdam. Cementpleister, betonstuc, spachtelputz, crepi. Kosten per m² na gratis opname.",
     changefreq: "monthly",
@@ -127,7 +127,7 @@ export const PLANNED_ROUTES = [
   },
   {
     path: "/sierpleister/",
-    title: "Gevel sierpleister (spachtelputz/crepi) – prijs",
+    title: "Gevel sierpleister (spachtelputz/crepi): kosten",
     description:
       "Gevel sierpleister: spachtelputz of crepi met korrel 1,5–3 mm. Wat bepaalt de prijs per m², werkwijze, details (plint/dagkanten) en onderhoud. Regio Rotterdam.",
     changefreq: "monthly",

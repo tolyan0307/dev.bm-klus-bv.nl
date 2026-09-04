@@ -63,3 +63,25 @@
 # Повторный прогон + сверка цифр (2026-09-05)
 
 См. `price_removal_numbers_check_2026-09-05.md`. Итог: единственная устаревшая цифра — экономия на 21 городской странице (€400–€900/jaar) → заменена на данные Milieu Centraal от 29.06.2026 (tussenwoning €320, hoekwoning €750, vrijstaand €1.100 при газе €1,37/m³) с указанием источника и даты. Условия ISDE и streefwaarde Rc 6 подтверждены на rvo.nl без изменений. tsc 0 ошибок, build OK.
+
+---
+
+# Волна 3 + консистентность (2026-09-05, вечер)
+
+**Причина ускорения:** пользователь обеспокоен противоречиями, которые Google видит в сниппетах; всё едет одним деплоем, поэтому title меняются вместе с контентом, а не через 3–4 недели.
+
+| Страница | Было | Стало |
+|----------|------|-------|
+| `/gevelisolatie/` | Buitengevelisolatie (ETICS) – prijs per m² | Buitengevelisolatie (ETICS) – kosten & offerte |
+| `/gevel-schilderen/` | Gevel schilderen: kosten per m² & offerte | Gevel schilderen & keimen: kosten & offerte (keimen = 47 % показов страницы) |
+| `/buiten-stucwerk/` | Buitenmuur stucen: kosten per m² & betonstuc | Buitenmuur stucen: kosten, betonstuc & crepi |
+| `/sierpleister/` | Gevel sierpleister (spachtelputz/crepi) – prijs | Gevel sierpleister (spachtelputz/crepi): kosten |
+| 21 городская | Gevelisolatie {City} – ETICS prijs per m² / Gevelisolatie prijs {City} | Gevelisolatie {City} – buitenkant (ETICS); для длинных названий Gevelisolatie {City} (ETICS) |
+
+Description gevel-schilderen: «kosten per m²» → «kostenfactoren», добавлено «of keimen». Бюджет title 47 символов соблюдён везде, многоточий в title/description денежных и городских страниц нет.
+
+**Дополнительные правки консистентности:** чип «Prijsindicatie: zie kostenpagina» на 21 городской → «Gratis opname & offerte»; H1 sausklaar «…en de prijs per m²» → «…en wat de prijs bepaalt»; карточки сценариев на `/kosten/` переработаны (список из 3 факторов с индикатором влияния вместо плашки «Bepalend voor de prijs»).
+
+**Побочное наблюдение (не в рамках задачи):** 11 title проектных страниц `/onze-werken/*` обрезаются многоточием (длиннее 47 символов) — было и до этих работ, отдельная задача.
+
+**Статус программы:** волны 0–3 выполнены. После деплоя — запросить переиндексацию в GSC для `/gevelisolatie/kosten/`, `/gevelisolatie/`, 4 денежных страниц; проверить объявления Ads на «vanaf €110»; перегенерировать GBP-пост W37 без сумм.

@@ -108,8 +108,11 @@ const scenarios = [
     title: "Rijwoning – voorgevel",
     oppervlak: "ca. 30–50 m²",
     afwerking: "Stuc of sierpleister (ETICS)",
-    prijsfactor: "Detaillering & steigerhoogte",
-    opmerking: "Dagkanten, plint en steigerhoogte bepalen bij een enkele gevel het grootste deel van de prijs.",
+    factoren: [
+      { label: "Dagkanten & plint", weight: 3 },
+      { label: "Steigerhoogte", weight: 2 },
+      { label: "Oppervlak (één gevel)", weight: 1 },
+    ],
     image: { baseName: "scenario-rijwoning-stucwerk", alt: "Rijwoning met stucwerk afwerking na gevelisolatie" },
     badge: "Rijwoning",
   },
@@ -117,8 +120,11 @@ const scenarios = [
     title: "Hoekwoning – meerdere gevels",
     oppervlak: "ca. 80–130 m²",
     afwerking: "Stuc of sierpleister (ETICS)",
-    prijsfactor: "Hoekprofielen & aansluitpunten",
-    opmerking: "Meer hoekprofielen en aansluitpunten; exact oppervlak en bereikbaarheid bepalen de eindprijs.",
+    factoren: [
+      { label: "Hoekprofielen & aansluitpunten", weight: 3 },
+      { label: "Oppervlak (meerdere gevels)", weight: 3 },
+      { label: "Bereikbaarheid & steiger", weight: 2 },
+    ],
     image: { baseName: "scenario-hoekwoning-sierpleister", alt: "Hoekwoning met sierpleister afwerking op twee gevels" },
     badge: "Hoekwoning",
   },
@@ -126,8 +132,11 @@ const scenarios = [
     title: "Twee-onder-één-kapwoning – voorgevel + zijgevel",
     oppervlak: "ca. 60–90 m²",
     afwerking: "ETICS + steenstrips",
-    prijsfactor: "Striptype & detaillering",
-    opmerking: "Steenstrips vragen meer arbeid; exacte prijs sterk afhankelijk van striptype en detaillering.",
+    factoren: [
+      { label: "Striptype & legpatroon", weight: 3 },
+      { label: "Detaillering rond kozijnen", weight: 2 },
+      { label: "Extra verankering & arbeid", weight: 2 },
+    ],
     image: { baseName: "scenario-tweekap-steenstrips", alt: "Twee-onder-één-kapwoning met steenstrips afwerking" },
     badge: "Twee-onder-één-kap",
   },
@@ -667,15 +676,28 @@ export default function KostenGevelisolatiePage() {
                           <dd className="font-medium text-foreground text-right">{scenario.afwerking}</dd>
                         </div>
                       </dl>
-                      <div className="mt-4 rounded-lg bg-primary/5 px-4 py-3 text-center">
-                        <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Bepalend voor de prijs</p>
-                        <p className="mt-1 text-lg font-black tracking-tight text-primary">{scenario.prijsfactor}</p>
-                      </div>
-                      <div className="mt-3 flex items-start gap-2">
-                        <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground/50" strokeWidth={1.5} />
-                        <p className="text-[11px] leading-relaxed text-muted-foreground">
-                          {scenario.opmerking}
-                        </p>
+                      <div className="mt-5 border-t border-border/40 pt-4">
+                        <div className="mb-3 flex items-center justify-between">
+                          <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                            Wat weegt het zwaarst
+                          </p>
+                          <span className="text-[10px] text-muted-foreground/60">invloed op prijs</span>
+                        </div>
+                        <ul className="space-y-2.5">
+                          {scenario.factoren.map((f) => (
+                            <li key={f.label} className="flex items-center justify-between gap-3">
+                              <span className="text-sm text-foreground/80">{f.label}</span>
+                              <span className="flex shrink-0 items-center gap-0.5" aria-label={`invloed ${f.weight} van 3`}>
+                                {[1, 2, 3].map((n) => (
+                                  <span
+                                    key={n}
+                                    className={`h-1.5 w-3.5 rounded-full ${n <= f.weight ? "bg-primary" : "bg-border"}`}
+                                  />
+                                ))}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>

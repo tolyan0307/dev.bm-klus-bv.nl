@@ -2,7 +2,7 @@
 // Single source of truth for all copy on /sierpleister/ (EXTERIOR — gevel sierpleister)
 
 export const meta = {
-  title: "Gevel sierpleister (spachtelputz/crepi) – prijs | BM klus BV",
+  title: "Gevel sierpleister (spachtelputz/crepi): kosten | BM klus BV",
   description:
     "Gevel sierpleister: spachtelputz of crepi met korrel 1,5–3 mm. Wat bepaalt de prijs per m², werkwijze, details (plint/dagkanten) en onderhoud. Regio Rotterdam.",
   slug: "sierpleister",
