@@ -5,6 +5,8 @@
 «создай локальную задачу … по понедельникам в 13:00». Хранятся в
 `~/.claude/scheduled-tasks/<name>/SKILL.md`; расписание, папка и модель — только через UI.
 
+В поле Instructions вставляй только текст между тремя кавычками, без самих кавычек и без пояснений после блока.
+
 Общие настройки для всех трёх задач:
 
 | Поле | Значение |
@@ -19,7 +21,7 @@
 
 ---
 
-## 1. `seo-weekly-refresh` — понедельник 13:00
+## 1. `seo-weekly-refresh` — понедельник 13:00 (Weekly, или Custom cron `0 13 * * 1`)
 
 **Description:** Еженедельный сбор GSC + GA4, analysis report и операторская сводка.
 
@@ -52,10 +54,9 @@ integrations/.venv/Scripts/python analyzers/seo/run_dataforseo_final_audit_colle
 Ничего не редактируй вне seo-ops/. Не коммить.
 ```
 
-Для «1-е число месяца» пресета в UI нет: при создании попроси Claude в Desktop
-«расписание: первого числа каждого месяца в 13:00».
+Schedule → **Custom**, cron: `0 13 1 * *` (первого числа каждого месяца, 13:00).
 
-## 3. `gbp-weekly-post` — четверг 13:00
+## 3. `gbp-weekly-post` — четверг 13:00 (Weekly, или Custom cron `0 13 * * 4`)
 
 **Description:** Черновик одного поста для Google Business Profile по реальному кейсу; публикует человек.
 
