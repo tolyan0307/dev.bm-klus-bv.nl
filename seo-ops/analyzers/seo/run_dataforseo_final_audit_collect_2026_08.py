@@ -13,6 +13,11 @@ Stages (each can be skipped with --skip <stage>):
     backlinks   Backlinks summary for own domain + competitor shortlist
     serp_local  SERP advanced, Rotterdam location, incl. local_pack items
     gbp         Business Data: my_business_info for own brand
+    link_prospects  (added 2026-09-04, plan item A1) referring-domain lists for
+                every competitor -> aggregated donor list (domains linking to
+                competitors but not to us), categorised + scored.
+                Outputs: snapshots/normalized/dataforseo/link_prospects_latest.json
+                         reports/seo/link_prospects_<date>.md (+ _latest.md)
 
 Usage (from seo-ops/):
     integrations/.venv/Scripts/python analyzers/seo/run_dataforseo_final_audit_collect_2026_08.py
@@ -246,6 +251,224 @@ def stage_gbp(c: DataForSEOClient) -> dict:
     return out
 
 
+
+# ---------------------------------------------------------------------------
+# Link prospects (plan item A1). Per-competitor referring domains, aggregated.
+LINK_PROSPECTS_BUDGET_USD = 2.0
+LINK_PROSPECTS_LIMIT = 1000
+REPORTS_SEO = SEO_OPS / "reports" / "seo"
+LP_NORM_OUT = SEO_OPS / "snapshots" / "normalized" / "dataforseo" / "link_prospects_latest.json"
+
+# Category heuristics by domain substring (first match wins). Anything not
+# matched is "editorial_or_partner" and needs a human look.
+PROSPECT_CATEGORIES: list[tuple[str, tuple[str, ...]]] = [
+    ("social", ("facebook.", "instagram.", "linkedin.", "youtube.", "pinterest.", "twitter.", "x.com", "tiktok.")),
+    ("reviews", ("trustpilot", "klantenvertellen", "kiyoh", "feedbackcompany", "reviews", "beoordelingen")),
+    ("directory", ("trustoo", "werkspot", "homedeal", "slimster", "zoofy", "casius", "bobex", "cylex", "telefoonboek",
+                   "openingstijden", "drimble", "bedrijvenpagina", "kvk", "yelp", "detelefoongids", "goudengids",
+                   "bouwpartnersnel", "stukadoorsclub", "vakman", "offerte", "gids", "vinden", "zoek", "bedrijven",
+                   "bedrijf", "-info.nl", "directory", "lijst", "uitgelicht", "hotfrog", "cybo", "infobel",
+                   "startpagina", "wiki", "klussen", "bouwtotaal", "bouwkennis", "bouwwereld", "adres")),
+    ("supplier_or_brand", ("keim", "sto-", "sto.", "weber", "knauf", "baumit", "sika", "caparol", "isobouw", "kingspan",
+                           "rockwool", "sigma", "wienerberger", "etics", "isover", "unilin", "recticel", "steenstrip")),
+    ("gov_or_energy", ("overheid", "gemeente", "duurzaam", "energieloket", "milieucentraal", "woonwijzer",
+                       "verbeterjehuis", "rvo.nl", "isolatie-subsidie", "regionaalenergieloket", "energie")),
+]
+
+
+def _categorise(domain: str) -> str:
+    d = domain.lower()
+    for cat, needles in PROSPECT_CATEGORIES:
+        if any(n in d for n in needles):
+            return cat
+    return "editorial_or_partner"
+
+
+# Donors that are the competitor's own brand family (takkenkampgroep.nl, pluimers.be, ...) are not prospects.
+COMPETITOR_BRAND_TOKENS = ("takkenkamp", "pluimers", "plusisolatie", "munneke", "vanginkel", "gigant", "devries",
+                           "rotterdamse-stukadoor", "si-isolatie", "jandeisolatieman", "vanklasse", "ddziko",
+                           "groenendijk", "batouz", "isolatiespecialist", "gevelrenovatie-info", "stucwerk-info")
+# Topical relevance hint (bonus only; never a gate).
+RELEVANCE_TOKENS = ("isolatie", "stuc", "gevel", "bouw", "wonen", "woning", "klus", "energie", "duurzaam",
+                    "renovatie", "verbouw", "aannemer", "huis", "vakman", "schilder")
+# Tier gates. rank = DataForSEO 0-1000 scale; spam = DataForSEO spam score 0-100.
+TIER_RULES = {
+    "A": "rank >= 80 and spam < 20  (authority donors; each one is worth a manual outreach)",
+    "B": "links to >= 3 competitors and rank >= 20 and spam < 40  (proven, reachable placements)",
+    "C": "directory / gov_or_energy / reviews / supplier, rank 20-79, spam < 40  (cheap listings)",
+    "ignored": "spam >= 40, or rank == 0 with < 3 competitors, or competitor brand domain",
+}
+
+
+def _tier(e: dict) -> str:
+    if e["brand_owned"] or e["spam_max"] >= 40:
+        return "ignored"
+    if e["rank_max"] >= 80 and e["spam_max"] < 20:
+        return "A"
+    if e["competitors_count"] >= 3 and e["rank_max"] >= 20:
+        return "B"
+    if e["category"] in ("directory", "gov_or_energy", "reviews", "supplier_or_brand") and 20 <= e["rank_max"] < 80:
+        return "C"
+    if e["rank_max"] == 0 and e["competitors_count"] < 3:
+        return "ignored"
+    return "ignored"
+
+
+def stage_link_prospects(c: DataForSEOClient) -> dict:
+    out = {"_collected_at": datetime.now(timezone.utc).isoformat(), "limit": LINK_PROSPECTS_LIMIT,
+           "own": None, "competitors": {}, "spent_usd": 0.0, "aborted": False}
+    spent = 0.0
+    base = {"limit": LINK_PROSPECTS_LIMIT, "backlinks_status_type": "live", "exclude_internal_backlinks": True,
+            "order_by": ["rank,desc"], "internal_list_limit": 5}
+    print(f"[link_prospects] own + {len(COMPETITOR_DOMAINS)} competitors, budget ${LINK_PROSPECTS_BUDGET_USD:.2f}")
+    r = c.post("/backlinks/referring_domains/live", [{"target": OWN, **base}])
+    record_task_cost(analyzer=ANALYZER, keyword_or_scope=f"link_prospects:{OWN}", api_response=r)
+    spent += _cost(r); out["own"] = r
+    print(f"  {OWN}: ${_cost(r):.4f} status {r.get('status_code')}")
+    for dom in COMPETITOR_DOMAINS:
+        if spent > LINK_PROSPECTS_BUDGET_USD:
+            print(f"  ABORT: budget exceeded (${spent:.2f}); remaining competitors skipped")
+            out["aborted"] = True
+            break
+        r = c.post("/backlinks/referring_domains/live", [{"target": dom, **base}])
+        record_task_cost(analyzer=ANALYZER, keyword_or_scope=f"link_prospects:{dom}", api_response=r)
+        spent += _cost(r); out["competitors"][dom] = r
+        n = sum(len(res.get("items") or []) for t in _tasks_ok(r) for res in (t.get("result") or []))
+        tot = next((res.get("total_count") for t in _tasks_ok(r) for res in (t.get("result") or [])), None)
+        print(f"  {dom}: {n}/{tot} domains, ${_cost(r):.4f}")
+        time.sleep(0.2)
+    out["spent_usd"] = round(spent, 4)
+    _save("link_prospects", out)
+    print(f"  total ${spent:.4f}")
+    return out
+
+
+def _rd_items(resp: dict) -> list[dict]:
+    return [i for t in _tasks_ok(resp) for res in (t.get("result") or []) for i in (res.get("items") or [])]
+
+
+def summarize_link_prospects() -> dict | None:
+    raw = _load("link_prospects")
+    if not raw:
+        return None
+    own_domains = {i.get("domain") for i in _rd_items(raw.get("own") or {})}
+    agg: dict[str, dict] = {}
+    for comp, resp in (raw.get("competitors") or {}).items():
+        for i in _rd_items(resp):
+            d = i.get("domain")
+            if not d or d == OWN or d.endswith("." + OWN):
+                continue
+            e = agg.setdefault(d, {"domain": d, "competitors": [], "rank_max": 0, "backlinks_total": 0,
+                                   "dofollow_est": 0, "spam_max": 0, "platform_types": {}, "first_seen_min": None})
+            e["competitors"].append(comp)
+            e["rank_max"] = max(e["rank_max"], int(i.get("rank") or 0))
+            bl = int(i.get("backlinks") or 0)
+            e["backlinks_total"] += bl
+            nofollow = int((i.get("referring_links_attributes") or {}).get("nofollow") or 0)
+            e["dofollow_est"] += max(bl - nofollow, 0)
+            e["spam_max"] = max(e["spam_max"], int(i.get("backlinks_spam_score") or 0))
+            for k, v in (i.get("referring_links_platform_types") or {}).items():
+                e["platform_types"][k] = e["platform_types"].get(k, 0) + int(v or 0)
+            fs = i.get("first_seen")
+            if fs and (e["first_seen_min"] is None or fs < e["first_seen_min"]):
+                e["first_seen_min"] = fs
+    rows = []
+    for e in agg.values():
+        n = len(set(e["competitors"]))
+        e["competitors"] = sorted(set(e["competitors"]))
+        e["competitors_count"] = n
+        e["category"] = _categorise(e["domain"])
+        e["links_to_us"] = e["domain"] in own_domains
+        dl = e["domain"].lower()
+        e["brand_owned"] = any(t in dl for t in COMPETITOR_BRAND_TOKENS)
+        e["relevant_name"] = any(t in dl for t in RELEVANCE_TOKENS)
+        e["tier"] = _tier(e)
+        # score within tier: authority first, then breadth (capped), dofollow + relevance bonus, spam penalty
+        score = (e["rank_max"] + 8 * min(n, 6) + (10 if e["dofollow_est"] > 0 else 0)
+                 + (10 if e["relevant_name"] else 0) - e["spam_max"])
+        e["score"] = round(score, 1)
+        rows.append(e)
+    rows.sort(key=lambda x: ({"A": 0, "B": 1, "C": 2, "ignored": 3}[x["tier"]], -x["score"], x["domain"]))
+    covered = {comp: (next((res.get("total_count") for t in _tasks_ok(resp) for res in (t.get("result") or [])), None),
+                      len(_rd_items(resp)))
+               for comp, resp in (raw.get("competitors") or {}).items()}
+    summary = {"_generated_at": datetime.now(timezone.utc).isoformat(), "_collected_at": raw.get("_collected_at"),
+               "spent_usd": raw.get("spent_usd"), "aborted": raw.get("aborted"),
+               "own_referring_domains": sorted(own_domains),
+               "coverage": {k: {"total_in_index": v[0], "fetched": v[1]} for k, v in covered.items()},
+               "prospects_total": len(rows),
+               "tier_rules": TIER_RULES,
+               "by_tier": {t: sum(1 for r in rows if r["tier"] == t) for t in ("A", "B", "C", "ignored")},
+               "by_category": {cat: sum(1 for r in rows if r["category"] == cat)
+                               for cat in [c for c, _ in PROSPECT_CATEGORIES] + ["editorial_or_partner"]},
+               "prospects": rows}
+    LP_NORM_OUT.parent.mkdir(parents=True, exist_ok=True)
+    LP_NORM_OUT.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    _write_link_prospects_md(summary)
+    return summary
+
+
+def _write_link_prospects_md(s: dict) -> None:
+    day = (s.get("_collected_at") or s["_generated_at"])[:10]
+    rows = s["prospects"]
+    lines = [f"# Link prospects — bm-klus-bv.nl (plan item A1)", "",
+             f"**Collected:** {s.get('_collected_at')} · **DataForSEO cost:** ${s.get('spent_usd')} · "
+             f"**Aborted on budget:** {s.get('aborted')}", "",
+             f"Source: DataForSEO Backlinks `referring_domains/live`, status `live`, limit {LINK_PROSPECTS_LIMIT}/domain, "
+             f"ordered by rank. Index counts are DataForSEO's, not Google's. Category is a name-based heuristic; "
+             f"`editorial_or_partner` = unmatched, needs a human look.", "",
+             "## Coverage", "", "| Competitor | In index | Fetched |", "|---|---:|---:|"]
+    for comp, cv in s["coverage"].items():
+        lines.append(f"| {comp} | {cv['total_in_index']} | {cv['fetched']} |")
+    lines += ["", f"Own referring domains right now: {len(s['own_referring_domains'])} "
+              f"({', '.join(s['own_referring_domains']) or '—'})", "",
+              "## Totals", "", f"Unique donor domains across competitors: **{s['prospects_total']}**; "
+              f"actionable (tier A+B+C): **{s['by_tier']['A'] + s['by_tier']['B'] + s['by_tier']['C']}**", "",
+              "| Category | Domains |", "|---|---:|"]
+    for cat, n in s["by_category"].items():
+        lines.append(f"| {cat} | {n} |")
+
+    def table(title: str, subset: list[dict], cap: int) -> None:
+        if not subset:
+            return
+        lines.extend(["", f"## {title} (top {min(cap, len(subset))} of {len(subset)})", "",
+                      "| # | Domain | Cat | N comp. | Which | Rank | Dofollow est. | Spam | Score |",
+                      "|---:|---|---|---:|---|---:|---:|---:|---:|"])
+        for i, r in enumerate(subset[:cap], 1):
+            which = ", ".join(c.replace(".nl", "").replace(".com", "") for c in r["competitors"][:4])
+            if r["competitors_count"] > 4:
+                which += f" +{r['competitors_count'] - 4}"
+            flag = " (links to us)" if r["links_to_us"] else ""
+            lines.append(f"| {i} | {r['domain']}{flag} | {r['category']} | {r['competitors_count']} | {which} | "
+                         f"{r['rank_max']} | {r['dofollow_est']} | {r['spam_max']} | {r['score']} |")
+
+    lines += ["", "## Tiers", "", "| Tier | Rule | Domains |", "|---|---|---:|"]
+    for t in ("A", "B", "C", "ignored"):
+        lines.append(f"| {t} | {TIER_RULES[t]} | {s['by_tier'][t]} |")
+    table("Tier A: authority donors", [r for r in rows if r["tier"] == "A"], 60)
+    table("Tier B: proven placements (3+ competitors)", [r for r in rows if r["tier"] == "B"], 60)
+    table("Tier C: cheap listings", [r for r in rows if r["tier"] == "C"], 40)
+    lines += ["", "## How to use", "",
+              "1. Tier A: open each domain, find the page that links to the competitor (DataForSEO `backlinks/live` "
+              "with `target=<donor>` if not obvious), and decide: listing / project feature / partner mention. "
+              "Domain names are heuristics; verify the site is real and topical before outreach.",
+              "2. Tier B: these link to several local competitors, so a listing is proven to be obtainable. "
+              "Register with brand anchor + NAP identical to GBP.",
+              "3. Tier C: cheap directories; batch-register in one session, brand anchor only, skip anything that "
+              "asks for reciprocal links or payment for dofollow.",
+              "4. `ignored` (not listed here, see JSON): spam >= 40, rank 0, URL shorteners, competitor brand "
+              "domains, startpagina link farms. Do not chase.",
+              "5. Re-run monthly: `--only link_prospects`; compare `own_referring_domains` against plan KPI (>=12 by "
+              "2026-11-15, >=25 by 2027-02-15).", "",
+              "## Provenance", "", f"Generated {s['_generated_at']} by `{ANALYZER}` stage `link_prospects`. "
+              f"Raw: `snapshots/raw/dataforseo/final_audit_2026-08/link_prospects.json`. "
+              f"Normalized: `snapshots/normalized/dataforseo/link_prospects_latest.json`."]
+    REPORTS_SEO.mkdir(parents=True, exist_ok=True)
+    text = "\n".join(lines) + "\n"
+    (REPORTS_SEO / f"link_prospects_{day}.md").write_text(text, encoding="utf-8")
+    (REPORTS_SEO / "link_prospects_latest.md").write_text(text, encoding="utf-8")
+    print(f"link prospects -> {REPORTS_SEO / f'link_prospects_{day}.md'}")
+
 # ---------------------------------------------------------------------------
 def summarize() -> dict:
     s: dict = {"_generated_at": datetime.now(timezone.utc).isoformat(), "stages": {}}
@@ -357,7 +580,7 @@ def main() -> None:
     if not a.summarize_only:
         c = DataForSEOClient(timeout=90)
         stages = {"volume": stage_volume, "labs": stage_labs, "backlinks": stage_backlinks,
-                  "serp_local": stage_serp_local, "gbp": stage_gbp}
+                  "serp_local": stage_serp_local, "gbp": stage_gbp, "link_prospects": stage_link_prospects}
         for name, fn in stages.items():
             if name in a.skip or (a.only and name not in a.only):
                 continue
@@ -365,8 +588,12 @@ def main() -> None:
                 fn(c)
             except Exception as e:  # noqa: BLE001
                 print(f"  ERROR stage {name}: {e}")
+    if a.only and set(a.only) == {"link_prospects"}:
+        summarize_link_prospects()
+        return
     summarize()
     print(f"summary -> {NORM_OUT}")
+    summarize_link_prospects()
 
 
 if __name__ == "__main__":

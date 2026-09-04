@@ -2,3 +2,7 @@ google-auth>=2.20,<3
 google-auth-oauthlib>=1.0,<2
 google-api-python-client>=2.90,<3
 google-analytics-data>=0.18,<1
+# added 2026-09-04 after connectivity audit
+google-ads>=27,<32
+PyYAML>=6,<7
+requests>=2.31,<3
