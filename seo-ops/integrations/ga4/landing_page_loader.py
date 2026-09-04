@@ -37,7 +37,7 @@ from google.analytics.data_v1beta.types import (
     RunReportRequest,
 )
 
-KEY_EVENT_NAMES = ["Contact_Form_Site", "Phone", "Whatsapp"]
+KEY_EVENT_NAMES = ["Contact_Form_Site", "Phone", "Whatsapp", "Email"]  # all four are key events in GA4 (2026-09-05)
 
 
 def _get_client(cfg: Ga4Config) -> BetaAnalyticsDataClient:

@@ -2,6 +2,7 @@ primary_key_events:
   - Contact_Form_Site
   - Phone
   - Whatsapp
+  - Email   # key event in GA4 (verified 2026-09-05), GTM link-click trigger mailto:
 
 secondary_events:
   - form_start
@@ -13,4 +14,5 @@ rules:
   Contact_Form_Site: "Treat as primary lead event"
   Phone: "Treat as primary lead intent event"
   Whatsapp: "Treat as primary lead intent event"
+  Email: "Treat as primary lead intent event (mailto: click)"
   form_start: "Use only as micro-conversion, not as final conversion"

@@ -12,7 +12,7 @@ Inputs:
 
 Outputs:
   snapshots/normalized/wp/lead_reconciliation_weekly_last{N}d.csv
-  reports/audits/lead_reconciliation_{YYYY-MM-DD}.md
+  reports/audits/lead_reconciliation_{YYYY-MM-DD}_{N}d.md
 
 Usage:
   python seo-ops/analyzers/pages/run_lead_reconciliation_v1.py --days 90
@@ -288,7 +288,7 @@ def main() -> None:
         "## 4. Recommended actions (manual)",
         "",
         "1. Triage every `new` lead in WP → BM Stats → Заявки (status qualified / won / lost / spam). Without this the reconciliation stays at 'submissions', not 'leads'.",
-        "2. No GTM change needed for clicks: link-click triggers (tel:, wa.me, mailto:) already feed GA4 `Phone`/`Whatsapp`/`Email`. Check in GA4 Admin → Events that `Email` is also marked as a key event if e-mail clicks should count as lead intent (currently only `Contact_Form_Site`, `Phone`, `Whatsapp` are listed in `config/conversions.yaml`).",
+        "2. Measurement setup needs no change: GTM link-click triggers feed GA4 `Phone`/`Whatsapp`/`Email`, all four events are key events in GA4 (verified 2026-09-05). Keep it as is; do not add `bm_*` tags.",
         "3. Use the WP lead count as the denominator in every conversion-rate claim; treat GA4 key events as a consent-limited sample. Record the undercount factor in `config/analysis_context_v1.yaml` once 4 weeks of data exist.",
         "4. After one month of triaged data: plan the offline conversion import to Google Ads by gclid for `qualified`/`won` leads (spec §1, later phase).",
         "",
@@ -317,11 +317,11 @@ def main() -> None:
         "## Output files",
         "",
         f"- Weekly CSV: `seo-ops/snapshots/normalized/wp/lead_reconciliation_weekly_last{days}d.csv`",
-        f"- This report: `seo-ops/reports/audits/lead_reconciliation_{today}.md`",
+        f"- This report: `seo-ops/reports/audits/lead_reconciliation_{today}_{days}d.md`",
     ]
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
-    report_path = REPORT_DIR / f"lead_reconciliation_{today}.md"
+    report_path = REPORT_DIR / f"lead_reconciliation_{today}_{days}d.md"
     report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"  Report -> {report_path}")
     print(f"\n  WP submissions {wp_total} (non-spam {wp_real}), GA4 form events {ga4_form_total}, GA4 share {undercount}%")
