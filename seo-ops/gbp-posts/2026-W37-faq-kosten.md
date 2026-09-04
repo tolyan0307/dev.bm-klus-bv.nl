@@ -1,3 +1,5 @@
+> ⚠️ **NIET PUBLICEREN in deze vorm (2026-09-05).** De prijzen €110–€200/m² zijn op 2026-09-05 van de site verwijderd (besluit eigenaar, zie `seo-ops/reports/seo/price_removal_roadmap_2026-09-05.md`). De bronpagina `/gevelisolatie/kosten/` bevat geen bedragen meer. Post opnieuw genereren via `/gbp-weekly-post` zonder bedragen, of vervangen door een case-post.
+
 # GBP-post 2026-W37 · faq · faq-kosten
 
 **Bron:** https://bm-klus-bv.nl/gevelisolatie/kosten/
