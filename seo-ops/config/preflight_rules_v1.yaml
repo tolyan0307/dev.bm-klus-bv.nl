@@ -57,6 +57,15 @@ artifact_freshness:
     warning: "GA4 28d snapshot is older than 7 days. Rebuild with: python seo-ops/analyzers/pages/build_ga4_landing_page_snapshot.py --days 28"
     blocking: false
 
+  # ─── WP lead log + server-side pageviews (BM Stats v2, primary truth for leads) ───
+  wp_snapshot:
+    paths:
+      - "seo-ops/snapshots/normalized/wp/wp_leads_last90d.csv"
+      - "seo-ops/snapshots/normalized/wp/wp_pageviews_daily_last90d.csv"
+    stale_after_days: 7
+    warning: "WP stats snapshot is older than 7 days. Rebuild with: python seo-ops/analyzers/pages/build_wp_snapshot.py"
+    blocking: false
+
   keyword_master_v2:
     paths:
       - "seo-ops/snapshots/normalized/keyword_master/keyword_master_v2.csv"
