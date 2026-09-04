@@ -1,9 +1,9 @@
 # WP Stats Snapshot (last 28 days)
 
-**Generated:** 2026-09-04 22:13 UTC
+**Generated:** 2026-09-04 22:37 UTC
 **Date range:** 2026-08-08 to 2026-09-04
 **Source:** BM Stats v2 plugin, https://bm-klus-bv.nl (provenance label: `[WP, 28d, lead-level]` / `[WP, 28d, event-level]`)
-**Plugin version:** 2.0.0
+**Plugin version:** 2.0.1
 
 > Pageview and CTA events exist only from 2026-09-04 (1 of 28 days in window). Lead rows exist from 2026-03-11.
 
@@ -24,7 +24,7 @@
 
 | Status | Leads |
 |--------|-------|
-| new | 8 |
+| archive | 8 |
 
 ### By source (first touch)
 
@@ -91,7 +91,7 @@
 2. Leads before 2026-09-04 were backfilled: source comes from the form page URL only (utm/gclid), no first-touch referrer, form variant unknown.
 3. Lead source is classified from first-touch UTM/gclid/referrer, not from GA4 channel grouping; the two are not expected to match 1:1.
 4. No cookies, no visitor identifier: unique visitors are not available (visitor hash disabled by owner decision).
-5. Statuses are set manually by the owner; `new` means not yet triaged, not necessarily a real lead.
+5. Statuses are set manually by the owner; `new` means not yet triaged, `archive` means a real pre-2026-09-05 lead whose outcome is unknown (excluded from qualified/won ratios).
 
 ## Output files
 

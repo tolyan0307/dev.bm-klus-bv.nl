@@ -1,6 +1,6 @@
 # Lead reconciliation: WP lead log vs GA4 vs Google Ads (2026-06-07 .. 2026-09-04)
 
-**Generated:** 2026-09-04 22:26 UTC
+**Generated:** 2026-09-04 22:37 UTC
 **Report mode:** verified
 **Workflow:** lead_reconciliation_v1
 **Confidence cap:** high for WP counts, medium for cross-source ratios
@@ -20,7 +20,8 @@
 | Form submissions received by the site | 22 | [WP, 90d, lead-level] |
 | … excluding status `spam` | 22 | [WP, 90d, lead-level] |
 | … triaged (qualified + won + lost) | 0 | [WP, 90d, lead-level] |
-| … still status `new` (not triaged) | 22 | [WP, 90d, lead-level] |
+| … `archive` (real, outcome unknown, pre-2026-09-05) | 22 | [WP, 90d, lead-level] |
+| … still status `new` (not triaged) | 0 | [WP, 90d, lead-level] |
 | … first-touch source ads / direct / organic / other | 11 / 11 / 0 / 0 | [WP, 90d, lead-level] |
 | … with gclid | 11 | [WP, 90d, lead-level] |
 | GA4 `Contact_Form_Site` events | 18 | [GA4, 90d, event-level] |
@@ -58,7 +59,6 @@ All counts per ISO week (Mon–Sun). WP columns: [WP, 90d, lead-level]; views/CT
 
 - GA4 records 81.8% of real form submissions ([GA4, 90d, event-level] ÷ [WP, 90d, lead-level]); undercount is moderate. Confidence: **medium**.
 - 50% of submissions carry a first-touch ads signal (gclid or paid UTM) ([WP, 90d, lead-level]). This is the ceiling for Ads-attributable leads regardless of what Ads reports. Confidence: **high** for post-2026-09-04 leads, **medium** for backfilled ones (source from form-page URL only).
-- 22 submissions are still `new` ([WP, 90d, lead-level]); until the owner triages them, 'qualified' comparisons are not meaningful. Confidence: n/a, data-completeness note.
 - Contact clicks are measured twice by design: GA4 `Phone`/`Whatsapp`/`Email` via GTM link-click triggers (consent-gated) and WP `cta_click` via beacon (no consent gate). The `bm_*` dataLayer events are intentionally not tagged in GTM; tagging them would double-count. From 2026-09-04 the WP/GA4 click ratio becomes the second undercount estimate. Confidence: **high** on the setup, ratio needs 4+ weeks.
 
 ---
@@ -74,7 +74,7 @@ All counts per ISO week (Mon–Sun). WP columns: [WP, 90d, lead-level]; views/CT
 
 ## 4. Recommended actions (manual)
 
-1. Triage every `new` lead in WP → BM Stats → Заявки (status qualified / won / lost / spam). Without this the reconciliation stays at 'submissions', not 'leads'.
+1. Triage every `new` lead in WP → BM Stats → Заявки (status qualified / won / lost / spam). Leads from before 2026-09-05 with unknown outcome stay `archive`; only obvious spam among them should be re-marked. Without this the reconciliation stays at 'submissions', not 'leads'.
 2. Measurement setup needs no change: GTM link-click triggers feed GA4 `Phone`/`Whatsapp`/`Email`, all four events are key events in GA4 (verified 2026-09-05). Keep it as is; do not add `bm_*` tags.
 3. Use the WP lead count as the denominator in every conversion-rate claim; treat GA4 key events as a consent-limited sample. Record the undercount factor in `config/analysis_context_v1.yaml` once 4 weeks of data exist.
 4. After one month of triaged data: plan the offline conversion import to Google Ads by gclid for `qualified`/`won` leads (spec §1, later phase).
@@ -92,7 +92,7 @@ All counts per ISO week (Mon–Sun). WP columns: [WP, 90d, lead-level]; views/CT
 
 ## Provenance
 
-- **Generated:** 2026-09-04 22:26 UTC
+- **Generated:** 2026-09-04 22:37 UTC
 - **Report mode:** verified
 - **Generator:** analyzers/pages/run_lead_reconciliation_v1.py
 - **Primary truth:** WP lead log (BM Stats v2 API, `/wp-json/bm-stats/v1/leads`, `/pageviews`, `/events`), internal_artifact
