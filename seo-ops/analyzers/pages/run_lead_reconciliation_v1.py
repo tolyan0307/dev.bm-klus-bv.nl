@@ -40,7 +40,7 @@ REPORT_DIR = SEO_OPS_ROOT / "reports" / "audits"
 
 EVENTS_SINCE = date(2026, 9, 4)
 GA4_FORM_EVENT = "Contact_Form_Site"
-GA4_CTA_EVENTS = ["Phone", "Whatsapp"]
+GA4_CTA_EVENTS = ["Phone", "Whatsapp", "Email"]  # fired by GTM link-click triggers (tel:, wa.me, mailto:)
 GA4_NEW_EVENTS = ["bm_lead_form_success", "bm_whatsapp_click", "bm_phone_click", "bm_email_click"]
 
 
@@ -157,6 +157,7 @@ def main() -> None:
             "ga4_form_vs_wp_pct": round(ga4_form / total * 100, 1) if total else "",
             "ga4_phone": int(w["ga4_phone"]),
             "ga4_whatsapp": int(w["ga4_whatsapp"]),
+            "ga4_email": int(w["ga4_email"]),
             "ga4_bm_events": int(sum(w[f"ga4_{n}"] for n in GA4_NEW_EVENTS)),
             "wp_views": int(w["wp_views"]),
             "wp_cta": int(w["wp_cta"]),
@@ -176,13 +177,13 @@ def main() -> None:
     T = lambda k: sum(int(r[k]) if r[k] != "" else 0 for r in rows)  # noqa: E731
     wp_total, wp_real, wp_q = T("wp_leads_total"), T("wp_leads_real"), T("wp_leads_qualified")
     ga4_form_total = T("ga4_contact_form")
-    ga4_cta_total = T("ga4_phone") + T("ga4_whatsapp")
+    ga4_cta_total = T("ga4_phone") + T("ga4_whatsapp") + T("ga4_email")
     ga4_bm_total = T("ga4_bm_events")
     wp_ads, wp_direct, wp_organic = T("wp_leads_ads"), T("wp_leads_direct"), T("wp_leads_organic")
     wp_gclid = T("wp_with_gclid")
     ads_total = sum(ads_in_window.values()) if ads_in_window else None
     wp_cta_since = sum(int(r["wp_cta"]) for r in rows)
-    ga4_cta_since = sum(int(r["ga4_phone"]) + int(r["ga4_whatsapp"]) for r in rows if parse_date(r["week_end"]) >= EVENTS_SINCE)
+    ga4_cta_since = sum(int(r["ga4_phone"]) + int(r["ga4_whatsapp"]) + int(r["ga4_email"]) for r in rows if parse_date(r["week_end"]) >= EVENTS_SINCE)
     undercount = round(ga4_form_total / wp_total * 100, 1) if wp_total else None
     untriaged = sum(1 for l in wp["leads"].get("leads", []) if (l.get("status") or "new") == "new")
 
@@ -210,7 +211,7 @@ def main() -> None:
         "**Sources**",
         f"- WP lead log, BM Stats v2 plugin, server-side, every form submission with owner-set status → `{L_WP}`",
         f"- WP server-side pageviews and CTA clicks, beacon, no consent gate, from {EVENTS_SINCE.isoformat()} → `{L_WPE}`",
-        f"- GA4 key events by date: `{GA4_FORM_EVENT}`, `Phone`, `Whatsapp`, plus `bm_*` dataLayer events if tagged → `{L_GA4}`",
+        f"- GA4 events by date: `{GA4_FORM_EVENT}` (GTM trigger CE bm_lead_form_success), `Phone` / `Whatsapp` / `Email` (GTM link-click triggers tel: / wa.me / mailto:) → `{L_GA4}`",
         f"- Google Ads campaign conversions by date from the last CSV export → `{L_ADS}`",
         "",
         "---",
@@ -227,10 +228,10 @@ def main() -> None:
         f"| … with gclid | {wp_gclid} | {L_WP} |",
         f"| GA4 `{GA4_FORM_EVENT}` events | {ga4_form_total} | {L_GA4} |",
         f"| GA4 form events as % of WP submissions | {undercount if undercount is not None else 'n/a'}% | {L_GA4} ÷ {L_WP} |",
-        f"| GA4 `Phone` + `Whatsapp` events | {ga4_cta_total} | {L_GA4} |",
-        f"| GA4 `bm_*` click events (GTM triggers) | {ga4_bm_total} | {L_GA4} |",
+        f"| GA4 `Phone` + `Whatsapp` + `Email` events | {ga4_cta_total} | {L_GA4} |",
+        f"| GA4 `bm_*` dataLayer events (not tagged in GTM, expected 0) | {ga4_bm_total} | {L_GA4} |",
         f"| WP CTA clicks (WhatsApp / phone / e-mail) | {wp_cta_since} | {L_WPE} |",
-        f"| GA4 `Phone` + `Whatsapp` in the same days | {ga4_cta_since} | {L_GA4} |",
+        f"| GA4 `Phone` + `Whatsapp` + `Email` in the same days | {ga4_cta_since} | {L_GA4} |",
     ]
     if ads_cmp:
         lines.append(f"| Ads conversions in CSV coverage | {ads_cmp[1]} | {L_ADS} |")
@@ -244,13 +245,13 @@ def main() -> None:
         "",
         f"All counts per ISO week (Mon–Sun). WP columns: {L_WP}; views/CTA: {L_WPE}; GA4 columns: {L_GA4}; Ads: {L_ADS}.",
         "",
-        "| Week | WP total | WP non-spam | WP triaged | WP ads | WP direct | GA4 form | GA4 form % | GA4 phone | GA4 whatsapp | WP views | WP CTA | Ads conv |",
-        "|------|---------:|------------:|-----------:|-------:|----------:|---------:|-----------:|----------:|-------------:|---------:|-------:|---------:|",
+        "| Week | WP total | WP non-spam | WP triaged | WP ads | WP direct | GA4 form | GA4 form % | GA4 phone | GA4 whatsapp | GA4 email | WP views | WP CTA | Ads conv |",
+        "|------|---------:|------------:|-----------:|-------:|----------:|---------:|-----------:|----------:|-------------:|----------:|---------:|-------:|---------:|",
     ]
     for r in rows:
         lines.append(
             f"| {r['week_start']} | {r['wp_leads_total']} | {r['wp_leads_real']} | {r['wp_leads_qualified']} | {r['wp_leads_ads']} | {r['wp_leads_direct']} "
-            f"| {r['ga4_contact_form']} | {r['ga4_form_vs_wp_pct'] if r['ga4_form_vs_wp_pct'] != '' else '—'} | {r['ga4_phone']} | {r['ga4_whatsapp']} "
+            f"| {r['ga4_contact_form']} | {r['ga4_form_vs_wp_pct'] if r['ga4_form_vs_wp_pct'] != '' else '—'} | {r['ga4_phone']} | {r['ga4_whatsapp']} | {r['ga4_email']} "
             f"| {r['wp_views'] if r['wp_event_days'] else '—'} | {r['wp_cta'] if r['wp_event_days'] else '—'} | {r['ads_conversions'] if r['ads_conversions'] != '' else '—'} |"
         )
 
@@ -265,8 +266,8 @@ def main() -> None:
         interp.append(f"- {round(wp_ads / wp_total * 100)}% of submissions carry a first-touch ads signal (gclid or paid UTM) ({L_WP}). This is the ceiling for Ads-attributable leads regardless of what Ads reports. Confidence: **high** for post-{EVENTS_SINCE.isoformat()} leads, **medium** for backfilled ones (source from form-page URL only).")
     if untriaged:
         interp.append(f"- {untriaged} submissions are still `new` ({L_WP}); until the owner triages them, 'qualified' comparisons are not meaningful. Confidence: n/a, data-completeness note.")
-    if ga4_bm_total == 0:
-        interp.append(f"- `bm_*` click events are absent in GA4 ({L_GA4}): GTM triggers for the dataLayer events are still not configured (open since July). The WP CTA counter is currently the only measurement of WhatsApp/phone clicks. Confidence: **high**.")
+    if ga4_cta_total:
+        interp.append(f"- Contact clicks are measured twice by design: GA4 `Phone`/`Whatsapp`/`Email` via GTM link-click triggers (consent-gated) and WP `cta_click` via beacon (no consent gate). The `bm_*` dataLayer events are intentionally not tagged in GTM; tagging them would double-count. From {EVENTS_SINCE.isoformat()} the WP/GA4 click ratio becomes the second undercount estimate. Confidence: **high** on the setup, ratio needs 4+ weeks.")
     if ads_cmp and ads_cmp[1] is not None:
         interp.append(f"- Ads reports {ads_cmp[1]} conversions ({L_ADS}) vs {ads_cmp[2]} site submissions with an ads first touch in the same days ({L_WP}). Ads conversions come from GA4 imports, so they inherit the GA4 undercount; do not read them as lead counts. Confidence: **medium**.")
     lines += ["", "---", "", "## 2. Interpretations", ""] + (interp or ["- Not enough data for interpretations in this window."])
@@ -287,7 +288,7 @@ def main() -> None:
         "## 4. Recommended actions (manual)",
         "",
         "1. Triage every `new` lead in WP → BM Stats → Заявки (status qualified / won / lost / spam). Without this the reconciliation stays at 'submissions', not 'leads'.",
-        "2. Configure the three GTM Custom Event triggers (`bm_whatsapp_click`, `bm_phone_click`, `bm_email_click`) → GA4 events, then mark them as key events. Keep old `Phone`/`Whatsapp` until end of September for overlap.",
+        "2. No GTM change needed for clicks: link-click triggers (tel:, wa.me, mailto:) already feed GA4 `Phone`/`Whatsapp`/`Email`. Check in GA4 Admin → Events that `Email` is also marked as a key event if e-mail clicks should count as lead intent (currently only `Contact_Form_Site`, `Phone`, `Whatsapp` are listed in `config/conversions.yaml`).",
         "3. Use the WP lead count as the denominator in every conversion-rate claim; treat GA4 key events as a consent-limited sample. Record the undercount factor in `config/analysis_context_v1.yaml` once 4 weeks of data exist.",
         "4. After one month of triaged data: plan the offline conversion import to Google Ads by gclid for `qualified`/`won` leads (spec §1, later phase).",
         "",
