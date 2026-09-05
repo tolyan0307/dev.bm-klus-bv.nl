@@ -260,5 +260,7 @@ Capability `bm_stats_view`, выдаётся роли administrator при пе�
 - **PowerShell:** вызывать `curl.exe`, а не `curl`, иначе заголовок `X-BM-Token` не доходит.
 - На PROD есть `bm-mail-from.php`, которого нет в `_prod/`; версии `bm-v0-static-router.php` на PROD (3790 байт) и DEV (3981 байт) различаются. Оба факта записать в `_prod/` отдельной задачей.
 
-Дальше: загрузчик `seo-ops/integrations/wp/stats_loader.py` поверх `/summary`, `/leads`, `/pageviews`; отчёт сверки «WP-лиды vs GA4 vs Ads».
+Сделано 2026-09-05: загрузчик `seo-ops/integrations/wp/stats_loader.py`, снапшот `build_wp_snapshot.py`, сверка `run_lead_reconciliation_v1.py` (WP vs GA4 vs Ads API). Плагин 2.1.0: пресеты периода с «Сегодня» по умолчанию, почасовой график, переключаемые линии, матрица страница × источник, предупреждение о смешанном периоде.
+
+Открытое решение: анализ пути посетителя (воронка по визитам). Разбор целесообразности, права и доверия к данным: `docs/WP-STATS-V2-FUNNEL-DECISION.md`. До решения обязательны меры доверия: исключение визитов владельца, нейтральный адрес beacon, калибровка по журналу Apache.
 
