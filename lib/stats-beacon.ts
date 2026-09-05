@@ -1,13 +1,13 @@
 /**
  * Fire-and-forget event beacon for the server-side stats plugin
- * (POST /wp-json/bm-stats/v1/event). No cookies, no identifiers: only the
+ * (POST /wp-json/bm/v1/hit, same handler as /bm-stats/v1/event). No cookies, no identifiers: only the
  * event type, the current URL, the referrer and, for CTA clicks, the channel.
  * Page views keep using components/pageview-beacon.tsx.
  */
 
 const API_BASE =
   process.env.NEXT_PUBLIC_CONTACT_API_BASE?.replace(/\/+$/, "") ?? ""
-const ENDPOINT = `${API_BASE}/wp-json/bm-stats/v1/event`
+const ENDPOINT = `${API_BASE}/wp-json/bm/v1/hit` // neutral path shared with pageview-beacon; server routes by "type"
 
 export type StatsEventType = "cta_click"
 export type StatsCta = "whatsapp" | "phone" | "email"

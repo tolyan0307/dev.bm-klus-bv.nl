@@ -7,7 +7,7 @@ import { captureAttribution } from "@/lib/attribution"
 
 const API_BASE =
   process.env.NEXT_PUBLIC_CONTACT_API_BASE?.replace(/\/+$/, "") ?? ""
-const ENDPOINT = `${API_BASE}/wp-json/bm-stats/v1/pageview`
+const ENDPOINT = `${API_BASE}/wp-json/bm/v1/hit` // neutral path: not matched by ad-blocker patterns like "stats"/"pageview"
 
 function send(url: string, referrer: string) {
   const body = JSON.stringify({ url, referrer })
