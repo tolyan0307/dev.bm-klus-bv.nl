@@ -7,6 +7,21 @@
 
 ---
 
+## 2026-09-15 — Replace AI-generated stock images with real photos (49 images, 0 code files)
+**Agent:** Claude Code
+**Files changed:**
+- `public/images/**` — 44 image baseNames regenerated from real photos via `scripts/generate-variants.mjs` (old AI variants deleted, new `.w{N}.webp` variants written); 5 `public/images/nadelen/*.webp` overwritten directly (plain `<img>` slots, 960×540 q64)
+- `data/image-manifest.json` — entries for the 44 baseNames rewritten (new dimensions, aspect ratios, variant widths)
+- `docs/audit/IMAGE-AI-REPLACEMENT-AUDIT.md` — audit + execution status
+
+**What:** Same baseNames kept → zero component/page edits. Sources: 12 owner photos (Telegram `temp` folder, 2026-09-15) + existing project photos. Each source cropped to the aspect ratio of the AI image it replaces (1:1, 16:9, 4:5) so layouts are unchanged. HEIC decoded via Windows WIC; EXIF orientation applied.
+**Weight control:** serviceCard preset (≤828px) for all cards; `process-hero` (6 % opacity background) capped at w768; 10 texture-heavy images capped at w466 (largest served variant ≤ 57 KB, median 28 KB). Total variant bytes for the replaced set: 3133 KB before → 3162 KB after; nadelen 774 KB → 354 KB.
+**Not replaced (no real material):** muren-stucen (12), dienst-muren, dienst-schoonmaak, steenstrips (5), sierpleister types siliconenhars/krabpleister/kalei, materiaal-pir/minerale-wol, etics-layer-insulation-ext, og-default.png. `gevel-sierpleister-silicaat` (was a blank 4 KB placeholder) now shows a generic fine white sierpleister photo.
+**Follow-up (same day):** owner review → `gevelisolatie-voordelen` re-sourced from Etten-Leur Bankenstraat na-02 (4:3), `subsidie-vergunning` from Etten-Leur Strikolith na-02.
+**Verification:** `npx tsc --noEmit` — zero errors; `next build` — exit 0; manifest/file integrity check — 0 missing; visual check of all 49 outputs via contact sheets.
+
+---
+
 ## 2026-03-20 — Safe technical SEO batch (3 files)
 **Agent:** Claude Code
 **Files changed:**

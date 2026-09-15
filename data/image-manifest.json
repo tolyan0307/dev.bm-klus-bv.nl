@@ -1,13 +1,12 @@
 {
   "afwerking-crepi": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       233,
       350,
-      466,
-      604
+      466
     ]
   },
   "afwerking-steenstrips": {
@@ -33,69 +32,68 @@
     ]
   },
   "afwerking-stucwerk-resultaat": {
-    "originalWidth": 2752,
-    "originalHeight": 1536,
-    "aspectRatio": 1.792,
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "aspectRatio": 1.778,
     "variants": [
       320,
       480,
-      640,
+      576,
       745
     ]
   },
   "detail-dagkanten": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      320,
-      480,
-      640,
-      828
-    ]
-  },
-  "detail-hoeken": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      320,
-      480,
-      640,
-      828
-    ]
-  },
-  "detail-koudebruggen": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      320,
-      480,
-      640,
-      828
-    ]
-  },
-  "detail-plint": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      233,
-      350,
-      466,
-      604
-    ]
-  },
-  "dienst-isolatie": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1600,
+    "originalHeight": 1600,
     "aspectRatio": 1,
     "variants": [
       320,
       432,
       518,
-      671
+      604
+    ]
+  },
+  "detail-hoeken": {
+    "originalWidth": 1600,
+    "originalHeight": 1600,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      389,
+      466,
+      604
+    ]
+  },
+  "detail-koudebruggen": {
+    "originalWidth": 1500,
+    "originalHeight": 1500,
+    "aspectRatio": 1,
+    "variants": [
+      288,
+      350,
+      466,
+      604
+    ]
+  },
+  "detail-plint": {
+    "originalWidth": 1600,
+    "originalHeight": 1600,
+    "aspectRatio": 1,
+    "variants": [
+      233,
+      350,
+      466
+    ]
+  },
+  "dienst-isolatie": {
+    "originalWidth": 1500,
+    "originalHeight": 1500,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      350,
+      466,
+      604
     ]
   },
   "dienst-muren": {
@@ -110,12 +108,12 @@
     ]
   },
   "dienst-schilderen": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       320,
-      432,
+      480,
       518,
       671
     ]
@@ -132,25 +130,25 @@
     ]
   },
   "dienst-sierpleister": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1536,
+    "originalHeight": 1536,
     "aspectRatio": 1,
     "variants": [
-      259,
+      233,
       350,
       466,
       604
     ]
   },
   "dienst-stucwerk": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       320,
-      432,
+      480,
       576,
-      745
+      671
     ]
   },
   "droogtijd-behangen": {
@@ -187,24 +185,24 @@
     ]
   },
   "etics-isolatie": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
-      288,
-      350,
+      320,
+      432,
       466,
       604
     ]
   },
   "etics-layer-finish-ext": {
-    "originalWidth": 694,
-    "originalHeight": 449,
-    "aspectRatio": 1.546,
+    "originalWidth": 1600,
+    "originalHeight": 2000,
+    "aspectRatio": 0.8,
     "variants": [
-      320,
-      480,
-      640
+      233,
+      350,
+      466
     ]
   },
   "etics-layer-insulation-ext": {
@@ -218,23 +216,25 @@
     ]
   },
   "etics-layer-mesh-ext": {
-    "originalWidth": 696,
-    "originalHeight": 445,
-    "aspectRatio": 1.564,
+    "originalWidth": 1500,
+    "originalHeight": 1875,
+    "aspectRatio": 0.8,
     "variants": [
       320,
       480,
-      576
+      518,
+      604
     ]
   },
   "etics-layer-wall-ext": {
-    "originalWidth": 699,
-    "originalHeight": 443,
-    "aspectRatio": 1.578,
+    "originalWidth": 1500,
+    "originalHeight": 1875,
+    "aspectRatio": 0.8,
     "variants": [
       320,
-      480,
-      640
+      432,
+      518,
+      604
     ]
   },
   "general/etics-layer-finish-ext": {
@@ -297,36 +297,35 @@
     ]
   },
   "gevel-schilderen": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
-      233,
-      350,
-      466,
-      604
+      320,
+      480,
+      640,
+      828
     ]
   },
   "gevel-schilderen-voordelen": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
-      259,
-      350,
+      320,
+      432,
       466,
       604
     ]
   },
   "gevel-sierpleister-crepi": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       233,
       350,
-      466,
-      604
+      466
     ]
   },
   "gevel-sierpleister-kalei": {
@@ -352,14 +351,14 @@
     ]
   },
   "gevel-sierpleister-silicaat": {
-    "originalWidth": 1200,
-    "originalHeight": 1200,
+    "originalWidth": 1536,
+    "originalHeight": 1536,
     "aspectRatio": 1,
     "variants": [
-      320,
-      480,
-      640,
-      828
+      233,
+      350,
+      466,
+      604
     ]
   },
   "gevel-sierpleister-siliconenhars": {
@@ -374,36 +373,34 @@
     ]
   },
   "gevel-sierpleister-spachtelputz": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      259,
-      350,
-      466,
-      604
-    ]
-  },
-  "gevel-voorbereiding": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1600,
+    "originalHeight": 1600,
     "aspectRatio": 1,
     "variants": [
       233,
+      350,
+      466
+    ]
+  },
+  "gevel-voorbereiding": {
+    "originalWidth": 1500,
+    "originalHeight": 1500,
+    "aspectRatio": 1,
+    "variants": [
+      288,
       350,
       466,
       604
     ]
   },
   "gevelafwerking": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
-      320,
-      480,
-      640,
-      828
+      233,
+      350,
+      466
     ]
   },
   "gevelisolatie-eindresultaat-stucwerk": {
@@ -417,12 +414,12 @@
     ]
   },
   "gevelisolatie-kosten": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
-      259,
-      350,
+      320,
+      389,
       466,
       604
     ]
@@ -451,25 +448,25 @@
     ]
   },
   "gevelisolatie-voordelen": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
+    "originalWidth": 1500,
+    "originalHeight": 1125,
+    "aspectRatio": 1.333,
     "variants": [
-      259,
-      350,
-      466,
+      320,
+      480,
+      518,
       604
     ]
   },
   "materiaal-eps": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1600,
+    "originalHeight": 1600,
     "aspectRatio": 1,
     "variants": [
-      320,
-      480,
-      640,
-      828
+      288,
+      350,
+      466,
+      604
     ]
   },
   "materiaal-minerale-wol": {
@@ -561,30 +558,29 @@
     ]
   },
   "offerte-berekening": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
-      320,
-      432,
-      518,
-      671
-    ]
-  },
-  "ondergrond-baksteen": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      259,
+      288,
       350,
       466,
       604
     ]
   },
+  "ondergrond-baksteen": {
+    "originalWidth": 1500,
+    "originalHeight": 1500,
+    "aspectRatio": 1,
+    "variants": [
+      233,
+      350,
+      466
+    ]
+  },
   "ondergrond-beton": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1352,
+    "originalHeight": 1352,
     "aspectRatio": 1,
     "variants": [
       259,
@@ -594,25 +590,23 @@
     ]
   },
   "ondergrond-pleister": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1600,
+    "originalHeight": 1600,
     "aspectRatio": 1,
     "variants": [
       320,
-      432,
+      480,
       518,
       604
     ]
   },
   "process-hero": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
+    "originalWidth": 2000,
+    "originalHeight": 1125,
+    "aspectRatio": 1.778,
     "variants": [
-      320,
-      432,
-      518,
-      671
+      480,
+      768
     ]
   },
   "projects/almere-gevelisolatie-35m2-na-01": {
@@ -6273,20 +6267,20 @@
     ]
   },
   "scenario-hoekwoning-sierpleister": {
-    "originalWidth": 2752,
-    "originalHeight": 1536,
-    "aspectRatio": 1.792,
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "aspectRatio": 1.778,
     "variants": [
       320,
       480,
-      576,
-      671
+      640,
+      828
     ]
   },
   "scenario-rijwoning-stucwerk": {
-    "originalWidth": 2752,
-    "originalHeight": 1536,
-    "aspectRatio": 1.792,
+    "originalWidth": 1440,
+    "originalHeight": 810,
+    "aspectRatio": 1.778,
     "variants": [
       320,
       480,
@@ -6317,8 +6311,19 @@
     ]
   },
   "services/service-coating": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      480,
+      640,
+      745
+    ]
+  },
+  "services/service-isolatie": {
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -6327,31 +6332,30 @@
       604
     ]
   },
-  "services/service-isolatie": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+  "services/service-renovatie": {
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
-      320,
-      480,
-      576,
-      671
+      233,
+      350,
+      466
     ]
   },
-  "services/service-renovatie": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+  "services/service-stucwerk": {
+    "originalWidth": 1536,
+    "originalHeight": 1536,
     "aspectRatio": 1,
     "variants": [
-      288,
+      233,
       350,
       466,
       604
     ]
   },
-  "services/service-stucwerk": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+  "sierpleister/details-dagkanten": {
+    "originalWidth": 1600,
+    "originalHeight": 1600,
     "aspectRatio": 1,
     "variants": [
       320,
@@ -6360,46 +6364,34 @@
       604
     ]
   },
-  "sierpleister/details-dagkanten": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      320,
-      480,
-      640,
-      828
-    ]
-  },
   "sierpleister/details-hoekprofielen": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       320,
       480,
-      640,
-      828
+      576,
+      745
     ]
   },
   "sierpleister/details-plintzone": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      320,
-      432,
-      466,
-      604
-    ]
-  },
-  "sierpleister/details-wapening": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1600,
+    "originalHeight": 1600,
     "aspectRatio": 1,
     "variants": [
       288,
       350,
+      466
+    ]
+  },
+  "sierpleister/details-wapening": {
+    "originalWidth": 1500,
+    "originalHeight": 1500,
+    "aspectRatio": 1,
+    "variants": [
+      320,
+      432,
       466,
       604
     ]
@@ -6418,14 +6410,14 @@
     ]
   },
   "subsidie-vergunning": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1536,
+    "originalHeight": 1536,
     "aspectRatio": 1,
     "variants": [
       320,
-      480,
-      640,
-      828
+      432,
+      518,
+      604
     ]
   },
   "subsidie-vergunning-hero": {
@@ -6450,14 +6442,14 @@
     ]
   },
   "verfsoorten-silicaat-siloxaan": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       320,
       480,
       640,
-      828
+      745
     ]
   },
   "voorbereiding-behang": {
@@ -6505,30 +6497,29 @@
     ]
   },
   "wat-is-buitenmuur-stucen": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
-    "aspectRatio": 1,
-    "variants": [
-      259,
-      350,
-      466,
-      604
-    ]
-  },
-  "wat-is-gevel-sierpleister": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       233,
+      350,
+      466
+    ]
+  },
+  "wat-is-gevel-sierpleister": {
+    "originalWidth": 1500,
+    "originalHeight": 1500,
+    "aspectRatio": 1,
+    "variants": [
+      288,
       350,
       466,
       604
     ]
   },
   "wat-is-gevelisolatie": {
-    "originalWidth": 1024,
-    "originalHeight": 1024,
+    "originalWidth": 1500,
+    "originalHeight": 1500,
     "aspectRatio": 1,
     "variants": [
       320,
