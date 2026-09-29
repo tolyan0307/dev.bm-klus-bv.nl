@@ -1,5 +1,7 @@
 "use client"
 
+import { useEffect, useState } from "react"
+
 const SCHEDULE = [
   { day: "Maandag", jsDay: 1, open: "9:00", close: "18:00" },
   { day: "Dinsdag", jsDay: 2, open: "9:00", close: "18:00" },
@@ -10,10 +12,9 @@ const SCHEDULE = [
   { day: "Zondag", jsDay: 0, open: null, close: null },
 ] as const
 
-function OpenStatusBadge() {
-  const now = new Date()
-  const todayJs = now.getDay()
-  const currentMinutes = now.getHours() * 60 + now.getMinutes()
+function OpenStatusBadge({ now }: { now: Date | null }) {
+  const todayJs = now?.getDay()
+  const currentMinutes = now ? now.getHours() * 60 + now.getMinutes() : 0
   const today = SCHEDULE.find((s) => s.jsDay === todayJs)
   const isOpenNow = (() => {
     if (!today?.open || !today?.close) return false
@@ -28,7 +29,7 @@ function OpenStatusBadge() {
         isOpenNow
           ? "bg-green-500/12 text-green-700"
           : "bg-muted text-muted-foreground"
-      }`}
+      }${now ? "" : " invisible"}`}
     >
       <span
         className={`h-1.5 w-1.5 rounded-full ${
@@ -41,7 +42,13 @@ function OpenStatusBadge() {
 }
 
 export default function ContactOpeningHours() {
-  const todayJs = new Date().getDay()
+  // The page is prerendered at build time, while "today" and the open status depend
+  // on the visitor's clock: they are set after hydration (computing them from
+  // new Date() while hydrating did not match the static HTML — React error #418).
+  // Until then the badge keeps its place invisibly, so nothing shifts.
+  const [now, setNow] = useState<Date | null>(null)
+  useEffect(() => setNow(new Date()), [])
+  const todayJs = now?.getDay()
 
   return (
     <div className="bg-secondary/40 px-5 pt-3 pb-4 border-t border-border flex-1">
@@ -49,7 +56,7 @@ export default function ContactOpeningHours() {
         <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
           Openingstijden
         </p>
-        <OpenStatusBadge />
+        <OpenStatusBadge now={now} />
       </div>
       <div className="flex flex-col gap-0.5">
         {SCHEDULE.map(({ day, jsDay, open, close }) => {

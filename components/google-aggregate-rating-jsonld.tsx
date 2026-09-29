@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { fetchRating, getCachedRating } from "@/lib/google-place-cache"
+import { fetchRating } from "@/lib/google-place-cache"
 import { SITE } from "@/lib/seo/routes"
 
 const BUSINESS_ID = `${SITE.canonicalBase}/#business`
@@ -14,10 +14,10 @@ const BUSINESS_ID = `${SITE.canonicalBase}/#business`
  * Googlebot renders JavaScript and will pick up the injected schema.
  */
 export default function GoogleAggregateRatingJsonLd() {
-  const [json, setJson] = useState<string | null>(() => {
-    const init = getCachedRating()
-    return init && init.reviewCount > 0 ? buildJson(init.rating, init.reviewCount) : null
-  })
+  // Set after hydration only. The server renders nothing here; a value taken from
+  // the shared cache during hydration (filled by a GoogleRatingBadge that hydrated
+  // earlier) would not match the server HTML — React error #418.
+  const [json, setJson] = useState<string | null>(null)
 
   useEffect(() => {
     fetchRating().then((data) => {

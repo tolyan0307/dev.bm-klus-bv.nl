@@ -124,9 +124,8 @@ export default function ProjectGalleryCarousel({
           srcSet={images[current].srcSet || undefined}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 800px"
           alt={images[current].alt}
-          fetchPriority={current === 0 ? "high" : undefined}
-          decoding={current === 0 ? "sync" : "async"}
-          loading={current === 0 ? undefined : "lazy"}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300"
         />
 
