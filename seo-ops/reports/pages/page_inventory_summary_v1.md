@@ -1,6 +1,6 @@
 # Page Inventory Summary v1
 
-**Generated:** 2026-04-07 10:55 UTC
+**Generated:** 2026-09-29 20:04 UTC
 **Generator:** `build_page_inventory.py v1`
 
 ---
@@ -9,13 +9,13 @@
 
 | Metric | Count |
 |--------|-------|
-| Total pages found | 54 |
-| Indexable (guess) | 52 |
+| Total pages found | 61 |
+| Indexable (guess) | 59 |
 | Not indexable | 2 |
 | Dynamic (generated from data) | 21 |
-| Static (file-based routes) | 33 |
-| Pages with FAQ | 35 |
-| Pages with schema hints | 50 |
+| Static (file-based routes) | 40 |
+| Pages with FAQ | 37 |
+| Pages with schema hints | 57 |
 
 ---
 
@@ -24,9 +24,9 @@
 | Type | Count |
 |------|-------|
 | city | 21 |
-| project | 16 |
+| project | 21 |
 | service | 7 |
-| cluster | 5 |
+| cluster | 7 |
 | utility | 2 |
 | home | 1 |
 | archive | 1 |
@@ -42,10 +42,10 @@
 | `/buiten-stucwerk/` | 1 |
 | `/contact/` | 1 |
 | `/diensten/` | 1 |
-| `/gevel-schilderen/` | 1 |
+| `/gevel-schilderen/` | 2 |
 | `/gevelisolatie/` | 27 |
-| `/muren-stucen/` | 1 |
-| `/onze-werken/` | 17 |
+| `/muren-stucen/` | 2 |
+| `/onze-werken/` | 22 |
 | `/over-ons/` | 1 |
 | `/privacybeleid/` | 1 |
 | `/schoonmaak-na-verbouwing/` | 1 |
@@ -95,67 +95,84 @@
 - `/onze-werken/gevelisolatie/` — disabled in sitemap-plan.ts
 - `/schoonmaak-na-verbouwing/` — disabled in sitemap-plan.ts
 
-### Missing H1 guess (25 indexable pages)
+### Missing H1 guess (32 indexable pages)
 
 - `/contact/` (utility)
 - `/diensten/` (service)
+- `/gevel-schilderen/keimen/` (cluster)
 - `/gevelisolatie/afwerkingen/` (cluster)
 - `/gevelisolatie/kosten/` (cluster)
 - `/gevelisolatie/materialen/` (cluster)
 - `/gevelisolatie/rc-waarde-dikte/` (cluster)
 - `/gevelisolatie/subsidie-vergunning/` (cluster)
+- `/muren-stucen/sausklaar-behangklaar/` (cluster)
 - `/onze-werken/` (archive)
 - `/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/` (project)
 - `/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/` (project)
+- `/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/` (project)
 - `/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/` (project)
+- `/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/` (project)
 - `/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/` (project)
 - `/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/` (project)
 - `/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/` (project)
+- `/onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/` (project)
 - `/onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/` (project)
 - `/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/` (project)
 - `/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/` (project)
 - `/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/` (project)
 - `/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/` (project)
 - `/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/` (project)
+- `/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/` (project)
+- `/onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/` (project)
 - `/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/` (project)
 - `/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/` (project)
 - `/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/` (project)
 - `/over-ons/` (utility)
 - `/privacybeleid/` (legal)
 
-### Missing meta title guess (16 indexable pages)
+### Missing meta title guess (21 indexable pages)
 
 - `/` (home)
 - `/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/` (project)
 - `/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/` (project)
+- `/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/` (project)
 - `/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/` (project)
+- `/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/` (project)
 - `/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/` (project)
 - `/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/` (project)
 - `/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/` (project)
+- `/onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/` (project)
 - `/onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/` (project)
 - `/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/` (project)
 - `/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/` (project)
 - `/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/` (project)
 - `/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/` (project)
 - `/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/` (project)
+- `/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/` (project)
+- `/onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/` (project)
 - `/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/` (project)
 - `/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/` (project)
 - `/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/` (project)
 
-### Missing meta description guess (15 indexable pages)
+### Missing meta description guess (20 indexable pages)
 
 - `/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/` (project)
 - `/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/` (project)
+- `/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/` (project)
 - `/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/` (project)
+- `/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/` (project)
 - `/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/` (project)
 - `/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/` (project)
 - `/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/` (project)
+- `/onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/` (project)
 - `/onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/` (project)
 - `/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/` (project)
 - `/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/` (project)
 - `/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/` (project)
 - `/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/` (project)
 - `/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/` (project)
+- `/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/` (project)
+- `/onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/` (project)
 - `/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/` (project)
 - `/onze-werken/vlaardingen-gevelisolatie-6cm-sierpleister-2024/` (project)
 - `/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/` (project)

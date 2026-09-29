@@ -1,7 +1,7 @@
 # GA4 Landing Page Snapshot (last 90 days)
 
-**Generated:** 2026-09-04 15:50 UTC
-**Date range:** 2026-06-06 to 2026-09-03
+**Generated:** 2026-09-24 16:19 UTC
+**Date range:** 2026-06-26 to 2026-09-23
 **Property:** 428253147
 
 ---
@@ -14,8 +14,8 @@
 | Mapped to page_inventory | 25 |
 | Unmapped | 6 |
 | (not set) pages | 1 |
-| Total sessions | 700 |
-| Total key events | 36 |
+| Total sessions | 705 |
+| Total key events | 43 |
 
 ---
 
@@ -23,14 +23,14 @@
 
 | Channel | Sessions |
 |---------|----------|
-| Paid Search | 298 |
-| Organic Search | 277 |
-| Direct | 98 |
-| AI Assistant | 9 |
+| Paid Search | 310 |
+| Organic Search | 246 |
+| Direct | 85 |
+| Referral | 37 |
+| AI Assistant | 11 |
 | Unassigned | 8 |
-| Cross-network | 6 |
+| Cross-network | 5 |
 | Organic Social | 3 |
-| Referral | 1 |
 
 ---
 
@@ -38,59 +38,60 @@
 
 | Page | Sessions | Engaged | Eng Rate | Avg Dur (s) | Key Events | Type |
 |------|----------|---------|----------|-------------|------------|------|
-| / | 203 | 151 | 0.74 | 289 | 6 | home |
-| /gevelisolatie/afwerkingen/ | 123 | 74 | 0.60 | 126 | 6 | cluster |
-| /gevelisolatie/ | 105 | 72 | 0.69 | 219 | 10 | service |
-| /buiten-stucwerk/ | 75 | 53 | 0.71 | 171 | 7 | service |
-| (not set) | 45 | 3 | 0.07 | 18 | 2 |  |
-| /gevelisolatie/kosten/ | 32 | 15 | 0.47 | 169 | 0 | cluster |
-| /onze-werken/ | 25 | 18 | 0.72 | 217 | 1 | archive |
-| /gevel-schilderen/ | 17 | 6 | 0.35 | 27 | 1 | service |
-| /sierpleister/ | 13 | 6 | 0.46 | 36 | 0 | service |
-| /over-ons/ | 11 | 7 | 0.64 | 161 | 0 | utility |
-| /contact/ | 7 | 4 | 0.57 | 467 | 2 | utility |
-| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 6 | 3 | 0.50 | 35 | 0 | project |
-| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 5 | 2 | 0.40 | 21 | 0 |  |
-| /onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/ | 5 | 2 | 0.40 | 179 | 0 |  |
+| / | 200 | 140 | 0.70 | 310 | 15 | home |
+| /gevelisolatie/afwerkingen/ | 113 | 63 | 0.56 | 104 | 6 | cluster |
+| /buiten-stucwerk/ | 105 | 69 | 0.66 | 131 | 7 | service |
+| /gevelisolatie/ | 95 | 69 | 0.73 | 204 | 7 | service |
+| (not set) | 53 | 2 | 0.04 | 16 | 2 |  |
+| /onze-werken/ | 25 | 18 | 0.72 | 205 | 2 | archive |
+| /gevelisolatie/kosten/ | 21 | 8 | 0.38 | 170 | 0 | cluster |
+| /gevel-schilderen/ | 19 | 7 | 0.37 | 26 | 1 | service |
+| /sierpleister/ | 10 | 5 | 0.50 | 48 | 0 | service |
+| /over-ons/ | 8 | 6 | 0.75 | 224 | 0 | utility |
+| /contact/ | 6 | 3 | 0.50 | 154 | 0 | utility |
+| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 6 | 3 | 0.50 | 30 | 0 | project |
+| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 6 | 2 | 0.33 | 17 | 0 |  |
+| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 5 | 3 | 0.60 | 376 | 0 |  |
+| /onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/ | 4 | 3 | 0.75 | 72 | 0 | project |
+| /diensten/ | 4 | 4 | 1.00 | 722 | 0 | service |
+| /gevel-schilderen/keimen/ | 4 | 3 | 0.75 | 858 | 1 |  |
 | /onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/ | 4 | 4 | 1.00 | 158 | 0 |  |
-| /diensten/ | 3 | 3 | 1.00 | 690 | 0 | service |
-| /onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/ | 3 | 2 | 0.67 | 86 | 0 | project |
-| /gevelisolatie/leiden/ | 2 | 2 | 1.00 | 115 | 0 | city |
-| /onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/ | 2 | 1 | 0.50 | 266 | 0 | project |
-| /onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/ | 2 | 1 | 0.50 | 46 | 0 | project |
+| /gevelisolatie/leiden/ | 3 | 3 | 1.00 | 171 | 1 | city |
+| /gevelisolatie/rc-waarde-dikte/ | 2 | 1 | 0.50 | 7 | 0 | cluster |
 
 ## Top paid landing pages
 
 | Page | Paid Sessions |
 |------|--------------|
-| /gevelisolatie/afwerkingen/ | 115 |
-| /gevelisolatie/ | 78 |
-| /buiten-stucwerk/ | 57 |
-| /gevelisolatie/kosten/ | 19 |
+| /gevelisolatie/afwerkingen/ | 104 |
+| /buiten-stucwerk/ | 86 |
+| /gevelisolatie/ | 74 |
+| (not set) | 12 |
+| /gevel-schilderen/ | 11 |
+| /gevelisolatie/kosten/ | 11 |
 | / | 10 |
-| (not set) | 9 |
-| /gevel-schilderen/ | 9 |
 | /onze-werken/ | 1 |
+| /sierpleister/ | 1 |
 
 ## Top organic search landing pages
 
 | Page | Organic Sessions |
 |------|-----------------|
-| / | 141 |
-| (not set) | 23 |
-| /gevelisolatie/ | 20 |
-| /onze-werken/ | 15 |
-| /buiten-stucwerk/ | 12 |
-| /sierpleister/ | 12 |
-| /over-ons/ | 9 |
+| / | 117 |
+| (not set) | 22 |
+| /gevelisolatie/ | 15 |
+| /buiten-stucwerk/ | 14 |
+| /onze-werken/ | 13 |
+| /sierpleister/ | 8 |
 | /contact/ | 6 |
+| /gevelisolatie/afwerkingen/ | 6 |
 | /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 6 |
-| /gevelisolatie/afwerkingen/ | 5 |
-| /gevelisolatie/kosten/ | 4 |
+| /over-ons/ | 6 |
+| /gevelisolatie/kosten/ | 5 |
+| /onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/ | 4 |
 | /diensten/ | 3 |
-| /onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/ | 3 |
-| /gevelisolatie/leiden/ | 2 |
-| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 2 |
+| /gevel-schilderen/keimen/ | 3 |
+| /gevelisolatie/leiden/ | 3 |
 
 ---
 
@@ -102,11 +103,11 @@ No weak-engagement pages detected.
 
 | Page | Sessions | Eng Rate | Notes |
 |------|----------|----------|-------|
-| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 5 | 0.40 | unmapped: not in page_inventory |
-| /onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/ | 5 | 0.40 | unmapped: not in page_inventory |
+| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 6 | 0.33 | unmapped: not in page_inventory |
+| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 5 | 0.60 | unmapped: not in page_inventory |
+| /gevel-schilderen/keimen/ | 4 | 0.75 | unmapped: not in page_inventory |
 | /onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/ | 4 | 1.00 | unmapped: not in page_inventory |
-| /onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/ | 1 | 1.00 | unmapped: not in page_inventory |
-| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 1 | 0.00 | unmapped: not in page_inventory |
+| /onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/ | 1 | 1.00 | unmapped: not in page_inventory |
 
 ---
 

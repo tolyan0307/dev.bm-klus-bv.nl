@@ -1,331 +1,229 @@
 {
-  "generated_at": "2026-09-04T15:50:20.310005+00:00",
+  "generated_at": "2026-09-29T20:04:41.836347+00:00",
   "site": "https://bm-klus-bv.nl/",
-  "snapshot_generated_at": "2026-09-04T15:49:56.577081Z",
+  "snapshot_generated_at": "2026-09-29T20:04:30.764360Z",
+  "gsc_current_range": {
+    "start": "2026-08-30",
+    "end": "2026-09-26"
+  },
+  "data_issues": [],
   "executive_summary": {
-    "total_findings": 32,
+    "total_findings": 18,
     "breakdown": {
       "seo_opportunities": 9,
-      "seo_risks": 2,
-      "measurement_issues": 1,
-      "conversion_opportunities": 1,
-      "gevelisolatie_cluster_notes": 19
+      "seo_risks": 4,
+      "measurement_issues": 3,
+      "conversion_opportunities": 0,
+      "gevelisolatie_cluster_notes": 2
     },
-    "pages_to_watch_count": 8,
+    "pages_to_watch_count": 7,
     "next_actions_count": 6
   },
   "top_seo_opportunities": [
     {
-      "signal": "Position 8.8 with CTR 0.4% (794 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "signal": "Position 18.3, CTR 0.2% (3 clicks / 1751 impressions)",
+      "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
       "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
+      "category": "SEO",
+      "page": "/gevel-schilderen/keimen/"
+    },
+    {
+      "signal": "Position 10.8, CTR 0.2% (1 clicks / 612 impressions)",
+      "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
+      "confidence": "medium",
+      "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
       "category": "SEO",
       "page": "/buiten-stucwerk/"
     },
     {
-      "signal": "Position 12.0 with CTR 2.1% (143 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
-      "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "signal": "Position 11.6, CTR 0.6% (1 clicks / 157 impressions)",
+      "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
+      "confidence": "low",
+      "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
       "category": "SEO",
       "page": "/gevelisolatie/kosten/"
     },
     {
-      "signal": "Position 5.7 with CTR 2.7% (111 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "signal": "Position 13.1, CTR 0.6% (1 clicks / 162 impressions)",
+      "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
+      "confidence": "low",
+      "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
+      "category": "SEO",
+      "page": "/gevelisolatie/leiden/"
+    },
+    {
+      "signal": "Position 11.2, CTR 0.6% (1 clicks / 170 impressions)",
+      "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
+      "confidence": "low",
+      "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
+      "category": "SEO",
+      "page": "/sierpleister/"
+    },
+    {
+      "signal": "1653 impressions at average position 40.1 (0 clicks)",
+      "why_it_matters": "Google shows the page for many queries but ranks it low — a relevance, intent or authority gap, not a snippet issue",
       "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "recommended_action": "Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page",
       "category": "SEO",
-      "page": "/over-ons/"
+      "page": "/gevel-schilderen/"
     },
     {
-      "signal": "Position 12.9 with CTR 0.6% (311 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "signal": "1525 impressions at average position 32.1 (0 clicks)",
+      "why_it_matters": "Google shows the page for many queries but ranks it low — a relevance, intent or authority gap, not a snippet issue",
       "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "recommended_action": "Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page",
       "category": "SEO",
-      "page": "/gevelisolatie/"
+      "page": "/muren-stucen/"
     },
     {
-      "signal": "Position 11.0 with CTR 1.1% (89 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "signal": "246 impressions at position 19.6, CTR 0.0%",
+      "why_it_matters": "Non-brand query in the top 20 with few clicks — the snippet or SERP features may take the clicks",
       "confidence": "low",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "recommended_action": "Find the ranking page in the query-level CSV and check the live SERP (serp-check) before rewriting the snippet",
       "category": "SEO",
-      "page": "/gevelisolatie/den-haag/"
+      "query": "sausklaar stucen"
     },
     {
-      "signal": "Position 8.1 with CTR 0.7% (137 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
-      "confidence": "medium",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
-      "category": "SEO",
-      "page": "/onze-werken/"
-    },
-    {
-      "signal": "Position 6.8 with CTR 0.0% (78 impr)",
-      "why_it_matters": "Striking distance to top 3 but CTR suggests title/description may not match intent",
+      "signal": "103 impressions at position 17.5, CTR 0.0%",
+      "why_it_matters": "Non-brand query in the top 20 with few clicks — the snippet or SERP features may take the clicks",
       "confidence": "low",
-      "recommended_action": "Review title tag and meta description for query-intent alignment",
+      "recommended_action": "Find the ranking page in the query-level CSV and check the live SERP (serp-check) before rewriting the snippet",
       "category": "SEO",
-      "page": "/diensten/"
-    },
-    {
-      "signal": "122 impressions but CTR 0.0%",
-      "why_it_matters": "High visibility query not converting to clicks — possible SERP snippet mismatch",
-      "confidence": "low",
-      "recommended_action": "Check which page ranks for this query; review title/description fit",
-      "category": "SEO",
-      "query": "behangklaar stucen"
-    },
-    {
-      "signal": "138 impressions but CTR 0.0%",
-      "why_it_matters": "High visibility query not converting to clicks — possible SERP snippet mismatch",
-      "confidence": "low",
-      "recommended_action": "Check which page ranks for this query; review title/description fit",
-      "category": "SEO",
-      "query": "behangklaar stucwerk"
+      "query": "wat kost keimen per m2"
     }
   ],
   "seo_risks": [
     {
-      "signal": "Clicks -16, impressions -31 vs previous period",
-      "why_it_matters": "Page losing organic visibility — may indicate ranking drop or seasonal shift",
+      "signal": "Average position 9.1 → 14.5 (higher is worse) on 906 impressions",
+      "why_it_matters": "Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down",
       "confidence": "medium",
-      "recommended_action": "Check GSC for position changes; review if content is still relevant",
+      "recommended_action": "Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
       "category": "SEO",
       "page": "/"
     },
     {
-      "signal": "Clicks -5, impressions -67 vs previous period",
-      "why_it_matters": "Page losing organic visibility — may indicate ranking drop or seasonal shift",
-      "confidence": "low",
-      "recommended_action": "Check GSC for position changes; review if content is still relevant",
-      "category": "SEO",
-      "page": "/gevelisolatie/"
-    }
-  ],
-  "top_conversion_opportunities": [
-    {
-      "signal": "45 sessions but 0 key events",
-      "why_it_matters": "Traffic exists but no lead signal — possible CTA gap or intent mismatch",
+      "signal": "Average position 8.4 → 10.8 (higher is worse) on 612 impressions",
+      "why_it_matters": "Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down",
       "confidence": "medium",
-      "recommended_action": "Check CTA visibility and relevance on this page; verify event tracking",
-      "category": "CRO",
-      "page": "/"
+      "recommended_action": "Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
+      "category": "SEO",
+      "page": "/buiten-stucwerk/"
+    },
+    {
+      "signal": "Average position 35.7 → 40.1 (higher is worse) on 1653 impressions",
+      "why_it_matters": "Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down",
+      "confidence": "medium",
+      "recommended_action": "Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
+      "category": "SEO",
+      "page": "/gevel-schilderen/"
+    },
+    {
+      "signal": "Average position 26.8 → 32.1 (higher is worse) on 1525 impressions",
+      "why_it_matters": "Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down",
+      "confidence": "medium",
+      "recommended_action": "Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
+      "category": "SEO",
+      "page": "/muren-stucen/"
     }
   ],
+  "top_conversion_opportunities": [],
   "measurement_issues": [
     {
-      "signal": "14 sessions with landing page = (not set)",
-      "why_it_matters": "GA4 cannot determine the entry page — may distort landing page analysis",
-      "confidence": "high",
-      "recommended_action": "Check GA4 data stream configuration; may be internal/app traffic",
+      "signal": "23 sessions with landing page = (not set)",
+      "why_it_matters": "GA4 cannot tell the entry page for these sessions — landing-page analysis misses them",
+      "confidence": "medium",
+      "recommended_action": "Treat landing-page shares as approximate; recurring, so no action unless it grows",
       "category": "Measurement",
       "page": "(not set)"
+    },
+    {
+      "signal": "Source '127.0.0.1:8842 / referral': 42 sessions from a local-dev / hosting-panel referrer",
+      "why_it_matters": "Not real visitors — inflates sessions and can add fake key events",
+      "confidence": "high",
+      "recommended_action": "Exclude in GA4 (owner): Admin → Data streams → Configure tag settings → List unwanted referrals / define internal traffic",
+      "category": "Measurement"
+    },
+    {
+      "signal": "Source 's246.webhostingserver.nl:2222 / referral': 8 sessions from a local-dev / hosting-panel referrer",
+      "why_it_matters": "Not real visitors — inflates sessions and can add fake key events",
+      "confidence": "high",
+      "recommended_action": "Exclude in GA4 (owner): Admin → Data streams → Configure tag settings → List unwanted referrals / define internal traffic",
+      "category": "Measurement"
     }
   ],
   "gevelisolatie_cluster_review": [
     {
-      "signal": "24 cluster pages found in GSC comparison data",
-      "why_it_matters": "Cluster tracking summary",
+      "signal": "22 cluster pages in GSC data: clicks 5 → 10, impressions 1004 → 1056",
+      "why_it_matters": "Cluster summary (strategic priority)",
       "confidence": "high",
-      "recommended_action": "Review individual cluster page findings below",
+      "recommended_action": "Review the cluster section of the weekly summary",
       "category": "Cluster",
       "page": "/gevelisolatie/*"
     },
     {
-      "signal": "Cluster page lost 5 clicks vs previous period",
-      "why_it_matters": "Cluster page losing momentum — may need content refresh or link support",
-      "confidence": "medium",
-      "recommended_action": "Compare query rankings; check for cannibalization within cluster",
-      "category": "Cluster",
-      "page": "/gevelisolatie/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
+      "signal": "14 pages with < 10 impressions: /gevelisolatie/alphen-aan-den-rijn/, /gevelisolatie/barendrecht/, /gevelisolatie/bergen-op-zoom/, /gevelisolatie/breda/, /gevelisolatie/capelle-aan-den-ijssel/, /gevelisolatie/gouda/, /gevelisolatie/hendrik-ido-ambacht/, /gevelisolatie/leidschendam-voorburg/, /gevelisolatie/maassluis/, /gevelisolatie/materialen/, /gevelisolatie/roosendaal/, /gevelisolatie/rotterdam/ and 2 more",
+      "why_it_matters": "Very weak visibility; for city pages the content decision is pending with the owner (Wave 1 plan)",
       "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
+      "recommended_action": "Spot-check indexation (GSC URL Inspection) for a few of them; no content changes without the owner's decision",
       "category": "Cluster",
-      "page": "/gevelisolatie/alphen-aan-den-rijn/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/barendrecht/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/bergen-op-zoom/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/breda/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/capelle-aan-den-ijssel/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/gouda/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/hendrik-ido-ambacht/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/leidschendam-voorburg/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/maassluis/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/materialen/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/ridderkerk/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/roosendaal/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/rotterdam/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/schiedam/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/spijkenisse/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/vlaardingen/"
-    },
-    {
-      "signal": "Cluster page with < 10 impressions in current period",
-      "why_it_matters": "Strategic cluster page has very weak visibility",
-      "confidence": "low",
-      "recommended_action": "Check indexation status; review internal linking from parent /gevelisolatie/",
-      "category": "Cluster",
-      "page": "/gevelisolatie/zoetermeer/"
+      "page": "/gevelisolatie/* (low visibility)"
     }
   ],
   "pages_to_watch": [
     "(not set)",
     "/",
     "/buiten-stucwerk/",
-    "/gevelisolatie/",
+    "/gevel-schilderen/",
+    "/gevel-schilderen/keimen/",
     "/gevelisolatie/*",
-    "/gevelisolatie/kosten/",
-    "/onze-werken/",
-    "/over-ons/"
+    "/muren-stucen/"
   ],
   "next_actions_7_14_days": [
     {
-      "action": "Review title tag and meta description for query-intent alignment",
+      "action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
       "category": "SEO",
-      "related_page": "/buiten-stucwerk/",
-      "related_query": null
+      "related": [
+        "/gevel-schilderen/keimen/",
+        "/buiten-stucwerk/"
+      ]
     },
     {
-      "action": "Check GSC for position changes; review if content is still relevant",
+      "action": "Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page",
       "category": "SEO",
-      "related_page": "/",
-      "related_query": null
+      "related": [
+        "/gevel-schilderen/",
+        "/muren-stucen/"
+      ]
     },
     {
-      "action": "Check GA4 data stream configuration; may be internal/app traffic",
+      "action": "Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
+      "category": "SEO",
+      "related": [
+        "/",
+        "/buiten-stucwerk/",
+        "/gevel-schilderen/",
+        "/muren-stucen/"
+      ]
+    },
+    {
+      "action": "Treat landing-page shares as approximate; recurring, so no action unless it grows",
       "category": "Measurement",
-      "related_page": "(not set)",
-      "related_query": null
+      "related": [
+        "(not set)"
+      ]
     },
     {
-      "action": "Check CTA visibility and relevance on this page; verify event tracking",
-      "category": "CRO",
-      "related_page": "/",
-      "related_query": null
+      "action": "Exclude in GA4 (owner): Admin → Data streams → Configure tag settings → List unwanted referrals / define internal traffic",
+      "category": "Measurement",
+      "related": []
     },
     {
-      "action": "Review individual cluster page findings below",
+      "action": "Review the cluster section of the weekly summary",
       "category": "Cluster",
-      "related_page": "/gevelisolatie/*",
-      "related_query": null
-    },
-    {
-      "action": "Compare query rankings; check for cannibalization within cluster",
-      "category": "Cluster",
-      "related_page": "/gevelisolatie/",
-      "related_query": null
+      "related": [
+        "/gevelisolatie/*"
+      ]
     }
   ]
 }

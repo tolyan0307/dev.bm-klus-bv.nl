@@ -1,11 +1,11 @@
 # WP Stats Snapshot (last 90 days)
 
-**Generated:** 2026-09-04 22:37 UTC
-**Date range:** 2026-06-07 to 2026-09-04
+**Generated:** 2026-09-24 16:19 UTC
+**Date range:** 2026-06-26 to 2026-09-23
 **Source:** BM Stats v2 plugin, https://bm-klus-bv.nl (provenance label: `[WP, 90d, lead-level]` / `[WP, 90d, event-level]`)
-**Plugin version:** 2.0.1
+**Plugin version:** 2.2.0
 
-> Pageview and CTA events exist only from 2026-09-04 (1 of 90 days in window). Lead rows exist from 2026-03-11.
+> Pageview and CTA events exist only from 2026-09-04 (20 of 90 days in window). Lead rows exist from 2026-03-11.
 
 ---
 
@@ -13,8 +13,8 @@
 
 | Metric | Value |
 |--------|-------|
-| Leads total | 22 |
-| Leads excl. spam | 22 |
+| Leads total | 23 |
+| Leads excl. spam | 23 |
 | Qualified (qualified + won + lost) | 0 |
 | Won | 0 |
 | Revenue on won (order_value) | € 0 |
@@ -24,20 +24,25 @@
 
 | Status | Leads |
 |--------|-------|
-| archive | 22 |
+| new | 5 |
+| archive | 18 |
 
 ### By source (first touch)
 
 | Source | Leads |
 |--------|-------|
 | ads | 11 |
-| direct | 11 |
+| campaign | 1 |
+| organic | 1 |
+| direct | 10 |
 
 ### By form
 
 | Form | Leads |
 |------|-------|
-| other | 22 |
+| other | 18 |
+| quote_modal | 3 |
+| contact_form | 2 |
 
 ---
 
@@ -45,44 +50,58 @@
 
 | Metric | Value |
 |--------|-------|
-| Page views | 5 |
-| CTA clicks | 2 |
-| Days with events | 1 |
+| Page views | 553 |
+| CTA clicks | 8 |
+| Days with events | 20 |
 
 ### Top pages by views (conversion shown as — : views start later than lead events in this window)
 
 | Page | Views | CTA | Lead events | Conv. | Type |
 |------|-------|-----|-------------|-------|------|
-| / | 3 | 0 | 2 | — | home |
-| /gevelisolatie/ | 1 | 2 | 6 | — | service |
-| /onze-werken/ | 1 | 0 | 1 | — | archive |
-| /buiten-stucwerk/ | 0 | 0 | 6 | — | service |
-| /contact/ | 0 | 0 | 5 | — | utility |
-| /gevelisolatie/afwerkingen/ | 0 | 0 | 3 | — | cluster |
-| /gevelisolatie/den-haag/ | 0 | 0 | 1 | — | city |
-| /over-ons/ | 0 | 0 | 1 | — | utility |
+| / | 103 | 3 | 2 | — | home |
+| /gevelisolatie/ | 96 | 2 | 6 | — | service |
+| /buiten-stucwerk/ | 75 | 0 | 6 | — | service |
+| /gevelisolatie/afwerkingen/ | 46 | 0 | 2 | — | cluster |
+| /onze-werken/ | 37 | 0 | 1 | — | archive |
+| /contact/ | 22 | 2 | 6 | — | utility |
+| /over-ons/ | 20 | 0 | 1 | — | utility |
+| /sierpleister/ | 20 | 0 | 0 | — | service |
+| /gevelisolatie/kosten/ | 17 | 0 | 0 | — | cluster |
+| /diensten/ | 15 | 0 | 0 | — | service |
+| /gevel-schilderen/keimen/ | 14 | 1 | 0 | — |  |
+| /gevel-schilderen/ | 13 | 0 | 0 | — | service |
+| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 9 | 0 | 0 | — |  |
+| /gevelisolatie/rc-waarde-dikte/ | 6 | 0 | 0 | — | cluster |
+| /gevelisolatie/materialen/ | 5 | 0 | 1 | — | cluster |
+| /muren-stucen/ | 5 | 0 | 0 | — | service |
+| /muren-stucen/sausklaar-behangklaar/ | 5 | 0 | 0 | — |  |
+| /gevelisolatie/den-haag/ | 4 | 0 | 1 | — | city |
+| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 4 | 0 | 0 | — | project |
+| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 3 | 0 | 0 | — |  |
 
 ### Traffic by source
 
 | Source | Views | CTA | Lead events |
 |--------|-------|-----|-------------|
-| ads | 0 | 0 | 11 |
-| campaign | 0 | 0 | 0 |
-| organic | 0 | 0 | 0 |
-| referral | 0 | 0 | 0 |
-| direct | 5 | 2 | 14 |
+| ads | 157 | 0 | 11 |
+| campaign | 37 | 1 | 1 |
+| organic | 185 | 2 | 1 |
+| referral | 14 | 0 | 0 |
+| direct | 160 | 5 | 13 |
 
 ### CTA clicks
 
 | CTA | Clicks |
 |-----|--------|
-| whatsapp | 2 |
+| whatsapp | 5 |
+| email | 2 |
+| phone | 1 |
 
 ### Form outcomes (anti-spam)
 
 | Outcome | Count |
 |---------|-------|
-| lead | 25 |
+| lead | 26 |
 
 ---
 

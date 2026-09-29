@@ -1,7 +1,7 @@
 # GSC Query/Page Snapshot Summary (last 90 days)
 
-**Generated:** 2026-09-04 15:50 UTC
-**Date range:** 2026-08-05 to 2026-09-01
+**Generated:** 2026-09-29 20:05 UTC
+**Date range:** 2026-08-30 to 2026-09-26
 **Site:** https://bm-klus-bv.nl/
 
 ---
@@ -10,11 +10,11 @@
 
 | Metric | Count |
 |--------|-------|
-| Total query-page rows | 252 |
-| Unique queries | 221 |
-| Unique pages | 20 |
+| Total query-page rows | 401 |
+| Unique queries | 323 |
+| Unique pages | 26 |
 | Total clicks (all rows) | 26 |
-| Total impressions (all rows) | 4841 |
+| Total impressions (all rows) | 6590 |
 
 ---
 
@@ -22,51 +22,51 @@
 
 | Query | Clicks | Impressions | CTR | Best Pos | Pages |
 |-------|--------|-------------|-----|----------|-------|
-| bm klus bv | 21 | 223 | 0.0942 | 1.3 | 10 |
-| bm klus b.v. | 1 | 29 | 0.0345 | 1.0 | 7 |
-| bm klus bv reviews | 1 | 39 | 0.0256 | 1.0 | 9 |
-| buiten stucwerk op isolatie | 1 | 1 | 1.0000 | 1.0 | 1 |
-| buitengevel isoleren en stucen prijs | 1 | 43 | 0.0233 | 10.4 | 2 |
-| klusbedrijf rotterdam | 1 | 4 | 0.2500 | 13.0 | 1 |
-| aannemer isolatiewerken denhaag | 0 | 1 | 0.0000 | 31.0 | 1 |
-| b m | 0 | 2 | 0.0000 | 7.0 | 1 |
-| b+m | 0 | 1 | 0.0000 | 2.0 | 1 |
-| behangklaar en sausklaar | 0 | 18 | 0.0000 | 17.8 | 1 |
-| behangklaar muren | 0 | 2 | 0.0000 | 52.5 | 1 |
-| behangklaar naar sausklaar | 0 | 18 | 0.0000 | 19.7 | 1 |
-| behangklaar of sausklaar | 0 | 30 | 0.0000 | 26.3 | 1 |
-| behangklaar sausklaar maken | 0 | 5 | 0.0000 | 28.4 | 1 |
-| behangklaar stucen | 0 | 137 | 0.0000 | 30.3 | 1 |
-| behangklaar stucwerk | 0 | 148 | 0.0000 | 41.1 | 1 |
-| behangklaar stucwerk schilderen | 0 | 2 | 0.0000 | 20.0 | 1 |
-| behangklaar stuken | 0 | 6 | 0.0000 | 27.3 | 1 |
-| behangklaar stuukwerk | 0 | 4 | 0.0000 | 42.2 | 1 |
-| behangklaar wanden | 0 | 32 | 0.0000 | 50.5 | 1 |
+| bm klus bv | 23 | 493 | 0.0467 | 1.8 | 13 |
+| buitengevel isoleren en stucen prijs | 1 | 36 | 0.0278 | 9.6 | 1 |
+| crepi stuc | 1 | 2 | 0.5000 | 4.0 | 1 |
+| etics gevelisolatie | 1 | 5 | 0.2000 | 7.0 | 1 |
+| 15 cm | 0 | 1 | 0.0000 | 11.0 | 1 |
+| aannemer | 0 | 3 | 0.0000 | 1.0 | 1 |
+| aannemer archipelbuurt | 0 | 1 | 0.0000 | 42.0 | 1 |
+| aannemer klus | 0 | 7 | 0.0000 | 74.7 | 1 |
+| aannemer rotterdam | 0 | 1 | 0.0000 | 1.0 | 1 |
+| aannemersbedrijf klus | 0 | 7 | 0.0000 | 75.7 | 1 |
+| afdekfolie bouw | 0 | 1 | 0.0000 | 12.0 | 1 |
+| b m | 0 | 1 | 0.0000 | 2.0 | 1 |
+| b&m nederland | 0 | 1 | 0.0000 | 2.0 | 1 |
+| b+m | 0 | 3 | 0.0000 | 1.0 | 2 |
+| b. m. | 0 | 1 | 0.0000 | 6.0 | 1 |
+| b.m | 0 | 2 | 0.0000 | 3.0 | 2 |
+| badkamer stucen | 0 | 1 | 0.0000 | 100.0 | 1 |
+| behangklaar | 0 | 66 | 0.0000 | 70.4 | 2 |
+| behangklaar en sausklaar | 0 | 23 | 0.0000 | 14.0 | 2 |
+| behangklaar muren | 0 | 45 | 0.0000 | 47.0 | 1 |
 
 ## Top queries by impressions
 
 | Query | Impressions | Clicks | CTR | Best Pos |
 |-------|-------------|--------|-----|----------|
-| sausklaar stucwerk | 307 | 0 | 0.0000 | 24.7 |
-| sausklaar stucen | 236 | 0 | 0.0000 | 17.7 |
-| bm klus bv | 223 | 21 | 0.0942 | 1.3 |
-| gevel schilderen | 184 | 0 | 0.0000 | 41.3 |
-| gevelrenovatie met folie in delft | 160 | 0 | 0.0000 | 38.7 |
-| behangklaar stucwerk | 148 | 0 | 0.0000 | 41.1 |
-| behangklaar stucen | 137 | 0 | 0.0000 | 30.3 |
-| gevelrenovatie met folie in rotterdam | 118 | 0 | 0.0000 | 19.1 |
-| kosten keimen gevel | 102 | 0 | 0.0000 | 21.6 |
-| kosten keimen per m2 | 101 | 0 | 0.0000 | 31.3 |
-| keimen gevel kosten | 94 | 0 | 0.0000 | 26.8 |
-| prijs keimen per m2 | 94 | 0 | 0.0000 | 40.1 |
-| wat kost keimen per m2 | 94 | 0 | 0.0000 | 34.3 |
-| keimen kosten | 93 | 0 | 0.0000 | 27.7 |
-| keimwerk prijs m2 | 93 | 0 | 0.0000 | 33.4 |
-| wat kost keimen | 93 | 0 | 0.0000 | 33.4 |
-| gevel schilder | 92 | 0 | 0.0000 | 52.4 |
-| keimen prijs per m2 | 90 | 0 | 0.0000 | 42.2 |
-| gevel keimen of schilderen | 88 | 0 | 0.0000 | 39.1 |
-| keimwerk kosten | 83 | 0 | 0.0000 | 38.6 |
+| bm klus bv | 493 | 23 | 0.0467 | 1.8 |
+| sausklaar stucwerk | 291 | 0 | 0.0000 | 35.0 |
+| sausklaar stucen | 281 | 0 | 0.0000 | 18.6 |
+| wat kost keimen per m2 | 140 | 0 | 0.0000 | 9.9 |
+| gevel schilderen | 136 | 0 | 0.0000 | 38.9 |
+| kosten keimen woning | 136 | 0 | 0.0000 | 8.2 |
+| kosten keimen per m2 | 135 | 0 | 0.0000 | 10.5 |
+| huis keimen kosten | 131 | 0 | 0.0000 | 10.2 |
+| prijs keimen per m2 | 129 | 0 | 0.0000 | 10.3 |
+| keimwerk prijs m2 | 128 | 0 | 0.0000 | 7.2 |
+| behangklaar stucwerk | 125 | 0 | 0.0000 | 23.0 |
+| keimen kosten | 124 | 0 | 0.0000 | 6.8 |
+| kosten keimen gevel | 124 | 0 | 0.0000 | 8.8 |
+| keimen gevel kosten | 121 | 0 | 0.0000 | 9.4 |
+| wat kost keimen | 120 | 0 | 0.0000 | 8.6 |
+| gevel keimen of schilderen | 119 | 0 | 0.0000 | 11.7 |
+| keimen prijs per m2 | 118 | 0 | 0.0000 | 11.1 |
+| gevelrenovatie met folie in delft | 115 | 0 | 0.0000 | 35.3 |
+| keimwerk kosten | 115 | 0 | 0.0000 | 3.6 |
+| behangklaar stucen | 114 | 0 | 0.0000 | 31.1 |
 
 ---
 
@@ -74,74 +74,87 @@
 
 | Page | Clicks | Impressions | CTR | Avg Pos | Queries | Type |
 |------|--------|-------------|-----|---------|---------|------|
-| / | 19 | 305 | 0.0623 | 12.5 | 24 | home |
-| /over-ons/ | 3 | 53 | 0.0566 | 7.0 | 4 | utility |
-| /buiten-stucwerk/ | 2 | 227 | 0.0088 | 14.1 | 38 | service |
-| /contact/ | 1 | 48 | 0.0208 | 1.9 | 4 | utility |
-| /onze-werken/ | 1 | 83 | 0.0120 | 7.8 | 7 | archive |
-| /gevelisolatie/den-haag/ | 0 | 76 | 0.0000 | 11.8 | 6 | city |
-| /muren-stucen/ | 0 | 1385 | 0.0000 | 27.9 | 43 | service |
-| /gevelisolatie/afwerkingen/ | 0 | 54 | 0.0000 | 28.8 | 16 | cluster |
-| /sierpleister/ | 0 | 119 | 0.0000 | 35.7 | 11 | service |
-| /diensten/ | 0 | 34 | 0.0000 | 1.5 | 2 | service |
-| /gevelisolatie/leiden/ | 0 | 41 | 0.0000 | 3.3 | 6 | city |
-| /gevelisolatie/delft/ | 0 | 192 | 0.0000 | 37.7 | 7 | city |
-| /gevelisolatie/ | 0 | 145 | 0.0000 | 22.3 | 14 | service |
-| /gevelisolatie/subsidie-vergunning/ | 0 | 4 | 0.0000 | 10.2 | 1 | cluster |
-| /gevelisolatie/kosten/ | 0 | 35 | 0.0000 | 25.7 | 15 | cluster |
-| /gevel-schilderen/ | 0 | 2007 | 0.0000 | 36.9 | 50 | service |
-| /gevelisolatie/alphen-aan-den-rijn/ | 0 | 2 | 0.0000 | 26.0 | 1 | city |
-| /onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/ | 0 | 3 | 0.0000 | 23.3 | 1 | project |
-| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 0 | 23 | 0.0000 | 18.5 | 1 |  |
-| /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/ | 0 | 5 | 0.0000 | 19.0 | 1 | project |
+| / | 14 | 275 | 0.0509 | 7.3 | 37 | home |
+| / | 6 | 226 | 0.0265 | 39.5 | 45 | home |
+| /over-ons/ | 2 | 69 | 0.0290 | 2.9 | 2 | utility |
+| /onze-werken/ | 1 | 113 | 0.0089 | 12.6 | 6 | archive |
+| /buiten-stucwerk/ | 1 | 198 | 0.0051 | 19.0 | 35 | service |
+| /gevelisolatie/afwerkingen/ | 1 | 94 | 0.0106 | 29.2 | 24 | cluster |
+| /gevelisolatie/ | 1 | 100 | 0.0100 | 20.5 | 12 | service |
+| /gevelisolatie/den-haag/ | 0 | 40 | 0.0000 | 18.2 | 8 | city |
+| /muren-stucen/ | 0 | 1451 | 0.0000 | 33.2 | 49 | service |
+| /muren-stucen/sausklaar-behangklaar/ | 0 | 318 | 0.0000 | 45.7 | 35 | cluster |
+| /contact/ | 0 | 67 | 0.0000 | 2.0 | 2 | utility |
+| /diensten/ | 0 | 66 | 0.0000 | 1.9 | 1 | service |
+| /gevel-schilderen/keimen/ | 0 | 1629 | 0.0000 | 19.2 | 44 | cluster |
+| /gevelisolatie/delft/ | 0 | 128 | 0.0000 | 33.0 | 6 | city |
+| /gevelisolatie/kosten/ | 0 | 38 | 0.0000 | 26.2 | 10 | cluster |
+| /gevelisolatie/leiden/ | 0 | 110 | 0.0000 | 16.1 | 9 | city |
+| /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/ | 0 | 37 | 0.0000 | 62.7 | 5 | project |
+| /gevel-schilderen/ | 0 | 1518 | 0.0000 | 42.5 | 51 | service |
+| /gevelisolatie/subsidie-vergunning/ | 0 | 4 | 0.0000 | 13.0 | 1 | cluster |
+| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 0 | 1 | 0.0000 | 10.0 | 1 | project |
 
 ## Top pages by impressions
 
 | Page | Impressions | Clicks | CTR | Avg Pos | Queries |
 |------|-------------|--------|-----|---------|---------|
-| /gevel-schilderen/ | 2007 | 0 | 0.0000 | 36.9 | 50 |
-| /muren-stucen/ | 1385 | 0 | 0.0000 | 27.9 | 43 |
-| / | 305 | 19 | 0.0623 | 12.5 | 24 |
-| /buiten-stucwerk/ | 227 | 2 | 0.0088 | 14.1 | 38 |
-| /gevelisolatie/delft/ | 192 | 0 | 0.0000 | 37.7 | 7 |
-| /gevelisolatie/ | 145 | 0 | 0.0000 | 22.3 | 14 |
-| /sierpleister/ | 119 | 0 | 0.0000 | 35.7 | 11 |
-| /onze-werken/ | 83 | 1 | 0.0120 | 7.8 | 7 |
-| /gevelisolatie/den-haag/ | 76 | 0 | 0.0000 | 11.8 | 6 |
-| /gevelisolatie/afwerkingen/ | 54 | 0 | 0.0000 | 28.8 | 16 |
-| /over-ons/ | 53 | 3 | 0.0566 | 7.0 | 4 |
-| /contact/ | 48 | 1 | 0.0208 | 1.9 | 4 |
-| /gevelisolatie/leiden/ | 41 | 0 | 0.0000 | 3.3 | 6 |
-| /gevelisolatie/kosten/ | 35 | 0 | 0.0000 | 25.7 | 15 |
-| /diensten/ | 34 | 0 | 0.0000 | 1.5 | 2 |
-| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 23 | 0 | 0.0000 | 18.5 | 1 |
-| /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/ | 5 | 0 | 0.0000 | 19.0 | 1 |
-| /gevelisolatie/subsidie-vergunning/ | 4 | 0 | 0.0000 | 10.2 | 1 |
-| /onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/ | 3 | 0 | 0.0000 | 23.3 | 1 |
-| /gevelisolatie/alphen-aan-den-rijn/ | 2 | 0 | 0.0000 | 26.0 | 1 |
+| /gevel-schilderen/keimen/ | 1629 | 0 | 0.0000 | 19.2 | 44 |
+| /gevel-schilderen/ | 1518 | 0 | 0.0000 | 42.5 | 51 |
+| /muren-stucen/ | 1451 | 0 | 0.0000 | 33.2 | 49 |
+| /muren-stucen/sausklaar-behangklaar/ | 318 | 0 | 0.0000 | 45.7 | 35 |
+| / | 275 | 14 | 0.0509 | 7.3 | 37 |
+| / | 226 | 6 | 0.0265 | 39.5 | 45 |
+| /buiten-stucwerk/ | 198 | 1 | 0.0051 | 19.0 | 35 |
+| /gevelisolatie/delft/ | 128 | 0 | 0.0000 | 33.0 | 6 |
+| /onze-werken/ | 113 | 1 | 0.0089 | 12.6 | 6 |
+| /gevelisolatie/leiden/ | 110 | 0 | 0.0000 | 16.1 | 9 |
+| /gevelisolatie/ | 100 | 1 | 0.0100 | 20.5 | 12 |
+| /gevelisolatie/afwerkingen/ | 94 | 1 | 0.0106 | 29.2 | 24 |
+| /over-ons/ | 69 | 2 | 0.0290 | 2.9 | 2 |
+| /contact/ | 67 | 0 | 0.0000 | 2.0 | 2 |
+| /diensten/ | 66 | 0 | 0.0000 | 1.9 | 1 |
+| /sierpleister/ | 57 | 0 | 0.0000 | 18.7 | 7 |
+| /gevelisolatie/den-haag/ | 40 | 0 | 0.0000 | 18.2 | 8 |
+| /gevelisolatie/kosten/ | 38 | 0 | 0.0000 | 26.2 | 10 |
+| /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/ | 37 | 0 | 0.0000 | 62.7 | 5 |
+| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 36 | 0 | 0.0000 | 19.9 | 2 |
 
 ---
 
-## Likely cannibalization candidates (3 queries on 3+ pages)
+## Likely cannibalization candidates (2 queries on 3+ pages)
 
 | Query | Impressions | Clicks | Pages |
 |-------|-------------|--------|-------|
-| bm klus bv | 223 | 21 | 10 |
-| bm klus bv reviews | 39 | 1 | 9 |
-| bm klus b.v. | 29 | 1 | 7 |
+| bm klus bv | 493 | 23 | 13 |
+| gevel sierpleister | 53 | 0 | 4 |
 
-## Low-CTR / high-impression opportunities (6 queries)
+## Low-CTR / high-impression opportunities (24 queries)
 
 Queries in striking distance (position 4-15) with CTR < 5% and 20+ impressions.
 
 | Query | Impressions | Clicks | CTR | Best Pos | Theme |
 |-------|-------------|--------|-----|----------|-------|
-| gevelisolatie den haag | 67 | 0 | 0.0000 | 8.1 | core_isolation |
-| buitengevel isoleren en stucen prijs | 43 | 1 | 0.0233 | 10.4 | prijs_kosten |
-| etics systeem | 35 | 0 | 0.0000 | 6.9 | core_isolation |
-| gevel schilderen en beschermen tegen weersinvloeden | 34 | 0 | 0.0000 | 11.7 | stuc_crepi |
-| renovatie buitenschil rotterdam | 30 | 0 | 0.0000 | 13.4 | other |
-| etics isolatie | 26 | 0 | 0.0000 | 11.7 | core_isolation |
+| wat kost keimen per m2 | 140 | 0 | 0.0000 | 9.9 | prijs_kosten |
+| kosten keimen woning | 136 | 0 | 0.0000 | 8.2 | prijs_kosten |
+| kosten keimen per m2 | 135 | 0 | 0.0000 | 10.5 | prijs_kosten |
+| huis keimen kosten | 131 | 0 | 0.0000 | 10.2 | prijs_kosten |
+| prijs keimen per m2 | 129 | 0 | 0.0000 | 10.3 | prijs_kosten |
+| keimwerk prijs m2 | 128 | 0 | 0.0000 | 7.2 | prijs_kosten |
+| keimen kosten | 124 | 0 | 0.0000 | 6.8 | prijs_kosten |
+| kosten keimen gevel | 124 | 0 | 0.0000 | 8.8 | prijs_kosten |
+| keimen gevel kosten | 121 | 0 | 0.0000 | 9.4 | prijs_kosten |
+| wat kost keimen | 120 | 0 | 0.0000 | 8.6 | prijs_kosten |
+| gevel keimen of schilderen | 119 | 0 | 0.0000 | 11.7 | stuc_crepi |
+| keimen prijs per m2 | 118 | 0 | 0.0000 | 11.1 | prijs_kosten |
+| gevelrenovatie met folie in rotterdam | 96 | 0 | 0.0000 | 10.3 | other |
+| gevel sierpleister | 53 | 0 | 0.0000 | 5.5 | stuc_crepi |
+| keimen of schilderen | 51 | 0 | 0.0000 | 12.3 | stuc_crepi |
+| keimwerk gevel | 47 | 0 | 0.0000 | 13.3 | other |
+| buitengevel isoleren en stucen prijs | 36 | 1 | 0.0278 | 9.6 | prijs_kosten |
+| sausklaar stucwerk voorstrijken;7;2;-5;90;156;66;3.46;1.72 | 28 | 0 | 0.0000 | 13.0 | stuc_crepi |
+| gevel schilderen en beschermen tegen weersinvloeden | 27 | 0 | 0.0000 | 5.9 | stuc_crepi |
+| gevelisolatie den haag | 27 | 0 | 0.0000 | 11.0 | core_isolation |
 
 ---
 
@@ -149,22 +162,22 @@ Queries in striking distance (position 4-15) with CTR < 5% and 20+ impressions.
 
 | Theme | Queries |
 |-------|---------|
-| stuc_crepi | 90 |
-| other | 73 |
-| prijs_kosten | 40 |
-| core_isolation | 16 |
-| materialen | 1 |
+| other | 160 |
+| stuc_crepi | 104 |
+| prijs_kosten | 35 |
+| core_isolation | 20 |
+| bekleden | 2 |
 | subsidie_vergunning | 1 |
+| steenstrips | 1 |
 
 ## Query intent distribution
 
 | Intent | Queries |
 |--------|---------|
-| commercial_investigative | 174 |
-| commercial | 39 |
-| informational | 4 |
-| navigational | 3 |
-| mixed | 1 |
+| commercial_investigative | 271 |
+| commercial | 38 |
+| informational | 13 |
+| navigational | 1 |
 
 ---
 

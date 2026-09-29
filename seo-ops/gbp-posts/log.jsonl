@@ -1,2 +1,6 @@
 {"week":"2026-W36","type":"case","source":"/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/","slug":"dordrecht","file":"gbp-posts/2026-W36-dordrecht.md","published":true}
-{"week":"2026-W37","type":"faq","source":"/gevelisolatie/kosten/","slug":"faq-kosten","file":"gbp-posts/2026-W37-faq-kosten.md","published":false}
+{"week":"2026-W37","type":"faq","source":"/gevelisolatie/kosten/","slug":"faq-kosten","file":"gbp-posts/2026-W37-faq-kosten.md","published":false,"superseded":true,"reason":"prijzen op 2026-09-05 van de site verwijderd"}
+{"week":"2026-W37","type":"case","source":"/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/","slug":"delft","file":"gbp-posts/2026-W37-delft.md","published":true,"published_at":"2026-09-07"}
+{"week":"2026-W38","type":"city","source":"/gevelisolatie/alphen-aan-den-rijn/","slug":"city-alphen","file":"gbp-posts/2026-W38-alphen-aan-den-rijn.md","photo_case":"/onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/","published":false}
+{"week":"2026-W39","type":"service","source":"/buiten-stucwerk/","slug":"service-buiten-stucwerk","file":null,"note":"cloud-routine 2026-09-21; tekst alleen in claude.ai-sessie; publicatie onbekend","published":null}
+{"week":"2026-W40","type":"case","source":"/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/","slug":"etten-leur-bankenstraat","file":"gbp-posts/2026-W40-etten-leur-bankenstraat.md","published":false}

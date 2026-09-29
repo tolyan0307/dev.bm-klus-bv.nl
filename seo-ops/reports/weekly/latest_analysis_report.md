@@ -1,284 +1,181 @@
 # SEO / Analytics Analysis Report
 
-Generated: 2026-09-04T15:50:20.310005+00:00
+Generated: 2026-09-29T20:04:41.836347+00:00
 Site: https://bm-klus-bv.nl/
-Snapshot from: 2026-09-04T15:49:56.577081Z
+Snapshot from: 2026-09-29T20:04:30.764360Z
+GSC window: 2026-08-30 → 2026-09-26 (final data)
+
+Rule findings are leads to verify, not conclusions (seo-ops/CLAUDE.md).
+
+## Data issues
+
+None — all snapshot sections present and non-empty.
 
 ## Executive Summary
 
-- **Total findings:** 32
+- **Total findings:** 18
   - Seo Opportunities: 9
-  - Seo Risks: 2
-  - Measurement Issues: 1
-  - Conversion Opportunities: 1
-  - Gevelisolatie Cluster Notes: 19
-- **Pages to watch:** 8
+  - Seo Risks: 4
+  - Measurement Issues: 3
+  - Conversion Opportunities: 0
+  - Gevelisolatie Cluster Notes: 2
+- **Pages to watch:** 7
 - **Next actions:** 6
 
 ## Top SEO Opportunities
 
-### 1. /buiten-stucwerk/
+### 1. /gevel-schilderen/keimen/
 
-- **Signal:** Position 8.8 with CTR 0.4% (794 impr)
-- **Why:** Striking distance to top 3 but CTR suggests title/description may not match intent
+- **Signal:** Position 18.3, CTR 0.2% (3 clicks / 1751 impressions)
+- **Why:** Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for
 - **Confidence:** medium
-- **Action:** Review title tag and meta description for query-intent alignment
+- **Action:** Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge
 - **Category:** SEO
 
-### 2. /gevelisolatie/kosten/
+### 2. /buiten-stucwerk/
 
-- **Signal:** Position 12.0 with CTR 2.1% (143 impr)
-- **Why:** Striking distance to top 3 but CTR suggests title/description may not match intent
+- **Signal:** Position 10.8, CTR 0.2% (1 clicks / 612 impressions)
+- **Why:** Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for
 - **Confidence:** medium
-- **Action:** Review title tag and meta description for query-intent alignment
+- **Action:** Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge
 - **Category:** SEO
 
-### 3. /over-ons/
+### 3. /gevelisolatie/kosten/
 
-- **Signal:** Position 5.7 with CTR 2.7% (111 impr)
-- **Why:** Striking distance to top 3 but CTR suggests title/description may not match intent
-- **Confidence:** medium
-- **Action:** Review title tag and meta description for query-intent alignment
-- **Category:** SEO
-
-### 4. /gevelisolatie/
-
-- **Signal:** Position 12.9 with CTR 0.6% (311 impr)
-- **Why:** Striking distance to top 3 but CTR suggests title/description may not match intent
-- **Confidence:** medium
-- **Action:** Review title tag and meta description for query-intent alignment
-- **Category:** SEO
-
-### 5. /gevelisolatie/den-haag/
-
-- **Signal:** Position 11.0 with CTR 1.1% (89 impr)
-- **Why:** Striking distance to top 3 but CTR suggests title/description may not match intent
+- **Signal:** Position 11.6, CTR 0.6% (1 clicks / 157 impressions)
+- **Why:** Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for
 - **Confidence:** low
-- **Action:** Review title tag and meta description for query-intent alignment
+- **Action:** Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge
 - **Category:** SEO
 
-### 6. /onze-werken/
+### 4. /gevelisolatie/leiden/
 
-- **Signal:** Position 8.1 with CTR 0.7% (137 impr)
-- **Why:** Striking distance to top 3 but CTR suggests title/description may not match intent
+- **Signal:** Position 13.1, CTR 0.6% (1 clicks / 162 impressions)
+- **Why:** Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for
+- **Confidence:** low
+- **Action:** Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge
+- **Category:** SEO
+
+### 5. /sierpleister/
+
+- **Signal:** Position 11.2, CTR 0.6% (1 clicks / 170 impressions)
+- **Why:** Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for
+- **Confidence:** low
+- **Action:** Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge
+- **Category:** SEO
+
+### 6. /gevel-schilderen/
+
+- **Signal:** 1653 impressions at average position 40.1 (0 clicks)
+- **Why:** Google shows the page for many queries but ranks it low — a relevance, intent or authority gap, not a snippet issue
 - **Confidence:** medium
-- **Action:** Review title tag and meta description for query-intent alignment
+- **Action:** Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page
 - **Category:** SEO
 
-### 7. /diensten/
+### 7. /muren-stucen/
 
-- **Signal:** Position 6.8 with CTR 0.0% (78 impr)
-- **Why:** Striking distance to top 3 but CTR suggests title/description may not match intent
-- **Confidence:** low
-- **Action:** Review title tag and meta description for query-intent alignment
+- **Signal:** 1525 impressions at average position 32.1 (0 clicks)
+- **Why:** Google shows the page for many queries but ranks it low — a relevance, intent or authority gap, not a snippet issue
+- **Confidence:** medium
+- **Action:** Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page
 - **Category:** SEO
 
-### 8. behangklaar stucen
+### 8. sausklaar stucen
 
-- **Signal:** 122 impressions but CTR 0.0%
-- **Why:** High visibility query not converting to clicks — possible SERP snippet mismatch
+- **Signal:** 246 impressions at position 19.6, CTR 0.0%
+- **Why:** Non-brand query in the top 20 with few clicks — the snippet or SERP features may take the clicks
 - **Confidence:** low
-- **Action:** Check which page ranks for this query; review title/description fit
+- **Action:** Find the ranking page in the query-level CSV and check the live SERP (serp-check) before rewriting the snippet
 - **Category:** SEO
 
-### 9. behangklaar stucwerk
+### 9. wat kost keimen per m2
 
-- **Signal:** 138 impressions but CTR 0.0%
-- **Why:** High visibility query not converting to clicks — possible SERP snippet mismatch
+- **Signal:** 103 impressions at position 17.5, CTR 0.0%
+- **Why:** Non-brand query in the top 20 with few clicks — the snippet or SERP features may take the clicks
 - **Confidence:** low
-- **Action:** Check which page ranks for this query; review title/description fit
+- **Action:** Find the ranking page in the query-level CSV and check the live SERP (serp-check) before rewriting the snippet
 - **Category:** SEO
 
 ## SEO Risks
 
 ### 1. /
 
-- **Signal:** Clicks -16, impressions -31 vs previous period
-- **Why:** Page losing organic visibility — may indicate ranking drop or seasonal shift
+- **Signal:** Average position 9.1 → 14.5 (higher is worse) on 906 impressions
+- **Why:** Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down
 - **Confidence:** medium
-- **Action:** Check GSC for position changes; review if content is still relevant
+- **Action:** Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page
 - **Category:** SEO
 
-### 2. /gevelisolatie/
+### 2. /buiten-stucwerk/
 
-- **Signal:** Clicks -5, impressions -67 vs previous period
-- **Why:** Page losing organic visibility — may indicate ranking drop or seasonal shift
-- **Confidence:** low
-- **Action:** Check GSC for position changes; review if content is still relevant
+- **Signal:** Average position 8.4 → 10.8 (higher is worse) on 612 impressions
+- **Why:** Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down
+- **Confidence:** medium
+- **Action:** Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page
+- **Category:** SEO
+
+### 3. /gevel-schilderen/
+
+- **Signal:** Average position 35.7 → 40.1 (higher is worse) on 1653 impressions
+- **Why:** Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down
+- **Confidence:** medium
+- **Action:** Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page
+- **Category:** SEO
+
+### 4. /muren-stucen/
+
+- **Signal:** Average position 26.8 → 32.1 (higher is worse) on 1525 impressions
+- **Why:** Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down
+- **Confidence:** medium
+- **Action:** Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page
 - **Category:** SEO
 
 ## Conversion Opportunities
 
-### 1. /
-
-- **Signal:** 45 sessions but 0 key events
-- **Why:** Traffic exists but no lead signal — possible CTA gap or intent mismatch
-- **Confidence:** medium
-- **Action:** Check CTA visibility and relevance on this page; verify event tracking
-- **Category:** CRO
+No findings.
 
 ## Measurement Issues
 
 ### 1. (not set)
 
-- **Signal:** 14 sessions with landing page = (not set)
-- **Why:** GA4 cannot determine the entry page — may distort landing page analysis
+- **Signal:** 23 sessions with landing page = (not set)
+- **Why:** GA4 cannot tell the entry page for these sessions — landing-page analysis misses them
+- **Confidence:** medium
+- **Action:** Treat landing-page shares as approximate; recurring, so no action unless it grows
+- **Category:** Measurement
+
+### 2. —
+
+- **Signal:** Source '127.0.0.1:8842 / referral': 42 sessions from a local-dev / hosting-panel referrer
+- **Why:** Not real visitors — inflates sessions and can add fake key events
 - **Confidence:** high
-- **Action:** Check GA4 data stream configuration; may be internal/app traffic
+- **Action:** Exclude in GA4 (owner): Admin → Data streams → Configure tag settings → List unwanted referrals / define internal traffic
+- **Category:** Measurement
+
+### 3. —
+
+- **Signal:** Source 's246.webhostingserver.nl:2222 / referral': 8 sessions from a local-dev / hosting-panel referrer
+- **Why:** Not real visitors — inflates sessions and can add fake key events
+- **Confidence:** high
+- **Action:** Exclude in GA4 (owner): Admin → Data streams → Configure tag settings → List unwanted referrals / define internal traffic
 - **Category:** Measurement
 
 ## Gevelisolatie Cluster Review
 
 ### 1. /gevelisolatie/*
 
-- **Signal:** 24 cluster pages found in GSC comparison data
-- **Why:** Cluster tracking summary
+- **Signal:** 22 cluster pages in GSC data: clicks 5 → 10, impressions 1004 → 1056
+- **Why:** Cluster summary (strategic priority)
 - **Confidence:** high
-- **Action:** Review individual cluster page findings below
+- **Action:** Review the cluster section of the weekly summary
 - **Category:** Cluster
 
-### 2. /gevelisolatie/
+### 2. /gevelisolatie/* (low visibility)
 
-- **Signal:** Cluster page lost 5 clicks vs previous period
-- **Why:** Cluster page losing momentum — may need content refresh or link support
-- **Confidence:** medium
-- **Action:** Compare query rankings; check for cannibalization within cluster
-- **Category:** Cluster
-
-### 3. /gevelisolatie/alphen-aan-den-rijn/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
+- **Signal:** 14 pages with < 10 impressions: /gevelisolatie/alphen-aan-den-rijn/, /gevelisolatie/barendrecht/, /gevelisolatie/bergen-op-zoom/, /gevelisolatie/breda/, /gevelisolatie/capelle-aan-den-ijssel/, /gevelisolatie/gouda/, /gevelisolatie/hendrik-ido-ambacht/, /gevelisolatie/leidschendam-voorburg/, /gevelisolatie/maassluis/, /gevelisolatie/materialen/, /gevelisolatie/roosendaal/, /gevelisolatie/rotterdam/ and 2 more
+- **Why:** Very weak visibility; for city pages the content decision is pending with the owner (Wave 1 plan)
 - **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 4. /gevelisolatie/barendrecht/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 5. /gevelisolatie/bergen-op-zoom/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 6. /gevelisolatie/breda/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 7. /gevelisolatie/capelle-aan-den-ijssel/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 8. /gevelisolatie/gouda/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 9. /gevelisolatie/hendrik-ido-ambacht/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 10. /gevelisolatie/leidschendam-voorburg/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 11. /gevelisolatie/maassluis/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 12. /gevelisolatie/materialen/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 13. /gevelisolatie/ridderkerk/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 14. /gevelisolatie/roosendaal/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 15. /gevelisolatie/rotterdam/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 16. /gevelisolatie/schiedam/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 17. /gevelisolatie/spijkenisse/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 18. /gevelisolatie/vlaardingen/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
-- **Category:** Cluster
-
-### 19. /gevelisolatie/zoetermeer/
-
-- **Signal:** Cluster page with < 10 impressions in current period
-- **Why:** Strategic cluster page has very weak visibility
-- **Confidence:** low
-- **Action:** Check indexation status; review internal linking from parent /gevelisolatie/
+- **Action:** Spot-check indexation (GSC URL Inspection) for a few of them; no content changes without the owner's decision
 - **Category:** Cluster
 
 ## Pages to Watch
@@ -286,17 +183,16 @@ Snapshot from: 2026-09-04T15:49:56.577081Z
 - (not set)
 - /
 - /buiten-stucwerk/
-- /gevelisolatie/
+- /gevel-schilderen/
+- /gevel-schilderen/keimen/
 - /gevelisolatie/*
-- /gevelisolatie/kosten/
-- /onze-werken/
-- /over-ons/
+- /muren-stucen/
 
 ## Next Actions (7–14 days)
 
-1. [SEO] Review title tag and meta description for query-intent alignment — /buiten-stucwerk/
-2. [SEO] Check GSC for position changes; review if content is still relevant — /
-3. [Measurement] Check GA4 data stream configuration; may be internal/app traffic — (not set)
-4. [CRO] Check CTA visibility and relevance on this page; verify event tracking — /
-5. [Cluster] Review individual cluster page findings below — /gevelisolatie/*
-6. [Cluster] Compare query rankings; check for cannibalization within cluster — /gevelisolatie/
+1. [SEO] Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge — /gevel-schilderen/keimen/, /buiten-stucwerk/
+2. [SEO] Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page — /gevel-schilderen/, /muren-stucen/
+3. [SEO] Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page — /, /buiten-stucwerk/, /gevel-schilderen/, /muren-stucen/
+4. [Measurement] Treat landing-page shares as approximate; recurring, so no action unless it grows — (not set)
+5. [Measurement] Exclude in GA4 (owner): Admin → Data streams → Configure tag settings → List unwanted referrals / define internal traffic
+6. [Cluster] Review the cluster section of the weekly summary — /gevelisolatie/*
