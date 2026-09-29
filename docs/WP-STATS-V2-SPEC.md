@@ -2,7 +2,7 @@
 
 Дата: 2026-09-04. Статус: **v2 работает на PROD и DEV с 2026-09-04**, v1 удалён с обоих. См. §11.
 Языки: интерфейс плагина на русском, всё публичное на сайте только nl-NL.
-Основание: `docs/WP-STATS-V2-HANDOFF.md`, копии с PROD в `D:\projects\bmklus-wpcontent\mu-plugins\_prod\`.
+Основание: `docs/WP-STATS-V2-HANDOFF.md` (удалён 2026-09-29, есть в git-теге `instructions-v1`), копии с PROD в `D:\projects\bmklus-wpcontent\mu-plugins\_prod\`.
 
 Цель одной фразой: сайт становится ещё одним правдивым источником данных о трафике и заявках, независимым от GA4 и Ads.
 

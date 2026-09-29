@@ -40,8 +40,10 @@ gsc-token.json
 .env.local.secrets
 seo-ops/integrations/.venv/
 
-# Local IDE / agent state (not for production repo)
-.claude/
+# Local agent state stays out of git; project skills and rules are versioned
+.claude/*
+!.claude/skills/
+!.claude/rules/
 
 # Generated SEO audit artifacts (data dumps, snapshots — not for production repo)
 seo-ops/outputs/

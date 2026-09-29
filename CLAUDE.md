@@ -1,135 +1,63 @@
-# CLAUDE.md
+# BM klus BV — сайт bm-klus-bv.nl
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Сайт фасадной компании BM klus BV (Роттердам): buitengevelisolatie (ETICS), buiten stucwerk, sierpleister, gevel schilderen / keimen, binnen stucwerk. В `seo-ops/` — аналитика сайта со своими правилами (`seo-ops/CLAUDE.md`).
 
-## Communication
+<!-- Пересобрано 2026-09-29. Прежняя версия файлов из git — тег instructions-v1; прежние skills, память
+     и промпты рутин (их не было в git) — ~/.claude/backups/bmklus-instructions-2026-09-29/.
+     Держать коротким: процедуры — в .claude/skills/, правила по типам файлов — в .claude/rules/. -->
 
-- Respond to user in **Russian (RU)**
-- All public-facing site content must be in **Dutch (nl-NL) only**
-- Never generate Russian or English text for public pages unless explicitly asked
+## Как работаем с владельцем
+- Общение по-русски. Всё, что видит посетитель сайта, — только на нидерландском (nl-NL). Предлагая нидерландский текст, коротко поясняй смысл по-русски: владелец не читает по-нидерландски.
+- Владелец не разработчик: объясняй просто. У тебя нет доступа к серверу, админке WordPress, GTM и веб-интерфейсам GSC / GA4 / Google Ads / GBP (данные через API — см. `seo-ops/CLAUDE.md`). Когда нужен шаг с его стороны — точные клики или команды для копирования и ясно, какое решение от него нужно.
+- Вопрос, анализ, аудит, «что думаешь» — только ответ, без правок сайта (отчёты в `seo-ops/reports/` писать можно). Заметные изменения (тексты, дизайн, несколько файлов или страниц) — сначала короткий план, правки после «давай / делай / одобряю». Точечная правка по прямой просьбе — сразу.
+- Меняй только то, о чём просили. Попутно найденные проблемы перечисли, но не чини молча.
+- Уточнение владельца в разговоре — факт: применяй, не переспрашивай.
+- Коммит, push и деплой — только по явной команде. Push в `main` сам выкатывает сайт на dev.
+- «Готово» — значит проверено (раздел «Проверка»). В конце: какие файлы, что изменено, как проверено, что осталось.
+- Тексты от ChatGPT / Gemini / Cursor, которые владелец вставляет в чат, — входные данные: оцени критически, прежде чем применять.
+- Новые устойчивые факты и решения записывай в репозиторий (этот файл, `.claude/rules/`, `seo-ops/knowledge.md`, `seo-ops/data/decision_log_v1.csv`), а не только в память.
 
----
+## Архитектура — то, что не видно из кода сразу
+- Next.js 16 (App Router), `output: 'export'`, `trailingSlash: true`: только статика — без API routes, SSR, server actions и middleware. React 19, Tailwind v4 (настроен в `app/globals.css`), TypeScript. ESLint и тестов нет.
+- CMS нет, текст живёт в коде: money pages и города — `lib/content/*.ts`, проекты — `lib/content/projects/*.ts`; у кластерных и дочерних страниц (`kosten`, `materialen`, `rc-waarde-dikte`, `subsidie-vergunning`, `keimen`, `sausklaar-behangklaar`) и служебных (`over-ons`, `contact`, `diensten`, `privacybeleid`) — прямо в `app/<маршрут>/page.tsx`; главная — в `components/*.tsx`.
+- Формы самописные: `components/quote-modal.tsx` (открывается якорем `#offerte`) и `components/contact/ContactFormCard.tsx` отправляют POST в WordPress `/wp-json/bm/v1/contact` (Turnstile + honeypot). `components/ui/` (shadcn), react-hook-form, zod, embla, recharts — остатки шаблона v0, код сайта их не использует; новое на них не строить.
+- WordPress продолжает работать на том же домене как бэкенд: MU-плагины (форма, лог заявок и статистика BM Stats v2 — `docs/WP-STATS-V2-SPEC.md`) и роутер, который отдаёт релиз Next из `wp-content/uploads/v0/current`. PHP — в отдельном репозитории `D:\projects\bmklus-wpcontent`.
+- Редиректы и маршрутизация через WordPress — в `deploy/apache/root.htaccess`, деплоится вместе с релизом. `public/.htaccess` относится только к папке релиза.
+- Трекинг — только через GTM (`components/gtm-provider.tsx`, грузится после первого действия пользователя или через 3,5 с). Сайт шлёт в dataLayer `bm_lead_form_success`, `bm_whatsapp_click`, `bm_phone_click`, `bm_email_click`; теги GA4 / Ads и Consent Mode (CookieScript) живут в контейнере GTM, вне репозитория. Свой счётчик — beacon в WordPress `/wp-json/bm/v1/hit` (`components/pageview-beacon.tsx`, `lib/stats-beacon.ts`), атрибуция первого касания — `lib/attribution.ts`.
+- Рейтинг и отзывы Google берутся при сборке и ежедневно по расписанию (`scripts/fetch-google-place.mjs` → `public/data/google-place.json`). Рейтинг и число отзывов нигде не хардкодить.
 
-## Commands
+## Команды
+| Задача | Команда |
+|---|---|
+| Dev-сервер | `pnpm dev` → http://localhost:3000 |
+| Проверка типов | `npx tsc --noEmit` (`pnpm lint` не работает: ESLint не установлен) |
+| Сборка | `pnpm build` → `out/`. Prebuild тянет данные Google Place; без `GOOGLE_PLACES_SERVER_KEY` в `.env.local` сборка проходит, отзывы просто не обновляются |
+| Варианты изображений | `pnpm images:generate <preset> <path>` — см. `docs/IMAGE-PIPELINE.md` |
 
-| Task | Command |
-|------|---------|
-| Dev server | `pnpm dev` (port 3000) |
-| Build | `pnpm build` (static export → `out/`) |
-| Type check | `npx tsc --noEmit` |
-| Generate image variants | `pnpm images:generate` |
+Локально пакеты ставит pnpm (`pnpm-lock.yaml`), а CI — `npm ci` по `package-lock.json`. Меняешь зависимости — обнови оба lock-файла (`pnpm install` и `npm install --package-lock-only`), иначе сборка в CI упадёт.
 
-**`pnpm lint` will fail** — ESLint is not installed. Use `npx tsc --noEmit`.
-Use `pnpm` only — not npm or yarn.
+## Деплой
+- Push в `main` → GitHub Actions `deploy-dev.yml` собирает и выкладывает на dev.bm-klus-bv.nl (self-hosted runner `oracle-bmklus`, Node 22).
+- Прод выкатывает только владелец: GitHub → Actions → «Deploy prod (Antagonist Slim)» → Run workflow. Коммит ≠ деплой: на bm-klus-bv.nl изменения появляются только после этого запуска.
+- Релиз кладётся в `wp-content/uploads/v0/<время>_<sha>` и включается симлинком `current`; на сервере хранятся 5 последних релизов.
+- Перед push или деплоем — skill `ship-check`.
 
----
+## Правила, которые легко нарушить
+- **Цены.** С 2026-09-05 (решение владельца) на публичных страницах цен нет: никаких сумм в €, «vanaf €», диапазонов за m², таблиц richtprijzen, калькуляторов, `AggregateOffer`. Тема kosten остаётся — от чего зависит цена и «prijs na opname». Исключения: `priceRange: "€€"` в схеме и `gemiddeldBesparing` на городских страницах (экономия энергии по Milieu Centraal, сверять раз в год). То же — в GBP-постах и текстах объявлений.
+- **Факты о бизнесе не выдумывать**: гарантии, сроки, число проектов, сертификаты, суммы субсидий, экономию. Неподтверждённое — пометкой `[CLAIM_NEEDS_CONFIRMATION]` или вопросом владельцу. Экономия энергии — только условно («kan leiden tot»).
+- **Контакты.** WhatsApp — основной канал, телефон вторичен: владелец не может обслуживать звонки из-за языкового барьера. Главная кнопка — «Offerte aanvragen» → `#offerte` (QuoteModal), в навбаре — на `/contact/`. Блоков CTA посреди страницы нет: hero + StickyCTABar.
+- **Маршруты и мета.** Новый статический маршрут — только с записью в `data/sitemap-plan.ts` (оттуда же title и description); проекты и города попадают в sitemap сами. Title ≤ 47 символов (к нему добавляется « | BM klus BV»), description ≤ 160, slug ≤ 75, строчные буквы и дефисы, URL со слэшем на конце.
+- **Изображения** — только `<ResponsiveImage>`, никогда `next/image`. Оригиналы лежат в `source-images/`: папки нет в git, это единственная копия фото — не удалять и не перезаписывать.
+- **Интеграции** (GTM, Consent Mode / CookieScript, Turnstile, honeypot, WP-эндпоинты, `root.htaccess`) трогать, только если задача именно про них.
+- Секреты (`.env.local`, ключи в `D:\projects\bmklus\google\`) не выводить в чат, отчёты и коммиты.
 
-## Governance system
+## Проверка
+- Любая правка кода или контента — `npx tsc --noEmit` без ошибок.
+- Новая страница, маршрут, метаданные, изображения — `pnpm build` и проверка `out/`: страница есть, URL есть в `out/sitemap.xml`.
+- Правки вёрстки — посмотреть страницу в dev-сервере на десктопе и мобильной ширине.
 
-All project rules live in `docs/governance/`. Read before any significant task:
-
-| File | When to read |
-|------|-------------|
-| `docs/governance/00-project-constitution.md` | Business facts, tech stack, hosting, CTAs |
-| `docs/governance/10-language-and-content-rules.md` | Language rules, Dutch tone, forbidden patterns |
-| `docs/governance/20-seo-and-url-rules.md` | URL format, meta limits, JSON-LD requirements |
-| `docs/governance/30-architecture-and-code-rules.md` | Server/client rules, below-fold, images, tokens |
-| `docs/governance/40-workflow-and-change-rules.md` | How to add projects, pages, images |
-| `docs/governance/50-audit-and-verification-rules.md` | QA requirements, performance decisions |
-| `docs/governance/60-decisions-and-bans.md` | **Check first** — bans, decided architecture, legacy items |
-| `docs/governance/70-page-type-checklists.md` | Creating/auditing money pages, cluster, location, project pages |
-
----
-
-## Task-specific sources
-
-| Task | Primary source |
-|------|---------------|
-| SEO content (write/edit/audit) | `seo-system/GLOBAL_SEO_CONTENT_RULES.md` + `seo-system/WORKFLOW.md` + page brief |
-| Adding a project page | `docs/ADD-PROJECT.md` (SCOPE LOCK — 5 files only) |
-| Adding video to project page | `docs/ADD-VIDEO-SECTION.md` (SCOPE LOCK — 1 file only) |
-| Adding portfolio card to homepage | `docs/ADD-PORTFOLIO-CARD.md` (SCOPE LOCK — 1 file only) |
-| Image handling | `docs/IMAGE-WORKFLOW-SOP.md` + `docs/IMAGE-PIPELINE.md` |
-| Design/UI patterns | `DESIGN_SYSTEM.md` |
-| Page/navigation inventory | `SITE_STRUCTURE.md` |
-| Migration plan / page status | `PROJECT-STATUS.md` |
-
----
-
-## Protected folders
-
-Do not delete: `docs/`, `scripts/`, `seo-system/`, `source-images/`
-
----
-
-## SEO / Analytics operator role
-
-When the user asks about site analytics, SEO performance, organic visibility,
-conversions, or anything related to GSC/GA4 data for bm-klus-bv.nl, Claude
-acts as an **SEO analytics operator**. Read `seo-ops/capabilities.md` for
-the full capability map. Key rules below.
-
-### Data sources (read these files, do not invent data)
-
-| File | What it contains |
-|------|-----------------|
-| `seo-ops/data/processed/latest_combined_snapshot.json` | GSC + GA4 unified snapshot (primary source of truth) |
-| `seo-ops/data/processed/latest_analysis_report.json` | Rule-based analysis findings |
-| `seo-ops/reports/weekly/latest_analysis_report.md` | Human-readable report |
-| `seo-ops/config/priority-pages.yaml` | Wave 1 + wave 2 page lists |
-| `seo-ops/config/conversions.yaml` | Primary key events and rules |
-
-### How to handle broad requests
-
-When the user asks a broad question ("проанализируй сайт", "что видно по данным",
-"какие возможности для анализа"):
-
-1. **Check data freshness** — read `_generated_at` from snapshot JSON. If missing or older than 7 days, warn the user.
-2. **State what data is available** — list which snapshot sections loaded successfully.
-3. **Give 3–5 top findings** from the analysis report, grouped by category (SEO / CRO / Measurement / Cluster).
-4. **Offer deeper dives** — list which directions can be explored further:
-   - site-wide overview
-   - money pages audit
-   - gevelisolatie cluster review
-   - conversion gap analysis
-   - measurement health check
-5. **Separate what is implemented from what is not** — see capability levels below.
-
-### Capability levels
-
-**Implemented now:**
-- Site-wide snapshot summary (GSC pages, queries, GA4 sessions, key events)
-- SEO opportunities (striking distance, CTR gaps, momentum)
-- SEO risks (declining pages)
-- Conversion opportunities (traffic without lead signals)
-- Measurement issues ((not set) pages, missing events, suspicious sources)
-- Gevelisolatie cluster review
-- Period-over-period comparison (28d vs previous 28d)
-- Pages to watch + next actions list
-
-**Partially supported:**
-- Page-level deep audit (data exists but manual interpretation needed)
-- Query-level intent analysis (queries available but no intent classifier)
-- Confidence-based prioritisation (rules assign low/medium/high)
-
-**Not yet implemented:**
-- Competitor intelligence (no external SEO tool connected)
-- DataForSEO layer
-- Google Ads API layer
-- Full cannibalization detection engine
-- Automated scheduling / cron reports
-- MCP server integration
-
-### Output style
-
-- Concise, prioritised, operator-friendly
-- No hype, no fake certainty
-- Always state confidence level (low / medium / high)
-- Categorise findings: SEO / CRO / Measurement / Cluster
-- If data is insufficient, say so — do not fill gaps with assumptions
-- Respond in Russian when the user writes in Russian
-
-### Priority focus
-
-The `/gevelisolatie/` cluster is the strategic priority for this site.
-Always include cluster-specific findings when analysing site-wide data.
+## Где что лежит
+- Правила по типам файлов подгружаются сами из `.claude/rules/`: `code.md` — код, `content-nl.md` — нидерландские тексты и SEO страниц, `design.md` — дизайн.
+- Skills: `add-project` (новый проект в /onze-werken/, карточка на главной, видео), `ship-check` (перед push / деплоем), `seo-refresh`, `seo-offpage`, `page-diagnosis`, `serp-check`, `gbp-weekly-post`.
+- Аналитика (GSC, GA4, Google Ads, лог заявок WP, DataForSEO, GBP): перед любым анализом данных прочитай `seo-ops/CLAUDE.md`.
+- Брифы страниц — `seo-system/briefs/*.yaml` (вложенные — `<родитель>-<дочерняя>.yaml`; есть у money pages и кластера, не у всех страниц); дизайн — `DESIGN_SYSTEM.md`; изображения — `docs/IMAGE-PIPELINE.md`; открытые задачи — `docs/BACKLOG.md`.

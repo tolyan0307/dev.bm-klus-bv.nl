@@ -1,128 +1,80 @@
-# CLAUDE.md — seo-ops
+# seo-ops — аналитика bm-klus-bv.nl
 
-Scope: this file governs Claude's behavior **inside `seo-ops/`** (SEO / PPC / measurement / page analysis work for BM klus BV). The root `CLAUDE.md` still applies; this document refines behavior for analytical tasks and does not override project-wide guardrails.
+Сбор и анализ данных сайта: GSC, GA4, Google Ads, лог заявок WordPress, GBP, DataForSEO. Факты о проекте, границы данных, рынок и решения владельца — в `knowledge.md` (прочитай перед анализом). Журнал действий — `data/decision_log_v1.csv`. Пути ниже — от `seo-ops/`.
 
----
+## Границы
+- Здесь читают данные и пишут отчёты. Сайт, WordPress, GTM, Google Ads и GBP не менять: рекомендации внедряет владелец.
+- Токены GBP и Google Ads позволяют запись — изменяющие операции только по явной просьбе владельца в этом разговоре. GSC везде только на чтение (`submit_sitemap` в MCP есть, но с таким доступом не сработает).
+- DataForSEO платный. Разовые запросы на центы — можно, стоимость назови в ответе (вызовы через MCP не попадают в `outputs/dataforseo_cost_log.json`). Прогон дороже ~$1 — только по просьбе или из skill с лимитом; дороже $2 — остановиться.
+- Секреты не выводить: ключи в `D:\projects\bmklus\google\` и `integrations/.env.local` — только по имени файла или переменной.
 
-## 1. Project identity
+## Источники, по убыванию веса
+1. **WP-лог заявок** (BM Stats v2) — истина о лидах.
+2. **Google Ads API** — расход, клики, конверсии Ads (тег конверсии в GTM, не импорт из GA4).
+3. **GSC** — клики, показы, позиции, индексация.
+4. **GA4** — поведение и каналы; ключевые события Contact_Form_Site, Whatsapp, Phone, Email. `Contact_Form_Site` ловит около 80 % форм из WP-лога (consent), поэтому в конверсиях знаменатель — WP.
+5. **DataForSEO, живая выдача, конкуренты** — рынок и контекст, с меткой `[DataForSEO …]`; для наших позиций и кликов главнее GSC.
+6. **Документация Google** — как устроены метрики. Блоги и форумы — только фон.
 
-- `seo-ops/` is an **evidence-first, read-only recommendation system** for bm-klus-bv.nl.
-- Claude acts as an orchestrator: it reads snapshots, runs existing analyzers/tools, and produces structured recommendations.
-- The user implements changes manually. **No automatic website edits. No automatic Google Ads edits. No auto-publishing.**
-- Priority cluster: `/gevelisolatie/`.
-- Primary conversions: `Contact_Form_Site`, `Phone`, `Whatsapp`.
-- Site cutover: **2026-03-08**. Google Ads structural change: **2026-03-15**.
+`data/processed/latest_analysis_report.json` и отчёт правил `analysis/rules.py` — производные подсказки, не доказательства (ошибки правил — ниже).
 
----
+## Как читать данные
+- Масштаб мал: около 60 кликов, 5–8 заявок и 6–9 конверсий Ads за 28 дней. ±1–3 — шум. Рядом с процентом — абсолютное число; коэффициенты при <20 сессиях не считать.
+- GSC отдаёт окончательные данные с лагом 2–3 дня; запросы анонимизированы — их сумма меньше итога страницы.
+- Главная = `/` + `/?utm_source=google&utm_medium=organic&utm_campaign=gbp` (ссылка из GBP) — считать суммой.
+- Рефереры GA4 `127.0.0.1:8842` и `s246.webhostingserver.nl:2222` — мусор, исключать до любых коэффициентов.
+- Не сравнивать через границы из календаря в `knowledge.md` без оговорки. Данные до переезда (2026-03-08) — только год-к-году, с пометкой.
+- Возраст: различай возраст URL, существования страницы, текущей версии контента и сигналов ранжирования. Переписанная страница — «период после изменения», не «молодая страница».
+- Каннибализация — только когда у обоих URL больше 10 показов по одному запросу и разница позиций меньше 5. Просто общие запросы у родителя и дочерней страницы — «пересечение», не каннибализация. Главная по запросам «бренд + услуга + город» — норма.
+- CTR при позиции >20 ни о чём не говорит; позиция 5–15 и низкий CTR — сниппет; 1–4 и низкий CTR — сначала SERP-фичи. Рост позиции 30 → 15 — прогресс, даже без кликов.
+- «Есть / нет на странице» утверждай только с файлом и полем или строкой. Метрика остаётся в своём уровне: запрос, страница или сайт.
+- Без общих «нормальных CTR и позиций» из блогов; не хватает данных — так и скажи.
+- Вывод расходится с прошлым отчётом — назови это явно: изменился сайт, прошлый вывод был неверен или данных мало.
+- Упали заявки — сначала сверка с WP-логом, потом гипотезы о трекинге.
+- Широкий вопрос («что видно по данным») — проверь свежесть данных, дай 3–5 главных выводов (SEO / конверсии / измерение / кластер `/gevelisolatie/`) и предложи, что разобрать глубже. Кластер `/gevelisolatie/` в обзорах — всегда отдельной строкой.
 
-## 2. Source hierarchy (truth-layer discipline)
+## Формат отчёта
+- Шапка: дата, окна и последняя дата данных по каждому источнику.
+- Каждая цифра с меткой `[источник, окно, уровень]`: `[GSC, 28d, page]`, `[WP, 28d, lead]`, `[Ads API, 30d, campaign]`.
+- Факты → интерпретация с уверенностью (низкая / средняя / высокая) → гипотезы и как их проверить. Гипотеза не подаётся как факт.
+- Действия — конкретные шаги для владельца по приоритету, без уже сделанного.
+- Ограничения: что устарело, чего нет, что исключено и почему.
+- По-русски. Файлом — в `reports/<тема>/<имя>_<YYYY-MM-DD>.md`.
 
-Full rules: `contracts/source_hierarchy_rules_v1.md`. Short form:
+## Цикл «решение → результат»
+- Перед рекомендациями читай журнал решений: не предлагай сделанное, проверяй наступившие `review_after`.
+- Внедрил владелец что-то — добавь строку: дата выката на прод (прод деплоится вручную, коммит ≠ выкат), объект, что сделано, ожидаемый эффект с базовой цифрой и окном, дата ревью.
+- Дата выката — по успешным запускам deploy-prod (репозиторий публичный): `curl -s "https://api.github.com/repos/tolyan0307/dev.bm-klus-bv.nl/actions/workflows/deploy-prod.yml/runs?per_page=20"` → `created_at` и `head_sha`; на прод попадает всё до `head_sha`. Граница «до / после» для любого изменения — эта дата.
+- Старые строки не удалять: что изменилось — дописывать в `notes`.
 
-| Rank | Source | Use for |
-|------|--------|---------|
-| 1 | Internal artifacts: GSC, GA4, Google Ads CSVs, URL Inspection, local page inventory | Primary truth for BM klus performance, measurement, and state |
-| 2 | Google official docs (Search Central, GSC/GA4/Ads API) | Platform behavior, metric semantics, system constraints |
-| 3 | Vendor docs (DataForSEO) | Truth about the vendor's own system, not about Google behavior |
-| 4 | DataForSEO API outputs, manual SERP, competitor observation | **Enrichment only** — directional context |
-| 5 | Blogs / forums | Background only — never policy, never primary evidence |
+## Карта
+| Что | Где |
+|---|---|
+| Сводный снапшот GSC + GA4, 28 дней | `data/processed/latest_combined_snapshot.json` |
+| Запросы × страницы, лендинги GA4, 28 / 90 дней | `snapshots/normalized/{seo,pages}/` (вне git, перезаписываются) |
+| WP-снапшоты, сверка лидов | `reports/pages/wp_stats_last{28,90}d.md`, `reports/audits/lead_reconciliation_*.md` |
+| Недельные сводки, off-page | `reports/weekly/weekly_*.md`, `reports/seo/offpage_monthly_*.md` |
+| Загрузчики API | `integrations/{gsc,ga4,wp,google_ads,gbp,dataforseo,site}/`, `integrations/google_clients/` |
+| Сборщики и анализаторы | `analyzers/{seo,pages,keywords,ppc}/`, `analysis/` |
+| GBP-посты | `gbp-posts/` + `log.jsonl` |
+| Конфиги | `config/`: `conversions.yaml` (ключевые события; читает только `run_measurement_audit_v1.py`), `competitors.yaml` (справочно — скрипты его не читают, у сборщика свой список) |
 
-**Rules:**
-- DataForSEO never replaces GSC for BM klus position/performance claims.
-- Enrichment data must be labeled `[DataForSEO enrichment]` / `[competitor observation]` / `[manual SERP]`.
-- If a claim has no authoritative source, say so explicitly — do not fill the gap with community knowledge.
-- Pre-cutover data (before **2026-03-08**) is legacy noise by default. Only use it when intentionally investigating old-site tails — and label it clearly.
-- Do not mix pre- and post-**2026-03-15** Google Ads structure data unless the task explicitly requires the comparison.
+MCP: `gsc` (search_analytics, index_inspect), `google-analytics` (run_report и др.), `dataforseo` (api_request; в 2026-08 ответ обрезался примерно до 10 элементов — для полных выгрузок скрипты). Skills: `seo-refresh`, `seo-offpage`, `page-diagnosis`, `serp-check`, `gbp-weekly-post`.
 
----
+## Запуск скриптов (Windows, Git Bash)
+- Python — `integrations/.venv/Scripts/python.exe`; переменные — `set -a && source integrations/.env.local && set +a`; `PYTHONIOENCODING=utf-8 PYTHONUTF8=1` (иначе запись файлов идёт в cp1251 и падает на символах вроде «£» в запросах); маршрут в аргументе (`/gevelisolatie/`) — с `MSYS_NO_PATHCONV=1`. Переменные окружения между вызовами Bash не сохраняются — цепочку команд запускать одним вызовом.
+- Доступы скриптов: GSC — OAuth-токен (`BMKLUS_GSC_TOKEN_JSON`; протух — `integrations/test_gsc_access.py` откроет браузер для входа, поэтому запускать только при владельце); GA4 и MCP `gsc` / `google-analytics` — сервисный аккаунт; GBP — токен из `integrations/make_gbp_token.py`; Google Ads — `D:\projects\bmklus\google\google-ads.yaml` (там же утилиты Ads и их выгрузки в `outputs\`, токен — `get_ads_refresh_token.py`).
+- В venv живёт и MCP-сервер GA4 (`analytics-mcp`, его нет в `requirements.txt`) — venv не пересоздавать только по `requirements.txt`.
 
-## 3. Read-only and recommendation-only
+## Расписание
+Локальные рутины Claude Desktop: `seo-weekly-refresh` (чт 13:00 → skill `seo-refresh`) и `seo-monthly-offpage` (1-е число, 14:00 → skill `seo-offpage`). Промпты — `~/.claude/scheduled-tasks/<имя>/SKILL.md`, расписание — в Desktop: Code → Routines. Нужны открытое приложение и включённый компьютер; пропущенный запуск догоняется один раз при следующем открытии. Облачная GBP-рутина в claude.ai с 2026-09-28 падает с 403 и не используется — удаляет владелец (`../docs/BACKLOG.md`); GBP-посты — вручную через skill `gbp-weekly-post`.
 
-- Claude reads data and writes **reports**. Claude does not edit the website, WordPress, or Google Ads assets.
-- No scheduled/auto-running jobs. Every workflow runs on explicit user request.
-- No secrets or tokens may be printed in chat, committed to git, or written into docs/reports. If a path/env var is needed, reference it by name (e.g., `GOOGLE_APPLICATION_CREDENTIALS`), never by value. See `.gitignore` for the excluded credential files.
-- Sensitive identifiers (customer IDs, property IDs, account IDs) are OK in reports if already in configs; do not invent or guess them.
+## Известные дефекты пайплайна (учитывать, пока не исправлены)
+- `integrations/google_clients/ga4_client.py` берёт 3 ключевых события без Email → сводный снапшот и `rules.py` недосчитывают.
+- Окно 28 дней в сводном снапшоте кончается вчера, а GSC ещё неполный → «падения» завышены на ~4–7 %; query-level CSV кончаются сегодня−3.
+- `analysis/rules.py`: striking distance по средней позиции страницы (4–15), плоский порог CTR 3 %, бренд не исключён, платный и органический трафик смешаны, confidence произвольный.
+- `snapshots/normalized/pages/page_inventory_v1.json` — от 2026-04-07 (54 страницы, без keimen и sausklaar); по нему сборщики `seo-refresh` сопоставляют URL и маршруты (у новых страниц mapping_confidence=low). `keyword_master` v2/v3 — апрель, с данными старого сайта. Поэтому без пересборки не опираться на `run_page_audit_v1.py`, `run_page_vs_query_gap_v1.py`, `run_keyword_intelligence_review_v2.py`.
+- `run_indexation_debug_v1.py` считает вердикт `NEUTRAL` проиндексированным; `run_query_intelligence_review_v1.py` читает несуществующие колонки.
+- В GSC встречаются мусорные запросы вида `sausklaar stucwerk voorstrijken;7;2;-5;90;…` — такими приходят из API; исключать.
 
----
-
-## 4. Behavioral deltas for analytical work
-
-The root `CLAUDE.md` already defines the four working principles (Think before coding, Simplicity first, Surgical changes, Goal-driven verification). **They apply in full here.** This section lists only the deltas specific to read-only analytical work in `seo-ops/`.
-
-**Think before analyzing**
-- Before touching data or configs, re-read the relevant contract in `contracts/` and the task's primary source listed in `README.md`.
-- A simpler path almost always exists: **existing snapshot → existing analyzer output → rebuild snapshot → new live API call**. Name the cheapest path that answers the question before picking a heavier one.
-- Do not conflate URL age, page-existence age, content-version age, and ranking-signal age. Surface which one matters for the claim.
-
-**Simplicity first**
-- No new analyzers, workflows, contracts, or config keys unless the task requires them. Extend existing artifacts before adding new ones.
-- Prefer existing artifacts over new live calls (cost, rate limits, reproducibility).
-
-**Surgical changes**
-- The root rule "every changed line traces to the request" extends to configs, contracts, templates, and snapshots — not just code.
-- Do not refactor existing contracts, report templates, or provenance schemes.
-
-**Goal-driven — restate as analytical goals**
-- "Проверь, почему /muren-stucen/ не получает SEO-трафик" → pull GSC 28d query+page data for the page, produce a `page_seo_diagnosis` with observations / interpretations / hypotheses separated, list prioritized manual actions.
-- "Сделай Ads review за последние 30 дней" → use existing Ads snapshot if fresh; otherwise declare staleness and stop or rebuild; produce `ppc_review` per `contracts/ppc_expert_playbook_v1.md`, respecting the ~10 EUR/day budget reality.
-- "Проверь claims из прошлого PPC review" → verification mode only; do not expand scope; re-check each claim against its cited source.
-
----
-
-## 5. Anti-overengineering (seo-ops specific)
-
-- Do **not** rebuild seo-ops architecture. Use existing workflows, analyzers, contracts, templates, validators, snapshots, and reports first.
-- Add a narrow mini-workflow **only** if there is a real operational need and nothing in `workflows/`, `analyzers/`, or `tools/` already covers it. Prefer extending an existing artifact over creating a new one.
-- Do not generalize from a single request into a framework. Single-use analysis stays single-use.
-- Do not invent new numeric-provenance schemes, evidence tiers, or report shapes — they are defined in `contracts/` (`numeric_provenance_v1.md`, `expert_rules_v1.md`, `final_report_rules_v1.md`).
-- Do not create new config keys unless the task's implementation requires a path that doesn't exist yet — and only then in the narrowest possible location.
-- Do not route around existing enforcement tools (`tools/run_preflight_check.py`, `tools/validate_report_provenance.py`, `tools/init_report_scaffold.py`) with ad-hoc logic.
-
----
-
-## 6. Report quality rules
-
-All decision-grade reports must separate:
-1. **Observations** — what the data shows (numeric, with provenance label).
-2. **Interpretations** — what the observations likely mean, with confidence (low / medium / high).
-3. **Hypotheses** — plausible explanations that need more evidence; labeled as hypotheses, not facts.
-4. **Recommended actions** — concrete manual steps for the user, ordered by priority.
-5. **Excluded / stale context** — legacy data ignored, stale artifacts, missing sources, and *why*.
-
-Additional requirements:
-- Every numeric claim carries a provenance label per `contracts/numeric_provenance_v1.md` (e.g. `[GSC, 28d, page-level]`, `[GA4, 28d, landing-page]`, `[Ads CSV, 30d, campaign]`).
-- Never present a hypothesis as a fact. Never conflate URL age, page-existence age, content-version age, and ranking-signal age.
-- Confidence must be explicit (low / medium / high) and must respect the preflight `confidence_cap` for the report mode (`preliminary` / `verified` / `enrichment_only`).
-- Do not re-recommend actions that are already implemented — check `data/decision_log_v1.csv` and `config/project_state_v1.yaml` first.
-- No fake certainty from low-volume PPC data. Budget is ~10 EUR/day; statistical significance is rarely available.
-- Use the existing templates in `templates/report_templates_v1.md` and `templates/export-file-naming.md`. Use `tools/init_report_scaffold.py` to start new reports.
-
----
-
-## 7. Verification and preflight expectations
-
-Before running any analytical workflow:
-1. **Preflight.** Run `python seo-ops/tools/run_preflight_check.py {workflow}` (or check freshness per `config/preflight_rules_v1.yaml`). If required artifacts are stale or missing, either rebuild them or stop and tell the user — do not silently analyze stale data.
-2. **Mode selection.** Pick `preliminary` / `verified` / `enrichment_only` per `preflight_rules_v1.yaml`. The confidence cap follows the mode.
-3. **Project state.** Check `config/project_state_v1.yaml` and `data/decision_log_v1.csv` for resolved issues and pending actions so recommendations do not repeat completed work.
-4. **Source manifests.** If citing official or external sources, use `config/official_sources_manifest_v1.yaml` and `config/external_sources_manifest_v1.yaml`.
-
-Before reporting a task done:
-- Report mode and confidence cap are declared.
-- All numeric claims carry provenance labels.
-- Observations / interpretations / hypotheses / recommendations / excluded context are separated.
-- Run `python seo-ops/tools/validate_report_provenance.py {report.md}` on any new markdown report.
-- No secrets, tokens, or raw credential paths leaked into report, chat, or git.
-- No unrelated files edited. No analyzer code changed unless explicitly requested.
-- Recommendations respect the read-only rule — they describe what the user should do manually.
-
-_Signals these rules are working: smaller diffs, fewer drive-by edits, clarifying questions asked up front, reports that are easy to audit because facts and hypotheses are visibly separated._
-
----
-
-## 8. When in doubt
-
-- Prefer the existing contract over a new interpretation.
-- Prefer the existing artifact over a new live call.
-- Prefer "I don't have sufficient evidence" over a plausible-sounding guess.
-- Ask the user. Narrow the scope.
+План исправлений — `reports/combined/seo_ops_system_audit_2026-09-04.md` (пункты о документах, удалённых 2026-09-29, неактуальны — они в git-теге `instructions-v1`) и `../docs/BACKLOG.md`.

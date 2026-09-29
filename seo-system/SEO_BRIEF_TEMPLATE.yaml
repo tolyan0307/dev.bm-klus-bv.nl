@@ -4,7 +4,7 @@
 #
 # This template only contains fields that DIFFERENTIATE pages.
 # Common rules (language, tone, claims restrictions, metadata limits)
-# live in GLOBAL_SEO_CONTENT_RULES.md — do not duplicate here.
+# live in .claude/rules/content-nl.md — do not duplicate here.
 
 # ── Page identity ───────────────────────────────────────────────────────────────
 
@@ -25,7 +25,7 @@ seo:
   pageGoal: ""                     # one sentence: what success looks like
 
 # ── Anti-cannibalization ────────────────────────────────────────────────────────
-# Reference: see §4 in GLOBAL_SEO_CONTENT_RULES.md for the full overlap map.
+# Reference: the overlap map is in .claude/rules/content-nl.md ("Одна страница — один интент").
 
 cannibalization:
   siblingPages: []                 # URLs of pages with overlapping topics

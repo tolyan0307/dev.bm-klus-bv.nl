@@ -2,9 +2,9 @@
 # This file encodes project-level facts that all analysis workflows
 # should account for when interpreting data and generating recommendations.
 #
-# READ by operator (Claude) and referenced in orchestrator rules.
-# Not consumed directly by Python scripts — serves as documented SSoT
-# for analysis interpretation guidelines.
+# Read by analyzers/pages/run_measurement_audit_v1.py.
+# For interpreting data use seo-ops/knowledge.md (change calendar, current facts) —
+# the notes and guardrails below date from 2026-04 and are partly outdated.
 
 # --- Site timeline ---
 site_cutover_date: "2026-03-08"           # Rebuilt Next.js site went live
@@ -24,8 +24,8 @@ analysis_mode_notes:
 
 # --- PPC context ---
 ppc:
-  budget_eur_per_day: 10
-  budget_eur_per_month_approx: 300
+  budget_eur_per_day: 13                # since 2026-07-20 (Ads v2); was 9-10 before
+  budget_eur_per_month_approx: 395
   budget_tier: low
   campaign_restructure_date: "2026-03-15"  # Google Ads campaign structure materially updated
   active_campaigns:
