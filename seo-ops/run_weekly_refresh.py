@@ -2,7 +2,8 @@
 run_weekly_refresh.py — the weekly data collection (skill seo-refresh) in one command.
 
 Steps, in order: page inventory -> combined GSC + GA4 snapshot (28 d) ->
-GSC query x page CSV (90 / 28 d) -> GA4 landing pages (90 / 28 d) ->
+GSC query x page CSV (90 / 28 d) -> index status (URL Inspection of every
+sitemap URL) -> GA4 landing pages (90 / 28 d) ->
 rule-based analysis report -> WP lead log (90 / 28 d) -> lead reconciliation
 (56 d) -> Google Ads (28 d). Each step is the standalone script, run as a
 subprocess with integrations/.env.local loaded and UTF-8 output forced; its
@@ -37,6 +38,7 @@ STEPS: list[tuple[str, str, list[str], bool]] = [
     ("Combined snapshot GSC + GA4, 28d", "integrations/run_combined_snapshot.py", [], True),
     ("GSC query x page, 90d", "analyzers/seo/build_gsc_query_page_snapshot.py", [], True),
     ("GSC query x page, 28d", "analyzers/seo/build_gsc_query_page_snapshot.py", ["--days", "28"], True),
+    ("Index status (URL Inspection)", "analyzers/seo/build_index_status.py", [], True),
     ("GA4 landing pages, 90d", "analyzers/pages/build_ga4_landing_page_snapshot.py", [], False),
     ("GA4 landing pages, 28d", "analyzers/pages/build_ga4_landing_page_snapshot.py", ["--days", "28"], False),
     ("Rules report", "analysis/run_analysis_report.py", [], False),

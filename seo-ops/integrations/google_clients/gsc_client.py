@@ -13,7 +13,14 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
 from .config import GscConfig
-from .definitions import GSC_LAG_DAYS, is_brand_query, normalize_page_url, require_interactive_auth
+from .definitions import (
+    GSC_LAG_DAYS,
+    deep_impressions_share,
+    is_brand_query,
+    like_for_like_position,
+    normalize_page_url,
+    require_interactive_auth,
+)
 
 SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 
@@ -173,7 +180,9 @@ def query_pages_comparison(
     Compare page performance: current period vs previous period.
     Both windows end GSC_LAG_DAYS ago so the current one is not cut short by
     unfinished data. URL variants with query strings are merged into their page.
-    Returns rows with current + previous metrics and deltas.
+    Returns rows with current + previous metrics and deltas, plus per page the
+    position on like-for-like queries and the share of impressions deeper than
+    DEEP_POSITION (both from query-level rows, i.e. without anonymised queries).
     """
     service = build_service(cfg)
 
@@ -199,8 +208,31 @@ def query_pages_comparison(
         )
         return _aggregate_pages(resp.get("rows", []))
 
+    def _fetch_queries(start_d: date, end_d: date) -> dict[str, dict[str, tuple[int, float]]]:
+        """{page: {query: (impressions, position)}}, URL variants merged."""
+        body = {
+            "startDate": start_d.isoformat(),
+            "endDate": end_d.isoformat(),
+            "dimensions": ["query", "page"],
+            "rowLimit": 25000,
+        }
+        resp = service.searchanalytics().query(siteUrl=cfg.site_url, body=body).execute()
+        acc: dict[str, dict[str, list[float]]] = {}
+        for r in resp.get("rows", []):
+            query, raw_page = r["keys"]
+            impr = r.get("impressions", 0)
+            a = acc.setdefault(normalize_page_url(raw_page), {}).setdefault(query, [0, 0.0])
+            a[0] += impr
+            a[1] += r.get("position", 0) * impr
+        return {
+            page: {q: (int(i), px / i) for q, (i, px) in queries.items() if i}
+            for page, queries in acc.items()
+        }
+
     current = _fetch(curr_start, curr_end)
     previous = _fetch(prev_start, prev_end)
+    current_q = _fetch_queries(curr_start, curr_end)
+    previous_q = _fetch_queries(prev_start, prev_end)
 
     # Merge
     all_pages = sorted(set(current) | set(previous))
@@ -222,6 +254,13 @@ def query_pages_comparison(
         }
         if variants:
             row["merged_variants"] = variants
+        lfl = like_for_like_position(previous_q.get(page, {}), current_q.get(page, {}))
+        if lfl:
+            row["like_for_like"] = lfl
+        row["deep_impressions_share"] = {
+            "current": deep_impressions_share(current_q.get(page, {})),
+            "previous": deep_impressions_share(previous_q.get(page, {})),
+        }
         merged.append(row)
 
     # Sort by current clicks descending

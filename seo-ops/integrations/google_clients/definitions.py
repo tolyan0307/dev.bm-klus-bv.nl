@@ -35,6 +35,11 @@ JUNK_SOURCE_RE = re.compile(r"127\.0\.0\.1|localhost|webhostingserver\.nl", re.I
 CANNIBAL_MIN_IMPRESSIONS = 10
 CANNIBAL_MAX_POSITION_GAP = 5
 
+# Impressions deeper than this position are mostly noise (rank trackers, random
+# long-tail queries): they pull a page's average position down without clicks.
+# Position changes are judged on like-for-like queries instead (seo-ops/CLAUDE.md).
+DEEP_POSITION = 50
+
 
 def load_key_event_names() -> list[str]:
     """Primary key events from config/conversions.yaml (fallback: the known four)."""
@@ -75,6 +80,36 @@ def is_cannibalization(page_stats: list[tuple[int, float]]) -> bool:
     """page_stats: (impressions, position) of each URL ranking for one query."""
     positions = sorted(pos for impr, pos in page_stats if impr > CANNIBAL_MIN_IMPRESSIONS)
     return any(b - a < CANNIBAL_MAX_POSITION_GAP for a, b in zip(positions, positions[1:]))
+
+
+def like_for_like_position(
+    previous: dict[str, tuple[int, float]], current: dict[str, tuple[int, float]]
+) -> dict | None:
+    """
+    A page's position on the queries it had in both windows ({query: (impressions,
+    position)}). Both windows are weighted by previous-window impressions, so the
+    result moves only when rankings move, not when the query mix changes.
+    None if the windows share no query.
+    """
+    shared = [q for q in current if q in previous and previous[q][0]]
+    if not shared:
+        return None
+    weight = sum(previous[q][0] for q in shared)
+    prev_pos = sum(previous[q][0] * previous[q][1] for q in shared) / weight
+    cur_pos = sum(previous[q][0] * current[q][1] for q in shared) / weight
+    return {
+        "queries": len(shared),
+        "previous_position": round(prev_pos, 1),
+        "current_position": round(cur_pos, 1),
+        "delta_position": round(cur_pos - prev_pos, 1),
+    }
+
+
+def deep_impressions_share(stats: dict[str, tuple[int, float]]) -> float:
+    """Share of a page's query-level impressions ranked deeper than DEEP_POSITION."""
+    total = sum(impr for impr, _ in stats.values())
+    deep = sum(impr for impr, pos in stats.values() if pos > DEEP_POSITION)
+    return round(deep / total, 3) if total else 0.0
 
 
 def normalize_page_url(url: str) -> str:

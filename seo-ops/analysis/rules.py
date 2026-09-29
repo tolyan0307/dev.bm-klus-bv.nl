@@ -27,8 +27,9 @@ MIN_IMPR_SNIPPET = 100          # impressions before judging CTR (page or query)
 SNIPPET_MAX_POSITION = 20.0     # beyond this, low CTR is a ranking problem, not a snippet problem
 LOW_CTR = 0.01                  # "low" CTR at position <= 20
 RELEVANCE_MIN_IMPR = 500        # many impressions at position > 20 -> relevance / intent problem
-POSITION_DROP = 2.0             # average position worse by at least this ...
+POSITION_DROP = 2.0             # position worse by at least this ...
 POSITION_DROP_MIN_IMPR = 300    # ... on a page with at least this many impressions
+LFL_MIN_QUERIES = 5             # like-for-like position needs this many shared queries, else the page average
 MIN_EXPECTED_KEY_EVENTS = 3.0   # CRO: zero events is a signal only if >= 3 were expected at the site rate
 CLUSTER_LOW_IMPR = 10
 DEFAULT_KEY_EVENTS = ["Contact_Form_Site", "Phone", "Whatsapp", "Email"]
@@ -173,15 +174,28 @@ def seo_risks(snapshot: dict) -> list[dict]:
                 category="SEO",
             ))
 
+        # Judge ranking changes on like-for-like queries: the page average also moves
+        # when deep, click-less impressions come and go (seo-ops/CLAUDE.md).
         cur_pos, prev_pos = cur.get("position", 0), prev.get("position", 0)
         cur_impr = cur.get("impressions", 0)
-        if cur_impr >= POSITION_DROP_MIN_IMPR and cur_pos > 0 and prev_pos > 0 and cur_pos - prev_pos >= POSITION_DROP:
+        lfl = row.get("like_for_like")
+        deep = row.get("deep_impressions_share", {})
+        if lfl and lfl["queries"] >= LFL_MIN_QUERIES:
+            drop = lfl["delta_position"]
+            basis = f"Like-for-like position ({lfl['queries']} queries) {lfl['previous_position']:.1f} → {lfl['current_position']:.1f}"
+        else:
+            drop = cur_pos - prev_pos if cur_pos > 0 and prev_pos > 0 else 0
+            basis = f"Average position {prev_pos:.1f} → {cur_pos:.1f} (too few shared queries for like-for-like)"
+        if cur_impr >= POSITION_DROP_MIN_IMPR and drop >= POSITION_DROP:
             findings.append(_finding(
                 page=path,
                 query=None,
-                signal=f"Average position {prev_pos:.1f} → {cur_pos:.1f} (higher is worse) on {cur_impr} impressions",
-                why="Ranking got worse on a page with meaningful visibility; new low-ranking queries can also pull the average down",
-                confidence="medium" if cur_impr >= 600 else "low",
+                signal=(
+                    f"{basis} (higher is worse) on {cur_impr} impressions; page average {prev_pos:.1f} → {cur_pos:.1f}, "
+                    f"impressions deeper than 50: {deep.get('previous', 0):.0%} → {deep.get('current', 0):.0%}"
+                ),
+                why="Rankings got worse on the same queries on a page with meaningful visibility",
+                confidence="medium" if cur_impr >= 600 and lfl else "low",
                 action="Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
                 category="SEO",
             ))

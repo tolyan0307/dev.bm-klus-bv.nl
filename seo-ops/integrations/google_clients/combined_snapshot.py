@@ -29,6 +29,7 @@ def collect_snapshot() -> dict:
             "gsc_windows_end": f"today - {GSC_LAG_DAYS} days (final GSC data)",
             "ga4_windows_end": "yesterday",
             "gsc_pages": "URL variants with query strings (e.g. the GBP ?utm_ link to /) are merged into their page; see merged_variants",
+            "gsc_like_for_like": "gsc_page_comparison rows: like_for_like = position on queries present in both windows, both weighted by previous-window impressions (judge ranking changes on this, not on the page average); deep_impressions_share = share of query-level impressions deeper than position 50",
             "key_events": ga4_client.KEY_EVENT_NAMES,
         },
     }
