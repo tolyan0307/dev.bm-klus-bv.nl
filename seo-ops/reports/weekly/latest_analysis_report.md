@@ -1,8 +1,8 @@
 # SEO / Analytics Analysis Report
 
-Generated: 2026-09-29T20:04:41.836347+00:00
+Generated: 2026-09-29T20:53:04.053151+00:00
 Site: https://bm-klus-bv.nl/
-Snapshot from: 2026-09-29T20:04:30.764360Z
+Snapshot from: 2026-09-29T20:52:54.716736Z
 GSC window: 2026-08-30 → 2026-09-26 (final data)
 
 Rule findings are leads to verify, not conclusions (seo-ops/CLAUDE.md).

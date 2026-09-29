@@ -1,6 +1,6 @@
-# GSC Query/Page Snapshot Summary (last 90 days)
+# GSC Query/Page Snapshot Summary (last 28 days)
 
-**Generated:** 2026-09-29 20:05 UTC
+**Generated:** 2026-09-29 20:54 UTC
 **Date range:** 2026-08-30 to 2026-09-26
 **Site:** https://bm-klus-bv.nl/
 
@@ -10,9 +10,9 @@
 
 | Metric | Count |
 |--------|-------|
-| Total query-page rows | 401 |
+| Total query-page rows | 391 |
 | Unique queries | 323 |
-| Unique pages | 26 |
+| Unique pages | 25 |
 | Total clicks (all rows) | 26 |
 | Total impressions (all rows) | 6590 |
 
@@ -22,7 +22,7 @@
 
 | Query | Clicks | Impressions | CTR | Best Pos | Pages |
 |-------|--------|-------------|-----|----------|-------|
-| bm klus bv | 23 | 493 | 0.0467 | 1.8 | 13 |
+| bm klus bv | 23 | 493 | 0.0467 | 1.8 | 12 |
 | buitengevel isoleren en stucen prijs | 1 | 36 | 0.0278 | 9.6 | 1 |
 | crepi stuc | 1 | 2 | 0.5000 | 4.0 | 1 |
 | etics gevelisolatie | 1 | 5 | 0.2000 | 7.0 | 1 |
@@ -35,9 +35,9 @@
 | afdekfolie bouw | 0 | 1 | 0.0000 | 12.0 | 1 |
 | b m | 0 | 1 | 0.0000 | 2.0 | 1 |
 | b&m nederland | 0 | 1 | 0.0000 | 2.0 | 1 |
-| b+m | 0 | 3 | 0.0000 | 1.0 | 2 |
+| b+m | 0 | 3 | 0.0000 | 1.3 | 1 |
 | b. m. | 0 | 1 | 0.0000 | 6.0 | 1 |
-| b.m | 0 | 2 | 0.0000 | 3.0 | 2 |
+| b.m | 0 | 2 | 0.0000 | 5.0 | 1 |
 | badkamer stucen | 0 | 1 | 0.0000 | 100.0 | 1 |
 | behangklaar | 0 | 66 | 0.0000 | 70.4 | 2 |
 | behangklaar en sausklaar | 0 | 23 | 0.0000 | 14.0 | 2 |
@@ -74,8 +74,7 @@
 
 | Page | Clicks | Impressions | CTR | Avg Pos | Queries | Type |
 |------|--------|-------------|-----|---------|---------|------|
-| / | 14 | 275 | 0.0509 | 7.3 | 37 | home |
-| / | 6 | 226 | 0.0265 | 39.5 | 45 | home |
+| / | 20 | 501 | 0.0399 | 21.8 | 72 | home |
 | /over-ons/ | 2 | 69 | 0.0290 | 2.9 | 2 | utility |
 | /onze-werken/ | 1 | 113 | 0.0089 | 12.6 | 6 | archive |
 | /buiten-stucwerk/ | 1 | 198 | 0.0051 | 19.0 | 35 | service |
@@ -94,6 +93,7 @@
 | /gevel-schilderen/ | 0 | 1518 | 0.0000 | 42.5 | 51 | service |
 | /gevelisolatie/subsidie-vergunning/ | 0 | 4 | 0.0000 | 13.0 | 1 | cluster |
 | /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 0 | 1 | 0.0000 | 10.0 | 1 | project |
+| /gevelisolatie/vlaardingen/ | 0 | 1 | 0.0000 | 19.0 | 1 | city |
 
 ## Top pages by impressions
 
@@ -102,9 +102,8 @@
 | /gevel-schilderen/keimen/ | 1629 | 0 | 0.0000 | 19.2 | 44 |
 | /gevel-schilderen/ | 1518 | 0 | 0.0000 | 42.5 | 51 |
 | /muren-stucen/ | 1451 | 0 | 0.0000 | 33.2 | 49 |
+| / | 501 | 20 | 0.0399 | 21.8 | 72 |
 | /muren-stucen/sausklaar-behangklaar/ | 318 | 0 | 0.0000 | 45.7 | 35 |
-| / | 275 | 14 | 0.0509 | 7.3 | 37 |
-| / | 226 | 6 | 0.0265 | 39.5 | 45 |
 | /buiten-stucwerk/ | 198 | 1 | 0.0051 | 19.0 | 35 |
 | /gevelisolatie/delft/ | 128 | 0 | 0.0000 | 33.0 | 6 |
 | /onze-werken/ | 113 | 1 | 0.0089 | 12.6 | 6 |
@@ -119,15 +118,13 @@
 | /gevelisolatie/kosten/ | 38 | 0 | 0.0000 | 26.2 | 10 |
 | /onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/ | 37 | 0 | 0.0000 | 62.7 | 5 |
 | /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 36 | 0 | 0.0000 | 19.9 | 2 |
+| /gevelisolatie/dordrecht/ | 6 | 0 | 0.0000 | 37.8 | 2 |
 
 ---
 
-## Likely cannibalization candidates (2 queries on 3+ pages)
+## Cannibalization candidates (0 non-brand queries: 2+ URLs with >10 impressions, positions <5 apart)
 
-| Query | Impressions | Clicks | Pages |
-|-------|-------------|--------|-------|
-| bm klus bv | 493 | 23 | 13 |
-| gevel sierpleister | 53 | 0 | 4 |
+No cannibalization candidates.
 
 ## Low-CTR / high-impression opportunities (24 queries)
 
@@ -147,7 +144,7 @@ Queries in striking distance (position 4-15) with CTR < 5% and 20+ impressions.
 | wat kost keimen | 120 | 0 | 0.0000 | 8.6 | prijs_kosten |
 | gevel keimen of schilderen | 119 | 0 | 0.0000 | 11.7 | stuc_crepi |
 | keimen prijs per m2 | 118 | 0 | 0.0000 | 11.1 | prijs_kosten |
-| gevelrenovatie met folie in rotterdam | 96 | 0 | 0.0000 | 10.3 | other |
+| gevelrenovatie met folie in rotterdam | 96 | 0 | 0.0000 | 10.8 | other |
 | gevel sierpleister | 53 | 0 | 0.0000 | 5.5 | stuc_crepi |
 | keimen of schilderen | 51 | 0 | 0.0000 | 12.3 | stuc_crepi |
 | keimwerk gevel | 47 | 0 | 0.0000 | 13.3 | other |
@@ -184,12 +181,12 @@ Queries in striking distance (position 4-15) with CTR < 5% and 20+ impressions.
 ## Limitations (v1)
 
 1. **Dimensions:** query + page only; no device or country breakdown
-2. **Date range:** last 90 days (minus 3-day GSC lag)
+2. **Date range:** last 28 days (minus 3-day GSC lag)
 3. **Row limit:** GSC API returns max 25,000 rows per request; pagination used
 4. **Sampling:** GSC data is sampled for properties with high traffic
 5. **Theme/intent classifiers:** simple keyword-pattern rules, not ML
-6. **Cannibalization:** defined as 3+ pages for same query; may include false positives
-7. **Page mapping:** based on page_inventory route index; external URLs not mapped
+6. **Cannibalization:** 2+ URLs with more than 10 impressions each for the same query and positions less than 5 apart (seo-ops/CLAUDE.md), brand queries excluded; shared queries alone are overlap
+7. **Page mapping:** based on page_inventory route index; external URLs not mapped; URL variants with a query string (GBP UTM link) are merged into their page
 8. **No comparison period:** this is a single snapshot; no period-over-period delta
 
 ---
@@ -198,8 +195,8 @@ Queries in striking distance (position 4-15) with CTR < 5% and 20+ impressions.
 
 | File | Path |
 |------|------|
-| Raw JSON | `seo-ops/snapshots/raw/gsc/gsc_query_page_last90d_raw.json` |
-| Row-level CSV | `seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv` |
-| Aggregated queries | `seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv` |
-| Aggregated pages | `seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv` |
-| Summary (this file) | `seo-ops/reports/seo/gsc_query_page_snapshot_last90d.md` |
+| Raw JSON | `seo-ops/snapshots/raw/gsc/gsc_query_page_last28d_raw.json` |
+| Row-level CSV | `seo-ops/snapshots/normalized/seo/gsc_query_page_last28d.csv` |
+| Aggregated queries | `seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last28d.csv` |
+| Aggregated pages | `seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last28d.csv` |
+| Summary (this file) | `seo-ops/reports/seo/gsc_query_page_snapshot_last28d.md` |
