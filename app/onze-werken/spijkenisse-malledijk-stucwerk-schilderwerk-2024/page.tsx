@@ -9,6 +9,7 @@ import WerkzaamhedenAccordion from "@/components/sections/projects/Werkzaamheden
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import { getFallbackSrc } from "@/lib/responsive-image"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -123,7 +124,7 @@ export default function SpijkenisseProjectPage() {
         description:
           "Project in Spijkenisse (Malledijk): renovatie van binnenwanden met stucwerk, extra plamuur en schilderafwerking in RAL 9001.",
         url: `${SITE.canonicalBase}/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/`,
-        image: "/images/projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024/spijkenisse-malledijk-stucwerk-schilderwerk-2024-na-01.webp",
+        image: getFallbackSrc("spijkenisse-malledijk-stucwerk-schilderwerk-2024-na-01", "/images/projects/spijkenisse-malledijk-stucwerk-schilderwerk-2024", "hero"),
         city: "Spijkenisse",
         year: 2024,
         serviceTypes: ["Muren stucen"],

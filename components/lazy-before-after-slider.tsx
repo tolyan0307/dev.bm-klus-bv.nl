@@ -1,14 +1,14 @@
 "use client"
 
 import { useRef, useState, useEffect } from "react"
-import ResponsiveImage from "@/components/responsive-image"
+import ClientImage from "@/components/client-image"
+import type { ResolvedImage } from "@/lib/types/images"
 
 interface LazyBeforeAfterSliderProps {
-  beforeBaseName: string
-  afterBaseName: string
+  before: ResolvedImage
+  after: ResolvedImage
   beforeAlt: string
   afterAlt: string
-  dir?: string
   sizes?: string
   className?: string
 }
@@ -17,9 +17,8 @@ export default function LazyBeforeAfterSlider(
   props: LazyBeforeAfterSliderProps,
 ) {
   const {
-    afterBaseName,
+    after,
     afterAlt,
-    dir = "/images/projects",
     sizes = "(max-width: 640px) 100vw, 360px",
     className,
   } = props
@@ -56,10 +55,8 @@ export default function LazyBeforeAfterSlider(
       ) : (
         /* Static placeholder — same dimensions, no JS cost */
         <div className="relative h-full w-full overflow-hidden">
-          <ResponsiveImage
-            baseName={afterBaseName}
-            dir={dir}
-            preset="card"
+          <ClientImage
+            image={after}
             alt={afterAlt}
             sizes={sizes}
             className="h-full w-full object-cover"

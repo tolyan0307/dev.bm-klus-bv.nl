@@ -20,6 +20,7 @@ import TrustStrip from "@/components/trust-strip"
 import FaqAccordion from "@/components/page/FaqAccordion"
 import { ProjectsSection } from "@/components/projects/ProjectsSection"
 import { projects } from "@/lib/content/projects"
+import { resolveProjectCards } from "@/lib/gallery-utils"
 import GoogleRatingBadge from "@/components/google-rating-badge"
 
 const StickyCTABar = dynamic(
@@ -301,7 +302,7 @@ export default function OnzeWerkenPage() {
               <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
                 Voorbeelden van buitengevel renovatie, afwerking en schilderwerk.
               </p>
-              <ProjectsSection projects={projects} />
+              <ProjectsSection projects={resolveProjectCards(projects)} />
             </section>
             </div>
 

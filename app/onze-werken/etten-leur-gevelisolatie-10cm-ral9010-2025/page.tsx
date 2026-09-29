@@ -9,6 +9,7 @@ import WerkzaamhedenAccordion from "@/components/sections/projects/Werkzaamheden
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/etten-leur-gevelisolatie-10cm-ral9010-2025"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import { getFallbackSrc } from "@/lib/responsive-image"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -129,7 +130,7 @@ export default function EttenLeurProjectPage() {
         description:
           "Project in Etten-Leur: 10 cm Strikolith gevelisolatie, sierpleister, gevelverf RAL 9010, bitumen sokkel en vernieuwde geveldetails.",
         url: `${SITE.canonicalBase}/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/`,
-        image: "/images/projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-01.webp",
+        image: getFallbackSrc("etten-leur-gevelisolatie-10cm-ral9010-2025-na-01", "/images/projects/etten-leur-gevelisolatie-10cm-ral9010-2025", "hero"),
         city: "Etten-Leur",
         year: 2025,
         serviceTypes: ["Gevelisolatie", "Sierpleister", "Gevel schilderen"],

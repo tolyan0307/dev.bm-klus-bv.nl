@@ -9,6 +9,7 @@ import WerkzaamhedenAccordion from "@/components/sections/projects/Werkzaamheden
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/hendrik-ido-ambacht-gevelrenovatie-2024"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import { getFallbackSrc } from "@/lib/responsive-image"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -128,7 +129,7 @@ export default function HendrikIdoAmbachtProjectPage() {
         description:
           "Project in Hendrik-Ido-Ambacht: complete gevelrenovatie met buitenstucwerk, schilderwerk, bitumen plintbescherming en renovatie van houten geveldelen.",
         url: `${SITE.canonicalBase}/onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/`,
-        image: "/images/projects/hendrik-ido-ambacht-gevelrenovatie-2024/hendrik-ido-ambacht-gevelrenovatie-2024-na-01.webp",
+        image: getFallbackSrc("hendrik-ido-ambacht-gevelrenovatie-2024-na-01", "/images/projects/hendrik-ido-ambacht-gevelrenovatie-2024", "hero"),
         city: "Hendrik-Ido-Ambacht",
         year: 2024,
         serviceTypes: ["Buiten-stucwerk", "Gevel schilderen"],

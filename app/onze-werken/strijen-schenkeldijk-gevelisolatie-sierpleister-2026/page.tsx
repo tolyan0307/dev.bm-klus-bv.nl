@@ -9,6 +9,7 @@ import WerkzaamhedenAccordion from "@/components/sections/projects/Werkzaamheden
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import { getFallbackSrc } from "@/lib/responsive-image"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -137,7 +138,7 @@ export default function StrijenSchenkeldijkProjectPage() {
         description:
           "Gevelrenovatie in Strijen aan de Schenkeldijk met 6 cm isolatie, GW-Plus, witte sierpleister 1,5 mm, nieuwe raamdorpels en dakrandafwerking.",
         url: `${SITE.canonicalBase}/onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/`,
-        image: "/images/projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-01.webp",
+        image: getFallbackSrc("strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-01", "/images/projects/strijen-schenkeldijk-gevelisolatie-sierpleister-2026", "hero"),
         city: "Strijen (Schenkeldijk)",
         year: 2026,
         serviceTypes: ["Gevelisolatie", "Sierpleister", "Buiten-stucwerk"],

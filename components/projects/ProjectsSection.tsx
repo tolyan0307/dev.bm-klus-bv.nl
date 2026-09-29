@@ -1,11 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import type { ProjectCard } from "@/lib/types/projects"
+import type { ResolvedProjectCard } from "@/lib/types/projects"
 import { ProjectsGrid } from "./ProjectsGrid"
 
 interface ProjectsSectionProps {
-  projects: ProjectCard[]
+  projects: ResolvedProjectCard[]
 }
 
 export function ProjectsSection({ projects }: ProjectsSectionProps) {

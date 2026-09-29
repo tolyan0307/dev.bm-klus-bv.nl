@@ -39,6 +39,7 @@ import GoogleRatingBadge from "@/components/google-rating-badge"
 import ResponsiveImage from "@/components/responsive-image"
 import { projects } from "@/lib/content/projects"
 import { ProjectCard as ProjectCardComponent } from "@/components/projects/ProjectCard"
+import { resolveProjectCards } from "@/lib/gallery-utils"
 
 const StickyCTABar = dynamic(
   () => import("@/components/sections/gevelisolatie/sticky-cta-bar"),
@@ -82,9 +83,11 @@ const featuredSlugs = [
   "nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025",
   "dordrecht-gevelisolatie-10cm-sierpleister-2025",
 ]
-const featuredProjects = featuredSlugs
-  .map((s) => projects.find((p) => p.slug === s))
-  .filter(Boolean) as typeof projects
+const featuredProjects = resolveProjectCards(
+  featuredSlugs
+    .map((s) => projects.find((p) => p.slug === s))
+    .filter(Boolean) as typeof projects,
+)
 
 interface FinishOption {
   icon: React.ReactNode

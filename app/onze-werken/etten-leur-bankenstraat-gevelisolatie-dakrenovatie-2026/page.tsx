@@ -9,6 +9,7 @@ import WerkzaamhedenAccordion from "@/components/sections/projects/Werkzaamheden
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import { getFallbackSrc } from "@/lib/responsive-image"
 import YouTubeEmbed from "@/components/youtube-embed"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
@@ -137,7 +138,7 @@ export default function EttenLeurBankenstraatProjectPage() {
         description:
           "Project in Etten-Leur met gevelisolatie, witte sierpleister, natuurstenen plint en raamdorpels en een dakrenovatie met zwarte Koramic dakpannen.",
         url: `${SITE.canonicalBase}/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/`,
-        image: "/images/projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-na-01.webp",
+        image: getFallbackSrc("etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026-na-01", "/images/projects/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026", "hero"),
         city: "Etten-Leur (Bankenstraat)",
         year: 2026,
         serviceTypes: ["Gevelisolatie", "Sierpleister"],

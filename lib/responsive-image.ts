@@ -1,4 +1,6 @@
+import "server-only"
 import manifest from "@/data/image-manifest.json"
+import type { ResolvedImage } from "@/lib/types/images"
 
 export type ImagePreset = "hero" | "card" | "serviceCard" | "gallery" | "thumbnail"
 
@@ -85,4 +87,19 @@ export function getOriginalDimensions(
   const entry = entries[key]
   if (!entry) return undefined
   return { width: entry.originalWidth, height: entry.originalHeight }
+}
+
+/** Same src/srcSet/width/height as ResponsiveImage, as props for <ClientImage> in client components. */
+export function resolveImage(
+  baseName: string,
+  dir: string,
+  preset: ImagePreset,
+): ResolvedImage {
+  const dims = getOriginalDimensions(baseName, dir)
+  return {
+    src: getFallbackSrc(baseName, dir, preset),
+    srcSet: buildSrcSet(baseName, dir, preset),
+    width: dims?.width,
+    height: dims?.height,
+  }
 }

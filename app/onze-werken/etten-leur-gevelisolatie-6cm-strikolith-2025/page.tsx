@@ -9,6 +9,7 @@ import WerkzaamhedenAccordion from "@/components/sections/projects/Werkzaamheden
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/etten-leur-gevelisolatie-6cm-strikolith-2025"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import { getFallbackSrc } from "@/lib/responsive-image"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -127,7 +128,7 @@ export default function EttenLeur6cmProjectPage() {
         description:
           "Project in Etten-Leur: 6 cm Strikolith gevelisolatie, GW-Plus, sierpleister 1,5 mm en profielafwerking rond ramen, deuren en sokkel.",
         url: `${SITE.canonicalBase}/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/`,
-        image: "/images/projects/etten-leur-gevelisolatie-6cm-strikolith-2025/etten-leur-gevelisolatie-6cm-strikolith-2025-na-01.webp",
+        image: getFallbackSrc("etten-leur-gevelisolatie-6cm-strikolith-2025-na-01", "/images/projects/etten-leur-gevelisolatie-6cm-strikolith-2025", "hero"),
         city: "Etten-Leur",
         year: 2025,
         serviceTypes: ["Gevelisolatie", "Sierpleister"],

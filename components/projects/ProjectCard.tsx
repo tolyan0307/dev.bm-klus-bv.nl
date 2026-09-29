@@ -1,17 +1,15 @@
 import Link from "next/link"
-import ResponsiveImage from "@/components/responsive-image"
-import type { ProjectCard } from "@/lib/types/projects"
+import ClientImage from "@/components/client-image"
+import type { ResolvedProjectCard } from "@/lib/types/projects"
 
-function srcToBaseName(src: string): string {
-  return src.replace(/^\/images\/projects\//, "").replace(/\.\w+$/, "")
-}
-
+// Rendered inside the client ProjectsSection too, so images come resolved
+// (resolveProjectCards) instead of through ResponsiveImage and the manifest.
 interface ProjectCardProps {
-  project: ProjectCard
+  project: ResolvedProjectCard
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { serviceType, serviceTypes, title, meta, cardAlt, coverImage, beforeThumb, projectUrl } =
+  const { serviceType, serviceTypes, title, meta, cardAlt, coverImage, beforeThumb, projectUrl, resolved } =
     project
 
   const secondaryChips = serviceTypes.filter((s) => s !== serviceType)
@@ -25,14 +23,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       {/* Media */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted/60">
-        <ResponsiveImage
-          baseName={srcToBaseName(coverImage.src)}
-          dir="/images/projects"
-          preset="card"
+        <ClientImage
+          image={resolved.cover}
           alt={coverImage.alt}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          priority
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
         <div className="absolute left-3 top-3">
@@ -47,13 +42,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </span>
           </div>
         )}
-        {beforeThumb && (
+        {beforeThumb && resolved.beforeThumb && (
           <div className="absolute bottom-3 left-3 overflow-hidden rounded-md border-2 border-white/70 shadow-md">
             <div className="relative h-14 w-14">
-              <ResponsiveImage
-                baseName={srcToBaseName(beforeThumb.src)}
-                dir="/images/projects"
-                preset="thumbnail"
+              <ClientImage
+                image={resolved.beforeThumb}
                 alt={beforeThumb.alt}
                 sizes="56px"
                 className="absolute inset-0 h-full w-full object-cover"

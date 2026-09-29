@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import ResponsiveImage from "@/components/responsive-image"
+import { resolveImage } from "@/lib/responsive-image"
 import {
   ArrowRight,
   MapPin,
@@ -635,8 +636,8 @@ export default async function GevelisolatieLocationPage({
                       {/* Before / After slider */}
                       <div className="aspect-4/3 sm:aspect-auto sm:h-full">
                         <LazyBeforeAfterSlider
-                          beforeBaseName="dordrecht-gevelisolatie-10cm-voor-01"
-                          afterBaseName="dordrecht-gevelisolatie-10cm-na-01"
+                          before={resolveImage("dordrecht-gevelisolatie-10cm-voor-01", "/images/projects", "card")}
+                          after={resolveImage("dordrecht-gevelisolatie-10cm-na-01", "/images/projects", "card")}
                           beforeAlt="Dordrecht gevelisolatie – voor de werken"
                           afterAlt="Dordrecht gevelisolatie – na de werken"
                           sizes="(max-width: 640px) 100vw, 360px"
@@ -697,8 +698,8 @@ export default async function GevelisolatieLocationPage({
                       {/* Before / After slider */}
                       <div className="aspect-4/3 sm:aspect-auto sm:h-full">
                         <LazyBeforeAfterSlider
-                          beforeBaseName="vlaardingen-gevelisolatie-6cm-voor-01"
-                          afterBaseName="vlaardingen-gevelisolatie-6cm-na-01"
+                          before={resolveImage("vlaardingen-gevelisolatie-6cm-voor-01", "/images/projects", "card")}
+                          after={resolveImage("vlaardingen-gevelisolatie-6cm-na-01", "/images/projects", "card")}
                           beforeAlt="Vlaardingen gevelisolatie – voor de werken"
                           afterAlt="Vlaardingen gevelisolatie – na de werken"
                           sizes="(max-width: 640px) 100vw, 360px"
@@ -759,11 +760,10 @@ export default async function GevelisolatieLocationPage({
                       {/* Before / After slider */}
                       <div className="aspect-4/3 sm:aspect-auto sm:h-full">
                         <LazyBeforeAfterSlider
-                          beforeBaseName="rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-01"
-                          afterBaseName="rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01"
+                          before={resolveImage("rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-voor-01", "/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026", "card")}
+                          after={resolveImage("rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01", "/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026", "card")}
                           beforeAlt="Rotterdam Julianastraat aanbouw isolatie – voor de werken"
                           afterAlt="Rotterdam Julianastraat aanbouw isolatie – na de werken"
-                          dir="/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026"
                           sizes="(max-width: 640px) 100vw, 360px"
                           className="h-full w-full"
                         />

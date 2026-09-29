@@ -1,24 +1,23 @@
 "use client"
 
 import { useRef, useState, useCallback } from "react"
-import ResponsiveImage from "@/components/responsive-image"
+import ClientImage from "@/components/client-image"
+import type { ResolvedImage } from "@/lib/types/images"
 
 interface BeforeAfterSliderProps {
-  beforeBaseName: string
-  afterBaseName: string
+  before: ResolvedImage
+  after: ResolvedImage
   beforeAlt: string
   afterAlt: string
-  dir?: string
   sizes?: string
   className?: string
 }
 
 export default function BeforeAfterSlider({
-  beforeBaseName,
-  afterBaseName,
+  before,
+  after,
   beforeAlt,
   afterAlt,
-  dir = "/images/projects",
   sizes = "(max-width: 640px) 100vw, 360px",
   className,
 }: BeforeAfterSliderProps) {
@@ -76,10 +75,8 @@ export default function BeforeAfterSlider({
       style={{ touchAction: "pan-y" }}
     >
       {/* After (base layer) */}
-      <ResponsiveImage
-        baseName={afterBaseName}
-        dir={dir}
-        preset="card"
+      <ClientImage
+        image={after}
         alt={afterAlt}
         sizes={sizes}
         className="h-full w-full object-cover"
@@ -91,10 +88,8 @@ export default function BeforeAfterSlider({
         className="absolute inset-0"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
       >
-        <ResponsiveImage
-          baseName={beforeBaseName}
-          dir={dir}
-          preset="card"
+        <ClientImage
+          image={before}
           alt={beforeAlt}
           sizes={sizes}
           className="h-full w-full object-cover"

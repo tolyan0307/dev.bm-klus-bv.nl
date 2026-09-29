@@ -1,3 +1,4 @@
+import PriorityImage from "@/components/priority-image"
 import {
   buildSrcSet,
   getFallbackSrc,
@@ -40,6 +41,19 @@ export default function ResponsiveImage({
       w = w ?? dims.width
       h = h ?? dims.height
     }
+  }
+
+  // Same <img>, rendered through a client component: see components/priority-image.tsx
+  if (priority) {
+    return (
+      <PriorityImage
+        image={{ src, srcSet, width: w, height: h }}
+        alt={alt}
+        sizes={sizes}
+        className={className}
+        {...rest}
+      />
+    )
   }
 
   return (

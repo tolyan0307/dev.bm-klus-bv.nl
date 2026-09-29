@@ -9,6 +9,7 @@ import WerkzaamhedenAccordion from "@/components/sections/projects/Werkzaamheden
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import { getFallbackSrc } from "@/lib/responsive-image"
 import YouTubeEmbed from "@/components/youtube-embed"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
@@ -129,7 +130,7 @@ export default function RotterdamJulianastraatProjectPage() {
         description:
           "Project in Rotterdam Julianastraat: aanbouw met 4 cm isolatie, sierpleister 1,5 mm, bitumen op de plint en antraciet plintafwerking.",
         url: `${SITE.canonicalBase}/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/`,
-        image: "/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01.webp",
+        image: getFallbackSrc("rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01", "/images/projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026", "hero"),
         city: "Rotterdam Julianastraat",
         year: 2026,
         serviceTypes: ["Gevelisolatie", "Sierpleister"],

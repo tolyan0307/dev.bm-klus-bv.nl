@@ -9,6 +9,7 @@ import WerkzaamhedenAccordion from "@/components/sections/projects/Werkzaamheden
 import ResponsiveImage from "@/components/responsive-image"
 import { beforeImages, afterImages } from "@/lib/content/projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026"
 import { resolveGalleryImages } from "@/lib/gallery-utils"
+import { getFallbackSrc } from "@/lib/responsive-image"
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata = buildPageMetadata(
@@ -136,7 +137,7 @@ export default function DelftWillemstraatProjectPage() {
         description:
           "Gevelrenovatie in Delft Willemstraat met pleisterherstel, dubbele wapening, schilderwerk in RAL 9001, nieuwe raamdorpels en Keralit.",
         url: `${SITE.canonicalBase}/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/`,
-        image: "/images/projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026/delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-01.webp",
+        image: getFallbackSrc("delft-willemstraat-gevelrenovatie-schilderwerk-2026-na-01", "/images/projects/delft-willemstraat-gevelrenovatie-schilderwerk-2026", "hero"),
         city: "Delft (Willemstraat)",
         year: 2026,
         serviceTypes: ["Buiten-stucwerk", "Gevel schilderen"],

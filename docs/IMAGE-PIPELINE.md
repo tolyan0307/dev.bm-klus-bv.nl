@@ -1,6 +1,6 @@
 # Изображения: пайплайн и процедуры
 
-Единый документ по изображениям сайта (2026-09-29, объединяет прежние IMAGE-PIPELINE.md и IMAGE-WORKFLOW-SOP.md). Источник истины — код: `scripts/generate-variants.mjs`, `lib/responsive-image.ts`, `components/responsive-image.tsx`, `lib/gallery-utils.ts`. Если документ расходится с кодом, прав код, а документ нужно поправить.
+Единый документ по изображениям сайта (2026-09-29, объединяет прежние IMAGE-PIPELINE.md и IMAGE-WORKFLOW-SOP.md). Источник истины — код: `scripts/generate-variants.mjs`, `lib/responsive-image.ts`, `components/responsive-image.tsx`, `components/client-image.tsx`, `lib/gallery-utils.ts`. Если документ расходится с кодом, прав код, а документ нужно поправить.
 
 ## 1. Как устроено
 
@@ -10,13 +10,15 @@ source-images/<путь>/<имя>.jpg              оригинал; папки 
 public/images/<путь>/<имя>.w<ширина>.webp    варианты WebP (в git)
 data/image-manifest.json                     "<путь>/<имя>" → originalWidth, originalHeight, aspectRatio, variants (в git)
   → <ResponsiveImage baseName dir preset sizes alt>  →  <img src srcset sizes width height>
+  → в клиентском компоненте: resolveImage() в серверном родителе → пропс → <ClientImage image sizes alt>
 ```
 
 - Всё считается локально до коммита; при сборке и на сервере изображения не обрабатываются.
 - Скрипт принимает файл или папку (папку обходит рекурсивно), пишет варианты в `public/images/` по тому же относительному пути и дописывает манифест. Ключ манифеста — путь исходника от `source-images/` без расширения, поэтому `.jpg`, `.JPG` или `.webp` на ключ не влияют.
 - Скрипт ничего не удаляет: ни исходники, ни старые варианты, ни ключи. Повторный запуск перезаписывает файлы тех же ширин; в манифесте список `variants` объединяется со старым, а размеры перезаписываются.
 - `ResponsiveImage` (серверный компонент) собирает ключ как `dir` без `/images` + `/` + `baseName`. `srcset` — ширины записи в диапазоне пресета (если таких нет — все ширины записи; если нет самой записи — ширины пресета вслепую, и файлов может не оказаться). `src` — самая широкая из них, `width`/`height` — из манифеста. Без `priority` — `loading="lazy"`, с `priority` — `fetchPriority="high"` и `decoding="sync"`. Пропсы: `baseName`, `dir` (по умолчанию `/images`), `preset`, `alt`, `sizes`, `priority`, `fallbackSrc` и любые атрибуты `<img>`.
-- Хелперы для серверного кода: `buildSrcSet`, `getFallbackSrc`, `getVariantWidths`, `getOriginalDimensions`, `getAspectRatio` из `lib/responsive-image.ts`. `resolveGalleryImages(images)` из `lib/gallery-utils.ts` отдаёт `src`/`srcSet` пресета `gallery` и `thumbSrcSet` пресета `thumbnail`, всегда с `dir="/images/projects"`.
+- Хелперы для серверного кода: `buildSrcSet`, `getFallbackSrc`, `getVariantWidths`, `getOriginalDimensions`, `getAspectRatio`, `resolveImage` из `lib/responsive-image.ts`. `resolveGalleryImages(images)` из `lib/gallery-utils.ts` отдаёт `src`/`srcSet` пресета `gallery` и `thumbSrcSet` пресета `thumbnail`, всегда с `dir="/images/projects"`; `resolveProjectCards(projects)` оттуда же добавляет карточкам проектов поле `resolved` (обложка — `card`, миниатюра «voor» — `thumbnail`).
+- Картинка в клиентском компоненте (`"use client"`): серверный родитель вызывает `resolveImage(baseName, dir, preset)` и передаёт результат (`src`, `srcSet`, `width`, `height`, тип `ResolvedImage` из `lib/types/images.ts`) пропсом, а клиентский компонент рендерит `<ClientImage image sizes alt>` из `components/client-image.tsx` — разметка та же, что у `ResponsiveImage`, но без манифеста. Так устроены слайдер voor/na (`lazy-before-after-slider`, `before-after-slider`) и `ProjectCard`.
 
 ## 2. Пресеты и бюджеты
 
@@ -125,9 +127,9 @@ node -e "require('sharp')('<тот же исходник>').rotate().resize({wid
 - Оригиналы в `source-images/` не удалять и не перезаписывать: папки нет в git, другой копии тоже нет. Заменяемый исходник переносится в папку на `_`.
 - `public/images/` — сгенерированный результат. Файлы там не правьте и не подкладывайте руками, а в коде не ссылайтесь на `*.w<N>.webp` — только `baseName` + `preset`. Удалять можно только старые варианты заменяемой картинки (§4.2).
 - `data/image-manifest.json` пишет только скрипт: значения в нём руками не вписывать и не менять. Единственное ручное действие — удалить ключ заменяемой картинки перед перегенерацией (§4.2).
-- В файл с `"use client"` не импортируйте `components/responsive-image`, `lib/responsive-image` (`buildSrcSet`, `getFallbackSrc` …), `lib/gallery-utils` и `data/image-manifest.json`. То же касается любого модуля, который такой файл импортирует, например серверного `ProjectCard`, если его рендерит клиентский компонент. Иначе весь манифест (~125 KB на диске, ~86 KB в чанке) уходит в клиентский JS. Считайте `src`/`srcset` в серверном родителе и передавайте пропсами — как `components/services/ServicesRail.tsx` → `ServicesRailInteractive.tsx` или `resolveGalleryImages()` в `page.tsx` → `ProjectGalleryCarousel`. Сейчас это правило нарушено, см. §7.
+- В файл с `"use client"` не импортируйте `components/responsive-image`, `lib/responsive-image` (`buildSrcSet`, `getFallbackSrc` …), `lib/gallery-utils` и `data/image-manifest.json` — ни напрямую, ни через другой модуль (так в 2026-09 утекал манифест: клиентский `ProjectsSection` рендерил `ProjectCard` с `ResponsiveImage`). Иначе весь манифест (~125 KB на диске, ~86 KB в чанке) уходит в клиентский JS. `lib/responsive-image.ts` начинается с `import "server-only"`, поэтому такой импорт роняет сборку с ошибкой — это защита, не убирать. Считайте `src`/`srcset` в серверном родителе и передавайте пропсами: `resolveImage()` → `<ClientImage>` (§1), либо своим полем, как `components/services/ServicesRail.tsx` → `ServicesRailInteractive.tsx` или `resolveGalleryImages()` в `page.tsx` → `ProjectGalleryCarousel`.
 - `sizes` описывает реальную ширину слота. `100vw` — только для полноэкранного hero; для сетки карточек, например, `(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw`.
-- `priority` ставится только картинке первого экрана (hero), остальные грузятся лениво.
+- `priority` ставится только картинке первого экрана (hero), остальные грузятся лениво — карточки проектов тоже (`ProjectCard` без `priority` с 2026-09-30: раньше `/onze-werken/` ставил 20 обложек в `<head>` с высоким приоритетом). `ResponsiveImage` с `priority` рендерится через клиентский `components/priority-image.tsx` с той же разметкой: иначе React кладёт подсказку предзагрузки в RSC-данные маршрута, и префетч каждой видимой ссылки скачивает hero её страницы. Своя страница по-прежнему предзагружает свой hero в `<head>` (React делает это сам для `fetchPriority="high"`).
 - На пяти страницах hero предзагружается в `layout.tsx` через `buildSrcSet(..., "hero")`: `app/gevel-schilderen/keimen/`, `app/gevelisolatie/afwerkingen/`, `app/gevelisolatie/kosten/`, `app/gevelisolatie/subsidie-vergunning/`, `app/muren-stucen/sausklaar-behangklaar/`. Если меняете hero в `page.tsx`, поменяйте его и там.
 
 ## 6. Проверка после генерации
@@ -140,17 +142,11 @@ node -e "require('sharp')('<тот же исходник>').rotate().resize({wid
    ```
    Сейчас команда выдаёт 16 ключей `projects/rotterdam-julianastraat-aanbouw-isolatie-4cm-2025/…` — это известный мусор (§7). Всё остальное — новая проблема.
 4. В коде ключ собирается верно (`dir` + `baseName`, §3), `sizes` соответствует вёрстке, `npx tsc --noEmit` проходит без ошибок. Отсутствующая запись в манифесте не ломает ни `tsc`, ни сборку — картинка просто не загрузится. Поэтому пункт 3 и просмотр страницы обязательны.
-5. Для новой страницы или нового hero — `pnpm build`, затем проверить, что `srcset` в `out/` ведёт на существующие файлы. Утечку манифеста проверяет поиск `"variants":[` в `out/_next/static/chunks/*.js` (Git Bash: `grep -l '"variants":\[' out/_next/static/chunks/*.js`): он не должен ничего находить, а сейчас находит один чанк (§7).
+5. Для новой страницы или нового hero — `pnpm build`, затем проверить, что `srcset` в `out/` ведёт на существующие файлы. Утечку манифеста проверяет поиск `"variants":[` в `out/_next/static/chunks/*.js` (Git Bash: `grep -l '"variants":\[' out/_next/static/chunks/*.js`): он не должен ничего находить (с 2026-09-29 не находит).
 6. Посмотреть страницу в dev-сервере на десктопе и на мобильной ширине: кадр, фокус, резкость.
 
 ## 7. Открытые вопросы
 
-- Манифест утекает в клиентский JS, это пока не исправлено. Пути утечки:
-  - `app/gevelisolatie/[location]/page.tsx` → `components/lazy-before-after-slider.tsx` (`"use client"`, он же подгружает `components/before-after-slider.tsx`) → `ResponsiveImage`;
-  - `app/onze-werken/page.tsx` → `components/projects/ProjectsSection.tsx` (`"use client"`) → `ProjectsGrid` → `ProjectCard` → `ResponsiveImage`.
-
-  В последней сборке (`out/`, 2026-09-15) весь манифест (488 ключей) лежит в чанке `934d91e04598b802.js` (~86 KB), который грузят все 21 страница `/gevelisolatie/<город>/` и `/onze-werken/`.
-- JSON-LD `image` у 8 проектов с подпапкой указывает на `/images/projects/<PREFIX>/<PREFIX>-na-01.webp`, а такого файла нет: в подпапках лежат только `.w<N>.webp`. Нужен путь к существующему варианту, например `getFallbackSrc("<PREFIX>-na-01", "/images/projects/<PREFIX>", "hero")` в `page.tsx`.
 - Мусор, который стоит вычистить отдельной задачей:
   - 16 ключей манифеста от переименованной папки `rotterdam-julianastraat-aanbouw-isolatie-4cm-2025`;
   - 117 файлов-вариантов (~4 MB), чьих ширин нет в манифесте: 101 в плоской `projects/` и 16 в двух папках Etten-Leur;

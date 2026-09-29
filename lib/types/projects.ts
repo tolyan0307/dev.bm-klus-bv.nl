@@ -1,3 +1,5 @@
+import type { ResolvedImage } from "@/lib/types/images"
+
 export interface ProjectImage {
   src: string
   alt: string
@@ -20,4 +22,12 @@ export interface ProjectCard {
   cardAlt: string
   coverImage: ProjectImage
   beforeThumb?: ProjectImage
+}
+
+/** ProjectCard with card images resolved on the server (resolveProjectCards in lib/gallery-utils.ts). */
+export interface ResolvedProjectCard extends ProjectCard {
+  resolved: {
+    cover: ResolvedImage
+    beforeThumb?: ResolvedImage
+  }
 }

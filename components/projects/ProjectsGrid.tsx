@@ -1,8 +1,8 @@
-import type { ProjectCard as ProjectCardType } from "@/lib/types/projects"
+import type { ResolvedProjectCard } from "@/lib/types/projects"
 import { ProjectCard } from "./ProjectCard"
 
 interface ProjectsGridProps {
-  projects: ProjectCardType[]
+  projects: ResolvedProjectCard[]
 }
 
 export function ProjectsGrid({ projects }: ProjectsGridProps) {
