@@ -20,6 +20,7 @@ REQUIRED_SECTIONS = [
     "gsc_page_comparison",
     "ga4_landing_pages",
     "ga4_key_events_by_page",
+    "ga4_key_events_by_channel",
     "ga4_traffic_acquisition",
     "ga4_daily_sessions",
 ]

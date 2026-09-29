@@ -51,8 +51,7 @@
 - GBP-посты: подтвердить статусы W38 (`published: false`), W39 (`null`, делала облачная рутина), W40 (`false`) в `seo-ops/gbp-posts/log.jsonl`.
 
 ## Аналитика (seo-ops)
-- Дефекты пайплайна — список в `seo-ops/CLAUDE.md`; план — шаги 1–3 `seo-ops/reports/combined/seo_ops_system_audit_2026-09-04.md` (один пайплайн вместо двух, правила v2, судьба `keyword_master`, удаление мёртвых скриптов, `.tmp_*`, `incident_recovery_monitor.py`; пункты о документах, удалённых 2026-09-29, неактуальны). Плюс пересобрать `page_inventory` (апрель 2026, нет двух новых страниц).
-- `seo-ops/integrations/requirements.txt` без `analytics-mcp` (на нём MCP-сервер GA4) — дописать и закрепить версии.
+- Сделано 2026-09-29: единый список ключевых событий, окна GSC с учётом лага, склейка главной с UTM-URL, срез событий по каналам, пометки бренда и мусорных рефереров, правила v2, пересборка инвентаря страниц на каждом прогоне, `analytics-mcp` в `requirements.txt`. Остаётся из шагов 1–3 `seo-ops/reports/combined/seo_ops_system_audit_2026-09-04.md`: один пайплайн вместо двух, судьба `keyword_master`, удаление мёртвых скриптов (`.tmp_*`, `incident_recovery_monitor.py`, `paid_landing_pages_window.py`, 3 никогда не запускавшихся анализатора); пункты о документах, удалённых 2026-09-29, неактуальны. Остальные известные дефекты — `seo-ops/CLAUDE.md`.
 - Выгрузки seo-ops (недельные сводки, сверки, GBP-черновики) с 2026-09-05 не закоммичены — решить, коммитить ли их регулярно.
 - Облачная GBP-рутина и копия skill `gbp-weekly-post` в claude.ai — удалить (делает владелец в claude.ai; в сессиях Claude Code копия видна как `anthropic-skills:gbp-weekly-post`); локальной GBP-рутины сейчас нет.
 

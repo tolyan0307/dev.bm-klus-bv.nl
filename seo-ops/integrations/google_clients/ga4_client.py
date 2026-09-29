@@ -18,8 +18,9 @@ from google.analytics.data_v1beta.types import (
 )
 
 from .config import Ga4Config
+from .definitions import is_junk_source, load_key_event_names
 
-KEY_EVENT_NAMES = ["Contact_Form_Site", "Phone", "Whatsapp"]
+KEY_EVENT_NAMES = load_key_event_names()  # config/conversions.yaml
 
 
 def _get_client(cfg: Ga4Config) -> BetaAnalyticsDataClient:
@@ -37,6 +38,15 @@ def _date_range_str() -> dict:
     end = date.today() - timedelta(days=1)
     start = end - timedelta(days=27)
     return {"start": start.isoformat(), "end": end.isoformat()}
+
+
+def _key_event_filter() -> FilterExpression:
+    return FilterExpression(
+        filter=Filter(
+            field_name="eventName",
+            in_list_filter=Filter.InListFilter(values=KEY_EVENT_NAMES),
+        )
+    )
 
 
 def _run_report(
@@ -104,14 +114,6 @@ def get_key_events_by_landing_page_last_28d(
     """
     client = _get_client(cfg)
 
-    # Filter to only our key events
-    event_filter = FilterExpression(
-        filter=Filter(
-            field_name="eventName",
-            in_list_filter=Filter.InListFilter(values=KEY_EVENT_NAMES),
-        )
-    )
-
     rows = _run_report(
         client,
         cfg.property_id,
@@ -119,7 +121,7 @@ def get_key_events_by_landing_page_last_28d(
         metrics=["eventCount"],
         date_range=_date_range_28d(),
         limit=limit,
-        dimension_filter=event_filter,
+        dimension_filter=_key_event_filter(),
     )
     return {
         "date_range": _date_range_str(),
@@ -130,7 +132,10 @@ def get_key_events_by_landing_page_last_28d(
 
 
 def get_traffic_acquisition_last_28d(cfg: Ga4Config, limit: int = 20) -> dict:
-    """Traffic acquisition by session source/medium, last 28 days."""
+    """
+    Traffic acquisition by session source/medium, last 28 days.
+    Rows from local dev / hosting-panel referrers get junk=True.
+    """
     client = _get_client(cfg)
     rows = _run_report(
         client,
@@ -140,8 +145,58 @@ def get_traffic_acquisition_last_28d(cfg: Ga4Config, limit: int = 20) -> dict:
         date_range=_date_range_28d(),
         limit=limit,
     )
+    for r in rows:
+        if is_junk_source(r.get("sessionSourceMedium", "")):
+            r["junk"] = True
     return {
         "date_range": _date_range_str(),
+        "row_count": len(rows),
+        "rows": rows,
+    }
+
+
+def get_key_events_by_channel_28d_vs_prev(cfg: Ga4Config) -> dict:
+    """
+    Key events by default channel group: last 28 days vs the 28 days before.
+    Lets reports separate organic from paid leads (GA4 is a consent-limited
+    sample; the WP lead log is the ground truth for lead counts).
+    """
+    client = _get_client(cfg)
+    curr_end = date.today() - timedelta(days=1)
+    curr_start = curr_end - timedelta(days=27)
+    prev_end = curr_start - timedelta(days=1)
+    prev_start = prev_end - timedelta(days=27)
+
+    def _fetch(start_d: date, end_d: date) -> dict[tuple[str, str], int]:
+        rows = _run_report(
+            client,
+            cfg.property_id,
+            dimensions=["sessionDefaultChannelGroup", "eventName"],
+            metrics=["eventCount"],
+            date_range=DateRange(start_date=start_d.isoformat(), end_date=end_d.isoformat()),
+            limit=200,
+            dimension_filter=_key_event_filter(),
+        )
+        return {
+            (r["sessionDefaultChannelGroup"], r["eventName"]): int(r.get("eventCount", 0))
+            for r in rows
+        }
+
+    current = _fetch(curr_start, curr_end)
+    previous = _fetch(prev_start, prev_end)
+    rows = [
+        {
+            "sessionDefaultChannelGroup": channel,
+            "eventName": event,
+            "eventCount": current.get((channel, event), 0),
+            "previousEventCount": previous.get((channel, event), 0),
+        }
+        for channel, event in sorted(set(current) | set(previous))
+    ]
+    return {
+        "current_range": {"start": curr_start.isoformat(), "end": curr_end.isoformat()},
+        "previous_range": {"start": prev_start.isoformat(), "end": prev_end.isoformat()},
+        "key_events_tracked": KEY_EVENT_NAMES,
         "row_count": len(rows),
         "rows": rows,
     }

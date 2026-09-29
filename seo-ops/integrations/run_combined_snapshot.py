@@ -10,7 +10,7 @@ Usage:
 
 import json
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 # Allow running from the integrations/ directory
@@ -62,15 +62,16 @@ def _print_section(title: str, data: dict, max_rows: int = 5) -> None:
                 for k, v in row.items()
                 if k not in ("clicks", "impressions", "ctr", "position",
                              "sessions", "engagedSessions", "engagementRate",
-                             "eventCount", "current", "previous",
-                             "delta_clicks", "delta_impressions", "delta_position")
+                             "eventCount", "previousEventCount", "current", "previous",
+                             "delta_clicks", "delta_impressions", "delta_position",
+                             "junk", "is_brand", "merged_variants")
             )
 
         # Determine metric display
         metrics = []
         for mkey in ("clicks", "impressions", "ctr", "position",
                      "sessions", "engagedSessions", "engagementRate",
-                     "eventCount"):
+                     "eventCount", "previousEventCount", "junk", "is_brand"):
             if mkey in row:
                 metrics.append(f"{mkey}={row[mkey]}")
 
@@ -111,10 +112,11 @@ def main() -> int:
 
     section_titles = {
         "gsc_top_pages": "GSC — Top Pages (28d)",
-        "gsc_top_queries": "GSC — Top Queries (28d)",
+        "gsc_top_queries": "GSC — Top Queries by impressions (28d)",
         "gsc_page_comparison": "GSC — Page Comparison (28d vs prev 28d)",
         "ga4_landing_pages": "GA4 — Landing Pages (28d)",
         "ga4_key_events_by_page": "GA4 — Key Events by Landing Page (28d)",
+        "ga4_key_events_by_channel": "GA4 — Key Events by Channel (28d vs prev 28d)",
         "ga4_traffic_acquisition": "GA4 — Traffic Acquisition (28d)",
         "ga4_daily_sessions": "GA4 — Daily Sessions (28d)",
     }
@@ -131,7 +133,7 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     out_file = out_dir / "latest_combined_snapshot.json"
 
-    snapshot["_generated_at"] = datetime.utcnow().isoformat() + "Z"
+    snapshot["_generated_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     out_file.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False))
 
     print(f"\n{'='*60}")

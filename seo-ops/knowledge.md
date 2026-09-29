@@ -26,6 +26,7 @@
 | 2026-09-05 | seo-ops начал учитывать Email (`config/conversions.yaml`, `integrations/ga4/landing_page_loader.py`). В GA4 Email — ключевое событие минимум с 2026-03 | границы в данных GA4 нет |
 | с 2026-W36 | Еженедельные GBP-посты (W36 Дордрехт; лог `gbp-posts/log.jsonl`) | клики с `utm_content=post-*` |
 | 2026-09-15 | 49 ИИ/стоковых изображений заменены реальными фото проектов | — |
+| 2026-09-29 | Методика seo-ops: окна GSC кончаются «сегодня − 3» (было «вчера»), главная склеена с UTM-URL из GBP, Email в сводном снапшоте, правила v2 с порогами шума (не выкат сайта) | недельные сводки до и после 09-29 сравнивать с поправкой |
 
 Шаблоны title после 2026-09-04: города — «Gevelisolatie {City} – buitenkant (ETICS)», у шести длинных названий (Capelle aan den IJssel, Alphen aan den Rijn, Hellevoetsluis, Bergen op Zoom, Leidschendam-Voorburg, Hendrik-Ido-Ambacht) — «Gevelisolatie {City} (ETICS)»; `/gevelisolatie/` и `/gevel-schilderen/` — «… kosten & offerte», `/buiten-stucwerk/` — «Buitenmuur stucen: kosten, betonstuc & crepi». Источник — `data/sitemap-plan.ts` и `lib/content/gevelisolatie-locations.ts`.
 

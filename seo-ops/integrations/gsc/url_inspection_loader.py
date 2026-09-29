@@ -33,6 +33,7 @@ if ENV_LOCAL.is_file():
 # Add parent so google_clients is importable
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from google_clients.config import load_gsc_config, GscConfig
+from google_clients.definitions import require_interactive_auth
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -51,6 +52,7 @@ def _get_credentials(cfg: GscConfig) -> Credentials:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
+            require_interactive_auth("GSC")
             flow = InstalledAppFlow.from_client_secrets_file(
                 str(cfg.oauth_client_json), SCOPES
             )

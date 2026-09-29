@@ -9,6 +9,7 @@ import sys
 import traceback
 
 from .config import load_gsc_config, load_ga4_config
+from .definitions import GSC_LAG_DAYS
 from . import gsc_client
 from . import ga4_client
 
@@ -24,6 +25,12 @@ def collect_snapshot() -> dict:
     snapshot = {
         "site": gsc_cfg.site_url,
         "ga4_property": ga4_cfg.property_id,
+        "_definitions": {
+            "gsc_windows_end": f"today - {GSC_LAG_DAYS} days (final GSC data)",
+            "ga4_windows_end": "yesterday",
+            "gsc_pages": "URL variants with query strings (e.g. the GBP ?utm_ link to /) are merged into their page; see merged_variants",
+            "key_events": ga4_client.KEY_EVENT_NAMES,
+        },
     }
 
     # --- GSC sections ---
@@ -47,6 +54,10 @@ def collect_snapshot() -> dict:
         (
             "ga4_key_events_by_page",
             lambda: ga4_client.get_key_events_by_landing_page_last_28d(ga4_cfg),
+        ),
+        (
+            "ga4_key_events_by_channel",
+            lambda: ga4_client.get_key_events_by_channel_28d_vs_prev(ga4_cfg),
         ),
         (
             "ga4_traffic_acquisition",

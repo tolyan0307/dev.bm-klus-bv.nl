@@ -5,6 +5,31 @@ Outputs both a dict and a markdown string.
 
 from datetime import datetime, timezone
 
+EXPECTED_SECTIONS = [
+    "gsc_top_pages",
+    "gsc_top_queries",
+    "gsc_page_comparison",
+    "ga4_landing_pages",
+    "ga4_key_events_by_page",
+    "ga4_key_events_by_channel",
+    "ga4_traffic_acquisition",
+    "ga4_daily_sessions",
+]
+
+
+def data_issues(snapshot: dict) -> list[str]:
+    """Snapshot sections that are missing, failed or empty — reported first, never silently."""
+    issues = []
+    for key in EXPECTED_SECTIONS:
+        section = snapshot.get(key)
+        if section is None:
+            issues.append(f"{key}: missing")
+        elif isinstance(section, dict) and "error" in section:
+            issues.append(f"{key}: error — {section['error']}")
+        elif isinstance(section, dict) and not section.get("rows"):
+            issues.append(f"{key}: no rows")
+    return issues
+
 
 def build_report(snapshot: dict, findings: dict) -> dict:
     """
@@ -30,20 +55,18 @@ def build_report(snapshot: dict, findings: dict) -> dict:
         if f.get("page") and f["confidence"] in ("medium", "high")
     })
 
-    # Next actions: deduplicated high/medium confidence actions
-    seen_actions = set()
-    next_actions = []
+    # Next actions: high/medium confidence actions, grouped so no target is lost
+    grouped: dict[str, dict] = {}
     for f in all_findings:
         if f["confidence"] in ("medium", "high"):
-            action = f["recommended_action"]
-            if action not in seen_actions:
-                seen_actions.add(action)
-                next_actions.append({
-                    "action": action,
-                    "category": f["category"],
-                    "related_page": f.get("page"),
-                    "related_query": f.get("query"),
-                })
+            entry = grouped.setdefault(
+                f["recommended_action"],
+                {"action": f["recommended_action"], "category": f["category"], "related": []},
+            )
+            target = f.get("page") or f.get("query")
+            if target and target not in entry["related"]:
+                entry["related"].append(target)
+    next_actions = list(grouped.values())
 
     # Counts for summary
     counts = {k: len(v) for k, v in findings.items()}
@@ -53,6 +76,8 @@ def build_report(snapshot: dict, findings: dict) -> dict:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "site": snapshot.get("site", ""),
         "snapshot_generated_at": snapshot.get("_generated_at", "unknown"),
+        "gsc_current_range": snapshot.get("gsc_page_comparison", {}).get("current_range"),
+        "data_issues": data_issues(snapshot),
         "executive_summary": {
             "total_findings": total,
             "breakdown": counts,
@@ -80,6 +105,21 @@ def report_to_markdown(report: dict) -> str:
     lines.append(f"Generated: {report['generated_at']}")
     lines.append(f"Site: {report['site']}")
     lines.append(f"Snapshot from: {report['snapshot_generated_at']}")
+    gsc_range = report.get("gsc_current_range") or {}
+    if gsc_range:
+        lines.append(f"GSC window: {gsc_range.get('start')} → {gsc_range.get('end')} (final data)")
+    lines.append("")
+    lines.append("Rule findings are leads to verify, not conclusions (seo-ops/CLAUDE.md).")
+    lines.append("")
+
+    issues = report.get("data_issues") or []
+    lines.append("## Data issues")
+    lines.append("")
+    if issues:
+        for issue in issues:
+            lines.append(f"- {issue}")
+    else:
+        lines.append("None — all snapshot sections present and non-empty.")
     lines.append("")
 
     # Executive summary
@@ -142,7 +182,7 @@ def report_to_markdown(report: dict) -> str:
     actions = report.get("next_actions_7_14_days", [])
     if actions:
         for i, a in enumerate(actions, 1):
-            related = a.get("related_page") or a.get("related_query") or ""
+            related = ", ".join(a.get("related") or [])
             suffix = f" — {related}" if related else ""
             lines.append(f"{i}. [{a['category']}] {a['action']}{suffix}")
     else:

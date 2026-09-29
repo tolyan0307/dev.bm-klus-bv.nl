@@ -50,6 +50,8 @@ def main() -> int:
     print(f"\n{'='*60}")
     print(f"  Analysis complete")
     print(f"{'='*60}")
+    for issue in report.get("data_issues", []):
+        print(f"  WARNING data issue: {issue}")
     print(f"  Total findings: {es['total_findings']}")
     for k, v in es["breakdown"].items():
         label = k.replace("_", " ").title()

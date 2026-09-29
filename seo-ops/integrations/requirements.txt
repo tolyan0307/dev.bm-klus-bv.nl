@@ -6,3 +6,5 @@ google-analytics-data>=0.18,<1
 google-ads>=27,<32
 PyYAML>=6,<7
 requests>=2.31,<3
+# the google-analytics MCP server (Claude Code) runs from this venv: .venv/Scripts/google-analytics-mcp.exe
+analytics-mcp>=0.7,<0.8

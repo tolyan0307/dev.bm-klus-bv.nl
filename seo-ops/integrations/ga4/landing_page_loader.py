@@ -26,6 +26,7 @@ if ENV_LOCAL.is_file():
 # Add parent for google_clients import
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from google_clients.config import load_ga4_config, Ga4Config
+from google_clients.definitions import load_key_event_names
 
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import (
@@ -37,7 +38,7 @@ from google.analytics.data_v1beta.types import (
     RunReportRequest,
 )
 
-KEY_EVENT_NAMES = ["Contact_Form_Site", "Phone", "Whatsapp", "Email"]  # all four are key events in GA4 (2026-09-05)
+KEY_EVENT_NAMES = load_key_event_names()  # config/conversions.yaml
 
 
 def _get_client(cfg: Ga4Config) -> BetaAnalyticsDataClient:

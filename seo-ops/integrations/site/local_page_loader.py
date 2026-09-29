@@ -258,9 +258,12 @@ def classify_page(route: str, source_info: dict = None) -> str:
         # If it's a location slug
         return "city"
 
-    # Other top-level service pages
-    if r in ("/gevel-schilderen", "/buiten-stucwerk", "/sierpleister", "/muren-stucen"):
-        return "service"
+    # Other top-level service pages and their child pages (e.g. /gevel-schilderen/keimen/)
+    for service in ("/gevel-schilderen", "/buiten-stucwerk", "/sierpleister", "/muren-stucen"):
+        if r == service:
+            return "service"
+        if r.startswith(service + "/"):
+            return "cluster"
 
     if r == "/schoonmaak-na-verbouwing":
         return "service"
@@ -358,11 +361,11 @@ def build_inventory() -> list[PageRecord]:
         if page_type == "service":
             rec.primary_topic_guess = route.strip("/").split("/")[-1]
 
-        # Cluster pages topic
+        # Cluster pages topic: parent service + child segment
         if page_type == "cluster":
-            segment = route.replace("/gevelisolatie/", "").strip("/")
-            rec.primary_topic_guess = f"gevelisolatie-{segment}"
-            rec.service_guess = "gevelisolatie"
+            parts = route.strip("/").split("/")
+            rec.primary_topic_guess = f"{parts[0]}-{parts[-1]}"
+            rec.service_guess = parts[0]
 
         # Home page
         if page_type == "home":
