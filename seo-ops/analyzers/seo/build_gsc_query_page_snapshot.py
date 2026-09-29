@@ -28,6 +28,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 SEO_OPS_ROOT = SCRIPT_DIR.parents[1]
 sys.path.insert(0, str(SEO_OPS_ROOT))
 
+from integrations.google_clients.definitions import is_brand_query, is_cannibalization, normalize_page_url
 from integrations.gsc.query_page_loader import pull_query_page_data
 from integrations.site.page_inventory_loader import load_page_inventory
 
@@ -76,7 +77,7 @@ def url_to_route(url: str) -> str:
     return path
 
 
-# ── Classification (reuse keyword_master rules) ─────────────────────────────
+# ── Classification (simple pattern rules, carried over from the retired keyword_master builder) ──
 
 THEME_RULES: list[tuple[str, list[str]]] = [
     ("subsidie_vergunning", ["subsidi", "vergunning", "isde", "energielabel"]),
@@ -154,9 +155,38 @@ def map_gsc_page(url: str, route_map: dict[str, dict]) -> tuple[str, str, str]:
 
 # ── Build row-level table ────────────────────────────────────────────────────
 
+def merge_url_variants(raw_rows: list[dict]) -> list[dict]:
+    """
+    Merge rows whose page differs only by query string (the GBP link
+    '/?utm_source=google&...' -> '/'), as the combined snapshot does.
+    Position is the impression-weighted average of the merged rows.
+    """
+    merged: dict[tuple[str, str], list[dict]] = {}
+    for r in raw_rows:
+        merged.setdefault((r["query"], normalize_page_url(r["page"])), []).append(r)
+
+    rows = []
+    for (query, page), group in merged.items():
+        if len(group) == 1:
+            rows.append({**group[0], "page": page, "merged_variants": 1})
+            continue
+        clicks = sum(g["clicks"] for g in group)
+        impressions = sum(g["impressions"] for g in group)
+        rows.append({
+            "query": query,
+            "page": page,
+            "clicks": clicks,
+            "impressions": impressions,
+            "ctr": round(clicks / impressions, 6) if impressions else 0.0,
+            "position": round(sum(g["position"] * g["impressions"] for g in group) / impressions, 2) if impressions else 0.0,
+            "merged_variants": len(group),
+        })
+    return rows
+
+
 def build_row_table(raw_rows: list[dict], route_map: dict[str, dict]) -> list[dict]:
     rows = []
-    for r in raw_rows:
+    for r in merge_url_variants(raw_rows):
         query = r["query"]
         nq = normalize_query(query)
         page = r["page"]
@@ -175,7 +205,7 @@ def build_row_table(raw_rows: list[dict], route_map: dict[str, dict]) -> list[di
             "mapped_route_guess": route,
             "mapped_page_type_guess": page_type,
             "mapping_confidence": confidence,
-            "notes": "",
+            "notes": f"merged {r['merged_variants']} URL variants" if r["merged_variants"] > 1 else "",
         })
     return rows
 
@@ -193,7 +223,7 @@ def build_query_aggregation(row_table: list[dict]) -> list[dict]:
                 "total_clicks": 0,
                 "total_impressions": 0,
                 "_click_weighted_position": 0.0,
-                "_pages": set(),
+                "_page_stats": [],
                 "best_position": 999.0,
                 "query_intent_guess": r["query_intent_guess"],
                 "query_theme_guess": r["query_theme_guess"],
@@ -202,7 +232,7 @@ def build_query_aggregation(row_table: list[dict]) -> list[dict]:
         a["total_clicks"] += r["clicks"]
         a["total_impressions"] += r["impressions"]
         a["_click_weighted_position"] += r["position"] * r["clicks"]
-        a["_pages"].add(r["page"])
+        a["_page_stats"].append((r["impressions"], r["position"]))
         if r["position"] < a["best_position"]:
             a["best_position"] = r["position"]
 
@@ -211,8 +241,9 @@ def build_query_aggregation(row_table: list[dict]) -> list[dict]:
         total_impr = a["total_impressions"]
         total_clicks = a["total_clicks"]
         weighted_ctr = round(total_clicks / total_impr, 6) if total_impr > 0 else 0.0
-        distinct_pages = len(a["_pages"])
-        cannibalization = distinct_pages >= 3
+        distinct_pages = len(a["_page_stats"])
+        # brand queries on several URLs (sitelinks) are normal, not cannibalization
+        cannibalization = not is_brand_query(nq) and is_cannibalization(a["_page_stats"])
 
         result.append({
             "query": a["query"],
@@ -321,8 +352,9 @@ def write_summary(
     ]
     striking.sort(key=lambda x: x["total_impressions"], reverse=True)
 
+    days = (datetime.fromisoformat(dr["end"]) - datetime.fromisoformat(dr["start"])).days + 1 if dr.get("start") and dr.get("end") else "?"
     lines = [
-        "# GSC Query/Page Snapshot Summary (last 90 days)",
+        f"# GSC Query/Page Snapshot Summary (last {days} days)",
         "",
         f"**Generated:** {now}",
         f"**Date range:** {dr.get('start', '?')} to {dr.get('end', '?')}",
@@ -405,7 +437,7 @@ def write_summary(
         "",
         "---",
         "",
-        f"## Likely cannibalization candidates ({len(cannibs)} queries on 3+ pages)",
+        f"## Cannibalization candidates ({len(cannibs)} non-brand queries: 2+ URLs with >10 impressions, positions <5 apart)",
         "",
     ]
     if cannibs:
@@ -417,7 +449,7 @@ def write_summary(
                 f"| {q['total_clicks']} | {q['distinct_pages_count']} |"
             )
     else:
-        lines.append("No queries found on 3+ pages.")
+        lines.append("No cannibalization candidates.")
 
     lines += [
         "",
@@ -472,12 +504,12 @@ def write_summary(
         "## Limitations (v1)",
         "",
         "1. **Dimensions:** query + page only; no device or country breakdown",
-        "2. **Date range:** last 90 days (minus 3-day GSC lag)",
+        f"2. **Date range:** last {days} days (minus 3-day GSC lag)",
         "3. **Row limit:** GSC API returns max 25,000 rows per request; pagination used",
         "4. **Sampling:** GSC data is sampled for properties with high traffic",
         "5. **Theme/intent classifiers:** simple keyword-pattern rules, not ML",
-        "6. **Cannibalization:** defined as 3+ pages for same query; may include false positives",
-        "7. **Page mapping:** based on page_inventory route index; external URLs not mapped",
+        "6. **Cannibalization:** 2+ URLs with more than 10 impressions each for the same query and positions less than 5 apart (seo-ops/CLAUDE.md), brand queries excluded; shared queries alone are overlap",
+        "7. **Page mapping:** based on page_inventory route index; external URLs not mapped; URL variants with a query string (GBP UTM link) are merged into their page",
         "8. **No comparison period:** this is a single snapshot; no period-over-period delta",
         "",
         "---",
@@ -486,11 +518,11 @@ def write_summary(
         "",
         "| File | Path |",
         "|------|------|",
-        "| Raw JSON | `seo-ops/snapshots/raw/gsc/gsc_query_page_last90d_raw.json` |",
-        "| Row-level CSV | `seo-ops/snapshots/normalized/seo/gsc_query_page_last90d.csv` |",
-        "| Aggregated queries | `seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last90d.csv` |",
-        "| Aggregated pages | `seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last90d.csv` |",
-        "| Summary (this file) | `seo-ops/reports/seo/gsc_query_page_snapshot_last90d.md` |",
+        f"| Raw JSON | `seo-ops/snapshots/raw/gsc/gsc_query_page_last{days}d_raw.json` |",
+        f"| Row-level CSV | `seo-ops/snapshots/normalized/seo/gsc_query_page_last{days}d.csv` |",
+        f"| Aggregated queries | `seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_queries_last{days}d.csv` |",
+        f"| Aggregated pages | `seo-ops/snapshots/normalized/seo/gsc_query_page_aggregated_pages_last{days}d.csv` |",
+        f"| Summary (this file) | `seo-ops/reports/seo/gsc_query_page_snapshot_last{days}d.md` |",
     ]
 
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")

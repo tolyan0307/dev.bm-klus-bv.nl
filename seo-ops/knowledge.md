@@ -19,14 +19,14 @@
 | 2026-08-14 | WhatsApp-first CTA на всём сайте + события кликов (`cta-click-tracker.tsx`); коммит 07-19, на прод — 08-14 (между 06-18 и 08-14 выкатов не было) | каналы контакта до/после 08-14 несравнимы |
 | 2026-07-20 | Ads v2: +3 группы (фасадный комплекс), +26 минус-слов, бюджет €9 → €13/день | новая база для PPC |
 | 08-15…09-04 | Основная категория GBP: «Aannemer» → «Aannemer voor isolatie» | local pack до/после |
-| ~2026-09-03 | Профиль GBP заполнен, ссылка на сайт с UTM `?utm_source=google&utm_medium=organic&utm_campaign=gbp` | в GSC главная раздвоилась — считать суммой |
+| ~2026-09-03 | Профиль GBP заполнен, ссылка на сайт с UTM `?utm_source=google&utm_medium=organic&utm_campaign=gbp` | в GSC главная раздвоилась: в выгрузках seo-ops склеена с 2026-09-29, в интерфейсе GSC и сырых JSON — считать суммой |
 | 2026-09-04 (20:58 UTC) | Страницы `/gevel-schilderen/keimen/` и `/muren-stucen/sausklaar-behangklaar/`; атрибуция первого касания (`lib/attribution.ts`); BM Stats v2 — просмотры и CTA-клики с этого дня, заявки с бэкфиллом с 2026-03-11 (статус `archive`) | источники WP до/после 09-04 несравнимы; ревью страниц 2026-10-16 |
 | 2026-09-04 (23:25 UTC) | Цены и калькуляторы убраны со всего сайта, 26 title переписаны. Title от 09-04 для `/gevelisolatie/` и `/buiten-stucwerk/` прожили на проде ~2,5 часа — ревью 10-16 оценивает уже эти | см. шаблоны title ниже |
 | 2026-09-05 | Beacon сайта переведён на `/wp-json/bm/v1/hit` | — |
 | 2026-09-05 | seo-ops начал учитывать Email (`config/conversions.yaml`, `integrations/ga4/landing_page_loader.py`). В GA4 Email — ключевое событие минимум с 2026-03 | границы в данных GA4 нет |
 | с 2026-W36 | Еженедельные GBP-посты (W36 Дордрехт; лог `gbp-posts/log.jsonl`) | клики с `utm_content=post-*` |
 | 2026-09-15 | 49 ИИ/стоковых изображений заменены реальными фото проектов | — |
-| 2026-09-29 | Методика seo-ops: окна GSC кончаются «сегодня − 3» (было «вчера»), главная склеена с UTM-URL из GBP, Email в сводном снапшоте, правила v2 с порогами шума (не выкат сайта) | недельные сводки до и после 09-29 сравнивать с поправкой |
+| 2026-09-29 | Методика seo-ops: окна GSC кончаются «сегодня − 3» (было «вчера»), главная склеена с UTM-URL из GBP, Email в сводном снапшоте, правила v2 с порогами шума; в query-level CSV тоже склеены URL-варианты, а флаг каннибализации считается по правилу проекта без бренда (было «запрос на 3+ страницах») (не выкат сайта) | недельные сводки и CSV до и после 09-29 сравнивать с поправкой |
 
 Шаблоны title после 2026-09-04: города — «Gevelisolatie {City} – buitenkant (ETICS)», у шести длинных названий (Capelle aan den IJssel, Alphen aan den Rijn, Hellevoetsluis, Bergen op Zoom, Leidschendam-Voorburg, Hendrik-Ido-Ambacht) — «Gevelisolatie {City} (ETICS)»; `/gevelisolatie/` и `/gevel-schilderen/` — «… kosten & offerte», `/buiten-stucwerk/` — «Buitenmuur stucen: kosten, betonstuc & crepi». Источник — `data/sitemap-plan.ts` и `lib/content/gevelisolatie-locations.ts`.
 

@@ -12,9 +12,13 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from google_clients.config import load_env_local  # noqa: E402
+
 
 def main() -> int:
-    # --- Read env vars ---------------------------------------------------
+    # --- Read env vars (missing ones from integrations/.env.local) --------
+    load_env_local()
     property_id = os.environ.get("BMKLUS_GA4_PROPERTY_ID", "").strip()
     sa_json = os.environ.get("BMKLUS_GA4_SERVICE_ACCOUNT_JSON", "").strip()
 

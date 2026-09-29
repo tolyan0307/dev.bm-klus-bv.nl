@@ -1,12 +1,27 @@
 """
 Centralised config loader for Google API credentials.
 All values come from environment variables — nothing is hardcoded.
+Variables missing from the environment are read from integrations/.env.local.
 """
 
 import os
 import sys
 from dataclasses import dataclass
 from pathlib import Path
+
+
+ENV_LOCAL = Path(__file__).resolve().parents[1] / ".env.local"
+
+
+def load_env_local() -> None:
+    """Fill os.environ from integrations/.env.local; variables already set win."""
+    if not ENV_LOCAL.is_file():
+        return
+    for line in ENV_LOCAL.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            key, _, val = line.partition("=")
+            os.environ.setdefault(key.strip(), val.strip())
 
 
 @dataclass(frozen=True)
@@ -39,6 +54,7 @@ def _require_file(path_str: str, label: str) -> Path:
 
 
 def load_gsc_config() -> GscConfig:
+    load_env_local()
     site_url = _require_env("BMKLUS_GSC_SITE_URL")
     client_json = _require_env("BMKLUS_GSC_OAUTH_CLIENT_JSON")
     token_json = _require_env("BMKLUS_GSC_TOKEN_JSON")
@@ -50,6 +66,7 @@ def load_gsc_config() -> GscConfig:
 
 
 def load_ga4_config() -> Ga4Config:
+    load_env_local()
     property_id = _require_env("BMKLUS_GA4_PROPERTY_ID")
     sa_json = _require_env("BMKLUS_GA4_SERVICE_ACCOUNT_JSON")
     return Ga4Config(

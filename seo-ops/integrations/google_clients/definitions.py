@@ -2,8 +2,9 @@
 Shared data definitions for the seo-ops collectors.
 
 - key events come from config/conversions.yaml (single source for all loaders);
-- GSC data lag, brand-query and junk-traffic patterns and page URL
-  normalisation are small documented constants (reasoning: seo-ops/knowledge.md).
+- GSC data lag, brand-query and junk-traffic patterns, page URL normalisation
+  and the cannibalisation rule are small documented constants
+  (reasoning: seo-ops/CLAUDE.md, seo-ops/knowledge.md).
 """
 
 from __future__ import annotations
@@ -27,6 +28,12 @@ BRAND_QUERY_RE = re.compile(r"\bbm[\s\-_.]*klus", re.IGNORECASE)
 
 # Not real visitors: local dev server and the hosting control panel.
 JUNK_SOURCE_RE = re.compile(r"127\.0\.0\.1|localhost|webhostingserver\.nl", re.IGNORECASE)
+
+# Cannibalisation: two URLs each get more than CANNIBAL_MIN_IMPRESSIONS impressions
+# for the same query and rank less than CANNIBAL_MAX_POSITION_GAP positions apart.
+# Merely sharing queries (parent and child page) is overlap, not cannibalisation.
+CANNIBAL_MIN_IMPRESSIONS = 10
+CANNIBAL_MAX_POSITION_GAP = 5
 
 
 def load_key_event_names() -> list[str]:
@@ -62,6 +69,12 @@ def require_interactive_auth(service: str) -> None:
             f"{service}: OAuth token is missing or expired and needs a browser login. "
             "With the owner present run `python integrations/test_gsc_access.py`, then retry."
         )
+
+
+def is_cannibalization(page_stats: list[tuple[int, float]]) -> bool:
+    """page_stats: (impressions, position) of each URL ranking for one query."""
+    positions = sorted(pos for impr, pos in page_stats if impr > CANNIBAL_MIN_IMPRESSIONS)
+    return any(b - a < CANNIBAL_MAX_POSITION_GAP for a, b in zip(positions, positions[1:]))
 
 
 def normalize_page_url(url: str) -> str:

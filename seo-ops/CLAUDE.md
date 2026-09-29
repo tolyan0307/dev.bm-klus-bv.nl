@@ -21,11 +21,11 @@
 ## Как читать данные
 - Масштаб мал: около 60 кликов, 5–8 заявок и 6–9 конверсий Ads за 28 дней. ±1–3 — шум. Рядом с процентом — абсолютное число; коэффициенты при <20 сессиях не считать.
 - GSC отдаёт окончательные данные с лагом 2–3 дня (окна сборщиков кончаются «сегодня − 3»); запросы анонимизированы — их сумма меньше итога страницы.
-- Главная = `/` + `/?utm_source=google&utm_medium=organic&utm_campaign=gbp` (ссылка из GBP). В сводном снапшоте они уже склеены (`merged_variants`), в query-level CSV — нет: там считать суммой.
+- Главная = `/` + `/?utm_source=google&utm_medium=organic&utm_campaign=gbp` (ссылка из GBP). В сводном снапшоте и в query-level CSV они склеены (`merged_variants` в снапшоте, `notes` в CSV, с 2026-09-29); раздельно — только в сырых JSON (`snapshots/raw/`) и в лендингах GA4.
 - Рефереры GA4 `127.0.0.1:8842` и `s246.webhostingserver.nl:2222` — мусор (в снапшоте помечены `junk`), исключать до любых коэффициентов.
 - Не сравнивать через границы из календаря в `knowledge.md` без оговорки. Данные до переезда (2026-03-08) — только год-к-году, с пометкой.
 - Возраст: различай возраст URL, существования страницы, текущей версии контента и сигналов ранжирования. Переписанная страница — «период после изменения», не «молодая страница».
-- Каннибализация — только когда у обоих URL больше 10 показов по одному запросу и разница позиций меньше 5. Просто общие запросы у родителя и дочерней страницы — «пересечение», не каннибализация. Главная по запросам «бренд + услуга + город» — норма.
+- Каннибализация — только когда у обоих URL больше 10 показов по одному запросу и разница позиций меньше 5. Просто общие запросы у родителя и дочерней страницы — «пересечение», не каннибализация. Главная по запросам «бренд + услуга + город» — норма. Флаг `possible_cannibalization_guess` в `gsc_query_page_aggregated_queries_*.csv` считается по этому правилу, брендовые запросы не помечаются.
 - CTR при позиции >20 ни о чём не говорит; позиция 5–15 и низкий CTR — сниппет; 1–4 и низкий CTR — сначала SERP-фичи. Рост позиции 30 → 15 — прогресс, даже без кликов.
 - «Есть / нет на странице» утверждай только с файлом и полем или строкой. Метрика остаётся в своём уровне: запрос, страница или сайт.
 - Без общих «нормальных CTR и позиций» из блогов; не хватает данных — так и скажи.
@@ -50,32 +50,31 @@
 ## Карта
 | Что | Где |
 |---|---|
+| Еженедельный сбор одной командой | `run_weekly_refresh.py` |
 | Сводный снапшот GSC + GA4, 28 дней | `data/processed/latest_combined_snapshot.json` |
 | Запросы × страницы, лендинги GA4, 28 / 90 дней | `snapshots/normalized/{seo,pages}/` (вне git, перезаписываются) |
 | WP-снапшоты, сверка лидов | `reports/pages/wp_stats_last{28,90}d.md`, `reports/audits/lead_reconciliation_*.md` |
 | Недельные сводки, off-page | `reports/weekly/weekly_*.md`, `reports/seo/offpage_monthly_*.md` |
 | Загрузчики API | `integrations/{gsc,ga4,wp,google_ads,gbp,dataforseo,site}/`, `integrations/google_clients/` |
-| Сборщики и анализаторы | `analyzers/{seo,pages,keywords,ppc}/`, `analysis/` |
+| Сборщики и анализаторы | `analyzers/{seo,pages}/`, `analysis/` |
 | GBP-посты | `gbp-posts/` + `log.jsonl` |
-| Конфиги | `config/`: `conversions.yaml` (ключевые события; читает только `run_measurement_audit_v1.py`), `competitors.yaml` (справочно — скрипты его не читают, у сборщика свой список) |
+| Конфиги | `config/`: `conversions.yaml` (ключевые события — единый список для всех сборщиков через `definitions.py`), `competitors.yaml` (справочно — скрипты его не читают, у сборщика свой список) |
 
 MCP: `gsc` (search_analytics, index_inspect), `google-analytics` (run_report и др.), `dataforseo` (api_request; в 2026-08 ответ обрезался примерно до 10 элементов — для полных выгрузок скрипты). Skills: `seo-refresh`, `seo-offpage`, `page-diagnosis`, `serp-check`, `gbp-weekly-post`.
 
 ## Запуск скриптов (Windows, Git Bash)
-- Python — `integrations/.venv/Scripts/python.exe`; переменные — `set -a && source integrations/.env.local && set +a`; `PYTHONIOENCODING=utf-8 PYTHONUTF8=1` (иначе запись файлов идёт в cp1251 и падает на символах вроде «£» в запросах); маршрут в аргументе (`/gevelisolatie/`) — с `MSYS_NO_PATHCONV=1`. Переменные окружения между вызовами Bash не сохраняются — цепочку команд запускать одним вызовом.
+- Еженедельный сбор — одна команда из `seo-ops/`: `integrations/.venv/Scripts/python.exe run_weekly_refresh.py`. 11 шагов по порядку (список — в skill `seo-refresh`), каждый — отдельным процессом с `.env.local` и UTF-8; в конце таблица OK / FAILED / SKIPPED. Код выхода: 0 — всё OK, 2 — нужен вход в GSC (шаги GSC пропущены), 1 — упал другой шаг.
+- Отдельные скрипты: Python — `integrations/.venv/Scripts/python.exe`; `integrations/.env.local` загрузчики подгружают сами (GSC и GA4 — через `google_clients/config.py`, у WP, GBP и DataForSEO — свой код), переменные окружения главнее файла; `PYTHONIOENCODING=utf-8 PYTHONUTF8=1` (иначе запись файлов идёт в cp1251 и падает на символах вроде «£» в запросах); маршрут в аргументе (`/gevelisolatie/`) — с `MSYS_NO_PATHCONV=1`. Переменные окружения между вызовами Bash не сохраняются — цепочку команд запускать одним вызовом.
 - Доступы скриптов: GSC — OAuth-токен (`BMKLUS_GSC_TOKEN_JSON`; протух — `integrations/test_gsc_access.py` откроет браузер для входа, поэтому запускать только при владельце); GA4 и MCP `gsc` / `google-analytics` — сервисный аккаунт; GBP — токен из `integrations/make_gbp_token.py`; Google Ads — `D:\projects\bmklus\google\google-ads.yaml` (там же утилиты Ads и их выгрузки в `outputs\`, токен — `get_ads_refresh_token.py`).
-- В venv живёт и MCP-сервер GA4 (`analytics-mcp`, его нет в `requirements.txt`) — venv не пересоздавать только по `requirements.txt`.
+- В venv живёт и MCP-сервер GA4 (`analytics-mcp`, есть в `requirements.txt` с 2026-09-29).
 
 ## Расписание
 Локальные рутины Claude Desktop: `seo-weekly-refresh` (чт 13:00 → skill `seo-refresh`) и `seo-monthly-offpage` (1-е число, 14:00 → skill `seo-offpage`). Промпты — `~/.claude/scheduled-tasks/<имя>/SKILL.md`, расписание — в Desktop: Code → Routines. Нужны открытое приложение и включённый компьютер; пропущенный запуск догоняется один раз при следующем открытии. Облачная GBP-рутина в claude.ai с 2026-09-28 падает с 403 и не используется — удаляет владелец (`../docs/BACKLOG.md`); GBP-посты — вручную через skill `gbp-weekly-post`.
 
 ## Общие определения сборщиков
-`integrations/google_clients/definitions.py`: ключевые события (из `config/conversions.yaml` — единый список для всех загрузчиков), лаг GSC, шаблоны брендовых запросов и мусорных рефереров, склейка URL с параметрами. Меняешь определение — меняй там.
+`integrations/google_clients/definitions.py`: ключевые события (из `config/conversions.yaml` — единый список для всех загрузчиков), лаг GSC, шаблоны брендовых запросов и мусорных рефереров, склейка URL с параметрами, правило каннибализации. Меняешь определение — меняй там. Доступ к API тоже один на все сборщики: GSC — `gsc_client.build_service` (его же берут query-level CSV и URL Inspection), GA4 — `get_client` / `run_report` / `date_range` из `ga4_client.py` (их же берёт `ga4/landing_page_loader.py`).
 
 ## Известные дефекты пайплайна (учитывать, пока не исправлены)
-- Два параллельных пайплайна GSC/GA4: сводный снапшот (`integrations/google_clients/`, 28 дней) и query-level CSV (`integrations/gsc/`, `integrations/ga4/`, 28/90 дней).
-- `keyword_master` v2/v3 — апрель 2026, с данными старого сайта: без пересборки не опираться на `run_page_audit_v1.py`, `run_page_vs_query_gap_v1.py`, `run_keyword_intelligence_review_v2.py`.
-- `run_indexation_debug_v1.py` считает вердикт `NEUTRAL` проиндексированным; `run_query_intelligence_review_v1.py` читает несуществующие колонки.
 - В GSC встречаются мусорные запросы вида `sausklaar stucwerk voorstrijken;7;2;-5;90;…` — такими приходят из API; исключать.
 
-План исправлений — `reports/combined/seo_ops_system_audit_2026-09-04.md` (пункты о документах, удалённых 2026-09-29, неактуальны — они в git-теге `instructions-v1`) и `../docs/BACKLOG.md`.
+Шаги 1 и 3 плана `reports/combined/seo_ops_system_audit_2026-09-04.md` выполнены 2026-09-29: один слой доступа и одни определения для сводного снапшота и query-level CSV, одна команда сбора, мёртвые скрипты и связка `keyword_master` (апрельские данные старого сайта) удалены — они в git-истории; игнорируемые `tools/.tmp_*` и данные `keyword_master` — в `_archive/`. Сводный снапшот (агрегаты для `rules.py`) и query-level CSV (строки запрос × страница) — два выхода одного сбора, не два пайплайна. Подбор новых запросов — разово через MCP `dataforseo` (платно, правила — в «Границах»).

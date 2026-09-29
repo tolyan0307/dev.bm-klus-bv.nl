@@ -1,88 +1,20 @@
 """
 landing_page_loader.py — Pull GA4 landing-page data for SEO/page analysis.
 
-Reuses existing GA4 auth from integrations/google_clients/config.py and
-the _run_report / _get_client helpers from ga4_client.py.
+GA4 auth and report helpers: google_clients.ga4_client (shared by all collectors).
 
 Returns raw API rows as list[dict].
 """
 
 from __future__ import annotations
 
-import os
 import sys
-from datetime import date, timedelta
 from pathlib import Path
-
-# Load .env.local
-ENV_LOCAL = Path(__file__).resolve().parents[1] / ".env.local"
-if ENV_LOCAL.is_file():
-    for line in ENV_LOCAL.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if line and not line.startswith("#") and "=" in line:
-            key, _, val = line.partition("=")
-            os.environ.setdefault(key.strip(), val.strip())
 
 # Add parent for google_clients import
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from google_clients.config import load_ga4_config, Ga4Config
-from google_clients.definitions import load_key_event_names
-
-from google.analytics.data_v1beta import BetaAnalyticsDataClient
-from google.analytics.data_v1beta.types import (
-    DateRange,
-    Dimension,
-    FilterExpression,
-    Filter,
-    Metric,
-    RunReportRequest,
-)
-
-KEY_EVENT_NAMES = load_key_event_names()  # config/conversions.yaml
-
-
-def _get_client(cfg: Ga4Config) -> BetaAnalyticsDataClient:
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(cfg.service_account_json)
-    return BetaAnalyticsDataClient()
-
-
-def _date_range(days: int) -> tuple[DateRange, dict]:
-    end = date.today() - timedelta(days=1)
-    start = end - timedelta(days=days - 1)
-    dr = DateRange(start_date=start.isoformat(), end_date=end.isoformat())
-    info = {"start": start.isoformat(), "end": end.isoformat()}
-    return dr, info
-
-
-def _run_report(
-    client: BetaAnalyticsDataClient,
-    property_id: str,
-    dimensions: list[str],
-    metrics: list[str],
-    date_range: DateRange,
-    limit: int = 10000,
-    dimension_filter: FilterExpression | None = None,
-) -> list[dict]:
-    request = RunReportRequest(
-        property=f"properties/{property_id}",
-        date_ranges=[date_range],
-        dimensions=[Dimension(name=d) for d in dimensions],
-        metrics=[Metric(name=m) for m in metrics],
-        limit=limit,
-    )
-    if dimension_filter:
-        request.dimension_filter = dimension_filter
-
-    response = client.run_report(request)
-    rows = []
-    for row in response.rows or []:
-        entry = {}
-        for i, dv in enumerate(row.dimension_values):
-            entry[dimensions[i]] = dv.value
-        for i, mv in enumerate(row.metric_values):
-            entry[metrics[i]] = mv.value
-        rows.append(entry)
-    return rows
+from google_clients.config import load_ga4_config
+from google_clients.ga4_client import KEY_EVENT_NAMES, date_range, get_client, key_event_filter, run_report
 
 
 def pull_landing_pages_by_channel(days: int = 90) -> dict:
@@ -92,10 +24,10 @@ def pull_landing_pages_by_channel(days: int = 90) -> dict:
     Metrics: sessions, engagedSessions, engagementRate, averageSessionDuration
     """
     cfg = load_ga4_config()
-    client = _get_client(cfg)
-    dr, dr_info = _date_range(days)
+    client = get_client(cfg)
+    dr, dr_info = date_range(days)
 
-    rows = _run_report(
+    rows = run_report(
         client,
         cfg.property_id,
         dimensions=["landingPagePlusQueryString", "sessionDefaultChannelGroup"],
@@ -116,27 +48,20 @@ def pull_landing_pages_by_channel(days: int = 90) -> dict:
 
 def pull_key_events_by_landing_page(days: int = 90) -> dict:
     """
-    Pull key events by landing page (Contact_Form_Site, Phone, Whatsapp).
+    Pull key events by landing page (key events from config/conversions.yaml).
     """
     cfg = load_ga4_config()
-    client = _get_client(cfg)
-    dr, dr_info = _date_range(days)
+    client = get_client(cfg)
+    dr, dr_info = date_range(days)
 
-    event_filter = FilterExpression(
-        filter=Filter(
-            field_name="eventName",
-            in_list_filter=Filter.InListFilter(values=KEY_EVENT_NAMES),
-        )
-    )
-
-    rows = _run_report(
+    rows = run_report(
         client,
         cfg.property_id,
         dimensions=["landingPagePlusQueryString", "eventName"],
         metrics=["eventCount"],
         date_range=dr,
         limit=10000,
-        dimension_filter=event_filter,
+        dimension_filter=key_event_filter(),
     )
 
     return {
@@ -155,24 +80,18 @@ def pull_key_events_by_date(days: int = 90, event_names: list[str] | None = None
     Rows: {date: 'YYYY-MM-DD', eventName, eventCount}.
     """
     cfg = load_ga4_config()
-    client = _get_client(cfg)
-    dr, dr_info = _date_range(days)
+    client = get_client(cfg)
+    dr, dr_info = date_range(days)
     names = event_names or KEY_EVENT_NAMES
 
-    event_filter = FilterExpression(
-        filter=Filter(
-            field_name="eventName",
-            in_list_filter=Filter.InListFilter(values=names),
-        )
-    )
-    rows = _run_report(
+    rows = run_report(
         client,
         cfg.property_id,
         dimensions=["date", "eventName"],
         metrics=["eventCount"],
         date_range=dr,
         limit=10000,
-        dimension_filter=event_filter,
+        dimension_filter=key_event_filter(names),
     )
     for r in rows:
         d = r.get("date", "")

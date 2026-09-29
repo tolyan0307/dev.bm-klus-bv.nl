@@ -45,7 +45,8 @@ def _get_credentials(cfg: GscConfig) -> Credentials:
     return creds
 
 
-def _build_service(cfg: GscConfig):
+def build_service(cfg: GscConfig):
+    """Search Console API service; the one GSC auth path for every collector."""
     creds = _get_credentials(cfg)
     return build("searchconsole", "v1", credentials=creds)
 
@@ -109,7 +110,7 @@ def _parse_rows(rows: list[dict]) -> list[dict]:
 
 def query_top_pages_last_28d(cfg: GscConfig, row_limit: int = 20) -> dict:
     """Top pages by clicks over the last 28 days with final data (URL variants merged)."""
-    service = _build_service(cfg)
+    service = build_service(cfg)
     start, end = _date_range(28)
 
     body = {
@@ -137,7 +138,7 @@ def query_top_queries_last_28d(cfg: GscConfig, row_limit: int = 50) -> dict:
     Sorting by impressions (not clicks) surfaces visible queries without
     clicks; brand queries are flagged with is_brand.
     """
-    service = _build_service(cfg)
+    service = build_service(cfg)
     start, end = _date_range(28)
 
     body = {
@@ -174,7 +175,7 @@ def query_pages_comparison(
     unfinished data. URL variants with query strings are merged into their page.
     Returns rows with current + previous metrics and deltas.
     """
-    service = _build_service(cfg)
+    service = build_service(cfg)
 
     # Current period
     curr_end = date.today() - timedelta(days=GSC_LAG_DAYS)
