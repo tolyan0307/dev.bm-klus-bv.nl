@@ -7,7 +7,6 @@ import { CtaClickTracker } from '@/components/cta-click-tracker'
 import { getSiteUrl, isProductionHost } from '@/data/sitemap-plan'
 import { Suspense } from 'react'
 import PageviewBeacon from '@/components/pageview-beacon'
-import GoogleAggregateRatingJsonLd from '@/components/google-aggregate-rating-jsonld'
 import './globals.css'
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -66,7 +65,6 @@ export default function RootLayout({
         <GtmProvider />
         <CtaClickTracker />
         <Suspense fallback={null}><PageviewBeacon /></Suspense>
-        <Suspense fallback={null}><GoogleAggregateRatingJsonLd /></Suspense>
       </body>
     </html>
   )
