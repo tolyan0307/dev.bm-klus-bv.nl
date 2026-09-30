@@ -51,12 +51,6 @@ const WA_URL =
 
 export const QUOTE_MODAL_EVENT = "open-quote-modal"
 
-export function openQuoteModal() {
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(new CustomEvent(QUOTE_MODAL_EVENT))
-  }
-}
-
 interface QuoteModalProps {
   dienst?: string
 }

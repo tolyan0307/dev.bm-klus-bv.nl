@@ -131,29 +131,9 @@
     @apply text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl;
   }
 
-  /* Section Title H2 — primary section headings inside a page */
-  .section-title-h2 {
-    @apply text-2xl font-bold tracking-tight text-foreground sm:text-3xl;
-  }
-
-  /* Section Title H3 — subsection / card headings */
-  .section-title-h3 {
-    @apply text-lg font-semibold tracking-tight text-foreground;
-  }
-  
-  /* Section Description */
-  .section-description {
-    @apply mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg;
-  }
-  
   /* Premium Card */
   .card-premium {
     @apply rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:border-primary/30 hover:shadow-md;
-  }
-  
-  /* Glass Effect */
-  .glass-card {
-    @apply rounded-xl border border-white/10 bg-white/10 backdrop-blur-md;
   }
   
   /* CTA Button Primary */
@@ -168,11 +148,6 @@
   /* CTA Button Secondary */
   .btn-secondary {
     @apply inline-flex items-center gap-2 rounded-lg border border-border bg-transparent px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-primary hover:bg-primary/5;
-  }
-  
-  /* Interactive Icon Container */
-  .icon-container {
-    @apply flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/60 transition-colors;
   }
   
   /* Section Spacing */
@@ -202,11 +177,6 @@
 .below-fold {
   content-visibility: auto;
   contain-intrinsic-size: auto 500px;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
 }
 
 .no-scrollbar {

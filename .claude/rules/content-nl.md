@@ -32,7 +32,7 @@ paths:
 ## Утверждения
 - Не выдумывать гарантии, сертификаты, награды, суммы субсидий, сроки, число проектов, марки материалов, юридические утверждения. Неподтверждённое помечай в черновике: `[CLAIM_NEEDS_CONFIRMATION]`, `[MISSING_BUSINESS_INPUT]`, `[UNCERTAIN_TERM]`, `[CHECK_LOCAL_WORDING]` — и не выкатывай текст с пометками.
 - Экономия энергии — только условно: «kan leiden tot», не «leidt tot» и не «bespaart altijd».
-- Без «altijd» и «garanderen» в обещаниях и без сроков вида «binnen X uur». Такие обещания (сроки offerte и контакта, гарантии, «vaste prijs», «geen onderaannemers», «1200+ gevels», «2–4× woningwaarde», «25 jr», сроки службы покраски, длительность работ) убраны 2026-09-30 по решению владельца — не возвращать. Ждут подтверждения: «VCA* gecertificeerd» и «ETICS gecertificeerd» (`docs/BACKLOG.md`) — не размножать.
+- Без «altijd» и «garanderen» в обещаниях и без сроков вида «binnen X uur». Такие обещания (сроки offerte и контакта, гарантии, «vaste prijs», «geen onderaannemers», «1200+ gevels», «2–4× woningwaarde», «25 jr», сроки службы покраски, длительность работ) убраны 2026-09-30 по решению владельца — не возвращать. «VCA* gecertificeerd» владелец подтвердил 2026-09-30; «ETICS gecertificeerd» — о системах производителей.
 - Цены запрещены (см. `CLAUDE.md`): тема kosten — только через факторы цены и «prijs na opname».
 
 ## Одна страница — один интент

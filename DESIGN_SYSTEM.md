@@ -57,15 +57,10 @@
 | `.section-header-line` | линия `h-px w-12 bg-primary` | там же |
 | `.section-header-label` | `text-sm font-semibold uppercase tracking-wider text-primary` | там же |
 | `.section-title` | `text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl` — размер H2 секции (комментарий «H1» в CSS неточен) | `<h2>` страниц проектов и `contact` |
-| `.section-title-h2` | `text-2xl … sm:text-3xl` | не используется |
-| `.section-title-h3` | `text-lg font-semibold tracking-tight` | не используется |
-| `.section-description` | `mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg` | не используется |
 | `.btn-hero` | главная кнопка на тёмном фоне: `border-primary/40 bg-primary/15 text-white backdrop-blur-sm`, в hover плотнее | hero подстраниц кластера, `keimen`, `sausklaar-behangklaar`, `/onze-werken/`, `contact` и всех страниц проектов; в `[location]`, `hero-gevelisolatie.tsx`, `hero-section.tsx` тот же набор инлайн |
 | `.btn-primary` | заливка `primary`, `rounded-lg px-6 py-3`, тень | 404, `components/contact/ContactFormCard.tsx` |
 | `.btn-secondary` | контурная кнопка для светлого фона | 404, `ContactFormCard.tsx` |
 | `.card-premium` | старая карточка: `rounded-xl border border-border bg-card p-6 shadow-sm` + hover; премиум-языку §5 не соответствует, несмотря на имя | `ContactFormCard.tsx` |
-| `.glass-card` | `rounded-xl border border-white/10 bg-white/10 backdrop-blur-md` | не используется |
-| `.icon-container` | `h-12 w-12 rounded-lg bg-secondary/60` | не используется; актуальная иконка в контейнере — §5.3 |
 | `.below-fold` | `content-visibility: auto; contain-intrinsic-size: auto 500px` | обёртки секций, §4 |
 | `.no-scrollbar` | прячет полосу прокрутки | карусель отзывов в `components/google-reviews.tsx` |
 
@@ -191,7 +186,7 @@
 - **Бледный текст:** `text-muted-foreground/60` — 26 раз (≈2.5:1), в том числе подписи строк в `verdieping-section.tsx` и на `[location]`; метки фактов на `[location]` — `text-primary/45` при размере 10px.
 - **Палитра Tailwind вместо токенов:** `Callout` в вариантах `info`, `warning`, `tip` (синий, янтарный, зелёный); карточки «Lokale informatie» на `[location]` (зелёный, синий, янтарный, фиолетовый + hex-свечение в `style`); звёзды рейтинга двух цветов — `fill-amber-400` (10 файлов) и `fill-[#FBBC05]` (9 файлов).
 - **404 без тёмного hero** (`app/not-found.tsx`): до прокрутки прозрачный навбар с белыми ссылками стоит на кремовом фоне.
-- **Мёртвое:** `components/cta-section.tsx`, `app/onze-werken/faq.tsx`, `styles/globals.css`, `@keyframes shimmer` в `app/globals.css`, неиспользуемые классы из §3; `components/ui/` исключён из сканирования Tailwind (`@source not "../components/ui"`), поэтому его классы в CSS не попадают.
+- **Мёртвое:** удалено 2026-09-30 (`cta-section`, `onze-werken/faq.tsx`, `styles/globals.css`, `@keyframes shimmer`, `.glass-card`, `.icon-container`, `.section-title-h2/-h3`, `.section-description`); `components/ui/` исключён из сканирования Tailwind (`@source not "../components/ui"`), поэтому его классы в CSS не попадают.
 
 ## 9. Эталонные файлы
 
