@@ -41,6 +41,14 @@ import { projects } from "@/lib/content/projects"
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
 import GoogleRatingBadge from "@/components/google-rating-badge"
+import { RelatedProjects, projectsForCity } from "@/components/projects/RelatedProjects"
+
+// Projects shown in the hand-made featured blocks below; the generic block skips them.
+const FEATURED_CITY_PROJECTS: Record<string, string> = {
+  dordrecht: "dordrecht-gevelisolatie-10cm-sierpleister-2025",
+  vlaardingen: "vlaardingen-gevelisolatie-6cm-sierpleister-2024",
+  rotterdam: "rotterdam-julianastraat-aanbouw-isolatie-4cm-2026",
+}
 
 const ReviewsSection = dynamic(
   () => import("@/components/reviews-section"),
@@ -96,8 +104,8 @@ const voordelen = [
   },
   {
     icon: Clock,
-    title: "Snel resultaat",
-    text: "Gemiddeld 1–2 weken voor een rijtjeshuis (±60 m²).",
+    title: "Planning vooraf",
+    text: "Bij de opname bespreken we een realistische planning voor uw woning.",
   },
 ]
 
@@ -329,13 +337,13 @@ export default async function GevelisolatieLocationPage({
               const facts = slug === "dordrecht"
                 ? [
                     ["Prijsindicatie", "na opname op locatie"],
-                    ["Doorlooptijd", "1–2 weken"],
+                    ["Planning", "in overleg"],
                     ["Opname", "Op locatie, op afspraak"],
                     ["Bouwperiode", data.bouwperiode.split(",")[0].replace(/\s*\(.*$/, "")],
                     ["Werkgebied", data.city],
                   ] as const
                 : [
-                    ["Doorlooptijd", "1–2 weken"],
+                    ["Planning", "in overleg"],
                     ["Opname", "Op locatie"],
                     ["Bouwperiode", data.bouwperiode.split(",")[0].split(".")[0]],
                     ["Prijsindicatie", "na opname"],
@@ -791,6 +799,23 @@ export default async function GevelisolatieLocationPage({
                   </div>
                 </section>
               </div>
+            </div>
+          )
+        })()}
+
+        {/* ── Other projects in this city (picked from lib/content/projects.ts) ── */}
+        {(() => {
+          const featured = FEATURED_CITY_PROJECTS[slug]
+          const items = projectsForCity(data.city).filter((p) => p.slug !== featured)
+          return (
+            <div className="below-fold">
+              <RelatedProjects
+                items={items}
+                tagline="Uitgevoerde projecten"
+                heading={featured ? "Meer projecten in" : "Projecten in"}
+                accent={data.city}
+                id="projecten-in-de-stad"
+              />
             </div>
           )
         })()}

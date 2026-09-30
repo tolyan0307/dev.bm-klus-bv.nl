@@ -22,8 +22,7 @@
 
 ## Контент — нужны решения владельца
 - **SEO-аудит основных страниц 2026-09-30** (`seo-ops/reports/seo/site_audit_2026-09-30/README.md`): вопросы владельцу (обещания, факты о компании, GBP, интерьер) и пакеты правок A–E (остатки цен, текст интерактивных блоков в HTML, проекты на страницах услуг, schema, title проектов) — ждут решения.
-- Подтвердить или убрать обещания и цифры, которых владелец не подтверждал: «25 jr garantie», «1200+ gevels», «2–4× meer woningwaarde», «ETICS gecertificeerd» (`components/etics-section.tsx`, `components/hero-section.tsx`); сроки «offerte binnen 24–48 uur» (meta главной в `data/sitemap-plan.ts`, `components/services/ServicesRailInteractive.tsx`), «Offerte binnen 48 uur» (`components/process-steps.tsx`, главная и `/diensten/`), «binnen 2 werkdagen» (`lib/content/sierpleister.ts`), «binnen één werkdag contact» (`app/onze-werken/page.tsx`, FAQ и JSON-LD).
-- Остатки цен в текстах сайта: «voor advies en richtprijs» (`lib/content/sierpleister.ts`).
+- Сертификаты — подтвердить у владельца: «VCA* gecertificeerd» (футер, trust-strip, `/over-ons/`, `/diensten/`, контент услуг и городов) и «ETICS gecertificeerd» / «Gecertificeerde ETICS-systemen» (главная, хаб, afwerkingen, materialen, rc-waarde-dikte). Остальные неподтверждённые обещания (гарантии, сроки, «vaste prijs», «geen onderaannemers», «1200+ gevels», «2–4× woningwaarde», «25 jr», сроки службы покраски) убраны 2026-09-30. Не подключены и не правились: `components/cta-section.tsx`, `data/services.ts` (в них тоже есть такие обещания).
 - Цены в Google Ads: «Vanaf €35/m² spachtelputz» (buiten stucwerk), «Vanaf €25/m²» в заголовке и описании (gevel schilderen), возможно «vanaf €110» в старых группах — противоречат запрету цен (`seo-ops/knowledge.md`). Правит владелец в Google Ads.
 - keimen: с 2026-09-21 страница почти пропала из показов (100–125 в день → 0–6); 30.09 по «keimen kosten» её нет в топ-30. В индексе — версия с ценами от 04.09: последний обход был до удаления цен. Контент не трогать до ревью 2026-10-16. Разбор — `seo-ops/reports/seo/home-buiten-stucwerk_diagnosis_2026-09-30.md`.
 - **Не в индексе** (URL Inspection, 2026-09-30): 13 из 21 городской страницы, `/gevelisolatie/materialen/`, `/gevelisolatie/rc-waarde-dikte/` и 4 проекта — «Gecrawld – momenteel niet geïndexeerd». Решить вместе с планом Wave 1: что усиливать, что объединять или закрывать.
@@ -35,7 +34,6 @@
 - Несостыковки в данных проектов: Almere — в схеме `year: 2024`, в карточке `meta.year: 2025`; Spijkenisse — `city` в схеме «Spijkenisse», в карточке «Spijkenisse (Malledijk)».
 - Дизайн-проход для страниц keimen и sausklaar (просьба владельца 2026-09-04): обе уже собраны на премиум-паттернах — уточнить у владельца, чего он ждёт.
 - Хаб `/gevelrenovatie/` — одобрен в принципе, отложен до решения владельца.
-- GBP-посты: ротация типа `service` включает `/muren-stucen/` (интерьер), хотя с 2026-07-19 в интерьер не вкладываемся — оставить или убрать.
 - Телефон записан в двух форматах: «+31 6 12 07 98 08» и «+31 6 1207 9808» — выбрать один.
 
 ## Изображения (из аудита замены ИИ-фото, 2026-09-15)

@@ -433,7 +433,7 @@ export default function SausklaarBehangklaarPage() {
                 <p>
                   De brancheorganisatie voor stukadoors (NOA) wijst erop dat 'sausklaar' geen vastgelegde
                   norm is. Leg daarom vooraf vast wat u verwacht: volledig glad, geen zichtbare structuur en
-                  direct te sauzen zonder extra plamuurwerk. Zo staat het ook in onze offerte.
+                  direct te sauzen zonder extra plamuurwerk.
                 </p>
               </Callout>
             </Section>
@@ -554,7 +554,7 @@ export default function SausklaarBehangklaarPage() {
                   <div className="mt-6 flex items-start gap-2 rounded-lg border border-border/30 bg-secondary/15 px-4 py-3">
                     <Info className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/60" strokeWidth={1.5} />
                     <p className="text-[11px] leading-relaxed text-muted-foreground">
-                      Een gemiddelde kamer is doorgaans in één tot twee werkdagen gestuct; de planning wordt bij de opname besproken.
+                      De planning bespreken we bij de opname.
                     </p>
                   </div>
                 </div>

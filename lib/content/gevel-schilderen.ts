@@ -46,7 +46,7 @@ export const toc = {
   label: "Inhoud",
   items: [
     { anchor: "#core", label: "Wat levert het op?" },
-    { anchor: "#kosten", label: "Kosten per m²" },
+    { anchor: "#kosten", label: "Kosten" },
     { anchor: "#offerte", label: "Offerte" },
     { anchor: "#verfsoorten", label: "Verfsoorten" },
     { anchor: "#voorbereiding", label: "Voorbereiding & primer" },
@@ -77,7 +77,7 @@ export const kosten = {
     "De prijs per m² voor gevel schilderen (buitenmuur verven) varieert afhankelijk van de ondergrond, de voorbereiding en het verfsysteem. Hieronder ziet u de drie situaties die het prijsniveau bepalen.",
     "Exacte prijs na opname op locatie.",
   ],
-  note: "Prijs per m² incl. arbeid & standaardmaterialen.\nExcl. steiger/hoogwerker, herstelwerk en intensieve reiniging; exacte prijs volgt na een gratis opname op locatie.",
+  note: "De exacte prijs volgt na een gratis opname op locatie.",
   priceFactors: {
     label: "Belangrijkste prijsfactoren:",
     items: [

@@ -29,12 +29,7 @@ const faqItems = [
   {
     question: "Hoe snel kan het werk starten en wat is de doorlooptijd?",
     answer:
-      "Na akkoord op de offerte plannen wij het werk meestal binnen 2-4 weken in. De doorlooptijd verschilt per project: van 2-3 dagen voor schilderwerk tot 1-2 weken voor complete gevelisolatie. Wij houden u gedurende het proces op de hoogte.",
-  },
-  {
-    question: "Welke garantie krijg ik op de uitgevoerde werkzaamheden?",
-    answer:
-      "Wij werken met kwaliteitsmaterialen en voeren elk project zorgvuldig uit. Garantie op vakmanschap en materiaalgebreken wordt per project schriftelijk vastgelegd in de offerte.",
+      "De planning en doorlooptijd verschillen per project: ze hangen af van de omvang, de afwerking en het weer. Bij de opname bespreken we een realistische planning, en tijdens het werk houden we u op de hoogte.",
   },
   {
     question: "Moet ik mijn huis voorbereiden voor de werkzaamheden?",

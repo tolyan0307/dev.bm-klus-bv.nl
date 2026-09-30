@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Zap, TrendingUp, Shield } from "lucide-react"
+import { ArrowRight, Check, Zap, Shield, ClipboardCheck, Layers } from "lucide-react"
 import ResponsiveImage from "@/components/responsive-image"
 import Link from "next/link"
 
@@ -10,8 +10,8 @@ const benefits = [
 
 const stats = [
   { icon: Zap, value: "tot 40%", label: "energiebesparing*" },
-  { icon: TrendingUp, value: "2–4×", label: "meer woningwaarde" },
-  { icon: Shield, value: "25 jr", label: "systeemlevensduur" },
+  { icon: ClipboardCheck, value: "Gratis", label: "opname op locatie" },
+  { icon: Layers, value: "3", label: "afwerkingen: stuc, sierpleister, steenstrips" },
 ]
 
 const finishes = [
@@ -95,9 +95,8 @@ export default function EticsSection() {
             <div className="mt-3 flex items-center justify-between px-1">
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Shield className="h-3.5 w-3.5 text-primary" />
-                <span className="font-medium">ETICS gecertificeerd · 25 jr garantie</span>
+                <span className="font-medium">ETICS gecertificeerd</span>
               </div>
-              <span className="text-xs font-bold text-foreground/60">1200+ gevels</span>
             </div>
           </div>
         </div>

@@ -20,12 +20,12 @@ const stapFaqs: { q: string; a: string }[][] = [
     { q: "Kan ik de startdatum zelf kiezen?", a: "We stemmen de datum af op uw voorkeur." },
   ],
   [
-    { q: "Hoe lang staat de steiger?", a: "Gemiddeld de volledige uitvoeringsperiode, vaak 1–2 weken afhankelijk van de geveloppervlakte." },
+    { q: "Hoe lang staat de steiger?", a: "Gedurende de hele uitvoering. Hoe lang dat is, hangt af van de geveloppervlakte en de afwerking; dat bespreken we bij de opname." },
     { q: "Worden beschadigingen hersteld?", a: "Ja, scheuren en losstaand metselwerk worden eerst hersteld voordat de isolatie begint." },
   ],
   [
     { q: "Welke isolatiedikte wordt gebruikt?", a: "Minimaal 100 mm EPS of gelijkwaardig, afgestemd op de gewenste Rc-waarde. Voor ISDE-subsidie geldt minimaal Rd 3,5 m²K/W." },
-    { q: "Hoe lang duurt deze fase?", a: "Afhankelijk van de oppervlakte: 1–3 werkdagen voor een gemiddelde rijwoning." },
+    { q: "Hoe lang duurt deze fase?", a: "Dat hangt af van de oppervlakte en de staat van de ondergrond. De planning bespreken we bij de opname." },
   ],
   [
     { q: "Moet ik aanwezig zijn bij oplevering?", a: "We raden het aan. U kunt samen met de uitvoerder het eindresultaat doorlopen." },

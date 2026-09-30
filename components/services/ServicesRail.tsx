@@ -82,7 +82,7 @@ const SERVICES_DATA = [
     previewText:
       "Voor strakke, behangklare of sausklare binnenwanden. Perfect bij renovatie, verbouwing of nieuwbouw.",
     keuzehulpText:
-      "Duidelijk resultaat: vlakke wand, direct sausklaar. Prijs per m², afhankelijk van de staat van de bestaande ondergrond en het aantal lagen.",
+      "Duidelijk resultaat: vlakke wand, direct sausklaar. De prijs hangt af van de staat van de bestaande ondergrond en het aantal lagen.",
   },
   {
     id: "06",
@@ -92,13 +92,13 @@ const SERVICES_DATA = [
     href: "/contact/",
     baseName: "dienst-schoonmaak",
     badge: "Op aanvraag" as string | undefined,
-    chips: ["Stofvrij", "Oplevering", "Snel gepland"] as [string, string, string],
+    chips: ["Schoon opgeleverd", "Oplevering", "Op aanvraag"] as [string, string, string],
     outcomeKey: "oplevering" as const,
     contactOnly: true as boolean | undefined,
     previewText:
       "Opleveringsschoonmaak na renovatie of verbouwing, op aanvraag. Zodat u het resultaat direct kunt bewonderen.",
     keuzehulpText:
-      "Neem contact op voor beschikbaarheid en prijsindicatie. Wij plannen snel in zodat uw oplevering op tijd verloopt.",
+      "Neem contact op voor beschikbaarheid en de mogelijkheden. De planning stemmen we met u af.",
   },
 ]
 

@@ -35,7 +35,7 @@ export const hero = {
 export const toc = [
   { id: "wat-is-buitenmuur-stucen", label: "Wat is buitenmuur stucen?" },
   { id: "voordelen", label: "Voordelen" },
-  { id: "kosten-prijs-per-m2", label: "Kosten per m²" },
+  { id: "kosten-prijs-per-m2", label: "Kosten" },
   { id: "werkwijze", label: "Werkwijze" },
   { id: "materialen-afwerkingen", label: "Materialen & afwerkingen" },
   { id: "keuzehulp", label: "Afwerking keuzehulp" },
@@ -94,7 +94,7 @@ export const voordelen = {
   ],
   note: "Het resultaat hangt af van ondergrond, systeemkeuze en detaillering.",
   disclaimer: [
-    "Prijs per m² incl. arbeid & materiaal. Excl. steiger, herstel en complexe detaillering.",
+    "De exacte prijs volgt na een gratis opname op locatie.",
     "Extra voorbehandeling en steigerwerk (afhankelijk van hoogte en situatie) worden afzonderlijk in de offerte vermeld.",
     "Let op: bij stucwerk op isolatie (ETICS) is de laagopbouw systeemgebonden; de prijs kan afwijken.",
   ],
@@ -112,7 +112,7 @@ export const kosten = {
     { label: "Betonlook / betonstuc (buiten)", note: "Arbeidsintensiefste afwerking; hoogste prijsniveau" },
   ],
   disclaimer: [
-    "Prijs per m² incl. arbeid & materiaal. Excl. steiger, herstel en complexe detaillering.",
+    "De exacte prijs volgt na een gratis opname op locatie.",
     "Extra voorbehandeling en steigerwerk (afhankelijk van hoogte en situatie) worden afzonderlijk in de offerte vermeld.",
     "Let op: bij stucwerk op isolatie (ETICS) is de laagopbouw systeemgebonden; de prijs kan afwijken.",
   ],

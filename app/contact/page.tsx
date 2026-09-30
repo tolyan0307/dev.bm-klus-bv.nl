@@ -280,9 +280,8 @@ export default function ContactPage() {
               </h2>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground max-w-xs lg:text-right lg:pb-1">
-              Stuur ons onderstaande gegevens mee — dan kunnen wij u binnen{" "}
-              <strong className="text-foreground">één werkdag</strong> een
-              duidelijke prijsindicatie geven.
+              Stuur ons onderstaande gegevens mee — dan kunnen wij uw
+              aanvraag sneller en beter beoordelen.
             </p>
           </div>
 

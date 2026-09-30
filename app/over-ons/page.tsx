@@ -304,9 +304,8 @@ export default function OverOnsPage() {
                   <p>
                     BM klus BV is een gespecialiseerd bedrijf in
                     buitengevelisolatie en renovatie, actief in de regio
-                    Rotterdam en Zuid-Holland. Wij werken met eigen vakkundige
-                    medewerkers — geen onderaannemers, één aanspreekpunt per
-                    project.
+                    Rotterdam en Zuid-Holland. Per project heeft u één vast
+                    aanspreekpunt.
                   </p>
                   <p>
                     Onze focus ligt op de buitenschil van de woning: isoleren,
@@ -324,8 +323,8 @@ export default function OverOnsPage() {
                   <div className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3">
                     <Users size={18} className="text-primary" />
                     <div>
-                      <p className="text-sm font-bold text-foreground">Eigen team</p>
-                      <p className="text-xs text-muted-foreground">Geen onderaannemers</p>
+                      <p className="text-sm font-bold text-foreground">Eén aanspreekpunt</p>
+                      <p className="text-xs text-muted-foreground">Via WhatsApp of e-mail</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3">

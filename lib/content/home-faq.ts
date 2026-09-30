@@ -24,12 +24,6 @@ export const homeFaqItems: HomeFaqItem[] = [
     link: false,
   },
   {
-    question: "Krijg ik garantie op het werk?",
-    answer:
-      "Wij werken met kwaliteitsmaterialen en voeren elk project zorgvuldig uit. Garantie op vakmanschap en materiaalgebreken wordt per project schriftelijk vastgelegd in de offerte. De voorwaarden verschillen per systeem, afwerking en offerte.",
-    link: true,
-  },
-  {
     question: "Kan ik subsidie krijgen voor gevelisolatie?",
     answer:
       "Ja, er zijn mogelijkheden voor subsidie of fiscale voordelen, zoals de ISDE-regeling. De regelgeving en bedragen wijzigen regelmatig — controleer altijd de actuele voorwaarden bij RVO.nl of uw gemeente. We denken graag met u mee over de mogelijkheden.",

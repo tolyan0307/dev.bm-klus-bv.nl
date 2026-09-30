@@ -18,6 +18,7 @@ import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-k
 import WatIsEticsSection from "@/components/sections/gevelisolatie/wat-is-etics-section"
 import VoordelenSection from "@/components/sections/gevelisolatie/voordelen-section"
 import KostenSection from "@/components/sections/gevelisolatie/kosten-section"
+import { RelatedProjects, projectsForService } from "@/components/projects/RelatedProjects"
 const WerkwijzeSection = dynamic(() => import("@/components/sections/gevelisolatie/werkwijze-section"))
 
 const AfwerkingenSection = dynamic(() => import("@/components/sections/gevelisolatie/afwerkingen-section"))
@@ -219,6 +220,16 @@ export default function GevelisolatiePage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <VerdiepingSection />
           </div>
+        </div>
+
+        <div className="below-fold">
+          <RelatedProjects
+            items={projectsForService("Gevelisolatie")}
+            tagline="Projecten"
+            heading="Gevelisolatie"
+            accent="in de praktijk"
+            lead="Een selectie van onze uitgevoerde projecten met buitengevelisolatie (ETICS)."
+          />
         </div>
 
         {/* ── Reviews ── */}

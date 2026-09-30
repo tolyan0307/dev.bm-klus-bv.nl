@@ -22,7 +22,7 @@ export const gevelisolatieIntro = {
   h1: "Gevelisolatie (ETICS): advies, mogelijkheden en prijsindicatie",
   paragraphs: [
     "Buitengevelisolatie (ETICS) is een beproefde methode om de buitenmuur te isoleren en tegelijk strak af te werken. U verbetert het comfort, beperkt warmteverlies via de gevel en geeft het pand meteen een nieuwe uitstraling.",
-    "Welke afwerking past bij uw woning — stuc, sierpleister, crepi of steenstrips — hangt af van bouwstijl, budget en onderhoudswensen. Wij beoordelen dit op locatie en stellen een concrete prijsindicatie op. Kijk bij onze richtprijzen of bekijk onze uitgevoerde projecten voor een eerlijk beeld.",
+    "Welke afwerking past bij uw woning — stuc, sierpleister, crepi of steenstrips — hangt af van bouwstijl, budget en onderhoudswensen. Wij beoordelen dit op locatie en stellen een concrete prijsindicatie op. Bekijk onze uitgevoerde projecten voor een eerlijk beeld.",
   ],
   trustBullets: [
     "VCA*-gecertificeerd en gecertificeerde ETICS-systemen",
@@ -64,7 +64,7 @@ export const gevelisolatieIntro = {
 export const gevelisolatieToc = [
   { id: "wat-is-etics", label: "Wat is ETICS?" },
   { id: "voordelen", label: "Voordelen" },
-  { id: "kosten-prijs-per-m2", label: "Kosten & prijs per m²" },
+  { id: "kosten-prijs-per-m2", label: "Kosten" },
   { id: "werkwijze", label: "Werkwijze" },
   { id: "afwerkingen", label: "Afwerkingen" },
   { id: "materialen", label: "Materialen" },

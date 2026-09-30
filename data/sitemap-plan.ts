@@ -46,7 +46,7 @@ export const PLANNED_ROUTES = [
   {
     path: "/",
     description:
-      "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis opname op locatie en offerte binnen 24–48 uur.",
+      "Professionele gevelisolatie, stucwerk, sierpleister en gevel schilderen in regio Rotterdam. Gratis opname op locatie en een offerte op maat.",
     changefreq: "monthly",
     priority: 1.0,
   },

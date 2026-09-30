@@ -49,6 +49,7 @@ import {
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
 import GoogleRatingBadge from "@/components/google-rating-badge"
+import { RelatedProjects, projectsForService } from "@/components/projects/RelatedProjects"
 
 const FaqAccordion = dynamic(() =>
   import("./faq-accordion").then((mod) => mod.FaqAccordion),
@@ -414,19 +415,19 @@ export default function GevelSchilderenPage() {
               {[
                 {
                   label: "Basis",
-                  niveau: "Voordeligst",
+                  niveau: "Weinig voorbereiding",
                   desc: "Lichte reiniging, directe verfbaarheid — geen herstelwerk vereist.",
                   highlight: false,
                 },
                 {
                   label: "Standaard",
-                  niveau: "Gemiddeld prijsniveau",
+                  niveau: "Gemiddelde voorbereiding",
                   desc: "Reiniging + primer/voorstrijk — de meest gevraagde situatie.",
                   highlight: true,
                 },
                 {
                   label: "Intensief",
-                  niveau: "Maatwerk",
+                  niveau: "Uitgebreide voorbereiding",
                   desc: "Herstel van voegwerk of scheuren + volledige voorbereiding.",
                   highlight: false,
                 },
@@ -1030,61 +1031,40 @@ export default function GevelSchilderenPage() {
               <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card">
                 <div className="border-b border-border bg-secondary/40 px-5 py-4">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-primary">
-                    Verwachte levensduur
+                    Verfsystemen
                   </p>
                   <p className="mt-0.5 text-sm font-semibold text-foreground">
-                    Per verfsysteem
+                    Eigenschappen per systeem
                   </p>
                 </div>
                 <div className="flex-1 divide-y divide-border">
                   {[
                     {
                       label: "Silicaatverf (KEIM)",
-                      years: "15–25",
-                      pct: 90,
                       note: "Mineraal, UV-bestendig",
                     },
                     {
                       label: "Siloxaanverf",
-                      years: "10–15",
-                      pct: 65,
                       note: "Waterafstotend, flexibel",
                     },
                     {
                       label: "Acrylverf",
-                      years: "7–12",
-                      pct: 48,
                       note: "Breed inzetbaar",
                     },
-                  ].map(({ label, years, pct, note }) => (
+                  ].map(({ label, note }) => (
                     <div key={label} className="px-5 py-4">
-                      <div className="flex items-baseline justify-between gap-2">
-                        <p className="text-sm font-semibold text-foreground">
-                          {label}
-                        </p>
-                        <p className="shrink-0 text-base font-black text-primary">
-                          {years}
-                          <span className="ml-0.5 text-xs font-normal text-muted-foreground">
-                            {" "}
-                            jr
-                          </span>
-                        </p>
-                      </div>
+                      <p className="text-sm font-semibold text-foreground">
+                        {label}
+                      </p>
                       <p className="mt-0.5 text-[11px] text-muted-foreground">
                         {note}
                       </p>
-                      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
-                        <div
-                          className="h-full rounded-full bg-primary/60"
-                          style={{ width: `${pct}%` }}
-                        />
-                      </div>
                     </div>
                   ))}
                 </div>
                 <div className="border-t border-border bg-secondary/30 px-5 py-3">
                   <p className="text-[10px] italic text-muted-foreground">
-                    Afhankelijk van ligging, onderhoud en ondergrond.
+                    Hoe lang verf meegaat, hangt af van ligging, onderhoud en ondergrond.
                   </p>
                 </div>
               </div>
@@ -1252,6 +1232,16 @@ export default function GevelSchilderenPage() {
             </div>
           </div>
         </section>
+        </div>
+
+        <div className="below-fold">
+          <RelatedProjects
+            items={projectsForService("Gevel schilderen")}
+            tagline="Projecten"
+            heading="Gevel schilderen"
+            accent="in de praktijk"
+            lead="Een selectie van onze uitgevoerde projecten met gevelschilderwerk."
+          />
         </div>
 
         {/* ── REVIEWS ── */}

@@ -14,7 +14,7 @@ const steps = [
   {
     number: "02",
     icon: FileText,
-    title: "Offerte binnen 48 uur",
+    title: "Heldere offerte",
     description:
       "U ontvangt een duidelijke offerte met alle kosten en werkzaamheden.",
   },
@@ -28,9 +28,9 @@ const steps = [
   {
     number: "04",
     icon: CheckCircle2,
-    title: "Oplevering & garantie",
+    title: "Nette oplevering",
     description:
-      "We leveren netjes op en bieden garantie op materiaal en uitvoering.",
+      "We leveren netjes op en lopen het resultaat samen met u na.",
   },
 ]
 

@@ -485,7 +485,7 @@ export default function ServicesRailInteractive({ services }: { services: Servic
               </h3>
             </div>
             <p className="text-xs text-muted-foreground">
-              Gratis opname · Offerte binnen 24–48 uur (na opname)
+              Gratis opname · Offerte op maat na opname
             </p>
           </div>
 

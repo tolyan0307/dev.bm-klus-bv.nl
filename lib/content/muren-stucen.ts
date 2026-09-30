@@ -22,7 +22,7 @@ export const hero = {
   trustBullets: [
     "VCA*-gecertificeerd — vakkundig binnenstucwerk",
     "Behangklaar of sausklaar naar uw wens",
-    "Richtprijs per m\u00b2 na opname op locatie",
+    "Offerte op maat na opname op locatie",
   ],
   geoSentence:
     "Regio Rotterdam en omgeving (\u00b180\u2013100 km), Zuid-Holland en omliggende regio\u2019s.",
@@ -36,7 +36,7 @@ export const toc = [
   { id: "wat-is-muren-stucen", label: "Wat is muren stucen?" },
   { id: "afwerking-behangklaar-sausklaar", label: "Behangklaar vs. sausklaar" },
   { id: "voordelen", label: "Voordelen" },
-  { id: "kosten-prijs-per-m2", label: "Kosten per m\u00b2" },
+  { id: "kosten-prijs-per-m2", label: "Kosten" },
   { id: "werkwijze", label: "Werkwijze" },
   { id: "voorbereiding-ondergrond", label: "Voorbereiding & ondergrond" },
   { id: "droogtijd-schilderen", label: "Droogtijd" },
@@ -138,7 +138,7 @@ export const kosten = {
     { label: "Raapwerk (egaliseren)",   note: "Basislaag om wanden vlak te maken; daarna volgt behangklaar of sausklaar" },
   ],
   disclaimer: [
-    "Prijs per m\u00b2 incl. arbeid & standaardmaterialen.",
+    "De exacte prijs volgt na een gratis opname op locatie.",
     "Kleine oppervlakken kunnen een starttarief hebben; exacte prijs volgt na opname.",
   ],
   priceFactors: {
@@ -194,10 +194,10 @@ export const werkwijze = {
   verwachten: {
     label: "Wat mag u verwachten?",
     bullets: [
-      "Stofvrij werken door zorgvuldig afplakken",
+      "Zorgvuldig afplakken en afdekken",
       "Transparante prijsopgave vooraf",
       "Egale, naadloze afwerking op maat",
-      "Vakkundige monteurs met jarenlange ervaring",
+      "Vakkundige uitvoering",
       "Nette oplevering — u hoeft niets op te ruimen",
     ],
     projectsLink: "/onze-werken/",
@@ -278,7 +278,7 @@ export const faq = {
     {
       question: "Hoe lang duurt het stucen van een kamer?",
       answer:
-        "De doorlooptijd is afhankelijk van het oppervlak, het afwerkingsniveau en de droogtijd tussen lagen. Een gemiddelde kamer is doorgaans in \u00e9\u00e9n tot twee werkdagen gestuct. De exacte planning wordt bij de opname besproken.",
+        "De doorlooptijd is afhankelijk van het oppervlak, het afwerkingsniveau en de droogtijd tussen lagen. De exacte planning wordt bij de opname besproken.",
     },
     {
       question: "Wanneer kan ik schilderen of behangen na het stucen?",

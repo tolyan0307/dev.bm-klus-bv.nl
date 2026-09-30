@@ -18,12 +18,12 @@ export const hero = {
   h1: "Gevel sierpleister: spachtelputz of crepi voor een sterke buitenafwerking",
   lead: [
     "Gevel sierpleister is een decoratieve buitenpleister met zichtbare korrelstructuur \u2014 ook bekend als spachtelputz buiten of crepi. De korrelgrootte (1,5\u20133\u00a0mm) bepaalt de uitstraling en het maskerend vermogen.",
-    "BM klus BV werkt met correcte voorbereiding en verzorgt de complete detaillering: plint, hoeken en dagkanten. Na een korte opname stellen wij een heldere richtprijs en duidelijke scope op.",
+    "BM klus BV werkt met correcte voorbereiding en verzorgt de complete detaillering: plint, hoeken en dagkanten. Na een korte opname stellen wij een heldere offerte met duidelijke scope op.",
   ],
   trustBullets: [
     "VCA*-gecertificeerd — professionele gevelafwerking",
     "Keuze in korrel & structuur (1,5\u20133 mm)",
-    "Richtprijs per m\u00b2 na opname op locatie",
+    "Offerte op maat na opname op locatie",
   ],
   geoSentence:
     "Regio Rotterdam en omgeving (\u00b180\u2013100\u00a0km), Zuid-Holland en omliggende regio\u2019s.",
@@ -33,7 +33,7 @@ export const toc = [
   { id: "wat-is-gevel-sierpleister", label: "Wat is gevel sierpleister?" },
   { id: "afwerking-gids", label: "Structuren & voorbeelden" },
   { id: "voordelen", label: "Voordelen" },
-  { id: "kosten-prijs-per-m2", label: "Kosten per m\u00b2" },
+  { id: "kosten-prijs-per-m2", label: "Kosten" },
   { id: "werkwijze", label: "Werkwijze" },
   { id: "details-plint-dagkanten", label: "Details" },
   { id: "onderhoud-reinigen", label: "Onderhoud" },
@@ -169,7 +169,7 @@ export const kosten = {
     },
   ],
   disclaimer: [
-    "Prijs per m² incl. arbeid & standaardmaterialen.",
+    "De exacte prijs volgt na een gratis opname op locatie.",
     "Excl. steiger/hoogwerker, herstelwerk en complexe detaillering; exacte prijs volgt na opname.",
   ],
   priceFactors: {
@@ -236,8 +236,8 @@ export const werkwijze = {
   verwachten: {
     label: "Wat kunt u verwachten",
     bullets: [
-      "Opname op locatie voor advies en richtprijs",
-      "Gedetailleerde offerte binnen 2 werkdagen",
+      "Opname op locatie voor advies en offerte",
+      "Gedetailleerde offerte na de opname",
       "Vakkundig team met gevelervaring",
       "Nette werkplek: afplakken en opruimen inbegrepen",
       "Eindcontrole samen met opdrachtgever",

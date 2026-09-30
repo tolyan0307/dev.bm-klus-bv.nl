@@ -51,6 +51,7 @@ import {
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
 import GoogleRatingBadge from "@/components/google-rating-badge"
+import { RelatedProjects, projectsForService } from "@/components/projects/RelatedProjects"
 
 const WerkwijzeStepper = dynamic(() => import("./werkwijze-stepper"))
 const GevelAfwerkingGids = dynamic(
@@ -1125,6 +1126,16 @@ export default function SierpleisterPage() {
             </div>
           </div>
         </section>
+        </div>
+
+        <div className="below-fold">
+          <RelatedProjects
+            items={projectsForService("Sierpleister", "sierpleister")}
+            tagline="Projecten"
+            heading="Sierpleister"
+            accent="in de praktijk"
+            lead="Een selectie van onze uitgevoerde projecten met sierpleister op de gevel."
+          />
         </div>
 
         <div className="below-fold">

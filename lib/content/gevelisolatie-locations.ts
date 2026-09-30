@@ -53,7 +53,7 @@ export const locations: LocationData[] = [
       {
         vraag: "Hoelang duurt gevelisolatie bij een rijtjeshuis in Rotterdam?",
         antwoord:
-          "Een gemiddeld rijtjeshuis (±60 m² geveloppervlak) duurt doorgaans 1–2 weken, afhankelijk van de afwerking en eventueel herstelwerk aan de ondergrond.",
+          "De doorlooptijd hangt af van de geveloppervlakte, de gekozen afwerking en eventueel herstelwerk aan de ondergrond. De planning bespreken wij bij de opname.",
       },
       {
         vraag: "Is buitengevelisolatie geschikt voor wederopbouwwoningen in Rotterdam?",
@@ -290,7 +290,7 @@ export const locations: LocationData[] = [
       {
         vraag: "Hoelang duurt gevelisolatie in Vlaardingen?",
         antwoord:
-          "Een gemiddeld rijtjeshuis (±60 m² geveloppervlak) duurt doorgaans 1–2 weken, afhankelijk van de gekozen afwerking en eventueel herstelwerk. De exacte planning bespreken wij bij de opname.",
+          "De doorlooptijd hangt af van de geveloppervlakte, de gekozen afwerking en eventueel herstelwerk. De planning bespreken wij bij de opname.",
       },
       {
         vraag: "Welke woningen in Holy en Westwijk zijn het meest geschikt?",

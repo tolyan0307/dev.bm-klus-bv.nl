@@ -7,7 +7,7 @@ const usps = [
     icon: Award,
     title: "Vakmanschap & detaillering",
     description:
-      "Jarenlange ervaring in stucwerk, schilderwerk en gevelisolatie. Juist de details — hoeken, naden, aansluitingen — maken het verschil voor een duurzaam resultaat.",
+      "Gespecialiseerd in stucwerk, schilderwerk en gevelisolatie. Juist de details — hoeken, naden, aansluitingen — maken het verschil voor een duurzaam resultaat.",
   },
   {
     icon: Users,
@@ -19,7 +19,7 @@ const usps = [
     icon: Clock,
     title: "Gratis opname ter plaatse",
     description:
-      "Wij komen bij u langs om de situatie te beoordelen en stellen daarna een heldere offerte op met een vaste prijs per m².",
+      "Wij komen bij u langs om de situatie te beoordelen en stellen daarna een heldere offerte op maat op.",
   },
   {
     icon: Shield,
