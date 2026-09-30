@@ -30,7 +30,6 @@ const DETAILS = [
 
 export default function WerkwijzeStepper() {
   const [active, setActive] = useState(0);
-  const Icon = ICONS[active];
   const total = werkwijze.steps.length;
 
   return (
@@ -104,23 +103,24 @@ export default function WerkwijzeStepper() {
           </div>
         </div>
 
-        {/* Step content */}
-        <div className="flex flex-1 flex-col gap-3">
-          <div className="flex items-center gap-3">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-              <Icon className="h-4 w-4 text-primary" />
+        {/* Step content: all steps are in the HTML (crawlable), only the active one is shown */}
+        {werkwijze.steps.map((step, i) => {
+          const StepIcon = ICONS[i]
+          return (
+            <div key={step} hidden={i !== active} className="flex flex-1 flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <StepIcon className="h-4 w-4 text-primary" />
+                </div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">
+                  Stap {i + 1} / {total}
+                </p>
+              </div>
+              <h3 className="text-base font-bold text-foreground sm:text-lg">{step}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{DETAILS[i]}</p>
             </div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">
-              Stap {active + 1} / {total}
-            </p>
-          </div>
-          <h3 className="text-base font-bold text-foreground sm:text-lg">
-            {werkwijze.steps[active]}
-          </h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            {DETAILS[active]}
-          </p>
-        </div>
+          )
+        })}
 
         {/* Bottom nav — desktop */}
         <div className="mt-6 hidden items-center justify-between border-t border-border pt-4 sm:flex">
