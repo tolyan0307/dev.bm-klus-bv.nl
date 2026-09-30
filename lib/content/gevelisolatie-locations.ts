@@ -73,9 +73,9 @@ export const locations: LocationData[] = [
     slug: "den-haag",
     city: "Den Haag",
     region: "Zuid-Holland",
-    title: "Gevelisolatie Den Haag – buitenkant (ETICS)",
+    title: "Gevelisolatie Den Haag – gratis opname (ETICS)",
     description:
-      "Buitengevelisolatie (ETICS) in Den Haag en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie, offerte per m². Specialist uit Rotterdam.",
+      "Gevelisolatie Den Haag: buitenmuur isoleren met ETICS, ook bij massieve muren. Stuc, sierpleister of steenstrips. Gratis opname, contact via WhatsApp.",
     h1: "Gevelisolatie in Den Haag",
     intro:
       "Den Haag telt 21 beschermde stadsgezichten en een grote diversiteit aan woningtypen — van vooroorlogse herenhuizen in het Statenkwartier tot naoorlogse portiekflats in Moerwijk. Juist die verscheidenheid vraagt om maatwerk bij buitengevelisolatie. Wij beoordelen de constructie ter plekke en adviseren over de juiste ETICS-opbouw en afwerking.",

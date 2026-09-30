@@ -69,7 +69,7 @@ const faqItems = [
   {
     vraag: "Waarom varieert de totale opbouwdikte zoveel (10–18 cm)?",
     antwoord:
-      "De totale opbouw bestaat uit het isolatiepaneel plus de WDVS-lagen: hechtmortel, glasvlierwapening, primer en afwerklaag (samen ±25–40 mm). De isolatiedikte hangt af van de gewenste Rc en het gekozen materiaal. Bij Rc 3,5 met EPS: ±135 mm isolatie + 35 mm opbouw = ca. 17 cm totaal. Bij Rc 4,5 met PIR: ±120 mm + 30 mm = ca. 15 cm. De bandbreedte van 10–18 cm dekt de meeste woningprojecten.",
+      "De totale opbouw bestaat uit het isolatiepaneel plus de WDVS-lagen: hechtmortel, glasvlierwapening, primer en afwerklaag (samen ±25–40 mm). De isolatiedikte hangt af van de gewenste Rc en het gekozen materiaal. Bij Rc 3,5 met EPS: ±135 mm isolatie + 35 mm opbouw = ca. 17 cm totaal. Bij Rc 4,7 met PIR: ±120 mm + 30 mm = ca. 15 cm. De bandbreedte van 10–18 cm dekt de meeste woningprojecten.",
   },
   {
     vraag: "Kan ik de Rc-waarde achteraf nog verhogen?",
