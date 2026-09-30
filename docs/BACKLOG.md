@@ -21,6 +21,7 @@
 - Hero всех городских страниц — одно фото проекта в Дордрехте (`dordrecht-gevelisolatie-10cm-na-01`).
 
 ## Контент — нужны решения владельца
+- **SEO-аудит основных страниц 2026-09-30** (`seo-ops/reports/seo/site_audit_2026-09-30/README.md`): вопросы владельцу (обещания, факты о компании, GBP, интерьер) и пакеты правок A–E (остатки цен, текст интерактивных блоков в HTML, проекты на страницах услуг, schema, title проектов) — ждут решения.
 - Подтвердить или убрать обещания и цифры, которых владелец не подтверждал: «25 jr garantie», «1200+ gevels», «2–4× meer woningwaarde», «ETICS gecertificeerd» (`components/etics-section.tsx`, `components/hero-section.tsx`); сроки «offerte binnen 24–48 uur» (meta главной в `data/sitemap-plan.ts`, `components/services/ServicesRailInteractive.tsx`), «Offerte binnen 48 uur» (`components/process-steps.tsx`, главная и `/diensten/`), «binnen 2 werkdagen» (`lib/content/sierpleister.ts`), «binnen één werkdag contact» (`app/onze-werken/page.tsx`, FAQ и JSON-LD).
 - Остатки цен в текстах сайта: «voor advies en richtprijs» (`lib/content/sierpleister.ts`).
 - Цены в Google Ads: «Vanaf €35/m² spachtelputz» (buiten stucwerk), «Vanaf €25/m²» в заголовке и описании (gevel schilderen), возможно «vanaf €110» в старых группах — противоречат запрету цен (`seo-ops/knowledge.md`). Правит владелец в Google Ads.
