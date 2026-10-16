@@ -1,6 +1,6 @@
 # Page Inventory Summary v1
 
-**Generated:** 2026-09-29 20:52 UTC
+**Generated:** 2026-10-15 11:55 UTC
 **Generator:** `build_page_inventory.py v1`
 
 ---

@@ -1,11 +1,11 @@
 # WP Stats Snapshot (last 90 days)
 
-**Generated:** 2026-09-29 20:53 UTC
-**Date range:** 2026-07-01 to 2026-09-28
+**Generated:** 2026-10-15 11:57 UTC
+**Date range:** 2026-07-17 to 2026-10-14
 **Source:** BM Stats v2 plugin, https://bm-klus-bv.nl (provenance label: `[WP, 90d, lead-level]` / `[WP, 90d, event-level]`)
 **Plugin version:** 2.2.0
 
-> Pageview and CTA events exist only from 2026-09-04 (25 of 90 days in window). Lead rows exist from 2026-03-11.
+> Pageview and CTA events exist only from 2026-09-04 (41 of 90 days in window). Lead rows exist from 2026-03-11.
 
 ---
 
@@ -13,36 +13,36 @@
 
 | Metric | Value |
 |--------|-------|
-| Leads total | 24 |
-| Leads excl. spam | 24 |
+| Leads total | 28 |
+| Leads excl. spam | 28 |
 | Qualified (qualified + won + lost) | 0 |
 | Won | 0 |
 | Revenue on won (order_value) | € 0 |
-| With gclid | 11 |
+| With gclid | 14 |
 
 ### By status
 
 | Status | Leads |
 |--------|-------|
-| new | 6 |
-| archive | 18 |
+| new | 11 |
+| archive | 17 |
 
 ### By source (first touch)
 
 | Source | Leads |
 |--------|-------|
-| ads | 11 |
+| ads | 14 |
 | campaign | 1 |
-| organic | 2 |
+| organic | 3 |
 | direct | 10 |
 
 ### By form
 
 | Form | Leads |
 |------|-------|
-| other | 18 |
-| quote_modal | 4 |
-| contact_form | 2 |
+| other | 17 |
+| quote_modal | 8 |
+| contact_form | 3 |
 
 ---
 
@@ -50,58 +50,58 @@
 
 | Metric | Value |
 |--------|-------|
-| Page views | 659 |
-| CTA clicks | 9 |
-| Days with events | 25 |
+| Page views | 1016 |
+| CTA clicks | 12 |
+| Days with events | 41 |
 
 ### Top pages by views (conversion shown as — : views start later than lead events in this window)
 
 | Page | Views | CTA | Lead events | Conv. | Type |
 |------|-------|-----|-------------|-------|------|
-| / | 115 | 3 | 2 | — | home |
-| /gevelisolatie/ | 112 | 2 | 6 | — | service |
-| /buiten-stucwerk/ | 93 | 1 | 6 | — | service |
-| /gevelisolatie/afwerkingen/ | 51 | 0 | 2 | — | cluster |
-| /onze-werken/ | 47 | 0 | 1 | — | archive |
-| /contact/ | 28 | 2 | 6 | — | utility |
-| /sierpleister/ | 25 | 0 | 0 | — | service |
-| /gevelisolatie/kosten/ | 23 | 0 | 0 | — | cluster |
-| /over-ons/ | 23 | 0 | 1 | — | utility |
-| /diensten/ | 21 | 0 | 1 | — | service |
-| /gevel-schilderen/keimen/ | 15 | 1 | 0 | — | cluster |
-| /gevel-schilderen/ | 14 | 0 | 0 | — | service |
-| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 11 | 0 | 0 | — | project |
-| /gevelisolatie/rc-waarde-dikte/ | 9 | 0 | 0 | — | cluster |
-| /gevelisolatie/materialen/ | 6 | 0 | 1 | — | cluster |
-| /muren-stucen/ | 6 | 0 | 0 | — | service |
-| /muren-stucen/sausklaar-behangklaar/ | 6 | 0 | 0 | — | cluster |
-| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 5 | 0 | 0 | — | project |
-| /gevelisolatie/den-haag/ | 4 | 0 | 1 | — | city |
-| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 4 | 0 | 0 | — | project |
+| / | 186 | 4 | 3 | — | home |
+| /gevelisolatie/ | 160 | 2 | 6 | — | service |
+| /buiten-stucwerk/ | 155 | 1 | 6 | — | service |
+| /gevelisolatie/afwerkingen/ | 86 | 0 | 3 | — | cluster |
+| /onze-werken/ | 78 | 0 | 1 | — | archive |
+| /contact/ | 43 | 4 | 7 | — | utility |
+| /sierpleister/ | 38 | 0 | 0 | — | service |
+| /gevelisolatie/kosten/ | 32 | 0 | 0 | — | cluster |
+| /over-ons/ | 31 | 0 | 2 | — | utility |
+| /diensten/ | 30 | 0 | 1 | — | service |
+| /gevel-schilderen/ | 20 | 0 | 0 | — | service |
+| /gevel-schilderen/keimen/ | 20 | 1 | 0 | — | cluster |
+| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 12 | 0 | 0 | — | project |
+| /gevelisolatie/rc-waarde-dikte/ | 11 | 0 | 0 | — | cluster |
+| /onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/ | 10 | 0 | 0 | — | project |
+| /gevelisolatie/materialen/ | 8 | 0 | 1 | — | cluster |
+| /muren-stucen/sausklaar-behangklaar/ | 8 | 0 | 0 | — | cluster |
+| /gevelisolatie/leiden/ | 7 | 0 | 0 | — | city |
+| /muren-stucen/ | 7 | 0 | 0 | — | service |
+| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 7 | 0 | 0 | — | project |
 
 ### Traffic by source
 
 | Source | Views | CTA | Lead events |
 |--------|-------|-----|-------------|
-| ads | 188 | 1 | 11 |
-| campaign | 39 | 1 | 1 |
-| organic | 235 | 2 | 2 |
-| referral | 14 | 0 | 0 |
-| direct | 183 | 5 | 13 |
+| ads | 308 | 1 | 14 |
+| campaign | 64 | 2 | 1 |
+| organic | 359 | 4 | 3 |
+| referral | 28 | 0 | 0 |
+| direct | 257 | 5 | 13 |
 
 ### CTA clicks
 
 | CTA | Clicks |
 |-----|--------|
-| whatsapp | 6 |
-| email | 2 |
+| whatsapp | 8 |
+| email | 3 |
 | phone | 1 |
 
 ### Form outcomes (anti-spam)
 
 | Outcome | Count |
 |---------|-------|
-| lead | 27 |
+| lead | 31 |
 
 ---
 

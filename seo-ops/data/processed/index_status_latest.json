@@ -1,5 +1,5 @@
 {
- "_generated_at": "2026-09-29T23:13:53+00:00",
+ "_generated_at": "2026-10-15T11:56:03+00:00",
  "site": "https://bm-klus-bv.nl/",
  "_definitions": {
   "indexed": "URL Inspection verdict PASS",
@@ -8,16 +8,22 @@
  },
  "summary": {
   "urls": 59,
-  "indexed": 40,
-  "not_indexed": 19,
+  "indexed": 42,
+  "not_indexed": 17,
   "not_indexed_by_state": {
-   "Crawled - currently not indexed": 19
+   "Crawled - currently not indexed": 17
   },
   "canonical_mismatch": 0,
-  "indexed_stale_crawl": 9,
+  "indexed_stale_crawl": 14,
   "errors": 0
  },
- "changes_since_previous": null,
+ "changes_since_previous": {
+  "previous_generated_at": "2026-10-12T19:07:07+00:00",
+  "newly_not_indexed": [],
+  "newly_indexed": [],
+  "added_urls": [],
+  "removed_urls": []
+ },
  "urls": [
   {
    "path": "/gevelisolatie/alphen-aan-den-rijn/",
@@ -29,7 +35,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-10T01:15:10Z",
-   "days_since_crawl": 81,
+   "days_since_crawl": 97,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/alphen-aan-den-rijn/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/alphen-aan-den-rijn/",
    "canonical_mismatch": false
@@ -44,7 +50,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-10T01:15:07Z",
-   "days_since_crawl": 81,
+   "days_since_crawl": 97,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/barendrecht/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/barendrecht/",
    "canonical_mismatch": false
@@ -59,7 +65,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-15T19:49:17Z",
-   "days_since_crawl": 76,
+   "days_since_crawl": 91,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/bergen-op-zoom/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/bergen-op-zoom/",
    "canonical_mismatch": false
@@ -70,13 +76,13 @@
    "indexed": false,
    "verdict": "NEUTRAL",
    "coverage_state": "Crawled - currently not indexed",
-   "indexing_state": "INDEXING_ALLOWED",
+   "indexing_state": "INDEXING_STATE_UNSPECIFIED",
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-05-18T15:43:15Z",
-   "days_since_crawl": 134,
-   "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/breda/",
-   "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/breda/",
+   "days_since_crawl": 149,
+   "google_canonical": null,
+   "user_canonical": null,
    "canonical_mismatch": false
   },
   {
@@ -89,7 +95,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-06-26T07:12:55Z",
-   "days_since_crawl": 95,
+   "days_since_crawl": 111,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/capelle-aan-den-ijssel/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/capelle-aan-den-ijssel/",
    "canonical_mismatch": false
@@ -104,7 +110,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-10T00:39:23Z",
-   "days_since_crawl": 81,
+   "days_since_crawl": 97,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/gouda/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/gouda/",
    "canonical_mismatch": false
@@ -119,24 +125,9 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-10T01:41:27Z",
-   "days_since_crawl": 81,
+   "days_since_crawl": 97,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/hellevoetsluis/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/hellevoetsluis/",
-   "canonical_mismatch": false
-  },
-  {
-   "path": "/gevelisolatie/hendrik-ido-ambacht/",
-   "url": "https://bm-klus-bv.nl/gevelisolatie/hendrik-ido-ambacht/",
-   "indexed": false,
-   "verdict": "NEUTRAL",
-   "coverage_state": "Crawled - currently not indexed",
-   "indexing_state": "INDEXING_ALLOWED",
-   "page_fetch_state": "SUCCESSFUL",
-   "robots_txt_state": "ALLOWED",
-   "last_crawl": "2026-07-10T01:55:48Z",
-   "days_since_crawl": 81,
-   "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/hendrik-ido-ambacht/",
-   "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/hendrik-ido-ambacht/",
    "canonical_mismatch": false
   },
   {
@@ -149,7 +140,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-10T01:44:29Z",
-   "days_since_crawl": 81,
+   "days_since_crawl": 97,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/leidschendam-voorburg/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/leidschendam-voorburg/",
    "canonical_mismatch": false
@@ -164,7 +155,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-06-26T07:12:09Z",
-   "days_since_crawl": 95,
+   "days_since_crawl": 111,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/maassluis/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/maassluis/",
    "canonical_mismatch": false
@@ -179,7 +170,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-08-23T17:53:08Z",
-   "days_since_crawl": 37,
+   "days_since_crawl": 52,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/materialen/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/materialen/",
    "canonical_mismatch": false
@@ -194,7 +185,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-05-20T18:53:16Z",
-   "days_since_crawl": 132,
+   "days_since_crawl": 147,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/rc-waarde-dikte/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/rc-waarde-dikte/",
    "canonical_mismatch": false
@@ -209,24 +200,9 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-10T01:10:21Z",
-   "days_since_crawl": 81,
+   "days_since_crawl": 97,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/ridderkerk/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/ridderkerk/",
-   "canonical_mismatch": false
-  },
-  {
-   "path": "/gevelisolatie/roosendaal/",
-   "url": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
-   "indexed": false,
-   "verdict": "NEUTRAL",
-   "coverage_state": "Crawled - currently not indexed",
-   "indexing_state": "INDEXING_ALLOWED",
-   "page_fetch_state": "SUCCESSFUL",
-   "robots_txt_state": "ALLOWED",
-   "last_crawl": "2026-05-18T07:39:21Z",
-   "days_since_crawl": 134,
-   "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
-   "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
    "canonical_mismatch": false
   },
   {
@@ -239,7 +215,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-04T16:54:32Z",
-   "days_since_crawl": 87,
+   "days_since_crawl": 102,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/zoetermeer/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/zoetermeer/",
    "canonical_mismatch": false
@@ -254,7 +230,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-25T12:35:24Z",
-   "days_since_crawl": 66,
+   "days_since_crawl": 81,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/hendrik-ido-ambacht-gevelrenovatie-2024/",
    "canonical_mismatch": false
@@ -265,13 +241,13 @@
    "indexed": false,
    "verdict": "NEUTRAL",
    "coverage_state": "Crawled - currently not indexed",
-   "indexing_state": "INDEXING_ALLOWED",
+   "indexing_state": "INDEXING_STATE_UNSPECIFIED",
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-04-26T19:56:53Z",
-   "days_since_crawl": 156,
-   "google_canonical": "https://bm-klus-bv.nl/onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/",
-   "user_canonical": "https://bm-klus-bv.nl/onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/",
+   "days_since_crawl": 171,
+   "google_canonical": null,
+   "user_canonical": null,
    "canonical_mismatch": false
   },
   {
@@ -284,7 +260,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-06-14T07:21:01Z",
-   "days_since_crawl": 107,
+   "days_since_crawl": 123,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/klaaswaal-gevelisolatie-6cm-sierpleister-2025/",
    "canonical_mismatch": false
@@ -299,7 +275,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-05-01T12:25:33Z",
-   "days_since_crawl": 151,
+   "days_since_crawl": 166,
    "google_canonical": null,
    "user_canonical": null,
    "canonical_mismatch": false
@@ -313,8 +289,8 @@
    "indexing_state": "INDEXING_ALLOWED",
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
-   "last_crawl": "2026-09-28T05:26:04Z",
-   "days_since_crawl": 1,
+   "last_crawl": "2026-10-11T22:40:36Z",
+   "days_since_crawl": 3,
    "google_canonical": "https://bm-klus-bv.nl/",
    "user_canonical": "https://bm-klus-bv.nl/",
    "canonical_mismatch": false
@@ -329,7 +305,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-19T09:05:42Z",
-   "days_since_crawl": 10,
+   "days_since_crawl": 26,
    "google_canonical": "https://bm-klus-bv.nl/buiten-stucwerk/",
    "user_canonical": "https://bm-klus-bv.nl/buiten-stucwerk/",
    "canonical_mismatch": false
@@ -344,7 +320,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-10T15:48:25Z",
-   "days_since_crawl": 19,
+   "days_since_crawl": 34,
    "google_canonical": "https://bm-klus-bv.nl/contact/",
    "user_canonical": "https://bm-klus-bv.nl/contact/",
    "canonical_mismatch": false
@@ -358,8 +334,8 @@
    "indexing_state": "INDEXING_ALLOWED",
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
-   "last_crawl": "2026-09-28T20:59:39Z",
-   "days_since_crawl": 1,
+   "last_crawl": "2026-10-14T22:16:14Z",
+   "days_since_crawl": 0,
    "google_canonical": "https://bm-klus-bv.nl/diensten/",
    "user_canonical": "https://bm-klus-bv.nl/diensten/",
    "canonical_mismatch": false
@@ -374,7 +350,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-29T23:06:24Z",
-   "days_since_crawl": 0,
+   "days_since_crawl": 15,
    "google_canonical": "https://bm-klus-bv.nl/gevel-schilderen/",
    "user_canonical": "https://bm-klus-bv.nl/gevel-schilderen/",
    "canonical_mismatch": false
@@ -389,7 +365,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-29T23:08:24Z",
-   "days_since_crawl": 0,
+   "days_since_crawl": 15,
    "google_canonical": "https://bm-klus-bv.nl/gevel-schilderen/keimen/",
    "user_canonical": "https://bm-klus-bv.nl/gevel-schilderen/keimen/",
    "canonical_mismatch": false
@@ -404,7 +380,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-27T16:28:52Z",
-   "days_since_crawl": 2,
+   "days_since_crawl": 17,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/",
    "canonical_mismatch": false
@@ -419,7 +395,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-09T14:04:10Z",
-   "days_since_crawl": 20,
+   "days_since_crawl": 35,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/afwerkingen/",
    "canonical_mismatch": false
@@ -434,7 +410,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-25T13:08:18Z",
-   "days_since_crawl": 4,
+   "days_since_crawl": 19,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/delft/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/delft/",
    "canonical_mismatch": false
@@ -449,7 +425,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-01T04:54:05Z",
-   "days_since_crawl": 28,
+   "days_since_crawl": 44,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/den-haag/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/den-haag/",
    "canonical_mismatch": false
@@ -464,9 +440,24 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-16T08:25:51Z",
-   "days_since_crawl": 13,
+   "days_since_crawl": 29,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/dordrecht/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/dordrecht/",
+   "canonical_mismatch": false
+  },
+  {
+   "path": "/gevelisolatie/hendrik-ido-ambacht/",
+   "url": "https://bm-klus-bv.nl/gevelisolatie/hendrik-ido-ambacht/",
+   "indexed": true,
+   "verdict": "PASS",
+   "coverage_state": "Submitted and indexed",
+   "indexing_state": "INDEXING_ALLOWED",
+   "page_fetch_state": "SUCCESSFUL",
+   "robots_txt_state": "ALLOWED",
+   "last_crawl": "2026-10-10T13:01:40Z",
+   "days_since_crawl": 4,
+   "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/hendrik-ido-ambacht/",
+   "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/hendrik-ido-ambacht/",
    "canonical_mismatch": false
   },
   {
@@ -479,7 +470,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-29T23:06:24Z",
-   "days_since_crawl": 0,
+   "days_since_crawl": 15,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/kosten/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/kosten/",
    "canonical_mismatch": false
@@ -494,9 +485,24 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-13T08:48:02Z",
-   "days_since_crawl": 16,
+   "days_since_crawl": 32,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/leiden/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/leiden/",
+   "canonical_mismatch": false
+  },
+  {
+   "path": "/gevelisolatie/roosendaal/",
+   "url": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
+   "indexed": true,
+   "verdict": "PASS",
+   "coverage_state": "Submitted and indexed",
+   "indexing_state": "INDEXING_ALLOWED",
+   "page_fetch_state": "SUCCESSFUL",
+   "robots_txt_state": "ALLOWED",
+   "last_crawl": "2026-10-11T03:43:37Z",
+   "days_since_crawl": 4,
+   "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
+   "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/roosendaal/",
    "canonical_mismatch": false
   },
   {
@@ -509,7 +515,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-28T16:15:37Z",
-   "days_since_crawl": 1,
+   "days_since_crawl": 16,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/rotterdam/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/rotterdam/",
    "canonical_mismatch": false
@@ -524,7 +530,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-20T11:33:34Z",
-   "days_since_crawl": 9,
+   "days_since_crawl": 25,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/schiedam/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/schiedam/",
    "canonical_mismatch": false
@@ -539,7 +545,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-25T01:04:54Z",
-   "days_since_crawl": 4,
+   "days_since_crawl": 20,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/spijkenisse/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/spijkenisse/",
    "canonical_mismatch": false
@@ -554,7 +560,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-26T09:07:27Z",
-   "days_since_crawl": 3,
+   "days_since_crawl": 19,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/subsidie-vergunning/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/subsidie-vergunning/",
    "canonical_mismatch": false
@@ -569,7 +575,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-22T19:13:38Z",
-   "days_since_crawl": 7,
+   "days_since_crawl": 22,
    "google_canonical": "https://bm-klus-bv.nl/gevelisolatie/vlaardingen/",
    "user_canonical": "https://bm-klus-bv.nl/gevelisolatie/vlaardingen/",
    "canonical_mismatch": false
@@ -583,8 +589,8 @@
    "indexing_state": "INDEXING_ALLOWED",
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
-   "last_crawl": "2026-09-28T13:39:01Z",
-   "days_since_crawl": 1,
+   "last_crawl": "2026-10-08T22:36:12Z",
+   "days_since_crawl": 6,
    "google_canonical": "https://bm-klus-bv.nl/muren-stucen/",
    "user_canonical": "https://bm-klus-bv.nl/muren-stucen/",
    "canonical_mismatch": false
@@ -599,7 +605,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-05T03:39:01Z",
-   "days_since_crawl": 24,
+   "days_since_crawl": 40,
    "google_canonical": "https://bm-klus-bv.nl/muren-stucen/sausklaar-behangklaar/",
    "user_canonical": "https://bm-klus-bv.nl/muren-stucen/sausklaar-behangklaar/",
    "canonical_mismatch": false
@@ -614,7 +620,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-29T23:08:24Z",
-   "days_since_crawl": 0,
+   "days_since_crawl": 15,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/",
    "canonical_mismatch": false
@@ -629,7 +635,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-09T01:48:46Z",
-   "days_since_crawl": 82,
+   "days_since_crawl": 98,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/almere-gevelisolatie-35m2-sierpleister-2024/",
    "canonical_mismatch": false
@@ -644,7 +650,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-21T04:27:37Z",
-   "days_since_crawl": 8,
+   "days_since_crawl": 24,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/",
    "canonical_mismatch": false
@@ -659,7 +665,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-29T05:15:26Z",
-   "days_since_crawl": 0,
+   "days_since_crawl": 16,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/",
    "canonical_mismatch": false
@@ -674,7 +680,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-17T02:31:02Z",
-   "days_since_crawl": 12,
+   "days_since_crawl": 28,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
    "canonical_mismatch": false
@@ -689,7 +695,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-28T22:03:40Z",
-   "days_since_crawl": 1,
+   "days_since_crawl": 16,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/",
    "canonical_mismatch": false
@@ -704,7 +710,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-08-23T22:15:54Z",
-   "days_since_crawl": 37,
+   "days_since_crawl": 52,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/",
    "canonical_mismatch": false
@@ -719,7 +725,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-08-13T23:46:33Z",
-   "days_since_crawl": 46,
+   "days_since_crawl": 62,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/",
    "canonical_mismatch": false
@@ -734,7 +740,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-15T07:30:48Z",
-   "days_since_crawl": 14,
+   "days_since_crawl": 30,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/halsteren-buitenstucwerk-sierpleister-schilderwerk-2025/",
    "canonical_mismatch": false
@@ -749,7 +755,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-04T04:27:16Z",
-   "days_since_crawl": 87,
+   "days_since_crawl": 103,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/",
    "canonical_mismatch": false
@@ -764,7 +770,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-14T13:21:18Z",
-   "days_since_crawl": 77,
+   "days_since_crawl": 92,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/",
    "canonical_mismatch": false
@@ -779,7 +785,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-23T22:09:41Z",
-   "days_since_crawl": 6,
+   "days_since_crawl": 21,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
    "canonical_mismatch": false
@@ -794,7 +800,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-29T11:29:25Z",
-   "days_since_crawl": 62,
+   "days_since_crawl": 78,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
    "canonical_mismatch": false
@@ -808,8 +814,8 @@
    "indexing_state": "INDEXING_ALLOWED",
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
-   "last_crawl": "2026-07-03T21:52:59Z",
-   "days_since_crawl": 88,
+   "last_crawl": "2026-10-12T01:58:01Z",
+   "days_since_crawl": 3,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/spijkenisse-malledijk-stucwerk-schilderwerk-2024/",
    "canonical_mismatch": false
@@ -824,7 +830,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-03T20:03:52Z",
-   "days_since_crawl": 26,
+   "days_since_crawl": 41,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/",
    "canonical_mismatch": false
@@ -839,7 +845,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-21T18:35:53Z",
-   "days_since_crawl": 8,
+   "days_since_crawl": 23,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/vlaardingen-gevelisolatie-10cm-sierpleister-2025/",
    "canonical_mismatch": false
@@ -854,7 +860,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-07-27T19:20:41Z",
-   "days_since_crawl": 64,
+   "days_since_crawl": 79,
    "google_canonical": "https://bm-klus-bv.nl/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/",
    "user_canonical": "https://bm-klus-bv.nl/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/",
    "canonical_mismatch": false
@@ -868,8 +874,8 @@
    "indexing_state": "INDEXING_ALLOWED",
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
-   "last_crawl": "2026-09-18T17:26:49Z",
-   "days_since_crawl": 11,
+   "last_crawl": "2026-10-14T10:20:08Z",
+   "days_since_crawl": 1,
    "google_canonical": "https://bm-klus-bv.nl/over-ons/",
    "user_canonical": "https://bm-klus-bv.nl/over-ons/",
    "canonical_mismatch": false
@@ -884,7 +890,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-08-25T11:46:31Z",
-   "days_since_crawl": 35,
+   "days_since_crawl": 51,
    "google_canonical": "https://bm-klus-bv.nl/privacybeleid/",
    "user_canonical": "https://bm-klus-bv.nl/privacybeleid/",
    "canonical_mismatch": false
@@ -899,7 +905,7 @@
    "page_fetch_state": "SUCCESSFUL",
    "robots_txt_state": "ALLOWED",
    "last_crawl": "2026-09-19T01:50:36Z",
-   "days_since_crawl": 10,
+   "days_since_crawl": 26,
    "google_canonical": "https://bm-klus-bv.nl/sierpleister/",
    "user_canonical": "https://bm-klus-bv.nl/sierpleister/",
    "canonical_mismatch": false

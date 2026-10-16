@@ -1,11 +1,11 @@
 # WP Stats Snapshot (last 28 days)
 
-**Generated:** 2026-09-29 20:53 UTC
-**Date range:** 2026-09-01 to 2026-09-28
+**Generated:** 2026-10-15 11:57 UTC
+**Date range:** 2026-09-17 to 2026-10-14
 **Source:** BM Stats v2 plugin, https://bm-klus-bv.nl (provenance label: `[WP, 28d, lead-level]` / `[WP, 28d, event-level]`)
 **Plugin version:** 2.2.0
 
-> Pageview and CTA events exist only from 2026-09-04 (25 of 28 days in window). Lead rows exist from 2026-03-11.
+> Pageview and CTA events exist only from 2026-09-04 (28 of 28 days in window). Lead rows exist from 2026-03-11.
 
 ---
 
@@ -13,35 +13,33 @@
 
 | Metric | Value |
 |--------|-------|
-| Leads total | 7 |
-| Leads excl. spam | 7 |
+| Leads total | 8 |
+| Leads excl. spam | 8 |
 | Qualified (qualified + won + lost) | 0 |
 | Won | 0 |
 | Revenue on won (order_value) | € 0 |
-| With gclid | 4 |
+| With gclid | 5 |
 
 ### By status
 
 | Status | Leads |
 |--------|-------|
-| new | 6 |
-| archive | 1 |
+| new | 8 |
 
 ### By source (first touch)
 
 | Source | Leads |
 |--------|-------|
-| ads | 4 |
-| campaign | 1 |
+| ads | 5 |
 | organic | 2 |
+| direct | 1 |
 
 ### By form
 
 | Form | Leads |
 |------|-------|
-| quote_modal | 4 |
-| contact_form | 2 |
-| other | 1 |
+| quote_modal | 7 |
+| contact_form | 1 |
 
 ---
 
@@ -49,58 +47,57 @@
 
 | Metric | Value |
 |--------|-------|
-| Page views | 659 |
-| CTA clicks | 9 |
-| Days with events | 25 |
+| Page views | 601 |
+| CTA clicks | 5 |
+| Days with events | 28 |
 
-### Top pages by views (conversion shown as — : views start later than lead events in this window)
+### Top pages by views
 
 | Page | Views | CTA | Lead events | Conv. | Type |
 |------|-------|-----|-------------|-------|------|
-| / | 115 | 3 | 0 | — | home |
-| /gevelisolatie/ | 112 | 2 | 2 | — | service |
-| /buiten-stucwerk/ | 93 | 1 | 1 | — | service |
-| /gevelisolatie/afwerkingen/ | 51 | 0 | 1 | — | cluster |
-| /onze-werken/ | 47 | 0 | 0 | — | archive |
-| /contact/ | 28 | 2 | 3 | — | utility |
-| /sierpleister/ | 25 | 0 | 0 | — | service |
-| /gevelisolatie/kosten/ | 23 | 0 | 0 | — | cluster |
-| /over-ons/ | 23 | 0 | 0 | — | utility |
-| /diensten/ | 21 | 0 | 1 | — | service |
-| /gevel-schilderen/keimen/ | 15 | 1 | 0 | — | cluster |
-| /gevel-schilderen/ | 14 | 0 | 0 | — | service |
-| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 11 | 0 | 0 | — | project |
-| /gevelisolatie/rc-waarde-dikte/ | 9 | 0 | 0 | — | cluster |
-| /gevelisolatie/materialen/ | 6 | 0 | 1 | — | cluster |
-| /muren-stucen/ | 6 | 0 | 0 | — | service |
-| /muren-stucen/sausklaar-behangklaar/ | 6 | 0 | 0 | — | cluster |
-| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 5 | 0 | 0 | — | project |
-| /gevelisolatie/den-haag/ | 4 | 0 | 0 | — | city |
-| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 4 | 0 | 0 | — | project |
+| / | 101 | 2 | 1 | 0.99% | home |
+| /gevelisolatie/ | 100 | 0 | 2 | 2.00% | service |
+| /buiten-stucwerk/ | 96 | 1 | 0 | 0.00% | service |
+| /onze-werken/ | 55 | 0 | 0 | 0.00% | archive |
+| /gevelisolatie/afwerkingen/ | 50 | 0 | 1 | 2.00% | cluster |
+| /contact/ | 26 | 2 | 1 | 3.85% | utility |
+| /gevelisolatie/kosten/ | 22 | 0 | 0 | 0.00% | cluster |
+| /sierpleister/ | 21 | 0 | 0 | 0.00% | service |
+| /diensten/ | 18 | 0 | 1 | 5.56% | service |
+| /over-ons/ | 15 | 0 | 1 | 6.67% | utility |
+| /gevel-schilderen/ | 8 | 0 | 0 | 0.00% | service |
+| /onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/ | 8 | 0 | 0 | 0.00% | project |
+| /gevel-schilderen/keimen/ | 6 | 0 | 0 | 0.00% | cluster |
+| /gevelisolatie/rc-waarde-dikte/ | 6 | 0 | 0 | 0.00% | cluster |
+| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 6 | 0 | 0 | 0.00% | project |
+| /gevelisolatie/leiden/ | 5 | 0 | 0 | 0.00% | city |
+| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 5 | 0 | 0 | 0.00% | project |
+| /gevelisolatie/materialen/ | 4 | 0 | 1 | 25.00% | cluster |
+| /muren-stucen/ | 4 | 0 | 0 | 0.00% | service |
+| /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 4 | 0 | 0 | 0.00% | project |
 
 ### Traffic by source
 
 | Source | Views | CTA | Lead events |
 |--------|-------|-----|-------------|
-| ads | 188 | 1 | 4 |
-| campaign | 39 | 1 | 1 |
-| organic | 235 | 2 | 2 |
+| ads | 200 | 1 | 5 |
+| campaign | 34 | 1 | 0 |
+| organic | 230 | 2 | 2 |
 | referral | 14 | 0 | 0 |
-| direct | 183 | 5 | 2 |
+| direct | 123 | 1 | 1 |
 
 ### CTA clicks
 
 | CTA | Clicks |
 |-----|--------|
-| whatsapp | 6 |
-| email | 2 |
-| phone | 1 |
+| whatsapp | 4 |
+| email | 1 |
 
 ### Form outcomes (anti-spam)
 
 | Outcome | Count |
 |---------|-------|
-| lead | 9 |
+| lead | 8 |
 
 ---
 

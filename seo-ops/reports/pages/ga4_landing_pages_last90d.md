@@ -1,7 +1,7 @@
 # GA4 Landing Page Snapshot (last 90 days)
 
-**Generated:** 2026-09-29 20:53 UTC
-**Date range:** 2026-07-01 to 2026-09-28
+**Generated:** 2026-10-15 11:57 UTC
+**Date range:** 2026-07-17 to 2026-10-14
 **Property:** 428253147
 
 ---
@@ -14,8 +14,8 @@
 | Mapped to page_inventory | 29 |
 | Unmapped | 1 |
 | (not set) pages | 1 |
-| Total sessions | 704 |
-| Total key events | 44 |
+| Total sessions | 667 |
+| Total key events | 42 |
 
 ---
 
@@ -23,13 +23,13 @@
 
 | Channel | Sessions |
 |---------|----------|
-| Paid Search | 308 |
-| Organic Search | 238 |
-| Direct | 81 |
-| Referral | 50 |
+| Paid Search | 301 |
+| Organic Search | 207 |
+| Direct | 68 |
+| Referral | 65 |
 | AI Assistant | 11 |
 | Unassigned | 8 |
-| Cross-network | 5 |
+| Cross-network | 4 |
 | Organic Social | 3 |
 
 ---
@@ -38,38 +38,38 @@
 
 | Page | Sessions | Engaged | Eng Rate | Avg Dur (s) | Key Events | Type |
 |------|----------|---------|----------|-------------|------------|------|
-| / | 200 | 137 | 0.69 | 304 | 15 | home |
-| /gevelisolatie/afwerkingen/ | 110 | 60 | 0.55 | 100 | 6 | cluster |
-| /buiten-stucwerk/ | 109 | 72 | 0.66 | 132 | 8 | service |
-| /gevelisolatie/ | 92 | 68 | 0.74 | 212 | 7 | service |
-| (not set) | 53 | 2 | 0.04 | 16 | 2 |  |
-| /onze-werken/ | 28 | 20 | 0.71 | 217 | 2 | archive |
-| /gevel-schilderen/ | 19 | 7 | 0.37 | 26 | 1 | service |
-| /gevelisolatie/kosten/ | 19 | 8 | 0.42 | 188 | 0 | cluster |
-| /sierpleister/ | 11 | 6 | 0.55 | 158 | 0 | service |
-| /over-ons/ | 8 | 6 | 0.75 | 224 | 0 | utility |
-| /contact/ | 7 | 4 | 0.57 | 211 | 0 | utility |
-| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 6 | 3 | 0.50 | 30 | 0 | project |
+| / | 172 | 108 | 0.63 | 253 | 11 | home |
+| /buiten-stucwerk/ | 133 | 84 | 0.63 | 124 | 8 | service |
+| /gevelisolatie/afwerkingen/ | 92 | 52 | 0.57 | 95 | 7 | cluster |
+| /gevelisolatie/ | 82 | 60 | 0.73 | 185 | 7 | service |
+| (not set) | 52 | 2 | 0.04 | 16 | 2 |  |
+| /onze-werken/ | 25 | 18 | 0.72 | 241 | 2 | archive |
+| /gevel-schilderen/ | 22 | 9 | 0.41 | 28 | 1 | service |
+| /gevelisolatie/kosten/ | 16 | 7 | 0.44 | 121 | 0 | cluster |
+| /sierpleister/ | 11 | 7 | 0.64 | 160 | 0 | service |
+| /over-ons/ | 7 | 5 | 0.71 | 183 | 1 | utility |
+| /contact/ | 6 | 3 | 0.50 | 239 | 0 | utility |
 | /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 6 | 2 | 0.33 | 17 | 0 | project |
+| /onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/ | 5 | 4 | 0.80 | 126 | 0 | project |
 | /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 5 | 3 | 0.60 | 376 | 0 | project |
+| /gevelisolatie/leiden/ | 4 | 4 | 1.00 | 142 | 1 | city |
+| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 4 | 3 | 0.75 | 46 | 0 | project |
 | /diensten/ | 4 | 4 | 1.00 | 722 | 0 | service |
 | /gevel-schilderen/keimen/ | 4 | 3 | 0.75 | 858 | 1 | cluster |
-| /onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/ | 4 | 4 | 1.00 | 158 | 0 | project |
-| /gevelisolatie/leiden/ | 3 | 3 | 1.00 | 171 | 1 | city |
 | /onze-werken/etten-leur-gevelisolatie-6cm-strikolith-2025/ | 3 | 2 | 0.67 | 17 | 0 | project |
-| /gevelisolatie/rc-waarde-dikte/ | 2 | 1 | 0.50 | 7 | 0 | cluster |
+| /gevelisolatie/dordrecht/ | 2 | 2 | 1.00 | 2269 | 0 | city |
 
 ## Top paid landing pages
 
 | Page | Paid Sessions |
 |------|--------------|
-| /gevelisolatie/afwerkingen/ | 101 |
-| /buiten-stucwerk/ | 91 |
-| /gevelisolatie/ | 72 |
-| (not set) | 12 |
-| /gevel-schilderen/ | 11 |
-| / | 10 |
-| /gevelisolatie/kosten/ | 9 |
+| /buiten-stucwerk/ | 115 |
+| /gevelisolatie/afwerkingen/ | 86 |
+| /gevelisolatie/ | 62 |
+| (not set) | 14 |
+| /gevel-schilderen/ | 14 |
+| /gevelisolatie/kosten/ | 7 |
+| /gevelisolatie/subsidie-vergunning/ | 1 |
 | /onze-werken/ | 1 |
 | /sierpleister/ | 1 |
 
@@ -77,20 +77,20 @@
 
 | Page | Organic Sessions |
 |------|-----------------|
-| / | 110 |
-| (not set) | 21 |
-| /gevelisolatie/ | 14 |
-| /onze-werken/ | 14 |
+| / | 92 |
+| (not set) | 17 |
+| /gevelisolatie/ | 15 |
 | /buiten-stucwerk/ | 13 |
+| /onze-werken/ | 11 |
 | /sierpleister/ | 9 |
-| /contact/ | 7 |
-| /gevelisolatie/afwerkingen/ | 6 |
-| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 6 |
-| /over-ons/ | 6 |
-| /gevelisolatie/kosten/ | 5 |
+| /contact/ | 6 |
+| /gevelisolatie/kosten/ | 4 |
+| /gevelisolatie/leiden/ | 4 |
+| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 4 |
+| /over-ons/ | 4 |
 | /diensten/ | 3 |
 | /gevel-schilderen/keimen/ | 3 |
-| /gevelisolatie/leiden/ | 3 |
+| /gevelisolatie/afwerkingen/ | 3 |
 | /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 3 |
 
 ---
