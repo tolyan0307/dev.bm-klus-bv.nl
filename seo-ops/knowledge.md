@@ -83,11 +83,12 @@
 - Зона работ: 80–100 км от Роттердама ярусами — ядро (Rotterdam, Vlaardingen, Schiedam, Spijkenisse, Barendrecht, Ridderkerk, Capelle a/d IJssel, Delft, Dordrecht, Zoetermeer), затем Den Haag, Leiden, Gouda, Hoeksche Waard, Breda, Bergen op Zoom, дальше — где есть проекты.
 
 ## Google Ads
-- Бюджет €13/день с 2026-07-20, фактический расход ~€10/день. Maximize Conversions без tCPA (tCPA ~€45 — позже), радиус 80 км от Роттердама (presence), BE/DE исключены, только поисковая сеть.
+- Бюджет €13/день с 2026-07-20; по API на 2026-10-16 — €10/день (кто и когда снизил — не записано), расход ~€10.3/день. Maximize Conversions без tCPA (tCPA ~€45 — позже), радиус 80 км от Роттердама (presence), BE/DE исключены, только поисковая сеть.
 - CPA: до v2 — €240.76 (29 дней), после — €35.65 (30 дней), 28 дней до 09-23 — €46.48. Цель — < €60.
 - Исторические конвертеры (кампания 2024–2025, CPA €37–48): buiten stucwerk — CPA €26 (30.5 конв.), gevel van buiten isoleren — €17, gevel stucwerk — €22; интерьер muren stucen — €121 без конверсий.
 - Утечки: zelf, wat is, hoe, nadelen, huur, groothandel, leverancier. «subsidie aanvragen» — наблюдать, «kosten» — не минусовать.
 - В объявлениях есть цены, противоречащие запрету: применённые 2026-07-20 «Vanaf €35/m² spachtelputz» (группа buiten stucwerk), «Vanaf €25/m²» в заголовке и описании (gevel schilderen); возможно, «vanaf €110» в старых группах (`reports/ppc/ads_restructure_v2_2026-07.md`). Проверено 2026-10-16 (`reports/ppc/ads_text_and_search_terms_audit_2026-10-16.md`): цены в активных объявлениях — «Vanaf €35/m² spachtelputz» (Buiten Stucwerk) и «Vanaf €25/m²» (Gevel Schilderen); «Vanaf €110/m²» — только в паузной группе Kosten & Prijs; там же «4,9/5 op Google Reviews» и «met garantie» в sitelink. Всё исправлено через API 2026-10-16 (журнал решений); «garantie» осталась только в ассетах старых кампаний (removed / paused).
+- С 2026-10-16 в ставках участвуют форма и WhatsApp (GA4-импорт, основная); группа Stukadoor Regio на паузе. Владелец ездит до 100 км (сайт: ±80–100 км), в Ads — 80 км.
 - Малые числа: CPA — не меньше чем по 10 конверсиям; «пустой» ключ — не раньше 50 кликов и 60 дней без конверсий.
 
 ## Решения владельца
