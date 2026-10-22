@@ -2300,6 +2300,221 @@
       1600
     ]
   },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-01": {
+    "originalWidth": 1668,
+    "originalHeight": 1454,
+    "aspectRatio": 1.147,
+    "variants": [
+      160,
+      240,
+      320,
+      432,
+      480,
+      518,
+      671,
+      768,
+      800,
+      1200,
+      1280,
+      1600
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-02": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-03": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-04": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-05": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-06": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1080
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-07": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-08": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-09": {
+    "originalWidth": 1500,
+    "originalHeight": 2000,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-10": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-11": {
+    "originalWidth": 2000,
+    "originalHeight": 1500,
+    "aspectRatio": 1.333,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-voor-01": {
+    "originalWidth": 1094,
+    "originalHeight": 982,
+    "aspectRatio": 1.114,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-voor-02": {
+    "originalWidth": 944,
+    "originalHeight": 713,
+    "aspectRatio": 1.324,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-voor-03": {
+    "originalWidth": 944,
+    "originalHeight": 1259,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-voor-04": {
+    "originalWidth": 944,
+    "originalHeight": 1070,
+    "aspectRatio": 0.882,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
+  "projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-voor-05": {
+    "originalWidth": 943,
+    "originalHeight": 1257,
+    "aspectRatio": 0.75,
+    "variants": [
+      160,
+      240,
+      320,
+      480,
+      800
+    ]
+  },
   "projects/etten-leur-gevelisolatie-10cm-ral9010-2025/etten-leur-gevelisolatie-10cm-ral9010-2025-na-01": {
     "originalWidth": 1536,
     "originalHeight": 2048,
