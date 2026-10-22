@@ -108,32 +108,6 @@ export const projects: ProjectCard[] = [
     },
   },
   {
-    slug: "etten-leur-bankenstraat-stucwerk-sierpleister-2024",
-    serviceType: "Buiten-stucwerk",
-    serviceTypes: ["Buiten-stucwerk", "Sierpleister", "Gevel schilderen"],
-    title: "Etten-Leur Bankenstraat – buitenstucwerk, sierpleister & schilderwerk (2024)",
-    subtitle: "Gevelafwerking van een woning aan de Bankenstraat met gewapend stucwerk, hoekprofielen, witte sierpleister 1,5 mm en wit schilderwerk.",
-    meta: {
-      city: "Etten-Leur (Bankenstraat)",
-      objectType: "Woning",
-      highlight:
-        "Van zichtbaar metselwerk naar witte gevels met gewapend stucwerk, sierpleister 1,5 mm en verzorgde hoekafwerking.",
-      year: 2024,
-    },
-    projectUrl:
-      "/onze-werken/etten-leur-bankenstraat-stucwerk-sierpleister-2024/",
-    cardAlt:
-      "Woning aan de Bankenstraat in Etten-Leur na buitenstucwerk, witte sierpleister en schilderwerk in 2024",
-    coverImage: {
-      src: "/images/projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-01.webp",
-      alt: "Etten-Leur Bankenstraat buitenstucwerk en sierpleister – na de werken foto 01 (2024)",
-    },
-    beforeThumb: {
-      src: "/images/projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-voor-01.webp",
-      alt: "Etten-Leur Bankenstraat buitenstucwerk en sierpleister – voor de werken foto 01 (2024)",
-    },
-  },
-  {
     slug: "etten-leur-gevelisolatie-6cm-strikolith-2025",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister"],
@@ -387,6 +361,32 @@ export const projects: ProjectCard[] = [
     beforeThumb: {
       src: "/images/projects/almere-gevelisolatie-35m2-voor-01.webp",
       alt: "Almere gevelisolatie 35 m² sierpleister – voor de werken foto 01 (2024–2025)",
+    },
+  },
+  {
+    slug: "etten-leur-bankenstraat-stucwerk-sierpleister-2024",
+    serviceType: "Buiten-stucwerk",
+    serviceTypes: ["Buiten-stucwerk", "Sierpleister", "Gevel schilderen"],
+    title: "Etten-Leur Bankenstraat – buitenstucwerk, sierpleister & schilderwerk (2024)",
+    subtitle: "Gevelafwerking van een woning aan de Bankenstraat met gewapend stucwerk, hoekprofielen, witte sierpleister 1,5 mm en wit schilderwerk.",
+    meta: {
+      city: "Etten-Leur (Bankenstraat)",
+      objectType: "Woning",
+      highlight:
+        "Van zichtbaar metselwerk naar witte gevels met gewapend stucwerk, sierpleister 1,5 mm en verzorgde hoekafwerking.",
+      year: 2024,
+    },
+    projectUrl:
+      "/onze-werken/etten-leur-bankenstraat-stucwerk-sierpleister-2024/",
+    cardAlt:
+      "Woning aan de Bankenstraat in Etten-Leur na buitenstucwerk, witte sierpleister en schilderwerk in 2024",
+    coverImage: {
+      src: "/images/projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-na-01.webp",
+      alt: "Etten-Leur Bankenstraat buitenstucwerk en sierpleister – na de werken foto 01 (2024)",
+    },
+    beforeThumb: {
+      src: "/images/projects/etten-leur-bankenstraat-stucwerk-sierpleister-2024/etten-leur-bankenstraat-stucwerk-sierpleister-2024-voor-01.webp",
+      alt: "Etten-Leur Bankenstraat buitenstucwerk en sierpleister – voor de werken foto 01 (2024)",
     },
   },
   {
