@@ -113,12 +113,7 @@ export default function AfwerkingenInteractive({ id, intro, items }: Afwerkingen
       </div>
 
       {/* ── Active card with photo ── */}
-      <div
-        className="mt-4 overflow-hidden rounded-2xl border border-border bg-card"
-        role="tabpanel"
-        id={`afwerking-panel-${active}`}
-        aria-labelledby={`afwerking-tab-${active}`}
-      >
+      <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-card">
         <div className="grid grid-rows-[220px_1fr] lg:grid-rows-none lg:grid-cols-[420px_1fr]">
 
           {/* Photo */}
@@ -140,48 +135,57 @@ export default function AfwerkingenInteractive({ id, intro, items }: Afwerkingen
             </div>
           </div>
 
-          {/* Content */}
-          <div className="flex flex-col gap-6 p-6 lg:p-8">
-            <div>
-              <h3 className="hidden text-xl font-bold text-foreground lg:block">{current.h3}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base lg:mt-3">
-                {current.omschrijving}
-              </p>
-            </div>
+          {/* Content: every finish is in the HTML, inactive ones only get `hidden` */}
+          {items.map((item, i) => (
+            <div
+              key={item.h3}
+              role="tabpanel"
+              id={`afwerking-panel-${i}`}
+              aria-labelledby={`afwerking-tab-${i}`}
+              hidden={i !== active}
+              className="flex flex-col gap-6 p-6 lg:p-8"
+            >
+              <div>
+                <h3 className="hidden text-xl font-bold text-foreground lg:block">{item.h3}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base lg:mt-3">
+                  {item.omschrijving}
+                </p>
+              </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div className="flex items-start gap-3 rounded-lg bg-primary/5 p-4">
-                <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15">
-                  <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="flex items-start gap-3 rounded-lg bg-primary/5 p-4">
+                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15">
+                    <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-primary">Past goed bij</p>
+                    <p className="mt-1 text-sm leading-snug text-foreground/70">{item.pastGoed}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-primary">Past goed bij</p>
-                  <p className="mt-1 text-sm leading-snug text-foreground/70">{current.pastGoed}</p>
+                <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-4">
+                  <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-500/70" />
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Let op</p>
+                    <p className="mt-1 text-sm leading-snug text-foreground/70">{item.letOp}</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-4">
-                <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-500/70" />
-                <div>
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Let op</p>
-                  <p className="mt-1 text-sm leading-snug text-foreground/70">{current.letOp}</p>
-                </div>
+
+              <div>
+                <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Voordelen</p>
+                <ul className="grid gap-2.5 sm:grid-cols-2">
+                  {item.voordelen.map((v) => (
+                    <li key={v} className="flex items-start gap-2.5">
+                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                        <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+                      </div>
+                      <span className="text-sm leading-snug text-foreground/70">{v}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-
-            <div>
-              <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Voordelen</p>
-              <ul className="grid gap-2.5 sm:grid-cols-2">
-                {current.voordelen.map((v) => (
-                  <li key={v} className="flex items-start gap-2.5">
-                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                      <Check className="h-3 w-3 text-primary" strokeWidth={3} />
-                    </div>
-                    <span className="text-sm leading-snug text-foreground/70">{v}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 

@@ -14,7 +14,7 @@ import { resolveGalleryImages } from "@/lib/gallery-utils"
 export const metadata = buildPageMetadata(
   "/onze-werken/rottekade-gevelisolatie-schilderwerk-2024/",
   {
-    title: "Rottekade gevelisolatie 10 cm & schilderwerk – project 2024",
+    title: "Rotterdam gevelisolatie 10 cm & schilderwerk",
     description:
       "Project in Rottekade (regio Rotterdam): zijgevelrenovatie met 10 cm gevelisolatie, sierpleister met reliëf, schilderwerk en zinken HWA.",
   },

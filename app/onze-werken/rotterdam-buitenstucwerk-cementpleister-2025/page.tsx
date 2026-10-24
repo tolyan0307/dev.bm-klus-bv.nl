@@ -14,7 +14,7 @@ import { resolveGalleryImages } from "@/lib/gallery-utils"
 export const metadata = buildPageMetadata(
   "/onze-werken/rotterdam-buitenstucwerk-cementpleister-2025/",
   {
-    title: "Rotterdam buitenstucwerk cementpleister – project 2025",
+    title: "Rotterdam buitenstucwerk met cementpleister",
     description:
       "Project in Rotterdam: plaatselijk gevelherstel met cementgebonden pleister en wapeningsnet, strak en glad afgewerkt als basis voor verdere afwerking.",
   },

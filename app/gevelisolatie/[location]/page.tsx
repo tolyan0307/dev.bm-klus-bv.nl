@@ -41,7 +41,7 @@ import { projects } from "@/lib/content/projects"
 import TrustStrip from "@/components/trust-strip"
 import WaaromBmKlusSection from "@/components/sections/gevelisolatie/waarom-bm-klus-section"
 import GoogleRatingBadge from "@/components/google-rating-badge"
-import { RelatedProjects, projectsForCity } from "@/components/projects/RelatedProjects"
+import { RelatedProjects, projectsForCity, projectsNearCity } from "@/components/projects/RelatedProjects"
 
 // Projects shown in the hand-made featured blocks below; the generic block skips them.
 const FEATURED_CITY_PROJECTS: Record<string, string> = {
@@ -803,16 +803,18 @@ export default async function GevelisolatieLocationPage({
           )
         })()}
 
-        {/* ── Other projects in this city (picked from lib/content/projects.ts) ── */}
+        {/* ── Other projects in this city (picked from lib/content/projects.ts);
+              a city without own projects can show curated nearby ones instead ── */}
         {(() => {
           const featured = FEATURED_CITY_PROJECTS[slug]
           const items = projectsForCity(data.city).filter((p) => p.slug !== featured)
+          const nearby = featured || items.length > 0 ? [] : projectsNearCity(data.city)
           return (
             <div className="below-fold">
               <RelatedProjects
-                items={items}
+                items={nearby.length > 0 ? nearby : items}
                 tagline="Uitgevoerde projecten"
-                heading={featured ? "Meer projecten in" : "Projecten in"}
+                heading={nearby.length > 0 ? "Projecten in de buurt van" : featured ? "Meer projecten in" : "Projecten in"}
                 accent={data.city}
                 id="projecten-in-de-stad"
               />

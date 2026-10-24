@@ -14,7 +14,7 @@ import { resolveGalleryImages } from "@/lib/gallery-utils"
 export const metadata = buildPageMetadata(
   "/onze-werken/dordrecht-gevelisolatie-10cm-sierpleister-2025/",
   {
-    title: "Dordrecht gevelisolatie 10 cm & sierpleister – project 2025",
+    title: "Dordrecht gevelisolatie 10 cm & sierpleister",
     description:
       "Project in Dordrecht: gevelrenovatie met 10 cm buitengevelisolatie, sierpleister 1,5 mm, aluminium raamdorpels en plint met steenstrips.",
   },

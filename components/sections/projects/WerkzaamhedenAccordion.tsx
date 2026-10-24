@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useId, useState } from "react"
 import { ArrowRight } from "lucide-react"
 
 interface WerkItem {
@@ -12,9 +12,11 @@ interface Props {
   items: WerkItem[]
 }
 
+// Every item is rendered; inactive panels only get the `hidden` attribute.
+// Google does not click, so text that is rendered only on click never reaches the index.
 export default function WerkzaamhedenAccordion({ items }: Props) {
   const [active, setActive] = useState(0)
-  const current = items[active]
+  const uid = useId()
 
   return (
     <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
@@ -34,6 +36,7 @@ export default function WerkzaamhedenAccordion({ items }: Props) {
                     type="button"
                     onClick={() => setActive(i)}
                     aria-current={isActive ? "true" : undefined}
+                    aria-controls={`${uid}-panel-${i}`}
                     className="group relative flex w-full items-center gap-3 px-5 py-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
                     style={{ background: isActive ? "rgba(232,96,10,0.06)" : undefined }}
                   >
@@ -84,10 +87,13 @@ export default function WerkzaamhedenAccordion({ items }: Props) {
           </span>
 
           {/* Content */}
-          <div key={active} className="animate-in fade-in duration-200 relative z-10">
+          <div className="relative z-10">
 
             {/* Orange label + counter */}
-            <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary">
+            <span
+              key={active}
+              className="animate-in fade-in duration-200 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary"
+            >
               <span className="inline-block h-px w-6 bg-primary" aria-hidden />
               Werkzaamheid {String(active + 1).padStart(2, "0")}
               <span className="h-px flex-1 bg-primary/20" aria-hidden />
@@ -96,21 +102,30 @@ export default function WerkzaamhedenAccordion({ items }: Props) {
               </span>
             </span>
 
-            {/* Title */}
-            <h3 className="mt-3 text-xl font-bold leading-snug text-foreground">
-              {current.title}
-            </h3>
+            {items.map((item, i) => (
+              <div
+                key={item.title}
+                id={`${uid}-panel-${i}`}
+                hidden={i !== active}
+                className="animate-in fade-in duration-200"
+              >
+                {/* Title */}
+                <h3 className="mt-3 text-xl font-bold leading-snug text-foreground">
+                  {item.title}
+                </h3>
 
-            {/* Divider */}
-            <div className="mt-4 flex items-center gap-3">
-              <span className="h-px w-8 bg-primary" aria-hidden />
-              <span className="h-px flex-1 bg-border" aria-hidden />
-            </div>
+                {/* Divider */}
+                <div className="mt-4 flex items-center gap-3">
+                  <span className="h-px w-8 bg-primary" aria-hidden />
+                  <span className="h-px flex-1 bg-border" aria-hidden />
+                </div>
 
-            {/* Body */}
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              {current.body}
-            </p>
+                {/* Body */}
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  {item.body}
+                </p>
+              </div>
+            ))}
           </div>
 
           {/* Prev / Next */}

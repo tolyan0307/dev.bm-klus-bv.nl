@@ -14,7 +14,7 @@ import { resolveGalleryImages } from "@/lib/gallery-utils"
 export const metadata = buildPageMetadata(
   "/onze-werken/katwijk-gevelisolatie-6cm-sierpleister-2024/",
   {
-    title: "Katwijk gevelisolatie 6 cm & sierpleister – project 2024",
+    title: "Katwijk gevelisolatie 6 cm & sierpleister",
     description:
       "Project in Katwijk: hoekwoning met 6 cm gevelisolatie, sierpleister 1,5 mm, hoekprofielen en nieuwe keramische raamdorpels.",
   },

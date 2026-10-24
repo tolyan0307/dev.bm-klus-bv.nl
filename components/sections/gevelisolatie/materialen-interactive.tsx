@@ -47,8 +47,6 @@ export default function MaterialenInteractive({
 }: MaterialenInteractiveProps) {
   const [active, setActive] = useState(0)
   const current = items[active]
-  const brand = brandBadge[brandClass[current.materiaal] ?? "E"]
-  const score = lambdaScore[current.materiaal] ?? 2
 
   return (
     <section id={id} className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
@@ -125,12 +123,7 @@ export default function MaterialenInteractive({
       </div>
 
       {/* ── Active card with photo ── */}
-      <div
-        className="mt-4 overflow-hidden rounded-2xl border border-border bg-card"
-        role="tabpanel"
-        id={`materiaal-panel-${active}`}
-        aria-labelledby={`materiaal-tab-${active}`}
-      >
+      <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-card">
         <div className="grid grid-rows-[220px_1fr] lg:grid-rows-none lg:grid-cols-[420px_1fr]">
 
           {/* Photo */}
@@ -155,56 +148,69 @@ export default function MaterialenInteractive({
             </div>
           </div>
 
-          {/* Content */}
-          <div className="flex flex-col gap-5 p-6 lg:p-8">
-            <div>
-              <h3 className="hidden text-xl font-bold text-foreground lg:block">{current.materiaal}</h3>
-              <div className="mt-2 flex flex-wrap gap-2 lg:mt-3">
-                <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${brand.cls}`}>
-                  <Flame className="h-3 w-3" />
-                  {brand.label}
-                </span>
-                <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${
-                  current.dampopen === "Ja" ? "bg-teal-100 text-teal-700" : "bg-muted text-muted-foreground"
-                }`}>
-                  <Droplets className="h-3 w-3" />
-                  {current.dampopen === "Ja" ? "Dampopen" : `Dampopen: ${current.dampopen}`}
-                </span>
-                <span className="ml-auto flex items-center gap-1.5">
-                  <span className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">λ {current.lambda}</span>
-                  <div className="flex gap-1">
-                    {Array.from({ length: 3 }, (_, di) => (
-                      <div key={di} className={`h-2 w-5 rounded-full ${di < score ? "bg-primary" : "bg-border"}`} />
-                    ))}
+          {/* Content: every material is in the HTML, inactive ones only get `hidden` */}
+          {items.map((item, i) => {
+            const brand = brandBadge[brandClass[item.materiaal] ?? "E"]
+            const score = lambdaScore[item.materiaal] ?? 2
+            return (
+              <div
+                key={item.materiaal}
+                role="tabpanel"
+                id={`materiaal-panel-${i}`}
+                aria-labelledby={`materiaal-tab-${i}`}
+                hidden={i !== active}
+                className="flex flex-col gap-5 p-6 lg:p-8"
+              >
+                <div>
+                  <h3 className="hidden text-xl font-bold text-foreground lg:block">{item.materiaal}</h3>
+                  <div className="mt-2 flex flex-wrap gap-2 lg:mt-3">
+                    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${brand.cls}`}>
+                      <Flame className="h-3 w-3" />
+                      {brand.label}
+                    </span>
+                    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${
+                      item.dampopen === "Ja" ? "bg-teal-100 text-teal-700" : "bg-muted text-muted-foreground"
+                    }`}>
+                      <Droplets className="h-3 w-3" />
+                      {item.dampopen === "Ja" ? "Dampopen" : `Dampopen: ${item.dampopen}`}
+                    </span>
+                    <span className="ml-auto flex items-center gap-1.5">
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">λ {item.lambda}</span>
+                      <div className="flex gap-1">
+                        {Array.from({ length: 3 }, (_, di) => (
+                          <div key={di} className={`h-2 w-5 rounded-full ${di < score ? "bg-primary" : "bg-border"}`} />
+                        ))}
+                      </div>
+                    </span>
                   </div>
-                </span>
-              </div>
-            </div>
+                </div>
 
-            <div>
-              <p className="mb-1.5 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Wanneer kiezen</p>
-              <p className="text-sm leading-relaxed text-foreground/80 sm:text-base">{current.wanneer}</p>
-            </div>
+                <div>
+                  <p className="mb-1.5 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Wanneer kiezen</p>
+                  <p className="text-sm leading-relaxed text-foreground/80 sm:text-base">{item.wanneer}</p>
+                </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div className="flex items-start gap-3 rounded-lg bg-primary/5 p-4">
-                <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15">
-                  <Check className="h-3 w-3 text-primary" strokeWidth={3} />
-                </div>
-                <div>
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-primary">Pluspunt</p>
-                  <p className="mt-1 text-sm leading-snug text-foreground/70">{current.pluspunt}</p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="flex items-start gap-3 rounded-lg bg-primary/5 p-4">
+                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15">
+                      <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+                    </div>
+                    <div>
+                      <p className="text-[11px] font-bold uppercase tracking-widest text-primary">Pluspunt</p>
+                      <p className="mt-1 text-sm leading-snug text-foreground/70">{item.pluspunt}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-4">
+                    <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-500/70" />
+                    <div>
+                      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Aandachtspunt</p>
+                      <p className="mt-1 text-sm leading-snug text-foreground/70">{item.aandachtspunt}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-4">
-                <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-500/70" />
-                <div>
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Aandachtspunt</p>
-                  <p className="mt-1 text-sm leading-snug text-foreground/70">{current.aandachtspunt}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            )
+          })}
         </div>
       </div>
 

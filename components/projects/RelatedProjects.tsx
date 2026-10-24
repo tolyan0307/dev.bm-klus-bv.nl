@@ -35,6 +35,27 @@ export function projectsForCity(city: string): ProjectCardData[] {
   })
 }
 
+// Projects near a city page that has none of its own. Indexation test B2
+// (seo-ops/reports/seo/indexation_strategy_alignment_2026-10-25.md): keep it to
+// these two cities until the week-8 review — every slug here adds a link.
+const NEARBY_PROJECTS: Record<string, string[]> = {
+  Breda: [
+    "etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026",
+    "etten-leur-gevelisolatie-6cm-strikolith-2025",
+    "etten-leur-gevelisolatie-10cm-ral9010-2025",
+  ],
+  Barendrecht: [
+    "strijen-schenkeldijk-gevelisolatie-sierpleister-2026",
+    "dordrecht-gevelisolatie-10cm-sierpleister-2025",
+  ],
+}
+
+/** Curated projects near this city, in the order of projects.ts. */
+export function projectsNearCity(city: string): ProjectCardData[] {
+  const slugs = NEARBY_PROJECTS[city] ?? []
+  return projects.filter((p) => slugs.includes(p.slug))
+}
+
 interface RelatedProjectsProps {
   items: ProjectCardData[]
   tagline: string

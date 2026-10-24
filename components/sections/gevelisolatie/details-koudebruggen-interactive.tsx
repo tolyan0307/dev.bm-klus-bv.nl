@@ -102,12 +102,7 @@ export default function DetailsKoudebruggenInteractive({
       </div>
 
       {/* ── Active card with photo ── */}
-      <div
-        className="mt-4 overflow-hidden rounded-2xl border border-border bg-card"
-        role="tabpanel"
-        id={`detail-panel-${active}`}
-        aria-labelledby={`detail-tab-${active}`}
-      >
+      <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-card">
         <div className="grid grid-rows-[220px_1fr] lg:grid-rows-none lg:grid-cols-[420px_1fr]">
 
           {/* Photo */}
@@ -129,31 +124,40 @@ export default function DetailsKoudebruggenInteractive({
             </div>
           </div>
 
-          {/* Content */}
-          <div className="flex flex-col gap-5 p-6 lg:p-8">
-            <div>
-              <h3 className="hidden text-xl font-bold text-foreground lg:block">{current.h3}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base lg:mt-3">
-                {current.tekst}
-              </p>
-            </div>
+          {/* Content: every subsection is in the HTML, inactive ones only get `hidden` */}
+          {subsections.map((sub, i) => (
+            <div
+              key={sub.h3}
+              role="tabpanel"
+              id={`detail-panel-${i}`}
+              aria-labelledby={`detail-tab-${i}`}
+              hidden={i !== active}
+              className="flex flex-col gap-5 p-6 lg:p-8"
+            >
+              <div>
+                <h3 className="hidden text-xl font-bold text-foreground lg:block">{sub.h3}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base lg:mt-3">
+                  {sub.tekst}
+                </p>
+              </div>
 
-            <div>
-              <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                Aandachtspunten
-              </p>
-              <ul className="space-y-3">
-                {current.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                      <Check className="h-3 w-3 text-primary" strokeWidth={3} />
-                    </div>
-                    <span className="text-sm leading-snug text-foreground/70">{b}</span>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                  Aandachtspunten
+                </p>
+                <ul className="space-y-3">
+                  {sub.bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-3">
+                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                        <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+                      </div>
+                      <span className="text-sm leading-snug text-foreground/70">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
 

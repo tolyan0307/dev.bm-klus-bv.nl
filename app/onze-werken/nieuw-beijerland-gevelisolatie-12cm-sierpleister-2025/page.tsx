@@ -14,7 +14,7 @@ import { resolveGalleryImages } from "@/lib/gallery-utils"
 export const metadata = buildPageMetadata(
   "/onze-werken/nieuw-beijerland-gevelisolatie-12cm-sierpleister-2025/",
   {
-    title: "Nieuw-Beijerland gevelisolatie 12 cm – project 2025",
+    title: "Nieuw-Beijerland gevelisolatie 12 cm",
     description:
       "Project in Nieuw-Beijerland: vrijstaande woning met 12 cm buitengevelisolatie, wapeningslaag en sierpleister 1,5 mm.",
   },

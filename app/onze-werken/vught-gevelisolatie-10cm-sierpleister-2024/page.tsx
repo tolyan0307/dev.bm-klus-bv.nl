@@ -14,7 +14,7 @@ import { resolveGalleryImages } from "@/lib/gallery-utils"
 export const metadata = buildPageMetadata(
   "/onze-werken/vught-gevelisolatie-10cm-sierpleister-2024/",
   {
-    title: "Vught gevelisolatie 10 cm & sierpleister – project 2024",
+    title: "Vught gevelisolatie 10 cm & sierpleister",
     description:
       "Project in Vught: hoekwoning met 10 cm gevelisolatie, sierpleister 1,5 mm, bitumen sokkelbescherming en verzinkte dakranddetails.",
   },

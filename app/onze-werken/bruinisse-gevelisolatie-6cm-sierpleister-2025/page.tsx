@@ -14,7 +14,7 @@ import { resolveGalleryImages } from "@/lib/gallery-utils"
 export const metadata = buildPageMetadata(
   "/onze-werken/bruinisse-gevelisolatie-6cm-sierpleister-2025/",
   {
-    title: "Bruinisse gevelisolatie 6 cm & sierpleister – project 2025",
+    title: "Bruinisse gevelisolatie 6 cm & sierpleister",
     description:
       "Project in Bruinisse: gevelrenovatie met 6 cm buitengevelisolatie, sierpleister 1,5 mm, zwarte raamdorpels, ventilatie en bitumen sokkelbescherming.",
   },

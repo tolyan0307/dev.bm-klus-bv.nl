@@ -778,7 +778,7 @@ export const locations: LocationData[] = [
     region: "Noord-Brabant",
     title: "Gevelisolatie Breda – buitenkant (ETICS)",
     description:
-      "Buitengevelisolatie (ETICS) in Breda en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Specialist regio Rotterdam.",
+      "Buitengevelisolatie (ETICS) in Breda en omgeving. Stuc, sierpleister of steenstrips. Opname op locatie en offerte per m². Uitgevoerde projecten in Etten-Leur.",
     h1: "Gevelisolatie in Breda",
     intro:
       "Als grootste stad van West-Brabant heeft Breda een omvangrijk woningbestand met portiekflats en rijtjeshuizen in wijken als Hoge Vucht, Brabantpark en Geeren-Zuid. Voor VvE-complexen werken wij met een heldere projectaanpak; voor particulieren beginnen wij met een opname op locatie en offerte per m².",

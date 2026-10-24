@@ -106,59 +106,61 @@ export default function MaterialenVergelijking({ items }: Props) {
             </div>
           </div>
 
-          {/* Content */}
-          <div className="flex flex-col gap-5 p-6 lg:p-8">
-            <div>
-              <h3 className="hidden text-xl font-bold text-foreground lg:block">{current.materiaal}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                {current.beschrijving}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${current.brandCls}`}>
-                  <Flame className="h-3 w-3" />
-                  {current.brandLabel}
-                </span>
-                <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${current.dampCls}`}>
-                  <Droplets className="h-3 w-3" />
-                  {current.dampLabel}
-                </span>
-                <span className="ml-auto flex items-center gap-1.5">
-                  <span className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">λ {current.lambda}</span>
-                  <div className="flex gap-1">
-                    {Array.from({ length: 3 }, (_, di) => (
-                      <div key={di} className={`h-2 w-5 rounded-full ${di < current.lambdaScore ? "bg-primary" : "bg-border"}`} />
-                    ))}
+          {/* Content: every material is in the HTML, inactive ones only get `hidden` */}
+          {items.map((mat, i) => (
+            <div key={mat.materiaal} hidden={i !== activeTab} className="flex flex-col gap-5 p-6 lg:p-8">
+              <div>
+                <h3 className="hidden text-xl font-bold text-foreground lg:block">{mat.materiaal}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  {mat.beschrijving}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${mat.brandCls}`}>
+                    <Flame className="h-3 w-3" />
+                    {mat.brandLabel}
+                  </span>
+                  <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${mat.dampCls}`}>
+                    <Droplets className="h-3 w-3" />
+                    {mat.dampLabel}
+                  </span>
+                  <span className="ml-auto flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">λ {mat.lambda}</span>
+                    <div className="flex gap-1">
+                      {Array.from({ length: 3 }, (_, di) => (
+                        <div key={di} className={`h-2 w-5 rounded-full ${di < mat.lambdaScore ? "bg-primary" : "bg-border"}`} />
+                      ))}
+                    </div>
+                  </span>
+                </div>
+              </div>
+
+              {/* Wanneer kiezen */}
+              <div>
+                <p className="mb-1.5 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Wanneer kiezen</p>
+                <p className="text-sm leading-relaxed text-foreground/80 sm:text-base">{mat.wanneer}</p>
+              </div>
+
+              {/* Plus/aandacht */}
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="flex items-start gap-3 rounded-lg bg-primary/5 p-4">
+                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15">
+                    <Check className="h-3 w-3 text-primary" strokeWidth={3} />
                   </div>
-                </span>
-              </div>
-            </div>
-
-            {/* Wanneer kiezen */}
-            <div>
-              <p className="mb-1.5 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Wanneer kiezen</p>
-              <p className="text-sm leading-relaxed text-foreground/80 sm:text-base">{current.wanneer}</p>
-            </div>
-
-            {/* Plus/aandacht */}
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div className="flex items-start gap-3 rounded-lg bg-primary/5 p-4">
-                <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15">
-                  <Check className="h-3 w-3 text-primary" strokeWidth={3} />
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-primary">Pluspunt</p>
+                    <p className="mt-1 text-sm leading-snug text-foreground/70">{mat.pluspunt}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-primary">Pluspunt</p>
-                  <p className="mt-1 text-sm leading-snug text-foreground/70">{current.pluspunt}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-4">
-                <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-500/70" />
-                <div>
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Aandachtspunt</p>
-                  <p className="mt-1 text-sm leading-snug text-foreground/70">{current.aandachtspunt}</p>
+                <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-4">
+                  <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-500/70" />
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Aandachtspunt</p>
+                    <p className="mt-1 text-sm leading-snug text-foreground/70">{mat.aandachtspunt}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </>
