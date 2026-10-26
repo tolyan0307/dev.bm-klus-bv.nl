@@ -58,6 +58,6 @@
 
 ## Где что лежит
 - Правила по типам файлов подгружаются сами из `.claude/rules/`: `code.md` — код, `content-nl.md` — нидерландские тексты и SEO страниц, `design.md` — дизайн.
-- Skills: `add-project` (новый проект в /onze-werken/, карточка на главной, видео), `ship-check` (перед push / деплоем), `seo-refresh`, `seo-offpage`, `page-diagnosis`, `serp-check`, `gbp-weekly-post`.
+- Skills: `add-project` (новый проект в /onze-werken/, карточка на главной, видео), `ship-check` (перед push / деплоем), `seo-refresh`, `seo-offpage`, `page-diagnosis`, `serp-check`, `gbp-weekly-post`, `platform-signup` (регистрация на внешних площадках вместе с владельцем; паспорт компании — `.claude/skills/platform-signup/bedrijfsprofiel.md`).
 - Аналитика (GSC, GA4, Google Ads, лог заявок WP, DataForSEO, GBP): перед любым анализом данных прочитай `seo-ops/CLAUDE.md`.
 - Брифы страниц — `seo-system/briefs/*.yaml` (вложенные — `<родитель>-<дочерняя>.yaml`; есть у money pages и кластера, не у всех страниц); дизайн — `DESIGN_SYSTEM.md`; изображения — `docs/IMAGE-PIPELINE.md`; открытые задачи — `docs/BACKLOG.md`.
