@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-15T11:57:52.243391+00:00",
+  "generated_at": "2026-10-22T16:41:43.255926+00:00",
   "site": "https://bm-klus-bv.nl/",
-  "snapshot_generated_at": "2026-10-15T11:55:59.386607Z",
+  "snapshot_generated_at": "2026-10-22T16:39:49.879083Z",
   "gsc_current_range": {
-    "start": "2026-09-15",
-    "end": "2026-10-12"
+    "start": "2026-09-22",
+    "end": "2026-10-19"
   },
   "data_issues": [],
   "executive_summary": {
-    "total_findings": 17,
+    "total_findings": 13,
     "breakdown": {
-      "seo_opportunities": 11,
-      "seo_risks": 2,
+      "seo_opportunities": 8,
+      "seo_risks": 1,
       "measurement_issues": 2,
       "conversion_opportunities": 0,
       "gevelisolatie_cluster_notes": 2
@@ -21,7 +21,7 @@
   },
   "top_seo_opportunities": [
     {
-      "signal": "Position 11.5, CTR 0.2% (1 clicks / 448 impressions)",
+      "signal": "Position 9.2, CTR 0.5% (2 clicks / 393 impressions)",
       "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
       "confidence": "medium",
       "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
@@ -29,15 +29,7 @@
       "page": "/buiten-stucwerk/"
     },
     {
-      "signal": "2132 impressions at average position 20.9 (1 clicks)",
-      "why_it_matters": "Google shows the page for many queries but ranks it low — a relevance, intent or authority gap, not a snippet issue",
-      "confidence": "medium",
-      "recommended_action": "Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page",
-      "category": "SEO",
-      "page": "/gevel-schilderen/keimen/"
-    },
-    {
-      "signal": "Position 16.4, CTR 0.5% (1 clicks / 193 impressions)",
+      "signal": "Position 18.0, CTR 0.9% (2 clicks / 213 impressions)",
       "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
       "confidence": "low",
       "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
@@ -45,23 +37,15 @@
       "page": "/gevelisolatie/"
     },
     {
-      "signal": "Position 15.8, CTR 0.9% (1 clicks / 116 impressions)",
-      "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
-      "confidence": "low",
-      "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
+      "signal": "2597 impressions at average position 23.1 (1 clicks)",
+      "why_it_matters": "Google shows the page for many queries but ranks it low — a relevance, intent or authority gap, not a snippet issue",
+      "confidence": "medium",
+      "recommended_action": "Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page",
       "category": "SEO",
-      "page": "/gevelisolatie/den-haag/"
+      "page": "/gevel-schilderen/keimen/"
     },
     {
-      "signal": "Position 8.0, CTR 0.9% (1 clicks / 109 impressions)",
-      "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
-      "confidence": "low",
-      "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
-      "category": "SEO",
-      "page": "/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/"
-    },
-    {
-      "signal": "767 impressions at average position 40.8 (0 clicks)",
+      "signal": "846 impressions at average position 42.7 (0 clicks)",
       "why_it_matters": "Google shows the page for many queries but ranks it low — a relevance, intent or authority gap, not a snippet issue",
       "confidence": "low",
       "recommended_action": "Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page",
@@ -69,7 +53,7 @@
       "page": "/gevel-schilderen/"
     },
     {
-      "signal": "Position 12.7, CTR 0.0% (0 clicks / 262 impressions)",
+      "signal": "Position 14.7, CTR 0.0% (0 clicks / 291 impressions)",
       "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
       "confidence": "low",
       "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
@@ -77,15 +61,7 @@
       "page": "/gevelisolatie/afwerkingen/"
     },
     {
-      "signal": "Position 10.4, CTR 0.0% (0 clicks / 107 impressions)",
-      "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
-      "confidence": "low",
-      "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
-      "category": "SEO",
-      "page": "/gevelisolatie/kosten/"
-    },
-    {
-      "signal": "1187 impressions at average position 33.9 (0 clicks)",
+      "signal": "1231 impressions at average position 34.3 (0 clicks)",
       "why_it_matters": "Google shows the page for many queries but ranks it low — a relevance, intent or authority gap, not a snippet issue",
       "confidence": "medium",
       "recommended_action": "Check which queries it ranks for and what ranks above it (page-diagnosis skill) before changing the page",
@@ -93,7 +69,7 @@
       "page": "/muren-stucen/"
     },
     {
-      "signal": "Position 11.3, CTR 0.0% (0 clicks / 135 impressions)",
+      "signal": "Position 11.7, CTR 0.0% (0 clicks / 123 impressions)",
       "why_it_matters": "Shown in the top 20 but rarely clicked — the title/description may not match the queries it ranks for",
       "confidence": "low",
       "recommended_action": "Compare the page's top queries (query-level CSV) with its title/description; rewrite the snippet if they diverge",
@@ -101,7 +77,7 @@
       "page": "/sierpleister/"
     },
     {
-      "signal": "144 impressions at position 7.2, CTR 0.0%",
+      "signal": "138 impressions at position 4.6, CTR 0.0%",
       "why_it_matters": "Non-brand query in the top 20 with few clicks — the snippet or SERP features may take the clicks",
       "confidence": "low",
       "recommended_action": "Find the ranking page in the query-level CSV and check the live SERP (serp-check) before rewriting the snippet",
@@ -111,26 +87,18 @@
   ],
   "seo_risks": [
     {
-      "signal": "Like-for-like position (42 queries) 39.8 → 45.1 (higher is worse) on 767 impressions; page average 38.2 → 40.8, impressions deeper than 50: 16% → 35%",
+      "signal": "Like-for-like position (38 queries) 41.5 → 45.1 (higher is worse) on 846 impressions; page average 39.4 → 42.7, impressions deeper than 50: 16% → 32%",
       "why_it_matters": "Rankings got worse on the same queries on a page with meaningful visibility",
       "confidence": "medium",
       "recommended_action": "Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
       "category": "SEO",
       "page": "/gevel-schilderen/"
-    },
-    {
-      "signal": "Like-for-like position (42 queries) 30.0 → 33.9 (higher is worse) on 1187 impressions; page average 29.0 → 33.9, impressions deeper than 50: 5% → 13%",
-      "why_it_matters": "Rankings got worse on the same queries on a page with meaningful visibility",
-      "confidence": "medium",
-      "recommended_action": "Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
-      "category": "SEO",
-      "page": "/muren-stucen/"
     }
   ],
   "top_conversion_opportunities": [],
   "measurement_issues": [
     {
-      "signal": "15 sessions with landing page = (not set)",
+      "signal": "12 sessions with landing page = (not set)",
       "why_it_matters": "GA4 cannot tell the entry page for these sessions — landing-page analysis misses them",
       "confidence": "medium",
       "recommended_action": "Treat landing-page shares as approximate; recurring, so no action unless it grows",
@@ -138,7 +106,7 @@
       "page": "(not set)"
     },
     {
-      "signal": "Source '127.0.0.1:8842 / referral': 38 sessions from a local-dev / hosting-panel referrer",
+      "signal": "Source '127.0.0.1:8842 / referral': 33 sessions from a local-dev / hosting-panel referrer",
       "why_it_matters": "Not real visitors — inflates sessions and can add fake key events",
       "confidence": "high",
       "recommended_action": "Exclude in GA4 (owner): Admin → Data streams → Configure tag settings → List unwanted referrals / define internal traffic",
@@ -147,7 +115,7 @@
   ],
   "gevelisolatie_cluster_review": [
     {
-      "signal": "20 cluster pages in GSC data: clicks 13 → 10, impressions 1091 → 1012",
+      "signal": "17 cluster pages in GSC data: clicks 11 → 14, impressions 1075 → 1073",
       "why_it_matters": "Cluster summary (strategic priority)",
       "confidence": "high",
       "recommended_action": "Review the cluster section of the weekly summary",
@@ -155,7 +123,7 @@
       "page": "/gevelisolatie/*"
     },
     {
-      "signal": "12 pages with < 10 impressions: /gevelisolatie/alphen-aan-den-rijn/, /gevelisolatie/barendrecht/, /gevelisolatie/breda/, /gevelisolatie/capelle-aan-den-ijssel/, /gevelisolatie/gouda/, /gevelisolatie/leidschendam-voorburg/, /gevelisolatie/materialen/, /gevelisolatie/roosendaal/, /gevelisolatie/rotterdam/, /gevelisolatie/spijkenisse/, /gevelisolatie/vlaardingen/, /gevelisolatie/zoetermeer/",
+      "signal": "9 pages with < 10 impressions: /gevelisolatie/alphen-aan-den-rijn/, /gevelisolatie/barendrecht/, /gevelisolatie/hendrik-ido-ambacht/, /gevelisolatie/leidschendam-voorburg/, /gevelisolatie/roosendaal/, /gevelisolatie/rotterdam/, /gevelisolatie/spijkenisse/, /gevelisolatie/vlaardingen/, /gevelisolatie/zoetermeer/",
       "why_it_matters": "Very weak visibility; for city pages the content decision is pending with the owner (Wave 1 plan)",
       "confidence": "low",
       "recommended_action": "Spot-check indexation (GSC URL Inspection) for a few of them; no content changes without the owner's decision",
@@ -191,8 +159,7 @@
       "action": "Compare query-level positions for both periods and check for a coinciding title/content change or new sibling page",
       "category": "SEO",
       "related": [
-        "/gevel-schilderen/",
-        "/muren-stucen/"
+        "/gevel-schilderen/"
       ]
     },
     {

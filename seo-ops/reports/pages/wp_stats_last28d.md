@@ -1,7 +1,7 @@
 # WP Stats Snapshot (last 28 days)
 
-**Generated:** 2026-10-15 11:57 UTC
-**Date range:** 2026-09-17 to 2026-10-14
+**Generated:** 2026-10-22 16:41 UTC
+**Date range:** 2026-09-24 to 2026-10-21
 **Source:** BM Stats v2 plugin, https://bm-klus-bv.nl (provenance label: `[WP, 28d, lead-level]` / `[WP, 28d, event-level]`)
 **Plugin version:** 2.2.0
 
@@ -15,7 +15,7 @@
 |--------|-------|
 | Leads total | 8 |
 | Leads excl. spam | 8 |
-| Qualified (qualified + won + lost) | 0 |
+| Qualified (qualified + won + lost) | 5 |
 | Won | 0 |
 | Revenue on won (order_value) | € 0 |
 | With gclid | 5 |
@@ -24,7 +24,8 @@
 
 | Status | Leads |
 |--------|-------|
-| new | 8 |
+| new | 3 |
+| qualified | 5 |
 
 ### By source (first touch)
 
@@ -47,51 +48,51 @@
 
 | Metric | Value |
 |--------|-------|
-| Page views | 601 |
-| CTA clicks | 5 |
+| Page views | 584 |
+| CTA clicks | 7 |
 | Days with events | 28 |
 
 ### Top pages by views
 
 | Page | Views | CTA | Lead events | Conv. | Type |
 |------|-------|-----|-------------|-------|------|
-| / | 101 | 2 | 1 | 0.99% | home |
-| /gevelisolatie/ | 100 | 0 | 2 | 2.00% | service |
-| /buiten-stucwerk/ | 96 | 1 | 0 | 0.00% | service |
-| /onze-werken/ | 55 | 0 | 0 | 0.00% | archive |
-| /gevelisolatie/afwerkingen/ | 50 | 0 | 1 | 2.00% | cluster |
-| /contact/ | 26 | 2 | 1 | 3.85% | utility |
-| /gevelisolatie/kosten/ | 22 | 0 | 0 | 0.00% | cluster |
-| /sierpleister/ | 21 | 0 | 0 | 0.00% | service |
+| / | 114 | 1 | 1 | 0.88% | home |
+| /buiten-stucwerk/ | 93 | 1 | 0 | 0.00% | service |
+| /gevelisolatie/ | 87 | 1 | 2 | 2.30% | service |
+| /gevelisolatie/afwerkingen/ | 54 | 0 | 2 | 3.70% | cluster |
+| /onze-werken/ | 45 | 0 | 0 | 0.00% | archive |
+| /contact/ | 30 | 3 | 1 | 3.33% | utility |
+| /sierpleister/ | 20 | 0 | 0 | 0.00% | service |
 | /diensten/ | 18 | 0 | 1 | 5.56% | service |
-| /over-ons/ | 15 | 0 | 1 | 6.67% | utility |
-| /gevel-schilderen/ | 8 | 0 | 0 | 0.00% | service |
-| /onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/ | 8 | 0 | 0 | 0.00% | project |
-| /gevel-schilderen/keimen/ | 6 | 0 | 0 | 0.00% | cluster |
+| /gevelisolatie/kosten/ | 18 | 0 | 0 | 0.00% | cluster |
+| /over-ons/ | 13 | 0 | 1 | 7.69% | utility |
+| /gevel-schilderen/ | 12 | 0 | 0 | 0.00% | service |
+| /gevel-schilderen/keimen/ | 9 | 0 | 0 | 0.00% | cluster |
+| /onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/ | 7 | 0 | 0 | 0.00% | project |
+| /gevelisolatie/leiden/ | 6 | 0 | 0 | 0.00% | city |
 | /gevelisolatie/rc-waarde-dikte/ | 6 | 0 | 0 | 0.00% | cluster |
-| /onze-werken/strijen-schenkeldijk-gevelisolatie-sierpleister-2026/ | 6 | 0 | 0 | 0.00% | project |
-| /gevelisolatie/leiden/ | 5 | 0 | 0 | 0.00% | city |
-| /onze-werken/etten-leur-gevelisolatie-10cm-ral9010-2025/ | 5 | 0 | 0 | 0.00% | project |
-| /gevelisolatie/materialen/ | 4 | 0 | 1 | 25.00% | cluster |
-| /muren-stucen/ | 4 | 0 | 0 | 0.00% | service |
+| /gevelisolatie/den-haag/ | 5 | 1 | 0 | 0.00% | city |
+| /gevelisolatie/materialen/ | 4 | 0 | 0 | 0.00% | cluster |
+| /muren-stucen/sausklaar-behangklaar/ | 4 | 0 | 0 | 0.00% | cluster |
 | /onze-werken/delft-willemstraat-gevelrenovatie-schilderwerk-2026/ | 4 | 0 | 0 | 0.00% | project |
+| /gevelisolatie/subsidie-vergunning/ | 3 | 0 | 0 | 0.00% | cluster |
 
 ### Traffic by source
 
 | Source | Views | CTA | Lead events |
 |--------|-------|-----|-------------|
-| ads | 200 | 1 | 5 |
-| campaign | 34 | 1 | 0 |
-| organic | 230 | 2 | 2 |
-| referral | 14 | 0 | 0 |
-| direct | 123 | 1 | 1 |
+| ads | 185 | 2 | 5 |
+| campaign | 38 | 1 | 0 |
+| organic | 221 | 4 | 2 |
+| referral | 17 | 0 | 0 |
+| direct | 123 | 0 | 1 |
 
 ### CTA clicks
 
 | CTA | Clicks |
 |-----|--------|
-| whatsapp | 4 |
-| email | 1 |
+| whatsapp | 5 |
+| email | 2 |
 
 ### Form outcomes (anti-spam)
 
