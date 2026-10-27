@@ -87,7 +87,7 @@
 ## 5. Ссылки на сайт
 
 - По умолчанию — главная `https://bm-klus-bv.nl/`. Анкор не просим.
-- До 2026-12-19 — ни одной внешней ссылки на URL из `seo-ops/data/indexation_experiment_log.csv` (тесты индексации). Список брать из файла, не по памяти. На 2026-10-25 там 15 URL: города Breda, Zoetermeer, Barendrecht, Gouda, Bergen op Zoom, Alphen aan den Rijn, страница `/gevelisolatie/materialen/` и 8 проектов.
+- До 2026-12-19 — ни одной внешней ссылки на страницы эксперимента индексации и его пассивной группы. Список брать из `seo-ops/knowledge.md`, раздел «Эксперимент индексации — правила до 2026-12-19», не по памяти. На 2026-10-27 это 21 страница: 15 URL журнала `seo-ops/data/indexation_experiment_log.csv` (города Breda, Zoetermeer, Barendrecht, Gouda, Bergen op Zoom, Alphen aan den Rijn, `/gevelisolatie/materialen/` и 8 проектов), города Capelle aan den IJssel, Hellevoetsluis, Leidschendam-Voorburg, Maassluis, Ridderkerk и `/gevelisolatie/rc-waarde-dikte/`.
 - Есть отдельное поле для услуги или проекта — страница услуги (таблица ниже) или проект вне тестов.
 - **UTM — только если ссылка на карточках площадки с `rel="noreferrer"`.** Тогда браузер не сообщает, откуда пришёл посетитель, и в GA4 и логе заявок переход выглядит прямым. Так у Regionaal Energieloket (`noopener noreferrer`, проверено 2026-10-25). Формат: `https://bm-klus-bv.nl/?utm_source=<площадка>&utm_medium=referral&utm_campaign=vermelding`, где `<площадка>` — латиницей, строчными, без точек (`regionaalenergieloket`). Главная с параметрами отдаёт canonical на `https://bm-klus-bv.nl/` (проверено 2026-10-25). В остальных случаях — ссылка без параметров.
 
@@ -97,10 +97,10 @@
 | Buitengevelisolatie (ETICS) | `/gevelisolatie/` | да |
 | От чего зависит цена | `/gevelisolatie/kosten/` | да |
 | Отделки поверх ETICS | `/gevelisolatie/afwerkingen/` | да |
-| Rc-waarde и толщина | `/gevelisolatie/rc-waarde-dikte/` | да |
+| Rc-waarde и толщина | `/gevelisolatie/rc-waarde-dikte/` | **нет до 2026-12-19** |
 | Материалы (EPS, PIR, минвата) | `/gevelisolatie/materialen/` | **нет до 2026-12-19** |
 | Субсидия и разрешение | `/gevelisolatie/subsidie-vergunning/` | да |
-| Город | `/gevelisolatie/<slug>/` | да, кроме 6 тестовых городов до 2026-12-19 |
+| Город | `/gevelisolatie/<slug>/` | да, кроме 11 городов эксперимента и пассивной группы до 2026-12-19 |
 | Buiten stucwerk | `/buiten-stucwerk/` | да |
 | Sierpleister | `/sierpleister/` | да |
 | Gevel schilderen | `/gevel-schilderen/` | да |

@@ -15,7 +15,7 @@ description: Регистрация и профили BM klus BV на внешн
 | Где уже есть профили | `seo-ops/data/external_profiles.csv` |
 | История действий и открытые задачи | `seo-ops/data/external_actions_log.csv` (раздел 7) |
 | Оценка площадок, условия, черновики писем (2026-10-25) | `seo-ops/reports/seo/backlink_opportunities_2026-10-25/`: `opportunities.csv`, `backlink_strategy.md`, `outreach_candidates.md`, `rejected_sources.md` |
-| URL, на которые до 2026-12-19 нельзя ставить внешние ссылки | `seo-ops/data/indexation_experiment_log.csv` |
+| Страницы, на которые до 2026-12-19 нельзя ставить внешние ссылки | `seo-ops/knowledge.md`, раздел «Эксперимент индексации — правила до 2026-12-19» |
 | Страницы сайта | `data/sitemap-plan.ts`, `lib/content/gevelisolatie-locations.ts`, `lib/content/projects/`, живой `https://bm-klus-bv.nl/sitemap.xml` |
 
 Отчёты могут устареть, живая страница площадки главнее. Если они расходятся — скажи владельцу.
