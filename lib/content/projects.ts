@@ -4,6 +4,32 @@ import type { ProjectCard } from "@/lib/types/projects"
 // 7 Klaaswaal, 8 Rotterdam, 9 Vlaardingen 10cm, 10 Almere, 11 Vlaardingen 6cm, 12 Rottekade, 13 Vught, 14 Katwijk
 export const projects: ProjectCard[] = [
   {
+    slug: "stellendam-molenkade-gevelrenovatie-stucwerk-2026",
+    serviceType: "Buiten-stucwerk",
+    serviceTypes: ["Buiten-stucwerk", "Gevel schilderen"],
+    title: "Stellendam Molenkade – gevelherstel, stucwerk & gevelornamenten (2026)",
+    subtitle: "Renovatie van een woning aan de Molenkade met scheurherstel, tweelaags gevelstucwerk, marmeren raamdorpels, geometrische gevelornamenten en een geschilderde plint.",
+    meta: {
+      city: "Stellendam (Molenkade)",
+      objectType: "Woning",
+      highlight:
+        "Gevels vernieuwd met scheurankers, tweelaags stucwerk, marmeren raamdorpels en geometrische ornamenten boven ramen en deuren.",
+      year: 2026,
+    },
+    projectUrl:
+      "/onze-werken/stellendam-molenkade-gevelrenovatie-stucwerk-2026/",
+    cardAlt:
+      "Woning aan de Molenkade in Stellendam na gevelstucwerk, met geometrische ornamenten boven de ramen en een donker geschilderde plint (2026)",
+    coverImage: {
+      src: "/images/projects/stellendam-molenkade-gevelrenovatie-stucwerk-2026/stellendam-molenkade-gevelrenovatie-stucwerk-2026-na-01.webp",
+      alt: "Stellendam Molenkade gevelherstel en stucwerk – na de werken foto 01 (2026)",
+    },
+    beforeThumb: {
+      src: "/images/projects/stellendam-molenkade-gevelrenovatie-stucwerk-2026/stellendam-molenkade-gevelrenovatie-stucwerk-2026-voor-01.webp",
+      alt: "Stellendam Molenkade gevelherstel en stucwerk – voor de werken foto 01 (2026)",
+    },
+  },
+  {
     slug: "strijen-schenkeldijk-gevelisolatie-sierpleister-2026",
     serviceType: "Gevelisolatie",
     serviceTypes: ["Gevelisolatie", "Sierpleister", "Buiten-stucwerk"],

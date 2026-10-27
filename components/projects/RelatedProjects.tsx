@@ -7,6 +7,10 @@ import type { ProjectCard as ProjectCardData } from "@/lib/types/projects"
 // Project cards for a service or a city, picked from lib/content/projects.ts,
 // so new projects show up on the matching pages without extra wiring.
 
+// Kept out of the service-page blocks (owner decision 2026-10-27): Stellendam only had
+// its plinth painted, and on /buiten-stucwerk/ it would push out an indexation-test project.
+const NOT_ON_SERVICE_PAGES = ["stellendam-molenkade-gevelrenovatie-stucwerk-2026"]
+
 /**
  * Projects with this service: primary service first, then projects whose slug
  * names the keyword (e.g. "sierpleister"), otherwise the curated order of projects.ts.
@@ -15,7 +19,7 @@ export function projectsForService(service: string, keyword?: string): ProjectCa
   const score = (p: ProjectCardData) =>
     (p.serviceType === service ? 2 : 0) + (keyword && p.slug.includes(keyword) ? 1 : 0)
   return projects
-    .filter((p) => p.serviceTypes.includes(service))
+    .filter((p) => p.serviceTypes.includes(service) && !NOT_ON_SERVICE_PAGES.includes(p.slug))
     .map((p, i) => ({ p, i, s: score(p) }))
     .sort((a, b) => b.s - a.s || a.i - b.i)
     .map(({ p }) => p)

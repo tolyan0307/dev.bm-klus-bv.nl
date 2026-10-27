@@ -4,6 +4,14 @@ import ResponsiveImage from "@/components/responsive-image"
 
 const projects = [
   {
+    id: "stellendam-molenkade-gevelrenovatie-stucwerk-2026",
+    baseName: "stellendam-molenkade-gevelrenovatie-stucwerk-2026/stellendam-molenkade-gevelrenovatie-stucwerk-2026-na-01",
+    city: "Stellendam",
+    service: "Gevelherstel, stucwerk & gevelornamenten",
+    highlight: "Stalen scheurankers + MKS-Rapid in twee lagen + marmeren raamdorpels",
+    href: "/onze-werken/stellendam-molenkade-gevelrenovatie-stucwerk-2026/",
+  },
+  {
     id: "strijen-schenkeldijk-gevelisolatie-sierpleister-2026",
     baseName: "strijen-schenkeldijk-gevelisolatie-sierpleister-2026/strijen-schenkeldijk-gevelisolatie-sierpleister-2026-na-01",
     city: "Strijen",
@@ -26,14 +34,6 @@ const projects = [
     service: "Gevelisolatie, sierpleister & dakrenovatie",
     highlight: "Witte sierpleister + natuurstenen plint + nieuw pannendak",
     href: "/onze-werken/etten-leur-bankenstraat-gevelisolatie-dakrenovatie-2026/",
-  },
-  {
-    id: "rotterdam-julianastraat-aanbouw-isolatie-4cm-2026",
-    baseName: "rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026-na-01",
-    city: "Rotterdam",
-    service: "Aanbouw isolatie 4 cm & sierpleister",
-    highlight: "Isolatie + sierpleister 1,5 mm + plint antraciet",
-    href: "/onze-werken/rotterdam-julianastraat-aanbouw-isolatie-4cm-2026/",
   },
 ]
 
